@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender" />
+  <xs:complexType name="PictureInfoDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_Hash_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PictureId_x003E_k__BackingField" type="ser:guid" />
+      <xs:element name="_x003C_SessionId_x003E_k__BackingField" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PictureInfoDTO" nillable="true" type="tns:PictureInfoDTO" />
+  <xs:simpleType name="Privacy">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Private" />
+      <xs:enumeration value="FriendsOnly" />
+      <xs:enumeration value="Public" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Privacy" nillable="true" type="tns:Privacy" />
+  <xs:simpleType name="LengthType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cm" />
+      <xs:enumeration value="Inchs" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LengthType" nillable="true" type="tns:LengthType" />
+  <xs:simpleType name="ProfileNotification">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Message">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Email">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="ProfileNotification" nillable="true" type="tns:ProfileNotification" />
+  <xs:simpleType name="WeightType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Kg" />
+      <xs:enumeration value="Pounds" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WeightType" nillable="true" type="tns:WeightType" />
+  <xs:simpleType name="ProfileStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProfileStatusType" nillable="true" type="tns:ProfileStatusType" />
+  <xs:complexType name="ArrayOfPictureInfoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PictureInfoDTO" nillable="true" type="tns:PictureInfoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPictureInfoDTO" nillable="true" type="tns:ArrayOfPictureInfoDTO" />
+</xs:schema>

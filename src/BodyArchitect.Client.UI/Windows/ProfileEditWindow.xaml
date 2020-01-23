@@ -1,0 +1,27 @@
+﻿<Windows:BaseWindow xmlns:my1="clr-namespace:BodyArchitect.Client.UI.Controls" 
+                    xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls" 
+                    x:Class="BodyArchitect.Client.UI.Windows.ProfileEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+            xmlns:Windows="clr-namespace:BodyArchitect.Client.UI.Windows" Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen"
+                    Title="{lex:LocText  BodyArchitect.Client.Resources:Strings:ProfileEditWindow_Title}"
+                    Height="400" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <my:usrProfileEdit Grid.ColumnSpan="2"  x:Name="usrProfileEdit1"/>
+
+        <Button Width="32" Height="32" Margin="{StaticResource MarginMediumLeft}" HorizontalAlignment="Left" Name="btnDeleteProfile" Grid.Row="1" Click="btnDeleteProfile_Click" ToolTip="{lex:LocText  BodyArchitect.Client.Resources:Strings:ProfileEditWindow_DeleteProfileToolTip}">
+            <Image Stretch="Uniform" Source="/BodyArchitect.Client.Resources;component/Images/DeleteProfile32.png" />
+        </Button>
+        <my1:usrProgressIndicatorButtons Margin="{StaticResource MarginMediumRight}" TaskProgressChanged="usrProgressIndicatorButtons1_TaskProgressChanged"  HorizontalAlignment="Right" OkClick="okButton1_Click"  Grid.Column="1"  Grid.Row="1" x:Name="usrProgressIndicatorButtons1" />
+    </Grid>
+</Windows:BaseWindow>

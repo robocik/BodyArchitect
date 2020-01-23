@@ -1,0 +1,278 @@
+﻿<Custom:PhoneApplicationPage 
+    x:Class="BodyArchitect.WP7.Pages.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False" BackKeyPress="PhoneApplicationPage_BackKeyPress" toolkit:TiltEffect.IsTiltEnabled="true">
+
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" >
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="Grid.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+
+                            <DoubleAnimation
+                                Storyboard.TargetName="LayoutRoot" 
+                                Storyboard.TargetProperty="(Grid.Opacity)"
+                                From="0.0" To="1.0" Duration="0:0:3" 
+                                 />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+
+            <Grid.Background>
+                <ImageBrush x:Name="backgroundImageBrush" 
+                        Stretch="None" 
+                        ImageSource="/SplashScreenImage.jpg">
+                </ImageBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1"  Margin="0,0,12,0" Name="tbVersion" FontWeight="Bold"   Foreground="{StaticResource CustomContrastBackgroundBrush}"  HorizontalAlignment="Right" >
+            <TextBlock.RenderTransform>
+        <TranslateTransform x:Name="versionTrans"
+                                  X="-500"/>
+      </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+        <EventTrigger RoutedEvent="TextBlock.Loaded">
+          <BeginStoryboard>
+            <Storyboard BeginTime="00:00:0.6">
+              <DoubleAnimation Duration="00:00:0.7"
+                                Storyboard.TargetName="versionTrans" 
+                                Storyboard.TargetProperty="X" 
+                                From="-500" To="0">
+                <DoubleAnimation.EasingFunction>
+                  <SineEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+              </DoubleAnimation>
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+      </TextBlock.Triggers>
+            </TextBlock>
+
+            <HyperlinkButton Foreground="{StaticResource splashScreenBrush}" FontStyle="Italic" Grid.Row="2" FontSize="{StaticResource CustomFontSizeLarge}"  Style="{StaticResource HyperlinkButtonStyle}"  HorizontalAlignment="Left"  Content="http://bodyarchitectonline.com" Click="HyperlinkButton_Click">
+                <HyperlinkButton.RenderTransform>
+                    <TranslateTransform x:Name="linkTrans"
+                                  Y="500"/>
+                </HyperlinkButton.RenderTransform>
+                <HyperlinkButton.Triggers>
+                    <EventTrigger >
+                        <BeginStoryboard>
+                            <Storyboard  BeginTime="00:00:1.0">
+                                <DoubleAnimation Duration="00:00:0.6"
+                                Storyboard.TargetName="linkTrans" 
+                                Storyboard.TargetProperty="Y" 
+                                From="500" To="0">
+                                    <DoubleAnimation.EasingFunction>
+                                        <SineEase EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </HyperlinkButton.Triggers>
+            </HyperlinkButton>
+
+            <HyperlinkButton Name="hlRate" Foreground="{StaticResource splashScreenBrush}" FontStyle="Italic" Grid.Row="3" FontSize="{StaticResource CustomFontSizeLarge}"  Style="{StaticResource HyperlinkButtonStyle}"  HorizontalAlignment="Left"  Content="{Binding Path=Localizedresources.AboutPage_RateReviewLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="hlRateAndReview_Click">
+                <HyperlinkButton.RenderTransform>
+                    <TranslateTransform x:Name="linkReviewTrans"
+                                  Y="-1000"/>
+                </HyperlinkButton.RenderTransform>
+                <HyperlinkButton.Triggers>
+                    <EventTrigger>
+                        <BeginStoryboard>
+                            <Storyboard  BeginTime="00:00:0.7">
+                                <DoubleAnimation Duration="00:00:1.0"
+                                Storyboard.TargetName="linkReviewTrans" 
+                                Storyboard.TargetProperty="Y" 
+                                From="-1000" To="0">
+                                    <DoubleAnimation.EasingFunction>
+                                        <SineEase EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </HyperlinkButton.Triggers>
+            </HyperlinkButton>
+
+            <HyperlinkButton Foreground="{StaticResource splashScreenBrush}" FontStyle="Italic" Grid.Row="4" FontSize="{StaticResource CustomFontSizeLarge}"  Style="{StaticResource HyperlinkButtonStyle}"  HorizontalAlignment="Left"  Content="{Binding Path=Localizedresources.AboutPage_EMailUsLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="hlEmail_Click">
+                <HyperlinkButton.RenderTransform>
+                    <TranslateTransform x:Name="linkEmailTran"
+                                  Y="-1000"/>
+                </HyperlinkButton.RenderTransform>
+                <HyperlinkButton.Triggers>
+                    <EventTrigger >
+                        <BeginStoryboard>
+                            <Storyboard  BeginTime="00:00:0.3">
+                                <DoubleAnimation Duration="00:00:1.4"
+                                Storyboard.TargetName="linkEmailTran" 
+                                Storyboard.TargetProperty="Y" 
+                                From="-1000" To="0">
+                                    <DoubleAnimation.EasingFunction>
+                                        <SineEase EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </HyperlinkButton.Triggers>
+            </HyperlinkButton>
+
+            <HyperlinkButton Name="hlFacebook" Foreground="{StaticResource splashScreenBrush}" FontStyle="Italic" Grid.Row="5" FontSize="{StaticResource CustomFontSizeLarge}"  Style="{StaticResource HyperlinkButtonStyle}"  HorizontalAlignment="Left"  Content="Facebook" Click="hlFacebook_Click">
+                <HyperlinkButton.RenderTransform>
+                    <TranslateTransform x:Name="linkFacebookTrans"
+                                  X="500"/>
+                </HyperlinkButton.RenderTransform>
+                <HyperlinkButton.Triggers>
+                    <EventTrigger>
+                        <BeginStoryboard>
+                            <Storyboard  BeginTime="00:00:1.2">
+                                <DoubleAnimation Duration="00:00:1.0"
+                                Storyboard.TargetName="linkFacebookTrans" 
+                                Storyboard.TargetProperty="X" 
+                                From="500" To="0">
+                                    <DoubleAnimation.EasingFunction>
+                                        <SineEase EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </HyperlinkButton.Triggers>
+            </HyperlinkButton>
+
+            <Grid Grid.Row="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Margin="0,24,0,0" VerticalAlignment="Bottom"  Name="tbCreatedBy" Text="{Binding Path=Localizedresources.AboutPage_CreatedBy,Mode=OneTime, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Right"   Foreground="{StaticResource splashScreenSubtleBrush}" >
+                <TextBlock.RenderTransform>
+                <TranslateTransform x:Name="createdByTrans"
+                                  Y="-1000"/>
+            </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="TextBlock.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:3.0"  >
+                            
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="createdByTrans">
+
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-300"/>
+                                                
+                                                <EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <BounceEase EasingMode="EaseOut"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+
+                                            </DoubleAnimationUsingKeyFrames>
+                            
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="X" Storyboard.TargetName="createdByTrans">
+
+                                                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+                                                
+                                                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="-500">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <SineEase EasingMode="EaseOut"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+
+                                            </DoubleAnimationUsingKeyFrames>
+   
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+                </TextBlock>
+
+                <StackPanel Grid.Row="1"  Margin="0,0,12,0" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" >
+                    <Image Name="imgCompany" Source="/Images/galaxy.JPG" Margin="0,0,0,0" Width="120" Opacity="0" >
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard BeginTime="00:00:0.4">
+
+                                        <DoubleAnimation
+                                Storyboard.TargetName="imgCompany" 
+                                Storyboard.TargetProperty="(Image.Opacity)"
+                                From="0.0" To="1.0" Duration="0:0:5" 
+                                 />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                    <StackPanel Margin="0,28,0,0">
+                        <TextBlock Text="Quasar" FontWeight="SemiBold" FontSize="28" Foreground="{StaticResource splashScreenBrush}">
+                         <TextBlock.RenderTransform>
+                <TranslateTransform x:Name="quasarTran"
+                                  Y="-1000"/>
+            </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="TextBlock.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard  BeginTime="00:00:0.2">
+                            <DoubleAnimation Duration="00:00:3.0"
+                                Storyboard.TargetName="quasarTran" 
+                                Storyboard.TargetProperty="Y" 
+                                From="-1000" To="0">
+                                <DoubleAnimation.EasingFunction>
+                                    <SineEase EasingMode="EaseOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource CustomAccentFullBrush}" Text="DEVELOPMENT" FontSize="13" FontStyle="Italic">
+<TextBlock.RenderTransform>
+        <TranslateTransform x:Name="developmentTran"
+                                  X="-500"/>
+      </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+        <EventTrigger RoutedEvent="TextBlock.Loaded">
+          <BeginStoryboard>
+            <Storyboard BeginTime="00:00:0.2">
+              <DoubleAnimation Duration="00:00:3.0"
+                                Storyboard.TargetName="developmentTran" 
+                                Storyboard.TargetProperty="X" 
+                                From="-500" To="0">
+                <DoubleAnimation.EasingFunction>
+                  <SineEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+              </DoubleAnimation>
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+      </TextBlock.Triggers>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Custom:PhoneApplicationPage>

@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IBodyArchitectAccessService1"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc/WP7"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IBodyArchitectAccessService1"
+                contract="BodyArchitect.Service.V2.Model.IBodyArchitectAccessService" name="BasicHttpBinding_IBodyArchitectAccessService1" />
+        </client>
+    </system.serviceModel>
+</configuration>

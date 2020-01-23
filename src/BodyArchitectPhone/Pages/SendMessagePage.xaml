@@ -1,0 +1,81 @@
+﻿<Controls:BodyArchitectPage 
+    x:Class="BodyArchitect.WP7.Pages.SendMessagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" 
+    xmlns:conv="clr-namespace:BodyArchitect.WP7" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="True">
+	<Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar  ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+		</shell:ApplicationBar>
+	</Custom:PhoneApplicationPage.ApplicationBar>
+
+
+
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <conv:MessagePriorityToIntConverter x:Key="priorityConverter" />
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <!--TitlePanel contains the name of the application and page title-->
+            <TextBlock Grid.Row="1" Margin="12,17,0,28" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+            </TextBlock>
+
+            <Grid  Grid.Row="2" Margin="12,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Controls:CachedImageCtrl Name="profileImage" Picture="{Binding Picture}"  Width="100" Height="100"/>
+
+                    <TextBlock Grid.Column="1"  Text="{Binding UserName}" Style="{StaticResource CustomTextExtraLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}" />
+                </Grid>
+
+                <ScrollViewer Grid.Row="1">
+                    <StackPanel Margin="0,12,0,0"  >
+                        <TextBlock Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding Path=Localizedresources.SendMessagePage_Priority,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <Controls:FixedListPicker Name="lpPriority" Grid.Column="1"   SelectedIndex="{Binding Message.Priority,Converter={StaticResource priorityConverter},Mode=TwoWay}"   >
+                            <toolkit:ListPicker.Items>
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SendMessagePage_Priority_Normal,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SendMessagePage_Priority_Low,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SendMessagePage_Priority_High,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            </toolkit:ListPicker.Items>
+                        </Controls:FixedListPicker>
+
+                        <TextBlock Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding Path=Localizedresources.SendMessagePage_Topic,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <TextBox InputScope="Chat" Name="txtTopic"  Text="{Binding Topic,Mode=TwoWay}" />
+
+                        <TextBlock Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding Path=Localizedresources.SendMessagePage_Content,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <TextBox InputScope="Chat" TextWrapping="Wrap" Name="txtContent" AcceptsReturn="true" Height="200" Text="{Binding Content,Mode=TwoWay}" />
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Controls:BodyArchitectPage>

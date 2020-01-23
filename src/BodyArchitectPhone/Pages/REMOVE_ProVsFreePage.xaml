@@ -1,0 +1,122 @@
+﻿<Controls:BodyArchitectPage 
+    x:Class="BodyArchitect.WP7.Pages.ProVsFreePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480" Loaded="PhoneApplicationPage_Loaded" >
+
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            <TextBlock x:Name="PageTitle" Foreground="{StaticResource splashScreenBrush}" Text="{Binding Path=Localizedresources.ProVsFreePage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource CustomTextTitle1Style}"/>
+
+            <ScrollViewer Grid.Row="1">
+                    <StackPanel >
+                        <StackPanel Name="g1" Opacity="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/viewCalendar.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleCalendarAccess,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                            </StackPanel>
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionCalendarAccess,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+                        </StackPanel>
+
+
+                        <StackPanel Name="g2"  Opacity="0">
+                            <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                                <Image Source="/Images/offlineMode.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleOfflineMode,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                            </StackPanel>
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionOfflineMode,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+                        </StackPanel>
+
+
+                        <StackPanel Name="g3"  Opacity="0">
+                            <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                                <Image Source="/Images/reduceDataUsage.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleReducedDataUsage,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                            </StackPanel>
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionReducedDataUsage,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+
+                        </StackPanel>
+
+
+                        <StackPanel Name="g4"  Opacity="0">
+                            <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                                <Image Source="/Images/copyEntry.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleCopyPreviousEntryToToday,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                            </StackPanel>
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionCopyPreviousEntryToToday,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+                        </StackPanel>
+
+
+                        <StackPanel Name="g5"  Opacity="0">
+                            <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                                <Image Source="/Images/usePlan.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleUsingPlansToToday,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                            </StackPanel>
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionUsingPlansToToday,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+
+                        </StackPanel>
+
+                        <StackPanel Name="g6"  Opacity="0">
+                            <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                                <Image Source="/Images/statistics.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleStatistics,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                            </StackPanel>
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionStatistics,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+
+                        </StackPanel>
+
+                        <StackPanel Name="g7"  Opacity="0">
+                            <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                                <Image Source="/Images/crashGuard.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleCrashSaver,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                            </StackPanel>
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionCrashSaver,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+                        </StackPanel>
+
+                    
+
+                    <StackPanel Name="g8"  Opacity="0">
+                        <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                            <Image Source="/Images/measureChange.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitleShowSizesChanges, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                        </StackPanel>
+                        <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionShowSizesChanges, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Name="g9"  Opacity="0">
+                        <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                            <Image Source="/Images/preview.png" Width="32" Height="32" />
+                            <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomAccentFullBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Path=Localizedresources.ProVsFreePage_TitlePreviewOldTrainings,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextTitle3Style}"/>
+                        </StackPanel>
+                        <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource splashScreenBrush}" Margin="12,12,12,36" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.ProVsFreePage_DescriptionPreviewOldTrainings,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" />
+                    </StackPanel>
+
+                </StackPanel>
+
+                </ScrollViewer>
+                <Grid Grid.Row="2" Margin="0,24,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="btnBuy" Grid.Column="1" Foreground="{StaticResource splashScreenBrush}" Content="{Binding Path=Localizedresources.ProVsFreePage_BuyButton,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="btnBuy_Click" />
+                </Grid>
+            </Grid>
+        </Grid>
+        <!--LayoutRoot is the root grid where all page content is placed-->
+
+</Controls:BodyArchitectPage>

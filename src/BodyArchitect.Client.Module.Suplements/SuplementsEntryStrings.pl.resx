@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ColumnSuplementName" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="DefaultSuplementsName" xml:space="preserve">
+    <value>Suplement</value>
+  </data>
+  <data name="DeleteThisEntryTip" xml:space="preserve">
+    <value>Usuń ten wpis</value>
+  </data>
+  <data name="EntryTypeName" xml:space="preserve">
+    <value>Suplementy</value>
+  </data>
+  <data name="ErrorCannotDeleteSuplementType" xml:space="preserve">
+    <value>Nie udało się usunać suplementu. Dodatkowe informacje znajdują się w logu. ErrorId: {0}.</value>
+  </data>
+  <data name="QDeleteSuplementRow" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć zaznaczony wiersz?</value>
+  </data>
+  <data name="QDeleteSuplementType" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć zaznaczone suplementy?</value>
+  </data>
+  <data name="SelectSuplementType" xml:space="preserve">
+    <value>(Wybierz typ suplementu)</value>
+  </data>
+  <data name="SuplementGrid_DosageColumn" xml:space="preserve">
+    <value>Dawkowanie</value>
+  </data>
+  <data name="SuplementGrid_DosageTypeColumn" xml:space="preserve">
+    <value>Typ dawki</value>
+  </data>
+  <data name="SuplementGrid_InfoColumn" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="SuplementGrid_NameColumn" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="SuplementGrid_SuplementColumn" xml:space="preserve">
+    <value>Suplement</value>
+  </data>
+  <data name="SuplementGrid_TimeColumn" xml:space="preserve">
+    <value>Czas</value>
+  </data>
+  <data name="SuplementsViewWindow_AddBTN" xml:space="preserve">
+    <value>Wyświetla okno umożliwiające dodanie nowego suplementu do bazy.</value>
+  </data>
+  <data name="SuplementsViewWindow_DeleteBTN" xml:space="preserve">
+    <value>Usuwa zaznaczone suplementy z bazy.</value>
+  </data>
+  <data name="SuplementsViewWindow_EditBTN" xml:space="preserve">
+    <value>Kliknij tutaj, aby edytowac zaznaczony suplement.</value>
+  </data>
+  <data name="SuplementsViewWindow_SuplementsListView" xml:space="preserve">
+    <value>Lista wszystkich suplementów w bazie.</value>
+  </data>
+  <data name="SuplementTypeEditor_CommentTXT" xml:space="preserve">
+    <value>Dodatkowe informacje na temat tego suplementu.</value>
+  </data>
+  <data name="SuplementTypeEditor_NameTXT" xml:space="preserve">
+    <value>Nazwa suplementu. Musi być unikatowa i nie może być pusta.</value>
+  </data>
+  <data name="SuplementTypesMenu" xml:space="preserve">
+    <value>Suplementy...</value>
+  </data>
+  <data name="Suplement_Name_Empty" xml:space="preserve">
+    <value>Nazwa suplementu nie może być pusta.</value>
+  </data>
+  <data name="Suplement_Name_Length" xml:space="preserve">
+    <value>Nazwa suplementu jest za długa.</value>
+  </data>
+  <data name="Suplement_Name_Unique" xml:space="preserve">
+    <value>Nazwa suplementu musi być unikatowa.</value>
+  </data>
+  <data name="usrSupplementsEntry_SupplementsHeader" xml:space="preserve">
+    <value>Suplementy</value>
+  </data>
+  <data name="SupplementsModule_ShareToSocial_Name" xml:space="preserve">
+    <value>Nowy wpis: Supplementy</value>
+  </data>
+  <data name="SupplementsModule_ShareToSocial_Date" xml:space="preserve">
+    <value>Data: {0}&lt;br/&gt;</value>
+  </data>
+  <data name="SupplementsModule_ShareToSocial_Dosage" xml:space="preserve">
+    <value>{0} {1}: &lt;i&gt;{2:.##} {3}&lt;/i&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="ErrorDuringSuplementSaving" xml:space="preserve">
+    <value>Podczas zapisu wystąpił nieoczekiwany wyjątek.</value>
+  </data>
+  <data name="EntryTypeShortDescription" xml:space="preserve">
+    <value>Jeśli wspomagasz się suplementami to korzystając z tej opcji, możesz notować co i ile bierzesz.</value>
+  </data>
+  <data name="Exception_SupplementsCycleDefinitionEditorViewModel_Save" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany wyjątek.</value>
+  </data>
+  <data name="SuplementsEntryStrings_Content_Preview" xml:space="preserve">
+    <value>Podgląd</value>
+  </data>
+  <data name="SuplementsEntryStrings_Content_SelectDays" xml:space="preserve">
+    <value>Wybierz dni treningowe:</value>
+  </data>
+  <data name="SuplementsEntryStrings_Content_StartDate" xml:space="preserve">
+    <value>Data rozpoczęcia:</value>
+  </data>
+  <data name="SuplementsEntryStrings_Content_Weight" xml:space="preserve">
+    <value>Twoja waga:</value>
+  </data>
+  <data name="SuplementsEntryStrings_Header_Parameters" xml:space="preserve">
+    <value>Parametry</value>
+  </data>
+  <data name="SuplementsEntryStrings_Header_Preview" xml:space="preserve">
+    <value>Podgląd</value>
+  </data>
+  <data name="SuplementsEntryStrings_Text_ClickPreview" xml:space="preserve">
+    <value>Kliknij Podgląd aby zobaczyć symulację wybranego cyklu, Żadne zmiany nie zostaną wprowadzone do kalendarza.</value>
+  </data>
+  <data name="SupplementItemViewModel_columnName_EmptyId" xml:space="preserve">
+    <value>Id supplementu nie może być puste.</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Content_Author" xml:space="preserve">
+    <value>_Autor</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Content_Difficult" xml:space="preserve">
+    <value>_Dla kogo</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Content_Language" xml:space="preserve">
+    <value>_Język</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Content_Name" xml:space="preserve">
+    <value>_Nazwa</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Content_Purpose" xml:space="preserve">
+    <value>_Cel</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Content_Url" xml:space="preserve">
+    <value>_Url</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Header_Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="Exception_StartSupplementsCycleWindow_OkClick_CannotStartCycle" xml:space="preserve">
+    <value>Nie udało się rozpocząć cyklu.</value>
+  </data>
+  <data name="StartSupplementsCycleWindow_OKButton_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Info_usrSupplementsCyclesView_rbtnStartCycle_Click_StartedCycle" xml:space="preserve">
+    <value>Cykl został rozpoczęty. Możesz teraz przejść do kalendarza i zapoznać się z jego przebiegiem.</value>
+  </data>
+  <data name="Question_usrSupplementsCyclesView_DoYouWantToDeleteCycle" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć zaznaczoną rozpiskę?</value>
+  </data>
+  <data name="StartSupplementsCycleWindow_Title" xml:space="preserve">
+    <value>Rozpocznij nowy cykl</value>
+  </data>
+  <data name="StartSupplementsCycleWindow_TrainingType_Cardio" xml:space="preserve">
+    <value>Kardio</value>
+  </data>
+  <data name="StartSupplementsCycleWindow_TrainingType_None" xml:space="preserve">
+    <value>Brak</value>
+  </data>
+  <data name="StartSupplementsCycleWindow_TrainingType_Strength" xml:space="preserve">
+    <value>Trening siłowy</value>
+  </data>
+  <data name="StartSupplementsCycleWindow_TrainingType_StrengthAndCardio" xml:space="preserve">
+    <value>Oba</value>
+  </data>
+  <data name="ErrCannotPublishSuppleDefinition" xml:space="preserve">
+    <value>Nie udało się opublikować rozpiski cyklu.</value>
+  </data>
+  <data name="SuplementsEntryStrings_Label_StartDate" xml:space="preserve">
+    <value>Data rozpoczęcia:</value>
+  </data>
+  <data name="SuplementsEntryStrings_Label_TotalWeeks" xml:space="preserve">
+    <value>Jak długo:</value>
+  </data>
+  <data name="SuplementsEntryStrings_Label_WeeksPostFix" xml:space="preserve">
+    <value>tyg.</value>
+  </data>
+  <data name="Exception_StartSupplementsCycleWindow_ErrPreview" xml:space="preserve">
+    <value>NIe udało się wykonać tej operacji.</value>
+  </data>
+  <data name="Exception_StartSupplementsCycleWindow_ErrPreviewTimeout" xml:space="preserve">
+    <value>Ta operacja trwała za długo i została przerwana. Spróbuj ponownie później.</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Header_CEditor" xml:space="preserve">
+    <value>Edytor cyklu:</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Header_Weeks" xml:space="preserve">
+    <value>Tygodnie: {0}-{1}</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Measurements" xml:space="preserve">
+    <value>Wymiary</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Update_SelectSuplement" xml:space="preserve">
+    <value>(Wybierz suplement)</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Header_Details" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Header_Edit" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Header_Editor" xml:space="preserve">
+    <value>Edytor</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Header_Information" xml:space="preserve">
+    <value>Informacje</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Label_AddMeasurements" xml:space="preserve">
+    <value>Dodaj wymiary</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Label_AddSuplement" xml:space="preserve">
+    <value>Dodaj suplement</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Label_AddWeek" xml:space="preserve">
+    <value>Dodaj tydzień</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Label_Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Label_Save" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorView_Watermark_SelectLanguage" xml:space="preserve">
+    <value>Wybierz język</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildDescription" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_CreationDate" xml:space="preserve">
+    <value>Data utworzenia</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Details" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Difficulty" xml:space="preserve">
+    <value>Dla kogo</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_DosagePer10Kg" xml:space="preserve">
+    <value>na 10 kg</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_HowLong" xml:space="preserve">
+    <value>Jak długo</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Info" xml:space="preserve">
+    <value>Informacje</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Purpose" xml:space="preserve">
+    <value>Cel</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Week" xml:space="preserve">
+    <value>&lt;TR class='{1}'&gt;&lt;TD&gt;Tydzień {0}&lt;/TD&gt;</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Weeks" xml:space="preserve">
+    <value>Jak długo</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Author_Length_Validator" xml:space="preserve">
+    <value>Autor może mieć max. 100 znaków.</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Language_Validator" xml:space="preserve">
+    <value>Nieprawidłowy język</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Name_Length_Validator" xml:space="preserve">
+    <value>Musisz podać nazwę (max. 100 znaków).</value>
+  </data>
+  <data name="SupplementsCycleDefinitionEditorViewModel_Url_Length_Validator" xml:space="preserve">
+    <value>Url jest za długi</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_BuildInfo_Weeks_Value" xml:space="preserve">
+    <value>{0} tyg.</value>
+  </data>
+  <data name="SupplementsCycleDefinitionHtmlExporter_Column_Comment" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="SupplementsView_NameColumnHeader" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="SupplementsCyclesList_Header_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="SupplementsCyclesList_Header_Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="SupplementsCyclesList_Header_Rating" xml:space="preserve">
+    <value>Ocena</value>
+  </data>
+  <data name="SupplementsCyclesList_Header_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SupplementsView_Header_Edit" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="SupplementsView_Header_Supplements" xml:space="preserve">
+    <value>Suplementy</value>
+  </data>
+  <data name="SupplementsView_Header_Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="usrSupplementCycleWeekEditor_Content_Comment" xml:space="preserve">
+    <value>_Komentarz:</value>
+  </data>
+  <data name="SupplementsModule_ShareToSocial_Caption" xml:space="preserve">
+    <value>BodyArchitect - dziennik treningowy stworzony dla profesjonalnych kulturystów.</value>
+  </data>
+  <data name="SupplementsModule_CreateRibbon_Header_Supplements" xml:space="preserve">
+    <value>Suplementy</value>
+  </data>
+  <data name="SupplementsModule_CreateRibbon_Label_Cycles" xml:space="preserve">
+    <value>Cykle</value>
+  </data>
+  <data name="SupplementsCyclesView_Header_Cycles" xml:space="preserve">
+    <value>Cykl</value>
+  </data>
+  <data name="SupplementsView_Header_Supplements_xamlCs" xml:space="preserve">
+    <value>Suplementy</value>
+  </data>
+  <data name="usrSupplementCycleWeekEditor_CHK_IsRepetitable" xml:space="preserve">
+    <value>Skopiuj ten tydzień w przypadku przedłużenia cyklu</value>
+  </data>
+  <data name="SupplementsCyclesList_ToolTip_CanBeIllegal" xml:space="preserve">
+    <value>Zawiera suplementy, które mogą być nielegalne</value>
+  </data>
+  <data name="SupplementsCyclesList_ToolTip_IsLegal" xml:space="preserve">
+    <value>Zawiera tylko legalne suplementy.</value>
+  </data>
+  <data name="usrSupplementCycleWeekEditor_Content_End" xml:space="preserve">
+    <value>K_oniec:</value>
+  </data>
+  <data name="usrSupplementCycleWeekEditor_Content_Name" xml:space="preserve">
+    <value>_Nazwa:</value>
+  </data>
+  <data name="usrSupplementCycleWeekEditor_Content_Start" xml:space="preserve">
+    <value>_Start:</value>
+  </data>
+  <data name="usrSupplementsCycleDosageEditor_Content_Comment" xml:space="preserve">
+    <value>_Komentarz:</value>
+  </data>
+  <data name="usrSupplementsCycleDosageEditor_Content_Dosage" xml:space="preserve">
+    <value>_Dawka:</value>
+  </data>
+  <data name="usrSupplementsCycleDosageEditor_Content_HowOften" xml:space="preserve">
+    <value>_Jak często:</value>
+  </data>
+  <data name="usrSupplementsCycleDosageEditor_Content_Supplement" xml:space="preserve">
+    <value>_Suplement:</value>
+  </data>
+  <data name="usrSupplementsCycleDosageEditor_Content_When" xml:space="preserve">
+    <value>K_iedy:</value>
+  </data>
+  <data name="usrSupplementsCyclePreview_Text_CycleSummary" xml:space="preserve">
+    <value>Podsumowanie cyklu</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Ascending" xml:space="preserve">
+    <value>Rosnąco</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Cycle" xml:space="preserve">
+    <value>Cykl</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Descending" xml:space="preserve">
+    <value>Malejąco</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Edit" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Favorities" xml:space="preserve">
+    <value>Ulubione</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_MyCycles" xml:space="preserve">
+    <value>Moje cykle</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Operations" xml:space="preserve">
+    <value>Operacje</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Search_RibbonGroup" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Search_RibbonTab" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_Search_TabItem" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrSupplementsCyclePreview_generateStatistics_Item" xml:space="preserve">
+    <value>{0} {1} {2}</value>
+  </data>
+  <data name="usrSupplementsCycleDosageEditor_Watermark_SupplementName" xml:space="preserve">
+    <value>Nazwa suplementu</value>
+  </data>
+  <data name="usrSupplementCycleWeekEditor_Help_IsRepetitable" xml:space="preserve">
+    <value>Użytkownik podczas rozpoczynania nowego cyklu może określić, ile tygodni ten cykl będzie trwać. Jeśli wybierze dłuższy okres czasu niż ten zdefiniowany w rozpisce, BodyArchitect automatycznie powtórzy istniejące tygodnie (zrobi pętlę). Jeśli uważasz, że pewne tygodnie nie powinny być powtarzane, odznacz tą opcję. Jeśli odznaczysz ją dla wszystkich tygodni w planie, wtedy użytkownik nie będzie mógł przedłużyć swojego cyklu.</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Header_SortOrder" xml:space="preserve">
+    <value>Kierunek sortowania</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Clone" xml:space="preserve">
+    <value>Klonuj</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_More" xml:space="preserve">
+    <value>Więcej</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_New" xml:space="preserve">
+    <value>Nowy</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Order" xml:space="preserve">
+    <value>Kolejność</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Publish" xml:space="preserve">
+    <value>Publikuj</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Remove" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_Search" xml:space="preserve">
+    <value>Znajdź</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_SortOrder" xml:space="preserve">
+    <value>Kierunek sortowania</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_StartCycle" xml:space="preserve">
+    <value>Rozpocznij cykl</value>
+  </data>
+  <data name="usrSupplementsCyclesView_Label_View" xml:space="preserve">
+    <value>Wyświetl</value>
+  </data>
+  <data name="usrSupplementsEntry_DosageColumnHeader" xml:space="preserve">
+    <value>Dawka</value>
+  </data>
+  <data name="usrSupplementsEntry_DosageTypeColumnHeader" xml:space="preserve">
+    <value>Rodzaj dawki</value>
+  </data>
+  <data name="usrSupplementsEntry_InfoColumnHeader" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="usrSupplementsEntry_NameColumnHeader" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="usrSupplementsEntry_SupplementsColumnHeader" xml:space="preserve">
+    <value>Suplement</value>
+  </data>
+  <data name="usrSupplementsEntry_TimeColumnHeader" xml:space="preserve">
+    <value>Czas</value>
+  </data>
+  <data name="usrSupplementsEntry_DeleteRowButtonTip" xml:space="preserve">
+    <value>Usuwa cały wiersz</value>
+  </data>
+  <data name="usrSupplementsEntry_Header_Remind" xml:space="preserve">
+    <value>Przypomnij</value>
+  </data>
+  <data name="usrSupplementsEntry_Text_ExclamationMark" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="usrSupplementsEntry_Header_Comment" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="usrSupplementsEntry_TimeTypeColumnHeader" xml:space="preserve">
+    <value>Kiedy</value>
+  </data>
+  <data name="usrSupplementsEntry_Watermark_Comment" xml:space="preserve">
+    <value>Możesz skomentować ten wpis</value>
+  </data>
+  <data name="SupplementsCycleDefinitions_Publish_ErrProfileRank" xml:space="preserve">
+    <value>Aby móc publikować rozpiski suplementów, musisz mieć przynajmniej {0} wpisów suplementów w kalendarzu.</value>
+  </data>
+  <data name="StartSupplementsCycleWindow_Watermark_ChooseSupplementDefinitions" xml:space="preserve">
+    <value>(Wybierz rozpiskę)</value>
+  </data>
+  <data name="SupplementsDefinitionNewName" xml:space="preserve">
+    <value />
+  </data>
+</root>

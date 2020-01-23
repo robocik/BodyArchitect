@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.UsersFilterControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" mc:Ignorable="d"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource CustomChromeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock VerticalAlignment="Center" Text="{Binding Path=Localizedresources.UsersFilterControl_OrderBy,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+        <Controls:FixedListPicker Grid.Column="1"   SelectedIndex="1"  Name="lpOrderBy" >
+            <toolkit:ListPicker.Items>
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.UsersFilterControl_OrderBy_ByLoginDate,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.UsersFilterControl_OrderBy_ByTrainingDaysCount,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.UsersFilterControl_OrderBy_ByName,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+            </toolkit:ListPicker.Items>
+        </Controls:FixedListPicker>
+
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="{Binding Path=Localizedresources.UsersFilterControl_Gender,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+        <Controls:FixedListPicker Grid.Row="1" Grid.Column="1"   SelectedIndex="0"  Name="lpGender" >
+            <toolkit:ListPicker.Items>
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.UsersFilterControl_Gender_Any,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.UsersFilterControl_Gender_Male,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.UsersFilterControl_Gender_Female,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+            </toolkit:ListPicker.Items>
+        </Controls:FixedListPicker>
+    </Grid>
+</UserControl>

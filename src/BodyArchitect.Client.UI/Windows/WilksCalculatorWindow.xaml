@@ -1,0 +1,61 @@
+﻿<windows:BaseWindow x:Class="BodyArchitect.Client.UI.Windows.WilksCalculatorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                                   xmlns:windows="clr-namespace:BodyArchitect.Client.UI.Windows"
+                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                    xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls"
+                    Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen"
+        Title="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_Title}" Height="300" Width="300" ResizeMode="CanMinimize" Loaded="WilksCalculatorWindow_OnLoaded">
+
+    <StackPanel Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+        <Label Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_Label_Gender}"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <RadioButton Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_Gender_Male}" IsChecked="{Binding IsMale,Mode=TwoWay}" />
+
+            <RadioButton Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_Gender_Female}" Grid.Column="1" IsChecked="{Binding IsFemale,Mode=TwoWay}"/>
+        </Grid>
+
+        <Grid HorizontalAlignment="Stretch" Margin="{StaticResource MarginLargeBottom}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_BodyWeight}" Margin="{StaticResource MarginMediumTop}"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <xctk:DoubleUpDown Width="100" Value="{Binding BodyWeight,Mode=TwoWay}" />
+                <TextBlock Margin="{StaticResource MarginSmallLeft}" Text="{Binding WeightType}" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <Label Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_TotalWeight}" Margin="{StaticResource MarginMediumTop}" Grid.Column="1"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                <xctk:DoubleUpDown Width="100" Value="{Binding TotalWeight,Mode=TwoWay}" />
+                <TextBlock Margin="{StaticResource MarginSmallLeft}" Text="{Binding WeightType}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+
+
+
+
+        <Button Width="90" Style="{StaticResource NormalButton}"  Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_Button_Calculate}" Click="btnCalculate_Click" Margin="{StaticResource MarginLargeTop}"/>
+
+        <Label Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_WilksPoints}" FontSize="16" Margin="{StaticResource MarginMediumTop}"/>
+        <TextBox FontSize="18" FontWeight="Bold" IsReadOnly="true" Text="{Binding Wilks,Mode=OneWay}" Margin="{StaticResource MarginLargeBottom}"/>
+
+        <StackPanel Orientation="Horizontal" Margin="{StaticResource MarginLargeTop}">
+            <TextBlock Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_WilksFormulaHelp}" />
+            <my:BAHelpButton x:Name="hlpCalendarPrivacy" AccountType="PremiumUser"  Description="{lex:LocText  BodyArchitect.Client.Resources:Strings:WilksCalculatorWindow_WilksFormulaHelpDescription}"  />
+
+        </StackPanel>
+        
+    </StackPanel>
+</windows:BaseWindow>

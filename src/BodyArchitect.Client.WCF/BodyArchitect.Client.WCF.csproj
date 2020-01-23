@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0C4293B-9D71-4415-8062-4C35ADD13640}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Client.WCF</RootNamespace>
+    <AssemblyName>BodyArchitect.Client.WCF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.WCF.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BodyArchitect.Client.WCF.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.WCF.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.WCF.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.Integration.WCF.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIKeyMessageInspector.cs" />
+    <Compile Include="PagedResultRetriever.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Automatic\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceManager.cs" />
+    <Compile Include="ServicePool.cs" />
+    <Compile Include="ValidationResultHelper.cs" />
+    <Compile Include="WorldWeatherOnline.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BodyArchitect.Model.Exercise.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Model.Profile.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Model.SessionData.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Model.TrainingDay.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.BlogCommentDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.CommentEntryDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.CommentsListPack.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.EntryObjectDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.ExerciseDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.ExerciseDTO1.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.ExercisesListPack.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.FriendInvitationDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.FullWorkoutPlanDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.MapperResult.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.MyTrainingDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.MyTrainingDTO1.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.ProfileDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.ProfileDTO1.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.ProfileInformationDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.SessionData.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.SessionData1.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.SuplementDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.SuplementsListPack.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.Token.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.TrainingDayDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.TrainingDayDTO1.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.TrainingDaysPack.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.TrainingPlanDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.TrainingPlans.TrainingPlan.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.UserDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.UserSearchDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.UsersListPack.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.WorkoutPlanDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.Model.WorkoutPlansListPack.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.BlogCommentDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.ChampionshipDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.CommentEntryDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.EntryObjectDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.ExerciseDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.FeaturedData.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.FriendInvitationDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.ActivityDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.CustomerDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.CustomerGroupDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.PaymentBasketDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.ProductDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.ProductInfoDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.ReservationOperationResult.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.ScheduleEntryBaseDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.ScheduleEntryDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Instructor.ScheduleEntryReservationDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.MapperResult.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.MessageDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.MyGymDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.MyPlaceDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.MyTrainingDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.ProfileDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.ProfileInformationDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.ReminderItemDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Reports.ExerciseRecordsReportResultItem.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Reports.MeasurementsTimeReportResultItem.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Reports.WeightExerciseReportResultItem.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.Reports.WeightReperitionReportResultItem.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.SaveChampionshipResult.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.SaveTrainingDayResult.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.SessionData.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.SuplementDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.SupplementCycleDefinitionDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.SupplementsCycleDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.SupplementsCycleOperationResult.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.TrainingDayCommentDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.TrainingDayDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.TrainingPlans.TrainingPlan.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.TrainingPlans.TrainingPlanInfo.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.UserSearchDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.VoteResult.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.WeatherDTO1.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.WorkoutPlanDTO.datasource" />
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.WP7.TrialStatusInfo.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.V2.Model\BodyArchitect.Service.V2.Model.csproj">
+      <Project>{DCFCC632-2849-421F-BF34-054B8DF0F6E9}</Project>
+      <Name>BodyArchitect.Service.V2.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Automatic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\BodyArchitect.Service.V2.Model.WymiaryDTO.datasource" />
+    <None Include="Service References\Automatic\BodyArchitect1.wsdl" />
+    <None Include="Service References\Automatic\BodyArchitect13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect131.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect1310.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect1311.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect1312.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect132.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect133.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect134.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect136.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect137.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect138.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitect139.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Automatic\BodyArchitectAccessService1.wsdl" />
+    <None Include="Service References\Automatic\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Automatic\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Automatic\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Automatic\BodyArchitect1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GeneratingServiceProblems.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

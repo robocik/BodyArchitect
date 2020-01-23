@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="BodyArchitect.Client.UI.UserControls.usrAddressDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Name="Me">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label VerticalAlignment="Center" Target="txtAddress1" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrAddressDetails_Label_Address1}" Grid.Row="0"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeftTop}" Name="txtAddress1" MaxLength="200" Text="{Binding Address.Address1,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,ElementName=Me}" IsReadOnly="{Binding ReadOnly,ElementName=Me}" Grid.Row="0" Grid.Column="1"/>
+
+        <Label VerticalAlignment="Center" Target="txtAddress2" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrAddressDetails_Label_Address2}" Grid.Row="1"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeftTop}" Name="txtAddress2" MaxLength="200" Text="{Binding Address.Address2,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,ElementName=Me}" IsReadOnly="{Binding ReadOnly,ElementName=Me}" Grid.Row="1" Grid.Column="1"/>
+
+        <Label VerticalAlignment="Center" Target="txtCity" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrAddressDetails_Label_City}" Grid.Row="2"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeftTop}" Name="txtCity" MaxLength="100" Text="{Binding Address.City,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,ElementName=Me}" IsReadOnly="{Binding ReadOnly,ElementName=Me}" Grid.Row="2" Grid.Column="1"/>
+
+        <Label VerticalAlignment="Center" Target="txtPostalCode" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrAddressDetails_Label_PostalCode}" Grid.Row="3"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeftTop}" Name="txtPostalCode" MaxLength="200" Text="{Binding Address.PostalCode,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,ElementName=Me}" IsReadOnly="{Binding ReadOnly,ElementName=Me}" Grid.Row="3" Grid.Column="1"/>
+
+        <Label VerticalAlignment="Center" Target="txtCountry" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrAddressDetails_Label_Country}" Grid.Row="4"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeftTop}" Name="txtCountry" MaxLength="200" Text="{Binding Address.Country,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,ElementName=Me}" IsReadOnly="{Binding ReadOnly,ElementName=Me}" Grid.Row="4" Grid.Column="1"/>
+    </Grid>
+</UserControl>

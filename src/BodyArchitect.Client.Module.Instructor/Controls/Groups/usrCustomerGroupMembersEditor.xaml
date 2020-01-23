@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.Instructor.Controls.Groups.usrCustomerGroupMembersEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"         
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls" xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ExGridSplitter;assembly=BodyArchitect.Client.UI" xmlns:Groups="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls.Groups"
+             xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Groups:usrGroupMembersListBox Controls:ImageButtonExt.EmptyListMessage="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrCustomerGroupMembersEditor_EmptyListMessage_NoMembers}" MouseDoubleClick="lstMembers_MouseDoubleClick" ItemsSource="{Binding Members}" KeyDown="lstMembers_KeyDown" AllowDrag="false"  AllowDrop="true"  Drop="lstMembers_Drop" x:Name="lstMembers" Grid.Column="0"  />
+
+        <controls:GridExpander  Name="commentsSplitter" Grid.Column="1" Style="{StaticResource ColumnExpander}"   />
+
+        <Groups:usrGroupMembersListBox Controls:ImageButtonExt.EmptyListMessage="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrCustomerGroupMembersEditor_EmptyListMessage_NoCustomers}"  ItemsSource="{Binding Customers}" MouseDoubleClick="lstAllCustomers_MouseDoubleClick" AllowDrag="true" DropScope="{Binding ElementName=lstMembers}" FilterItemsSource="{Binding ItemsSource,ElementName=lstMembers}"  x:Name="lstAllCustomers" Grid.Column="2" />
+    </Grid>
+</UserControl>

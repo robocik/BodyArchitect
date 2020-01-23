@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+	<generator>Feed Editor (Unlicensed)</generator>
+	<pubDate>26 Oct 2012 07:49:35 GMT</pubDate>
+	<title>BodyArchitect-Wskazówki</title>
+	<description>Porady dotyczące programu BodyArchitect</description>
+	<link>http://bodyarchitectonline.com</link>
+	<managingEditor>bodyarchitectsoft@gmail.com</managingEditor>
+	<language>pl</language>
+	<webMaster>bodyarchitectsoft@gmail.com</webMaster>
+	<item>
+	<title>Kalendarz</title>
+	<description>Wstawiając trening siłowy możesz określić, na której siłowni go wykonałeś. Ma to znaczenie np. przy generowaniu wykresów. Często jest tak, że ćwicząc na maszynie firmy X wybieramy ciężar np. 30kg, a idąc na inna siłownię (gdzie jest podobna maszyna, ale firmy Y) musimy ustawić np. 45kg. Gdy później chcemy zobaczyć na wykresie, o ile zwiększyła się siła dla danego ćwiczenia, dostaniemy informacje ze od 30 do 45 kg. Jednak tak naprawdę to jest tylko różnica w budowie maszyny. Dzięki temu, że każdemu z tych treningów przypiszemy inne miejsce wykonania, możemy później wygenerować wykres tylko dla treningów wykonanych na jednej siłowni. </description>
+	<pubDate>26 Oct 2012 11:05:45 GMT</pubDate>
+	<link></link>
+	<category>Application</category>
+	<guid isPermaLink="false">3C2DE6B5-CEA6-45A5-BCCA-4AD470BF1604</guid>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Dla większości ćwiczeń w dzienniku przyrząd powinien być ustawiony na &lt;b&gt;domyślny&lt;/b&gt;. Np w ćwiczeniu &lt;i&gt;wyciskanie sztangi na ławce płaskiej&lt;/i&gt;, gdy wykonujesz je w standardowy sposób, powinieneś wybrać przyrząd &lt;b&gt;domyślny&lt;/b&gt; a nie &lt;b&gt;sztanga&lt;/b&gt;. W tym przypadku &lt;b&gt;sztangę&lt;/b&gt; możesz wybrać, gdy wykonujesz to ćwiczenie w inny sposób (lub np. sztangą łamaną). Po prostu gdy ćwiczenie robimy tak jak powinno się wykonać to przyrząd jest zawsze &lt;b&gt;domyślny&lt;/b&gt;.</description>
+	<pubDate>26 Oct 2012 11:09:26 GMT</pubDate>
+	<link></link>
+	<category>Application</category>
+	<guid isPermaLink="false">C34AB43F-B4A7-4819-819A-3337DA19CA3D</guid>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Czy zdarzyło Ci się, że chciałeś wykonać ćwiczenie (np. &lt;i&gt;Uginanie ramion ze sztangą&lt;/i&gt;), ale akurat ktoś inny korzystał w tym czasie ze sztangi. Możliwe, że wtedy stwierdziłeś, ze wykonasz to samo ćwiczenie, ale na maszynie z większym ciężarem. Problem tylko jak to wpisać do dziennika, bo jeśli ze sztanga brałeś 30 kg, a z maszyna 45 to generując wykres dostaniesz błędną informacje, że dla tego ćwiczenia Twoja siła wzrosła o 15kg, a tak naprawdę tylko zmieniłeś przyrząd. Teraz możesz dla każdego ćwiczenia określić sposób jego wykonania (przyrząd). Pamiętaj jednak, że jest to opcja, którą powinieneś wykorzystywać rozważnie. W większości przypadków powinieneś stworzyć nowe ćwiczenie &lt;i&gt;Uginanie ramion na maszynie&lt;/i&gt; niż zmieniać przyrząd dla już istniejącego.</description>
+	<pubDate>26 Oct 2012 11:07:35 GMT</pubDate>
+	<link></link>
+	<category>Application</category>
+	<guid isPermaLink="false">5B71F2AE-0CEA-44A6-8518-593363ADDE42</guid>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Tylko serie z przyrządem ustawionym na &lt;b&gt;domyślny&lt;/b&gt; są uwzględniane przy obliczaniu osobistych rekordów. Z tego względu w większości przypadków lepiej jest stworzyć nowe ćwiczenie, niż wybierać inny przyrząd w kalendarzu.</description>
+	<pubDate>26 Oct 2012 11:11:01 GMT</pubDate>
+	<link></link>
+	<category>Application</category>
+	<guid isPermaLink="false">32946E8B-740C-4085-A0C4-F8BEA0CEDA8E</guid>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Wpisy w kalendarzu możesz oznaczać jako &lt;b&gt;wykonane&lt;/b&gt; lub &lt;b&gt;zaplanowane&lt;/b&gt;. Domyślnie wpisy dodawane w przyszłości maja status &lt;b&gt;zaplanowane&lt;/b&gt;, a dodane w przeszłości &lt;b&gt;wykonane&lt;/b&gt;. </description>
+	<pubDate>26 Oct 2012 11:04:19 GMT</pubDate>
+	<link></link>
+	<category>Application</category>
+	<guid isPermaLink="false">E1EC7D1D-8B3B-4FC7-900E-6E49CE5040AE</guid>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Inni użytkownicy przeglądający Twój dziennik mogą dodawać komentarze . Możesz ta opcje zablokować globalnie (w ustawieniach profilu) lub dla każdego dnia oddzielnie w kalendarzu.</description>
+	<pubDate>26 Oct 2012 11:03:57 GMT</pubDate>
+	<link></link>
+	<category>Application</category>
+	<guid isPermaLink="false">27ED6786-A3E5-4EA7-BB76-F44DC0465946</guid>
+	</item>
+	<item>
+	<title>Użytkownicy</title>
+	<description>W zakładce &lt;b&gt;Polecane&lt;/b&gt; zawsze masz przegląd co nowego dzieje się w &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt;. Zaglądaj tam codziennie.</description>
+	<pubDate>26 Oct 2012 11:01:30 GMT</pubDate>
+	<link></link>
+	<category>Application</category>
+	<guid isPermaLink="false">F4337693-BB07-4DDF-B7E8-CA01689F69DD</guid>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Podczas dodawania treningu siłowego do kalendarza &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt; rejestruje rekordy dla każdego ćwiczenia. Początkowo te rekordy są dostępne tylko dla Ciebie i znajomych. Gdy w kalendarzu będziesz miał 30 lub więcej wpisów treningu siłowego, wtedy Twoje rekordy będą wyświetlane w klasyfikacji genealnej (dostępne publicznie dla innych).</description>
+	<pubDate>26 Oct 2012 10:59:44 GMT</pubDate>
+	<link></link>
+	<category>WinFormsClient</category>
+	<guid isPermaLink="false">E81FDF1A-E881-4137-987D-F3923BA60782</guid>
+	</item>
+	<item>
+	<title>Ogólne</title>
+	<description>Możesz przeciągnąć zakładki z okna głównego w dowolne miejsce na ekranie lub drugi monitor. Po prostu kliknij na nazwę zakładki na górze okna głównego i przeciągnij ja w inne miejsce. </description>
+	<pubDate>26 Oct 2012 10:58:41 GMT</pubDate>
+	<link></link>
+	<category>WinFormsClient</category>
+	<guid isPermaLink="false">E2F2255B-F483-4F6D-B2D0-4417BA4063BC</guid>
+	</item>
+	<item>
+	<title>Ogólne</title>
+	<description>Aby otworzyć widok w nowej zakładce wciśnij klawisz &lt;b&gt;Ctrl&lt;/b&gt; podczas klikania w przycisk na &lt;b&gt;Wstążce&lt;/b&gt; lub link. Dzięki temu obecny widok będzie cały czas dostępny.</description>
+	<pubDate>26 Oct 2012 10:56:53 GMT</pubDate>
+	<link></link>
+	<category>WinFormsClient</category>
+	<guid isPermaLink="false">5C569116-1389-4AAB-B00B-DB07B37975EF</guid>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Dawkowanie kreatyny może być różne. Ja polecam brać 5g (jedną porcję) w dni nietreningowe i 2 porcje w dni treningowe (5g rano i 5g po treningu). Pamiętaj, że na cyklu kreatynowym powinieneś pić dużo wody.</description>
+	<pubDate>30 Mar 2011 14:58:47 GMT</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Minimalna przerwa między cyklami kreatynowymi powinna wynosić tyle ile trwał ostatni cykl, czyli dla przykładu Twój cykl trwał 7 tygodni, to zrób sobie przynajmniej 7 tyg. przerwy (najlepiej jeszcze więcej) do następnego cyklu.</description>
+	<pubDate>Tue, 22 Mar 2011 21:09:33 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Jest wiele rodzajów kreatyn. Na swój pierwszy cykl proponuję monohydrat kreatyny - tani a dobry. Pamiętaj, że lepiej zacząć od słabszych form kreatyny, gdyż dzięki temu, będziesz mógł dłużej cieszyć się efektami tego typu suplementów.</description>
+	<pubDate>Tue, 22 Mar 2011 21:07:08 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Kreatyna jest najskuteczniejszym (legalnym) suplementem dla pakerów. Jednak jeśli rozpoczynasz swoją przygodę z siłownią, to odpuść sobie jakiekolwiek odżywki. Zajmij się ułożeniem diety i ćwicz. Suplementami takimi jak kreatyna zainteresuj się przynajmniej po roku treningu bez ściemy.</description>
+	<pubDate>22 Mar 2011 21:02:31 GMT</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Suplementy są jedynie dodatkiem. Najważniejsze w osiąganiu efektów na siłowni jest dobrze zbilansowana dieta oraz przemyślany trening. Nie przeceniaj zatem roli odżywek w treningu siłowym, bo bez diety i potu na siłce, stracisz tylko pieniądze.</description>
+	<pubDate>Tue, 22 Mar 2011 20:59:01 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Wielu początkujących pakerów ćwiczy po 2 godź., 5 razy w tygodniu na siłowni, do tego aeroby co drugi dzien, a przed snem jeszcze robią pompki. Wszystko po to by rosło. Niestety, take postępowanie doprowadzi do przetrenowania. Obserwuj swój organizm; jeśli czujesz się słaby, Twoje osiągi na siłce są gorsze niż kiedyś - odpuść trochę. Zrób 2 tyg. przerwy i zacznij spokojnie, a osiągniesz cel.</description>
+	<pubDate>Tue, 22 Mar 2011 20:51:09 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Będąc kulturystą musisz poznać jedno z podstawowych praw: masa=ciężar. Nazywam je prawem zdobycia masy. Mówiąc po ludzku, jeśli chcesz zdobyć konkretną masę mięśniową, to musisz podnosić duże ciężary i wykonywać 3-12 powtórzeń. Małe ciężary z dużą liczbą powtórzeń powodują, że organizm zwiększa wytrzymałość mięśniową. Dopiero małą ilość powtórzeń z dużym ciężarem spowoduje, że będziesz musiał zmienić koszulę na większą.</description>
+	<pubDate>Tue, 22 Mar 2011 20:43:15 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Rozciągaj (ang. stretching) mięśnie przed treningiem, w jego trakcie oraz na koniec. Dzięki temu rozgrzewasz mięśnie i stawy oraz przyśpieszasz regenerację. Pamiętaj o tym bracie!</description>
+	<pubDate>Tue, 22 Mar 2011 20:41:26 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Stopniowo zwiększaj obciążenie. Jeśli będziesz przez pół roku wykonywał te same ćwiczenia z dokładnie tym samym ciężarem to nie urośniesz. Twoje ciało po prostu przystosuje się do tego wysiłku. Dorzucaj do sztangi nawet 2 kg więcej co klika treningów. Pamiętaj jednak, żeby nie przesadzać - ćwiczenia muszą być wykonywane poprawnie!</description>
+	<pubDate>22 Mar 2011 20:36:00 GMT</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Każdy trening musi być poprzedzony dobrą &lt;b&gt;rozgrzewką&lt;/b&gt;. Pamiętaj, że jedną z głównych przyczyn kontuzji jest właśnie brak rozgrzewki. Leczenie uszkodzonego stawu lub mięśnia trwa bardzo długo, a na tyle czasu nie chcesz odstawić siłowni, prawda?</description>
+	<pubDate>Wed, 9 Mar 2011 21:25:17 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Wykonuj głównie &lt;b&gt;ćwiczenia złożone&lt;/b&gt; (takie, które angażują jednocześnie wiele mięśni). &lt;b&gt;Ćwiczenia izolowane&lt;/b&gt; niech będą dodatkiem. Przykładami ćwiczeń złożonych są: przysiady ze sztangą, martwy ciąg, wyciskanie sztangi nad głowę, itp.</description>
+	<pubDate>Wed, 9 Mar 2011 21:20:51 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Jeśli zależy Ci na masie mięśniowej to jedz godzinę przed snem posiłek składający się głównie z białka i zdrowych tłuszczy, żeby organizm przez noc miał odpowiednie paliwo. Możesz jeść twaróg z oliwą z oliwek lub łososia. Brzmi jak hardcore, ale działa!</description>
+	<pubDate>Wed, 9 Mar 2011 21:18:24 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Jedz minimum 1,5-2g białka na kg masy ciała w ciągu całego dnia. Czyli, ważąc 75kg powinieneś jeść 115-150g białka, najlepiej pochodzenia zwierzęcego (filet z kurczaka, indyka, jajka, mleko, sery, ryby).</description>
+	<pubDate>Wed, 9 Mar 2011 21:14:56 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Gdy rozpoczynasz swoją przygodę z siłownią, pamiętaj o tym, że Twoje ciało nie jest przyzwyczajone do takiego wysiłku. Przez pierwsze 2 miesiące zrób sobie &lt;b&gt;trening obwodowy&lt;/b&gt; (na każdej sesji treningowej ćwicz całe ciało), a ciężary dobieraj z umiarem. Pamiętaj, że o kontuzję nie trudno, a wyleczenie jej trwa bardzo długo.</description>
+	<pubDate>Wed, 9 Mar 2011 21:11:52 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>&lt;b&gt;Regeneracja&lt;/b&gt; jest jednym z najważniejszych czynników decydujących o postępach. Mięśnie rosną nie podczas treningu, a podczas odpoczynku (snu). Dlatego ważne jest, żebyś po ciężkim treningu dał swoim mięśniom czas na odbudowę uszkodzonych tkanek. Dlatego nie ćwicz codziennie. Rób sobie jeden dzień przerwy między treningami i dużo śpij.</description>
+	<pubDate>Wed, 9 Mar 2011 21:09:02 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Po treningu powinieneś uzupełnić w mięśniach glikogen. Dlatego dobrym rozwiązaniem jest zjedzenie banana, batonika lub wypicie odżywki zawierającej węglowodany proste (cukry).</description>
+	<pubDate>Wed, 9 Mar 2011 21:04:08 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Śniadanie jest najważniejszym posiłkiem w ciągu dnia, dlatego nie powinieneś go pomijać. A jeśli zależy Ci na dobrze rozwiniętej masie mięśniowej to jedz śniadanie zaraz po przebudzeniu. Jeśli nie jesteś w stanie przełknąć nic rano, to możesz zjeść płatki owsiane z mlekiem lub przygotować sobie koktail z ryżu, truskawek i mleka.</description>
+	<pubDate>Wed, 9 Mar 2011 21:02:38 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Redukcja wagi (spalanie tłuszczu) jest uzależnione przede wszystkim od dobrze ułożonej diety. Jedząc dużo lub po prostu źle, nie schudniesz. Zapamiętaj to. Trening pomaga w odchudzaniu, ale bez diety ani rusz.</description>
+	<pubDate>Wed, 9 Mar 2011 21:00:03 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Jedz przynajmniej 5 pełnowartościowych posiłków w ciągu dnia. W każdym powinieneś mieć odpowiednią ilość białka (jajko, ser, mleko, ryba, mięso), węglowodany złożone (ryż brązowy, makaron razowy, ziemniaki) i kwasy tłuszczowe (oliwa z oliwek, ryby tłuste).</description>
+	<pubDate>Wed, 9 Mar 2011 20:58:09 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Ilość wykonywanych powtórzeń jest uzależniona od celu, który chcesz osiągnąć. Wykonuj powyżej &lt;b&gt;15&lt;/b&gt; powtórzeń, gdy Twoim celem jest &lt;b&gt;wytrzymałość mięśniowa&lt;/b&gt;, &lt;b&gt;8-12&lt;/b&gt;, gdy &lt;b&gt;masa&lt;/b&gt;, a &lt;b&gt;poniżej 7&lt;/b&gt;, gdy &lt;b&gt;siła&lt;/b&gt; jest priorytetem.</description>
+	<pubDate>Wed, 9 Mar 2011 20:54:46 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Nie przesadzaj z ciężarami. Nie sztuką jest założyć na sztangę za duży ciężar i wyginać śmiało ciało, żeby go wycisnąć. Kluczem do sukcesu jest &lt;b&gt;prawidłowa technika&lt;/b&gt;. Zawsze wykonuj ćwiczenia prawidłowo, a duże ciężary przyjdą z czasem.</description>
+	<pubDate>Wed, 9 Mar 2011 20:51:20 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Wiesz co to jest święta trójca? Są to 3 podstawowe ćwiczenia, które powinny znaleźć się w arsenale profesjonalnego kulturysty: przysiad ze &lt;i&gt;sztangą, martwy ciąg&lt;/i&gt; i &lt;i&gt;wyciskanie sztangi na ławce poziomej&lt;/i&gt;. Przy tych ćwiczeniach nie ma obijania - liczy się prawdziwa siła.</description>
+	<pubDate>Wed, 9 Mar 2011 20:50:48 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Ćwicz głównie na wolnych ciężarach. Nic nie wyrabia muskulatury tak dobrze jak sztanga i hantle. Maszyny są dobre, ale głównie jako dodatek i urozmaicenie treningu. Zapytasz dlaczego? Między innymi dlatego, bo żeby utrzymać sztangę prosto muszą pracować dodatkowe mięśnie niż tylko ten aktualnie ćwiczony.</description>
+	<pubDate>Wed, 9 Mar 2011 20:48:17 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Pamiętaj o odpowiedniej diecie. Sam trening to tylko połowa (albo nawet mniej) sukcesu. Z dobrze ułożoną dietą Twoje postępy będą o niebo lepsze. Zatem trzymaj michę i rośnij!</description>
+	<pubDate>Wed, 9 Mar 2011 20:45:40 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Średnio co 2 miesiące zmieniaj swój trening. Wykonuj inne ćwiczenia, zmień kolejność, ilość powtórzeń, dynamikę, prowadź sztangę pod innym kątem. Nie pozwól swoim mięśniom przyzwyczaić się do wysiłku, a wtedy słowo &lt;b&gt;stagnacja&lt;/b&gt; będzie Ci obce.</description>
+	<pubDate>Wed, 9 Mar 2011 20:44:09 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Ćwicz wszystkie partie ciała. Nogi też chcą dostać porządnego kopa na siłce. Pamiętaj, że najlepiej wygląda sylwetka proporcjonalna, gdzie &lt;b&gt;wszystkie&lt;/b&gt; mięśnie są odpowiednio zrobione. Niech sezonowcy pakują tylko klatę i bica. Ty jesteś &lt;b&gt;profesjonalistą&lt;/b&gt;!</description>
+	<pubDate>Wed, 9 Mar 2011 20:40:05 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Ogólne</title>
+	<description>Pokaż &lt;b&gt;BodyArchitecta&lt;/b&gt; swoim znajomym. Im więcej ludzi będzie go używać, tym więcej planów treningowych będzie dostępnych, jak również więcej dzienników treningowych do śledzenia.</description>
+	<pubDate>9 Mar 2011 20:39:45 GMT</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Mierz swoje ciało. Jest to ważne z kilku powodów. Po pierwsze, jest to doskonały wskaźnik jakości treningu. Jeśli rośnie, to tak trzymaj. Jeśli stoi, to zmień coś w swoim planie. Po drugie, jest to doskonały bodziec motywujący gdy widzisz, że musisz coraz bardziej rozwijać miarkę, żeby zmierzyć bica. Pamiętaj – liczby nie kłamią.</description>
+	<pubDate>Wed, 9 Mar 2011 20:38:25 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Trening</title>
+	<description>Prowadź regularnie swój dziennik treningowy. Bardzo szybko przyniesie Ci on wymierne korzyści. Dodatkowo zachęcamy Cię do upublicznienia dziennika, dzięki czemu będziesz mógł otrzymywać cenne wskazówki od innych użytkowników. Niech moc będzie z Tobą!</description>
+	<pubDate>Wed, 9 Mar 2011 20:35:30 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Użytkownicy</title>
+	<description>Gdy jakiś użytkownik dodaje komentarz do Twojego kalendarza, planu treningowego lub ćwiczenia, to otrzymasz wiadomość z powiadomieniem.</description>
+	<pubDate>Wed, 9 Mar 2011 19:00:53 +0100</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Użytkownicy</title>
+	<description>Gdy wprowadzasz jakąkolwiek zmianę w kalendarzu, to do wszystkich Twoich znajomych wysyłana jest wiadomość z powiadomieniem.</description>
+	<pubDate>9 Mar 2011 19:00:11 GMT</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Użytkownicy</title>
+	<description>Możesz zaprosić innych użytkowników do swojego kręgu znajomych. Jeśli przyjmą Twoje zaproszenie, to  będą mogli mieć dostęp do niektórych danych, niedostępnych dla pozostałych użytkowników.</description>
+	<pubDate>Wed, 9 Mar 2011 18:58:43 +0100</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Możesz kopiować wpisy w kalendarzu. Jeśli np. co poniedziałek masz taki sam trening, to zamiast wprowadzać wszystko od początku, możesz skopiować istniejący wpis i nanieść odpowiednie zmiany.</description>
+	<pubDate>9 Mar 2011 18:57:13 GMT</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Plany treningowe</title>
+	<description>Aby inni użytkownicy mogli korzystać z Twojego planu, musisz go najpierw upublicznić. Mając konto Premium możesz tworzyć własne plany oraz dzielić się nimi z innymi użytkownikami.</description>
+	<pubDate>Wed, 9 Mar 2011 18:54:53 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Plany treningowe</title>
+	<description>Dzięki zakładce &lt;b&gt;Plany treningowe&lt;/b&gt; możesz przeszukiwać ciągle rosnącą bazę planów. Pamiętaj, że aby móc używać planu treningowego innego użytkownika, musisz dodać ten plan do swojej listy ulubionych.</description>
+	<pubDate>Wed, 9 Mar 2011 18:54:33 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Użytkownicy</title>
+	<description>Zakładka &lt;b&gt;Ludzie&lt;/b&gt; spełnia dwie funkcje. Po pierwsze, pokazuje Ci listę Twoich znajomych oraz ulubione profile. Po drugie, umożliwia wyszukanie nowych znajomych lub osób, których dziennik treningowy chciałbyś śledzić.</description>
+	<pubDate>Wed, 9 Mar 2011 18:47:07 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Raporty</title>
+	<description>Korzystaj z raportów. Nic tak nie motywuje do treningu jak czytelna analiza swoich postępów. Zamiast przeglądać stare wpisy w kalendarzu, żeby przekonać się, jakie postępy zrobiłeś, po prostu użyj raportów i zobacz jak linia maksymalnego ciężaru pnie się w górę.</description>
+	<pubDate>Wed, 9 Mar 2011 18:45:07 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Ogólne</title>
+	<description>Ćwiczenia publiczne to te, które są dostępne dla wszystkich. &lt;b&gt;BodyArchitect&lt;/b&gt; zawiera dużą bazę ćwiczeń, które powinny zaspokoić nawet zaawansowanych kulturystów. Jeśli jednak nie ma w bazie ćwiczenia, które Ty potrzebujesz, to możesz stworzyć własne. Konto Premium pozwala na tworzenie dowolnej liczby własnych ćwiczeń.</description>
+	<pubDate>8 Mar 2011 17:54:01 GMT</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Możesz serię w treningu siłowym oznaczyć wieloma różnymi atrybutami np. drop set, seria rozgrzewkowa, do upadku mięśniowego itp). Aby to zrobić kliknij prawym przyciskiem myszy na wpisanej serii w treningu siłowym i wybierz &lt;b&gt;Dodaj dodatkowe informacje...&lt;/b&gt;.</description>
+	<pubDate>8 Mar 2011 17:49:35 GMT</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Tworząc nowy wpis w kalendarzu widzisz domyślnie wstawione zakładki (np. trening siłowy i wymiary). Aby dodać inne zakładki (np. suplementy lub blog) kliknij po prostu przycisk &lt;b&gt;Dodaj&lt;/b&gt; na Wstążce w &lt;b&gt;Edytorze wpisu&lt;/b&gt; i wskaż wybraną opcję.</description>
+	<pubDate>Tue, 8 Mar 2011 17:44:21 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Ogólne</title>
+	<description>Czasem możesz zobaczyć okienko informujące o błędzie w programie z propozycją wysłania szczegółowych danych na jego temat do twórców programu. Zachęcamy, abyś za każdym razem kliknął przycisk &lt;b&gt;Wyślij&lt;/b&gt;. Da to nam możliwość naprawy istniejących błędów i dostarczeniu Ci niezawodnej aplikacji. Wysłana wiadomość nie zawiera żadnych prywatnych danych. Wysłane jest tylko to co widzisz w oknie z błędem.</description>
+	<pubDate>8 Mar 2011 17:34:34 GMT</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Kalendarz</title>
+	<description>Możesz bardzo szybko przemieszczać się po kalendarzu. Wstążka (szeroki pasek u góry okna z przyciskami) w kalendarzu zawiera szereg opcji, takich jak przejście do bieżącego miesiąca lub do pierwszego jak i ostatniego wpisu w kalendarzu.</description>
+	<pubDate>Tue, 8 Mar 2011 17:32:22 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Blog</title>
+	<description>Aby inni użytkownicy mogli widzieć Twojego bloga, musisz po pierwsze wstawić bloga do swojego kalendarza. Po drugie, w opcjach &lt;b&gt;Prywatności&lt;/b&gt; musisz ustawić &lt;b&gt;Wpisy kalendarza&lt;/b&gt; na &lt;i&gt;Dostępne dla wszystkich&lt;/i&gt;</description>
+	<pubDate>Tue, 8 Mar 2011 17:29:29 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Mój Profil</title>
+	<description>Posiadając konto Premium, w każej chwili możesz organiczyć innym użytkownikom możliwość przeglądania Twojego kalendarza, wymiarów oraz innych danych. Przejdz do menu &lt;b&gt;Narzędzia-&gt;Edytuj profil...&lt;/b&gt; i wybierz zakładkę &lt;b&gt;Prywatność&lt;/b&gt;.</description>
+	<pubDate>Tue, 8 Mar 2011 17:27:00 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Mój Profil</title>
+	<description>Możesz spersonalizować swój profil wstawiając swoje zdjęcie. Przejdź do &lt;b&gt;Centrum dowodzenia-&gt;Edytuj profil...&lt;/b&gt;. Wybrane zdjęcie będzie widoczne dla innych użytkowników programu.</description>
+	<pubDate>Tue, 8 Mar 2011 17:22:55 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Ogólne</title>
+	<description>Możesz wyświetlić następną poradę korzystając z przycisków strzałek powyżej.</description>
+	<pubDate>8 Mar 2011 17:17:11 GMT</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	</channel></rss>

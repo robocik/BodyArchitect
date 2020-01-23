@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFC48A28-F73C-4EF6-A875-8377E3C719A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.UnitTests</RootNamespace>
+    <AssemblyName>BodyArchitect.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.0.0\lib\net40-client\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\Assemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\Assemblies\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NHibernateTestFixtureBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="SQLiteInMemoryTestingConnectionProvider.cs" />
+    <None Include="TestServiceBase.cs" />
+    <None Include="TestService_AccountOperation.cs" />
+    <None Include="TestService_AutomaticMeasurementsUpdate.cs" />
+    <None Include="TestService_CreateProfile.cs" />
+    <None Include="TestService_DeleteProfile.cs" />
+    <None Include="TestService_DeleteTrainingDay.cs" />
+    <None Include="TestService_ExerciseMapper.cs" />
+    <None Include="TestService_FavoriteUsers.cs" />
+    <None Include="TestService_FriendsOperations.cs" />
+    <None Include="TestService_GetBlogComments.cs" />
+    <None Include="TestService_GetExercises.cs" />
+    <None Include="TestService_GetProfileInformation.cs" />
+    <None Include="TestService_GetTrainingDays.cs" />
+    <None Include="TestService_GetUsers.cs" />
+    <None Include="TestService_GetWorkoutPlans.cs" />
+    <None Include="TestService_Login.cs" />
+    <None Include="TestService_MessageOperation.cs" />
+    <None Include="TestService_PublishExercise.cs" />
+    <None Include="TestService_SaveTrainingDay.cs" />
+    <None Include="TestService_SendMessage.cs" />
+    <None Include="TestService_UpdateProfile.cs" />
+    <None Include="TestService_UserFavorites.cs" />
+    <None Include="TestService_Voting.cs" />
+    <None Include="TestService_WorkoutFavoriteOperation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sqlite3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Common\BodyArchitect.Common.csproj">
+      <Project>{F6D386CD-95D0-4377-A656-BB886A09CCE7}</Project>
+      <Name>BodyArchitect.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.DataAccess.NHibernate\BodyArchitect.DataAccess.NHibernate.csproj">
+      <Project>{B9F150D5-EF9F-412E-B7D0-4A23373907D2}</Project>
+      <Name>BodyArchitect.DataAccess.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Model\BodyArchitect.Model.csproj">
+      <Project>{DC90B51D-4A42-4C72-B2FA-30A565EB72C1}</Project>
+      <Name>BodyArchitect.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.Model\BodyArchitect.Service.Model.csproj">
+      <Project>{E3649F71-2540-4605-B178-FE60E1908270}</Project>
+      <Name>BodyArchitect.Service.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service\BodyArchitect.Service.csproj">
+      <Project>{B3CB7106-3AF1-4899-810B-6477897C3EC3}</Project>
+      <Name>BodyArchitect.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Settings\BodyArchitect.Settings.csproj">
+      <Project>{769DFF6C-B952-40C4-B087-5C004E06D89C}</Project>
+      <Name>BodyArchitect.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

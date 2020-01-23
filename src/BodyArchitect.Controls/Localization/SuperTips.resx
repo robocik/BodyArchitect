@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddTrainingDay_DateTE" xml:space="preserve">
+    <value>Entry date. If the entry contains session training, then this is the training date.</value>
+  </data>
+  <data name="ButtonApply" xml:space="preserve">
+    <value>Saves changes without closing the window.</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Rejects changes and close the window.</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Delete the current entry.</value>
+  </data>
+  <data name="ButtonOK" xml:space="preserve">
+    <value>Saves changes and close the window.</value>
+  </data>
+  <data name="CreateProfile_Autologin_CHK" xml:space="preserve">
+    <value>When selected means that when we start the application, this profile will be logged automatically.</value>
+  </data>
+  <data name="CreateProfile_NameTE" xml:space="preserve">
+    <value>Profile name will be used during login to the application. Must be unique.</value>
+  </data>
+  <data name="CreateProfile_PasswordTE" xml:space="preserve">
+    <value>Password is used to prevent access to your profile. It is not required. When there is only one profile without password in the application, then it will be used automatically when application starts (without login).</value>
+  </data>
+  <data name="Login_AutologinCHK" xml:space="preserve">
+    <value>When selected means that when we start the application, this profile will be logged automatically.</value>
+  </data>
+  <data name="Login_NameTE" xml:space="preserve">
+    <value>Profile name from the program's database.</value>
+  </data>
+  <data name="Login_PasswordTE" xml:space="preserve">
+    <value>Password for the selected profile.</value>
+  </data>
+  <data name="ProfileEdit_BirthdayTE" xml:space="preserve">
+    <value>Birthday. Can be empty.</value>
+  </data>
+  <data name="ProfileEdit_NameTE" xml:space="preserve">
+    <value>Name of edited profile. Must be unique.</value>
+  </data>
+  <data name="WymiaryEditor_Klatka" xml:space="preserve">
+    <value>Chest circumference, e.g. 110,5. Value 0 means that chest circumference was not set.</value>
+  </data>
+  <data name="WymiaryEditor_LeftBiceps" xml:space="preserve">
+    <value>Left biceps circumference, e.g. 37,5. Value 0 means that biceps circumference was not set.</value>
+  </data>
+  <data name="WymiaryEditor_NaCzczo" xml:space="preserve">
+    <value>Selected means that all measurements was made on empty stomach.</value>
+  </data>
+  <data name="WymiaryEditor_Pas" xml:space="preserve">
+    <value>Abs circumference, e.g. 77,5. Value 0 means that abs circumference was not set.</value>
+  </data>
+  <data name="WymiaryEditor_RightBiceps" xml:space="preserve">
+    <value>Right biceps circumference, e.g. 37,5. Value 0 means that biceps circumference was not set.</value>
+  </data>
+  <data name="WymiaryEditor_Time" xml:space="preserve">
+    <value>Time of measurement, e.g: 7:05. Value 00:00 means that time was not set.</value>
+  </data>
+  <data name="WymiaryEditor_RightLeg" xml:space="preserve">
+    <value>Right leg circumference, e.g. 67,5. Value 0 means that leg circumference was not set.</value>
+  </data>
+  <data name="WymiaryEditor_Weight" xml:space="preserve">
+    <value>Weight in kilograms, e.g. 81,5. Value 0 means that weight was not set.</value>
+  </data>
+  <data name="BMI_BMI" xml:space="preserve">
+    <value>This is your body mass index (BMI):
+
+Severely underweight - less than 16.5
+Underweight - from 16.5 to 18.4
+Normal - from 18.5 to 24.9
+Overweight - from 25 to 29.9
+Obese Class I - from 30 to 34.9
+Obese Class II - from 35 to 39.9
+Obese Class III - over 40</value>
+  </data>
+  <data name="BMI_Calculate" xml:space="preserve">
+    <value>Click to calculate your BMI. You have to type your weight and height first.</value>
+  </data>
+  <data name="BMI_Close" xml:space="preserve">
+    <value>Closes this window</value>
+  </data>
+  <data name="BMI_Height" xml:space="preserve">
+    <value>Type your height in cm</value>
+  </data>
+  <data name="BMI_Weight" xml:space="preserve">
+    <value>Type your weight in kg</value>
+  </data>
+  <data name="OptionCalendarIcons" xml:space="preserve">
+    <value>Here you can set options related with each module in BodyArchitect:
+&lt;b&gt;Icon&lt;/b&gt; - if selected then entry for this plugin will be shown in calendar view as icon
+&lt;b&gt;Default&lt;/b&gt; - if selected then entry for this plugin will be automatically added when you create a new entry day in the calendar view</value>
+  </data>
+  <data name="OptionCalendarTabPage" xml:space="preserve">
+    <value>Shows options for calendar view</value>
+  </data>
+  <data name="OptionCalendarTextFrom" xml:space="preserve">
+    <value>Indicates from what plugin calendar view will show info text</value>
+  </data>
+  <data name="ProfileEdit_GenderCMB" xml:space="preserve">
+    <value>Allows you to specify your gender. This information is needed to use some of calculators (for instance BMI)</value>
+  </data>
+  <data name="WymiaryEditor_Height" xml:space="preserve">
+    <value>Height in cm, e.g. 188. Value 0 means that height was not set.</value>
+  </data>
+  <data name="WymiaryEditor_LeftForearm" xml:space="preserve">
+    <value>Left forearm circumference, e.g. 27,5. Value 0 means that forearm circumference was not set.</value>
+  </data>
+  <data name="WymiaryEditor_LeftLeg" xml:space="preserve">
+    <value>Left leg circumference, e.g. 67,5. Value 0 means that leg circumference was not set.</value>
+  </data>
+  <data name="WymiaryEditor_RightForearm" xml:space="preserve">
+    <value>Right forearm circumference, e.g. 27,5. Value 0 means that forearm circumference was not set.</value>
+  </data>
+  <data name="OptionReportingAllowZoom" xml:space="preserve">
+    <value>If selected, you can zoom reports.</value>
+  </data>
+  <data name="OptionReportingShowValues" xml:space="preserve">
+    <value>If selected, on reports you will see values as labels, otherwise reports will only display lines.</value>
+  </data>
+  <data name="OptionReportingTemplates" xml:space="preserve">
+    <value>List of all templates (themes) for reporting view.</value>
+  </data>
+  <data name="usrReportStatus_ReportStatusCmb" xml:space="preserve">
+    <value>Indicates if current entry will be used in reports. Value Show means that you will see this entry in reports, value Skip means, that reports will not use it.</value>
+  </data>
+  <data name="usrReportingEntryStatus_ReportStatusCmb" xml:space="preserve">
+    <value>Indicates what entries will be used to generate the report. Select
+-&lt;b&gt;For report only&lt;/b&gt; when you want to generate report with entries with ReportStatus &lt;b&gt;Show this entry in reports&lt;/b&gt; only. 
+-&lt;b&gt;All entries&lt;/b&gt; to generate report with all entries (also with ReportStatus &lt;b&gt;Skip this entry in reports&lt;/b&gt;</value>
+  </data>
+  <data name="usrDateRange_DateFrom" xml:space="preserve">
+    <value>Here you are able to define starting date for you report. All entries which are older will not be shown.</value>
+  </data>
+  <data name="usrDateRange_DateTo" xml:space="preserve">
+    <value>Here you are able to define end date for you report. All newer entries will not be shown.</value>
+  </data>
+  <data name="OptionResetAllBtn" xml:space="preserve">
+    <value>Resets all settings to default values.</value>
+  </data>
+  <data name="usrMyTrainingStatus_Abort" xml:space="preserve">
+    <value>Click here to abort (stop) this training cycle. You will not be able to resume this cycle again.</value>
+  </data>
+  <data name="usrMyTrainingStatus_EndDate" xml:space="preserve">
+    <value>Date when this training cycle has been finished.</value>
+  </data>
+  <data name="usrMyTrainingStatus_StartDate" xml:space="preserve">
+    <value>Date when this training cycle has been started.</value>
+  </data>
+  <data name="DefaultDataImporter_ImportBTN" xml:space="preserve">
+    <value>Starts importing default data to the current profile. TO choose what data you want to import, please selected one or more items in the list.</value>
+  </data>
+  <data name="DefaultDataImporter_ModulesListView" xml:space="preserve">
+    <value>List of all available data to import. To import data you need to select appropriate item in this list and press Import... button. </value>
+  </data>
+  <data name="OptionCalendarShowRelativeDates" xml:space="preserve">
+    <value>If checked, the dates in the application (for example comment date or last login date) will be displayed as relative date from current moment, like: 2 minutes ago, 5 months ago, etc. If unchecked then you see specific date.</value>
+  </data>
+</root>

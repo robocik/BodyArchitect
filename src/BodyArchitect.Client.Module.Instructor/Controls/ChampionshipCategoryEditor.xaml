@@ -1,0 +1,57 @@
+﻿<Window x:Class="BodyArchitect.Client.Module.Instructor.Controls.ChampionshipCategoryEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Style="{StaticResource baWindow}" 
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension" xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI" WindowStartupLocation="CenterScreen" Title="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Title}"
+        Height="400" Width="400" Loaded="Window_Loaded">
+    
+    <Grid Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel>
+            <Label Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Label_Gender}" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <RadioButton Name="rbGenderAll" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Gender_All}" />
+                <RadioButton Name="rbGenderMale"  Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Gender_Men}"  Grid.Column="1"/>
+                <RadioButton Name="rbGenderFemale" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Label_Women}" Grid.Column="2"/>
+            </Grid>
+
+            <Label Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Label_Category}" Margin="{StaticResource MarginMediumTop}" />
+            <ComboBox Name="cmbCategories" DisplayMemberPath="Text" SelectionChanged="cmbCategories_SelectionChanged" />
+
+            <StackPanel Orientation="Horizontal" Name="pnlIsAgeStrict" Margin="{StaticResource MarginMediumTop}">
+                <CheckBox Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_CheckBox_IsAgeStrict}" Name="chkIsAgeStrict" />
+                <UserControls:BAHelpButton ToolTipWidth="250"  Description="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Help_IsAgeStrict}" />
+            </StackPanel>
+
+            <Label Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_Label_ByWeight}" Margin="{StaticResource MarginMediumTop}" />
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <RadioButton Name="rbTypeOpen" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_ByWeight_Open}" />
+                <RadioButton Name="rbTypeWeight"  Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_ByWeight_Weight}"  Grid.Column="1"/>
+            </Grid>
+
+            <CheckBox Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_CHK_OfficialCategory}" Name="chkIsOfficial" Margin="{StaticResource MarginLargeTop}"/>
+
+            <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ChampionshipCategoryEditor_OfficialCategory_Description}" Margin="{StaticResource MarginSmallTop}" Style="{StaticResource smallDescription}"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="1" Orientation="Horizontal" Margin="{StaticResource MarginXLargeTop}" HorizontalAlignment="Right">
+            <Button Name="btnOK" Style="{StaticResource OkButton}" Click="btnOK_Click" />
+
+            <Button Margin="{StaticResource MarginMediumLeft}" Style="{StaticResource CancelButton}" Name="btnCancel"  />
+        </StackPanel>
+
+        
+    </Grid>
+</Window>

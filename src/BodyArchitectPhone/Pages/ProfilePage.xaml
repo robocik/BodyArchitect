@@ -1,0 +1,287 @@
+﻿<Animations:AnimatedBasePage xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls"  
+    x:Class="BodyArchitect.WP7.Pages.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:conv="clr-namespace:BodyArchitect.WP7"
+                        xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls" xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    SupportedOrientations="PortraitOrLandscape"  Orientation="Portrait" toolkit:TiltEffect.IsTiltEnabled="true">
+
+
+    <Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar   ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+            
+        </shell:ApplicationBar>
+    </Custom:PhoneApplicationPage.ApplicationBar>
+    
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <conv:PrivacyToIntConverter x:Key="privacyConverter" />
+            <conv:NegationConverter x:Key="negationConverter" />
+            <Converters:NegateBoolToVisibilityConverter x:Key="negateBoolToVisibilityConverter" />
+            <Converters:BoolToVisibilityConverter x:Key="boolToVisibilityConverter" />
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition  />
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <!--Pivot Control-->
+            <controls:Pivot Name="pivot" Foreground="{StaticResource CustomForegroundBrush}" Grid.Row="1">
+                <controls:Pivot.TitleTemplate>
+                    <DataTemplate>
+                        <TextBlock Foreground="{StaticResource CustomForegroundBrush}" Style="{StaticResource CustomTextNormalStyle}">
+                    <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </controls:Pivot.TitleTemplate>
+                <!--Pivot item one-->
+                <controls:PivotItem Header="{Binding Path=Localizedresources.ProfilePage_InfoHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel Margin="0,0,0,62">
+
+                            <Grid>
+                                <Border VerticalAlignment="Center" Grid.Row="0" Height="100" Style="{StaticResource HeaderBorder}">
+
+                                </Border>
+                                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" >
+                                    <Button Style="{StaticResource ImageButton}" BorderThickness="0" Click="btnProfileImage_Click"  Grid.Column="0" Width="100" Height="100">
+                                        <Controls:CachedImageCtrl Name="profileImage"   Width="100" Height="100"/>
+                                        <toolkit:ContextMenuService.ContextMenu>
+                                            <toolkit:ContextMenu Tag="{Binding}" Opened="Menu_Opened" Closed="Menu_Closed">
+                                                <toolkit:MenuItem  Header="{Binding Path=Localizedresources.MenuDelete,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="mnuDeletePhoto_Click" />
+                                            </toolkit:ContextMenu>
+                                        </toolkit:ContextMenuService.ContextMenu>
+                                    </Button>
+
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Profile.User.UserName}" Foreground="White" FontFamily="{StaticResource CustomFontFamilySemiBold}" Style="{StaticResource CustomTextLargeStyle}" />
+                                        <TextBlock Text="{Binding EMail,Mode=OneTime}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Birthday,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" />
+                            <toolkit:DatePicker Value="{Binding Birthday,Mode=TwoWay}" />
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Country,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}"/>
+                            <HyperlinkButton Margin="0,0,24,24" HorizontalAlignment="Left" Foreground="{StaticResource CustomForegroundBrush}" Click="Country_Click" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding DisplayCountry}"/>
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Gender,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Content="{Binding Path=Localizedresources.Gender_Male,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding IsMale,Mode=TwoWay}" Grid.Column="0" />
+                                <RadioButton Content="{Binding Path=Localizedresources.Gender_Female,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding IsFemale,Mode=TwoWay}" Grid.Column="1" />
+                            </Grid>
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_About,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}"/>
+                            <toolkit:PhoneTextBox Text="{Binding Profile.AboutInformation,Mode=TwoWay}" VerticalAlignment="Top" Grid.Row="1" Hint="{Binding Path=Localizedresources.ProfilePage_AboutWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  AcceptsReturn="True" Height="250" TextWrapping="Wrap" />
+
+                            <my:HeaderControl  Margin="0,36,0,0" Text="{Binding Path=Localizedresources.SettingsPage_SmallHeaderMeasurements,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <Controls:FixedListPicker  Margin="12,0,12,0" SelectedIndex="{Binding WeightType,Mode=TwoWay}">
+                                <toolkit:ListPicker.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="-2,0,0,0"  Text="{Binding Path=Localizedresources.SettingsPage_WeightType,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" />
+                                    </DataTemplate>
+                                </toolkit:ListPicker.HeaderTemplate>
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_WeightType_Kg,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_WeightType_Pound,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                </toolkit:ListPicker.Items>
+                            </Controls:FixedListPicker>
+
+                            <Controls:FixedListPicker Margin="12,12,12,0" SelectedIndex="{Binding LengthType,Mode=TwoWay}">
+                                <toolkit:ListPicker.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="-2,0,0,0" Text="{Binding Path=Localizedresources.SettingsPage_LengthType,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" />
+                                    </DataTemplate>
+                                </toolkit:ListPicker.HeaderTemplate>
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_LengthType_Cm,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_LengthType_Inch,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                </toolkit:ListPicker.Items>
+                            </Controls:FixedListPicker>
+                            
+                            <my:HeaderControl Margin="0,36,0,0" Text="{Binding Path=Localizedresources.ProfilePage_HeaderPasswordChange,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}"/>
+                            <TextBlock Margin="12,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_PasswordLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                            <PasswordBox Margin="0,0,0,0" Password="{Binding Password1,Mode=TwoWay}" />
+                            <TextBlock Margin="12,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_ConfirmPasswordLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                            <PasswordBox Margin="0,0,0,0" Password="{Binding Password2,Mode=TwoWay}" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.ProfilePage_SettingsHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer Name="settingsScroll">
+                        <StackPanel Margin="0,0,0,52">
+                            <!--<Border Margin="0,12,0,0" Style="{StaticResource HeaderBorder}">
+                        <TextBlock Text="privacy" Style="{StaticResource Header}" />
+                    </Border>-->
+                            <my:HeaderControl Text="{Binding Path=Localizedresources.ProfilePage_PrivacyHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+                            <StackPanel Margin="0,24,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="12,0,12,0" VerticalAlignment="Center" Text="{Binding Path=Localizedresources.ProfilePage_CalendarEntries,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <Button Visibility="{Binding ShowPrivacyHelp,Converter={StaticResource boolToVisibilityConverter}}" Style="{StaticResource ImageButton}" BorderThickness="0" Click="btnCalendarPrivacyHelp_Click" >
+                                        <Image Source="/Images/HelpLicence16.png" Height="32" Width="32" />
+                                    </Button>
+                                </StackPanel>
+
+                                <Controls:FixedListPicker Margin="10,-3,10,0"  IsEnabled="{Binding ShowPrivacyHelp,Converter={StaticResource negationConverter}}" Header=""  SelectedIndex="{Binding CalendarPrivacy,Mode=TwoWay,Converter={StaticResource privacyConverter}}">
+                                    <toolkit:ListPicker.Items>
+                                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Private,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_FriendsOnly,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Public,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    </toolkit:ListPicker.Items>
+                                </Controls:FixedListPicker>
+                            </StackPanel>
+                            
+                            <!--<toolkit:ListPicker Margin="12,24,12,0" IsEnabled="{Binding ShowPrivacyHelp,Converter={StaticResource negationConverter}}"  SelectedIndex="{Binding Profile.User.Privacy.CalendarView,Mode=TwoWay,Converter={StaticResource privacyConverter}}" >
+                                <toolkit:ListPicker.HeaderTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="{Binding Path=Localizedresources.ProfilePage_CalendarEntries,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="0,0,12,0" />
+                                            <Button Visibility="{Binding ShowPrivacyHelp,Converter={StaticResource boolToVisibilityConverter}}" Style="{StaticResource ImageButton}" BorderThickness="0" Click="btnCalendarPrivacyHelp_Click" >
+                                                <Image Source="/Images/HelpLicence16.png" Height="32" Width="32" />
+                                            </Button>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </toolkit:ListPicker.HeaderTemplate>
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Private,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_FriendsOnly,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Public,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                </toolkit:ListPicker.Items>
+                            </toolkit:ListPicker>-->
+
+                            <StackPanel Margin="0,24,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="12,0,12,0" VerticalAlignment="Center" Text="{Binding Path=Localizedresources.ProfilePage_Measurements,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <Button Visibility="{Binding ShowPrivacyHelp,Converter={StaticResource boolToVisibilityConverter}}" Style="{StaticResource ImageButton}" BorderThickness="0" Click="btnMeasurementsPrivacyHelp_Click" >
+                                        <Image Source="/Images/HelpLicence16.png" Height="32" Width="32" />
+                                    </Button>
+                                </StackPanel>
+
+                                <Controls:FixedListPicker Margin="10,-3,10,0"  IsEnabled="{Binding ShowPrivacyHelp,Converter={StaticResource negationConverter}}" Header=""  SelectedIndex="{Binding MeasurementsPrivacy,Mode=TwoWay,Converter={StaticResource privacyConverter}}">
+                                    <toolkit:ListPicker.Items>
+                                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Private,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_FriendsOnly,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Public,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    </toolkit:ListPicker.Items>
+                                </Controls:FixedListPicker>
+                            </StackPanel>
+
+
+                            <Controls:FixedListPicker Margin="12,24,12,0" Header="{Binding Path=Localizedresources.ProfilePage_ListOfFriends,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  SelectedIndex="{Binding Profile.User.Privacy.Friends,Mode=TwoWay,Converter={StaticResource privacyConverter}}">
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Private,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_FriendsOnly,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Public,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                </toolkit:ListPicker.Items>
+                            </Controls:FixedListPicker>
+
+                            <Controls:FixedListPicker Margin="12,24,12,0" Header="{Binding Path=Localizedresources.ProfilePage_DateOfBorn,Mode=OneTime, Source={StaticResource LocalizedStrings}}" SelectedIndex="{Binding Profile.User.Privacy.BirthdayDate,Mode=TwoWay,Converter={StaticResource privacyConverter}}">
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Private,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_FriendsOnly,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.ProfilePage_Privacy_Public,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                </toolkit:ListPicker.Items>
+                            </Controls:FixedListPicker>
+
+                            <my:HeaderControl Text="{Binding Path=Localizedresources.ProfilePage_NotificationsHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="0,36,0,12"/>
+                            
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Notification_FriendCalendarChanged,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyFriendChangedCalendarMessage" Content="{Binding Path=Localizedresources.ProfilePage_Notification_Message,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyFriendChangedCalendarEMail" Content="{Binding Path=Localizedresources.ProfilePage_Notification_EMail,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Column="1"/>
+                            </Grid>
+
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Notification_FavoriteCalendarChanged,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyFollowerChangedCalendarMessage" Content="{Binding Path=Localizedresources.ProfilePage_Notification_Message,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyFollowerChangedCalendarEMail" Content="{Binding Path=Localizedresources.ProfilePage_Notification_EMail,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Column="1"/>
+                            </Grid>
+
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Notification_SomeoneCommentYourItem,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyTrainingDayCommentMessage" Content="{Binding Path=Localizedresources.ProfilePage_Notification_Message,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyTrainingDayCommentEMail" Content="{Binding Path=Localizedresources.ProfilePage_Notification_EMail,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Column="1"/>
+                            </Grid>
+
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Notification_VotedYourItem,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyPlanVotedMessage" Content="{Binding Path=Localizedresources.ProfilePage_Notification_Message,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyPlanVotedEMail" Content="{Binding Path=Localizedresources.ProfilePage_Notification_EMail,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Column="1"/>
+                            </Grid>
+
+                            <TextBlock Text="{Binding Path=Localizedresources.ProfilePage_Notification_Social,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyPlanSocialMessage" Content="{Binding Path=Localizedresources.ProfilePage_Notification_Message,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <CheckBox Unchecked="chkNotification_Checked" Checked="chkNotification_Checked" Name="chkNotifyPlanSocialEMail" Content="{Binding Path=Localizedresources.ProfilePage_Notification_EMail,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Column="1"/>
+                            </Grid>
+
+                            <my:HeaderControl Text="{Binding Path=Localizedresources.ProfilePage_MiscHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="0,36,0,12"/>
+
+                            <toolkit:ToggleSwitch   Foreground="{StaticResource CustomForegroundBrush}" Header="{Binding Path=Localizedresources.ProfilePage_AllowComments,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding AllowComments,Mode=TwoWay}"  />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,0" Text="{Binding Path=Localizedresources.ProfilePage_AllowComments_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  />
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.ProfilePage_MeasurementsHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel Margin="0,0,0,62">
+                            <!--<Border Style="{StaticResource HeaderBorder}">
+                            <TextBlock Style="{StaticResource Header}" Text="automatic update" />                            
+                        </Border>-->
+                            <my:HeaderControl Text="{Binding Path=Localizedresources.ProfilePage_AutomaticUpdateHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <toolkit:ToggleSwitch   Foreground="{StaticResource CustomForegroundBrush}" Header="{Binding Path=Localizedresources.ProfilePage_AutomaticUpdate,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding AutomaticUpdate,Mode=TwoWay}"  />
+                            <TextBlock  Visibility="{Binding AutomaticUpdate,Converter={StaticResource boolToVisibilityConverter}}"
+                                    TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,36"
+                                    Text="{Binding Path=Localizedresources.ProfilePage_AutomaticUpdateDescription,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            <StackPanel IsHitTestVisible="{Binding AutomaticUpdate,Converter={StaticResource negationConverter}}">
+                                <my:HeaderControl Text="{Binding Path=Localizedresources.ProfilePage_MeasurementsSmallHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                                <my:MeasurementsControl x:Name="sizesCtrl"/>
+                                <StackPanel Visibility="{Binding AutomaticUpdate,Converter={StaticResource negateBoolToVisibilityConverter}}">
+                                    <!--<Border Margin="0,36,0,0" Style="{StaticResource HeaderBorder}">
+                                    <TextBlock Style="{StaticResource Header}" Text="time" />
+                                </Border>-->
+                                    <my:HeaderControl Text="{Binding Path=Localizedresources.ProfilePage_TimeHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                                    <my:MeasurementsTimeControl DataContext="{Binding Profile.Wymiary}"  Margin="0,12,0,0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+            </controls:Pivot>
+        </Grid>
+    </Grid>
+</Animations:AnimatedBasePage>

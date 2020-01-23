@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://MYBASERVICE.TK/IBodyArchitectAccessService/" elementFormDefault="qualified" targetNamespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.TrainingPlans" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.Exceptions" />
+  <xs:complexType name="Token">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Token" nillable="true" type="tns:Token" />
+  <xs:complexType name="WorkoutPlanSearchCriteria">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Days" nillable="true" type="q1:ArrayOfint" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.TrainingPlans" minOccurs="0" name="Difficults" nillable="true" type="q2:ArrayOfTrainingPlanDifficult" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Languages" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Purposes" nillable="true" type="q4:ArrayOfWorkoutPlanPurpose" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="SearchGroups" nillable="true" type="q5:ArrayOfWorkoutPlanSearchCriteriaGroup" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="SortOrder" type="q6:WorkoutPlanSearchOrder" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.TrainingPlans" minOccurs="0" name="WorkoutPlanType" nillable="true" type="q7:ArrayOfTrainingType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkoutPlanSearchCriteria" nillable="true" type="tns:WorkoutPlanSearchCriteria" />
+  <xs:complexType name="PartialRetrievingInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RetrievingInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PartialRetrievingInfo" nillable="true" type="tns:PartialRetrievingInfo" />
+  <xs:complexType name="RetrievingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Images" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LongTexts" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrievingInfo" nillable="true" type="tns:RetrievingInfo" />
+  <xs:complexType name="PagedResultOfWorkoutPlanDTO5oAtqRlh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedResultOf{0}{#}" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="WorkoutPlanDTO" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllItemsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfWorkoutPlanDTO" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedResultOfWorkoutPlanDTO5oAtqRlh" nillable="true" type="tns:PagedResultOfWorkoutPlanDTO5oAtqRlh" />
+  <xs:complexType name="ArrayOfWorkoutPlanDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkoutPlanDTO" nillable="true" type="tns:WorkoutPlanDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkoutPlanDTO" nillable="true" type="tns:ArrayOfWorkoutPlanDTO" />
+  <xs:complexType name="WorkoutPlanDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DaysCount" type="xs:int" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.TrainingPlans" minOccurs="0" name="Difficult" type="q8:TrainingPlanDifficult" />
+      <xs:element minOccurs="0" name="GlobalId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profile" nillable="true" type="tns:UserDTO" />
+      <xs:element minOccurs="0" name="PublishDate" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Purpose" type="q9:WorkoutPlanPurpose" />
+      <xs:element minOccurs="0" name="Rating" type="xs:float" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Status" type="q10:PublishStatus" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.TrainingPlans" minOccurs="0" name="TrainingType" type="q11:TrainingType" />
+      <xs:element minOccurs="0" name="UserRating" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="UserShortComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkoutPlanDTO" nillable="true" type="tns:WorkoutPlanDTO" />
+  <xs:complexType name="UserDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Gender" type="q12:Gender" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Picture" nillable="true" type="q13:PictureInfoDTO" />
+      <xs:element minOccurs="0" name="Privacy" nillable="true" type="tns:ProfilePrivacyDTO" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDTO" nillable="true" type="tns:UserDTO" />
+  <xs:complexType name="ProfilePrivacyDTO">
+    <xs:sequence>
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="BirthdayDate" type="q14:Privacy" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="CalendarView" type="q15:Privacy" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Friends" type="q16:Privacy" />
+      <xs:element minOccurs="0" name="Searchable" type="xs:boolean" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Sizes" type="q17:Privacy" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfilePrivacyDTO" nillable="true" type="tns:ProfilePrivacyDTO" />
+  <xs:complexType name="ProfileDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UserDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AboutInformation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousClientInstanceId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Settings" nillable="true" type="tns:ProfileSettingsDTO" />
+          <xs:element minOccurs="0" name="Version" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileDTO" nillable="true" type="tns:ProfileDTO" />
+  <xs:complexType name="ProfileSettingsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutomaticUpdateMeasurements" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileSettingsDTO" nillable="true" type="tns:ProfileSettingsDTO" />
+  <xs:complexType name="BAObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="BAObject" nillable="true" type="tns:BAObject" />
+  <xs:complexType name="UserSearchDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UserDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Statistics" nillable="true" type="tns:ProfileStatisticsDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSearchDTO" nillable="true" type="tns:UserSearchDTO" />
+  <xs:complexType name="ProfileStatisticsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="A6WEntriesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="BlogCommentsCount" type="xs:int" />
+          <xs:element minOccurs="0" name="BlogEntriesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="FollowersCount" type="xs:int" />
+          <xs:element minOccurs="0" name="FriendsCount" type="xs:int" />
+          <xs:element minOccurs="0" name="LastEntryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastLoginDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SizeEntriesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="StrengthTrainingEntriesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="SupplementEntriesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="TrainingDaysCount" type="xs:int" />
+          <xs:element minOccurs="0" name="VotingsCount" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkoutPlansCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileStatisticsDTO" nillable="true" type="tns:ProfileStatisticsDTO" />
+  <xs:complexType name="BAServiceException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalData" nillable="true" type="xs:string" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.Exceptions" minOccurs="0" name="ErrorCode" type="q18:ErrorCode" />
+      <xs:element minOccurs="0" name="ErrorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BAServiceException" nillable="true" type="tns:BAServiceException" />
+  <xs:complexType name="BAAuthenticationException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BAAuthenticationException" nillable="true" type="tns:BAAuthenticationException" />
+  <xs:complexType name="ExerciseDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Difficult" type="q19:ExerciseDifficult" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="ExerciseForceType" type="q20:ExerciseForceType" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="ExerciseType" type="q21:ExerciseType" />
+      <xs:element minOccurs="0" name="GlobalId" type="ser:guid" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="MechanicsType" type="q22:MechanicsType" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profile" nillable="true" type="tns:UserDTO" />
+      <xs:element minOccurs="0" name="Rating" type="xs:float" />
+      <xs:element minOccurs="0" name="Shortcut" nillable="true" type="xs:string" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Status" type="q23:PublishStatus" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRating" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="UserShortComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExerciseDTO" nillable="true" type="tns:ExerciseDTO" />
+  <xs:complexType name="PagedResultOfCommentEntryDTO5oAtqRlh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedResultOf{0}{#}" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CommentEntryDTO" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllItemsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfCommentEntryDTO" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedResultOfCommentEntryDTO5oAtqRlh" nillable="true" type="tns:PagedResultOfCommentEntryDTO5oAtqRlh" />
+  <xs:complexType name="ArrayOfCommentEntryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommentEntryDTO" nillable="true" type="tns:CommentEntryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommentEntryDTO" nillable="true" type="tns:ArrayOfCommentEntryDTO" />
+  <xs:complexType name="CommentEntryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Rating" type="xs:float" />
+          <xs:element minOccurs="0" name="ShortComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="tns:UserDTO" />
+          <xs:element minOccurs="0" name="VotedDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommentEntryDTO" nillable="true" type="tns:CommentEntryDTO" />
+  <xs:complexType name="UserSearchCriteria">
+    <xs:sequence>
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="AccessCalendar" type="q24:PrivacyCriteria" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="AccessFriends" type="q25:PrivacyCriteria" />
+      <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="AccessSizes" type="q26:PrivacyCriteria" />
+      <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Countries" nillable="true" type="q27:ArrayOfint" />
+      <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Genders" nillable="true" type="q28:ArrayOfGender" />
+      <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Picture" type="q29:PictureCriteria" />
+      <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="SortOrder" type="q30:UsersSortOrder" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="UserSearchGroups" nillable="true" type="q31:ArrayOfUserSearchGroup" />
+      <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="WorkoutPlan" type="q32:UserWorkoutPlanCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserSearchCriteria" nillable="true" type="tns:UserSearchCriteria" />
+  <xs:complexType name="PagedResultOfUserSearchDTO5oAtqRlh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedResultOf{0}{#}" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserSearchDTO" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllItemsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfUserSearchDTO" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedResultOfUserSearchDTO5oAtqRlh" nillable="true" type="tns:PagedResultOfUserSearchDTO5oAtqRlh" />
+  <xs:complexType name="ArrayOfUserSearchDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserSearchDTO" nillable="true" type="tns:UserSearchDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserSearchDTO" nillable="true" type="tns:ArrayOfUserSearchDTO" />
+  <xs:complexType name="MyTrainingDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PercentageCompleted" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="TrainingEnd" type="q33:TrainingEnd" />
+          <xs:element minOccurs="0" name="TypeId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MyTrainingDTO" nillable="true" type="tns:MyTrainingDTO" />
+  <xs:complexType name="ArrayOfEntryObjectDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntryObjectDTO" nillable="true" type="tns:EntryObjectDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntryObjectDTO" nillable="true" type="tns:ArrayOfEntryObjectDTO" />
+  <xs:complexType name="EntryObjectDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MyTraining" nillable="true" type="tns:MyTrainingDTO" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="ReportStatus" type="q34:ReportStatus" />
+          <xs:element minOccurs="0" name="TrainingDay" nillable="true" type="tns:TrainingDayDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntryObjectDTO" nillable="true" type="tns:EntryObjectDTO" />
+  <xs:complexType name="TrainingDayDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Objects" nillable="true" type="tns:ArrayOfEntryObjectDTO" />
+          <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+          <xs:element minOccurs="0" name="TrainingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Version" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrainingDayDTO" nillable="true" type="tns:TrainingDayDTO" />
+  <xs:complexType name="BlogEntryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SpecificEntryObjectDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowComments" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlogCommentsCount" type="xs:int" />
+          <xs:element minOccurs="0" name="LastCommentDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BlogEntryDTO" nillable="true" type="tns:BlogEntryDTO" />
+  <xs:complexType name="SpecificEntryObjectDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntryObjectDTO">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpecificEntryObjectDTO" nillable="true" type="tns:SpecificEntryObjectDTO" />
+  <xs:complexType name="SuplementsEntryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SpecificEntryObjectDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfSuplementItemDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SuplementsEntryDTO" nillable="true" type="tns:SuplementsEntryDTO" />
+  <xs:complexType name="ArrayOfSuplementItemDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SuplementItemDTO" nillable="true" type="tns:SuplementItemDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSuplementItemDTO" nillable="true" type="tns:ArrayOfSuplementItemDTO" />
+  <xs:complexType name="SuplementItemDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Dosage" type="xs:double" />
+          <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="DosageType" type="q35:DosageType" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuplementId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SuplementsEntry" nillable="true" type="tns:SuplementsEntryDTO" />
+          <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SuplementItemDTO" nillable="true" type="tns:SuplementItemDTO" />
+  <xs:complexType name="SizeEntryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SpecificEntryObjectDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Wymiary" nillable="true" type="tns:WymiaryDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SizeEntryDTO" nillable="true" type="tns:SizeEntryDTO" />
+  <xs:complexType name="WymiaryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Height" type="xs:int" />
+          <xs:element minOccurs="0" name="IsNaCzczo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Klatka" type="xs:float" />
+          <xs:element minOccurs="0" name="LeftBiceps" type="xs:float" />
+          <xs:element minOccurs="0" name="LeftForearm" type="xs:float" />
+          <xs:element minOccurs="0" name="LeftUdo" type="xs:float" />
+          <xs:element minOccurs="0" name="Pas" type="xs:float" />
+          <xs:element minOccurs="0" name="RightBiceps" type="xs:float" />
+          <xs:element minOccurs="0" name="RightForearm" type="xs:float" />
+          <xs:element minOccurs="0" name="RightUdo" type="xs:float" />
+          <xs:element minOccurs="0" name="Weight" type="xs:float" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WymiaryDTO" nillable="true" type="tns:WymiaryDTO" />
+  <xs:complexType name="StrengthTrainingEntryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SpecificEntryObjectDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Entries" nillable="true" type="tns:ArrayOfStrengthTrainingItemDTO" />
+          <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Intensity" type="q36:Intensity" />
+          <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TrainingPlanId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="TrainingPlanItemId" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StrengthTrainingEntryDTO" nillable="true" type="tns:StrengthTrainingEntryDTO" />
+  <xs:complexType name="ArrayOfStrengthTrainingItemDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StrengthTrainingItemDTO" nillable="true" type="tns:StrengthTrainingItemDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStrengthTrainingItemDTO" nillable="true" type="tns:ArrayOfStrengthTrainingItemDTO" />
+  <xs:complexType name="StrengthTrainingItemDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExerciseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Position" type="xs:int" />
+          <xs:element minOccurs="0" name="Series" nillable="true" type="tns:ArrayOfSerieDTO" />
+          <xs:element minOccurs="0" name="StrengthTrainingEntry" nillable="true" type="tns:StrengthTrainingEntryDTO" />
+          <xs:element minOccurs="0" name="SuperSetGroup" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TrainingPlanItemId" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StrengthTrainingItemDTO" nillable="true" type="tns:StrengthTrainingItemDTO" />
+  <xs:complexType name="ArrayOfSerieDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SerieDTO" nillable="true" type="tns:SerieDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSerieDTO" nillable="true" type="tns:ArrayOfSerieDTO" />
+  <xs:complexType name="SerieDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="DropSet" type="q37:DropSetType" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsCiezarBezSztangi" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RepetitionNumber" nillable="true" type="xs:int" />
+          <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="SetType" type="q38:SetType" />
+          <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StrengthTrainingItem" nillable="true" type="tns:StrengthTrainingItemDTO" />
+          <xs:element minOccurs="0" name="TrainingPlanItemId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SerieDTO" nillable="true" type="tns:SerieDTO" />
+  <xs:complexType name="A6WEntryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SpecificEntryObjectDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Completed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DayNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="Set1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Set2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Set3" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="A6WEntryDTO" nillable="true" type="tns:A6WEntryDTO" />
+  <xs:complexType name="MapperData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Entries" nillable="true" type="tns:ArrayOfMapperEntry" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MapperData" nillable="true" type="tns:MapperData" />
+  <xs:complexType name="ArrayOfMapperEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MapperEntry" nillable="true" type="tns:MapperEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMapperEntry" nillable="true" type="tns:ArrayOfMapperEntry" />
+  <xs:complexType name="MapperEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromExerciseId" type="ser:guid" />
+      <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Operation" type="q39:MapperEntryOperation" />
+      <xs:element minOccurs="0" name="ToExerciseId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MapperEntry" nillable="true" type="tns:MapperEntry" />
+  <xs:complexType name="MapperResult">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="MapperResult" nillable="true" type="tns:MapperResult" />
+  <xs:complexType name="BlogCommentOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlogComment" nillable="true" type="tns:BlogCommentDTO" />
+      <xs:element minOccurs="0" name="BlogEntry" nillable="true" type="tns:BlogEntryDTO" />
+      <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="OperationType" type="q40:BlogCommentOperationType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlogCommentOperation" nillable="true" type="tns:BlogCommentOperation" />
+  <xs:complexType name="BlogCommentDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="CommentType" type="q41:ContentType" />
+          <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Profile" nillable="true" type="tns:UserDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BlogCommentDTO" nillable="true" type="tns:BlogCommentDTO" />
+  <xs:complexType name="PagedResultOfBlogCommentDTO5oAtqRlh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedResultOf{0}{#}" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BlogCommentDTO" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllItemsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfBlogCommentDTO" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedResultOfBlogCommentDTO5oAtqRlh" nillable="true" type="tns:PagedResultOfBlogCommentDTO5oAtqRlh" />
+  <xs:complexType name="ArrayOfBlogCommentDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlogCommentDTO" nillable="true" type="tns:BlogCommentDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlogCommentDTO" nillable="true" type="tns:ArrayOfBlogCommentDTO" />
+  <xs:complexType name="MessageOperationParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageId" type="xs:int" />
+      <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Operation" type="q42:MessageOperationType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageOperationParam" nillable="true" type="tns:MessageOperationParam" />
+  <xs:complexType name="MessageDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+          <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="ContentType" type="q43:ContentType" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="MessageType" type="q44:MessageType" />
+          <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Priority" type="q45:MessagePriority" />
+          <xs:element minOccurs="0" name="Receiver" nillable="true" type="tns:UserDTO" />
+          <xs:element minOccurs="0" name="Sender" nillable="true" type="tns:UserDTO" />
+          <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MessageDTO" nillable="true" type="tns:MessageDTO" />
+  <xs:complexType name="GetProfileInformationCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetProfileInformationCriteria" nillable="true" type="tns:GetProfileInformationCriteria" />
+  <xs:complexType name="ProfileInformationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AboutInformation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FavoriteUsers" nillable="true" type="tns:ArrayOfUserSearchDTO" />
+      <xs:element minOccurs="0" name="Friends" nillable="true" type="tns:ArrayOfUserSearchDTO" />
+      <xs:element minOccurs="0" name="Invitations" nillable="true" type="tns:ArrayOfFriendInvitationDTO" />
+      <xs:element minOccurs="0" name="IsActivated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastLogin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfMessageDTO" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Settings" nillable="true" type="tns:ProfileSettingsDTO" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:UserSearchDTO" />
+      <xs:element minOccurs="0" name="Wymiary" nillable="true" type="tns:WymiaryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileInformationDTO" nillable="true" type="tns:ProfileInformationDTO" />
+  <xs:complexType name="ArrayOfFriendInvitationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FriendInvitationDTO" nillable="true" type="tns:FriendInvitationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFriendInvitationDTO" nillable="true" type="tns:ArrayOfFriendInvitationDTO" />
+  <xs:complexType name="FriendInvitationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedDateTime" type="xs:dateTime" />
+      <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="InvitationType" type="q46:InvitationType" />
+      <xs:element minOccurs="0" name="Invited" nillable="true" type="tns:UserDTO" />
+      <xs:element minOccurs="0" name="Inviter" nillable="true" type="tns:UserDTO" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FriendInvitationDTO" nillable="true" type="tns:FriendInvitationDTO" />
+  <xs:complexType name="ArrayOfMessageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageDTO" nillable="true" type="tns:MessageDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageDTO" nillable="true" type="tns:ArrayOfMessageDTO" />
+  <xs:complexType name="InviteFriendOperationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Operation" type="q47:InviteFriendOperation" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:UserDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InviteFriendOperationData" nillable="true" type="tns:InviteFriendOperationData" />
+  <xs:complexType name="ClientInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationLanguage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientInstanceId" type="ser:guid" />
+      <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Platform" type="q48:PlatformType" />
+      <xs:element minOccurs="0" name="PlatformVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientInformation" nillable="true" type="tns:ClientInformation" />
+  <xs:complexType name="SessionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsConnected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastLoginDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Profile" nillable="true" type="tns:ProfileDTO" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="tns:Token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionData" nillable="true" type="tns:SessionData" />
+  <xs:complexType name="ProfileUpdateData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Profile" nillable="true" type="tns:ProfileDTO" />
+      <xs:element minOccurs="0" name="Wymiary" nillable="true" type="tns:WymiaryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileUpdateData" nillable="true" type="tns:ProfileUpdateData" />
+  <xs:complexType name="WorkoutDaysSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkoutDaysSearchCriteria" nillable="true" type="tns:WorkoutDaysSearchCriteria" />
+  <xs:complexType name="PagedResultOfTrainingDayDTO5oAtqRlh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedResultOf{0}{#}" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TrainingDayDTO" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllItemsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfTrainingDayDTO" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedResultOfTrainingDayDTO5oAtqRlh" nillable="true" type="tns:PagedResultOfTrainingDayDTO5oAtqRlh" />
+  <xs:complexType name="ArrayOfTrainingDayDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrainingDayDTO" nillable="true" type="tns:TrainingDayDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrainingDayDTO" nillable="true" type="tns:ArrayOfTrainingDayDTO" />
+  <xs:complexType name="WorkoutDayGetOperation">
+    <xs:sequence>
+      <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="Operation" type="q49:GetOperation" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkoutDateTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkoutDayGetOperation" nillable="true" type="tns:WorkoutDayGetOperation" />
+  <xs:complexType name="ExerciseSearchCriteria">
+    <xs:sequence>
+      <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="ExerciseTypes" nillable="true" type="q50:ArrayOfExerciseType" />
+      <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="SearchGroups" nillable="true" type="q51:ArrayOfExerciseSearchCriteriaGroup" />
+      <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" minOccurs="0" name="SortOrder" type="q52:WorkoutPlanSearchOrder" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExerciseSearchCriteria" nillable="true" type="tns:ExerciseSearchCriteria" />
+  <xs:complexType name="PagedResultOfExerciseDTO5oAtqRlh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedResultOf{0}{#}" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExerciseDTO" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllItemsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfExerciseDTO" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedResultOfExerciseDTO5oAtqRlh" nillable="true" type="tns:PagedResultOfExerciseDTO5oAtqRlh" />
+  <xs:complexType name="ArrayOfExerciseDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExerciseDTO" nillable="true" type="tns:ExerciseDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExerciseDTO" nillable="true" type="tns:ArrayOfExerciseDTO" />
+  <xs:complexType name="PagedResultOfSuplementDTO5oAtqRlh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedResultOf{0}{#}" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SuplementDTO" Namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllItemsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfSuplementDTO" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedResultOfSuplementDTO5oAtqRlh" nillable="true" type="tns:PagedResultOfSuplementDTO5oAtqRlh" />
+  <xs:complexType name="ArrayOfSuplementDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SuplementDTO" nillable="true" type="tns:SuplementDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSuplementDTO" nillable="true" type="tns:ArrayOfSuplementDTO" />
+  <xs:complexType name="SuplementDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BAObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfileId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SuplementId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SuplementDTO" nillable="true" type="tns:SuplementDTO" />
+  <xs:complexType name="ArrayOfMyTrainingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MyTrainingDTO" nillable="true" type="tns:MyTrainingDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMyTrainingDTO" nillable="true" type="tns:ArrayOfMyTrainingDTO" />
+</xs:schema>

@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lokad.Testing</name>
+    </assembly>
+    <members>
+        <member name="T:GlobalAssemblyInfo">
+            <summary>
+             Assembly information class that is shared between all projects
+            </summary>
+        </member>
+        <member name="T:Lokad.Testing.TestModelEqualityCache">
+            <summary>
+            Simple dictionary-based cache for the equality providers
+            </summary>
+        </member>
+        <member name="T:Lokad.Testing.ITestModelEqualityProvider">
+            <summary>
+            	Provides model equality testers, given their type
+            </summary>
+        </member>
+        <member name="T:Lokad.Testing.ModelAssert">
+            <summary>
+            	Helper class for testing equality of Lokad model classes and printing out the detailed errors
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.ModelAssert.AreEqual``1(``0,``0,System.String,System.Object[])">
+            <summary>
+            	Asserts that the two models are equal
+            </summary>
+            <typeparam name="TModel">
+            	The type of the model.
+            </typeparam>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="format">
+            	The format for the exception message.
+            </param>
+            <param name="args">
+            	The arguments for the exception message.
+            </param>
+            <exception cref="T:Lokad.Testing.FailedAssertException">When check fails</exception>
+        </member>
+        <member name="M:Lokad.Testing.ModelAssert.AreEqual``1(``0,``0)">
+            <summary>
+            	Asserts that the two models are equal
+            </summary>
+            <typeparam name="TModel">
+            	The type of the model.
+            </typeparam>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <exception cref="T:Lokad.Testing.FailedAssertException">When check fails</exception>
+        </member>
+        <member name="M:Lokad.Testing.ModelAssert.AreNotEqual``1(``0,``0,System.String,System.Object[])">
+            <summary>
+            	Asserts that the two models are not equal
+            </summary>
+            <typeparam name="TModel">
+            	The type of the model.
+            </typeparam>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="format">
+            	The format for the exception message.
+            </param>
+            <param name="args">
+            	The arguments for the exception message.
+            </param>
+            <exception cref="T:Lokad.Testing.FailedAssertException">When check fails</exception>
+        </member>
+        <member name="M:Lokad.Testing.ModelAssert.AreNotEqual``1(``0,``0)">
+            <summary>
+            	Asserts that the two models are not equal
+            </summary>
+            <typeparam name="TModel">
+            	The type of the model.
+            </typeparam>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <exception cref="T:Lokad.Testing.FailedAssertException">When check fails</exception>
+        </member>
+        <member name="M:Lokad.Testing.ModelAssert.AreEqualMany``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})">
+            <summary>
+            	Asserts that the two model collections are equal
+            </summary>
+            <typeparam name="TModel">
+            	The type of the model.
+            </typeparam>
+            <param name="expected">The expected collection.</param>
+            <param name="actual">The actual collection.</param>
+            <exception cref="T:Lokad.Testing.FailedAssertException">When check fails</exception>
+        </member>
+        <member name="M:Lokad.Testing.ModelAssert.AreEqualMany``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0},System.String,System.Object[])">
+            <summary>
+            Asserts that the two model collections are equal
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="expected">The expected collection.</param>
+            <param name="actual">The actual collection.</param>
+            <param name="format">The format.</param>
+            <param name="args">The args.</param>
+            <exception cref="T:Lokad.Testing.FailedAssertException">When check fails</exception>
+        </member>
+        <member name="T:Lokad.Testing.TestModelEqualityBuilder">
+            <summary>
+            	Builds equality testers for the models, using the provided design hints
+            </summary>
+        </member>
+        <member name="T:Lokad.Rules.RuleAssert`1">
+            <summary>
+            	Helper class to simplify testing of rules.
+            </summary>
+            <typeparam name="TTarget">
+            	The type of the target for rules.
+            </typeparam>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert`1.#ctor(Lokad.Rules.Rule{`0}[])">
+            <summary>
+            	Initializes a new instance of the
+            	<see cref="T:Lokad.Rules.RuleAssert`1"/>
+            	class.
+            </summary>
+            <param name="rules">The rules.</param>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert`1.ExpectError(`0[])">
+            <summary>
+            	Expects that every single item in
+            	<paramref name="testCases"/>
+            	returns
+            	<see cref="F:Lokad.Rules.RuleLevel.Error"/>
+            	.
+            </summary>
+            <param name="testCases">The test cases.</param>
+            <returns>
+            	same instance for inlining
+            </returns>
+            <exception cref="T:Lokad.Rules.RuleException">
+            	when expectation is not met
+            </exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert`1.ExpectWarn(`0[])">
+            <summary>
+            	Expects that every single item in
+            	<paramref name="testCases"/>
+            	returns
+            	<see cref="F:Lokad.Rules.RuleLevel.Warn"/>
+            	.
+            </summary>
+            <param name="testCases">The test cases.</param>
+            <returns>
+            	same instance for inlining
+            </returns>
+            <exception cref="T:Lokad.Rules.RuleException">
+            	when expectation is not met
+            </exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert`1.ExpectNone(`0[])">
+            <summary>
+            	Expects that every single item in
+            	<paramref name="testCases"/>
+            	returns
+            	<see cref="F:Lokad.Rules.RuleLevel.None"/>
+            	.
+            </summary>
+            <param name="testCases">The test cases.</param>
+            <returns>
+            	same instance for inlining
+            </returns>
+            <exception cref="T:Lokad.Rules.RuleException">
+            	when expectation is not met
+            </exception>
+        </member>
+        <member name="T:Lokad.Rules.RuleAssert">
+            <summary>
+            	Helper class to simplify testing with rules.
+            </summary>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.For``1(Lokad.Rules.Rule{``0}[])">
+            <summary>
+            	Initializes a new instance of the
+            	<see cref="T:Lokad.Rules.RuleAssert`1"/>
+            	class.
+            </summary>
+            <param name="rules">The rules.</param>
+            <typeparam name="TTarget">
+            	The type of the target.
+            </typeparam>
+            <returns>
+            	new instance of the rule tester.
+            </returns>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.IsError``1(``0,Lokad.Rules.Rule{``0}[])">
+            <summary>
+            	Expects that the
+            	<paramref name="rules"/>
+            	return
+            	<see cref="F:Lokad.Rules.RuleLevel.Error"/>
+            	,
+            	when executed against the
+            	<paramref name="testCase"/>
+            	.
+            </summary>
+            <typeparam name="TTarget">
+            	The type of the target.
+            </typeparam>
+            <param name="testCase">The test case.</param>
+            <param name="rules">The rules.</param>
+            <exception cref="T:Lokad.Rules.RuleException">
+            	when the expectation is not met.
+            </exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.IsNone``1(``0,Lokad.Rules.Rule{``0}[])">
+            <summary>
+            	Expects that the
+            	<paramref name="rules"/>
+            	return
+            	<see cref="F:Lokad.Rules.RuleLevel.None"/>
+            	,
+            	when executed against the
+            	<paramref name="testCase"/>
+            	.
+            </summary>
+            <typeparam name="TTarget">
+            	The type of the target.
+            </typeparam>
+            <param name="testCase">The test case.</param>
+            <param name="rules">The rules.</param>
+            <exception cref="T:Lokad.Rules.RuleException">
+            	when the expectation is not met.
+            </exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.IsWarn``1(``0,Lokad.Rules.Rule{``0}[])">
+            <summary>
+            	Expects that the
+            	<paramref name="rules"/>
+            	return
+            	<see cref="F:Lokad.Rules.RuleLevel.Warn"/>
+            	,
+            	when executed against the
+            	<paramref name="testCase"/>
+            	.
+            </summary>
+            <typeparam name="TTarget">
+            	The type of the target.
+            </typeparam>
+            <param name="testCase">The test case.</param>
+            <param name="rules">The rules.</param>
+            <exception cref="T:Lokad.Rules.RuleException">
+            	when the expectation is not met.
+            </exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.That``1(System.Func{``0},System.Linq.Expressions.Expression{System.Predicate{``0}}[])">
+            <summary>
+            	Checks that the specified
+            	<paramref name="argumentReference"/>
+            	passes the check specified in
+            	<paramref name="expressions"/>
+            </summary>
+            <typeparam name="TTarget">
+            	The type of the target.
+            </typeparam>
+            <param name="argumentReference">
+            	The argument reference.
+            </param>
+            <param name="expressions">
+            	The expressions to check against.
+            </param>
+            <exception cref="T:Lokad.Rules.RuleException">If the check fails</exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.That``1(``0,System.Linq.Expressions.Expression{System.Predicate{``0}}[])">
+            <summary>
+            	Checks that the specified
+            	<paramref name="item"/>
+            	passes the check specified in
+            	<paramref name="expressions"/>
+            </summary>
+            <typeparam name="TTarget">
+            	The type of the target.
+            </typeparam>
+            <param name="item">
+            	The argument reference.
+            </param>
+            <param name="expressions">
+            	The expressions to check against.
+            </param>
+            <exception cref="T:Lokad.Rules.RuleException">If the check fails</exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.IsTrue(System.Linq.Expressions.Expression{System.Func{System.Boolean}})">
+            <summary>
+            	Determines whether the specified expression is true.
+            </summary>
+            <param name="expression">The expression.</param>
+            <exception cref="T:Lokad.Rules.RuleException">if the check fails</exception>
+        </member>
+        <member name="M:Lokad.Rules.RuleAssert.IsFalse(System.Linq.Expressions.Expression{System.Func{System.Boolean}})">
+            <summary>
+            	Determines whether the specified expression is true.
+            </summary>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="T:Lokad.Testing.ExtendIEquatable">
+            <summary>
+            Extends <see cref="T:System.IEquatable`1"/> for the purposes of testing
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.ExtendIEquatable.ShouldBeEqualTo``1(System.IEquatable{``0},``0)">
+            <summary>
+            Ensures that the specified equals to a value in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="value">The value.</param>
+            <param name="compare">The compare.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="T:Lokad.Testing.ExtendMaybe">
+            <summary>
+            Extends <see cref="T:Lokad.Maybe`1"/> for the purposes of testing
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.ExtendMaybe.ShouldPassCheck``1(Lokad.Maybe{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Checks that optional has value matching to the provided value in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <param name="expression">The expression.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendMaybe.ShouldPassWith``1(Lokad.Maybe{``0},``0)">
+            <summary>
+            Checks that optional has value matching to the provided value in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <param name="value">The value.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendMaybe.ShouldPass``1(Lokad.Maybe{``0})">
+            <summary>
+            Checks that optional has value matching to the provided value in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendMaybe.ShouldFail``1(Lokad.Maybe{``0})">
+            <summary>
+            Checks that the optional does not have any value
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="maybe">The maybe.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendMaybe.ShouldBe``1(Lokad.Maybe{``0},``0)">
+            <summary>
+            Checks that optional has value matching to the provided value in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="maybe">The maybe.</param>
+            <param name="value">The value.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendMaybe.ShouldBe``1(Lokad.Maybe{``0},System.Boolean)">
+            <summary>
+            Checks that optional has value matching to the provided value in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="maybe">The maybe.</param>
+            <param name="value">The value.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="T:Lokad.Testing.ExtendResult1">
+            <summary>
+            Extends <see cref="T:Lokad.Result`1"/> for the purposes of testing
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldFail``1(Lokad.Result{``0})">
+            <summary>
+            Asserts that the result is equal to some error
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <returns>same result instance for further inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldFailWith``1(Lokad.Result{``0},System.String)">
+            <summary>
+            Asserts that the result is equal to some error
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <param name="error">The error.</param>
+            <returns>
+            same result instance for further inlining
+            </returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldFailWith``2(Lokad.Result{``0},``1)">
+            <summary>
+            Asserts that the result is equal to some error
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TEnum">The type of the enum describing the failure.</typeparam>
+            <param name="result">The result.</param>
+            <param name="enum">The @enum.</param>
+            <returns>
+            same result instance for further inlining
+            </returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldPassWith``1(Lokad.Result{``0},``0)">
+            <summary>
+            Asserts that the result is valid and equal to some value
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <param name="value">The value.</param>
+            <returns>
+            same result instance for further inlining
+            </returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldBe``1(Lokad.Result{``0},``0)">
+            <summary>
+            Asserts that the result is valid and equal to some value
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <param name="value">The value.</param>
+            <returns>
+            same result instance for further inlining
+            </returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldBe``1(Lokad.Result{``0},System.String)">
+            <summary>
+            Asserts that the result is equal to some error
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <param name="error">The error.</param>
+            <returns>
+            same result instance for further inlining
+            </returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldPassCheck``1(Lokad.Result{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Checks that the result has a value matching to the provided expression in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <param name="expression">The expression.</param>
+            <returns>same result instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldPass``1(Lokad.Result{``0})">
+            <summary>
+            Checks that the result has a value matching to the provided expression in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="result">The result.</param>
+            <returns>same result instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldBeEqualTo``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Ensures that the specified collections are equal in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="anotherCollection">Another collection.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult1.ShouldBeEmpty``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Ensures that the specified collection is empty in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="collection">The collection.</param>
+            <returns>same instance for inlining</returns>
+        </member>
+        <member name="T:Lokad.Testing.ExtendResult2">
+            <summary>
+            Extends <see cref="T:Lokad.Result`2"/> for the purposes of testing
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult2.ShouldFailWith``2(Lokad.Result{``0,``1},``1)">
+            <summary>
+            Asserts that the result is equal to some error
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TError">The type of the error.</typeparam>
+            <param name="result">The result.</param>
+            <param name="error">The error.</param>
+            <returns>same result instance for further inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult2.ShouldBe``2(Lokad.Result{``0,``1},``1)">
+            <summary>
+            Asserts that the result is equal to some error
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TError">The type of the error.</typeparam>
+            <param name="result">The result.</param>
+            <param name="error">The error.</param>
+            <returns>same result instance for further inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult2.ShouldBe``2(Lokad.Result{``0,``1},``0)">
+            <summary>
+            Asserts that the result is valid and equal to some value
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TError">The type of the error.</typeparam>
+            <param name="result">The result.</param>
+            <param name="value">The value.</param>
+            <returns>
+            same result instance for further inlining
+            </returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult2.ShouldFail``2(Lokad.Result{``0,``1})">
+            <summary>
+            Asserts that the result is equal to some error
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TError">The type of the error.</typeparam>
+            <param name="result">The result.</param>
+            <returns>same result instance for further inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult2.ShouldPassWith``2(Lokad.Result{``0,``1},``0)">
+            <summary>
+            Asserts that the result is valid and equal to some value
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TError">The type of the error.</typeparam>
+            <param name="result">The result.</param>
+            <param name="value">The value.</param>
+            <returns>
+            same result instance for further inlining
+            </returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult2.ShouldPassCheck``2(Lokad.Result{``0,``1},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Checks that the result has a value matching to the provided expression in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TError">The type of the error.</typeparam>
+            <param name="result">The result.</param>
+            <param name="expression">The expression.</param>
+            <returns>same result instance for inlining</returns>
+        </member>
+        <member name="M:Lokad.Testing.ExtendResult2.ShouldPass``2(Lokad.Result{``0,``1})">
+            <summary>
+            Ensures that the result is a success in tests.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TError">The type of the error.</typeparam>
+            <param name="result">The result.</param>
+            <returns>same result instance for inlining</returns>
+        </member>
+        <member name="T:Lokad.Testing.FailedAssertException">
+            <summary>
+            Failed assertion exception
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.FailedAssertException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lokad.Testing.FailedAssertException"/> class.
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.FailedAssertException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lokad.Testing.FailedAssertException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Lokad.Testing.FailedAssertException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lokad.Testing.FailedAssertException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="T:Lokad.Testing.MockContainer`1">
+            <summary>
+            Extends the <see cref="T:Lokad.Testing.MockContainer"/> and autoregisters the specified subject.
+            </summary>
+            <typeparam name="TSubject">The type of the subject.</typeparam>
+        </member>
+        <member name="T:Lokad.Testing.MockContainer">
+            <summary>
+            Container that automatically resolves all unknown dependencies as stubs
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.For``1">
+            <summary>
+            Creates strongly-typed mocking container
+            </summary>
+            <typeparam name="TSubject">The type of the subject.</typeparam>
+            <returns>new container instance</returns>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lokad.Testing.MockContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.Register``1">
+            <summary>
+            Registers the specified component in this container.
+            </summary>
+            <typeparam name="TComponent">The type of the component.</typeparam>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.Register``1(``0)">
+            <summary>
+            Registers the specified component instance in this container.
+            </summary>
+            <typeparam name="TComponent">The type of the component.</typeparam>
+            <param name="instance">The actual instance.</param>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.Build(System.Action{Autofac.ContainerBuilder})">
+            <summary>
+            Builds the specified registration into the container.
+            </summary>
+            <param name="registration">The registration.</param>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.Resolve``1">
+            <summary>
+            Resolves the specified service from the container
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.Stub``2(System.Func{``0,``1})">
+            <summary>
+            Stubs the specified action against the specified service.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="action">The action.</param>
+            <returns>method options for the additional configuration</returns>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.RaiseEventOn``1(System.Action{``0},System.Object[])">
+            <summary>
+            Raises the specified event on the <typeparamref name="TEventSource"/> resolved from the container.
+            </summary>
+            <typeparam name="TEventSource">The type of the service.</typeparam>
+            <param name="eventSubscription">The event subscription that specifies the event to be called.</param>
+            <param name="args">The optional arguments to be passed to the event.</param>
+            <returns>same instance of the mock container</returns>
+            <seealso cref="M:Rhino.Mocks.RhinoMocksExtensions.GetEventRaiser``1(``0,System.Action{``0})"/>
+            <seealso cref="M:Rhino.Mocks.Interfaces.IEventRaiser.Raise(System.Object[])"/>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer.AssertWasCalled``1(System.Action{``0})">
+            <summary>
+            Asserts that a particular method was called on the specified mock object
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <param name="action">The action.</param>
+            <seealso cref="M:Rhino.Mocks.RhinoMocksExtensions.AssertWasCalled``1(``0,System.Action{``0})"/>
+            <returns>same instance of the mock container</returns>
+        </member>
+        <member name="P:Lokad.Testing.MockContainer.Container">
+            <summary>
+            Gets the actial container.
+            </summary>
+            <value>The container.</value>
+        </member>
+        <member name="M:Lokad.Testing.MockContainer`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lokad.Testing.MockContainer`1"/> class.
+            </summary>
+        </member>
+        <member name="P:Lokad.Testing.MockContainer`1.Subject">
+            <summary>
+            Testing subject
+            </summary>
+        </member>
+        <member name="T:Lokad.Testing.TestModelEqualityDelegate">
+            <summary>
+            Delegate that represents model equality tester
+            </summary>
+        </member>
+    </members>
+</doc>

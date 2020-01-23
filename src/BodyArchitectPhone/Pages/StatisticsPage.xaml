@@ -1,0 +1,59 @@
+﻿<local:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.StatisticsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock Name="ApplicationTitle" Text="{Binding Title}" Style="{StaticResource CustomTextNormalStyle}"/>
+                <TextBlock Text="{Binding Path=Localizedresources.StatisticsPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource CustomTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <ListBox local:ListAnimation.IsPivotAnimated="false" Name="lstStat" ItemsSource="{Binding Items}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+
+                        <DataTemplate>
+                            <StackPanel Margin="{StaticResource CustomTouchTargetOverhang}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="{Binding StatusIcon}" Width="32" Height="32" />
+                                        <TextBlock FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Name}" Style="{StaticResource CustomTextTitle3Style}"/>
+                                    </StackPanel>
+
+                                    <TextBlock  Grid.Column="1" HorizontalAlignment="Right" FontFamily="{StaticResource CustomFontFamilyNormal}" FontWeight="Bold" Text="{Binding Value}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource CustomTextTitle3Style}"/>
+                                </Grid>
+
+                                <TextBlock TextWrapping="Wrap" Text="{Binding StatusDescription}" Style="{StaticResource CustomTextSmallStyle}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</local:AnimatedBasePage>

@@ -1,0 +1,197 @@
+﻿<UserControl xmlns:my="clr-namespace:BodyArchitect.Client.Module.Blog" 
+             x:Class="BodyArchitect.Client.UI.UserControls.usrHtmlEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:UserControls1="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI" xmlns:Converters1="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI" xmlns:Controls1="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI" mc:Ignorable="d" 
+             UserControls1:UserControlRibbon.RibbonTab="{DynamicResource Tab}" UserControls1:UserControlRibbon.RibbonTabDataContext="{Binding}"
+             d:DesignHeight="300" d:DesignWidth="300" Name="Me" >
+    <!--TODO:Completed-->
+    
+    
+    <my:HtmlEditor  x:Name="htmlEditor1" IsModifiedChanged="htmlEditor1_IsModifiedChanged"/>
+
+    <UserControl.Resources>
+
+        <Converters1:NegateBoolToVisibilityConverter x:Key="negBoolVisibConv" />
+        
+        <!--<DataTemplate x:Key="ribbonFontName">
+            <TextBlock Text="{Binding}" FontFamily="{Binding }" />
+        </DataTemplate>-->
+
+        <DataTemplate x:Key="ribbonColorItem">
+            <Rectangle  Width="16" Height="16" Fill="{Binding}" />
+        </DataTemplate>
+
+        <!--<DataTemplate x:Key="ribbonFontSize">
+            <TextBlock Name="tbFontSize"   Text="{Binding Text}" FontSize="{Binding Size}" />
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType=ComboBoxItem}}" Value="true">
+                    <Setter TargetName="tbFontSize" Property="FontSize" Value="10"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>-->
+
+
+        <r:RibbonTab x:Key="Tab" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Header_Blog}" ContextualTabGroupHeader="{lex:LocText  BodyArchitect.Client.Resources:Strings:Ribbon_Context_Header}" Visibility="{Binding ReadOnly,Converter={StaticResource negBoolVisibConv}}" >
+            <r:RibbonGroup x:Name="Clipboard" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Header_Clipboard}">
+
+                <r:RibbonSplitButton Command="my:HtmlEditingCommands.Paste" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Paste_32x32.png" Label="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Label_Paste}">
+                    <r:RibbonMenuItem Command="my:HtmlEditingCommands.Paste" ImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Paste_16x16.png" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Header_Paste}" />
+                </r:RibbonSplitButton>
+
+                <r:RibbonButton  Command="my:HtmlEditingCommands.Cut" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Cut_16x16.png" Label="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Label_Cut}" />
+                <r:RibbonButton Command="my:HtmlEditingCommands.Copy" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Copy_16x16.png" Label="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Label_Copy}" />
+
+                
+            </r:RibbonGroup>
+
+            <r:RibbonGroup x:Name="Font" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Header_Font}">
+                <Grid VerticalAlignment="Center" Margin="{StaticResource MarginMediumTop}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" VerticalAlignment="Center"  Orientation="Horizontal">
+
+                        <Controls1:RibbonComboBoxFocusFix VerticalAlignment="Center"  SelectionBoxWidth="110">
+                            <r:RibbonGallery  MaxColumnCount="1" SelectedItem="{Binding SelectedFontFamily,Mode=TwoWay}">
+                                <r:RibbonGalleryCategory ItemsSource="{Binding FontFamilies}"  />
+                            </r:RibbonGallery>
+                        </Controls1:RibbonComboBoxFocusFix>
+
+                        <Controls1:RibbonComboBoxFocusFix VerticalAlignment="Center"  SelectionBoxWidth="30">
+                            <r:RibbonGallery  IsSynchronizedWithCurrentItem="False"  MaxColumnCount="1" SelectedItem="{Binding SelectedFontSize,Mode=TwoWay}">
+                                <r:RibbonGalleryCategory  DisplayMemberPath="Text"  ItemsSource="{Binding FontSizes}"    />
+                            </r:RibbonGallery>
+                        </Controls1:RibbonComboBoxFocusFix>
+
+
+                        <r:RibbonControlGroup Margin="{StaticResource MarginMediumLeft}">
+                            <r:RibbonButton Command="my:HtmlEditingCommands.Undo" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/undo.png" />
+                            <r:RibbonButton Command="my:HtmlEditingCommands.Redo" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/redo.png" />
+
+                        </r:RibbonControlGroup>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="{StaticResource MarginMediumTop}" VerticalAlignment="Center" Grid.Row="1">
+                        <r:RibbonControlGroup VerticalAlignment="Center">
+                            <r:RibbonToggleButton IsChecked="{Binding IsBold}" Command="my:HtmlEditingCommands.Bold" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Bold_16x16.png" />
+                            <r:RibbonToggleButton IsChecked="{Binding IsItalic}" Command="my:HtmlEditingCommands.Italic" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Italic_16x16.png" />
+                            <r:RibbonToggleButton IsChecked="{Binding IsUnderline}" Command="my:HtmlEditingCommands.Underline" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/underline.png" />
+                            <r:RibbonToggleButton IsChecked="{Binding IsSubscript}" Command="my:HtmlEditingCommands.Subscript" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/subscript.png" />
+                            <r:RibbonToggleButton IsChecked="{Binding IsSuperscript}" Command="my:HtmlEditingCommands.Superscript" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/superscript.png" />
+
+                            <r:RibbonToggleButton IsChecked="{Binding IsSuperscript}" Command="my:HtmlEditingCommands.ClearStyle" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/erase.png" />
+
+                        </r:RibbonControlGroup>
+
+                        <r:RibbonControlGroup VerticalAlignment="Center" Margin="{StaticResource MarginMediumLeft}">
+                            <r:RibbonSplitButton Click="btnAutomaticFontColor_Click" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/fontcolor.png">
+                                <r:RibbonGallery SelectedItem="{Binding SelectedFontBrush,Mode=TwoWay}"  ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                                    <r:RibbonGalleryCategory  IsSharedColumnSizeScope="true"  ItemsSource="{Binding AutomaticFontColors}" >
+                                        <r:RibbonGalleryCategory.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Rectangle Stroke="Black" StrokeThickness="1"   Width="16" Height="16" Fill="{Binding}" />
+                                                    <TextBlock Margin="{StaticResource MarginSmallLeft}" Text="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Foreground_Text_AutomaticColor}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </r:RibbonGalleryCategory.ItemTemplate>
+                                    </r:RibbonGalleryCategory>
+
+                                    <r:RibbonGalleryCategory MinColumnCount="10" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Foreground_Header_ThemeColors}"   ItemsSource="{Binding ThemeColors}" ItemTemplate="{StaticResource ribbonColorItem}" >
+                                    </r:RibbonGalleryCategory>
+
+                                    <r:RibbonGalleryCategory  MinColumnCount="10" ItemTemplate="{StaticResource ribbonColorItem}" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Foreground_Header_StandardColors}"    ItemsSource="{Binding StandardColors}" >
+                                    </r:RibbonGalleryCategory>
+                                </r:RibbonGallery>
+                                <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Foreground_Header_MoreColors}"  Click="btnMoreColors_Click" ImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Color_16x16.png"/>
+                            </r:RibbonSplitButton>
+
+                            <r:RibbonSplitButton Click="btnAutomaticFontBacgroundColor_Click" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/FontBackgroundColor.png">
+                                <r:RibbonGallery SelectedItem="{Binding SelectedFontBackgroundBrush,Mode=TwoWay}"   ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                                    <r:RibbonGalleryCategory IsSharedColumnSizeScope="true" ItemsSource="{Binding AutomaticFontBackgroundColors}" >
+                                        <r:RibbonGalleryCategory.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Rectangle Stroke="Black" StrokeThickness="1"   Width="16" Height="16" Fill="{Binding}" />
+                                                    <TextBlock Margin="{StaticResource MarginSmallLeft}" Text="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Background_Text_AutomaticColor}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </r:RibbonGalleryCategory.ItemTemplate>
+                                    </r:RibbonGalleryCategory>
+
+                                    <r:RibbonGalleryCategory ItemTemplate="{StaticResource ribbonColorItem}" MinColumnCount="10" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Background_Header_ThemeColors}"   ItemsSource="{Binding ThemeColors}" >
+                                    </r:RibbonGalleryCategory>
+
+                                    <r:RibbonGalleryCategory  ItemTemplate="{StaticResource ribbonColorItem}" MinColumnCount="10" Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Background_Header_StandardColors}"   ItemsSource="{Binding StandardColors}" >
+                                    </r:RibbonGalleryCategory>
+                                </r:RibbonGallery>
+                                <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Background_Header_MoreColors}" Click="btnMoreColors_Click" ImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Color_16x16.png"/>
+                            </r:RibbonSplitButton>
+                        </r:RibbonControlGroup>
+                    </StackPanel>
+                </Grid>
+
+                
+                
+            </r:RibbonGroup>
+
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Header_Paragraph}">
+                <Grid Margin="{StaticResource MarginMediumTop}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Center">
+                        <r:RibbonControlGroup>
+                            <r:RibbonButton Command="my:HtmlEditingCommands.Outdent" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/outdent.png" />
+                            <r:RibbonButton Command="my:HtmlEditingCommands.Indent" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/indent.png" />
+
+                        </r:RibbonControlGroup>
+
+                        <r:RibbonControlGroup Margin="{StaticResource MarginMediumLeft}">
+                            <r:RibbonToggleButton IsChecked="{Binding IsBulletList}" Command="my:HtmlEditingCommands.BubbledList" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/listbullets.png" />
+                            <r:RibbonToggleButton IsChecked="{Binding IsNumberedList}" Command="my:HtmlEditingCommands.NumericList" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/listnumbered.png" />
+                        </r:RibbonControlGroup>
+                    </StackPanel>
+
+                    <r:RibbonControlGroup Grid.Row="1" Margin="{StaticResource MarginMediumTop}"  VerticalAlignment="Center">
+                        <r:RibbonToggleButton IsChecked="{Binding IsJustifyLeft}" Command="my:HtmlEditingCommands.JustifyLeft" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/JustifyLeft.png" />
+                        <r:RibbonToggleButton IsChecked="{Binding IsJustifyCenter}" Command="my:HtmlEditingCommands.JustifyCenter" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/JustifyCenter.png" />
+                        <r:RibbonToggleButton IsChecked="{Binding IsJustifyRight}" Command="my:HtmlEditingCommands.JustifyRight" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/JustifyRight.png" />
+                        <r:RibbonToggleButton IsChecked="{Binding IsJustifyStretch}" Command="my:HtmlEditingCommands.JustifyFull" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/JustifyStretch.png" />
+                    </r:RibbonControlGroup>
+                </Grid>
+                
+
+               
+            </r:RibbonGroup>
+
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Header_Insert}">
+                <r:RibbonMenuButton Label="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Label_Table}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Table_32x32.png">
+                    <r:RibbonGallery  SelectionChanged="InsertTableGallery_SelectionChanged" SelectedItem="{Binding SelectedTableData,Mode=TwoWay}"  MinColumnCount="10" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                        <r:RibbonGalleryCategory  ItemsSource="{Binding TableData}" >
+                            <r:RibbonGalleryCategory.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="Black" BorderThickness="1" Height="10" Width="10" />
+                                </DataTemplate>
+                            </r:RibbonGalleryCategory.ItemTemplate>
+                        </r:RibbonGalleryCategory>
+                    </r:RibbonGallery>
+                    <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:usrHtmlEditor_Header_InsertTable}" Command="my:HtmlEditingCommands.InsertTable" ImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Table_32x32.png"/>
+                </r:RibbonMenuButton>
+
+
+                <r:RibbonButton Command="my:HtmlEditingCommands.InsertImage" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/image.png" />
+                <r:RibbonButton Command="my:HtmlEditingCommands.InsertHyperlink" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/hyperlink.png" />
+                
+            </r:RibbonGroup>
+        </r:RibbonTab>
+    </UserControl.Resources>
+</UserControl>

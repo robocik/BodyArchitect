@@ -1,0 +1,179 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.CreateProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:my="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:UserControls="clr-namespace:BodyArchitect.WP7.UserControls"
+    xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    xmlns:controls="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480" BackKeyPress="PhoneApplicationPage_BackKeyPress">
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid Name="mainGrid">
+                <Grid.Background>
+                    <ImageBrush Opacity="0" x:Name="backgroundImageBrush" 
+                        Stretch="None" 
+                        ImageSource="/SplashScreenImage.jpg">
+                    </ImageBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <my:ProgressStatus Grid.Row="0" Name="progressBar" Foreground="{StaticResource splashScreenBrush}" Visibility="Collapsed"/>
+                <StackPanel x:Name="TitlePanel" Grid.Row="1" Margin="12,17,0,28">
+                    <TextBlock Text="{Binding Path=Localizedresources.CreateProfilePage_WelcomeToLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+               <TextBlock.RenderTransform>
+                    <TranslateTransform x:Name="versionTrans" X="1000"/>
+                  </TextBlock.RenderTransform>
+                        <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                      <BeginStoryboard>
+                        <Storyboard >
+                          <DoubleAnimation Duration="00:00:0.6"
+                                            Storyboard.TargetName="versionTrans" 
+                                            Storyboard.TargetProperty="X" 
+                                            From="1000" To="0">
+                            <DoubleAnimation.EasingFunction>
+                              <SineEase EasingMode="EaseOut"/>
+                            </DoubleAnimation.EasingFunction>
+                          </DoubleAnimation>
+                        </Storyboard>
+                      </BeginStoryboard>
+                    </EventTrigger>
+                  </TextBlock.Triggers>
+                    </TextBlock>
+                    <TextBlock Margin="9,-7,0,0" FontSize="{StaticResource CustomFontSizeExtraLarge}" Foreground="{StaticResource CustomForegroundBrush}" Style="{StaticResource CustomTextNormalStyle}">
+                <Run  FontWeight="SemiBold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                
+                <TextBlock.RenderTransform>
+                    <TranslateTransform x:Name="bodyarchitectTran" Y="1000"/>
+                  </TextBlock.RenderTransform>
+                        <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                      <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.3" >
+                          <DoubleAnimation Duration="00:00:0.5"
+                                            Storyboard.TargetName="bodyarchitectTran" 
+                                            Storyboard.TargetProperty="Y" 
+                                            From="1000" To="0">
+                            <DoubleAnimation.EasingFunction>
+                              <SineEase EasingMode="EaseOut"/>
+                            </DoubleAnimation.EasingFunction>
+                          </DoubleAnimation>
+                        </Storyboard>
+                      </BeginStoryboard>
+                    </EventTrigger>
+                  </TextBlock.Triggers>
+
+                    </TextBlock>
+                </StackPanel>
+                <ScrollViewer Name="createProfileBox" Grid.Row="2">
+
+                    <StackPanel >
+
+                        <UserControls:HeaderControl Text="{Binding Path=Localizedresources.CreateProfilePage_HeaderProfileInfo,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+
+                        </UserControls:HeaderControl>
+
+                        <TextBlock Margin="30,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_UsernameLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Rectangle Grid.Column="0" Fill="{StaticResource CustomAccentBrush}" Height="46" Width="20" />
+                            <TextBox Name="txtUserName"  Grid.Column="1" Text="{Binding Username,Mode=TwoWay}"/>
+                            <controls:RoundButton VerticalAlignment="Bottom" Grid.Column="2" Name="btnCheckUsername" ImageSource="/Icons/appbar.feature.search.rest.png" Click="btnCheckUserNameAvailability_Click"/>
+                        </Grid>
+
+                        <TextBlock Margin="30,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_EmailLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Rectangle Grid.Column="0" Fill="{StaticResource CustomAccentBrush}" Height="46" Width="20" />
+                            <TextBox Name="txtEmail" InputScope="EmailNameOrAddress"   Grid.Column="1" Text="{Binding Email,Mode=TwoWay}"/>
+                        </Grid>
+
+                        <TextBlock Margin="30,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_BirthdayLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <toolkit:DatePicker Name="dtpBirhday" Margin="20,0,0,0" Value="{Binding Birthday,Mode=TwoWay}"  />
+
+                        <Grid Margin="30,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <RadioButton Name="rbMale" Grid.Column="0" Content="{Binding Path=Localizedresources.Gender_Male,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding IsMale,Mode=TwoWay}" />
+                            <RadioButton Name="rbFemale" Grid.Column="1" Content="{Binding Path=Localizedresources.Gender_Female,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding IsFemale,Mode=TwoWay}" />
+                        </Grid>
+
+
+                        <TextBlock Margin="30,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_CountryLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <HyperlinkButton Margin="20,0,0,0" HorizontalAlignment="Left" Click="Country_Click" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding DisplayCountry}" />
+
+                        <UserControls:HeaderControl  Margin="0,24,0,0" Text="{Binding Path=Localizedresources.SettingsPage_SmallHeaderMeasurements,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                        <my:FixedListPicker  Margin="30,0,12,0" Name="lpWeightType" >
+                            <toolkit:ListPicker.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Margin="-2,0,0,0"  Text="{Binding Path=Localizedresources.SettingsPage_WeightType,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                                </DataTemplate>
+                            </toolkit:ListPicker.HeaderTemplate>
+                            <toolkit:ListPicker.Items>
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_WeightType_Kg,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_WeightType_Pound,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            </toolkit:ListPicker.Items>
+                        </my:FixedListPicker>
+
+                        <my:FixedListPicker Margin="30,12,12,0" Name="lpLengthType">
+                            <toolkit:ListPicker.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Margin="-2,0,0,0" Text="{Binding Path=Localizedresources.SettingsPage_LengthType,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                                </DataTemplate>
+                            </toolkit:ListPicker.HeaderTemplate>
+                            <toolkit:ListPicker.Items>
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_LengthType_Cm,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_LengthType_Inch,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            </toolkit:ListPicker.Items>
+                        </my:FixedListPicker>
+                        
+                        <UserControls:HeaderControl Margin="0,24,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_HeaderPassword,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+                        <TextBlock Margin="30,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_PasswordLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <PasswordBox Margin="20,0,0,0" Password="{Binding Password,Mode=TwoWay}" />
+                        <TextBlock Margin="30,0,0,0" Text="{Binding Path=Localizedresources.CreateProfilePage_ConfirmPasswordLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <PasswordBox Margin="20,0,0,0" Password="{Binding ConfirmPassword,Mode=TwoWay}" />
+
+                        <Button Content="{Binding Path=Localizedresources.CreateProfilePage_CreateButton,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="btnCreate_Click" />
+                        
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Localizedresources.CreateProfilePage_AcceptLicenceDescription, Source={StaticResource LocalizedStrings}}" />
+                        <Grid Margin="{StaticResource CustomTouchTargetOverhang}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <HyperlinkButton Content="{Binding Path=Localizedresources.CreateProfilePage_TermsOfServiceLink, Source={StaticResource LocalizedStrings}}" Click="btnGoToWeb_Click" Tag="http://service.bodyarchitectonline.com/TermsOfUse.htm" />
+                            <HyperlinkButton Grid.Column="1" Content="{Binding Path=Localizedresources.CreateProfilePage_PrivacyPolicyLink, Source={StaticResource LocalizedStrings}}" Click="btnGoToWeb_Click" Tag="http://service.bodyarchitectonline.com/PrivacyPolicy.htm"/>
+                        </Grid>
+                        
+                    </StackPanel>
+
+                </ScrollViewer>
+                <UserControls:CompanyAnimationControl x:Name="companyBox" Grid.Row="3"  Height="340" Visibility="Collapsed"  VerticalAlignment="Bottom" />
+
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Animations:AnimatedBasePage>

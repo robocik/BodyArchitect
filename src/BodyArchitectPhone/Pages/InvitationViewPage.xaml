@@ -1,0 +1,76 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.InvitationViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls" 
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480">
+
+
+    <Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar  ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+            
+        </shell:ApplicationBar>
+    </Custom:PhoneApplicationPage.ApplicationBar>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <!--TitlePanel contains the name of the application and page title-->
+            <TextBlock Grid.Row="1" Margin="12,17,0,28" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+            </TextBlock>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid  Grid.Row="2" Margin="12,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Controls:CachedImageCtrl Name="profileImage" Picture="{Binding Picture}"  Width="100" Height="100"/>
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0"  Text="{Binding UserName}" Style="{StaticResource CustomTextExtraLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+
+                        <TextBlock Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Text="{Binding CreatedDateTime}" HorizontalAlignment="Right" Style="{StaticResource CustomTextNormalStyle}" />
+                       
+                    </Grid>
+
+                </Grid>
+
+                <ScrollViewer Grid.Row="1">
+                    <StackPanel  Grid.Row="2" >
+                        <TextBlock  Text="{Binding OperationMessage}" Style="{StaticResource CustomTextLargeStyle}" Margin="0,36,0,0"  Foreground="{StaticResource CustomForegroundBrush}" TextWrapping="Wrap"/>
+
+                        <TextBlock Margin="12,24,0,0" Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding Path=Localizedresources.InvitationViewPage_MessageLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" />
+                        <TextBlock Text="{Binding Message}" Style="{StaticResource CustomTextNormalStyle}" TextWrapping="Wrap" Foreground="{StaticResource CustomForegroundBrush}"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Animations:AnimatedBasePage>

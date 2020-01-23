@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A2A4C94-F4AB-45CD-8EEC-0E37EC8B3EC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Controls</RootNamespace>
+    <AssemblyName>BodyArchitect.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/FM.Controls/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FM.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\FM.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FM.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Guifreaks.Common">
+      <HintPath>..\..\Assemblies\Guifreaks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.Navisuite">
+      <HintPath>..\..\Assemblies\Guifreaks.Navisuite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.Integration.WinForms.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SourceGrid">
+      <HintPath>..\..\Assemblies\SourceGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AchievementsHelper.cs" />
+    <Compile Include="ApplicationColors.cs" />
+    <Compile Include="Basic\BaPictureEdit.cs" />
+    <Compile Include="Basic\HtmlEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Basic\LookUpEditEditorBase.cs" />
+    <Compile Include="Cache\PictureDownloadingServiceCommand.cs" />
+    <Compile Include="Cache\PicturesCache.cs" />
+    <Compile Include="Calculators\BmiCalculator.cs" />
+    <Compile Include="Calculators\BMIWindow.cs" />
+    <Compile Include="Calculators\BMIWindow.Designer.cs">
+      <DependentUpon>BMIWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForgotPasswordWindow.cs" />
+    <Compile Include="Forms\ForgotPasswordWindow.Designer.cs">
+      <DependentUpon>ForgotPasswordWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HtmlPreviewWindow.cs" />
+    <Compile Include="Forms\HtmlPreviewWindow.Designer.cs">
+      <DependentUpon>HtmlPreviewWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvitationWindow.cs" />
+    <Compile Include="Forms\InvitationWindow.Designer.cs">
+      <DependentUpon>InvitationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OperationContext.cs" />
+    <Compile Include="Forms\SendMessageWindow.cs" />
+    <Compile Include="Forms\SendMessageWindow.Designer.cs">
+      <DependentUpon>SendMessageWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\MessageEventArgs.cs" />
+    <Compile Include="Messages\SystemMessages.cs" />
+    <Compile Include="Messages\SystemMessageStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SystemMessageStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressIndicator\ProgressIndicator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressIndicator\ProgressIndicator.designer.cs">
+      <DependentUpon>ProgressIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressIndicator\ProgressIndicatorStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgressIndicator\ProgressIndicatorStatus.Designer.cs">
+      <DependentUpon>ProgressIndicatorStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressIndicator\RotationType.cs" />
+    <Compile Include="ProgressIndicator\TasksManager.cs" />
+    <Compile Include="ProgressIndicator\TextDisplayModes.cs" />
+    <Compile Include="ProgressIndicator\ToolStripProgressIndicator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressIndicator\usrProgressIndicatorButtons.cs" />
+    <Compile Include="ProgressIndicator\usrProgressIndicatorButtons.Designer.cs">
+      <DependentUpon>usrProgressIndicatorButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rating\RatingBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rating\usrRating.cs" />
+    <Compile Include="Rating\usrRating.Designer.cs">
+      <DependentUpon>usrRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\usrDateRange.cs" />
+    <Compile Include="Reporting\usrDateRange.Designer.cs">
+      <DependentUpon>usrDateRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\usrReporting.cs" />
+    <Compile Include="Reporting\usrReporting.Designer.cs">
+      <DependentUpon>usrReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\usrReportingEntryStatus.cs" />
+    <Compile Include="Reporting\usrReportingEntryStatus.Designer.cs">
+      <DependentUpon>usrReportingEntryStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\usrReportingOptions.cs" />
+    <Compile Include="Reporting\usrReportingOptions.Designer.cs">
+      <DependentUpon>usrReportingOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\BaGroupControl.cs" />
+    <Compile Include="SourceGridExtension\CommentableCellValueChangedController.cs" />
+    <Compile Include="SourceGridExtension\MaskEditEditor.cs" />
+    <Compile Include="SourceGridExtension\MemoExEditEditor.cs" />
+    <Compile Include="SourceGridExtension\TimeEditEditor.cs" />
+    <Compile Include="UserContext.cs" />
+    <Compile Include="UserControls\ExpandGroupControl.cs" />
+    <Compile Include="UserControls\PluginsGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\PropertyEditorBase.cs" />
+    <Compile Include="UserControls\usrCalendarOptions.cs" />
+    <Compile Include="UserControls\usrCalendarOptions.Designer.cs">
+      <DependentUpon>usrCalendarOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrHtmlEditor.cs" />
+    <Compile Include="UserControls\usrHtmlEditor.Designer.cs">
+      <DependentUpon>usrHtmlEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\usrMessagesBoard.cs" />
+    <Compile Include="Messages\usrMessagesBoard.Designer.cs">
+      <DependentUpon>usrMessagesBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\usrMessageView.cs" />
+    <Compile Include="Messages\usrMessageView.Designer.cs">
+      <DependentUpon>usrMessageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrMyTrainingStatus.cs" />
+    <Compile Include="UserControls\usrMyTrainingStatus.Designer.cs">
+      <DependentUpon>usrMyTrainingStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfileInfoView.cs" />
+    <Compile Include="UserControls\usrProfileInfoView.Designer.cs">
+      <DependentUpon>usrProfileInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfileListEntry.cs" />
+    <Compile Include="UserControls\usrProfileListEntry.Designer.cs">
+      <DependentUpon>usrProfileListEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfileNotifications.cs" />
+    <Compile Include="UserControls\usrProfileNotifications.Designer.cs">
+      <DependentUpon>usrProfileNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfilePersonalInfo.cs" />
+    <Compile Include="UserControls\usrProfilePersonalInfo.Designer.cs">
+      <DependentUpon>usrProfilePersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfilePrivacy.cs" />
+    <Compile Include="UserControls\usrProfilePrivacy.Designer.cs">
+      <DependentUpon>usrProfilePrivacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfilesBrowser.cs" />
+    <Compile Include="UserControls\usrProfilesBrowser.Designer.cs">
+      <DependentUpon>usrProfilesBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrReportStatus.cs" />
+    <Compile Include="UserControls\usrReportStatus.Designer.cs">
+      <DependentUpon>usrReportStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrUserInfo.cs" />
+    <Compile Include="UserControls\usrUserInfo.Designer.cs">
+      <DependentUpon>usrUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrUserInformation.cs" />
+    <Compile Include="UserControls\usrUserInformation.Designer.cs">
+      <DependentUpon>usrUserInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrUserSizes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\usrUserSizes.Designer.cs">
+      <DependentUpon>usrUserSizes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrBaseControl.cs" />
+    <Compile Include="usrBaseControl.Designer.cs">
+      <DependentUpon>usrBaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\CancelButton.cs" />
+    <Compile Include="Basic\DeleteButton.cs" />
+    <Compile Include="Basic\OKButton.cs" />
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="ControlHelper.cs" />
+    <Compile Include="ControlValidatedEventArgs.cs" />
+    <Compile Include="DomainObjectOperatonHelper.cs" />
+    <Compile Include="Forms\AboutWindow.cs" />
+    <Compile Include="Forms\AboutWindow.Designer.cs">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseWindow.cs" />
+    <Compile Include="Forms\BaseWindow.Designer.cs">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateProfileWindow.cs" />
+    <Compile Include="Forms\CreateProfileWindow.Designer.cs">
+      <DependentUpon>CreateProfileWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputWindow.cs" />
+    <Compile Include="Forms\InputWindow.Designer.cs">
+      <DependentUpon>InputWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginWindow.cs" />
+    <Compile Include="Forms\LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogViewer.cs" />
+    <Compile Include="Forms\LogViewer.Designer.cs">
+      <DependentUpon>LogViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindow.cs" />
+    <Compile Include="Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OptionsWindow.cs" />
+    <Compile Include="Forms\OptionsWindow.Designer.cs">
+      <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProfileEditWindow.cs" />
+    <Compile Include="Forms\ProfileEditWindow.Designer.cs">
+      <DependentUpon>ProfileEditWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SendErrorWindow.cs" />
+    <Compile Include="Forms\SendErrorWindow.Designer.cs">
+      <DependentUpon>SendErrorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs" />
+    <Compile Include="IValidationControl.cs" />
+    <Compile Include="Localization\ApplicationStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApplicationStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\ControlsStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlsStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\DevExpressControlsLocalizer.cs" />
+    <Compile Include="Localization\DomainModelStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainModelStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\EnumLocalizer.cs" />
+    <Compile Include="Localization\SuperTips.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperTips.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthCalendar\AlignControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MonthCalendar\AlignEditor.cs" />
+    <Compile Include="MonthCalendar\DateItem.cs" />
+    <Compile Include="MonthCalendar\DateItemCollection.cs" />
+    <Compile Include="MonthCalendar\Day.cs" />
+    <Compile Include="MonthCalendar\Footer.cs" />
+    <Compile Include="MonthCalendar\GlobalHook.cs" />
+    <Compile Include="MonthCalendar\Header.cs" />
+    <Compile Include="MonthCalendar\ImageListPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MonthCalendar\ImageMapEditor.cs" />
+    <Compile Include="MonthCalendar\Month.cs" />
+    <Compile Include="MonthCalendar\MonthCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MonthCalendar\NativeMethods.cs" />
+    <Compile Include="MonthCalendar\SelectedDatesCollection.cs" />
+    <Compile Include="MonthCalendar\SelectionArea.cs" />
+    <Compile Include="MonthCalendar\Weekday.cs" />
+    <Compile Include="MonthCalendar\Weeknumber.cs" />
+    <Compile Include="MyTrainingProgressComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PleaseWait\PleaseWait.cs" />
+    <Compile Include="PleaseWait\PleaseWaitContext.cs" />
+    <Compile Include="PleaseWait\PleaseWaitWindow.cs" />
+    <Compile Include="PleaseWait\PleaseWaitWindow.designer.cs">
+      <DependentUpon>PleaseWaitWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RssReader\usrRssReader.cs" />
+    <Compile Include="RssReader\usrRssReader.Designer.cs">
+      <DependentUpon>usrRssReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorPickerCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorPickerCtrl.Designer.cs">
+      <DependentUpon>ColorPickerCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorPickerDialog.Designer.cs">
+      <DependentUpon>ColorPickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorWheel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorWheelCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\ColorWheelCtrl.Designer.cs">
+      <DependentUpon>ColorWheelCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\EyedropColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\ColorPickerCtrl\HSLColor.cs" />
+    <Compile Include="TreeListView\ColorPickerCtrl\Resources\Images.cs" />
+    <Compile Include="TreeListView\ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\DataBinding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\DropdownContainerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\Editors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\LabelRotate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\Line.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\NameObject.cs" />
+    <Compile Include="TreeListView\PropertyDialog\PropertyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeListView\PropertyDialog\PropertyDialog.Designer.cs">
+      <DependentUpon>PropertyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeListView\PropertyDialog\PropertyDialogInterface.cs" />
+    <Compile Include="TreeListView\PropertyDialog\ViewMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\PropertyUtil.cs" />
+    <Compile Include="TreeListView\RadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\Tracing.cs" />
+    <Compile Include="TreeListView\TreeList\TreeListColumn.cs" />
+    <Compile Include="TreeListView\TreeList\TreeListColumn.Design.cs" />
+    <Compile Include="TreeListView\TreeList\TreeListNode.cs" />
+    <Compile Include="TreeListView\TreeList\TreeListOptions.cs" />
+    <Compile Include="TreeListView\TreeList\TreeListPainter.cs" />
+    <Compile Include="TreeListView\TreeList\TreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeListView\Util.cs" />
+    <Compile Include="UserControls\CalendarViewDayInfo.cs" />
+    <Compile Include="UserControls\ICalendarViewDayInfo.cs" />
+    <Compile Include="UserControls\usrCreateProfile.cs" />
+    <Compile Include="UserControls\usrCreateProfile.Designer.cs">
+      <DependentUpon>usrCreateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfileEdit.cs" />
+    <Compile Include="UserControls\usrProfileEdit.Designer.cs">
+      <DependentUpon>usrProfileEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMMessageBox.cs" />
+    <Compile Include="Forms\AddTrainingDay.cs" />
+    <Compile Include="Forms\AddTrainingDay.Designer.cs">
+      <DependentUpon>AddTrainingDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\usrAddTrainingDay.cs" />
+    <Compile Include="UserControls\usrAddTrainingDay.Designer.cs">
+      <DependentUpon>usrAddTrainingDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrCalendarView.cs" />
+    <Compile Include="UserControls\usrCalendarView.Designer.cs">
+      <DependentUpon>usrCalendarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrWymiaryEditor.cs" />
+    <Compile Include="UserControls\usrWymiaryEditor.Designer.cs">
+      <DependentUpon>usrWymiaryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrPictureBaseControl.cs" />
+    <Compile Include="WPF\CachedImage.cs" />
+    <Compile Include="WPF\InvitationListControl.xaml.cs">
+      <DependentUpon>InvitationListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\RatingsControl.xaml.cs">
+      <DependentUpon>RatingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\StarControl.xaml.cs">
+      <DependentUpon>StarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\UsersListView.xaml.cs">
+      <DependentUpon>UsersListView.xaml</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Basic\BaGroupControl.resx">
+      <DependentUpon>BaGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\CancelButton.pl.resx">
+      <DependentUpon>CancelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\CancelButton.resx">
+      <DependentUpon>CancelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\DeleteButton.resx">
+      <DependentUpon>DeleteButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\OKButton.resx">
+      <DependentUpon>OKButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculators\BMIWindow.pl.resx">
+      <DependentUpon>BMIWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculators\BMIWindow.resx">
+      <DependentUpon>BMIWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutWindow.pl.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddTrainingDay.pl.resx">
+      <DependentUpon>AddTrainingDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseWindow.resx">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForgotPasswordWindow.resx">
+      <DependentUpon>ForgotPasswordWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HtmlPreviewWindow.pl.resx">
+      <DependentUpon>HtmlPreviewWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HtmlPreviewWindow.resx">
+      <DependentUpon>HtmlPreviewWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputWindow.pl.resx">
+      <DependentUpon>InputWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputWindow.resx">
+      <DependentUpon>InputWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvitationWindow.resx">
+      <DependentUpon>InvitationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginWindow.pl.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogViewer.pl.resx">
+      <DependentUpon>LogViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogViewer.resx">
+      <DependentUpon>LogViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsWindow.resx">
+      <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProfileEditWindow.resx">
+      <DependentUpon>ProfileEditWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SendErrorWindow.pl.resx">
+      <DependentUpon>SendErrorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SendMessageWindow.resx">
+      <DependentUpon>SendMessageWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.pl.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\ApplicationStrings.pl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\ControlsStrings.pl.resx" />
+    <EmbeddedResource Include="Localization\DomainModelStrings.pl.resx" />
+    <EmbeddedResource Include="Localization\SuperTips.pl.resx" />
+    <EmbeddedResource Include="Messages\SystemMessageStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SystemMessageStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PleaseWait\PleaseWaitWindow.pl.resx">
+      <DependentUpon>PleaseWaitWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressIndicator\ProgressIndicator.resx">
+      <DependentUpon>ProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressIndicator\ProgressIndicatorStatus.resx">
+      <DependentUpon>ProgressIndicatorStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressIndicator\usrProgressIndicatorButtons.resx">
+      <DependentUpon>usrProgressIndicatorButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rating\usrRating.resx">
+      <DependentUpon>usrRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrDateRange.pl.resx">
+      <DependentUpon>usrDateRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrDateRange.resx">
+      <DependentUpon>usrDateRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrReporting.pl.resx">
+      <DependentUpon>usrReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrReporting.resx">
+      <DependentUpon>usrReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrReportingEntryStatus.pl.resx">
+      <DependentUpon>usrReportingEntryStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrReportingEntryStatus.resx">
+      <DependentUpon>usrReportingEntryStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrReportingOptions.pl.resx">
+      <DependentUpon>usrReportingOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrReportingOptions.resx">
+      <DependentUpon>usrReportingOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeListView\ColorPickerCtrl\ColorPickerCtrl.resx">
+      <DependentUpon>ColorPickerCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeListView\ColorPickerCtrl\ColorPickerDialog.resx">
+      <DependentUpon>ColorPickerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeListView\ColorPickerCtrl\ColorWheelCtrl.resx">
+      <DependentUpon>ColorWheelCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrAddTrainingDay.pl.resx">
+      <DependentUpon>usrAddTrainingDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrCalendarOptions.pl.resx">
+      <DependentUpon>usrCalendarOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrCalendarOptions.resx">
+      <DependentUpon>usrCalendarOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrCalendarView.pl.resx">
+      <DependentUpon>usrCalendarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrHtmlEditor.resx">
+      <DependentUpon>usrHtmlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\usrMessagesBoard.resx">
+      <DependentUpon>usrMessagesBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\usrMessageView.resx">
+      <DependentUpon>usrMessageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrMyTrainingStatus.pl.resx">
+      <DependentUpon>usrMyTrainingStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrMyTrainingStatus.resx">
+      <DependentUpon>usrMyTrainingStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrProfileEdit.resx">
+      <DependentUpon>usrProfileEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrProfileInfoView.resx">
+      <DependentUpon>usrProfileInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddTrainingDay.resx">
+      <DependentUpon>AddTrainingDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UserControls\usrAddTrainingDay.resx">
+      <DependentUpon>usrAddTrainingDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrCalendarView.resx">
+      <DependentUpon>usrCalendarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrProfileListEntry.resx">
+      <DependentUpon>usrProfileListEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrProfileNotifications.resx">
+      <DependentUpon>usrProfileNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrProfilePersonalInfo.resx">
+      <DependentUpon>usrProfilePersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrProfilePrivacy.resx">
+      <DependentUpon>usrProfilePrivacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrProfilesBrowser.resx">
+      <DependentUpon>usrProfilesBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrReportStatus.pl.resx">
+      <DependentUpon>usrReportStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrReportStatus.resx">
+      <DependentUpon>usrReportStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrUserInfo.resx">
+      <DependentUpon>usrUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrUserInformation.resx">
+      <DependentUpon>usrUserInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrUserSizes.resx">
+      <DependentUpon>usrUserSizes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrWymiaryEditor.pl.resx">
+      <DependentUpon>usrWymiaryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrWymiaryEditor.resx">
+      <DependentUpon>usrWymiaryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Common\BodyArchitect.Common.csproj">
+      <Project>{F6D386CD-95D0-4377-A656-BB886A09CCE7}</Project>
+      <Name>BodyArchitect.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.Model\BodyArchitect.Service.Model.csproj">
+      <Project>{E3649F71-2540-4605-B178-FE60E1908270}</Project>
+      <Name>BodyArchitect.Service.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Settings\BodyArchitect.Settings.csproj">
+      <Project>{769DFF6C-B952-40C4-B087-5C004E06D89C}</Project>
+      <Name>BodyArchitect.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.WCF\BodyArchitect.WCF.csproj">
+      <Project>{9658D84C-4AB2-47AB-8231-40BAEBB268D4}</Project>
+      <Name>BodyArchitect.WCF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BodyArchitect.pfx" />
+    <None Include="Icons\Delete_tableHH.bmp" />
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+    <None Include="Resources\RemoveTrainingDay.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutWindow.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateProfileWindow.resx">
+      <DependentUpon>CreateProfileWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.pl.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SendErrorWindow.resx">
+      <DependentUpon>SendErrorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\ApplicationStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\ControlsStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ControlsStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\DomainModelStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DomainModelStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\SuperTips.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SuperTips.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthCalendar\AlignControl.resx">
+      <DependentUpon>AlignControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthCalendar\ImageListPanel.resx">
+      <DependentUpon>ImageListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthCalendar\Images\prev_month_vs.bmp" />
+    <EmbeddedResource Include="MonthCalendar\Images\prev_year.bmp" />
+    <EmbeddedResource Include="MonthCalendar\Images\prev_year_disabled.bmp" />
+    <EmbeddedResource Include="MonthCalendar\Images\prev_year_vs.bmp" />
+    <EmbeddedResource Include="MonthCalendar\MonthCalendar.bmp" />
+    <None Include="Resources\rss.png" />
+    <None Include="Resources\Poland.png" />
+    <None Include="Resources\England.png" />
+    <None Include="Resources\comment.png" />
+    <None Include="Resources\date_add.png" />
+    <None Include="Resources\date_delete.png" />
+    <None Include="Resources\date_edit.png" />
+    <None Include="Resources\1277486827_page_white_edit.png" />
+    <None Include="Resources\user_edit.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\user_add.png" />
+    <None Include="Resources\user_delete.png" />
+    <None Include="Resources\user_go.png" />
+    <None Include="Resources\user.png" />
+    <Resource Include="Resources\ok.gif" />
+    <Resource Include="Resources\cancel.png" />
+    <None Include="Resources\date_error.png" />
+    <None Include="..\..\Resources\plugin_error.png">
+      <Link>Resources\plugin_error.png</Link>
+    </None>
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\chart_curve.png" />
+    <None Include="Resources\calendar.jpg" />
+    <None Include="Resources\iconHeartEmpty.png" />
+    <None Include="Resources\iconHeartFull.png" />
+    <None Include="Resources\iconHeartHalf.png" />
+    <None Include="Resources\iconMiscEmpty.png" />
+    <None Include="Resources\iconMiscFull.png" />
+    <None Include="Resources\iconMiscHalf.png" />
+    <None Include="Resources\iconStarEmpty.png" />
+    <None Include="Resources\iconStarFull.png" />
+    <None Include="Resources\iconStartHalf.png" />
+    <None Include="Resources\defaultProfile.png" />
+    <None Include="Resources\world.png" />
+    <None Include="Resources\world_go.png" />
+    <None Include="Resources\star1.png" />
+    <None Include="Resources\message-go.png" />
+    <None Include="Resources\UserBlue-3delete.png" />
+    <None Include="Resources\message.png" />
+    <None Include="Resources\users.png" />
+    <Resource Include="Resources\book_edit.png" />
+    <Resource Include="Resources\calendar16.png" />
+    <Resource Include="Resources\Stars\blueBrownStar16.png" />
+    <Resource Include="Resources\Stars\blueBrownStart32.png" />
+    <Resource Include="Resources\Stars\blueGoldStar16.png" />
+    <Resource Include="Resources\Stars\blueGoldStar32.png" />
+    <Resource Include="Resources\Stars\blueSilverStar16.png" />
+    <Resource Include="Resources\Stars\blueSilverStar32.png" />
+    <Resource Include="Resources\Stars\greenBrownStar16.png" />
+    <Resource Include="Resources\Stars\greenBrownStar32.png" />
+    <Resource Include="Resources\Stars\greenGoldStar16.png" />
+    <Resource Include="Resources\Stars\greenGoldStar32.png" />
+    <Resource Include="Resources\Stars\greenSilverStar16.png" />
+    <Resource Include="Resources\Stars\greenSilverStar32.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-black.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-black32.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-blue.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-blue32.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-green.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-green32.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-grey.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-grey32.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-red.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-red32.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-yellow.png" />
+    <Resource Include="Resources\WorkoutPlansAwards\bullet-yellow32.png" />
+    <Resource Include="Resources\login.png" />
+    <Resource Include="Resources\Stars\redBrownStar16.png" />
+    <Resource Include="Resources\Stars\redBrownStar32.png" />
+    <Resource Include="Resources\Stars\redGoldStar16.png" />
+    <Resource Include="Resources\Stars\redGoldStart32.png" />
+    <Resource Include="Resources\Stars\redSilverStar16.png" />
+    <Resource Include="Resources\Stars\redSilverStar32.png" />
+    <Content Include="TreeListView\ColorPickerCtrl\ColorPickerTest.csproj" />
+    <EmbeddedResource Include="MonthCalendar\MonthCalendar.resx">
+      <DependentUpon>MonthCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PleaseWait\PleaseWaitWindow.resx">
+      <DependentUpon>PleaseWaitWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssReader\usrRssReader.pl.resx">
+      <DependentUpon>usrRssReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RssReader\usrRssReader.resx">
+      <DependentUpon>usrRssReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeListView\ColorPickerCtrl\Resources\popupcontainerbuttons.bmp" />
+    <EmbeddedResource Include="TreeListView\ColorPickerCtrl\Resources\eyedropper.bmp" />
+    <EmbeddedResource Include="TreeListView\ColorPickerCtrl\Resources\colorbarIndicators.bmp" />
+    <EmbeddedResource Include="TreeListView\PropertyDialog\PropertyDialog.resx">
+      <DependentUpon>PropertyDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\usrCreateProfile.resx">
+      <DependentUpon>usrCreateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WPF\InvitationListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\RatingsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF\StarControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF\UsersListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

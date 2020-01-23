@@ -1,0 +1,22 @@
+﻿<Window x:Class="BodyArchitect.Client.Module.StrengthTraining.Controls.SetRestTimeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ResizeMode="NoResize"
+        xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI" 
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+        Title="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetRestTimeWindow_Title}" Height="150" Width="300" Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetRestTimeWindow_RestTime_Label}"/>
+        <Controls:TimeSpanUpDown Grid.Row="1" Name="txtRestTime"/>
+        <StackPanel VerticalAlignment="Bottom" Margin="{StaticResource MarginLargeTop}" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
+            <Button Style="{StaticResource OkButton}" Click="btnOk_Click"/>
+            <Button Margin="{StaticResource MarginLargeLeft}" Style="{StaticResource CancelButton}" Click="btnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

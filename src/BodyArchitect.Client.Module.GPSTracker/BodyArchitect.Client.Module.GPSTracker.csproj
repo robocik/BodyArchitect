@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F362CA38-729B-42E7-A0DF-3A89F33EB29E}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Client.Module.GPSTracker</RootNamespace>
+    <AssemblyName>BodyArchitect.Client.Module.GPSTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Maps.MapControl.WPF">
+      <HintPath>..\..\Assemblies\Microsoft.Maps.MapControl.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="RibbonControlsLibrary">
+      <HintPath>..\BodyArchitect.Client.Common\bin\x86\Debug\RibbonControlsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Visiblox.Charts, Version=2.2.0.38099, Culture=neutral, PublicKeyToken=1543c03f04c4461b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Visiblox.Charts\Visiblox.Charts.Wpf\4.0\Visiblox.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFLocalizeExtension, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WpfLocalizeExtension.2.2.1\lib\net35\WPFLocalizeExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.1.6.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XAMLMarkupExtensions.1.1.6.3\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\BAMap.cs" />
+    <Compile Include="Controls\GPSPointViewModel.cs" />
+    <Compile Include="Controls\GpsTrackerChart.cs" />
+    <Compile Include="Controls\GPSTrackerViewModel.cs" />
+    <Compile Include="Controls\LapViewModel.cs" />
+    <Compile Include="Controls\usrGPSTrackerEntry.xaml.cs">
+      <DependentUpon>usrGPSTrackerEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrGPSTrackerEntryDetails.xaml.cs">
+      <DependentUpon>usrGPSTrackerEntryDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrLapPushpinInfo.xaml.cs">
+      <DependentUpon>usrLapPushpinInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrLapsDetails.xaml.cs">
+      <DependentUpon>usrLapsDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GPSPointsProcessor.cs" />
+    <Compile Include="GPSTrackerCalendarDayContent.cs" />
+    <Compile Include="GPSTrackerModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\GPSStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GPSStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GPSStrings.pl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GPSStrings.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherIcon.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GPSStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GPSStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="Resources\GPSStrings.pl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GPSStrings.pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Client.Common\BodyArchitect.Client.Common.csproj">
+      <Project>{FB6880D6-08E2-4FB1-B308-8E0AD62B6BE2}</Project>
+      <Name>BodyArchitect.Client.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Module.StrengthTraining\BodyArchitect.Client.Module.StrengthTraining.csproj">
+      <Project>{e4814a24-197f-461a-8230-191d832c4140}</Project>
+      <Name>BodyArchitect.Client.Module.StrengthTraining</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.UI\BodyArchitect.Client.UI.csproj">
+      <Project>{88EEC43D-7F8E-46DA-8734-94664C03E246}</Project>
+      <Name>BodyArchitect.Client.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.WCF\BodyArchitect.Client.WCF.csproj">
+      <Project>{e0c4293b-9d71-4415-8062-4c35add13640}</Project>
+      <Name>BodyArchitect.Client.WCF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.V2.Model\BodyArchitect.Service.V2.Model.csproj">
+      <Project>{DCFCC632-2849-421F-BF34-054B8DF0F6E9}</Project>
+      <Name>BodyArchitect.Service.V2.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2c7edadc-5d8f-4424-a71f-2b8c3dc53dff}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GPSTracker16.png" />
+    <Resource Include="Resources\GPSTracker32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\usrGPSTrackerEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrGPSTrackerEntryDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrLapPushpinInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrLapsDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Start16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Weather\Blizzard.png" />
+    <Resource Include="Resources\Weather\ClearSunny.png" />
+    <Resource Include="Resources\Weather\Cloudy.png" />
+    <Resource Include="Resources\Weather\Fog.png" />
+    <Resource Include="Resources\Weather\HeavyFreezingDrizzle.png" />
+    <Resource Include="Resources\Weather\HeavySnow.png" />
+    <Resource Include="Resources\Weather\LightRainShower.png" />
+    <Resource Include="Resources\Weather\LightShowersOfIcePellets.png" />
+    <Resource Include="Resources\Weather\LightSleet.png" />
+    <Resource Include="Resources\Weather\LightSnowShowers.png" />
+    <Resource Include="Resources\Weather\ModerateOrHeavyFreezingRain.png" />
+    <Resource Include="Resources\Weather\ModerateOrHeavyRainAreaWithThunder.png" />
+    <Resource Include="Resources\Weather\ModerateOrHeavyRainShower.png" />
+    <Resource Include="Resources\Weather\ModerateOrHeavyShowersOfIcePellets.png" />
+    <Resource Include="Resources\Weather\ModerateOrHeavySnowShowers.png" />
+    <Resource Include="Resources\Weather\ModerateOrHeavySnowWithThunder.png" />
+    <Resource Include="Resources\Weather\ModerateSnow.png" />
+    <Resource Include="Resources\Weather\PartlyCloudy.png" />
+    <Resource Include="Resources\Weather\PatchyLightRainWithThunder.png" />
+    <Resource Include="Resources\Weather\PatchyLightSnowWithThunder.png" />
+    <Resource Include="Resources\Weather\TorrentialRainShower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MapMode16.png" />
+    <Resource Include="Resources\MapMode32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,32 @@
+﻿<my:usrEntryObjectDetailsBase x:Class="BodyArchitect.Client.Module.Suplements.Controls.usrSupplementsEntryDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI" 
+                              xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <Grid Grid.Column="2" Background="{StaticResource WindowBackgroundBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <my:usrReportStatus Margin="{StaticResource MarginMediumLeftTopRightBottom}" Grid.Row="0" Name="usrReportStatus1" StatusesChanged="usrReportStatus1_StatusesChanged"/>
+
+            <GroupBox Name="grRemindMe"  Grid.Row="1"  Margin="{StaticResource MarginMediumLeftRightBottom}" Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_Header_Remind}">
+                <my:usrRemindMe Name="ctrlRemindMe" />
+            </GroupBox>
+
+            <GroupBox Margin="{StaticResource MarginMediumLeftRightBottom}" Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_Header_Comment}" Grid.Row="2" >
+                <xctk:WatermarkTextBox Height="100" Style="{StaticResource contentTextBox}" Name="txtComment" Watermark="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_Watermark_Comment}" TextChanged="txtComment_TextChanged" />
+            </GroupBox>
+
+            <my:usrApplicationName Margin="{StaticResource MarginMediumLeftRightBottom}" Name="usrApplicationName" Grid.Row="3"  />
+
+        </Grid>
+    </ScrollViewer>
+</my:usrEntryObjectDetailsBase>

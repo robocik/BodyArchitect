@@ -1,0 +1,29 @@
+﻿<configuration >
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="WPFBinding" closeTimeout="00:01:00" openTimeout="00:01:00"
+          receiveTimeout="00:01:00" sendTimeout="00:01:00" maxBufferSize="1006710886"
+          maxReceivedMessageSize="1006710886" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://192.168.226.128/BodyArchitectWebSite/V2/BodyArchitect.svc/WP7"
+        binding="basicHttpBinding" bindingConfiguration="WPFBinding"
+        contract="BodyArchitect.Service.V2.Model.IBodyArchitectAccessService"
+        name="Local" />
+      <endpoint address="http://192.168.0.9/BodyArchitectWebSite/V2/BodyArchitect.svc/WP7"
+        binding="basicHttpBinding" bindingConfiguration="WPFBinding"
+        contract="BodyArchitect.Service.V2.Model.IBodyArchitectAccessService"
+        name="Local2" />
+      <endpoint address="http://service.bodyarchitectonline.com/V2/BodyArchitect.svc/WP7"
+        binding="basicHttpBinding" bindingConfiguration="WPFBinding"
+        contract="BodyArchitect.Service.V2.Model.IBodyArchitectAccessService"
+        name="Production" />
+      <endpoint address="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc/WP7"
+        binding="basicHttpBinding" bindingConfiguration="WPFBinding"
+        contract="BodyArchitect.Service.V2.Model.IBodyArchitectAccessService"
+        name="TestWeb" />
+    </client>
+  </system.serviceModel>
+</configuration>

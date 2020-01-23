@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="BodyArchitect.Controls.WPF.UsersListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:WpfControlLibrary1="clr-namespace:BodyArchitect.Controls.WPF" xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="mojBrush" Color="#FF6487DC" />
+        <BooleanToVisibilityConverter x:Key="booleanToVisibility" />
+    </UserControl.Resources>
+
+
+    <ListView Grid.Column="0" Grid.Row="0" Name="lstUsers" VerticalAlignment="Stretch" SelectionChanged="lstUsers_SelectionChanged" SelectionMode="Single" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+        <ListView.ItemTemplate>
+
+            <DataTemplate>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                    <WpfControlLibrary1:CachedImage Stretch="Fill" Width="48" Height="48" PictureOwner="{Binding User}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding User.UserName}" Grid.Row="0" FontWeight="Bold" Foreground="Blue" Margin="5,5,0,0" />
+
+                        <StackPanel HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                            <Image ToolTip="{Binding RedStarToolTip}" Visibility="{Binding RedStarVisibiltiy}" HorizontalAlignment="Center" Width="16" Height="16" Source="{Binding RedStarImage}" />
+                            <Image ToolTip="{Binding BlueStarToolTip}" Visibility="{Binding BlueStarVisibiltiy}" HorizontalAlignment="Center" Width="16" Height="16" Source="{Binding BlueStarImage}" />
+                            <Image ToolTip="{Binding GreenStarToolTip}" Visibility="{Binding GreenStarVisibiltiy}" HorizontalAlignment="Center" Width="16" Height="16" Source="{Binding GreenStarImage}" />
+
+                        </StackPanel>
+                        <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" Grid.Row="1" Margin="5,0,0,0">
+                            <TextBlock Text="{Binding Gender}" />
+                            <TextBlock Text="{Binding Country}" Grid.Row="0" Margin="10,0,0,0" />
+                        </StackPanel>
+
+                        
+                    </Grid>
+
+                    <StackPanel Margin="30,5,0,10">
+                        <Image Visibility="{Binding LastLoginVisible}" HorizontalAlignment="Center" Width="16" Height="16" Source="..\Resources\login.png" ToolTip="{Binding LastLoginDateToolTip}" />
+                        <TextBlock Visibility="{Binding LastLoginVisible}" HorizontalAlignment="Center" ToolTip="{Binding LastLoginDateToolTip}" Text="{Binding LastLoginDate}" />
+                    </StackPanel>
+
+                    <Image Margin="5,5,0,10" VerticalAlignment="Top" Width="16" Height="16" ToolTip="{Binding MeasurementsAllowedToolTip}" Visibility="{Binding MeasurementsAllowed, Converter={StaticResource booleanToVisibility}}" Source="..\Resources\book_edit.png" />
+
+                    <StackPanel Margin="5,5,0,10">
+                        <Image HorizontalAlignment="Center" Width="16" Height="16" ToolTip="{Binding CalendarAllowedToolTip}" Visibility="{Binding CalendarAllowed, Converter={StaticResource booleanToVisibility}}" Source="..\Resources\calendar16.png" />
+                        <TextBlock HorizontalAlignment="Center" ToolTip="{Binding LastEntryDateToolTip}" Text="{Binding LastEntryDate}" />
+                    </StackPanel>
+                    
+                    <StackPanel Margin="30,5,0,10">
+                        <Image HorizontalAlignment="Center" Width="16" Height="16" ToolTip="{Binding TrainingDayStatusToolTip}" Source="{Binding TrainingDayStatusImage}" />
+                        <TextBlock HorizontalAlignment="Center" ToolTip="{Binding TrainingDaysCountToolTip}" Text="{Binding TrainingDaysCount}" />
+                    </StackPanel>
+                    <StackPanel Margin="10,5,0,10">
+                        <Image HorizontalAlignment="Center" Width="16" Height="16" Source="{Binding FollowersStatusImage}" ToolTip="{Binding FollowersStatusToolTip}" />
+                        <TextBlock HorizontalAlignment="Center" ToolTip="{Binding FollowersCountToolTip}" Text="{Binding FollowersCount}" />
+                    </StackPanel>
+
+                    <StackPanel Margin="10,5,0,10">
+                        <Image HorizontalAlignment="Center" Width="16" Height="16" Source="{Binding WorkoutPlansStatusImage}" ToolTip="{Binding WorkoutPlansStatusToolTip}" />
+                        <TextBlock HorizontalAlignment="Center" ToolTip="{Binding WorkoutPlansCountToolTip}" Text="{Binding WorkoutPlansCount}" />
+                    </StackPanel>
+
+                    
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+
+        <ListView.GroupStyle>
+            <GroupStyle>
+                <GroupStyle.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="12" Grid.Column="0" Foreground="{StaticResource mojBrush}" FontWeight="Bold" Text="{Binding Name}" />
+                            <Line Margin="5,0,0,0" Grid.Column="1" Fill="{StaticResource mojBrush}" Stroke="{StaticResource mojBrush}" Stretch="Fill" X2="500"></Line>
+                        </Grid>
+
+                       
+                    </DataTemplate>
+                </GroupStyle.HeaderTemplate>
+            </GroupStyle>
+        </ListView.GroupStyle>
+    </ListView>
+
+</UserControl>

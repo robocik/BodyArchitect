@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>BodyArchitect</title>
+    <link>http://bodyarchitectonline.com</link>
+    <description>News about BodyArchitect application</description>
+    <language>en-us</language>
+    <managingEditor>bodyarchitectsoft@gmail.com</managingEditor>
+    <webMaster>bodyarchitectsoft@gmail.com</webMaster>
+	<item>
+      <title>BodyArchitect is Free!!!</title>
+      <description>Great news for all users. From now, BodyArchitect is totally free. You can now use all features from Premium and Instructor account. Have fun!</description>
+      <link>http://bodyarchitectonline.com/</link>
+      <pubDate>Sun, 30 January 2019 00:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Biggest promotion ever. We cut prices!</title>
+      <description>Great news for all users. We decided to cut prices to allow more users to have access to all features. Now you can have 360 points (1 year of Premium account) for ≈20$</description>
+      <link>http://bodyarchitectonline.com/</link>
+      <pubDate>Sun, 19 May 2013 00:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Finally BodyArchitect 5.0 is here!</title>
+      <description>After long preparation it's here - totally After long preparation it's here - totally new version of the best fitness application for professional bodybuilders. We have added so many new features that you would spend whole day on reading about them. We encourage you to discover things like supplements routines, tools for fitness instructors, personal records and much more smaller improvements.</description>
+      <link>http://bodyarchitectonline.com/</link>
+      <pubDate>Fri, 26 Oct 2012 08:23:49 +0200</pubDate>
+    </item>
+    <item>
+      <title>BodyArchitect is not Beta anymore!</title>
+      <pubDate>Sun, 8 May 2011 12:26:56 +0200</pubDate>
+      <link>http://bodyarchitectonline.com/</link>
+      <category>BA</category>
+      <description><![CDATA[We are happy to announce that BodyArchitect has achieved stable status. Additionally we are working on BodyArchitect for phones with <b>Windows Phone</b>.system. Using it you will be able to enter you workout directly on the gym.]]></description>
+    </item>
+    <item>
+      <title>New BodyArchitect 4.0 is on the board!</title>
+      <pubDate>Fri, 18 Mar 2011 07:40:45 +0100</pubDate>
+      <link>http://bodyarchitectonline.com/</link>
+      <category>BA</category>
+      <description><![CDATA[Big, big, big... No, I'm not talking about your body. I'm talking about new BodyArchitect 4.0. This is a huge release, there are many changes in the application, it joins workout log application with social features like sharing workout log with other users, big workout plan databases, with ratings and comments.]]></description>
+    </item>
+    <item>
+      <title>Be ready for BodyArchitect 4.0!</title>
+      <pubDate>Sun, 6 Mar 2011 17:53:36 +0100</pubDate>
+      <link>http://bodyarchitectonline.com/</link>
+      <category>BA</category>
+      <description><![CDATA[Release of the new BodyArchitect 4.0 is comming. The new version allows you to share workout plans with other users. They will also be able to show your workout log. This will be a revolution!]]></description>
+    </item>
+    <item>
+      <title>BodyArchitect 3.0 has been released</title>
+      <pubDate>Sun, 12 Dec 2010 13:31:09 +0100</pubDate>
+      <link>http://bodyarchitectonline.com/</link>
+      <category>BA</category>
+      <description><![CDATA[The new version of BodyArchitect is available for you. You will find full featured workout plan editor, suplements module, extended exercises and lots of more changes.]]></description>
+    </item>
+    <item>
+      <title>BodyArchitect 2.0 has been released</title>
+      <pubDate>Tue, 5 Oct 2010 21:26:29 +0200</pubDate>
+      <link>http://bodyarchitectonline.com/</link>
+      <category>BA</category>
+      <description><![CDATA[I'm very happy to inform that BodyArchitect 2.0 is ready to help you with your training. Upgrade your application now. You will have many new features like reporting, A6W training module, training plans and more...]]></description>
+    </item>
+    <item>
+      <title>BodyArchitect is not beta anymore.</title>
+      <pubDate>Thu, 23 Sep 2010 17:36:01 +0200</pubDate>
+      <link>http://bodyarchitectonline.com/</link>
+      <category>BA</category>
+      <description><![CDATA[After a few month tests, BodyArchitect is now a stable application. Thanks for using it]]></description>
+    </item>
+    <item>
+      <title>BodyArchitect 1.0 Beta finally released</title>
+      <pubDate>Tue, 6 Jul 2010 09:21:41 +0200</pubDate>
+      <link>http://bodyarchitectonline.com/</link>
+      <category>BA</category>
+      <description><![CDATA[After a few months BodyArchitect 1.0 is almost ready. Current status is Beta and that means that there might be some errors. Please report all errors you get. Thanks a lot!]]></description>
+    </item>
+    <pubDate>Fri, 26 Oct 2012 08:23:49 +0200</pubDate>
+  </channel>
+</rss>

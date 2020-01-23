@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnPayPal30.alt" xml:space="preserve">
+    <value>PayPal — Bezpieczne płatności online</value>
+  </data>
+  <data name="btnPayPal60.alt" xml:space="preserve">
+    <value>PayPal — Bezpieczne płatności online</value>
+  </data>
+  <data name="lbl30Points.Text" xml:space="preserve">
+    <value>30 punktów</value>
+  </data>
+  <data name="lbl30PointsPaymentDescription.value" xml:space="preserve">
+    <value>30 punktów do BodyArchitecta</value>
+  </data>
+  <data name="lbl120Points.Text" xml:space="preserve">
+    <value>180 punktów</value>
+  </data>
+  <data name="lbl120PointsPaymentDescription.value" xml:space="preserve">
+    <value>180 punktów do BodyArchitecta</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>WAŻNE: BodyArchitect jest aplikacją bezpłatną. Nie musisz płacić, aby mieć dostęp do wszystkich funkcji konta Premium lub Instruktor. Oczywiście, jeśli chcesz pokazać, że podoba Ci się program i w ten sposób chciałbyś nas wesprzeć, to możesz dokonać płatności, za co będziemy wdzięczni. Jednak nie musisz tego robić, żeby mieć pełny dostęp do wszystkich funkcji!</value>
+  </data>
+  <data name="lblTHCreditCard.Text" xml:space="preserve">
+    <value>przelewy24.pl</value>
+  </data>
+  <data name="lblTHPayPal.Text" xml:space="preserve">
+    <value>PayPal (Karta kredytowa)</value>
+  </data>
+  <data name="lblTHPoints.Text" xml:space="preserve">
+    <value>Pakiet punktów</value>
+  </data>
+  <data name="lblTHPrice.Text" xml:space="preserve">
+    <value>Cena</value>
+  </data>
+  <data name="lblUserNameHello.Text" xml:space="preserve">
+    <value>Witaj</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>BodyArchitect - zakupy</value>
+  </data>
+  <data name="PaymentFinishedRefreshNeededMessage" xml:space="preserve">
+    <value>Aby w programie BodyArchitect zobaczyć zakupione punkty, musisz odświeżyć dane o profilu w aplikacji. Możesz też ponownie uruchomić program. W przypadku, gdy po odświeżeniu widoku nadal nie widzisz punktów to proszę poczekać max. 24 godziny, gdyż czasem proces księgowania pieniędzy w banku jest opóźniony. Gdyby jednak nadal nie było punktów na Twoim koncie, to skontaktuj się z nami: &lt;a href="mailto:admin@bodyarchitectonline.com"&gt;admin@bodyarchitectonline.com&lt;/a&gt;</value>
+  </data>
+  <data name="PayPalTransactionFinished" xml:space="preserve">
+    <value>Dziękujemy za dokonanie płatności. Transakcja została zakończona, a potwierdzenie przyjęcia zakupu zostało wysłane w wiadomości e-mail. Aby wyświetlić szczegóły dotyczące tej transakcji, zaloguj się do konta na stronie www.paypal.com</value>
+  </data>
+  <data name="TransferujTransactionFinished" xml:space="preserve">
+    <value>Dziękujemy za dokonanie płatności. Transakcja została zakończona.</value>
+  </data>
+  <data name="lbl30PointsDescription.Text" xml:space="preserve">
+    <value>Wystarcza na 30 dni konta Premium lub 15 dni konta Instruktor</value>
+  </data>
+  <data name="lblTHDescription.Text" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="lbl120PointsDescription.Text" xml:space="preserve">
+    <value>Wystarcza na 6 miesięcy konta Premium lub 3 miesiące konta Instruktor</value>
+  </data>
+  <data name="PayPalCreditCardDescription" xml:space="preserve">
+    <value>Aby zapłacić kartą kredytową, proszę skorzystać z metody PayPal. Nie musisz posiadać konta na PayPalu aby dokonać płatności kartą.</value>
+  </data>
+  <data name="ContactAddress" xml:space="preserve">
+    <value>kontakt</value>
+  </data>
+  <data name="ProblemsInfo" xml:space="preserve">
+    <value>W razie problemów prosimy o </value>
+  </data>
+  <data name="lblPromotion.Text" xml:space="preserve">
+    <value>Wielka promocja. Tniemy ceny pakerze!</value>
+  </data>
+</root>

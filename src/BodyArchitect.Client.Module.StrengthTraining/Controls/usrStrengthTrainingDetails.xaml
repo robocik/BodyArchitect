@@ -1,0 +1,112 @@
+﻿<my:usrEntryObjectDetailsBase x:Class="BodyArchitect.Client.Module.StrengthTraining.Controls.usrStrengthTrainingDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI"
+             xmlns:Behaviors="clr-namespace:BodyArchitect.Client.UI.Controls.WatermarkExtension;assembly=BodyArchitect.Client.UI" xmlns:MyPlace="clr-namespace:BodyArchitect.Client.UI.Views.MyPlace;assembly=BodyArchitect.Client.UI" xmlns:charts="clr-namespace:Visiblox.Charts;assembly=Visiblox.Charts" xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI" xmlns:progressIndicator="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator;assembly=BodyArchitect.Client.UI" xmlns:my1="clr-namespace:BodyArchitect.Client.Module.StrengthTraining.Controls" xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="/BodyArchitect.Client.Module.StrengthTraining;component/Themes/generic.xaml" />-->
+                <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Themes/MyStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <Grid  Background="{StaticResource WindowBackgroundBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Grid.Row="0" Margin="{StaticResource MarginMediumLeftRightBottom}" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Header_General}">
+                <Grid Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_WorkoutTimeLabel}" Style="{StaticResource titleTextBlock}" />
+                        <Grid Margin="{StaticResource MarginMediumTop}" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition />
+
+                            </Grid.ColumnDefinitions>
+
+                            <Label VerticalAlignment="Center" Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_WorkoutStartTimeLabel}" Target="tpStart"/>
+                            <xctk:TimePicker Margin="{StaticResource MarginSmallLeft}" Grid.Column="1" Name="tpStart" ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Tip_StartTimeTE}" ValueChanged="tpStart_ValueChanged"/>
+                            <Label VerticalAlignment="Center" Margin="{StaticResource MarginLargeLeft}" Grid.Column="2" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_WorkoutEndTimeLabel}" Target="tpEnd"/>
+                            <xctk:TimePicker Margin="{StaticResource MarginSmallLeft}" Grid.Column="3" Name="tpEnd" ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Tip_EndTimeTE}" ValueChanged="tpStart_ValueChanged"/>
+                        </Grid>
+
+                        <Label Margin="{StaticResource MarginLargeTop}" Grid.Row="2" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_WorkoutPlanLabel}" Target="tpEnd"/>
+
+                        <my1:usrWorkoutPlansChooser Margin="{StaticResource MarginSmallTop}" x:Name="usrWorkoutPlansChooser1" Grid.Row="3" />
+                    </Grid>
+
+                    <Grid Grid.Column="1" Margin="30,0,12,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrIntensity_Header}" Style="{StaticResource titleTextBlock}"/>
+                        <my1:usrIntensity MinWidth="70"  Margin="{StaticResource MarginMediumLeftTop}" Grid.Row="1"  x:Name="usrIntensity1" Height="98" IntensityChanged="usrIntensity1_IntensityChanged"/>
+                    </Grid>
+
+                </Grid>
+            </GroupBox>
+
+            <my:usrReportStatus Margin="{StaticResource MarginMediumLeftRightBottom}" Name="usrReportStatus1" Grid.Row="1"  StatusesChanged="usrIntensity1_IntensityChanged"/>
+
+            <GroupBox Margin="{StaticResource MarginMediumLeftRightBottom}" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Header_MyPlace}" Grid.Row="2" >
+                <StackPanel Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Label_MyPlace}" Target="cmbMyPlaces" />
+                        <my:BAHelpButton Description="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Help_MyPlaces}" AccountType="PremiumUser"/>
+                    </StackPanel>
+
+                    <MyPlace:MyPlacesFilteredComboBox IsLazy="true" x:Name="cmbMyPlaces" SelectionChanged="cmbMyPlaces_SelectionChanged" ItemContainerStyle="{StaticResource StretchedComboBoxItemStyle}" 
+                                                          ItemTemplate="{StaticResource MyPlaceComboBoxItem}" Margin="{StaticResource MarginMediumTop}" SelectedValuePath="GlobalId"
+                                                          Behaviors:WatermarkComboBoxBehavior.EnableWatermark="true"  Behaviors:WatermarkComboBoxBehavior.Label="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Watermark_MyPlace}" 
+                                                          AllowNull="true" Behaviors:WatermarkComboBoxBehavior.LabelStyle="{StaticResource watermarkLabelStyle}"
+                                                          Grid.Column="1" TextSearch.TextPath="Name" />
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Name="grRemindMe"  Grid.Row="3" Margin="{StaticResource MarginMediumLeftRightBottom}" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Header_Remind}">
+                <my:usrRemindMe   x:Name="usrReminder"/>
+            </GroupBox>
+
+            <my:usrMood x:Name="ctrlMood" Grid.Row="4" Margin="{StaticResource MarginMediumLeftRightBottom}" SelectedMoodChanged="usrIntensity1_IntensityChanged"/>
+
+            <GroupBox Margin="{StaticResource MarginMediumLeftRightBottom}" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_CommentHeader}" Grid.Row="5" >
+                <xctk:WatermarkTextBox Height="100" Style="{StaticResource contentTextBox}" Name="txtComment" ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_Tip_CommentTE}" TextChanged="txtComment_TextChanged" />
+            </GroupBox>
+
+            <my:usrApplicationName Margin="{StaticResource MarginMediumLeftRightBottom}" Name="usrApplicationName" Grid.Row="6" />
+        </Grid>
+    </ScrollViewer>
+
+</my:usrEntryObjectDetailsBase>

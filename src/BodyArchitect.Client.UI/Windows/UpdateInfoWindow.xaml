@@ -1,0 +1,8 @@
+﻿<Window x:Class="BodyArchitect.Client.UI.Windows.UpdateInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+        Title="{lex:LocText  BodyArchitect.Client.Resources:Strings:UpdateInfoWindow_Title}" 
+        Height="500" Width="500" WindowStartupLocation="CenterScreen">
+    <WebBrowser Name="webBrowser" />
+</Window>

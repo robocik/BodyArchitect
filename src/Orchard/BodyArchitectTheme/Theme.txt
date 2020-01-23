@@ -1,0 +1,7 @@
+﻿Name: BodyArchitect Theme
+Author: continuum - rich media lab
+Website: http://www.continuum.tv
+Description: This quaint design is open for various content.
+(Deutsch: Dieses malerische Design ist für die verschiedensten Inhalte geeignet.)
+Version: 1.0                    
+Tags: cms, subtle, vintage, quaint, grey

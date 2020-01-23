@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+	<generator>Feed Editor (Unlicensed)</generator>
+	<pubDate>26 Oct 2012 11:12:03 GMT</pubDate>
+	<title>BodyArchitect</title>
+	<description>Tips &amp; tricks about BodyArchitect application</description>
+	<link>http://bodyarchitectonline.com</link>
+	<managingEditor>bodyarchitectsoft@gmail.com</managingEditor>
+	<language>en-us</language>
+	<webMaster>bodyarchitectsoft@gmail.com</webMaster>
+	<item>
+	<title>Calendar</title>
+	<description>Only sets with &lt;b&gt;default&lt;/b&gt; equipment are included in personal records. Because of this, in most cases it’s better to create a new exercise instead of changing equipment in the calendar.</description>
+	<pubDate>26 Oct 2012 13:16:48 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">088C1900-1D45-43F6-9F5E-8491D0FE3B84</guid>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>For most exercises in your workout log, you should use &lt;b&gt;default&lt;/b&gt; equipment. For example for &lt;i&gt;Bench press&lt;/i&gt;, if you do this exercise in normal (standard) way, you should choose &lt;b&gt;default&lt;/b&gt; equipment (instead of &lt;b&gt;barbell&lt;/b&gt;). In this situation &lt;b&gt;barbell&lt;/b&gt; equipment you could set if this exercise you did in a different way (or using different type of barbell). In other words, if we do any exercises in the standard way – we should always set equipment to &lt;b&gt;default&lt;/b&gt;.</description>
+	<pubDate>26 Oct 2012 13:01:48 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">F9576329-EF4A-45D9-B20B-AB19D441260F</guid>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>Did you have a situation that you wanted to do exercise (e.g. &lt;i&gt;biceps curl&lt;/i&gt;), but someone else uses a barbell. In this case, you could decide to do this exercise but instead of barbell, use machine with more weight. Problem is how to note this in your log, because when in normal situation (with barbell) you set 30kg weight but now on machine you used 45kg, then if you want to see the progress you will see that your strength increased from 30kg to 45kg, which is of course incorrect (you changed an equipment only). &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt; allows you to specify an equipment for the exercise. But please remember that this feature should be used rarely. In most cases you should create a new exercise like &lt;i&gt;Biceps curl on machine&lt;/i&gt; instead of changing default equipment.</description>
+	<pubDate>26 Oct 2012 12:54:50 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">79CACD00-BA45-4E89-914E-317547E8B62D</guid>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>When you insert strength training into your log, you can specify the gym, where you had this training. This is important for example when you generate a report. Sometimes, on one gym you must set 30 kg on training machine (made by company X)  but on another gym (where there is similar machine from company Y) you must set 45kg. Later, when you want to see the progress for this exercise by generating a report, you will see a &amp;ldquo;progress” from 30kg to 45kg. But this is a fake progress, wrong data caused by difference in machine construction. In this case you should choose different gym to mark each training in the calendar and then generate a report for specific gym only.</description>
+	<pubDate>26 Oct 2012 12:45:17 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">A51918BB-BE97-4773-AF43-9D02511B4AA0</guid>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>Calendar entries you can mark as &lt;b&gt;done&lt;/b&gt; or &lt;b&gt;planned&lt;/b&gt;.  By default, entries added in the future has status &lt;b&gt;planned&lt;/b&gt; and entries added in the past - &lt;b&gt;done&lt;/b&gt;.</description>
+	<pubDate>26 Oct 2012 12:35:24 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">B83A7278-8B13-4EDA-A57A-2883F5504CE5</guid>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>Other users can comment on your workout log while reading. You can disable this functionality globally (in profile settings) or separately for each day in the calendar.</description>
+	<pubDate>26 Oct 2012 12:32:50 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">A9E8589D-0B6E-437E-AAF7-A3C9B659F58A</guid>
+	</item>
+	<item>
+	<title>General</title>
+	<description>In the &lt;b&gt;Featured&lt;/b&gt; tab you always find an overview of what's new other uses did in &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt;. Look there every day.</description>
+	<pubDate>26 Oct 2012 11:35:20 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">4F9EF627-66FB-4DD8-B9B0-36A1BE14DB8E</guid>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>When you add strength training to your calendar, &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt; calculate your personal records for every exercise. Initially, these records are available only for you and your friends. When you have more than 30 entries in your workout log, then your records will be visible to others (they will be public).</description>
+	<pubDate>26 Oct 2012 11:30:35 GMT</pubDate>
+	<category>Application</category>
+	<guid isPermaLink="false">76F9C34E-4624-4591-AD6B-7DBDB4568A41</guid>
+	</item>
+	<item>
+	<title>General</title>
+	<description>You can drag tabs from the main window to any location on the screen or even second monitor. Simply click on the name tab at the top of the main window and drag it anywhere you want.</description>
+	<pubDate>26 Oct 2012 11:12:55 GMT</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>General</title>
+	<description>To open a view in a new tab, press &lt;b&gt;Ctrl&lt;/b&gt; while clicking on a button in the Ribbon or a link in the application. This allows the current view be still open after opening second view in a separate tab.</description>
+	<pubDate>26 Oct 2012 11:12:54 GMT</pubDate>
+	<category>WinFormsClient</category>
+	<guid isPermaLink="false">6285D1D5-3B92-4F8F-A5EE-9FBDC7A00014</guid>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Each workout session must be preceded by a good &lt;b&gt;warm-up&lt;/b&gt;. Remember that the lack of proper  warm-up is one of the main causes of injury. Treatment of injured joints or muscles takes a long time, and it is not your wish to say good-bye to the gym for that long, right? </description>
+	<pubDate>10 May 2011 14:44:16 GMT</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Perform mainly &lt;b&gt;Compound exercises&lt;/b&gt; (those that involve various muscles at a time). Use &lt;b&gt;Isolated exercises&lt;/b&gt; as optional add-ons. Examples of compound exercises are: squats with barbells, deadlift, bench press, etc.</description>
+	<pubDate>Tue, 22 Mar 2011 13:59:26 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>If you care about your muscle mass, have a meal consisting mainly of protein and healthy fats one hour before going to bed, to provide your body with enough fuel throughout the night. You can eat cottage cheese with olive oil or salmon. Sounds hardcore, but it works!</description>
+	<pubDate>Tue, 22 Mar 2011 13:58:46 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Throughout the day, eat a minimum of 1.5-2g of protein per every kilo of your body weight. Eg, if you weigh 75kg, you should eat 115-150g of protein, preferably of animal origin (chicken fillet, turkey, eggs, milk, cheese, fish).</description>
+	<pubDate>Tue, 22 Mar 2011 13:57:54 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>When you start your adventure with the gym, remember that your body is not accustomed to such an effort. For the first two months take a &lt;b&gt;ACT workout &lt;/b&gt; (exercise the whole body at each workout session), and choose the weights with moderation. Remember it is easy to get injured, but then it takes time to recover. </description>
+	<pubDate>Tue, 22 Mar 2011 13:56:23 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>&lt;b&gt;Regeneration&lt;/b&gt; is one of the most important factors for progress. Muscles do not grow during a workout but during rest (sleep). After a hard workout, it is vital you give your muscles enough time to rebuild any damaged tissues. Therefore, do not exercise every day. Take a day’s break between workouts and sleep a lot.</description>
+	<pubDate>Tue, 22 Mar 2011 13:55:47 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>After workout, you should resupply your muscles with glycogen. A good idea is to eat a banana, a candy bar or drink supplements containing simple carbohydrates (sugars).</description>
+	<pubDate>Tue, 22 Mar 2011 13:55:20 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Breakfast is the most important meal of the day, so never ignore it. If you care about your well-developed muscle mass, have your breakfast immediately after waking up. If you are hardly able to swallow anything in the morning, you can eat oatmeal with milk or prepare a cocktail of rice, strawberries and milk.</description>
+	<pubDate>Tue, 22 Mar 2011 13:54:37 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Weight loss (fat burning) depends primarily on well-arranged diet. Eating a lot or eating the wrong things, you will not lose weight. Please remember: workout can support weight loss, but without the diet – nothing doing.</description>
+	<pubDate>Tue, 22 Mar 2011 13:54:22 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Eat at least 5 wholesome meals throughout the day. Each meal should provide an adequate amount of protein (egg, cheese, milk, fish, meat), complex carbohydrates (brown rice, wholemeal pasta, potatoes) and fat (olive oil, oily fish).</description>
+	<pubDate>Tue, 22 Mar 2011 13:52:47 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>The number of repeats depends on the goal you want to achieve. Do over &lt;b&gt; 15&lt;/b&gt; reps if &lt;b&gt;muscular definition&lt;/b&gt; is your goal, &lt;b&gt;8-12&lt;/b&gt; reps if it is your &lt;b&gt;muscle mass&lt;/b&gt;, and &lt;b&gt;less than 7&lt;/b&gt; when &lt;b&gt;strength&lt;/b&gt; is your priority.</description>
+	<pubDate>Tue, 22 Mar 2011 13:51:28 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Do not overdo the weights. There is no point in putting on too much weight on the barbell and start any kind of “I like to move it move it”. The key to success is the &lt;b&gt;correct technique&lt;/b&gt;. Always perform exercises correctly and bigger loads will come with time.
+</description>
+	<pubDate>Tue, 22 Mar 2011 13:50:17 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Do you know what holy trinity is? These are three basic exercises that should be included in the arsenal of every professional bodybuilder: &lt;i&gt;Barbell Full Squat&lt;/i&gt;, &lt;i&gt;Deadlift&lt;/i&gt; and &lt;i&gt;Bench Press&lt;/i&gt;. In these exercises, there is no faking - a real strength counts.</description>
+	<pubDate>Tue, 22 Mar 2011 13:45:52 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Exercise mostly on free weights. There is nothing like barbells and dumbbells to mold your muscles. The machines are good, but rather to enhance your workout with variety. Asking why? Among other reasons, because when you hold the barbell, other muscles must work apart from those you are intentionally working out. </description>
+	<pubDate>Tue, 22 Mar 2011 13:37:44 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Remember a proper diet. The workout alone is only half of the success (or even less). With an appropriate diet your progress will really get going. Therefore, watch your plate and grow!</description>
+	<pubDate>Tue, 22 Mar 2011 13:29:26 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>On average, change your workout plan every two months. Do other exercises, change the order, the number of repetitions, the dynamics, and hold the bar at a different angle. Do not let your muscles get used to the effort. That is the way not to experience the meaning of the word &lt;b&gt;stagnation&lt;/b&gt;. </description>
+	<pubDate>Tue, 22 Mar 2011 13:28:32 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Exercise all parts of your body. The legs also want to get a decent kick in the gym. Note that the best looking silhouettes are proportional, with &lt;b&gt;all&lt;/b&gt; muscles properly sculpted. Let the "Sunday bodybuilders" get only on their chests and biceps. You are &lt;b&gt;a  professional&lt;/b&gt;!</description>
+	<pubDate>Tue, 22 Mar 2011 13:25:51 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>General</title>
+	<description>Show &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt; to your friends. The more people will use it, the more workout plans available, as well as more workout logs to track.</description>
+	<pubDate>Tue, 22 Mar 2011 13:25:23 +0100</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Measure your body. This is important for several reasons. Firstly, it is an excellent indicator of the quality of your workout. If you are growing, keep it up. If not, change something in your plan. Secondly, it makes a great incentive whenever you see that you need to unroll more tape to measure your biceps. Remember - numbers never lie.</description>
+	<pubDate>Tue, 22 Mar 2011 13:24:38 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Workout</title>
+	<description>Keep a regular workout log. Very soon it will bring you measurable benefits. In addition, we encourage you to make the diary public, so you can get valuable advice from other users. May the force be with you!</description>
+	<pubDate>Tue, 22 Mar 2011 13:22:55 +0100</pubDate>
+	<category>Training</category>
+	</item>
+	<item>
+	<title>Users</title>
+	<description>When any user adds a comment to your blog, workout plan, or exercise, you will receive a notice message.</description>
+	<pubDate>Tue, 22 Mar 2011 13:22:32 +0100</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Users</title>
+	<description>When you enter any change in the calendar, all of your friends will be sent a message.</description>
+	<pubDate>22 Mar 2011 13:21:27 GMT</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Users</title>
+	<description>You can invite other users to your circle of friends. If they accept your invitation, they will be able to access some data unaccessible to other users.
+When you enter any change in the calendar, all of your friends will be sent a notice.</description>
+	<pubDate>Tue, 22 Mar 2011 13:20:59 +0100</pubDate>
+	<category>Application</category>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>You can copy the entries in the calendar. For example, if you do the same workout every Monday, you can copy an existing entry and modify it, rather than enter everything from scratch.</description>
+	<pubDate>22 Mar 2011 13:20:24 GMT</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Workout plans</title>
+	<description>To enable other users to benefit from your plan, first you have to make it public. Change your account type to Premium and create your own workout plan. Then you can share it by making it public.</description>
+	<pubDate>Tue, 22 Mar 2011 13:19:52 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Workout plans</title>
+	<description>Thanks to the &lt;b&gt;Workout plans&lt;/b&gt; tab, you can search through the growing database of plans. Remember that in order to use another user’s workout plan, you need to add this plan to your list of favorites.</description>
+	<pubDate>Tue, 22 Mar 2011 13:18:45 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Users</title>
+	<description>The tab &lt;b&gt;People&lt;/b&gt; fulfils two functions. Firstly, it shows the list of your friends and your favorite profiles. Secondly, it enables you to find new friends or people whose workout diaries you would like to keep track of.</description>
+	<pubDate>Tue, 22 Mar 2011 13:18:04 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Reports</title>
+	<description>Use the reports. Nothing can better motivate you for workout than a clear analysis of your progress. Instead of viewing your old calendar entries to see what steps forward you have done, simply use the reports and see how the line of maximum weight lifted is going up.</description>
+	<pubDate>Tue, 22 Mar 2011 13:17:30 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>General</title>
+	<description>Public exercises are those available to everybody. &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt; contains a large database of exercises, which should satisfy even advanced bodybuilders. If the exercises you need are not included, you can create your own. For this use will need a Premium account.</description>
+	<pubDate>Tue, 22 Mar 2011 13:16:09 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>For a series of strength workout, you can specify a number of different attributes, such as: drop set, warm-up sets, till muscle failure, etc. To do this, right-click on the set in the strength workout menu and select &lt;b&gt;Add info...&lt;/b&gt;.</description>
+	<pubDate>Tue, 22 Mar 2011 13:13:28 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>When creating a new entry in your calendar, you can see the pages inserted by default (eg. strength workout, dimensions). To add other page (eg. supplements or blog), simply click on the green button in the Ribbon of the &lt;b&gt;Entry editor&lt;/b&gt; and select the option you want.</description>
+	<pubDate>Tue, 22 Mar 2011 13:12:49 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>General</title>
+	<description>At times you might see a window message informing about an error in the program, with a proposal to send the error details to the creators of the program. We encourage you to click &lt;b&gt;Send&lt;/b&gt; each time this happens. This will give us the opportunity to repair the existing errors and provide you with a more reliable application. The message you thus send does not contain any private data. What is sent is just what you see in the error message window.</description>
+	<pubDate>Mon, 21 Mar 2011 20:16:15 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Calendar</title>
+	<description>You can quickly navigate within the calendar. In the calendar's ribbon (big toolbar at the top of the window with buttons), you will find several options, such as the shift to the current month or the first or last entry in the calendar.</description>
+	<pubDate>Mon, 21 Mar 2011 20:11:24 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>Blog</title>
+	<description>To enable other users to see your blog, you must first insert a blog into your calendar. Secondly, in the &lt;b&gt;Privacy&lt;/b&gt; options you have to set &lt;b&gt;Calendar entries&lt;/b&gt; on the option &lt;i&gt;Public&lt;/i&gt;.</description>
+	<pubDate>Mon, 21 Mar 2011 14:29:07 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>My Profile</title>
+	<description>At any time you can enable other users to view your calendar, dimensions and other data. Go to the &lt;b&gt;Dashboard-&gt;Edit profile...&lt;/b&gt; and select the tab &lt;b&gt;Privacy&lt;/b&gt;.</description>
+	<pubDate>Mon, 21 Mar 2011 14:27:15 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>My Profile</title>
+	<description>You can personalize your profile by inserting your photo. Go to &lt;b&gt;Dashboard-&gt;Edit profile...&lt;/b&gt;. Your photo will be visible to other users.</description>
+	<pubDate>Mon, 21 Mar 2011 14:25:22 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	<item>
+	<title>General</title>
+	<description>You can navigate through &lt;b&gt;Tips &amp; Tricks&lt;/b&gt; by using arrow buttons above.</description>
+	<pubDate>Mon, 21 Mar 2011 14:02:51 +0100</pubDate>
+	<category>WinFormsClient</category>
+	</item>
+	</channel></rss>

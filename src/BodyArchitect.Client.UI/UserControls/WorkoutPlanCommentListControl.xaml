@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="BodyArchitect.Client.UI.UserControls.WorkoutPlanCommentListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             mc:Ignorable="d" Name="mainControl"
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <!--TODO:Completed-->
+    <ListBox ScrollViewer.CanContentScroll="false" ItemContainerStyle="{StaticResource StretchedListBoxItemStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="lstInvitations"
+             VerticalAlignment="Stretch" SelectionMode="Single" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" 
+             HorizontalContentAlignment="Stretch" Controls:ImageButtonExt.EmptyListMessage="{lex:LocText  BodyArchitect.Client.Resources:Strings:WorkoutPlanCommentListControl_EmptyListMessage_RetrievingData}">
+        <ListBox.ItemTemplate>
+
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Controls:CachedImage Margin="0,5,5,0" VerticalAlignment="Top" Width="48" Height="48" Grid.Column="0" PictureOwner="{Binding User}" />
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <Button Content="{Binding User.UserName}" IsHitTestVisible="{Binding AllowRedirectToDetails,ElementName=mainControl}" Tag="{Binding User}" Click="btnUserInfo_Click" Margin="5,5,0,0" Style="{StaticResource LinkButon}"  />
+
+                        <Controls:RatingControl Grid.Column="1"   RatingValue="{Binding Rating,Mode=OneWay}" Width="90" Height="13" IsHitTestVisible="false" Margin="5" HorizontalContentAlignment="Right" HorizontalAlignment="Right" />
+
+                        <TextBlock Grid.Row="1" Style="{StaticResource normalTextBlock}" Grid.ColumnSpan="2" VerticalAlignment="Top" TextWrapping="WrapWithOverflow" Controls:NavigationService.Text="{Binding ShortComment}" />
+                    </Grid>
+                    
+                    
+                </Grid>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+</UserControl>

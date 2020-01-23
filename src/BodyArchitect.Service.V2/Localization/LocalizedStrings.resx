@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="RestorePasswordEmailMessage" xml:space="preserve">
+    <value>At {0} password for your account has been restored.
+
+The new password is: {1}</value>
+    <comment>TODO</comment>
+  </data>
+	<data name="RestorePasswordEmailSubject" xml:space="preserve">
+    <value>BodyArchitect - new password</value>
+  </data>
+	<data name="CreateProfileEMailMessage" xml:space="preserve">
+    <value>At {0} you have created a profile in BodyArchitect application.
+
+
+
+Your user name: {1}.</value>
+  </data>
+	<data name="CreateProfileEMailSubject" xml:space="preserve">
+    <value>Welcome to the BodyArchitect</value>
+  </data>
+	<data name="CreateProfileEMailMessage_ActivationMode" xml:space="preserve">
+    <value>At {0} you have created a profile in BodyArchitect application.
+
+
+
+Your user name: {1}.
+
+You must click this link to activate your account:
+{2}</value>
+  </data>
+	<data name="VoteEMailMessage" xml:space="preserve">
+    <value>At {0} user {1} has voted on your {2}. This user gave {3} stars.</value>
+    <comment>TODO</comment>
+  </data>
+	<data name="VoteEMailSubject" xml:space="preserve">
+    <value>User {1} has voted on your {2}.</value>
+  </data>
+	<data name="AddTrainingDayCommentEMailMessage" xml:space="preserve">
+    <value>At {0} user {1} has commented your training day {2}.
+
+He wrote „{3}”.</value>
+    <comment>TODO</comment>
+  </data>
+	<data name="AddTrainingDayCommentEMailSubject" xml:space="preserve">
+    <value>User {1} has commented your training day {2}.</value>
+  </data>
+	<data name="AcceptInvitationEMailMessage" xml:space="preserve">
+    <value>At {1} user {0} has accepted an invitation. Now he is in your friend's circle.
+
+He wrote „{2}”.</value>
+    <comment>TODO:Add More stuff like application name BodyArchitect etc to invorm user what happen</comment>
+  </data>
+	<data name="AcceptInvitationEMailSubject" xml:space="preserve">
+    <value>User {0} has accepted an invitation.</value>
+  </data>
+	<data name="InviteFriendEMailMessage" xml:space="preserve">
+    <value>At {1} user {0} has invite you to his circle of friends.
+
+He wrote „{2}”</value>
+    <comment>TODO</comment>
+  </data>
+	<data name="InviteFriendEMailSubject" xml:space="preserve">
+    <value>User {0} has invite you to his circle of friends.</value>
+  </data>
+	<data name="RejectFriendshipEmailMessage" xml:space="preserve">
+    <value>At {1} user {0} has rejected friendship with you.
+
+He wrote „{2}”.</value>
+    <comment>TODO</comment>
+  </data>
+	<data name="RejectFriendshipEmailSubject" xml:space="preserve">
+    <value>User {0} has rejected friendhips with you.</value>
+  </data>
+	<data name="RejectInvitationEmailMessage" xml:space="preserve">
+    <value>At {1} user {0} has rejected invitation from you.
+
+He wrote „{2}”</value>
+    <comment>TODO</comment>
+  </data>
+	<data name="RejectInvitationEmailSubject" xml:space="preserve">
+    <value>User {0} has rejected invitation from you.</value>
+  </data>
+	<data name="FriendsTrainingDayChangedEMailMessage" xml:space="preserve">
+    <value>At {2} user {0} changed his calendar on {1}.
+
+Records:
+{3}</value>
+    <comment>TODO</comment>
+  </data>
+	<data name="FriendsTrainingDayChangedEMailSubject" xml:space="preserve">
+    <value>User {0} changed his calendar on {1}.</value>
+  </data>
+	<data name="FavoriteProfileDeleted_Content" xml:space="preserve">
+    <value>User {0} has deleted his profile.</value>
+  </data>
+	<data name="FavoriteProfileDeleted_Topic" xml:space="preserve">
+    <value>User has deleted his profile.</value>
+  </data>
+	<data name="FollowersTrainingDayChangedEMailMessage" xml:space="preserve">
+    <value>At {2} user {0} changed his calendar on {1}.
+
+Records:
+{3}</value>
+  </data>
+	<data name="FollowersTrainingDayChangedEMailSubject" xml:space="preserve">
+    <value>User {0} changed his calendar on {1}.</value>
+  </data>
+	<data name="FriendProfileDeleted_Content" xml:space="preserve">
+    <value>User {0} has deleted his profile.</value>
+  </data>
+	<data name="FriendProfileDeleted_Topic" xml:space="preserve">
+    <value>User has deleted his profile.</value>
+  </data>
+	<data name="ProfileCreated_Content" xml:space="preserve">
+    <value>Welcome to the best fitness application. You can use it as your workout log, workout plans database or to share with other users logs, plans and more... Be creative and use this application every day.</value>
+  </data>
+	<data name="ProfileCreated_Topic" xml:space="preserve">
+    <value>Welcome to the BodyArchitect!</value>
+  </data>
+	<data name="SupplementDefinitionEntry_ReminderName" xml:space="preserve">
+    <value>Supplement cycle: {0}</value>
+  </data>
+	<data name="ReminderBirthday" xml:space="preserve">
+    <value>{0} has birthday at {1}</value>
+  </data>
+	<data name="ReminderMeasurements" xml:space="preserve">
+    <value>At {0} you have measurements planned.</value>
+  </data>
+	<data name="ReminderScheduleEntry" xml:space="preserve">
+    <value>At {0} you have {1} activity.</value>
+  </data>
+	<data name="ReminderStrengthTraining" xml:space="preserve">
+    <value>At {0} you have strength training planned.</value>
+  </data>
+	<data name="ReminderSupplements" xml:space="preserve">
+    <value>At {0} you have supplements planned.</value>
+  </data>
+</root>

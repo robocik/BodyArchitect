@@ -1,0 +1,141 @@
+﻿<Custom:PhoneApplicationPage xmlns:my="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"  
+    x:Class="BodyArchitectCustom.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:UserControls="clr-namespace:BodyArchitect.WP7.UserControls" xmlns:Controls1="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+                             SupportedOrientations="Portrait" Orientation="Portrait" 
+    shell:SystemTray.IsVisible="False"  toolkit:TiltEffect.IsTiltEnabled="true" >
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" >
+            <Grid.Background>
+                <ImageBrush x:Name="backgroundImageBrush" 
+                        Stretch="None" 
+                        ImageSource="/SplashScreenImage.jpg" >
+                </ImageBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+            <my:ProgressStatus Grid.Row="0" Name="progressBar"  Foreground="{StaticResource CustomForegroundBrush}" />
+            
+            <UserControls:Login  x:Name="loginCtrl" Grid.Row="1"  Width="420" LoggingChanged="login_LoggingChanged" />
+
+            <Grid x:Name="panorama" Grid.Row="2" Background="{StaticResource CustomBackgroundBrush}" Visibility="Collapsed" >
+                <controls:Panorama Name="mainPanorama" SelectionChanged="Panorama_SelectionChanged"  >
+                    <controls:Panorama.TitleTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock   Margin="0,50,0,0" Foreground="{StaticResource panoramaMainBrush}" FontFamily="{StaticResource CustomFontFamilyNormal}"   Style="{StaticResource CustomTextTitle1Style}">
+                        <Run  FontWeight="SemiBold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                        <TextBlock.RenderTransform>
+                                <TranslateTransform x:Name="appTitleTran"
+                                                          X="1000"/>
+                              </TextBlock.RenderTransform>
+                                    <TextBlock.Triggers>
+                                <EventTrigger RoutedEvent="TextBlock.Loaded">
+                                  <BeginStoryboard>
+                                    <Storyboard x:Name="devAnimation" BeginTime="00:00:0.4">
+                                      <DoubleAnimation Duration="00:00:.5"
+                                                        Storyboard.TargetName="appTitleTran" 
+                                                        Storyboard.TargetProperty="X" 
+                                                        From="1000" To="0">
+                                        <DoubleAnimation.EasingFunction>
+                                          <SineEase EasingMode="EaseOut"/>
+                                        </DoubleAnimation.EasingFunction>
+                                      </DoubleAnimation>
+                                    </Storyboard>
+                                  </BeginStoryboard>
+                                </EventTrigger>
+                              </TextBlock.Triggers>
+                                </TextBlock>
+                                <TextBlock Margin="5,0,0,40" Text="Find your way..." Foreground="{StaticResource panoramaMainBrush}" FontStyle="Italic" FontFamily="{StaticResource CustomFontFamilySemiBold}"   Style="{StaticResource CustomTextTitle2Style}"/>
+
+                                
+                                
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:Panorama.TitleTemplate>
+                    <controls:Panorama.Background>
+                        <ImageBrush Opacity=".5" ImageSource="/Images/panoramaBackground.jpg" />
+                    </controls:Panorama.Background>
+
+                    <controls:PanoramaItem Foreground="{StaticResource panoramaMainBrush}" Header="{Binding Path=Localizedresources.MainPage_HeaderMyProfile,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                        <UserControls:MyProfileControl  x:Name="myProfileCtrl" />
+                    </controls:PanoramaItem>
+
+                    <!--Panorama item one-->
+                    <controls:PanoramaItem Foreground="{StaticResource panoramaMainBrush}" Header="{Binding Path=Localizedresources.MainPage_HeaderToday,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                        <!--Double line list with text wrapping-->
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+
+                            </Grid.RowDefinitions>
+
+                            <UserControls:TrainingDaySelectorControl x:Name="todayCtrl" Grid.Row="0"/>
+
+                            <Grid  Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                
+                                <HyperlinkButton Grid.Column="0" Style="{StaticResource HyperlinkButtonStyle}" FontSize="{StaticResource CustomFontSizeLarge}" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Content="{Binding Path=Localizedresources.MainPage_CalendarLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}" NavigateUri="/Pages/CalendarPage.xaml" />
+
+                                <StackPanel Name="pnlButtons" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Orientation="Horizontal">
+                                    <Controls1:RoundButton Background="Transparent" Click="btnSettings_Click" Foreground="{StaticResource panoramaMainBrush}" BorderBrush="{StaticResource panoramaMainBrush}" ImageSource="/Icons/appbar.feature.settings.rest.png"  VerticalAlignment="Center"/>
+                                    <Controls1:RoundButton Background="Transparent" Click="btnRefreshCalendar_Click" Foreground="{StaticResource panoramaMainBrush}" BorderBrush="{StaticResource panoramaMainBrush}"  VerticalAlignment="Center" ImageSource="/Icons/appbar.refresh.rest.png"/>
+                                </StackPanel>
+                            </Grid>
+
+                        </Grid>
+                    </controls:PanoramaItem>
+
+                    <!--Panorama item one-->
+                    <controls:PanoramaItem Foreground="{StaticResource panoramaMainBrush}" Header="{Binding Path=Localizedresources.MainPage_HeaderMenu,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <ScrollViewer Margin="0,0,0,6"  Grid.ColumnSpan="2">
+                                <StackPanel >
+                                    <HyperlinkButton FontWeight="Bold" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}" Click="btnBodyInstructor_Click" Content="{Binding Path=Localizedresources.MainPage_InstructorLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource CustomFontSizeExtraLarge}"/>
+                                    <HyperlinkButton FontWeight="Bold" Style="{StaticResource HyperlinkButtonStyle}" NavigateUri="/Pages/WorkoutPlans.xaml" Content="{Binding Path=Localizedresources.MainPage_WorkoutPlanLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource CustomFontSizeExtraLarge}"/>
+                                    <HyperlinkButton FontWeight="Bold" Style="{StaticResource HyperlinkButtonStyle}" NavigateUri="/Pages/PeoplePage.xaml" Content="{Binding Path=Localizedresources.MainPage_PeopleLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}"   FontSize="{StaticResource CustomFontSizeExtraLarge}"/>
+                                    <HyperlinkButton FontWeight="Bold" Style="{StaticResource HyperlinkButtonStyle}" NavigateUri="/Pages/TipsPage.xaml" Content="{Binding Path=Localizedresources.MainPage_TipsLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}"   FontSize="{StaticResource CustomFontSizeExtraLarge}"/>
+                                    <HyperlinkButton Name="hkFeatured" FontWeight="Bold" Style="{StaticResource HyperlinkButtonStyle}" NavigateUri="/Pages/FeaturedPage.xaml"  Content="{Binding Path=Localizedresources.MainPage_FeaturedLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}"   FontSize="{StaticResource CustomFontSizeExtraLarge}"/>
+                                    <HyperlinkButton FontWeight="Bold" Style="{StaticResource HyperlinkButtonStyle}" NavigateUri="/Pages/MoreFeaturePage.xaml"  Content="{Binding Path=Localizedresources.MainPage_MoreLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}"   FontSize="{StaticResource CustomFontSizeExtraLarge}"/>
+
+                                </StackPanel>
+                            </ScrollViewer>
+
+                            <HyperlinkButton  VerticalAlignment="Bottom" Grid.Row="1" FontWeight="Bold"  Style="{StaticResource HyperlinkButtonStyle}" NavigateUri="/Pages/AboutPage.xaml" Content="{Binding Path=Localizedresources.MainPage_AboutLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}"   FontSize="{StaticResource CustomFontSizeLarge}"/>
+                            <HyperlinkButton Name="hlRateMe"  VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" FontWeight="Bold"  Style="{StaticResource HyperlinkButtonStyle}" Click="btnRate_Click" Content="{Binding Path=Localizedresources.MainPage_RateMeLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}"   FontSize="{StaticResource CustomFontSizeLarge}"/>
+                            <HyperlinkButton Name="hlTutorial"  VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" FontWeight="Bold"  Style="{StaticResource HyperlinkButtonStyle}" Click="btnTutorial_Click" Content="{Binding Path=Localizedresources.MainPage_TutorialLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}"   FontSize="{StaticResource CustomFontSizeLarge}"/>
+                        </Grid>
+
+                    </controls:PanoramaItem>
+                </controls:Panorama>
+            </Grid>
+
+            
+        </Grid>
+    </Grid>
+</Custom:PhoneApplicationPage>

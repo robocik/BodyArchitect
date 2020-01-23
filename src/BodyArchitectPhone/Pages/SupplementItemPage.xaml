@@ -1,0 +1,84 @@
+﻿<pages:SupplementsPageBase 
+    x:Class="BodyArchitect.WP7.Pages.SupplementItemPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:conv="clr-namespace:BodyArchitect.WP7"
+    xmlns:pages="clr-namespace:BodyArchitect.WP7.Pages" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+    
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <conv:TimeTypeToIntConverter x:Key="timeTypeConv"/>
+            <conv:DosageTypeToIntConverter x:Key="dosageTypeConverter" />
+            <conv:DecimalToStringConverter x:Key="decimalToStringConverter" />
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0">
+                <TextBlock Style="{StaticResource CustomTextNormalStyle}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                </TextBlock>
+                <TextBlock x:Name="PageTitle" TextWrapping="Wrap" Text="{Binding Name}" Margin="9,10,0,0" Style="{StaticResource CustomTextTitle2Style}" />
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,24,12,0">
+                <StackPanel  >
+                    <TextBlock  Text="{Binding Path=Localizedresources.SupplementItemPage_Name,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" />
+                    <TextBox  IsEnabled="{Binding EditMode}" Text="{Binding Item.Name,Mode=TwoWay}" Margin="0,6,0,0"  />
+                    
+                    <TextBlock  Margin="12,24,0,0" Text="{Binding Path=Localizedresources.SupplementItemPage_Time,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" />
+                    <toolkit:TimePicker IsHitTestVisible="{Binding EditMode}" Name="tpTime" Value="{Binding Item.Time.DateTime,Mode=TwoWay}" />
+
+                    <Controls:FixedListPicker Grid.ColumnSpan="3" Header="" SelectedIndex="{Binding Item.Time.TimeType,Mode=TwoWay,Converter={StaticResource timeTypeConv}}">
+                        <toolkit:ListPicker.Items>
+                            <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.TimeType_NotSet,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.TimeType_OnEmptyStomach,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.TimeType_BeforeWorkout,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.TimeType_AfterWorkout,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.TimeType_BeforeSleep,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                        </toolkit:ListPicker.Items>
+                    </Controls:FixedListPicker>
+
+                    <TextBlock Margin="12,24,0,0" Text="{Binding Path=Localizedresources.SupplementItemPage_Dosage,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}"/>
+
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Controls:NumericTextBox IsHitTestVisible="{Binding EditMode}" Grid.Column="0" Text="{Binding Item.Dosage,Mode=TwoWay,Converter={StaticResource decimalToStringConverter}}" AllowDecimals="True" Height="74" VerticalAlignment="Bottom" />
+                        <Controls:FixedListPicker IsEnabled="{Binding EditMode}" Grid.Column="1"  SelectedIndex="{Binding Item.DosageType,Mode=TwoWay,Converter={StaticResource dosageTypeConverter}}" >
+                            <toolkit:ListPicker.Items>
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SupplementItemPage_DosageGrams,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  />
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SupplementItemPage_DosageTablets,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SupplementItemPage_DosageUnits,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SupplementItemPage_DosageServings,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            </toolkit:ListPicker.Items>
+                        </Controls:FixedListPicker>
+                    </Grid>
+
+
+                    <TextBlock  Margin="12,24,0,0" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Path=Localizedresources.SupplementItemPage_Comments,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                    <toolkit:PhoneTextBox IsEnabled="{Binding EditMode}"   Hint="{Binding Path=Localizedresources.CommentWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Text="{Binding Item.Comment,Mode=TwoWay}" AcceptsReturn="True" Height="160" TextWrapping="Wrap" />
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</pages:SupplementsPageBase>

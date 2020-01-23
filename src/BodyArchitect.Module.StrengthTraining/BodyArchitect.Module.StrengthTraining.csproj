@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2EB6787-0DBB-4590-AC7E-BAC3587B2B7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Module.StrengthTraining</RootNamespace>
+    <AssemblyName>BodyArchitect.Module.StrengthTraining</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FM.StrengthTraining.Module.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\FM.StrengthTraining.Module.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Module.StrengthTraining.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FM.StrengthTraining.Module.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="LinqKit">
+      <HintPath>..\..\Assemblies\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.Integration.WinForms.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SourceGrid">
+      <HintPath>..\..\Assemblies\SourceGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="Controls\AddExercise.cs" />
+    <Compile Include="Controls\AddExercise.Designer.cs">
+      <DependentUpon>AddExercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChangeExerciseShortcut.cs" />
+    <Compile Include="Controls\ChangeExerciseShortcut.Designer.cs">
+      <DependentUpon>ChangeExerciseShortcut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExerciseLookUp.cs" />
+    <Compile Include="Controls\ExerciseMapperWindow.cs" />
+    <Compile Include="Controls\ExerciseMapperWindow.Designer.cs">
+      <DependentUpon>ExerciseMapperWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExercisesTrainingPlanListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExercisesTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExercisesView.cs" />
+    <Compile Include="Controls\ExercisesView.Designer.cs">
+      <DependentUpon>ExercisesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SerieInfoWindow.cs" />
+    <Compile Include="Controls\SerieInfoWindow.Designer.cs">
+      <DependentUpon>SerieInfoWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SourceGridExtension\ExerciseCellValueChangedController.cs" />
+    <Compile Include="Controls\SourceGridExtension\MapperGridExerciseController.cs" />
+    <Compile Include="Controls\SourceGridExtension\SerieCellValueChangedController.cs" />
+    <Compile Include="Controls\SourceGridExtension\LookupEditEditor.cs" />
+    <Compile Include="Controls\SourceGridExtension\PopupMenuController.cs" />
+    <Compile Include="Controls\SourceGridExtension\SetCell.cs" />
+    <Compile Include="Controls\SourceGridExtension\SuperSetViewManager.cs" />
+    <Compile Include="Controls\TrainingPlan\ExercisesListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\PublishWorkoutPlanWindow.cs" />
+    <Compile Include="Controls\TrainingPlan\PublishWorkoutPlanWindow.Designer.cs">
+      <DependentUpon>PublishWorkoutPlanWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\TrainingPlanDaysPropertyEditor.cs" />
+    <Compile Include="Controls\TrainingPlan\TrainingPlanEditorWindow.cs" />
+    <Compile Include="Controls\TrainingPlan\TrainingPlanEditorWindow.Designer.cs">
+      <DependentUpon>TrainingPlanEditorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\TrainingPlansTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\TrainingPlanSuperSetsEditor.cs" />
+    <Compile Include="Controls\TrainingPlan\TrainingPlanSuperSetsEditor.Designer.cs">
+      <DependentUpon>TrainingPlanSuperSetsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\usrTrainingPlansView.cs" />
+    <Compile Include="Controls\TrainingPlan\usrTrainingPlansView.Designer.cs">
+      <DependentUpon>usrTrainingPlansView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\usrWorkoutCommentsList.cs" />
+    <Compile Include="Controls\TrainingPlan\usrWorkoutCommentsList.Designer.cs">
+      <DependentUpon>usrWorkoutCommentsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\usrWorkoutPlansChooser.cs" />
+    <Compile Include="Controls\TrainingPlan\usrWorkoutPlansChooser.Designer.cs">
+      <DependentUpon>usrWorkoutPlansChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\usrWorkoutPlansPagerListView.cs" />
+    <Compile Include="Controls\TrainingPlan\usrWorkoutPlansPagerListView.Designer.cs">
+      <DependentUpon>usrWorkoutPlansPagerListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\usrWorkoutPlansSearch.cs" />
+    <Compile Include="Controls\TrainingPlan\usrWorkoutPlansSearch.Designer.cs">
+      <DependentUpon>usrWorkoutPlansSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\WorkoutPlanEventArgs.cs" />
+    <Compile Include="Controls\TrainingPlan\WorkoutPlanOperationHelper.cs" />
+    <Compile Include="Controls\TrainingPlan\WorkoutPlansListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\usrExerciseEditor.cs" />
+    <Compile Include="Controls\usrExerciseEditor.Designer.cs">
+      <DependentUpon>usrExerciseEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrExercisesBrowser.cs" />
+    <Compile Include="Controls\usrExercisesBrowser.Designer.cs">
+      <DependentUpon>usrExercisesBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrExercisesPagerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\usrExercisesPagerList.Designer.cs">
+      <DependentUpon>usrExercisesPagerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrExercisesView.cs" />
+    <Compile Include="Controls\usrExercisesView.Designer.cs">
+      <DependentUpon>usrExercisesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrIntensity.cs" />
+    <Compile Include="Controls\usrIntensity.Designer.cs">
+      <DependentUpon>usrIntensity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrSerieInfo.cs" />
+    <Compile Include="Controls\usrSerieInfo.Designer.cs">
+      <DependentUpon>usrSerieInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrStrengthTrainingSourceGridBase.cs" />
+    <Compile Include="Controls\usrStrengthTrainingSourceGridBase.Designer.cs">
+      <DependentUpon>usrStrengthTrainingSourceGridBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\usrTrainingPlanEntryEditor.cs" />
+    <Compile Include="Controls\TrainingPlan\usrTrainingPlanEntryEditor.Designer.cs">
+      <DependentUpon>usrTrainingPlanEntryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrTrainingDaySourceGrid.cs" />
+    <Compile Include="Controls\usrTrainingDaySourceGrid.Designer.cs">
+      <DependentUpon>usrTrainingDaySourceGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlan\usrTrainingPlanSerieEditor.cs" />
+    <Compile Include="Controls\TrainingPlan\usrTrainingPlanSerieEditor.Designer.cs">
+      <DependentUpon>usrTrainingPlanSerieEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrUserExercises.cs" />
+    <Compile Include="Controls\usrUserExercises.Designer.cs">
+      <DependentUpon>usrUserExercises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrUserWorkoutPlans.cs" />
+    <Compile Include="Controls\usrUserWorkoutPlans.Designer.cs">
+      <DependentUpon>usrUserWorkoutPlans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WPF\WorkoutPlanCommentListControl.xaml.cs">
+      <DependentUpon>WorkoutPlanCommentListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\ExerciseLocalizer.cs" />
+    <Compile Include="Localization\LocalizedPropertyGridStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedPropertyGridStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\LocalizedPropertyGridStrings.pl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedPropertyGridStrings.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LocalizedExercise.cs" />
+    <Compile Include="Model\LocalizedExerciseType.cs" />
+    <Compile Include="Model\ModelExtensions.cs" />
+    <Compile Include="Model\TrainingPlanDayIdsTypeConverter.cs" />
+    <Compile Include="Model\TrainingPlanHtmlExporter.cs" />
+    <Compile Include="ObjectsReposidory.cs" />
+    <Compile Include="Options\StrengthTraining.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>StrengthTraining.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Options\usrStrengthTrainingOptions.cs" />
+    <Compile Include="Options\usrStrengthTrainingOptions.Designer.cs">
+      <DependentUpon>usrStrengthTrainingOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\usrExerciseWeightReport.cs" />
+    <Compile Include="Reporting\usrExerciseWeightReport.Designer.cs">
+      <DependentUpon>usrExerciseWeightReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\usrWeightRepetitionsReport.cs" />
+    <Compile Include="Reporting\usrWeightRepetitionsReport.Designer.cs">
+      <DependentUpon>usrWeightRepetitionsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SR.cs" />
+    <Compile Include="SRCategoryAttribute.cs" />
+    <Compile Include="SRDescriptionAttribute.cs" />
+    <Compile Include="StrengthTrainingCalendarDayContent.cs" />
+    <Compile Include="Localization\StrengthTrainingEntryStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StrengthTrainingEntryStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\StrengthTrainingEntryStrings.pl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StrengthTrainingEntryStrings.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StrengthTrainingModule.cs" />
+    <Compile Include="StrengthTrainingResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StrengthTrainingResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrStrengthTraining.cs" />
+    <Compile Include="Controls\usrStrengthTraining.Designer.cs">
+      <DependentUpon>usrStrengthTraining.cs</DependentUpon>
+    </Compile>
+    <None Include="Controls\usrTrainingDayGridView.cs">
+      <SubType>UserControl</SubType>
+    </None>
+    <None Include="Controls\usrTrainingDayGridView.Designer.cs">
+      <DependentUpon>usrTrainingDayGridView.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Common\BodyArchitect.Common.csproj">
+      <Project>{F6D386CD-95D0-4377-A656-BB886A09CCE7}</Project>
+      <Name>BodyArchitect.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Controls\BodyArchitect.Controls.csproj">
+      <Project>{2A2A4C94-F4AB-45CD-8EEC-0E37EC8B3EC0}</Project>
+      <Name>BodyArchitect.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.Model\BodyArchitect.Service.Model.csproj">
+      <Project>{E3649F71-2540-4605-B178-FE60E1908270}</Project>
+      <Name>BodyArchitect.Service.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Settings\BodyArchitect.Settings.csproj">
+      <Project>{769DFF6C-B952-40C4-B087-5C004E06D89C}</Project>
+      <Name>BodyArchitect.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.WCF\BodyArchitect.WCF.csproj">
+      <Project>{9658D84C-4AB2-47AB-8231-40BAEBB268D4}</Project>
+      <Name>BodyArchitect.WCF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\AddExercise.resx">
+      <DependentUpon>AddExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangeExerciseShortcut.pl.resx">
+      <DependentUpon>ChangeExerciseShortcut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangeExerciseShortcut.resx">
+      <DependentUpon>ChangeExerciseShortcut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ExerciseMapperWindow.resx">
+      <DependentUpon>ExerciseMapperWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ExercisesTree.resx">
+      <DependentUpon>ExercisesTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ExercisesView.pl.resx">
+      <DependentUpon>ExercisesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ExercisesView.resx">
+      <DependentUpon>ExercisesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SerieInfoWindow.pl.resx">
+      <DependentUpon>SerieInfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SerieInfoWindow.resx">
+      <DependentUpon>SerieInfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\ExercisesListView.resx">
+      <DependentUpon>ExercisesListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\PublishWorkoutPlanWindow.resx">
+      <DependentUpon>PublishWorkoutPlanWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\TrainingPlanEditorWindow.pl.resx">
+      <DependentUpon>TrainingPlanEditorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\TrainingPlanEditorWindow.resx">
+      <DependentUpon>TrainingPlanEditorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\TrainingPlansTree.resx">
+      <DependentUpon>TrainingPlansTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\TrainingPlanSuperSetsEditor.pl.resx">
+      <DependentUpon>TrainingPlanSuperSetsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\TrainingPlanSuperSetsEditor.resx">
+      <DependentUpon>TrainingPlanSuperSetsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrTrainingPlanEntryEditor.pl.resx">
+      <DependentUpon>usrTrainingPlanEntryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrTrainingPlanSerieEditor.pl.resx">
+      <DependentUpon>usrTrainingPlanSerieEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrTrainingPlansView.resx">
+      <DependentUpon>usrTrainingPlansView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrWorkoutCommentsList.resx">
+      <DependentUpon>usrWorkoutCommentsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrWorkoutPlansChooser.resx">
+      <DependentUpon>usrWorkoutPlansChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrWorkoutPlansPagerListView.resx">
+      <DependentUpon>usrWorkoutPlansPagerListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrWorkoutPlansSearch.resx">
+      <DependentUpon>usrWorkoutPlansSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\WorkoutPlansListView.resx">
+      <DependentUpon>WorkoutPlansListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrExerciseEditor.resx">
+      <DependentUpon>usrExerciseEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrExercisesBrowser.resx">
+      <DependentUpon>usrExercisesBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrExercisesPagerList.resx">
+      <DependentUpon>usrExercisesPagerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrExercisesView.resx">
+      <DependentUpon>usrExercisesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrIntensity.pl.resx">
+      <DependentUpon>usrIntensity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrIntensity.resx">
+      <DependentUpon>usrIntensity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrSerieInfo.pl.resx">
+      <DependentUpon>usrSerieInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrSerieInfo.resx">
+      <DependentUpon>usrSerieInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrStrengthTraining.pl.resx">
+      <DependentUpon>usrStrengthTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrStrengthTrainingSourceGridBase.pl.resx">
+      <DependentUpon>usrStrengthTrainingSourceGridBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrStrengthTrainingSourceGridBase.resx">
+      <DependentUpon>usrStrengthTrainingSourceGridBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrTrainingPlanEntryEditor.resx">
+      <DependentUpon>usrTrainingPlanEntryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrTrainingDaySourceGrid.resx">
+      <DependentUpon>usrTrainingDaySourceGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrainingPlan\usrTrainingPlanSerieEditor.resx">
+      <DependentUpon>usrTrainingPlanSerieEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrUserExercises.resx">
+      <DependentUpon>usrUserExercises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrUserWorkoutPlans.resx">
+      <DependentUpon>usrUserWorkoutPlans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizedPropertyGridStrings.pl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedPropertyGridStrings.pl.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizedPropertyGridStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedPropertyGridStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\usrStrengthTrainingOptions.pl.resx">
+      <DependentUpon>usrStrengthTrainingOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\usrStrengthTrainingOptions.resx">
+      <DependentUpon>usrStrengthTrainingOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reporting\usrExerciseWeightReport.pl.resx">
+      <DependentUpon>usrExerciseWeightReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrExerciseWeightReport.resx">
+      <DependentUpon>usrExerciseWeightReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\usrWeightRepetitionsReport.resx">
+      <DependentUpon>usrWeightRepetitionsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\StrengthTrainingEntryStrings.pl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StrengthTrainingEntryStrings.pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\StrengthTrainingEntryStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StrengthTrainingEntryStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StrengthTrainingResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StrengthTrainingResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrStrengthTraining.resx">
+      <DependentUpon>usrStrengthTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrTrainingDayGridView.pl.resx">
+      <DependentUpon>usrTrainingDayGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrTrainingDayGridView.resx">
+      <DependentUpon>usrTrainingDayGridView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+    <None Include="Options\StrengthTraining.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>StrengthTraining.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\arrow_join.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\www.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\WPF\WorkoutPlanCommentListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

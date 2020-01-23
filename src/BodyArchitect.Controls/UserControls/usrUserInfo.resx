@@ -1,0 +1,892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="progressIndicator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 190</value>
+  </data>
+  <data name="progressIndicator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 94</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="progressIndicator1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="progressIndicator1.Text" xml:space="preserve">
+    <value>progressIndicator1</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Name" xml:space="preserve">
+    <value>progressIndicator1</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.ProgressIndicator, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 475</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="progressIndicator1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,AutoSize,0,Percent,50" /&gt;&lt;Rows Styles="Percent,50,AutoSize,0,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="grAbout.AppearanceCaption.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>100, 135, 220</value>
+  </data>
+  <data name="txtAbout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="txtAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 18</value>
+  </data>
+  <data name="txtAbout.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="txtAbout.Properties.NullText" xml:space="preserve">
+    <value>User entered no information.</value>
+  </data>
+  <data name="txtAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>522, 108</value>
+  </data>
+  <data name="txtAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtAbout.Name" xml:space="preserve">
+    <value>txtAbout</value>
+  </data>
+  <data name="&gt;&gt;txtAbout.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtAbout.Parent" xml:space="preserve">
+    <value>grAbout</value>
+  </data>
+  <data name="&gt;&gt;txtAbout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grAbout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="grAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>526, 128</value>
+  </data>
+  <data name="grAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="grAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;grAbout.Name" xml:space="preserve">
+    <value>grAbout</value>
+  </data>
+  <data name="&gt;&gt;grAbout.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.BaGroupControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;grAbout.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;grAbout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 73</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>526, 128</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="usrProfileListEntry1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="usrProfileListEntry1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="usrProfileListEntry1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>526, 64</value>
+  </data>
+  <data name="usrProfileListEntry1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;usrProfileListEntry1.Name" xml:space="preserve">
+    <value>usrProfileListEntry1</value>
+  </data>
+  <data name="&gt;&gt;usrProfileListEntry1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.usrProfileListEntry, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrProfileListEntry1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;usrProfileListEntry1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="grInfo.AppearanceCaption.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>100, 135, 220</value>
+  </data>
+  <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblLastLoggedTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 129</value>
+  </data>
+  <data name="lblLastLoggedTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="lblLastLoggedTime.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblLastLoggedTime.Text" xml:space="preserve">
+    <value>Last login:</value>
+  </data>
+  <data name="&gt;&gt;lblLastLoggedTime.Name" xml:space="preserve">
+    <value>lblLastLoggedTime</value>
+  </data>
+  <data name="&gt;&gt;lblLastLoggedTime.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblLastLoggedTime.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;lblLastLoggedTime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="flowLayoutPanel1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="lblInvitationsCountStatus.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold, Underline</value>
+  </data>
+  <data name="lblInvitationsCountStatus.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Blue</value>
+  </data>
+  <data name="lblInvitationsCountStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblInvitationsCountStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 16</value>
+  </data>
+  <data name="lblInvitationsCountStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblInvitationsCountStatus.Text" xml:space="preserve">
+    <value>You have 3 invitations.</value>
+  </data>
+  <data name="&gt;&gt;lblInvitationsCountStatus.Name" xml:space="preserve">
+    <value>lblInvitationsCountStatus</value>
+  </data>
+  <data name="&gt;&gt;lblInvitationsCountStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblInvitationsCountStatus.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblInvitationsCountStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblMessagesCountStatus.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold, Underline</value>
+  </data>
+  <data name="lblMessagesCountStatus.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Blue</value>
+  </data>
+  <data name="lblMessagesCountStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="lblMessagesCountStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 16</value>
+  </data>
+  <data name="lblMessagesCountStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblMessagesCountStatus.Text" xml:space="preserve">
+    <value>You have 3 messages in your mail box.</value>
+  </data>
+  <data name="&gt;&gt;lblMessagesCountStatus.Name" xml:space="preserve">
+    <value>lblMessagesCountStatus</value>
+  </data>
+  <data name="&gt;&gt;lblMessagesCountStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblMessagesCountStatus.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblMessagesCountStatus.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblProfileConfigurationWizard.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold, Underline</value>
+  </data>
+  <data name="lblProfileConfigurationWizard.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Blue</value>
+  </data>
+  <data name="lblProfileConfigurationWizard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 47</value>
+  </data>
+  <data name="lblProfileConfigurationWizard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 16</value>
+  </data>
+  <data name="lblProfileConfigurationWizard.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblProfileConfigurationWizard.Text" xml:space="preserve">
+    <value>Set up your profile in 3 easy steps</value>
+  </data>
+  <data name="&gt;&gt;lblProfileConfigurationWizard.Name" xml:space="preserve">
+    <value>lblProfileConfigurationWizard</value>
+  </data>
+  <data name="&gt;&gt;lblProfileConfigurationWizard.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblProfileConfigurationWizard.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblProfileConfigurationWizard.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblNoStatus.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Italic</value>
+  </data>
+  <data name="lblNoStatus.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>ControlText</value>
+  </data>
+  <data name="lblNoStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 69</value>
+  </data>
+  <data name="lblNoStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 16</value>
+  </data>
+  <data name="lblNoStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblNoStatus.Text" xml:space="preserve">
+    <value>No important information</value>
+  </data>
+  <data name="&gt;&gt;lblNoStatus.Name" xml:space="preserve">
+    <value>lblNoStatus</value>
+  </data>
+  <data name="&gt;&gt;lblNoStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblNoStatus.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblNoStatus.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblProfileNotActivated.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10pt, style=Bold</value>
+  </data>
+  <data name="lblProfileNotActivated.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="lblProfileNotActivated.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 91</value>
+  </data>
+  <data name="lblProfileNotActivated.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 16</value>
+  </data>
+  <data name="lblProfileNotActivated.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblProfileNotActivated.Text" xml:space="preserve">
+    <value>You must first activate your account.</value>
+  </data>
+  <data name="&gt;&gt;lblProfileNotActivated.Name" xml:space="preserve">
+    <value>lblProfileNotActivated</value>
+  </data>
+  <data name="&gt;&gt;lblProfileNotActivated.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblProfileNotActivated.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblProfileNotActivated.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel1.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>516, 120</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 18</value>
+  </data>
+  <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>522, 145</value>
+  </data>
+  <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.Name" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.Parent" xml:space="preserve">
+    <value>grInfo</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="lblLastLoggedTime" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="flowLayoutPanel1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="grInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 307</value>
+  </data>
+  <data name="grInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>526, 165</value>
+  </data>
+  <data name="grInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="grInfo.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="&gt;&gt;grInfo.Name" xml:space="preserve">
+    <value>grInfo</value>
+  </data>
+  <data name="&gt;&gt;grInfo.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.BaGroupControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;grInfo.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;grInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel4.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="grAwards.AppearanceCaption.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>100, 135, 220</value>
+  </data>
+  <data name="picRedStar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picRedStar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="picRedStar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="picRedStar.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;picRedStar.Name" xml:space="preserve">
+    <value>picRedStar</value>
+  </data>
+  <data name="&gt;&gt;picRedStar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picRedStar.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;picRedStar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picBlueStar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picBlueStar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 3</value>
+  </data>
+  <data name="picBlueStar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="picBlueStar.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;picBlueStar.Name" xml:space="preserve">
+    <value>picBlueStar</value>
+  </data>
+  <data name="&gt;&gt;picBlueStar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picBlueStar.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;picBlueStar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="picGreenStar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picGreenStar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 3</value>
+  </data>
+  <data name="picGreenStar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="picGreenStar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;picGreenStar.Name" xml:space="preserve">
+    <value>picGreenStar</value>
+  </data>
+  <data name="&gt;&gt;picGreenStar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picGreenStar.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;picGreenStar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="flowLayoutPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 18</value>
+  </data>
+  <data name="flowLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 74</value>
+  </data>
+  <data name="flowLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Name" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Parent" xml:space="preserve">
+    <value>grAwards</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grAwards.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 3</value>
+  </data>
+  <data name="grAwards.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 94</value>
+  </data>
+  <data name="grAwards.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="grAwards.Text" xml:space="preserve">
+    <value>Achievements</value>
+  </data>
+  <data name="&gt;&gt;grAwards.Name" xml:space="preserve">
+    <value>grAwards</value>
+  </data>
+  <data name="&gt;&gt;grAwards.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.BaGroupControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;grAwards.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;grAwards.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grStatistics.AppearanceCaption.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>100, 135, 220</value>
+  </data>
+  <data name="lvStatistics.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lvStatistics.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 18</value>
+  </data>
+  <data name="lvStatistics.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 74</value>
+  </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>168, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADo
+        CwAAAk1TRnQBSQFMAgEBBgEAASABAAEgAQABEAEAARABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEYBgABGP8A/wBjAAP+AfcB+AH3AdkB3gHZAcsB0wHMAesB7QHrA/wD/xsAA/4D+QPj
+        A9oD8QP8A/94AAP8Ac4B1gHOASMBhAEqAQ8BoQEZAQ4BpwEZAQ8BmAEZAXEBlgF0AfQB9gH0A/4VAAP8
+        A94DkAOkA6gDngOmA/cD/nIAA/4B3AHjAd0BFgGlASEBDQG5ARkBDQG5ARkBDQG5ARkBDQG5ARkBDgG1
+        ARoBYQGZAWYD+RIAA/4D6QKoAakDtgm3A7MBqAGpAasD+nIAAfgB+QH4AVcBqQFfAQ0BuQEZAQ0BuQEZ
+        AQ0BuQEZAQ0BuQEZAQ0BuQEZAQ0BuQEZAREBsAEdAeIB6AHjA/4PAAP6ArUBtgO3D7oCrwGwA+4D/m8A
+        Ae8B8gHwASQBsAEwARsBvQEmATABwwE7ATUBxQE/AUIByAFLATUBxQE/ATMBxAE9AR0BvgEpAawBzQGv
+        A/0PAAP1AbMBtAG1A8ADyAPJA80GyQO9AtgB2QP9bwAB7gHxAe4BPAG5AUUBdAHXAXsBdgHYAXwBeAHZ
+        AX8BewHaAYEBfgHbAYMBggHdAYYBfgHcAYIBtQHUAbcD/Q8AA/QDvQPZDNwD2wPUA90D/W8AAfYB9wH2
+        AW0BwQFyAYAB3gGEAY8B4gGSAZMB4wGVAZcB5QGZAZsB5wGcAZ8B6AGfAYEB3gGCAd8B6AHfA/4PAAP5
+        A8YD1QPdBt8D3gPbA8gD7gP+bwAD/QHeAecB3gFuAdUBbgGnAewBpQGvAe8BrgGzAfABsAG2AfIBswGt
+        AfABqAGcAc8BnQH2AfcB9hIAA/0D7QO9A9gD3APdA9wG0QP5dQAB+gH7AfoB2wHmAdwBiAHTAYcBnQHp
+        AZgBrAHwAaUBmQHjAZQBsgHWAbIB8gH0AfID/hUAA/sD7QPFA8YDyAPGA9sD9gP+eAAD/AHzAfUB8wHl
+        AesB5gHhAegB4QHrAe8B6wP5A/4bAAP9A/cD8QPvA/MD+gP+/wD/AP8A/wD/AAP+A/gD3APPA+wD/AP/
+        GwAD/gL4AfoB3wHbAfEB1AHPAu4B7AH1A/wD/xsAA/4B9wH5AfoB2wHnAfIB0AHgAfAB7AHyAfYD/AP/
+        GwAD/gH6AfkB+AHxAegB3gHuAeEB0wH1AfEB7QP8A/8YAAP8A9IBTwFSAVYBVAFZAWEBVwFdAWcBTwFT
+        AVoCggGEA/UD/hUAAvwB/QHXAdIB7wFDATEBzgEiARYBwgEZARABvgEqARoBxQGJAXsB3wH2AfUB+QP+
+        FQAC/AH9AdEB4gHxATEBpAHtARMBswH4AQ4BtgH5ARcBrgH1AX4BtgHoAfUB+AH5A/4VAAH9AvwB7wHi
+        AdUB4gGgAVIB6gGiAUYB7AGlAUYB6AGeAUUB4wG6AYsB+QH3AfUD/hIAA/4D4AFIAUsBUgFKAVABWwFL
+        AVEBXAFLAVEBXAFLAVEBXAFJAU4BWQF4AXkBewP5EgAD/gHjAd8B8QEsAR0ByQIAAcACAAHBAgABwQIA
+        AcEBBwEEAcABegFpAdoC+QH7EgAD/gHdAesB8wEYAbMB9wEBAcAB/gEBAcEB/wEBAcEB/wEBAcEB/wEE
+        AbwB/AFnAbUB6wH5AfoB+xIAA/4B8gHoAd8B5wGjAUcB8wG3AU0B9AG4AU4B9AG4AU4B9AG4AU4B8AGx
+        AUoB4gGwAXUB+wH6AfkSAAP5Am8BcgEoASoBLwEpASwBMQEpASwBMQEpASwBMQEpASwBMQEpASwBMQEu
+        ATEBNQPlA/4PAAL5AfoBcgFdAdkBDQEDAdMBDgEDAdcBDgEDAdcBDgEDAdcBDgEDAdcBDgEDAdcBHwEP
+        AdIB6QHlAfMD/g8AAfgB+gH7AVcBuwHwAQEBvQH9AQEBwQH/AQEBwQH/AQEBwQH/AQEBwQH/AQEBwQH/
+        AQsBtgH5AeIB7wH1A/4PAAH6AvkB4wGsAW4B8wHDAVoB9wHJAV4B9wHJAV4B9wHJAV4B9wHJAV4B9wHI
+        AV4B6gGxAVAB8wHrAeQD/g8AA/ECMgE0AhgBGgIuAS8CMgE0Aj8BQQIyATQCMAEyAhoBGwO1A/0PAAHz
+        AfEB9wFNAS0B3gE6ARkB7QFOAS4B8gFSATMB8gFdAUAB8wFSATMB8gFQATEB8gE6ARsB6QG+AbEB6AP9
+        DwAB7wH1AfgBIQG2AfQBEAHCAf0BJgHKAf8BKwHLAf8BOQHPAf8BKwHLAf8BKQHLAf8BEgG+AfoBqwHZ
+        AfID/Q8AAfcB8wHxAeUBsAFcAfcB2QF1AfsB4gGFAfsB4wGIAfsB5AGPAfsB4wGIAfsB4QGGAfIB0gFw
+        AekBzwG1A/0PAAPvAkIBQxJrA2IDugP9DwAB8QHvAfYBbAFMAegBlQF7AfsBmAF8Af4BmQF8Af8BmQF8
+        Af8BmQF8Af8BmAF8Af4BjAFyAfcBxwG6AewD/Q8AAe4B9AH3AToBwgH0AWwB3gH9AWwB4QH/AWwB4gH/
+        AWwB4gH/AWwB4gH/AWwB4QH+AWMB2QH7AbMB3wHyA/0PAAH2AfIB7wHoAcEBdwH6Ae8BsQH9AfUBtgH+
+        AfYBtgH+AfYBtgH+AfYBtgH9AfMBtQH1AecBpwHsAdYBwAP9DwAD9wJvAXADYQ9vA0gD4wP+DwAB+AH3
+        AfoBkgF8AeYBlQGBAfQBpQGQAfsBpwGRAf0BqAGRAf4BpgGRAf0BogGOAfkBfwFnAewB5wHiAfMD/g8A
+        AfYB+QH6AWYBzQHyAWIB4QH6AXAB6gH9AXAB7AH+AXAB7QH+AXAB7AH+AXAB6AH8AUcB1AH2Ad8B7gH1
+        A/4PAAH6AfgB9wHmAcIBjgH0AeoBrAH7AfcBvAH9AfoBvwH+AfsBwAH9AfkBvwH5AfIBuAHtAdcBkwHz
+        AeoB4wP+DwAD/QPhAzYDaglyA1sDjwP2EgAD/QHmAeEB8wF2AWQB5AGkAZcB8gGtAaAB9wGuAaIB+AGs
+        AZ8B9gGWAYkB7gGsAZsB5wH3AfYB+RIAA/0B3gHuAfUBMgHVAfEBagHrAfkBcgHwAfsBcgHxAfwBcgHu
+        AfsBWwHlAfcBhgHYAfEB9gH5AfoSAAP9AfMB6QHhAeQBxgGIAfIB6AG8AfcB7wHGAfgB8QHIAfYB7QHE
+        Ae4B3wGvAecByQGnAfkB+AH2FQAD+wPfA18DRQNHA0wDrQPzA/4VAAL7AfwB5QHfAfIBkQF/AeUBhwF8
+        AecBjAGDAegBiQF7AeUBwgG1AesB9AHzAfgD/hUAAfoB+wH8AdsB7QH1AVcB1gHyAUIB3wHzAUYB5AH0
+        AUcB3QH0AaUB4ALyAfYB+QP+FQAB/AL7AfIB6AHgAeUBvwGSAecBygGdAegB0AGnAeUBxgGZAesB0QG6
+        AfgB9QHzA/4YAAP8A/QD6APlA+0D+QP+GwAB/QH8Af0B9QH0AfgB7AHoAfQB6QHkAfMB8AHtAfYB+gH5
+        AfsD/hsAAfwC/QHzAfcB+QHmAfEB9gHiAe8B9gHrAfMB9wH5AfoB+wP+GwAC/QH8AfgB9gL0Ae0B6AHz
+        AesB5AH2AfEB7QH7AfoB+QP+/wD/AE4AAUIBTQE+BwABPgMAASgDAAFAAwABIAMAAQEBAAEBBgABARYA
+        A/8BAAT/BAAE/wQABP8EAAH4AQ8B+AEPBAAB8AEHAfABBwQAAeABBwHgAQcEAAHgAQMB4AEDBAAB4AED
+        AeABAwQAAeABAwHgAQMEAAHgAQMB4AEDBAAB4AEHAeABBwQAAfABBwHwAQcEAAH4AQ8B+AEPBAAE/wQA
+        BP8EAAT/BAAY/wH4AQ8B+AEPAfgBDwH4AQ8B8AEHAfABBwHwAQcB8AEHAeABBwHgAQcB4AEHAeABBwHg
+        AQMB4AEDAeABAwHgAQMB4AEDAeABAwHgAQMB4AEDAeABAwHgAQMB4AEDAeABAwHgAQMB4AEDAeABAwHg
+        AQMB4AEHAeABBwHgAQcB4AEHAfABBwHwAQcB8AEHAfABBwH4AQ8B+AEPAfgBDwH4AQ8Y/ws=
+</value>
+  </data>
+  <data name="lvStatistics.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lvStatistics.Name" xml:space="preserve">
+    <value>lvStatistics</value>
+  </data>
+  <data name="&gt;&gt;lvStatistics.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvStatistics.Parent" xml:space="preserve">
+    <value>grStatistics</value>
+  </data>
+  <data name="&gt;&gt;lvStatistics.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grStatistics.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grStatistics.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="grStatistics.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 94</value>
+  </data>
+  <data name="grStatistics.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="grStatistics.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="&gt;&gt;grStatistics.Name" xml:space="preserve">
+    <value>grStatistics</value>
+  </data>
+  <data name="&gt;&gt;grStatistics.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.BaGroupControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;grStatistics.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;grStatistics.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 204</value>
+  </data>
+  <data name="tableLayoutPanel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tableLayoutPanel4.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 100</value>
+  </data>
+  <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.Name" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tableLayoutPanel4.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="grAwards" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="grStatistics" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,AutoSize,0" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 475</value>
+  </data>
+  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="usrProfileListEntry1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="grInfo" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel4" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,70,AutoSize,0,Absolute,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <metadata name="toolTipController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 475</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTipController1.Name" xml:space="preserve">
+    <value>toolTipController1</value>
+  </data>
+  <data name="&gt;&gt;toolTipController1.Type" xml:space="preserve">
+    <value>DevExpress.Utils.ToolTipController, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>usrUserInfo</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.usrPictureBaseControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+</root>

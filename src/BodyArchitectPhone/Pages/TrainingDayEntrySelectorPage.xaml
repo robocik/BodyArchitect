@@ -1,0 +1,118 @@
+﻿<Animations:AnimatedBasePage xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls"  
+    x:Class="BodyArchitect.WP7.Pages.TrainingDayEntrySelectorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"
+                        xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls" xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" xmlns:c4fToolkit="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls" xmlns:contribControls="clr-namespace:WP7Contrib.View.Controls;assembly=WP7Contrib.View.Controls" xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:conv="clr-namespace:BodyArchitect.WP7" xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+    
+    <Custom:PhoneApplicationPage.Resources>
+        <conv:UtcDateTimeToLocalRelativeConverter x:Key="dateTimeConverter" />
+        <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+            <Setter Property="Foreground" Value="{StaticResource CustomForegroundBrush}"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TimestampStyle">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+        </Style>
+
+        <Style  TargetType="c4fToolkit:ChatBubbleTextBox">
+            <Setter Property="FontFamily" Value="{StaticResource CustomFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="{StaticResource CustomFontSizeMediumLarge}"/>
+            <Setter Property="Background" Value="{StaticResource CustomTextBoxBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource CustomTextBoxForegroundBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource CustomTextBoxBrush}"/>
+            <Setter Property="SelectionBackground" Value="{StaticResource CustomAccentBrush}"/>
+            <Setter Property="SelectionForeground" Value="{StaticResource CustomTextBoxSelectionForegroundBrush}"/>
+            <Setter Property="BorderThickness" Value="{StaticResource CustomBorderThickness}"/>
+            <Setter Property="Padding" Value="2"/>
+
+        </Style>
+    </Custom:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" />
+
+            <controls:Pivot Foreground="{StaticResource CustomForegroundBrush}" Grid.Row="1" Name="pivot" SelectionChanged="pivot_SelectionChanged">
+                <controls:PivotItem Header="{Binding Path=Localizedresources.TrainingDayEntrySelectorPage_HeadeEntries,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <my:TrainingDaySelectorControl Grid.Row="2" x:Name="dayCtrl"/>        
+                </controls:PivotItem>
+                <controls:PivotItem Header="{Binding Path=Localizedresources.BlogPage_HeaderComments,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+
+                    <Grid contribControls:GridUtils.RowDefinitions="Auto,">
+                        <TextBlock TextWrapping="Wrap" Grid.Row="0" Foreground="{StaticResource CustomForegroundBrush}" Text="{Binding CommentsStatus,Mode=OneWay}" Visibility="{Binding CommentsStatusVisibility}" Style="{StaticResource CustomTextLargeStyle}" />
+
+                        <Grid contribControls:GridUtils.RowDefinitions=",Auto" Grid.Row="1">
+
+                            <ScrollViewer >
+                                <ItemsControl ItemsSource="{Binding Comments}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <VirtualizingStackPanel />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <c4fToolkit:ChatBubble Background="{StaticResource CustomAccentBrush}" Margin="5, 10, 30, 0" ChatBubbleDirection="{Binding Direction}" >
+                                                <Grid  contribControls:GridUtils.RowDefinitions=",,"  >
+                                                    <TextBlock Text="{Binding Path=Text}"
+                             Style="{StaticResource TextBlockStyle}"/>
+                                                    <Grid Grid.Row="1">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock Text="{Binding Path=UserName}" Style="{StaticResource TimestampStyle}"  />
+                                                        <TextBlock Text="{Binding Path=Timestamp, Converter={StaticResource dateTimeConverter}}" Grid.Column="1" Style="{StaticResource TimestampStyle}"  />
+                                                    </Grid>
+                                                </Grid>
+                                            </c4fToolkit:ChatBubble>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+
+<c4fToolkit:ChatBubbleTextBox  Name="txtComment" Grid.Row="1" ChatBubbleDirection="LowerRight" GotFocus="TextInput_GotFocus" LostFocus="TextInput_LostFocus" Hint="{Binding Path=Localizedresources.BlogPage_NewCommentWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" AcceptsReturn="True"/>
+
+                            <!-- the text input field -->
+                            <!--<Grid Grid.Row="1" contribControls:GridUtils.RowDefinitions=",,"  Margin="0,10,0,0" Name="NewCommentBox">
+                                <Rectangle Fill="White" Grid.RowSpan="2"/>
+                                <Controls:PhoneTextBox Hint="{Binding Path=Localizedresources.BlogPage_NewCommentWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Height="50"
+                                  TextWrapping="Wrap"  AcceptsReturn="True" Padding="0" x:Name="txtComment" GotFocus="TextInput_GotFocus" LostFocus="TextInput_LostFocus"/>
+                                <Path Data="m 0,0 l 16,0 l 0,16 l -16,-16" Fill="White" Margin="0,0,5,0" HorizontalAlignment="Right" Grid.Row="2"/>
+                            </Grid>-->
+                        </Grid>
+                    </Grid>
+
+                    
+
+                </controls:PivotItem>
+            </controls:Pivot>
+            
+
+        </Grid>
+    </Grid>
+
+    <Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar   ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+
+        </shell:ApplicationBar>
+    </Custom:PhoneApplicationPage.ApplicationBar>
+</Animations:AnimatedBasePage>

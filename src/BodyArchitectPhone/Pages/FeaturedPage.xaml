@@ -1,0 +1,195 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.FeaturedPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls" xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:Controls1="clr-namespace:WP7Contrib.View.Controls;assembly=WP7Contrib.View.Controls" xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:conv="clr-namespace:BodyArchitect.WP7" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait" toolkit:TiltEffect.IsTiltEnabled="true"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480">
+
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <conv:UtcDateTimeToLocalRelativeConverter x:Key="dateTimeConverter" />
+            <Converters:HtmlToTextConverter x:Key="htmlToTextConv"/>
+            <Converters:NegateBoolToVisibilityConverter x:Key="negateVisibilityConv" />
+            <Converters:BoolToVisibilityConverter x:Key="visibilityConv" />
+            <Converters:ProfileToPictureConverter x:Key="userToPictureConv"/>
+            
+            <Style x:Key="EntryObjectsList"  TargetType="Controls1:LazyListBox">
+                <Setter Property="Animations:ListAnimation.IsPivotAnimated" Value="True" />
+                <Setter Property="ItemContainerStyle">
+                    <Setter.Value>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid Margin="{StaticResource CustomTouchTargetOverhang}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image VerticalAlignment="Top" Source="/Images/defaultProfile.png" Width="100" Height="100"/>
+
+                                <Grid  Grid.Column="1" VerticalAlignment="Top">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition />
+
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock VerticalAlignment="Top"  Style="{StaticResource CustomTextLargeStyle}" Text="{Binding User.UserName}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                    <StackPanel Margin="0,12,0,0" Grid.Row="1" >
+                                        <TextBlock VerticalAlignment="Center" Text="{Binding DateTime, Converter={StaticResource dateTimeConverter}}" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomAccentFullBrush}"/>
+                                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="{Binding Comment,Converter={StaticResource htmlToTextConv}}" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="LoadedItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid Margin="{StaticResource CustomTouchTargetOverhang}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Controls:CachedImageCtrl VerticalAlignment="Top" Name="profileImage" Picture="{Binding User,Converter={StaticResource userToPictureConv}}"  Width="100" Height="100"/>
+                                <Grid Grid.Column="1" VerticalAlignment="Top">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition />
+
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock VerticalAlignment="Top"   Style="{StaticResource CustomTextLargeStyle}" Text="{Binding User.UserName}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                    <StackPanel Margin="0,12,0,0" Grid.Row="1" >
+                                        <TextBlock VerticalAlignment="Center" Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding DateTime, Converter={StaticResource dateTimeConverter}}" Style="{StaticResource CustomTextNormalStyle}" />
+                                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="{Binding Comment,Converter={StaticResource htmlToTextConv}}" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+
+                                    </StackPanel>
+                                </Grid>
+
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+    
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <!--TitlePanel contains the name of the application and page title-->
+
+
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" >
+                <controls:Pivot.TitleTemplate>
+                    <DataTemplate>
+                        <TextBlock Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+                                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </controls:Pivot.TitleTemplate>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.FeaturedPage_Header_LatestTrainings,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <Grid>
+                        <TextBlock Foreground="{StaticResource CustomForegroundBrush}" TextWrapping="Wrap" Style="{StaticResource CustomTextLargeStyle}" Visibility="{Binding IsOfflineMode,Converter={StaticResource visibilityConv}}" Text="{Binding Path=Localizedresources.OfflineModeFeatureNotAvailable,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                        <Controls1:LazyListBox  SelectionChanged="lstLastBlogs_SelectionChanged" Style="{StaticResource EntryObjectsList}"  Name="lstLastTrainings"  ItemsSource="{Binding LastTrainings}">
+
+                        </Controls1:LazyListBox>
+                    </Grid>
+                    
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.FeaturedPage_Header_LatestBlogs,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <Grid>
+                        <TextBlock  Foreground="{StaticResource CustomForegroundBrush}" TextWrapping="Wrap" Style="{StaticResource CustomTextLargeStyle}" Visibility="{Binding IsOfflineMode,Converter={StaticResource visibilityConv}}" Text="{Binding Path=Localizedresources.OfflineModeFeatureNotAvailable,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                        <Controls1:LazyListBox  SelectionChanged="lstLastBlogs_SelectionChanged" Style="{StaticResource EntryObjectsList}"  Name="lstLastBlogs"  ItemsSource="{Binding LastBlogs}">
+
+                        </Controls1:LazyListBox>
+                    </Grid>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.FeaturedPage_Header_Records,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <Grid>
+                        <TextBlock  Foreground="{StaticResource CustomForegroundBrush}" TextWrapping="Wrap" Style="{StaticResource CustomTextLargeStyle}" Visibility="{Binding IsOfflineMode,Converter={StaticResource visibilityConv}}" Text="{Binding Path=Localizedresources.OfflineModeFeatureNotAvailable,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                        <ListBox  ItemsSource="{Binding Records}" SelectionChanged="lstRecords_SelectionChanged">
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="{StaticResource CustomTouchTargetOverhang}" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Controls:CachedImageCtrl VerticalAlignment="Top" Name="profileImage" Picture="{Binding Item.User,Converter={StaticResource userToPictureConv}}"  Width="100" Height="100"/>
+                                        <Grid Grid.Column="1" VerticalAlignment="Top">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition />
+
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock VerticalAlignment="Top"   Style="{StaticResource CustomTextLargeStyle}" Text="{Binding Item.User.UserName}" Foreground="{StaticResource CustomForegroundBrush}"/>
+
+                                            <TextBlock VerticalAlignment="Center" Grid.Row="1" Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding Item.Exercise.Name}" Style="{StaticResource CustomTextNormalStyle}" />
+
+                                            <Grid Grid.Row="2" Margin="0,12,0,0" HorizontalAlignment="Stretch">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock Text="{Binding Item.TrainingDate, Converter={StaticResource dateTimeConverter}}" Margin="5,5,0,0" FontSize="{StaticResource CustomFontSizeMediumLarge}"/>
+
+                                                <StackPanel  HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1" Visibility="{Binding IsCardio,Converter={StaticResource negateVisibilityConv}}">
+                                                    <TextBlock VerticalAlignment="Center" Text="{Binding Item.Repetitions, StringFormat=D}" FontSize="{StaticResource CustomFontSizeMediumLarge}"/>
+                                                    <TextBlock VerticalAlignment="Center" Text="x" FontSize="{StaticResource CustomFontSizeMediumLarge}"/>
+                                                    <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" Text="{Binding Weight, StringFormat=.##}" FontSize="{StaticResource CustomFontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock VerticalAlignment="Center" Text="{Binding WeightType}" FontSize="{StaticResource CustomFontSizeMediumLarge}"/>
+                                                </StackPanel>
+
+                                                <StackPanel   HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1" Visibility="{Binding IsCardio,Converter={StaticResource visibilityConv}}">
+                                                    <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" Text="{Binding CardioValue}" FontSize="{StaticResource CustomFontSizeMediumLarge}" FontWeight="Bold"/>
+                                                </StackPanel>
+                                            </Grid>
+
+                                        </Grid>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </controls:PivotItem>
+            </controls:Pivot>
+
+            <!--ContentPanel - place additional content here-->
+
+        </Grid>
+    </Grid>
+
+</Animations:AnimatedBasePage>

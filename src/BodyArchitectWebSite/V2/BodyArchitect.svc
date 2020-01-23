@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BodyArchitect.Service.V2.BodyArchitectAccessService, BodyArchitect.Service.V2" %>

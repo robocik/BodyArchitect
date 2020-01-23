@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="memoEdit1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="memoEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="memoEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 463</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="memoEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;memoEdit1.Name" xml:space="preserve">
+    <value>memoEdit1</value>
+  </data>
+  <data name="&gt;&gt;memoEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;memoEdit1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;memoEdit1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnClear.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAvtJREFUOE9lk1tI
+        FGEYhkdWqa46YNBVYXQhQRcRCEKBZdaF2IVRaiIWimghVmBWXgShdkBTNgsytEgNMRQ6mKcV3dU8rEmm
+        ru1Bd931xO62uovuYY5v34y1IA08zDB87/N///fPRABg5Otq22Ic3WoO79kZH+AlRoaXJCYoSD56v0H8
+        JkRinfAQjUQPIwtkslqshZUDLnrcfm2yIlwbPEzuEKZXQhi2+fF+3Amq9xBZYUFmk7msbtitpB3rAla9
+        Itw+EWt+Eb6QiCAnghO25EFewoB5E5RxhQXpbwzqZr0bvAgYnCKMbhEWlwibR4SDZEskW/JuGW6+XQDL
+        A4+6bFvty1yqm2z6NOmBNwDo7Ry+L/KYJKZXeBLyMDoFEgogP27VT0FrWgNllsOC1Fp9r9bkhd3DU3ss
+        dHMsvllZjCxw0Ds4TBCTyxxECbhSPQ6q9xFJYcGFZ0Nm46ofU1SkIYHGwqLfwkE7v8XQPItRO69sMa12
+        FFS/TznBf1tIftzHegMCRmws+mj1/jkKkmCQwrq/grEFXhnkxSotqH53WHD+Yeeu5PJuZbpaJRxSGLAQ
+        tLLMIDHu4OFnBVA9T0SEBYmlHw+mVnSDFSQKyq1TkAQ62oYs1MmCBjV02UehSYxCW/J+oTtJdTcsSChu
+        jb1c0UkDkqCzckr7AxSW0VJYV/8cP4tPIdhRBWm2C/6W2xi/cUzoSYwsZE4WNUUTHyrbDVim8343EkTb
+        jyA6DDQLM3VhDaE34wgCFIY6BSjZC1TEwP00Ad1nVVYmvqAhjQhklH9BabMJRQ1GXH/9CzkvjchSzyKj
+        egaaM1GQJtq3fePrDw7Q+0iJict99aS8aeS/f4DGoQzVF6S5pB/CZn0OQKHQHQZrhD1fBZrDEnMiuza/
+        sKYLjT2z+Dxsw+DMKqZta3C4/Fjf5BGgf2ChtRJjebFYKYmB614U5nMj0JcSKXQlqe4zxzNrookyopH4
+        SowRZsJNcPHXXuB0QR0q8nLRnnIAvbSdjnM7nHJYPoU/TnD+ZOyGtKEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 483</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 23</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>&amp;Clear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAyVJREFUOE9lkl1s
+        U2UYgI93eucF18Z45ZWJIVmCMcZEjBckJiAKsiyAkWQj7C+EyKyCYDt+OmBBEljFjq3dJCxTEB1jSLox
+        XGlZpbCNtd267rdzrV3bdOvPOT19fLsmTQxf8uS8efO9z/ne7/1eApTi2te7UCGf1jdefXlLWisoRbRC
+        QcnkC0nJp4R/BV2ICzHBJgwoRUGRqusztS2DEQn/v9ZyOpGUhj+aZSycZSS0TvfjFWR/TKgqCyrtAaNl
+        JLpRPR/Ps5zQiSZ1Vtd1klmdjKqj5kvyjFZgMLCG1ETKgt3tExe73FE0HSZWdHxRnamITiimMy+yRZEt
+        JkqGhmuz5DQ41R8qHb/Ipxav/TdvjEQa3HMqowsaXmEsrIlQw7eSF2Ee8dP40zOG/KtIzVJZsOOS+96Q
+        P8FcTJPj5XgwneOvmRzOWRX3vIpH8C6p6AXYc+Exsj8pfFgWfHz+YcC3vM4z2fSnCOouj2OwjtN4xctJ
+        +3Oqz3uoafVwxOLlcNtTvjA/4vU9vRVlwbbT93OJdB5nKMd9+fuBc6Pc9KQ2er7tXHhhOh2OCPvOuEr9
+        f3TyzivbTHc3bndIih3TWSqbnVgH4xuFdT+MlgUZubxkFlp+XWT/WWdJ8IHh1ms7mu+SyxekWARTWapO
+        P6LDEZfR6WiS16X5vKDKmDTJma4H+eT4UEnw/pEbb37WfEcuqMCDGVUkqrTgpq0/wrGuIN91B/nGNsXX
+        1/w0CUfbfRy1+qgyOlDerbdvEnpafplgSebd6czQ+yTDfrOLi3+EOfHzvDDHt7YZDB3TNLVP8ZXVz2HL
+        OLuO3UPZUmPdJaQ/N/2OoctPvZgP/jjJzhMPudwXkWecIpyMCXHCiThLEsfWUzRdnWBrw02Uii/bzpjs
+        zhduefvxYSx9cf5JRTA6tnPFVU+bq1HinaysLWK4GuSdmhsom/deqq5t7cc28JzbIyGGx5cZC8kr+36E
+        gb+LUwjiXD3F5Fonk+lOiVskN4upM8h7B3tQ3q5s3SQYBZvQJ7iEwOYDt9TdxmGqzWM0XJjj0Llpas0B
+        6s5OcsjsYWttD2/t7eY/ni8Sci2oq+IAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 482</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 23</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>&amp;Save...</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkLoggingEnabled.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="chkLoggingEnabled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 487</value>
+  </data>
+  <data name="chkLoggingEnabled.Properties.Caption" xml:space="preserve">
+    <value>&amp;Turn on logging</value>
+  </data>
+  <data name="chkLoggingEnabled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="chkLoggingEnabled.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkLoggingEnabled.Name" xml:space="preserve">
+    <value>chkLoggingEnabled</value>
+  </data>
+  <data name="&gt;&gt;chkLoggingEnabled.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkLoggingEnabled.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkLoggingEnabled.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>523, 518</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///8Bu2o0a7plML27ZjHtumYw97pmMPe6ZjD3umUw97plL/e5ZS73uWUu97lkLve5ZC7vt2Isvbdi
+        LmP///8B////AbxpM9/48erz9+zf/fbr3v/26t7/9urc//bq3P/68+v/+vPr//ry6v/89/P//Pj0/f7+
+        /fG3YCrV////Af///wG/cTj19evf//2/aP/8vWf/+75l//y+ZP/8vmT//L1i//u9Y//7vGH//L5g//y8
+        Yv/9+/j9uWQt8////wH///8BwXg89/ft4//9wm7//9ig///Xnv//1pv//9eY///Wlv//1pX//9WU///U
+        k//7vmX/+/f0/7tnMff///8B////AcR8QPf38Ob/+LRV//e0Vv/3tVT/+LRT//iyU//3s1L/97NS//ey
+        Uf/3sk//97JP//z59f+/bzb3////Af///wHFgEL3+PHo//7l1f/95dP//eXT//zl0//85dP//OTR//zi
+        zv/84sz/++DJ//vhyP/9+vf/wXY79////wH///8BxYJF9/jy6//+59b//efW//3n1v/959b//ebV//3l
+        0//85NH//OLN//vhy//74cn/+/fy/8V8P/f///8B////AcaER/f58+z//ujW//7o1//959b//efW//3n
+        1f/95dP/++TQ//vjzP/638f/+t/G//ry6v/GgEL3////Af///wHGiEn3+fTt//7o2P/+6Nj//ujX//7n
+        1v/95dP//OTR//vhzP/64Mf/+d3D//jcwv/69O3/xoJF9////wH///8BxohK9/n07//+59f//efW//3n
+        1f/95tT//ObS//vhzP/638f/+NzC//bavf/22Lv/+vTv/8aDRvf///8B////AcaJS/f59PD//ObT//zm
+        1P/959P//OTR//vjzf/64Mj/+NzC//XWu//z1LX/8dKz//j08P/Egkb3////Af///wHGiUv3+fXx//zj
+        z//75ND//OTP//zjzf/64cr/+d3E//bZvP/06d//9/Ls//v38//17+n/wn5F+////wH///8BxolM9/n1
+        8f/8483/++PO//vjzf/74sv/+eDI//jcwv/11rr//fv4//zmzf/65cn/4raE/795Qqf///8B////AcWI
+        S+v69vL9+uDH//vhyf/74sn/++DI//nfxf/428H/9Na4///7+P/22LT/4bB9/9uSZPe0az4H////Af//
+        /wHEhUnD9/Ls7fj07v349O3/+PPt//jz7f/48+3/+PLs//fy7P/y5tf/4rJ9/9uUZfWzaDsH////Af//
+        /wH///8BwX1EYciLTbvIjE/vyIxP98iMT/fIjE/3yI1P98mMT/fHi0/3xYlL1cR2O5GzaDwH////Af//
+        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//w==
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>LogViewer</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LogViewer</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>

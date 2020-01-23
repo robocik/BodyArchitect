@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.TrainingPlans" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.TrainingPlans" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd4" namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" />
+  <xs:complexType name="ArrayOfTrainingPlanDifficult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrainingPlanDifficult" type="tns:TrainingPlanDifficult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrainingPlanDifficult" nillable="true" type="tns:ArrayOfTrainingPlanDifficult" />
+  <xs:simpleType name="TrainingPlanDifficult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Beginner" />
+      <xs:enumeration value="Advanced" />
+      <xs:enumeration value="Professional" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TrainingPlanDifficult" nillable="true" type="tns:TrainingPlanDifficult" />
+  <xs:complexType name="ArrayOfTrainingType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrainingType" type="tns:TrainingType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrainingType" nillable="true" type="tns:ArrayOfTrainingType" />
+  <xs:simpleType name="TrainingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Split" />
+      <xs:enumeration value="FBW" />
+      <xs:enumeration value="HIT" />
+      <xs:enumeration value="ABW" />
+      <xs:enumeration value="HST" />
+      <xs:enumeration value="PushPull" />
+      <xs:enumeration value="ACT" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TrainingType" nillable="true" type="tns:TrainingType" />
+  <xs:complexType name="PlanBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://MYBASERVICE.TK/IBodyArchitectAccessService/" base="q1:BAGlobalObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BasedOnId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Profile" nillable="true" type="q1:UserDTO" />
+          <xs:element minOccurs="0" name="PublishDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Rating" type="xs:float" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" minOccurs="0" name="Status" type="q2:PublishStatus" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserRating" nillable="true" type="xs:float" />
+          <xs:element minOccurs="0" name="UserShortComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Version" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlanBase" nillable="true" type="tns:PlanBase" />
+</xs:schema>

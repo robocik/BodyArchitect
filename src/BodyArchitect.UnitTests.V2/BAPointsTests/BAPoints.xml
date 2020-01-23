@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BAPointsConfiguration>
+  <Accounts Kara="15">
+    <AccountType Name="PremiumUser" Points="1" />
+    <AccountType Name="Instructor" Points="2" />
+    <!--<AccountType Name="PremiumUser" Points="1" PromotionPoints="-1" PromotionStart="23-07-2012" />
+    <AccountType Name="Instructor" Points="3" PromotionPoints="-1" PromotionStart="23-07-2012"/>-->
+  </Accounts>
+
+  <Payments>
+    <Payment Name="BAPoints_30" Points="30" />
+    <Payment Name="BAPoints_120" Points="360" />
+  </Payments>
+</BAPointsConfiguration>

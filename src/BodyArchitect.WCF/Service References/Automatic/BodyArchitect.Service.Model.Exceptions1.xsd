@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ErrorCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnexpectedException" />
+      <xs:enumeration value="UniqueException" />
+      <xs:enumeration value="ValidationException" />
+      <xs:enumeration value="CrossProfileOperation" />
+      <xs:enumeration value="DatabaseException" />
+      <xs:enumeration value="ArgumentNullException" />
+      <xs:enumeration value="NullReferenceException" />
+      <xs:enumeration value="InvalidOperationException" />
+      <xs:enumeration value="AuthenticationException" />
+      <xs:enumeration value="OldDataException" />
+      <xs:enumeration value="ProfileAlreadyFriendException" />
+      <xs:enumeration value="CannotAcceptRejectInvitationDoesntExistException" />
+      <xs:enumeration value="ObjectIsFavoriteException" />
+      <xs:enumeration value="ObjectIsNotFavoriteException" />
+      <xs:enumeration value="ObjectNotFound" />
+      <xs:enumeration value="EMailSendException" />
+      <xs:enumeration value="SecurityException" />
+      <xs:enumeration value="ConsistencyException" />
+      <xs:enumeration value="MaintenanceException" />
+      <xs:enumeration value="UnauthorizedAccessException" />
+      <xs:enumeration value="DatabaseVersionException" />
+      <xs:enumeration value="ArgumentException" />
+      <xs:enumeration value="UserDeletedException" />
+      <xs:enumeration value="ProfileIsNotActivatedException" />
+      <xs:enumeration value="FileNotFoundException" />
+      <xs:enumeration value="ProfileDeletedException" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ErrorCode" nillable="true" type="tns:ErrorCode" />
+</xs:schema>

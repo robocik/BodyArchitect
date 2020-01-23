@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.BuyProgramMessageControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    <StackPanel Name="panel">
+        <TextBlock Name="lblFeatureName"  Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource CustomTextAccentStyle}"/>
+        <Line X1="0" X2="100" Stretch="Fill" Stroke="{StaticResource CustomAccentFullBrush}"  StrokeThickness="1" Margin="12,12,12,36" />
+        <StackPanel Name="pnlPC">
+            <TextBlock Name="lblPC1" TextWrapping="Wrap" FontSize="{StaticResource CustomFontSizeMediumLarge}" Style="{StaticResource CustomTextNormalStyle}"/>
+            <HyperlinkButton  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}"    Content="Pro Version" NavigateUri="/Pages/ProVsFreePage.xaml" />
+
+            <TextBlock Name="lblPC2" Margin="12,24,12,12" TextWrapping="Wrap" FontSize="{StaticResource CustomFontSizeMediumLarge}" Style="{StaticResource CustomTextNormalStyle}"/>
+            <HyperlinkButton  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}"    Content="http://bodyarchitectonline.com" Click="GoToWebSite_Click" />
+        </StackPanel>
+
+        <StackPanel Name="pnlPro">
+            <TextBlock Name="lblPro1" TextWrapping="Wrap" FontSize="{StaticResource CustomFontSizeMediumLarge}" Style="{StaticResource CustomTextNormalStyle}"/>
+            <HyperlinkButton  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}"    Content="{Binding Path=Localizedresources.BuyProgramMessageControl_ProVersion,Mode=OneTime, Source={StaticResource LocalizedStrings}}" NavigateUri="/Pages/ProVsFreePage.xaml" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

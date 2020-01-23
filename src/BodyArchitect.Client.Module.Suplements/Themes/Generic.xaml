@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <DataTemplate x:Key="SupplementsComboBoxItem">
+
+        <Grid Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Width="16" Height="16" Visibility="Collapsed" Name="imgLegal"  Source="/BodyArchitect.Client.Module.Suplements;component/Resources/LegalSupplement.png"/>
+            <Image Grid.Column="1" Width="16" Height="16" Visibility="Collapsed" Name="imgIllegal"  Source="/BodyArchitect.Client.Module.Suplements;component/Resources/IllegalSupplement.gif"/>
+            <TextBlock Grid.Column="2" Margin="{StaticResource MarginSmallLeft}" Background="Transparent" Text="{Binding Name}" />
+        </Grid>
+
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding CanBeIllegal}"  Value="false">
+                <Setter Property="Visibility" TargetName="imgLegal" Value="Visible"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CanBeIllegal}"  Value="true">
+                <Setter Property="Visibility" TargetName="imgIllegal" Value="Visible"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,262 @@
+﻿<ribbon:RibbonWindow xmlns:my1="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator" 
+                     x:Class="BodyArchitect.Client.UI.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                     xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+                     xmlns:tb="clr-namespace:Hardcodet.Wpf.TaskbarNotification;assembly=Hardcodet.Wpf.TaskbarNotification"
+                     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                     xmlns:avalondock="http://avalondock.codeplex.com" Icon="/BodyArchitect.Client.Resources;component/Images/MainIcon.ico"
+                     xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls"
+                     xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls"
+                     xmlns:windows="clr-namespace:BodyArchitect.Client.UI.Windows" Title="BodyArchitect" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+
+
+    <xctk:BusyIndicator Name="pleaseWait"  IsBusy="False" >
+        <xctk:BusyIndicator.ProgressBarStyle>
+            <Style TargetType="ProgressBar">
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </Style>
+        </xctk:BusyIndicator.ProgressBarStyle>
+        <xctk:BusyIndicator.BusyContent>
+            <StackPanel Margin="4">
+                <TextBlock Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_BusyIndicator_Text}" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <ProgressBar Margin="4" Name="busyProgress" Height="15"/>
+                <Button Name="btnProgressCancel" Style="{StaticResource CancelButton}" Margin="0,6,0,0" Click="btnCancelProgress_Click" Controls:ImageButtonExt.Image="pack://application:,,,/BodyArchitect.Client.Resources;component/Images/CancelButton.gif" />
+            </StackPanel>
+        </xctk:BusyIndicator.BusyContent>
+        <Grid>
+            <Grid.Resources>
+                <windows:SetTemplateSelector x:Key="selector"/>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ribbon:Ribbon x:Name="Ribbon" >
+
+                <ribbon:Ribbon.ContextualTabGroups>
+                    <ribbon:RibbonContextualTabGroup Background="{StaticResource HyperlinkBrush}"   Name="RibbonContextTab" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:Ribbon_Context_Header}"   Visibility="Visible"/>
+                </ribbon:Ribbon.ContextualTabGroups>
+
+                <ribbon:Ribbon.QuickAccessToolBar>
+                    <ribbon:RibbonQuickAccessToolBar>
+                        <ribbon:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Refresh32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Refresh16.png" QuickAccessToolBarId="Refresh" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Refresh_QuickAccess}" Click="btnRefresh_Click"  KeyTip="1"/>
+                        <ribbon:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Back32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Back16.png" QuickAccessToolBarId="Back" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Back_QuickAccess}"  Click="btnBack_Click" IsEnabled="{Binding CanGoBack}" KeyTip="2"/>
+                        <ribbon:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Forward32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Forward16.png" QuickAccessToolBarId="Forward" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Forward_QuickAccess}"  Click="btnForward_Click" IsEnabled="{Binding CanGoForward}" KeyTip="3"/>
+                    </ribbon:RibbonQuickAccessToolBar>
+                </ribbon:Ribbon.QuickAccessToolBar>
+
+                <ribbon:Ribbon.ApplicationMenu>
+                    <ribbon:RibbonApplicationMenu >
+                        <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_ImportLicence}" Click="rbtnImportLicenceKey_Click"/>
+                        <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_Options}" Click="rbtnOptions_Click"/>
+                        <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_LogViewer}" >
+                            <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_StandardLog}" Click="rbtnStandardLog_Click" ImageSource="/BodyArchitect.Client.Resources;component/Images/LogStandard.png"/>
+                            <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_ErrorLog}" Click="rbtnErrorLog_Click" ImageSource="/BodyArchitect.Client.Resources;component/Images/LogError.png"/>
+                        </ribbon:RibbonApplicationMenuItem>
+                        <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_RibbonMenu_Language}" >
+                            <ribbon:RibbonApplicationMenuItem Header="English" Click="rbtnLanguageEnglish_Click" ImageSource="/BodyArchitect.Client.Resources;component/Images/FlagUsa32.png"/>
+                            <ribbon:RibbonApplicationMenuItem Header="Polski" Click="rbtnLanguagePolish_Click" ImageSource="/BodyArchitect.Client.Resources;component/Images/FlagPoland32.png"/>
+                        </ribbon:RibbonApplicationMenuItem>
+                        <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_RibbonMenu_About}" Click="btnAbout_Click" />
+                        <ribbon:RibbonApplicationMenuItem Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_LogOut}" Click="btnLogout" />
+                    </ribbon:RibbonApplicationMenu>
+                </ribbon:Ribbon.ApplicationMenu>
+
+                <ribbon:RibbonTab x:Name="HomeTab"   Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_Home}" KeyTip="H">
+                    <ribbon:RibbonGroup  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_View}" >
+
+                        <ribbon:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Refresh32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Refresh16.png" QuickAccessToolBarId="Refresh" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Refresh}" Click="btnRefresh_Click" ToolTip="F5"/>
+
+                        <ribbon:RibbonSplitButton DisplayMemberPath="Text" IsEnabled="{Binding CanGoBack}" ItemsSource="{Binding CurrentTabBackHistory}" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Back}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Back32.png" QuickAccessToolBarId="Back" Click="btnBack_Click" ToolTip="Backspace">
+                            <ribbon:RibbonSplitButton.Resources>
+                                <Style TargetType="{x:Type ribbon:RibbonMenuItem}">
+                                    <EventSetter Event="Click" Handler="btnBackToEntry_Click"/>
+                                </Style>
+                            </ribbon:RibbonSplitButton.Resources>
+                        </ribbon:RibbonSplitButton>
+
+                        <ribbon:RibbonSplitButton DisplayMemberPath="Text" IsEnabled="{Binding CanGoForward}" ItemsSource="{Binding CurrentTabForwardHistory}" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Forward}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Forward32.png" QuickAccessToolBarId="Forward" Click="btnForward_Click" ToolTip="Alt+Right">
+                            <ribbon:RibbonSplitButton.Resources>
+                                <Style TargetType="{x:Type ribbon:RibbonMenuItem}">
+                                    <EventSetter Event="Click" Handler="btnForwardToEntry_Click"/>
+                                </Style>
+                            </ribbon:RibbonSplitButton.Resources>
+                        </ribbon:RibbonSplitButton>
+                    </ribbon:RibbonGroup>
+                    <ribbon:RibbonGroup  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Header_Files}">
+
+                        <ribbon:RibbonGroup.GroupSizeDefinitions>
+                            <ribbon:RibbonGroupSizeDefinition>
+                            </ribbon:RibbonGroupSizeDefinition>
+                        </ribbon:RibbonGroup.GroupSizeDefinitions>
+
+                        <ribbon:RibbonButton x:Name="rbtnDashboard"  LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Dashboard.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Dashboard16.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Dashboard}" QuickAccessToolBarId="Dashboard" Click="rbtnDashboard_Click" />
+                        <ribbon:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Calendar}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Calendar32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Calendar16.png" QuickAccessToolBarId="Calendar" Click="rbtnNewCalendar_Click" />
+                        <ribbon:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Ribbon_FeaturedItemsView}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Featured32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Featured16.png" QuickAccessToolBarId="FeaturedItems" Click="rbtnFeaturedItems_Click" />
+                        <ribbon:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_Reports}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Reports32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Reports16.png" QuickAccessToolBarId="Reports" Click="rbtnNewReporting_Click" />
+                        <ribbon:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_People}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/People.png"  QuickAccessToolBarId="People" Click="rbtnPeople_Click" />
+                        <ribbon:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Label_MyTrainings}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/MyTrainings32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/MyTrainings16.png" Click="rbtnMyTrainings_Click"  QuickAccessToolBarId="MyTrainings" >
+                            <ribbon:RibbonButton.ControlSizeDefinition>
+                                <ribbon:RibbonControlSizeDefinition ImageSize="Small" IsLabelVisible="True"/>
+                            </ribbon:RibbonButton.ControlSizeDefinition>
+                        </ribbon:RibbonButton>
+
+                        <ribbon:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_RibbonItem_MyPlaces}" LargeImageSource="/BodyArchitect.Client.Resources;component/Images/MyGyms32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/MyGyms16.png"  QuickAccessToolBarId="MyPlaces" Click="rbtnMyPlaces_Click">
+                            <ribbon:RibbonButton.ControlSizeDefinition>
+                                <ribbon:RibbonControlSizeDefinition ImageSize="Small" IsLabelVisible="True"/>
+                            </ribbon:RibbonButton.ControlSizeDefinition>
+                        </ribbon:RibbonButton>
+                    </ribbon:RibbonGroup>
+
+                    <ribbon:RibbonGroup  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_RibbonGroup_Calculators}">
+                        <ribbon:RibbonButton x:Name="rbtnWilksCalculator"  LargeImageSource="/BodyArchitect.Client.Resources;component/Images/WilksCalc32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/WilksCalc32.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Ribbon_WilksCalculator}" QuickAccessToolBarId="Wilks" Click="rbtnWilksCalculator_Click" />
+                    </ribbon:RibbonGroup>
+                </ribbon:RibbonTab>
+
+
+            </ribbon:Ribbon>
+            
+            <tb:TaskbarIcon x:Name="myNotifyIcon" Visibility="Collapsed" ToolTipText="BodyArchitect" MenuActivation="LeftOrRightClick" PopupActivation="DoubleClick" />
+
+            <avalondock:DockingManager Grid.Row="1" x:Name="dockManager"   
+                                       DocumentTitleTemplateSelector="{StaticResource selector}"
+                                       DocumentHeaderTemplateSelector="{StaticResource selector}"
+                                       DocumentPaneMenuItemHeaderTemplate="{StaticResource DocumentMenuItemTemplate}"
+                                       DocumentClosing="dockManager_DocumentClosing" DocumentClosed="DockManager_OnDocumentClosed"   ActiveContentChanged="dockManager_ActiveContentChanged" >
+                <avalondock:LayoutRoot >
+                    <avalondock:LayoutPanel Orientation="Vertical" >
+
+                        
+                        <avalondock:LayoutAnchorablePaneGroup  DockHeight="Auto">
+                            <avalondock:LayoutAnchorablePane>
+                                <avalondock:LayoutAnchorable CanClose="False" CanHide="false"  IconSource="/BodyArchitect.Client.Resources;component/Images/Rss16.png"   ContentId="RssReader" >
+
+                                    <UserControls:RssReader x:Name="rssReader"  Grid.Row="1" />
+                                </avalondock:LayoutAnchorable>
+                            </avalondock:LayoutAnchorablePane>
+                        </avalondock:LayoutAnchorablePaneGroup>
+                        
+                        <avalondock:LayoutPanel Orientation="Horizontal" >
+                            <avalondock:LayoutAnchorablePaneGroup DockWidth="200">
+                                <avalondock:LayoutAnchorablePane>
+                                    </avalondock:LayoutAnchorablePane>
+                                </avalondock:LayoutAnchorablePaneGroup>
+                            
+                            <avalondock:LayoutDocumentPaneGroup  >
+                                <avalondock:LayoutDocumentPane  >
+                                </avalondock:LayoutDocumentPane>
+                            </avalondock:LayoutDocumentPaneGroup>
+                        </avalondock:LayoutPanel>
+                    </avalondock:LayoutPanel>
+
+                    <avalondock:LayoutRoot.LeftSide>
+                        <avalondock:LayoutAnchorSide >
+                            <avalondock:LayoutAnchorGroup>
+                            </avalondock:LayoutAnchorGroup>
+                        </avalondock:LayoutAnchorSide>
+                    </avalondock:LayoutRoot.LeftSide>
+                    <!--<avalondock:LayoutRoot.TopSide >
+                        <avalondock:LayoutAnchorSide  >
+                            <avalondock:LayoutAnchorGroup >
+                                <avalondock:LayoutAnchorable AutoHideWidth="100"  IconSource="/BodyArchitect.Client.Resources;component/Images/Rss16.png"   ContentId="RssReader" >
+
+                                    <UserControls:RssReader x:Name="rssReader"  Grid.Row="1" />
+                                </avalondock:LayoutAnchorable>
+                            </avalondock:LayoutAnchorGroup>
+                        </avalondock:LayoutAnchorSide>
+                        
+                    </avalondock:LayoutRoot.TopSide>
+                    
+                        <avalondock:LayoutRoot.RightSide>
+                        <avalondock:LayoutAnchorSide>
+                            <avalondock:LayoutAnchorGroup>
+                            </avalondock:LayoutAnchorGroup>
+                        </avalondock:LayoutAnchorSide>
+                    </avalondock:LayoutRoot.RightSide>-->
+                </avalondock:LayoutRoot>
+                
+            </avalondock:DockingManager>
+
+            <Grid Grid.Row="2" Visibility="{Binding ShowPerformanceOutput,Converter={StaticResource boolVisibConv}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <ListBox Name="lstPerformance"  Height="100"/>
+                <StackPanel Grid.Column="1">
+                    <Button  Width="30" Height="30" Content="X" Click="btnClearPerformanceList_Click" />
+                    <Button  Width="30" Height="30" Content="S" Click="btnSavePerformanceList_Click" />
+                </StackPanel>
+            </Grid>
+            
+            
+            <StatusBar Name="statusBar" Grid.Row="3" Background="{StaticResource WindowBackgroundBrush}">
+                <StatusBar.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </ItemsPanelTemplate>
+                </StatusBar.ItemsPanel>
+                
+                <StatusBarItem Grid.Column="0" >
+                    <my1:StatusBarItemProgressIndicator x:Name="statusProgressIndicator"/>                    
+                </StatusBarItem>
+                <Separator Grid.Column="1"/>
+                <StatusBarItem Grid.Column="2" MouseDoubleClick="sbpLogin_DoubleClick" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="16" Stretch="Uniform" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/LoginUser.png" />
+                        <TextBlock Name="sbpLogin" />
+                    </StackPanel>
+                </StatusBarItem>
+                <Separator Grid.Column="3"/>
+
+                <StatusBarItem Grid.Column="4" Name="sbCurrentUserView">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Text_ShowData}" />
+                        <TextBlock Name="sbCurrentUserViewText" />
+                    </StackPanel>
+
+                </StatusBarItem>
+
+                <Separator  Grid.Column="5"/>
+
+                <StatusBarItem Grid.Column="6" MouseDoubleClick="sbAccountType_DoubleClick">
+                    <TextBlock Text="{Binding AccountType}" FontWeight="Bold" FontSize="14"/>
+                </StatusBarItem>
+
+                <StatusBarItem Grid.Column="7" Visibility="{Binding ShowPerformanceOutput,Converter={StaticResource boolVisibConv}}">
+                    <Button Content="Show" Click="btnTest_Click"/>
+                </StatusBarItem>
+
+                <StatusBarItem Grid.Column="8" Visibility="{Binding ShowPerformanceOutput,Converter={StaticResource boolVisibConv}}">
+                    <Button Content="Clear" Click="btnTest1_Click"/>
+                </StatusBarItem>
+
+                <StatusBarItem MouseLeftButtonUp="sbAccountTypeFeature_MouseLeftButtonUp" Background="{StaticResource AccentBrush}" Name="sbAccountTypeFeature" Cursor="Hand" Grid.Column="9" >
+                    <TextBlock Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:MainWindow_Status_LimitedFeature}" />
+                </StatusBarItem>
+                
+            </StatusBar>
+        </Grid>
+    </xctk:BusyIndicator>
+</ribbon:RibbonWindow>

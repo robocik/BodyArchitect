@@ -1,0 +1,26 @@
+﻿<Windows:BaseWindow  x:Class="BodyArchitect.Client.UI.Windows.ChangeAccountTypeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+         xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:Windows="clr-namespace:BodyArchitect.Client.UI.Windows" Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="{lex:LocText  BodyArchitect.Client.Resources:Strings:ChangeAccountTypeWindow_Title}" Height="300" Width="400" >
+
+    <Grid Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Margin="{StaticResource MarginXLargeTop}" Name="tbPremium" FontSize="18"  Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:ChangeAccountTypeWindow_PremiumMsg}" Visibility="{Binding InPremium,Converter={StaticResource boolVisibConv}}"/>
+
+        <TextBlock HorizontalAlignment="Center" Name="tbInstructor" Margin="{StaticResource MarginXLargeTop}" TextWrapping="Wrap" FontSize="18" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:ChangeAccountTypeWindow_InstructorMsg}" Visibility="{Binding InPremium,Converter={StaticResource negBoolVisibConv}}"/>
+
+        <TextBlock TextWrapping="Wrap" FontSize="14" VerticalAlignment="Bottom" Margin="{StaticResource MarginLargeBottom}" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:ChangeAccountTypeWindow_ShowAccountTypesInfoMsg}" Grid.Row="1"/>
+        
+        <StackPanel VerticalAlignment="Bottom"  Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
+            <Button Style="{StaticResource NormalButton}" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:ChangeAccountTypeWindow_Button_Show}" Click="btnShowDetails_Click" />
+            <Button Style="{StaticResource NormalButton}" IsCancel="true"  Margin="{StaticResource MarginMediumLeft}" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:ChangeAccountTypeWindow_Button_Close}" Click="btnClose_Click" />
+        </StackPanel>
+    </Grid>
+</Windows:BaseWindow >

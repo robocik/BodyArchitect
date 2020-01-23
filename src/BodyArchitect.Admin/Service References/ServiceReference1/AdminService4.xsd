@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Admin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="SendMessageMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="SelectedCountries" />
+      <xs:enumeration value="ExceptSelectedCountries" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SendMessageMode" nillable="true" type="tns:SendMessageMode" />
+</xs:schema>

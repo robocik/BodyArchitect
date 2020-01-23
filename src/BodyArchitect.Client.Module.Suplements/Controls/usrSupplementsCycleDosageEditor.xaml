@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.Suplements.Controls.usrSupplementsCycleDosageEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BodyArchitect.Client.Module.Suplements.Controls"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" Name="Me"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/BodyArchitect.Client.Module.Suplements;component/Themes/generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <Label VerticalAlignment="Center" Margin="{StaticResource MarginSmallRight}" Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsCycleDosageEditor_Content_Supplement}" Target="cmbSupplements"/>
+        <Grid Grid.Column="1" Margin="{StaticResource MarginMediumTop}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <local:SupplementsFilteredComboBox ItemContainerStyle="{StaticResource StretchedComboBoxItemStyle}" Margin="{StaticResource MarginSmallRight}" ItemTemplate="{StaticResource SupplementsComboBoxItem}" x:Name="cmbSupplements" TextSearch.TextPath="Name"  SelectedValue="{Binding SelectedDosage.Supplement,ElementName=Me,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+            <xctk:WatermarkTextBox Watermark="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsCycleDosageEditor_Watermark_SupplementName}"   Style="{StaticResource contentTextBox}"   Grid.Column="1" Text="{Binding SelectedDosage.Name,ElementName=Me,Mode=TwoWay}" />
+        </Grid>
+        
+
+        <Label VerticalAlignment="Center" Grid.Row="1" Margin="{StaticResource MarginSmallRight}" Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsCycleDosageEditor_Content_Dosage}" Target="txtDosage" />
+        
+        <Grid Grid.Row="1" Grid.Column="1" Margin="{StaticResource MarginMediumTop}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <xctk:DoubleUpDown Name="txtDosage" Margin="{StaticResource MarginSmallRight}" Value="{Binding SelectedDosage.Dosage,Mode=TwoWay,ElementName=Me}" Grid.Column="0"/>
+            <ComboBox Name="cmbDosageTypes" Margin="{StaticResource MarginSmallRight}" Grid.Column="1" ItemsSource="{Binding DosageTypes,ElementName=Me}" SelectedValuePath="Value" DisplayMemberPath="Text" SelectedValue="{Binding SelectedDosage.DosageType,ElementName=Me,Mode=TwoWay}" />
+            <ComboBox Name="cmbDosageUnits"  Grid.Column="2" ItemsSource="{Binding DosageUnits,ElementName=Me}" SelectedValuePath="Value" DisplayMemberPath="Text" SelectedValue="{Binding SelectedDosage.DosageUnit,ElementName=Me,Mode=TwoWay}" />
+        </Grid>
+
+        <Label VerticalAlignment="Center" Margin="{StaticResource MarginSmallRight}" Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsCycleDosageEditor_Content_HowOften}" Grid.Row="2" Target="cmbRepetitions" />
+        <ComboBox Name="cmbRepetitions" Margin="{StaticResource MarginMediumTop}" Grid.Row="2"  Grid.Column="1" ItemsSource="{Binding Repetitions,ElementName=Me}" SelectedValuePath="Value" DisplayMemberPath="Text" SelectedValue="{Binding SelectedDosage.Repetitions,ElementName=Me,Mode=TwoWay}" />
+
+        <Label VerticalAlignment="Center" Margin="{StaticResource MarginSmallRight}" Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsCycleDosageEditor_Content_When}" Grid.Row="3" Target="cmbTimeType" />
+        <ComboBox Name="cmbTimeType" Grid.Row="3" Margin="{StaticResource MarginMediumTop}" Grid.Column="1" ItemsSource="{Binding TimeTypes,ElementName=Me}" SelectedValuePath="Value" DisplayMemberPath="Text" SelectedValue="{Binding SelectedDosage.TimeType,ElementName=Me,Mode=TwoWay}" />
+
+        <Label VerticalAlignment="Top" Margin="{StaticResource MarginSmallRight}" Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsCycleDosageEditor_Content_Comment}" Grid.Row="4" Target="txtComment" />
+        <xctk:WatermarkTextBox Name="txtComment" Margin="{StaticResource MarginMediumTop}" Style="{StaticResource contentTextBox}" Grid.Row="4"  Grid.Column="1" Text="{Binding SelectedDosage.Comment,ElementName=Me,Mode=TwoWay}" />
+    </Grid>
+</UserControl>

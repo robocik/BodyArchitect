@@ -1,0 +1,2623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BmiResult_IIIStopienOtylosci" xml:space="preserve">
+    <value>Obesity of 3rd degree</value>
+  </data>
+	<data name="BmiResult_IIStopienOtylosci" xml:space="preserve">
+    <value>Obesity of 2nd degree</value>
+  </data>
+	<data name="BmiResult_Incorrect" xml:space="preserve">
+    <value>(Invalid data)</value>
+  </data>
+	<data name="BmiResult_IStopienOtylosci" xml:space="preserve">
+    <value>Obesity of 1st degree</value>
+  </data>
+	<data name="BmiResult_Niedowaga" xml:space="preserve">
+    <value>Underweight</value>
+  </data>
+	<data name="BmiResult_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+	<data name="BmiResult_PrzedOtyloscia" xml:space="preserve">
+    <value>Overweight</value>
+  </data>
+	<data name="BmiResult_Wychudzenie" xml:space="preserve">
+    <value>Emaciation</value>
+  </data>
+	<data name="BmiResult_Wyglodzenie" xml:space="preserve">
+    <value>Severe emaciation</value>
+  </data>
+	<data name="DeploymentProgressState_DownloadingApplicationFiles" xml:space="preserve">
+    <value>Downloading application files</value>
+  </data>
+	<data name="DeploymentProgressState_DownloadingApplicationInformation" xml:space="preserve">
+    <value>Retrieving application data</value>
+  </data>
+	<data name="DeploymentProgressState_DownloadingDeploymentInformation" xml:space="preserve">
+    <value>Retrieving information about an update</value>
+  </data>
+	<data name="ExerciseType_Barki" xml:space="preserve">
+    <value>Shoulders</value>
+  </data>
+	<data name="ExerciseType_Biceps" xml:space="preserve">
+    <value>Biceps</value>
+  </data>
+	<data name="ExerciseType_Brzuch" xml:space="preserve">
+    <value>Abs</value>
+  </data>
+	<data name="ExerciseType_Czworoboczny" xml:space="preserve">
+    <value>Traps</value>
+  </data>
+	<data name="ExerciseType_Klatka" xml:space="preserve">
+    <value>Chest</value>
+  </data>
+	<data name="ExerciseType_Lydki" xml:space="preserve">
+    <value>Calves</value>
+  </data>
+	<data name="ExerciseType_Nogi" xml:space="preserve">
+    <value>Hamstrings</value>
+  </data>
+	<data name="ExerciseType_Plecy" xml:space="preserve">
+    <value>Back</value>
+  </data>
+	<data name="ExerciseType_Przedramie" xml:space="preserve">
+    <value>Forearm</value>
+  </data>
+	<data name="ExerciseType_Triceps" xml:space="preserve">
+    <value>Triceps</value>
+  </data>
+	<data name="Gender_Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+	<data name="Gender_Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+	<data name="Gender_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+	<data name="ReportStatus_ShowInReport" xml:space="preserve">
+    <value>Show this entry in your reports</value>
+  </data>
+	<data name="ReportStatus_SkipInReport" xml:space="preserve">
+    <value>Do not show this entry in your reports</value>
+  </data>
+	<data name="Wymiary_Chest" xml:space="preserve">
+    <value>Chest</value>
+  </data>
+	<data name="Wymiary_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+	<data name="Wymiary_LeftBiceps" xml:space="preserve">
+    <value>Left biceps</value>
+  </data>
+	<data name="Wymiary_LeftForearm" xml:space="preserve">
+    <value>Left forearm</value>
+  </data>
+	<data name="Wymiary_LeftUdo" xml:space="preserve">
+    <value>Left leg</value>
+  </data>
+	<data name="Wymiary_Pas" xml:space="preserve">
+    <value>Waist</value>
+  </data>
+	<data name="Wymiary_RightBiceps" xml:space="preserve">
+    <value>Right biceps</value>
+  </data>
+	<data name="Wymiary_RightForearm" xml:space="preserve">
+    <value>Right forearm</value>
+  </data>
+	<data name="Wymiary_RightUdo" xml:space="preserve">
+    <value>Right leg</value>
+  </data>
+	<data name="Wymiary_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+	<data name="TrainingEnd_Complete" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+	<data name="TrainingEnd_NotEnded" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+	<data name="ExerciseType_NotSet" xml:space="preserve">
+    <value>(Deleted)</value>
+  </data>
+	<data name="SetType_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+	<data name="SetType_Normalna" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+	<data name="SetType_PrawieMax" xml:space="preserve">
+    <value>Almost max</value>
+  </data>
+	<data name="SetType_Rozgrzewkowa" xml:space="preserve">
+    <value>Warm-up</value>
+  </data>
+	<data name="SetType_MuscleFailure" xml:space="preserve">
+    <value>Muscle failure</value>
+  </data>
+	<data name="TrainingPlanDifficult_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+	<data name="TrainingPlanDifficult_Beginner" xml:space="preserve">
+    <value>Beginner</value>
+  </data>
+	<data name="TrainingPlanDifficult_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+	<data name="TrainingPlanDifficult_Professional" xml:space="preserve">
+    <value>Professional</value>
+  </data>
+	<data name="WorkoutPlanPurpose_Definition" xml:space="preserve">
+    <value>Definition</value>
+  </data>
+	<data name="WorkoutPlanPurpose_FatLost" xml:space="preserve">
+    <value>Fat lost</value>
+  </data>
+	<data name="WorkoutPlanPurpose_Mass" xml:space="preserve">
+    <value>Muscle mass</value>
+  </data>
+	<data name="WorkoutPlanPurpose_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+	<data name="WorkoutPlanPurpose_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+	<data name="WorkoutPlanPurpose_Strength" xml:space="preserve">
+    <value>Strength</value>
+  </data>
+	<data name="SearchSortOrder_HighestRating" xml:space="preserve">
+    <value>Top Rated</value>
+  </data>
+	<data name="SearchSortOrder_Newest" xml:space="preserve">
+    <value>Latest</value>
+  </data>
+	<data name="Privacy_FriendsOnly" xml:space="preserve">
+    <value>Only for friends</value>
+  </data>
+	<data name="Privacy_Private" xml:space="preserve">
+    <value>Private</value>
+  </data>
+	<data name="Privacy_Public" xml:space="preserve">
+    <value>Public</value>
+  </data>
+	<data name="ExerciseForceType_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+	<data name="ExerciseForceType_Pull" xml:space="preserve">
+    <value>Pull</value>
+  </data>
+	<data name="ExerciseForceType_Push" xml:space="preserve">
+    <value>Push</value>
+  </data>
+	<data name="ExerciseForceType_Static" xml:space="preserve">
+    <value>Static</value>
+  </data>
+	<data name="MechanicsType_Compound" xml:space="preserve">
+    <value>Compound</value>
+  </data>
+	<data name="MechanicsType_Isolation" xml:space="preserve">
+    <value>Isolation</value>
+  </data>
+	<data name="MechanicsType_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+	<data name="ExerciseType_Cardio" xml:space="preserve">
+    <value>Cardio</value>
+  </data>
+	<data name="UserSearchGroup_Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+	<data name="UserSearchGroup_Friends" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+	<data name="UserSearchGroup_Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+	<data name="PictureCriteria_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="PictureCriteria_OnlyWithoutPicture" xml:space="preserve">
+    <value>Only without photo</value>
+  </data>
+	<data name="PictureCriteria_OnlyWithPicture" xml:space="preserve">
+    <value>Only with photo</value>
+  </data>
+	<data name="PrivacyCriteria_Accessible" xml:space="preserve">
+    <value>Only the available</value>
+  </data>
+	<data name="PrivacyCriteria_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="PrivacyCriteria_NotAccessible" xml:space="preserve">
+    <value>Only the unavailable</value>
+  </data>
+	<data name="UserWorkoutPlanCriteria_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="UserWorkoutPlanCriteria_OnlyWithWorkoutPlans" xml:space="preserve">
+    <value>Only with public workout plans</value>
+  </data>
+	<data name="DosageType_Grams" xml:space="preserve">
+    <value>Grams</value>
+  </data>
+	<data name="DosageType_Servings" xml:space="preserve">
+    <value>Servings</value>
+  </data>
+	<data name="DosageType_Tablets" xml:space="preserve">
+    <value>Tablets</value>
+  </data>
+	<data name="DosageType_Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+	<data name="UsersSortOrder_ByBlogCommentsCount" xml:space="preserve">
+    <value>By number of comments</value>
+  </data>
+	<data name="UsersSortOrder_ByFollowersCount" xml:space="preserve">
+    <value>By number of followers</value>
+  </data>
+	<data name="UsersSortOrder_ByFriendsCount" xml:space="preserve">
+    <value>By number of friends</value>
+  </data>
+	<data name="UsersSortOrder_ByLastEntryDate" xml:space="preserve">
+    <value>By date of last calendar's entry</value>
+  </data>
+	<data name="UsersSortOrder_ByLastLoginDate" xml:space="preserve">
+    <value>By date of last login</value>
+  </data>
+	<data name="UsersSortOrder_ByName" xml:space="preserve">
+    <value>By name</value>
+  </data>
+	<data name="UsersSortOrder_ByTrainingDaysCount" xml:space="preserve">
+    <value>By number of calendar entries</value>
+  </data>
+	<data name="UsersSortOrder_ByVotingCount" xml:space="preserve">
+    <value>By number of voted items</value>
+  </data>
+	<data name="UsersSortOrder_ByWorkoutPlansCount" xml:space="preserve">
+    <value>By number of workout plans</value>
+  </data>
+	<data name="UserStatistics_SizeEntriesCount" xml:space="preserve">
+    <value>Measurement entries: {0}</value>
+  </data>
+	<data name="UserStatistics_SupplementsEntriesCount" xml:space="preserve">
+    <value>Supplement entries: {0}</value>
+  </data>
+	<data name="UserStatistics_BlogEntriesCount" xml:space="preserve">
+    <value>Blog entries: {0}</value>
+  </data>
+	<data name="UserStatistics_A6WEntriesCount" xml:space="preserve">
+    <value>A6W entries: {0}</value>
+  </data>
+	<data name="UserStatistics_A6WFullCyclesCount" xml:space="preserve">
+    <value>A6W cycles finished: {0}</value>
+  </data>
+	<data name="UserStatistics_NoStatus_Description_ToolTip" xml:space="preserve">
+    <value>No status in this category. To achieve {0} status, {1} items are required.</value>
+  </data>
+	<data name="UserStatistics_NextAvailableStatus_ToolTip" xml:space="preserve">
+    <value> Next available status {0} requires {1} items.</value>
+  </data>
+	<data name="UserStatistics_Status_Description_ToolTip" xml:space="preserve">
+    <value>{0}: Current status achieved after {1} items in this category.{2}</value>
+  </data>
+	<data name="AchievementRank_Rank2" xml:space="preserve">
+    <value>Beginner</value>
+  </data>
+	<data name="AchievementRank_Rank3" xml:space="preserve">
+    <value>Resident</value>
+  </data>
+	<data name="AchievementRank_Rank4" xml:space="preserve">
+    <value>Maniac</value>
+  </data>
+	<data name="AchievementRank_Rank5" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+	<data name="AchievementRank_Rank6" xml:space="preserve">
+    <value>Veteran</value>
+  </data>
+	<data name="UserStatistics_LastLoginDate" xml:space="preserve">
+    <value>Last login: {0}</value>
+  </data>
+	<data name="UserStatistics_LastEntryDate" xml:space="preserve">
+    <value>Last entry: {0}</value>
+  </data>
+	<data name="AchievementCategory_Famous" xml:space="preserve">
+    <value>Famous</value>
+  </data>
+	<data name="AchievementCategory_Social" xml:space="preserve">
+    <value>Social</value>
+  </data>
+	<data name="AchievementCategory_Sport" xml:space="preserve">
+    <value>Sport</value>
+  </data>
+	<data name="AchievementStar_Bronze" xml:space="preserve">
+    <value>Bronze</value>
+  </data>
+	<data name="AchievementStar_Gold" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+	<data name="AchievementStar_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+	<data name="AchievementStar_Silver" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+	<data name="MessagePriority_High" xml:space="preserve">
+    <value>High</value>
+  </data>
+	<data name="MessagePriority_Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+	<data name="MessagePriority_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+	<data name="MessagePriority_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+	<data name="SearchSortOrder_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="TimeType_AfterWorkout" xml:space="preserve">
+    <value>After workout</value>
+  </data>
+	<data name="TimeType_BeforeSleep" xml:space="preserve">
+    <value>Before sleep</value>
+  </data>
+	<data name="TimeType_BeforeWorkout" xml:space="preserve">
+    <value>Before workout</value>
+  </data>
+	<data name="TimeType_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+	<data name="TimeType_OnEmptyStomach" xml:space="preserve">
+    <value>On empty stomach</value>
+  </data>
+	<data name="AccountType_Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+	<data name="AccountType_Instructor" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+	<data name="AccountType_PremiumUser" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+	<data name="AccountType_User" xml:space="preserve">
+    <value>Free</value>
+  </data>
+	<data name="DropSetType_IDropSet" xml:space="preserve">
+    <value>1 dropset</value>
+  </data>
+	<data name="DropSetType_IIDropSet" xml:space="preserve">
+    <value>2 dropsets</value>
+  </data>
+	<data name="DropSetType_IIIDropSet" xml:space="preserve">
+    <value>3 dropsets</value>
+  </data>
+	<data name="DropSetType_IVDropSet" xml:space="preserve">
+    <value>4 dropsets</value>
+  </data>
+	<data name="DropSetType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+	<data name="DosageUnit_ON10KgWight" xml:space="preserve">
+    <value>on 10kg body weight</value>
+  </data>
+	<data name="SupplementCycleDayRepetitions_CardioTrainingDay" xml:space="preserve">
+    <value>On cardio training day</value>
+  </data>
+	<data name="SupplementCycleDayRepetitions_EveryDay" xml:space="preserve">
+    <value>Every day</value>
+  </data>
+	<data name="SupplementCycleDayRepetitions_NonTrainingDay" xml:space="preserve">
+    <value>On day without training</value>
+  </data>
+	<data name="SupplementCycleDayRepetitions_OnceAWeek" xml:space="preserve">
+    <value>Once a week</value>
+  </data>
+	<data name="SupplementCycleDayRepetitions_StrengthTrainingDay" xml:space="preserve">
+    <value>On strength training day</value>
+  </data>
+	<data name="TrainingType_ABW" xml:space="preserve">
+    <value>ABW</value>
+  </data>
+	<data name="TrainingType_ACT" xml:space="preserve">
+    <value>ACT</value>
+  </data>
+	<data name="TrainingType_FBW" xml:space="preserve">
+    <value>FBW</value>
+  </data>
+	<data name="TrainingType_HIT" xml:space="preserve">
+    <value>HIT</value>
+  </data>
+	<data name="TrainingType_HST" xml:space="preserve">
+    <value>HST</value>
+  </data>
+	<data name="TrainingType_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+	<data name="TrainingType_PushPull" xml:space="preserve">
+    <value>Push/Pull</value>
+  </data>
+	<data name="TrainingType_Split" xml:space="preserve">
+    <value>Split</value>
+  </data>
+	<data name="ExerciseSearchCriteriaGroup_Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+	<data name="ExerciseSearchCriteriaGroup_Global" xml:space="preserve">
+    <value>Global</value>
+  </data>
+	<data name="ExerciseSearchCriteriaGroup_Mine" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+	<data name="ExerciseSearchCriteriaGroup_Other" xml:space="preserve">
+    <value>Others</value>
+  </data>
+	<data name="DosageType_MiliGrams" xml:space="preserve">
+    <value>Miligrams</value>
+  </data>
+	<data name="EntryObjectStatus_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+	<data name="EntryObjectStatus_Planned" xml:space="preserve">
+    <value>Planned</value>
+  </data>
+	<data name="ExerciseDoneWay_Barbell" xml:space="preserve">
+    <value>Barbell</value>
+  </data>
+	<data name="ExerciseDoneWay_Cable" xml:space="preserve">
+    <value>Cable</value>
+  </data>
+	<data name="ExerciseDoneWay_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+	<data name="ExerciseDoneWay_Dumbbell" xml:space="preserve">
+    <value>Dumbbell</value>
+  </data>
+	<data name="ExerciseDoneWay_Machine" xml:space="preserve">
+    <value>Machine</value>
+  </data>
+	<data name="CalendarView_Copy" xml:space="preserve">
+    <value>_Copy</value>
+  </data>
+	<data name="CalendarView_Cut" xml:space="preserve">
+    <value>C_ut</value>
+  </data>
+	<data name="CalendarView_Delete" xml:space="preserve">
+    <value>_Delete</value>
+  </data>
+	<data name="CalendarView_New" xml:space="preserve">
+    <value>_New...</value>
+  </data>
+	<data name="CalendarView_Open" xml:space="preserve">
+    <value>_Open...</value>
+  </data>
+	<data name="CalendarView_Paste" xml:space="preserve">
+    <value>_Paste</value>
+  </data>
+	<data name="CalendarView_RibbonFirstEntry" xml:space="preserve">
+    <value>Go to the first entry</value>
+  </data>
+	<data name="CalendarView_RibbonGroupNavigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+	<data name="CalendarView_RibbonLastEntry" xml:space="preserve">
+    <value>Go to the last entry</value>
+  </data>
+	<data name="CalendarView_RibbonTabHeader" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+	<data name="CalendarView_RibbonToday" xml:space="preserve">
+    <value>Current month</value>
+  </data>
+	<data name="CalendarView_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+	<data name="CreateProfileWindow_AcceptLicenceCheckBox" xml:space="preserve">
+    <value>_I accept the Terms of Service and Privacy Policy</value>
+  </data>
+	<data name="CreateProfileWindow_CountryLabel" xml:space="preserve">
+    <value>_Country:</value>
+  </data>
+	<data name="CreateProfileWindow_DateOfBirthLabel" xml:space="preserve">
+    <value>_Date of Birth:</value>
+  </data>
+	<data name="CreateProfileWindow_EmailLabel" xml:space="preserve">
+    <value>_Email:</value>
+  </data>
+	<data name="CreateProfileWindow_GenderFemale" xml:space="preserve">
+    <value>_Female</value>
+  </data>
+	<data name="CreateProfileWindow_GenderLabel" xml:space="preserve">
+    <value>_Gender:</value>
+  </data>
+	<data name="CreateProfileWindow_GenderMale" xml:space="preserve">
+    <value>_Male</value>
+  </data>
+	<data name="CreateProfileWindow_Password1Label" xml:space="preserve">
+    <value>_Password:</value>
+  </data>
+	<data name="CreateProfileWindow_Password2Label" xml:space="preserve">
+    <value>_Verify:</value>
+  </data>
+	<data name="CreateProfileWindow_Title" xml:space="preserve">
+    <value>New profile</value>
+  </data>
+	<data name="CreateProfileWindow_UserInfoGroupBox" xml:space="preserve">
+    <value>User info</value>
+  </data>
+	<data name="CreateProfileWindow_UserNameLabel" xml:space="preserve">
+    <value>_User name:</value>
+  </data>
+	<data name="DashboardView_HeaderInvitations" xml:space="preserve">
+    <value>Invitations</value>
+  </data>
+	<data name="DashboardView_HeaderMeasurements" xml:space="preserve">
+    <value>Measurements</value>
+  </data>
+	<data name="DashboardView_HeaderMessages" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+	<data name="DashboardView_HeaderUserInformation" xml:space="preserve">
+    <value>User information</value>
+  </data>
+	<data name="ForgotPasswordWindow_DescriptionTextBlock" xml:space="preserve">
+    <value>Please enter your username or email address. A new password will be sent to the email address you entered when creating your account.</value>
+  </data>
+	<data name="ForgotPasswordWindow_Title" xml:space="preserve">
+    <value>Recover password</value>
+  </data>
+	<data name="ForgotPasswordWindow_UserNameEmailLabel" xml:space="preserve">
+    <value>_UserName or email:</value>
+  </data>
+	<data name="InvitationListControl_NoInvitationLabel" xml:space="preserve">
+    <value>No invitations</value>
+  </data>
+	<data name="InvitationWindow_Description" xml:space="preserve">
+    <value>Click OK to send. You can add a message for the user to see.</value>
+  </data>
+	<data name="InvitationWindow_MessageHeader" xml:space="preserve">
+    <value>Message</value>
+  </data>
+	<data name="InvitationWindow_Title" xml:space="preserve">
+    <value>Invitation</value>
+  </data>
+	<data name="LoginWindow_AutoLogin" xml:space="preserve">
+    <value>Autologin</value>
+  </data>
+	<data name="LoginWindow_ForceUpdate" xml:space="preserve">
+    <value>Check updates...</value>
+  </data>
+	<data name="LoginWindow_ForgotPassword" xml:space="preserve">
+    <value>Forgot a password?</value>
+  </data>
+	<data name="LoginWindow_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+	<data name="LoginWindow_Password" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+	<data name="LoginWindow_Register" xml:space="preserve">
+    <value>Register a free account...</value>
+  </data>
+	<data name="LoginWindow_Title" xml:space="preserve">
+    <value>Welcome to the BodyArchitect</value>
+  </data>
+	<data name="LoginWindow_UserName" xml:space="preserve">
+    <value>UserName:</value>
+  </data>
+	<data name="SendErrorWindow_ApplyAlwaysCheckBox" xml:space="preserve">
+    <value>_Remember this answer</value>
+  </data>
+	<data name="SendErrorWindow_ContentLabel" xml:space="preserve">
+    <value>_Content:</value>
+  </data>
+	<data name="SendErrorWindow_DescriptionTextBlock" xml:space="preserve">
+    <value>An error occured while using the application. To avoid the situation in the future, you can inform the author of this message by sending the error's description. We encourage you to send information about each error you encounter. The error-description message does not contain any private data. Below you can see the contents of the message.</value>
+  </data>
+	<data name="SendErrorWindow_DontSendButton" xml:space="preserve">
+    <value>_Don't send</value>
+  </data>
+	<data name="SendErrorWindow_ErrorDetailsGroupBox" xml:space="preserve">
+    <value>Message</value>
+  </data>
+	<data name="SendErrorWindow_SendButton" xml:space="preserve">
+    <value>_Send</value>
+  </data>
+	<data name="SendErrorWindow_SubjectLabel" xml:space="preserve">
+    <value>S_ubject:</value>
+  </data>
+	<data name="SendErrorWindow_Title" xml:space="preserve">
+    <value>Error report</value>
+  </data>
+	<data name="usrMessagesBoard_DeleteMessageToolTip" xml:space="preserve">
+    <value>Deletes this message</value>
+  </data>
+	<data name="usrMessagesBoard_NoMessagesLabel" xml:space="preserve">
+    <value>You have no messages</value>
+  </data>
+	<data name="usrMessageView_ContenttLabel" xml:space="preserve">
+    <value>_Content:</value>
+  </data>
+	<data name="usrMessageView_PriorityLabel" xml:space="preserve">
+    <value>_Priority:</value>
+  </data>
+	<data name="usrMessageView_SubjectLabel" xml:space="preserve">
+    <value>_Subject:</value>
+  </data>
+	<data name="usrWymiaryEditor_HeightLabel" xml:space="preserve">
+    <value>_Height:</value>
+  </data>
+	<data name="usrWymiaryEditor_KlatkaLabel" xml:space="preserve">
+    <value>_Chest:</value>
+  </data>
+	<data name="usrWymiaryEditor_LeftBicepsLabel" xml:space="preserve">
+    <value>Lef_t biceps:</value>
+  </data>
+	<data name="usrWymiaryEditor_LeftForearmsLabel" xml:space="preserve">
+    <value>_Left forearm:</value>
+  </data>
+	<data name="usrWymiaryEditor_LeftUdoLabel" xml:space="preserve">
+    <value>L_eft thigh:</value>
+  </data>
+	<data name="usrWymiaryEditor_PasLabel" xml:space="preserve">
+    <value>_Abs:</value>
+  </data>
+	<data name="usrWymiaryEditor_RightBicepsLabel" xml:space="preserve">
+    <value>Rig_ht biceps:</value>
+  </data>
+	<data name="usrWymiaryEditor_RightForearmLabel" xml:space="preserve">
+    <value>_Right forearm:</value>
+  </data>
+	<data name="usrWymiaryEditor_RightUdoLabel" xml:space="preserve">
+    <value>R_ight thigh:</value>
+  </data>
+	<data name="usrWymiaryEditor_TimeLabel" xml:space="preserve">
+    <value>_Time:</value>
+  </data>
+	<data name="usrWymiaryEditor_WeightLabel" xml:space="preserve">
+    <value>_Weight:</value>
+  </data>
+	<data name="SendMessageWindow_Title" xml:space="preserve">
+    <value>Send a private message</value>
+  </data>
+	<data name="usrMessageView_MessageHeader" xml:space="preserve">
+    <value>Message</value>
+  </data>
+	<data name="ProfileEditWindow_Title" xml:space="preserve">
+    <value>Profile editor</value>
+  </data>
+	<data name="usrProfileEdit_HeaderMeasurementsInfo" xml:space="preserve">
+    <value>Measurements</value>
+  </data>
+	<data name="usrProfileEdit_HeaderNotifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+	<data name="usrProfileEdit_HeaderPersonalInfo" xml:space="preserve">
+    <value>Personal info</value>
+  </data>
+	<data name="usrProfileEdit_HeaderPrivacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+	<data name="usrProfileEdit_HeaderProfileInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+	<data name="ProfileEditWindow_DeleteProfileToolTip" xml:space="preserve">
+    <value>Clicking on this button will delete your profile along with all data (calendar entries, private plans and exercises ,...). After this operation, it will not be possible to use or recover this profile data.</value>
+  </data>
+	<data name="usrProfilePersonalInfo_HeaderAbout" xml:space="preserve">
+    <value>About you</value>
+  </data>
+	<data name="usrProfilePersonalInfo_HeaderImage" xml:space="preserve">
+    <value>Image</value>
+  </data>
+	<data name="usrProfilePersonalInfo_ImageDescription" xml:space="preserve">
+    <value>This image will be displayed in all the sites where your profile is shown to other users.</value>
+  </data>
+	<data name="usrProfileEdit_AutoUpdateMeasurementsCheckBox" xml:space="preserve">
+    <value>_Automatically update measurements from calendar</value>
+  </data>
+	<data name="usrProfileNotifications_NotifyBlogComment" xml:space="preserve">
+    <value>Notify, when someone has added a _comment to your log</value>
+  </data>
+	<data name="usrProfileNotifications_NotifyFriendChangedCalendar" xml:space="preserve">
+    <value>Notify, when your friend has added a new entry to the calendar</value>
+  </data>
+	<data name="usrProfileNotifications_NotifyVoted" xml:space="preserve">
+    <value>Notify, when someone has voted on your workout plan, supplement cycle or exercise.</value>
+  </data>
+	<data name="usrProfilePrivacy_BirthdayLabel" xml:space="preserve">
+    <value>Date of _birth:</value>
+  </data>
+	<data name="usrProfilePrivacy_CalendarLabel" xml:space="preserve">
+    <value>_Calendar entries:</value>
+  </data>
+	<data name="usrProfilePrivacy_FriendsListLabel" xml:space="preserve">
+    <value>List of _friends:</value>
+  </data>
+	<data name="usrProfilePrivacy_MeasurementsLabel" xml:space="preserve">
+    <value>_Measurements:</value>
+  </data>
+	<data name="ExBaImage_DeleteButtonToolTip" xml:space="preserve">
+    <value>Deletes the current photo and set the default one.</value>
+  </data>
+	<data name="ExBaImage_ImageToolTip" xml:space="preserve">
+    <value>Double click to choose the photo.</value>
+  </data>
+	<data name="OptionsWindow_ResetAllButton" xml:space="preserve">
+    <value>_Reset all</value>
+  </data>
+	<data name="OptionsWindow_Title" xml:space="preserve">
+    <value>Options</value>
+  </data>
+	<data name="usrReportStatus_ReportStatusHeader" xml:space="preserve">
+    <value>Report status</value>
+  </data>
+	<data name="InputWindow_Label" xml:space="preserve">
+    <value>Enter a new value:</value>
+  </data>
+	<data name="InputWindow_Title" xml:space="preserve">
+    <value>New value</value>
+  </data>
+	<data name="usrDateRange_FromLabel" xml:space="preserve">
+    <value>_From:</value>
+  </data>
+	<data name="usrDateRange_Header" xml:space="preserve">
+    <value>Date</value>
+  </data>
+	<data name="usrDateRange_ToLabel" xml:space="preserve">
+    <value>_To:</value>
+  </data>
+	<data name="usrReportingEntryStatus_Header" xml:space="preserve">
+    <value>Entry statuses</value>
+  </data>
+	<data name="usrReportingEntryStatus_AllEntries" xml:space="preserve">
+    <value>All entries</value>
+  </data>
+	<data name="usrReportingEntryStatus_OnlyForReportingEntries" xml:space="preserve">
+    <value>For report only</value>
+  </data>
+	<data name="ExBaImage_OpenImageDialogFilter" xml:space="preserve">
+    <value>All images|*.png;*.bmp;*.jpg;*.jpeg;*.gif</value>
+  </data>
+	<data name="usrApplicationName_Header" xml:space="preserve">
+    <value>Inserted from</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintBackground.Description" xml:space="preserve">
+    <value>Set this to true to have a nice background after you print your workout plan</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintBackground.DisplayName" xml:space="preserve">
+    <value>Print background</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintDays.Description" xml:space="preserve">
+    <value>Here you can decide which workout days you want to see in your plan.</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintDays.DisplayName" xml:space="preserve">
+    <value>Weeks to print</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintDescription.Description" xml:space="preserve">
+    <value>Here you can decide if you want to see workout plan description</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintDescription.DisplayName" xml:space="preserve">
+    <value>Print description</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintEntriesComment.Description" xml:space="preserve">
+    <value>Set this option to print entries comment.</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintEntriesComment.DisplayName" xml:space="preserve">
+    <value>Print entries comment</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintExerciseShortcut.Description" xml:space="preserve">
+    <value>Set this option to true to add exercise shortcut in the workout plan</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintExerciseShortcut.DisplayName" xml:space="preserve">
+    <value>Print exercise shortcut</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintExerciseType.Description" xml:space="preserve">
+    <value>Set this option to true to put main muscle for every exercise in the workout plan</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintExerciseType.DisplayName" xml:space="preserve">
+    <value>Print muscle</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintHeaders.Description" xml:space="preserve">
+    <value>Indicates if the headers of each section will be printed</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintHeaders.DisplayName" xml:space="preserve">
+    <value>Print headers</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintInfo.Description" xml:space="preserve">
+    <value>Here you can decide if you want to see information panel</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintInfo.DisplayName" xml:space="preserve">
+    <value>Print info</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintLegend.Description" xml:space="preserve">
+    <value>Set this option to print the legend (description about what you see in the workout plan)</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintLegend.DisplayName" xml:space="preserve">
+    <value>Print the legend</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintRequiredSetsOnly.Description" xml:space="preserve">
+    <value>This setting is related with sets number. If you select this options then in your workout plan you will see only required sets. If you set false, then you will see all sets defined in sets number property.</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintRequiredSetsOnly.DisplayName" xml:space="preserve">
+    <value>Print only required sets</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintSetsComment.Description" xml:space="preserve">
+    <value>Set this option to print all comment for every set (if available)</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintSetsComment.DisplayName" xml:space="preserve">
+    <value>Print sets' comment</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintSetsPlaceholders.Description" xml:space="preserve">
+    <value>This option is good for print workout plan when you go to the gym. When this option is set to true, in the workout plan in every set you will have a place to put your own values.</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.PrintSetsPlaceholders.DisplayName" xml:space="preserve">
+    <value>Print sets placeholders</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.SetsNumberToPrint.Description" xml:space="preserve">
+    <value>This setting is related with Print required sets only. It determines how many sets you will see in the workout plan.</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.SetsNumberToPrint.DisplayName" xml:space="preserve">
+    <value>Sets number to print</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.UseAlternateRows.Description" xml:space="preserve">
+    <value>Set this option to true to highlight exercises row to increase usability.</value>
+  </data>
+	<data name="TrainingPlanHtmlExporter.UseAlternateRows.DisplayName" xml:space="preserve">
+    <value>Use alternate rows</value>
+  </data>
+	<data name="TrainingDayWindow_AllowComments" xml:space="preserve">
+    <value>Allow comments</value>
+  </data>
+	<data name="TrainingDayWindow_DisableComments" xml:space="preserve">
+    <value>Disable comments</value>
+  </data>
+	<data name="TrainingDayWindow_Header_AllowComments" xml:space="preserve">
+    <value>Allow comments</value>
+  </data>
+	<data name="TrainingDayWindow_Header_Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+	<data name="TrainingDayWindow_Send_Button" xml:space="preserve">
+    <value>Send</value>
+  </data>
+	<data name="Calendar_Generic_Text_ClickToAddAppointment" xml:space="preserve">
+    <value>Click to add appointment</value>
+  </data>
+	<data name="usrCalendarOptions_Content_EnableGridEdit" xml:space="preserve">
+    <value>_Enable smart grid edit</value>
+  </data>
+	<data name="usrCalendarOptions_Content_ShowDates" xml:space="preserve">
+    <value>_Show relative dates</value>
+  </data>
+	<data name="usrCalendarOptions_Header_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+	<data name="usrCalendarOptions_Header_Module" xml:space="preserve">
+    <value>Module</value>
+  </data>
+	<data name="usrCalendarOptions_Text_EntriesDisplaing" xml:space="preserve">
+    <value>Order of modules in this list has impact on displaying entries in the calendar. Entries will be displayed from top to bottom.</value>
+  </data>
+	<data name="usrCalendarOptions_Text_SettingsForModules" xml:space="preserve">
+    <value>Settings for modules:</value>
+  </data>
+	<data name="usrMiscOptions_Content_Cm" xml:space="preserve">
+    <value>Cm</value>
+  </data>
+	<data name="usrMiscOptions_Content_Inchs" xml:space="preserve">
+    <value>Inchs</value>
+  </data>
+	<data name="usrMiscOptions_Content_Kg" xml:space="preserve">
+    <value>Kg</value>
+  </data>
+	<data name="usrMiscOptions_Content_Length" xml:space="preserve">
+    <value>_Length:</value>
+  </data>
+	<data name="usrMiscOptions_Content_Pounds" xml:space="preserve">
+    <value>Pounds</value>
+  </data>
+	<data name="usrMiscOptions_Content_Weight" xml:space="preserve">
+    <value>_Weight:</value>
+  </data>
+	<data name="usrProfileListEntry_Text_CreationDate" xml:space="preserve">
+    <value>Creation date: </value>
+  </data>
+	<data name="usrRemindMe_Content_10Minutes" xml:space="preserve">
+    <value>10 minutes</value>
+  </data>
+	<data name="usrRemindMe_Content_15Minutes" xml:space="preserve">
+    <value>15 minutes</value>
+  </data>
+	<data name="usrRemindMe_Content_18Hours" xml:space="preserve">
+    <value>18 hours</value>
+  </data>
+	<data name="usrRemindMe_Content_1Day" xml:space="preserve">
+    <value>1 day</value>
+  </data>
+	<data name="usrRemindMe_Content_1Hour" xml:space="preserve">
+    <value>1 hour</value>
+  </data>
+	<data name="usrRemindMe_Content_1Week" xml:space="preserve">
+    <value>1 week</value>
+  </data>
+	<data name="usrRemindMe_Content_30Minutes" xml:space="preserve">
+    <value>30 minutes</value>
+  </data>
+	<data name="usrRemindMe_Content_5Minutes" xml:space="preserve">
+    <value>5 minutes</value>
+  </data>
+	<data name="usrRemindMe_Content_AtStartTime" xml:space="preserve">
+    <value>At start time</value>
+  </data>
+	<data name="usrRemindMe_Content_RemindMe" xml:space="preserve">
+    <value>Remind me about it</value>
+  </data>
+	<data name="HtmlPreviewView_Header_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+	<data name="HtmlPreviewView_Header_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+	<data name="HtmlPreviewView_Header_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+	<data name="HtmlPreviewView_Label_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+	<data name="HtmlPreviewView_Label_PrintPreview" xml:space="preserve">
+    <value>Print preview</value>
+  </data>
+	<data name="HtmlPreviewView_ToolTip_Alphabetical" xml:space="preserve">
+    <value>Alphabetical</value>
+  </data>
+	<data name="HtmlPreviewView_ToolTip_Categorized" xml:space="preserve">
+    <value>Categorized</value>
+  </data>
+	<data name="LogView_Header_Log_RibbonGroup" xml:space="preserve">
+    <value>Log</value>
+  </data>
+	<data name="LogView_Header_Log_RibbonTab" xml:space="preserve">
+    <value>Log</value>
+  </data>
+	<data name="LogView_Label_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+	<data name="LogView_Label_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+	<data name="LogView_Label_TurnOn" xml:space="preserve">
+    <value>Turn on</value>
+  </data>
+	<data name="LogView_Watermark_EmptyLog" xml:space="preserve">
+    <value>Log is empty</value>
+  </data>
+	<data name="MainWindow_Header_ErrorLog" xml:space="preserve">
+    <value>Error log</value>
+  </data>
+	<data name="MainWindow_Header_Facebook" xml:space="preserve">
+    <value>_Facebook</value>
+  </data>
+	<data name="MainWindow_Header_Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+	<data name="MainWindow_Header_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+	<data name="MainWindow_Header_LogOut" xml:space="preserve">
+    <value>_Logout</value>
+  </data>
+	<data name="MainWindow_Header_LogViewer" xml:space="preserve">
+    <value>Log viewer</value>
+  </data>
+	<data name="MainWindow_Header_Options" xml:space="preserve">
+    <value>_Options</value>
+  </data>
+	<data name="MainWindow_Header_StandardLog" xml:space="preserve">
+    <value>Standard log</value>
+  </data>
+	<data name="MainWindow_Header_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+	<data name="MainWindow_Label_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+	<data name="MainWindow_Label_Back_QuickAccess" xml:space="preserve">
+    <value>Back</value>
+  </data>
+	<data name="MainWindow_Label_Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+	<data name="MainWindow_Label_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+	<data name="MainWindow_Label_Forward" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+	<data name="MainWindow_Label_Forward_QuickAccess" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+	<data name="MainWindow_Label_MyTrainings" xml:space="preserve">
+    <value>My trainings</value>
+  </data>
+	<data name="MainWindow_Label_People" xml:space="preserve">
+    <value>People</value>
+  </data>
+	<data name="MainWindow_Label_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+	<data name="MainWindow_Label_Refresh_QuickAccess" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+	<data name="MainWindow_Label_Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+	<data name="MainWindow_Text_ShowData" xml:space="preserve">
+    <value>Show data:</value>
+  </data>
+	<data name="MyTrainingsView_Header_MyTrainings" xml:space="preserve">
+    <value>My trainings</value>
+  </data>
+	<data name="MyTrainingsView_Header_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="MyTrainingsView_Header_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+	<data name="MyTrainingsView_Header_Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+	<data name="MyTrainingsView_Header_State" xml:space="preserve">
+    <value>State</value>
+  </data>
+	<data name="MyTrainingsView_Header_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+	<data name="MyTrainingsView_Label_Break" xml:space="preserve">
+    <value>Break</value>
+  </data>
+	<data name="NewCalendarView_Header_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="NewCalendarView_Header_DoneOnly" xml:space="preserve">
+    <value>Done only</value>
+  </data>
+	<data name="NewCalendarView_Header_PlannedOnly" xml:space="preserve">
+    <value>Planned only</value>
+  </data>
+	<data name="NewCalendarView_Label_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+	<data name="NewReportingView_Header_Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+	<data name="NewReportingView_Header_ReportGroup" xml:space="preserve">
+    <value>Report</value>
+  </data>
+	<data name="NewReportingView_Label_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="NewReportingView_Label_Generate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+	<data name="NewReportingView_Label_Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+	<data name="NewReportingView_Label_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+	<data name="NewReportingView_Label_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+	<data name="NewReportingView_Label_ZoomReset" xml:space="preserve">
+    <value>Zoom reset</value>
+  </data>
+	<data name="ProgressIndicator_Generic_Text_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+	<data name="TrainingDayWindow_Header_DayEntry" xml:space="preserve">
+    <value>Calendar entry</value>
+  </data>
+	<data name="TrainingDayWindow_Header_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+	<data name="TrainingDayWindow_Header_Facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+	<data name="TrainingDayWindow_Header_Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+	<data name="TrainingDayWindow_Header_ReservationOnly" xml:space="preserve">
+    <value>Reservation only</value>
+  </data>
+	<data name="TrainingDayWindow_Header_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="usrPeopleView_Header_Ascending" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+	<data name="usrPeopleView_Header_Criteria" xml:space="preserve">
+    <value>Criteria</value>
+  </data>
+	<data name="usrPeopleView_Header_Descending" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+	<data name="usrPeopleView_Header_MyContacts" xml:space="preserve">
+    <value>My contacts</value>
+  </data>
+	<data name="usrPeopleView_Header_Search_RibbonGroup" xml:space="preserve">
+    <value>Search</value>
+  </data>
+	<data name="usrPeopleView_Header_Search_RibbonTab" xml:space="preserve">
+    <value>Search</value>
+  </data>
+	<data name="usrPeopleView_Header_Search_TabItem" xml:space="preserve">
+    <value>Search</value>
+  </data>
+	<data name="usrPeopleView_Header_SortOrder" xml:space="preserve">
+    <value>Sort order</value>
+  </data>
+	<data name="usrPeopleView_Label_Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+	<data name="usrPeopleView_Label_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+	<data name="usrPeopleView_Label_Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+	<data name="usrPeopleView_Label_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+	<data name="usrPeopleView_Label_Measurments" xml:space="preserve">
+    <value>Measurments</value>
+  </data>
+	<data name="usrPeopleView_Label_More" xml:space="preserve">
+    <value>More</value>
+  </data>
+	<data name="usrPeopleView_Label_OrderBy" xml:space="preserve">
+    <value>Order by</value>
+  </data>
+	<data name="usrPeopleView_Label_Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+	<data name="usrPeopleView_Label_Plans" xml:space="preserve">
+    <value>Plans</value>
+  </data>
+	<data name="usrPeopleView_Label_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+	<data name="usrPeopleView_Label_SortOrder" xml:space="preserve">
+    <value>Sort order</value>
+  </data>
+	<data name="usrPeopleView_Label_Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+	<data name="usrUserInformation_Header_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+	<data name="usrUserInformation_Header_Social" xml:space="preserve">
+    <value>Social</value>
+  </data>
+	<data name="usrUserInformation_Header_User" xml:space="preserve">
+    <value>User</value>
+  </data>
+	<data name="usrUserInformation_Label_Accept" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+	<data name="usrUserInformation_Label_AddToFavorites" xml:space="preserve">
+    <value>Add to favorites</value>
+  </data>
+	<data name="usrUserInformation_Label_Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+	<data name="usrUserInformation_Label_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="usrUserInformation_Label_Invite" xml:space="preserve">
+    <value>Invite</value>
+  </data>
+	<data name="usrUserInformation_Label_Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+	<data name="usrUserInformation_Label_RemoveFromFavorites" xml:space="preserve">
+    <value>Remove from favorites</value>
+  </data>
+	<data name="usrUserInformation_Label_Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+	<data name="usrUserInformation_Label_SendMessage" xml:space="preserve">
+    <value>Send message</value>
+  </data>
+	<data name="usrUserInfo_Content_SetupYourProfile" xml:space="preserve">
+    <value>Setup your profile in 3 easy steps</value>
+  </data>
+	<data name="usrUserInfo_Header_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+	<data name="usrUserInfo_Header_Achievements" xml:space="preserve">
+    <value>Achievements</value>
+  </data>
+	<data name="usrUserInfo_Header_Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+	<data name="usrUserInfo_Header_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+	<data name="usrUserInfo_Text_ActivateProfile" xml:space="preserve">
+    <value>You must activate your profile</value>
+  </data>
+	<data name="usrUserInfo_Text_NoImportantInfo" xml:space="preserve">
+    <value>No important information</value>
+  </data>
+	<data name="usrUserInfo_Watermark_NoInformationAboutUser" xml:space="preserve">
+    <value>User hasn't written anything about himself</value>
+  </data>
+	<data name="usrWorkoutCommentsList_Header_Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+	<data name="usrWorkoutCommentsList_Text_SelectItemFirst" xml:space="preserve">
+    <value>Select an item first</value>
+  </data>
+	<data name="WorkoutPlanCommentListControl_EmptyListMessage_RetrievingData" xml:space="preserve">
+    <value>Retrieving data...</value>
+  </data>
+	<data name="TrainingDayWindow_Header_NotFromReservation" xml:space="preserve">
+    <value>Not from reservation</value>
+  </data>
+	<data name="TrainingDayWindow_Label_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="TrainingDayWindow_Label_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+	<data name="TrainingDayWindow_Label_Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+	<data name="TrainingDayWindow_Label_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+	<data name="TrainingDayWindow_Label_Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+	<data name="TrainingDayWindow_Label_ShowComments" xml:space="preserve">
+    <value>Show comments</value>
+  </data>
+	<data name="TrainingDayWindow_ToolTip_ConnectedToReservation" xml:space="preserve">
+    <value>Connected to reservation</value>
+  </data>
+	<data name="BACustomControls_Text_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+	<data name="BACustomControls_Value_NoItem" xml:space="preserve">
+    <value>No item to display</value>
+  </data>
+	<data name="BAExtendedToolkit_Content_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+	<data name="usrProfileNotifications_Text_SocialEventsNotify" xml:space="preserve">
+    <value>Notify about all social events like friendship invitation, favorite profile deleted, etc</value>
+  </data>
+	<data name="EditDomainObjectWindow_Title_Editor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+	<data name="PopupNotificationCtrl_ToolTip_ClickToOpen" xml:space="preserve">
+    <value>Click to open</value>
+  </data>
+	<data name="usrProfilePersonalInfo_Watermark_WrtiteSthAboutYou" xml:space="preserve">
+    <value>Write some sentences about you</value>
+  </data>
+	<data name="usrReportStatus_Content_Status" xml:space="preserve">
+    <value>_Status:</value>
+  </data>
+	<data name="usrMyTrainingStatus_Header_TrainingCycle" xml:space="preserve">
+    <value>Training cycle</value>
+  </data>
+	<data name="usrCalendarOptions_Text_SettingForModules" xml:space="preserve">
+    <value>Modules:</value>
+  </data>
+	<data name="ChangeAccountTypeView_RibbonGroup_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+	<data name="ChangeAccountTypeView_RibbonItem_ImportSerialKey" xml:space="preserve">
+    <value>Add key</value>
+  </data>
+	<data name="ChangeAccountTypeView_RibbonTab_AccountType" xml:space="preserve">
+    <value>Account type</value>
+  </data>
+	<data name="CreateProfileWindow_Label_Units" xml:space="preserve">
+    <value>_Units:</value>
+  </data>
+	<data name="MyStyles_ToolTip_DefaultMyPlace" xml:space="preserve">
+    <value>Default</value>
+  </data>
+	<data name="MyStyles_ToolTip_SystemMyPlace" xml:space="preserve">
+    <value>Cannot be deleted</value>
+  </data>
+	<data name="PopupNotificationCtrl_Header_NewRecord" xml:space="preserve">
+    <value>New Record!</value>
+  </data>
+	<data name="usrAddressDetails_Label_Address1" xml:space="preserve">
+    <value>Address _1</value>
+  </data>
+	<data name="usrAddressDetails_Label_Address2" xml:space="preserve">
+    <value>Address _2</value>
+  </data>
+	<data name="usrAddressDetails_Label_City" xml:space="preserve">
+    <value>_City</value>
+  </data>
+	<data name="usrAddressDetails_Label_Country" xml:space="preserve">
+    <value>C_ountry</value>
+  </data>
+	<data name="usrAddressDetails_Label_PostalCode" xml:space="preserve">
+    <value>_Postal code</value>
+  </data>
+	<data name="usrProfileNotifications_EMail" xml:space="preserve">
+    <value>EMail</value>
+  </data>
+	<data name="usrProfileNotifications_Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+	<data name="usrProfileNotifications_NotifyFollowersChangedCalendar" xml:space="preserve">
+    <value>Notify, when person you follow has added a new entry to the calendar</value>
+  </data>
+	<data name="usrProfilePrivacy_Help_Calendar" xml:space="preserve">
+    <value>Free account has always a public calendar</value>
+  </data>
+	<data name="usrProfilePrivacy_Help_Measurements" xml:space="preserve">
+    <value>Free account has always a public measurements</value>
+  </data>
+	<data name="usrUserInfo_Button_Buy" xml:space="preserve">
+    <value>Buy...</value>
+  </data>
+	<data name="usrUserInfo_Header_Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+	<data name="usrUserInfo_Watermark_ProfileStatus" xml:space="preserve">
+    <value>Tell your friends what you're up to</value>
+  </data>
+	<data name="ChangeAccountTypeView_Button_FreeAccount" xml:space="preserve">
+    <value>Free</value>
+  </data>
+	<data name="ChangeAccountTypeView_Button_InstructorAccount" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+	<data name="ChangeAccountTypeView_Button_PremiumAccount" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+	<data name="ChangeAccountTypeView_Help_AccountTypePromotion" xml:space="preserve">
+    <value>W przypadku niektórych promocji, tymczasowo fukncjonalność programu jest zwiększona, dzięki czemu, masz możliwość zapoznania się z innymi funkcjami w programie.</value>
+  </data>
+	<data name="ChangeAccountTypeView_Help_FreeAccountType" xml:space="preserve">
+    <value>Całkowicie bezpłatne konto, które daje Ci dostęp do większości funkcjonalności programu. Nie potrzeba nic więcej, aby zacząć prowadzić własny, profesjonalny i niesamowicie pomocny dziennik treningowy. Dołącz do grona najlepszych pakerów na świecie!</value>
+  </data>
+	<data name="ChangeAccountTypeView_Help_InstructorAccountType" xml:space="preserve">
+    <value>Jeśli jesteś instruktorem fitness i prowadzisz zajęcia lub treningi indywidualne to konto Instruktor jest stworzone specjalnie dla Ciebie. Stwórz swoją bazę klientów oraz swój plan zajęć, a następnie prowadź dziennik treningowy dla każdego klienta osobno. Teraz w każdej chwili będziesz miał dostęp do wszystkich treningów swoich klientów.</value>
+  </data>
+	<data name="ChangeAccountTypeView_Help_PointsCost" xml:space="preserve">
+    <value>Wyświetla ilość punktów, która będzie pobierana każdego dnia za korzystanie z programu na wybranym typie konta.</value>
+  </data>
+	<data name="ChangeAccountTypeView_Help_PremiumAccountType" xml:space="preserve">
+    <value>Jeszcze Ci mało pakerze? Szukasz idealnego narzędzia, które pomoże Ci doprowadzić swoje ciało do perfekcji? Konto Premium daje Ci dostęp do wszystkich funkcjonalności programu (prócz narzędzi zaprojektowanych specjalnie dla instruktorów).</value>
+  </data>
+	<data name="Feature_FreeAccount_A6W" xml:space="preserve">
+    <value>Full support for Aerobic “6” of Weider</value>
+  </data>
+	<data name="Feature_FreeAccount_AccessSupplementsCycleDefinitions" xml:space="preserve">
+    <value>Basic access to supplements cycle definitions</value>
+  </data>
+	<data name="Feature_FreeAccount_AccessToCalendardOfOtherUsers" xml:space="preserve">
+    <value>Thanks to the access to other people’s journals you have the access to a huge knowledge base concerning bodybuilding</value>
+  </data>
+	<data name="Feature_FreeAccount_AccessToWorkoutPlans" xml:space="preserve">
+    <value>A constantly expanding base of ready to use workout plans</value>
+  </data>
+	<data name="Feature_FreeAccount_Blog" xml:space="preserve">
+    <value>A mini blog gives you a possibility to describe your workouts even more thoroughly</value>
+  </data>
+	<data name="Feature_FreeAccount_Community" xml:space="preserve">
+    <value>Advanced search for users gives you the chance to meet amazing people, for whom bodybuilding is a passion and their whole life</value>
+  </data>
+	<data name="Feature_FreeAccount_LargeExercisesDb" xml:space="preserve">
+    <value>A collection of over 200 described exercises</value>
+  </data>
+	<data name="Feature_FreeAccount_Measurements" xml:space="preserve">
+    <value>The ability to write down measurements and weight even every day</value>
+  </data>
+	<data name="Feature_FreeAccount_Reports" xml:space="preserve">
+    <value>Generation of reports based on your workout log entries</value>
+  </data>
+	<data name="Feature_FreeAccount_Supplements" xml:space="preserve">
+    <value>The workout journal makes it possible to thoroughly note down all used supplements</value>
+  </data>
+	<data name="Feature_FreeAccount_UnlimitedCalendar" xml:space="preserve">
+    <value>Unlimited number of workout entries</value>
+  </data>
+	<data name="ChangeAccountTypeView_ErrDuringChangeAccountType" xml:space="preserve">
+    <value>Cannot change account type. Please contanct with us for assistance.</value>
+  </data>
+	<data name="ChangeAccountTypeView_ErrEnoughtBAPoints" xml:space="preserve">
+    <value>You don't have enough points to change the account type. Buy some points and try again.</value>
+  </data>
+	<data name="ChangeAccountTypeView_Header" xml:space="preserve">
+    <value>Account type</value>
+  </data>
+	<data name="ChangeAccountTypeView_Label_MyPoints" xml:space="preserve">
+    <value>My points</value>
+  </data>
+	<data name="ChangeAccountTypeView_PointsPerDay" xml:space="preserve">
+    <value>{0} points/day</value>
+  </data>
+	<data name="ChangeAccountTypeView_QLowerAccountType" xml:space="preserve">
+    <value>You want to change the account type to lower. You can continue, but keep in my that change will cost you {0} points. Do you want to continue?</value>
+  </data>
+	<data name="ChangeAccountTypeView_QUpAccountType" xml:space="preserve">
+    <value>Do you want to change your account type?</value>
+  </data>
+	<data name="Feature_FreeAccount_Records" xml:space="preserve">
+    <value>Trak you records for every exercise</value>
+  </data>
+	<data name="Feature_InstructorAccount_Customers" xml:space="preserve">
+    <value>Customers list with most importat informations</value>
+  </data>
+	<data name="Feature_InstructorAccount_CustomersCalendar" xml:space="preserve">
+    <value>Calendar functionality for every customer</value>
+  </data>
+	<data name="Feature_InstructorAccount_SchedulePlan" xml:space="preserve">
+    <value>Create Schedule plan</value>
+  </data>
+	<data name="Feature_PremiumAccount_CreateExercises" xml:space="preserve">
+    <value>Ability to create any number of custom exercises</value>
+  </data>
+	<data name="Feature_PremiumAccount_CreateSupplementsDefinitions" xml:space="preserve">
+    <value>Create supplements cycle definitions</value>
+  </data>
+	<data name="Feature_PremiumAccount_CreateWorkoutPlans" xml:space="preserve">
+    <value>Creating workout plans</value>
+  </data>
+	<data name="Feature_PremiumAccount_DoneWay" xml:space="preserve">
+    <value>Supports for equipments</value>
+  </data>
+	<data name="Feature_PremiumAccount_EntriesInFuture" xml:space="preserve">
+    <value>Can create calendar entries in the future</value>
+  </data>
+	<data name="Feature_PremiumAccount_MyPlaces" xml:space="preserve">
+    <value>Supports for My places</value>
+  </data>
+	<data name="Feature_PremiumAccount_MyTrainings" xml:space="preserve">
+    <value>Can use My trainings feature</value>
+  </data>
+	<data name="Feature_PremiumAccount_Printing" xml:space="preserve">
+    <value>Can print workout plans and supplements cycle definitions</value>
+  </data>
+	<data name="Feature_PremiumAccount_Privacy" xml:space="preserve">
+    <value>Calendar and measurements can have private.</value>
+  </data>
+	<data name="Feature_PremiumAccount_Reminders" xml:space="preserve">
+    <value>Access to reminders</value>
+  </data>
+	<data name="HelpButton" xml:space="preserve">
+    <value>Help</value>
+  </data>
+	<data name="ImportLicenceKeyWindow_Button_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+	<data name="ImportLicenceKeyWindow_ErrImportKey" xml:space="preserve">
+    <value>Cannot import this licence key.</value>
+  </data>
+	<data name="ImportLicenceKeyWindow_ErrKeyAlreadyImported" xml:space="preserve">
+    <value>This licence key has been already imported.</value>
+  </data>
+	<data name="ImportLicenceKeyWindow_Label_EnterLicenceKey" xml:space="preserve">
+    <value>_Enter licence key:</value>
+  </data>
+	<data name="ImportLicenceKeyWindow_Title" xml:space="preserve">
+    <value>Import licence</value>
+  </data>
+	<data name="MyPlacesView_ErrDeleteMyPlace_IsInUse" xml:space="preserve">
+    <value>This place is in used. You cannot delete it.</value>
+  </data>
+	<data name="MyPlacesView_ErrSetDefaultMyPlace" xml:space="preserve">
+    <value>Cannot finish this operation.</value>
+  </data>
+	<data name="MyPlacesView_Header" xml:space="preserve">
+    <value>My places</value>
+  </data>
+	<data name="MyPlacesView_QDeleteMyPlace" xml:space="preserve">
+    <value>Do you want to delete place {0}?</value>
+  </data>
+	<data name="MainWindow_Header_ImportLicence" xml:space="preserve">
+    <value>Import licence</value>
+  </data>
+	<data name="MainWindow_RibbonItem_MyPlaces" xml:space="preserve">
+    <value>My places</value>
+  </data>
+	<data name="MainWindow_RibbonMenu_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+	<data name="MainWindow_Status_LimitedFeature" xml:space="preserve">
+    <value>This feature is limited because of your account type</value>
+  </data>
+	<data name="MyPlacesView_ErrDeleteMyPlace" xml:space="preserve">
+    <value>Cannot delete selected place.</value>
+  </data>
+	<data name="MyPlacesView_RibbonGroup_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="MyPlacesView_RibbonTab_MyPlaces" xml:space="preserve">
+    <value>My places</value>
+  </data>
+	<data name="MyPlacesView_Ribbon_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="MyPlacesView_Ribbon_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="MyPlacesView_Ribbon_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+	<data name="MyPlacesView_Ribbon_SetDefault" xml:space="preserve">
+    <value>Set default</value>
+  </data>
+	<data name="MyStyles_ToolTip_UseInRecordsMyPlace" xml:space="preserve">
+    <value>Treningi w tym miejscu są brane do wyliczania rekordów</value>
+  </data>
+	<data name="usrMyPlaceDetails_CHK_SkipInRecords" xml:space="preserve">
+    <value>Pomiń, przy obliczaniu rekordów</value>
+  </data>
+	<data name="usrMyPlaceDetails_Header_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+	<data name="usrMyPlaceDetails_Help_SkipInRecords" xml:space="preserve">
+    <value>Rekordy są wyliczane przy każdym dodaniu/zmianie treningu siłowego w kalendarzu. W większości przypadków jest to pożądane zachowanie. Czasem jednak możemy ćwiczyć w miejscu, które nie chcemy, aby było brane pod uwagę przy rekordach (np, przez niskiej jakości sprzęt do ćwiczeń, przez co wyniki byłyby niedokładne i tylko psułyby statystyki). Właśnie dla takich miejsc powinieneś zaznaczyć tą opcję. Wtedy każdy trening odbyty w tej siłowni  nie będzie brany pod uwagę przy wyliczaniu rekordów.</value>
+  </data>
+	<data name="usrMyPlaceDetails_Label_Color" xml:space="preserve">
+    <value>_Color:</value>
+  </data>
+	<data name="usrMyPlaceDetails_Label_Name" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+	<data name="NewReportingView_RibbonGroup_SelectReport" xml:space="preserve">
+    <value>Select</value>
+  </data>
+	<data name="CreateProfileWindow_And_Part" xml:space="preserve">
+    <value>and</value>
+  </data>
+	<data name="CreateProfileWindow_PrivacyPolicy_Part" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+	<data name="CreateProfileWindow_Show_Part" xml:space="preserve">
+    <value>Show</value>
+  </data>
+	<data name="CreateProfileWindow_TermsOfService_Part" xml:space="preserve">
+    <value>Terms of Service</value>
+  </data>
+	<data name="ChangeAccountTypeWindow_Button_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+	<data name="ChangeAccountTypeWindow_Button_Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+	<data name="ChangeAccountTypeWindow_InstructorMsg" xml:space="preserve">
+    <value>This feature is available in Instructor account only.</value>
+  </data>
+	<data name="ChangeAccountTypeWindow_PremiumMsg" xml:space="preserve">
+    <value>This feature is available in Premium or Instructor account only.</value>
+  </data>
+	<data name="ChangeAccountTypeWindow_ShowAccountTypesInfoMsg" xml:space="preserve">
+    <value>Click Show button if you want to see the more detailed information about each account types.</value>
+  </data>
+	<data name="ChangeAccountTypeWindow_Title" xml:space="preserve">
+    <value>BodyArchitect</value>
+  </data>
+	<data name="Ribbon_Context_Header" xml:space="preserve">
+    <value>Context</value>
+  </data>
+	<data name="SupplementsCycleDefinitionHtmlExporter.PrintSupplementName.Description" xml:space="preserve">
+    <value>Set this option to print supplement type in the column headers</value>
+  </data>
+	<data name="SupplementsCycleDefinitionHtmlExporter.PrintSupplementName.DisplayName" xml:space="preserve">
+    <value>Print supplements' type</value>
+  </data>
+	<data name="CMBExerciseName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="CMBExerciseShortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+	<data name="CMBExerciseType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+	<data name="EmptyExerciseCellText" xml:space="preserve">
+    <value>[Select an exercise]</value>
+  </data>
+	<data name="ErrorAuthentication" xml:space="preserve">
+    <value>Unable to login. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorAuthenticationWrongCredentials" xml:space="preserve">
+    <value>Invalid username or password.</value>
+  </data>
+	<data name="ErrorCreateProfile" xml:space="preserve">
+    <value>Error occured while creating the profile. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorCreateProfileUnique" xml:space="preserve">
+    <value>Profile with the specified name already exists. Please enter a different name.</value>
+  </data>
+	<data name="ErrorDeleteProfile" xml:space="preserve">
+    <value>Failed to delete the profile. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorFillCalendarView" xml:space="preserve">
+    <value>Error occurred during retrieving the data. Application will be closed. Please see the log file. Exception Id: {0}</value>
+  </data>
+	<data name="ErrorFillTrainingDay" xml:space="preserve">
+    <value>Error occured while viewing. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorLoadProfile" xml:space="preserve">
+    <value>Error while downloading the profile. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorRemoveExercise" xml:space="preserve">
+    <value>Error during exercise removal. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorRemoveTrainingDay" xml:space="preserve">
+    <value>Error while deleting. Please check your log file. Error code: {0}}</value>
+  </data>
+	<data name="ErrorSaveExercise" xml:space="preserve">
+    <value>Error while saving. Please check your log file. Error code: {0}}</value>
+  </data>
+	<data name="ErrorSaveExerciseUnique" xml:space="preserve">
+    <value>Exercise shortcut must be unique. Choose a different shortcut.</value>
+  </data>
+	<data name="ErrorSaveProfile" xml:space="preserve">
+    <value>Error while saving the profile. Please check your log file. Error code: {0}}</value>
+  </data>
+	<data name="ErrorSaveTrainingDay" xml:space="preserve">
+    <value>Error while saving. Please check your log file. Error code: {0}}</value>
+  </data>
+	<data name="MainWindowTitle" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+	<data name="MNUNewTrainingDay" xml:space="preserve">
+    <value>&amp;New...</value>
+  </data>
+	<data name="MNUOpenTrainingDay" xml:space="preserve">
+    <value>&amp;Open...</value>
+  </data>
+	<data name="QMoveTrainingDay" xml:space="preserve">
+    <value>Are you sure you want to move this entry?</value>
+  </data>
+	<data name="QRemoveExercise" xml:space="preserve">
+    <value>Are you sure you want to delete the selected exercise? This will also delete all training entries containing the removed exercise!</value>
+  </data>
+	<data name="QRemoveTrainingDay" xml:space="preserve">
+    <value>Are you sure you want to delete the entry from {0}?</value>
+  </data>
+	<data name="CancelingOperation" xml:space="preserve">
+    <value>Cancelling...</value>
+  </data>
+	<data name="ErrorSerieColumnCount" xml:space="preserve">
+    <value>Unable to display a smaller number of series than the current number of series in the exercises.</value>
+  </data>
+	<data name="QCloseTrainingDay" xml:space="preserve">
+    <value>Are you sure you want to cancel editing?</value>
+  </data>
+	<data name="ErrorRetrievingRssFeed" xml:space="preserve">
+    <value>Failed to retrieve the news.</value>
+  </data>
+	<data name="ErrorCheckUpdates" xml:space="preserve">
+    <value>Error occured while checking for updates. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="InfoNoUpdatesAvailable" xml:space="preserve">
+    <value>You have installed the latest version of the program.</value>
+  </data>
+	<data name="ErrorDuringUpdates" xml:space="preserve">
+    <value>Error occured while updating the application. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="InfoRestartAfterUpdates" xml:space="preserve">
+    <value>Changes will take effect after restarting the program.</value>
+  </data>
+	<data name="ErrorUnhandledException" xml:space="preserve">
+    <value>An unexpected error occurred. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorOpenWebSite" xml:space="preserve">
+    <value>Failed to open the page. Please run a web browser and enter the address manually.</value>
+  </data>
+	<data name="ErrorUnableConfigureNHibernate" xml:space="preserve">
+    <value>Application initialisation failed. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="InfoUpdateRequired" xml:space="preserve">
+    <value>A newer version of the program is available and it is essential for proper operation. After clicking Ok, your application will be updated.</value>
+  </data>
+	<data name="InfoChangeLanguageRestart" xml:space="preserve">
+    <value>New language will be available after restarting the application.</value>
+  </data>
+	<data name="ErrorInvalidDatabaseVersion" xml:space="preserve">
+    <value>Current database is intended for a different BodyArchitect version. The program will be closed.</value>
+  </data>
+	<data name="InfoInicializingApplication" xml:space="preserve">
+    <value>Initialising...</value>
+  </data>
+	<data name="InfoPreparingData" xml:space="preserve">
+    <value>Preparing the data ...</value>
+  </data>
+	<data name="CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="CloseButton" xml:space="preserve">
+    <value>Close</value>
+  </data>
+	<data name="ColumnExerciseName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="ColumnExerciseShortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+	<data name="SpecificCulture" xml:space="preserve">
+    <value>en-US</value>
+  </data>
+	<data name="ErrorCannotShowLogFile" xml:space="preserve">
+    <value>Failed to open log file.</value>
+  </data>
+	<data name="InfoNoTrainingDayEntires" xml:space="preserve">
+    <value>This profile does not contain any entries.</value>
+  </data>
+	<data name="ErrorImportExercisesUnique" xml:space="preserve">
+    <value>Exercise with identical ID alreday exists in the database. The exercise must have already been imported into the database.</value>
+  </data>
+	<data name="ErrorUnableToImportExercises" xml:space="preserve">
+    <value>Failed to import the exercises. Please check your log file. Error code: {0}.</value>
+  </data>
+	<data name="ErrorEntryObjectTypeAlreadyExists" xml:space="preserve">
+    <value>You cannot add this type of entry more than once.</value>
+  </data>
+	<data name="QAskForDeletingEntryObject" xml:space="preserve">
+    <value>Are you sure you want to delete this entry: {0}?</value>
+  </data>
+	<data name="ErrorCannotPaste" xml:space="preserve">
+    <value>Selected day already has an entry. You must first delete the existing entry.</value>
+  </data>
+	<data name="InfoNextEntryLimit" xml:space="preserve">
+    <value>This is the last entry in the database.</value>
+  </data>
+	<data name="InfoPreviousEntryLimit" xml:space="preserve">
+    <value>This is the first entry in the database.</value>
+  </data>
+	<data name="ErrorCannotDeleteTrainingDayPartOfTraining" xml:space="preserve">
+    <value>You can not delete the specified day because some entries are part of the training.</value>
+  </data>
+	<data name="SelectReportText" xml:space="preserve">
+    <value>(Choose the report)</value>
+  </data>
+	<data name="ErrorCannotGenerateReport" xml:space="preserve">
+    <value>Failed to generate a report. Please check your log file. Error code: {0}.</value>
+  </data>
+	<data name="ReportSavingFilter" xml:space="preserve">
+    <value>Png file (*.png)|*.png|Jpeg (*.jpg)|*.jpg|Bitmap (*.bmp)|*.bmp</value>
+  </data>
+	<data name="ErrorCannotCopyTrainingDayFixedEntries" xml:space="preserve">
+    <value>Unable to copy this day because it contains only permanent entries.</value>
+  </data>
+	<data name="ErrorCannotMoveTrainingDayFixedEntries" xml:space="preserve">
+    <value>Cannot move selected training day because it contains fixed entries.</value>
+  </data>
+	<data name="ReportingOptions_NoTemplate" xml:space="preserve">
+    <value>(None)</value>
+  </data>
+	<data name="OptionsRestartRequiredMsg" xml:space="preserve">
+    <value>Some changes require you to restart the application.</value>
+  </data>
+	<data name="OptionsCalendarTitle" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+	<data name="OptionsReportingTitle" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+	<data name="Reporting_GeneratingTimeStatus" xml:space="preserve">
+    <value>The report has been generated in the {0}.</value>
+  </data>
+	<data name="PluginsGrid_DefaultEntryColumn" xml:space="preserve">
+    <value>Default</value>
+  </data>
+	<data name="PluginsGrid_IconColumn" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+	<data name="PluginsGrid_PluginColumn" xml:space="preserve">
+    <value>Module</value>
+  </data>
+	<data name="ErrorDeleteLogFile" xml:space="preserve">
+    <value>Failed to delete the file. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="ErrorSaveLogFile" xml:space="preserve">
+    <value>Failed to save the file. Please check your log file. Error code: {0}</value>
+  </data>
+	<data name="QAskClearLog" xml:space="preserve">
+    <value>Are you sure you want to clear this log?</value>
+  </data>
+	<data name="SaveLogFileFilter" xml:space="preserve">
+    <value>Text file (*.txt)|*.txt|Log file (*.log)|*.log|All files (*.*)|*.*</value>
+  </data>
+	<data name="QResetAllOptions" xml:space="preserve">
+    <value>Are you sure you want to restore the default settings?</value>
+  </data>
+	<data name="CompletePercentageResult" xml:space="preserve">
+    <value>Completed: {0}%</value>
+  </data>
+	<data name="ErrorCannotBeEmpty" xml:space="preserve">
+    <value>It cannot be empty</value>
+  </data>
+	<data name="ErrorMustBeUnique" xml:space="preserve">
+    <value>It must be unique and cannot be empty</value>
+  </data>
+	<data name="DeletedObject" xml:space="preserve">
+    <value>(Deleted)</value>
+  </data>
+	<data name="StatusBarCalendarViewText" xml:space="preserve">
+    <value>Calendar view: {0}</value>
+  </data>
+	<data name="usrUserInfo_Caption_UserInformation" xml:space="preserve">
+    <value>User information</value>
+  </data>
+	<data name="CalendarViewForUser_TabText" xml:space="preserve">
+    <value>Workouts-{0}</value>
+  </data>
+	<data name="ReportsForUser_TabText" xml:space="preserve">
+    <value>Reports-{0}</value>
+  </data>
+	<data name="QAskForPublicationExercise" xml:space="preserve">
+    <value>Do you want to make the selected exercise public?</value>
+  </data>
+	<data name="QDeleteMessage" xml:space="preserve">
+    <value>Do you want to delete this message?</value>
+  </data>
+	<data name="ErrMessageDoesntExist" xml:space="preserve">
+    <value>This message does not exist or has been removed.</value>
+  </data>
+	<data name="ErrCannotDeleteMessage" xml:space="preserve">
+    <value>Failed to delete the message. More information can be found in the log file. Error code = {0}</value>
+  </data>
+	<data name="Message_Receiver" xml:space="preserve">
+    <value>Recipient</value>
+  </data>
+	<data name="Message_Sender" xml:space="preserve">
+    <value>Sender</value>
+  </data>
+	<data name="ProgressIndicator_Processing" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+	<data name="PublishButton" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+	<data name="AddButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="ErrCannotCreateProfile" xml:space="preserve">
+    <value>Failed to create the profile.</value>
+  </data>
+	<data name="NotLoggedText" xml:space="preserve">
+    <value>Not logged in</value>
+  </data>
+	<data name="SplasScreen_PreparingGUI" xml:space="preserve">
+    <value>Preparing the GUI ...</value>
+  </data>
+	<data name="usrMessageView_MessageGroup_Text" xml:space="preserve">
+    <value>Message ({0})</value>
+  </data>
+	<data name="usrMessageView_ReplyTopic" xml:space="preserve">
+    <value>RE: {0}</value>
+  </data>
+	<data name="ForgotPasswordWindow_PasswordChangedInfo" xml:space="preserve">
+    <value>Your password has been changed. Please check your email.</value>
+  </data>
+	<data name="ErrProblemWithSendingEmail" xml:space="preserve">
+    <value>There was a problem with sending email. Please try again later.</value>
+  </data>
+	<data name="ForgotPasswordWindow_ProfileNotFoundError" xml:space="preserve">
+    <value>The given username or e-mail address was not found in our database.</value>
+  </data>
+	<data name="ErrorOldTrainingDay" xml:space="preserve">
+    <value>Selected day has been currently changed on the server and contains diffrent data. Please refresh the view.</value>
+  </data>
+	<data name="usrUserInvitationEntry_YouInvitedThisUser_Msg" xml:space="preserve">
+    <value>Invite this user to the circle of friends.</value>
+  </data>
+	<data name="usrUserInvitationEntry_CancelInvitation_ToolTip" xml:space="preserve">
+    <value>Cancel invitation</value>
+  </data>
+	<data name="usrUserInvitationEntry_YouAreInvitedByUser_Msg" xml:space="preserve">
+    <value>You have been invited to this user's circle of friends.</value>
+  </data>
+	<data name="usrUserInvitationEntry_RejectInvitation_ToolTIp" xml:space="preserve">
+    <value>Reject invitation</value>
+  </data>
+	<data name="ErrorCannotLoginToDeletedProfile" xml:space="preserve">
+    <value>Unable to log on to the deleted profile.</value>
+  </data>
+	<data name="ErrorInvitationDoesntExist" xml:space="preserve">
+    <value>The invitation does not exist or has been removed.</value>
+  </data>
+	<data name="QDeleteProfile" xml:space="preserve">
+    <value>Do you want to delete the current profile? After this operation, the profile will not be able to be logged in, and all data will be lost.</value>
+  </data>
+	<data name="SplashScreen_DownloadingNewVersion" xml:space="preserve">
+    <value>Downloading the new version of {2}: {0}/{1}</value>
+  </data>
+	<data name="SplashScreen_NewVersionFound" xml:space="preserve">
+    <value>A new version of {0} has appeared. Preparing for updates ...</value>
+  </data>
+	<data name="ErrorDuringCheckingUpdates" xml:space="preserve">
+    <value>Error occurred during checking update of application</value>
+  </data>
+	<data name="SplashScreen_CheckingNewVersion" xml:space="preserve">
+    <value>Checking out for a newer version of the program ...</value>
+  </data>
+	<data name="ErrorDuringUpdatingApplication" xml:space="preserve">
+    <value>An error occurred during the update.</value>
+  </data>
+	<data name="ErrorOldDataModification" xml:space="preserve">
+    <value>The modified data has been changed on the server. Please refresh the view and try again.</value>
+  </data>
+	<data name="ErrorConnectionProblem" xml:space="preserve">
+    <value>Problem with the connection to the server. Please try again later.</value>
+  </data>
+	<data name="usrInvitationsView_Caption" xml:space="preserve">
+    <value>Invitations ({0})</value>
+  </data>
+	<data name="usrMessagesBoard_Caption" xml:space="preserve">
+    <value>Messages ({0})</value>
+  </data>
+	<data name="ErrorCannotAddUserToFavorites" xml:space="preserve">
+    <value>Failed to add user to your Favorites list.</value>
+  </data>
+	<data name="ErrorCannotRemoveUserFromFavorites" xml:space="preserve">
+    <value>Failed to delete user from the list of favorites.</value>
+  </data>
+	<data name="usrUserSizes_Caption" xml:space="preserve">
+    <value>Measurements</value>
+  </data>
+	<data name="PartialLoadedStatus" xml:space="preserve">
+    <value>Loaded {0} of {1}</value>
+  </data>
+	<data name="usrUserInfo_InvitationsCount" xml:space="preserve">
+    <value>You have {0} invitations.</value>
+  </data>
+	<data name="usrUserInfo_MessagesCount" xml:space="preserve">
+    <value>You have {0} messages.</value>
+  </data>
+	<data name="usrUserInfo_LastLogin" xml:space="preserve">
+    <value>Last login: {0}</value>
+  </data>
+	<data name="ErrorMaintenanceMode" xml:space="preserve">
+    <value>BodyArchitect is temporary unavailable. This is due to software updates. Please try again later.</value>
+  </data>
+	<data name="ErrorOldVersionOfBodyArchitect" xml:space="preserve">
+    <value>You have an older version of the program. Please download the latest version and try again.</value>
+  </data>
+	<data name="RssHeaderTips" xml:space="preserve">
+    <value>Tips &amp; Tricks</value>
+  </data>
+	<data name="RssHeaderNews" xml:space="preserve">
+    <value>News</value>
+  </data>
+	<data name="UsersListView_Group_Friends" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+	<data name="UsersListView_Group_Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+	<data name="UsersListView_Group_Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+	<data name="ErrorMustActivateProfile" xml:space="preserve">
+    <value>Please check your email. We have sent an email with your account activation link. Please click on it to complete the registration of your account.</value>
+  </data>
+	<data name="ForgotPasswordWindow_SendActivationEmailDescription" xml:space="preserve">
+    <value>Enter your username or e-mail address (the same you entered when creating your account.) Activation email will be sent to your inbox.</value>
+  </data>
+	<data name="ForgotPasswordWindow_SendActivationEmailTitle" xml:space="preserve">
+    <value>Send e-mail with account activation</value>
+  </data>
+	<data name="ErrorProfileIsActivated" xml:space="preserve">
+    <value>The profile is already activated.</value>
+  </data>
+	<data name="ForgotPasswordWindow_ActivatedEmailSent" xml:space="preserve">
+    <value>Activation email has been sent. Please check your email.</value>
+  </data>
+	<data name="PhotoDoesntExist" xml:space="preserve">
+    <value>Error image</value>
+  </data>
+	<data name="ErrorProfileDeleted" xml:space="preserve">
+    <value>The selected profile is deleted, hence you cannot perform the current operation.</value>
+  </data>
+	<data name="ErrorCurrentProfileDeleted" xml:space="preserve">
+    <value>Your profile has been deleted. You will be logout</value>
+  </data>
+	<data name="ErrorProfileNotActivated" xml:space="preserve">
+    <value>You must activate your account first</value>
+  </data>
+	<data name="ErrorOpenWebBrowser" xml:space="preserve">
+    <value>Cannot start the webbrowser.</value>
+  </data>
+	<data name="usrUserInvitationEntry_AcceptInvitation_ToolTip" xml:space="preserve">
+    <value>Accept invitation</value>
+  </data>
+	<data name="usrUserInvitationEntry_MessageText" xml:space="preserve">
+    <value>Message from the user:</value>
+  </data>
+	<data name="usrUserInvitationEntry_NoMessageText" xml:space="preserve">
+    <value>(User did't put a message)</value>
+  </data>
+	<data name="UserListView_CalendarAllowedToolTip" xml:space="preserve">
+    <value>You can see the calendar of this user</value>
+  </data>
+	<data name="UserListView_MeasurementsAllowedToolTip" xml:space="preserve">
+    <value>You can see the measurements of this user</value>
+  </data>
+	<data name="LoginWindow_ShowConnectionSettings" xml:space="preserve">
+    <value>Show connection settings...</value>
+  </data>
+	<data name="LoginWindow_HideConnectionSettings" xml:space="preserve">
+    <value>Hide connection settings...</value>
+  </data>
+	<data name="UserStatistics_WorkoutPlansCountToolTip" xml:space="preserve">
+    <value>Number of public workout plans created by this user</value>
+  </data>
+	<data name="UserStatistics_TrainingDaysCount" xml:space="preserve">
+    <value>Number of entries in the calendar</value>
+  </data>
+	<data name="UserStatistics_LastEntryDateToolTip" xml:space="preserve">
+    <value>Last entry date: {0}</value>
+  </data>
+	<data name="UserStatistics_TrainingDaysCountText" xml:space="preserve">
+    <value>Entries in calendar: {0}</value>
+  </data>
+	<data name="UserStatistics_WorkoutPlansText" xml:space="preserve">
+    <value>Workout plans: {0}</value>
+  </data>
+	<data name="UserStatistics_FriendsCountText" xml:space="preserve">
+    <value>Number of friends: {0}</value>
+  </data>
+	<data name="UserStatistics_FollowersCountText" xml:space="preserve">
+    <value>Number of followers: {0}</value>
+  </data>
+	<data name="UserStatistics_VotesCountText" xml:space="preserve">
+    <value>Number of votes: {0}</value>
+  </data>
+	<data name="UserStatistics_BlogCommentsCountText" xml:space="preserve">
+    <value>Number of given comments: {0}</value>
+  </data>
+	<data name="UserStatistics_LastEntryDateText" xml:space="preserve">
+    <value>Last entry: {0}</value>
+  </data>
+	<data name="DateTimeExtension_LessThanMinute" xml:space="preserve">
+    <value>Less than a minute</value>
+  </data>
+	<data name="DateTimeExtension_OneMinute" xml:space="preserve">
+    <value>About a minute</value>
+  </data>
+	<data name="DateTimeExtension_XMinutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+	<data name="DateTimeExtension_OneHour" xml:space="preserve">
+    <value>About an hour</value>
+  </data>
+	<data name="DateTimeExtension_XHours" xml:space="preserve">
+    <value>About {0} hours</value>
+  </data>
+	<data name="DateTimeExtension_OneDay" xml:space="preserve">
+    <value>A day</value>
+  </data>
+	<data name="DateTimeExtension_XDays" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+	<data name="DateTimeExtension_OneMonth" xml:space="preserve">
+    <value>About a month</value>
+  </data>
+	<data name="DateTimeExtension_XMonths" xml:space="preserve">
+    <value>{0} months</value>
+  </data>
+	<data name="DateTimeExtension_OneYear" xml:space="preserve">
+    <value>About a year</value>
+  </data>
+	<data name="DateTimeExtension_XYears" xml:space="preserve">
+    <value>{0} years</value>
+  </data>
+	<data name="DateTimeExtension_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+	<data name="DateTimeExtension_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+	<data name="DateTimeExtension_XDaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+  </data>
+	<data name="DateTimeExtension_OneMonthAgo" xml:space="preserve">
+    <value>About a month ago</value>
+  </data>
+	<data name="DateTimeExtension_XMonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+  </data>
+	<data name="DateTimeExtension_OneYearAgo" xml:space="preserve">
+    <value>About a year ago</value>
+  </data>
+	<data name="DateTimeExtension_XYearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+  </data>
+	<data name="DateTimeExtension_AgoPostfix" xml:space="preserve">
+    <value> ago</value>
+  </data>
+	<data name="DateTimeExtension_FromNowSuffix" xml:space="preserve">
+    <value> from now</value>
+  </data>
+	<data name="QDeleteSelectedMessages" xml:space="preserve">
+    <value>Do you want to delete a selected messages?</value>
+  </data>
+	<data name="UserStatistics_MyBlogCommentsCount" xml:space="preserve">
+    <value>Number of my blogs comments: {0}</value>
+  </data>
+	<data name="UserStatistics_StrengthTrainingEntriesCount" xml:space="preserve">
+    <value>Strength training entries: {0}</value>
+  </data>
+	<data name="ErrorTrainingIntegrity" xml:space="preserve">
+    <value>You cannot insert A6W entry in the middle of the started training.</value>
+  </data>
+	<data name="UserStatistics_LastLogin" xml:space="preserve">
+    <value>Last login: {0}</value>
+  </data>
+	<data name="ApplicationStrings.UserStatistics_FollowersCountToolTip" xml:space="preserve">
+    <value>Number of followers</value>
+  </data>
+	<data name="UserStatistics_StarToolTip" xml:space="preserve">
+    <value>{0} medal in {1} category.</value>
+  </data>
+	<data name="usrRssReader_TipTitle" xml:space="preserve">
+    <value>Tips {0}/{1}: {2}</value>
+  </data>
+	<data name="LengthType_Cm" xml:space="preserve">
+    <value>cm</value>
+  </data>
+	<data name="LengthType_Inch" xml:space="preserve">
+    <value>inch</value>
+  </data>
+	<data name="WeightType_Kg" xml:space="preserve">
+    <value>kg</value>
+  </data>
+	<data name="WeightType_Pound" xml:space="preserve">
+    <value>lbs</value>
+  </data>
+	<data name="OKButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+	<data name="ApplyButton" xml:space="preserve">
+    <value>_Apply</value>
+  </data>
+	<data name="MoreButton" xml:space="preserve">
+    <value>More</value>
+  </data>
+	<data name="usrRating_CannotVoteLabel" xml:space="preserve">
+    <value>You cannot vote</value>
+  </data>
+	<data name="usrRating_CommentWatermark" xml:space="preserve">
+    <value>Comment is empty</value>
+  </data>
+	<data name="usrRating_GlobalRatingLabel" xml:space="preserve">
+    <value>Global rating:</value>
+  </data>
+	<data name="usrRating_RateMeHeader" xml:space="preserve">
+    <value>Rate me!</value>
+  </data>
+	<data name="usrRating_VoteButton" xml:space="preserve">
+    <value>Vote</value>
+  </data>
+	<data name="usrRating_YourRatingLabel" xml:space="preserve">
+    <value>Your rating:</value>
+  </data>
+	<data name="TrainingDayInfoDayContent_CommentsDisabled" xml:space="preserve">
+    <value>Comments disabled</value>
+  </data>
+	<data name="TrainingDayInfoDayContent_CommentsEnabled" xml:space="preserve">
+    <value>Comments: {0}
+Last: {1}</value>
+  </data>
+	<data name="Exception_SocialNetworkShare_CannotPublishToFacebook" xml:space="preserve">
+    <value>Cannot publish to Facebook</value>
+  </data>
+	<data name="DashBoardView_Fill_Header_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+	<data name="Exception_MyTrainingsViewModel_BreakTraining" xml:space="preserve">
+    <value>Error occured</value>
+  </data>
+	<data name="Exception_NewCalendarView_CannotRetrieveEntries_Fill" xml:space="preserve">
+    <value>Cannot retrieve entries</value>
+  </data>
+	<data name="HtmlPreviewView_Fill_Header_Preview" xml:space="preserve">
+    <value>Preview:</value>
+  </data>
+	<data name="LogView_Fill_Header_Exceptions" xml:space="preserve">
+    <value>Log: Exceptions</value>
+  </data>
+	<data name="LogView_Fill_Header_Standard" xml:space="preserve">
+    <value>Log: Standard</value>
+  </data>
+	<data name="Message_EditDomainObjectWindow_WrongFields" xml:space="preserve">
+    <value>Some fields are wrong.</value>
+  </data>
+	<data name="Message_MainWindow_askForCancelModifiedContent" xml:space="preserve">
+    <value>The current view is modified. If you continue then you will lost your changes. Do you want to continue?</value>
+  </data>
+	<data name="Message_MainWindow_AskForCancelModifiedContent_CloseApp" xml:space="preserve">
+    <value>One or more tabs have modified content. If you continue, you will lost your changes. Do you want to continue?</value>
+  </data>
+	<data name="Message_MainWindow_rbtnFacebook_Click_LoggedToFacebook" xml:space="preserve">
+    <value>You have been logged to the Facebook</value>
+  </data>
+	<data name="Message_MainWindow_setCurrentTabInfo_NotLogged" xml:space="preserve">
+    <value>Not logged</value>
+  </data>
+	<data name="Message_MainWindow_ShowPage_ModifiedView" xml:space="preserve">
+    <value>The current view is modified. If you continue then you will lost your changes. Do you want to continue?</value>
+  </data>
+	<data name="Message_RefreshView_ModifiedDay" xml:space="preserve">
+    <value>Your calendar day is modified. By pressing Refresh you will cancel your modification. Do you want to continue?</value>
+  </data>
+	<data name="Message_TrainingDayWindow_tbsShareToFacebook_Click" xml:space="preserve">
+    <value>Do you want to publish selected entry to Facebook?</value>
+  </data>
+	<data name="MyTrainingsView_SetHeader_MyTrainings" xml:space="preserve">
+    <value>My trainings:</value>
+  </data>
+	<data name="NewCalendarView_setHeader_Calendar" xml:space="preserve">
+    <value>Calendar:</value>
+  </data>
+	<data name="NewReportingView_setHeader_Reports" xml:space="preserve">
+    <value>Reports:</value>
+  </data>
+	<data name="NewReportingView_tbSaveReport_Click_ExportedChart" xml:space="preserve">
+    <value>Exported Chart</value>
+  </data>
+	<data name="PeopleView_Fill_Header_People" xml:space="preserve">
+    <value>People</value>
+  </data>
+	<data name="Question_MyTrainingsViewModel_BreakTraining_AreYouSure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+	<data name="SecurityAccessDeniedException_LoginWindow_InvalidAPIKey" xml:space="preserve">
+    <value>API Key is invalid</value>
+  </data>
+	<data name="TrainingDayWindow_Fill_Header_Day" xml:space="preserve">
+    <value>Day {0}: {1}</value>
+  </data>
+	<data name="usrWorkoutCommentsList_fillCommentsList_NoComments" xml:space="preserve">
+    <value>No comments</value>
+  </data>
+	<data name="usrWorkoutCommentsList_fillCommentsList_SelectItemFirst" xml:space="preserve">
+    <value>Select an item first!</value>
+  </data>
+	<data name="ErrorLicence" xml:space="preserve">
+    <value>This feature is available in the higher account type.</value>
+  </data>
+	<data name="ErrorMoveTrainingDay" xml:space="preserve">
+    <value>Unable to move the entry. Please see the log file. Error code: {0}</value>
+  </data>
+	<data name="UserStatistics_SupplementsDefinitionsText" xml:space="preserve">
+    <value>Supplements cycle definitions: {0}</value>
+  </data>
+	<data name="Any_Watermark" xml:space="preserve">
+    <value>(Any)</value>
+  </data>
+	<data name="ExerciseWeightReportSettings_Header_MoreOptions" xml:space="preserve">
+    <value>More options</value>
+  </data>
+	<data name="MyPlace_Help" xml:space="preserve">
+    <value>Opcja dostępna tylko przy koncie Premium lub Instructor</value>
+  </data>
+	<data name="MainWindow_ErrPrivateCalendar" xml:space="preserve">
+    <value>This user has private workout log.</value>
+  </data>
+	<data name="MainWindow_ErrShowUserWorkoutLog" xml:space="preserve">
+    <value>Cannot show user's workout log</value>
+  </data>
+	<data name="MainWindow_ErrTrainingDayDoesntExist" xml:space="preserve">
+    <value>Entry doesn't exist</value>
+  </data>
+	<data name="OptionResetAllBtn" xml:space="preserve">
+    <value>Resets all settings to default values.</value>
+  </data>
+	<data name="AddTrainingDay_DateTE" xml:space="preserve">
+    <value>Entry date. If the entry contains session training, then this is the training date.</value>
+  </data>
+	<data name="ButtonApply" xml:space="preserve">
+    <value>Saves changes without closing the window.</value>
+  </data>
+	<data name="ButtonCancel" xml:space="preserve">
+    <value>Rejects changes and close the window.</value>
+  </data>
+	<data name="ButtonDelete" xml:space="preserve">
+    <value>Delete the current entry.</value>
+  </data>
+	<data name="ButtonOK" xml:space="preserve">
+    <value>Saves changes and close the window.</value>
+  </data>
+	<data name="CreateProfile_Autologin_CHK" xml:space="preserve">
+    <value>When selected means that when we start the application, this profile will be logged automatically.</value>
+  </data>
+	<data name="CreateProfile_NameTE" xml:space="preserve">
+    <value>Profile name will be used during login to the application. Must be unique.</value>
+  </data>
+	<data name="CreateProfile_PasswordTE" xml:space="preserve">
+    <value>Password is used to prevent access to your profile. It is not required. When there is only one profile without password in the application, then it will be used automatically when application starts (without login).</value>
+  </data>
+	<data name="Login_AutologinCHK" xml:space="preserve">
+    <value>When selected means that when we start the application, this profile will be logged automatically.</value>
+  </data>
+	<data name="Login_NameTE" xml:space="preserve">
+    <value>Profile name from the program's database.</value>
+  </data>
+	<data name="Login_PasswordTE" xml:space="preserve">
+    <value>Password for the selected profile.</value>
+  </data>
+	<data name="ProfileEdit_BirthdayTE" xml:space="preserve">
+    <value>Birthday. Can be empty.</value>
+  </data>
+	<data name="ProfileEdit_NameTE" xml:space="preserve">
+    <value>Name of edited profile. Must be unique.</value>
+  </data>
+	<data name="WymiaryEditor_Klatka" xml:space="preserve">
+    <value>Chest circumference, e.g. 110,5. Value 0 means that chest circumference was not set.</value>
+  </data>
+	<data name="WymiaryEditor_LeftBiceps" xml:space="preserve">
+    <value>Left biceps circumference, e.g. 37,5. Value 0 means that biceps circumference was not set.</value>
+  </data>
+	<data name="WymiaryEditor_NaCzczo" xml:space="preserve">
+    <value>Selected means that all measurements was made on empty stomach.</value>
+  </data>
+	<data name="WymiaryEditor_Pas" xml:space="preserve">
+    <value>Abs circumference, e.g. 77,5. Value 0 means that abs circumference was not set.</value>
+  </data>
+	<data name="WymiaryEditor_RightBiceps" xml:space="preserve">
+    <value>Right biceps circumference, e.g. 37,5. Value 0 means that biceps circumference was not set.</value>
+  </data>
+	<data name="WymiaryEditor_Time" xml:space="preserve">
+    <value>Time of measurement, e.g: 7:05. Value 00:00 means that time was not set.</value>
+  </data>
+	<data name="WymiaryEditor_RightLeg" xml:space="preserve">
+    <value>Right leg circumference, e.g. 67,5. Value 0 means that leg circumference was not set.</value>
+  </data>
+	<data name="WymiaryEditor_Weight" xml:space="preserve">
+    <value>Weight, e.g. 81,5. Value 0 means that weight was not set.</value>
+  </data>
+	<data name="BMI_BMI" xml:space="preserve">
+    <value>This is your body mass index (BMI):
+
+Severely underweight - less than 16.5
+Underweight - from 16.5 to 18.4
+Normal - from 18.5 to 24.9
+Overweight - from 25 to 29.9
+Obese Class I - from 30 to 34.9
+Obese Class II - from 35 to 39.9
+Obese Class III - over 40</value>
+  </data>
+	<data name="BMI_Calculate" xml:space="preserve">
+    <value>Click to calculate your BMI. You have to type your weight and height first.</value>
+  </data>
+	<data name="BMI_Close" xml:space="preserve">
+    <value>Closes this window</value>
+  </data>
+	<data name="BMI_Height" xml:space="preserve">
+    <value>Type your height in cm</value>
+  </data>
+	<data name="BMI_Weight" xml:space="preserve">
+    <value>Type your weight in kg</value>
+  </data>
+	<data name="OptionCalendarIcons" xml:space="preserve">
+    <value>Here you can set options related with each module in BodyArchitect:
+&lt;b&gt;Icon&lt;/b&gt; - if selected then entry for this plugin will be shown in calendar view as icon
+&lt;b&gt;Default&lt;/b&gt; - if selected then entry for this plugin will be automatically added when you create a new entry day in the calendar view</value>
+  </data>
+	<data name="OptionCalendarTabPage" xml:space="preserve">
+    <value>Shows options for calendar view</value>
+  </data>
+	<data name="OptionCalendarTextFrom" xml:space="preserve">
+    <value>Indicates from what plugin calendar view will show info text</value>
+  </data>
+	<data name="ProfileEdit_GenderCMB" xml:space="preserve">
+    <value>Allows you to specify your gender. This information is needed to use some of calculators (for instance BMI)</value>
+  </data>
+	<data name="WymiaryEditor_Height" xml:space="preserve">
+    <value>Height, e.g. 188. Value 0 means that height was not set.</value>
+  </data>
+	<data name="WymiaryEditor_LeftForearm" xml:space="preserve">
+    <value>Left forearm circumference, e.g. 27,5. Value 0 means that forearm circumference was not set.</value>
+  </data>
+	<data name="WymiaryEditor_LeftLeg" xml:space="preserve">
+    <value>Left leg circumference, e.g. 67,5. Value 0 means that leg circumference was not set.</value>
+  </data>
+	<data name="WymiaryEditor_RightForearm" xml:space="preserve">
+    <value>Right forearm circumference, e.g. 27,5. Value 0 means that forearm circumference was not set.</value>
+  </data>
+	<data name="OptionReportingAllowZoom" xml:space="preserve">
+    <value>If selected, you can zoom reports.</value>
+  </data>
+	<data name="OptionReportingShowValues" xml:space="preserve">
+    <value>If selected, on reports you will see values as labels, otherwise reports will only display lines.</value>
+  </data>
+	<data name="usrReportStatus_ReportStatusCmb" xml:space="preserve">
+    <value>Indicates if current entry will be used in reports. Value Show means that you will see this entry in reports, value Skip means, that reports will not use it.</value>
+  </data>
+	<data name="usrReportingEntryStatus_ReportStatusCmb" xml:space="preserve">
+    <value>Indicates what entries will be used to generate the report. Select
+-&lt;b&gt;For report only&lt;/b&gt; when you want to generate report with entries with ReportStatus &lt;b&gt;Show this entry in reports&lt;/b&gt; only. 
+-&lt;b&gt;All entries&lt;/b&gt; to generate report with all entries (also with ReportStatus &lt;b&gt;Skip this entry in reports&lt;/b&gt;</value>
+  </data>
+	<data name="usrDateRange_DateFrom" xml:space="preserve">
+    <value>Here you are able to define starting date for you report. All entries which are older will not be shown.</value>
+  </data>
+	<data name="usrDateRange_DateTo" xml:space="preserve">
+    <value>Here you are able to define end date for you report. All newer entries will not be shown.</value>
+  </data>
+	<data name="usrMyTrainingStatus_Abort" xml:space="preserve">
+    <value>Click here to abort (stop) this training cycle. You will not be able to resume this cycle again.</value>
+  </data>
+	<data name="usrMyTrainingStatus_EndDate" xml:space="preserve">
+    <value>Date when this training cycle has been finished.</value>
+  </data>
+	<data name="usrMyTrainingStatus_StartDate" xml:space="preserve">
+    <value>Date when this training cycle has been started.</value>
+  </data>
+	<data name="DefaultDataImporter_ImportBTN" xml:space="preserve">
+    <value>Starts importing default data to the current profile. TO choose what data you want to import, please selected one or more items in the list.</value>
+  </data>
+	<data name="DefaultDataImporter_ModulesListView" xml:space="preserve">
+    <value>List of all available data to import. To import data you need to select appropriate item in this list and press Import... button. </value>
+  </data>
+	<data name="OptionCalendarShowRelativeDates" xml:space="preserve">
+    <value>If checked, the dates in the application (for example comment date or last login date) will be displayed as relative date from current moment, like: 2 minutes ago, 5 months ago, etc. If unchecked then you see specific date.</value>
+  </data>
+	<data name="ErrorUnableUpdateDatabase" xml:space="preserve">
+    <value>Failed to update the application. BodyArchitect will be closed now.</value>
+  </data>
+	<data name="DosageUnit_Absolute" xml:space="preserve">
+    <value>Absolute</value>
+  </data>
+	<data name="UserPlanCriteria_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="UserPlanCriteria_OnlyWithPlans" xml:space="preserve">
+    <value>Only with plans</value>
+  </data>
+	<data name="PaymentCriteria_Any" xml:space="preserve">
+    <value>Any</value>
+  </data>
+	<data name="PaymentCriteria_WithoutPayment" xml:space="preserve">
+    <value>Without payments only</value>
+  </data>
+	<data name="PaymentCriteria_WithPayment" xml:space="preserve">
+    <value>With payments only</value>
+  </data>
+	<data name="ProductsSortOrder_ByDate" xml:space="preserve">
+    <value>By date</value>
+  </data>
+	<data name="ProductsSortOrder_ByName" xml:space="preserve">
+    <value>By name</value>
+  </data>
+	<data name="ProductsSortOrder_ByPaid" xml:space="preserve">
+    <value>By paid status</value>
+  </data>
+</root>

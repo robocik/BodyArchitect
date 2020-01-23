@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BTNEditExercise" xml:space="preserve">
+    <value>&amp;Open...</value>
+  </data>
+  <data name="BTNNewExercise" xml:space="preserve">
+    <value>&amp;Add...</value>
+  </data>
+  <data name="CMBExerciseName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CMBExerciseShortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+  <data name="CMBExerciseType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EmptyExerciseCellText" xml:space="preserve">
+    <value>[Select an exercise]</value>
+  </data>
+  <data name="ErrorAuthentication" xml:space="preserve">
+    <value>Unable to login. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorAuthenticationWrongCredentials" xml:space="preserve">
+    <value>Invalid username or password.</value>
+  </data>
+  <data name="ErrorCreateProfile" xml:space="preserve">
+    <value>Error occured while creating the profile. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorCreateProfileUnique" xml:space="preserve">
+    <value>Profile with the specified name already exists. Please enter a different name.</value>
+  </data>
+  <data name="ErrorDeleteProfile" xml:space="preserve">
+    <value>Failed to delete the profile. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorFillCalendarView" xml:space="preserve">
+    <value>Error occurred during retrieving the data. Application will be closed. Please see the log file. Exception Id: {0}</value>
+  </data>
+  <data name="ErrorFillTrainingDay" xml:space="preserve">
+    <value>Error occured while viewing. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorLoadProfile" xml:space="preserve">
+    <value>Error while downloading the profile. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorMoveTrainingDay" xml:space="preserve">
+    <value>Unable to move the entry. Please see the log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorRemoveExercise" xml:space="preserve">
+    <value>Error during exercise removal. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorRemoveTrainingDay" xml:space="preserve">
+    <value>Error while deleting. Please check your log file. Error code: {0}}</value>
+  </data>
+  <data name="ErrorSaveExercise" xml:space="preserve">
+    <value>Error while saving. Please check your log file. Error code: {0}}</value>
+  </data>
+  <data name="ErrorSaveExerciseUnique" xml:space="preserve">
+    <value>Exercise shortcut must be unique. Choose a different shortcut.</value>
+  </data>
+  <data name="ErrorSaveProfile" xml:space="preserve">
+    <value>Error while saving the profile. Please check your log file. Error code: {0}}</value>
+  </data>
+  <data name="ErrorSaveTrainingDay" xml:space="preserve">
+    <value>Error while saving. Please check your log file. Error code: {0}}</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="MNUNewTrainingDay" xml:space="preserve">
+    <value>&amp;New...</value>
+  </data>
+  <data name="MNUOpenTrainingDay" xml:space="preserve">
+    <value>&amp;Open...</value>
+  </data>
+  <data name="QMoveTrainingDay" xml:space="preserve">
+    <value>Are you sure you want to move this entry?</value>
+  </data>
+  <data name="QRemoveExercise" xml:space="preserve">
+    <value>Are you sure you want to delete the selected exercise? This will also delete all training entries containing the removed exercise!</value>
+  </data>
+  <data name="QRemoveTrainingDay" xml:space="preserve">
+    <value>Are you sure you want to delete the entry from {0}?</value>
+  </data>
+  <data name="CancelingOperation" xml:space="preserve">
+    <value>Cancelling...</value>
+  </data>
+  <data name="ErrorSerieColumnCount" xml:space="preserve">
+    <value>Unable to display a smaller number of series than the current number of series in the exercises.</value>
+  </data>
+  <data name="QCloseTrainingDay" xml:space="preserve">
+    <value>Are you sure you want to cancel editing?</value>
+  </data>
+  <data name="ErrorRetrievingRssFeed" xml:space="preserve">
+    <value>Failed to retrieve the news.</value>
+  </data>
+  <data name="ErrorCheckUpdates" xml:space="preserve">
+    <value>Error occured while checking for updates. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="InfoNoUpdatesAvailable" xml:space="preserve">
+    <value>You have installed the latest version of the program.</value>
+  </data>
+  <data name="ErrorDuringUpdates" xml:space="preserve">
+    <value>Error occured while updating the application. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="InfoRestartAfterUpdates" xml:space="preserve">
+    <value>Changes will take effect after restarting the program.</value>
+  </data>
+  <data name="ErrorUnhandledException" xml:space="preserve">
+    <value>An unexpected error occurred. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorOpenWebSite" xml:space="preserve">
+    <value>Failed to open the page. Please run a web browser and enter the address manually.</value>
+  </data>
+  <data name="ErrorUnableConfigureNHibernate" xml:space="preserve">
+    <value>Application initialisation failed. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="InfoUpdateRequired" xml:space="preserve">
+    <value>A newer version of the program is available and it is essential for proper operation. After clicking Ok, your application will be updated.</value>
+  </data>
+  <data name="InfoChangeLanguageRestart" xml:space="preserve">
+    <value>New language will be available after restarting the application.</value>
+  </data>
+  <data name="ErrorInvalidDatabaseVersion" xml:space="preserve">
+    <value>Current database is intended for a different BodyArchitect version. The program will be closed.</value>
+  </data>
+  <data name="InfoInicializingApplication" xml:space="preserve">
+    <value>Initialising...</value>
+  </data>
+  <data name="InfoPreparingData" xml:space="preserve">
+    <value>Preparing the data ...</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CloseButton" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ColumnExerciseName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ColumnExerciseShortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+  <data name="SpecificCulture" xml:space="preserve">
+    <value>en-US</value>
+  </data>
+  <data name="ErrorCannotShowLogFile" xml:space="preserve">
+    <value>Failed to open log file.</value>
+  </data>
+  <data name="InfoNoTrainingDayEntires" xml:space="preserve">
+    <value>This profile does not contain any entries.</value>
+  </data>
+  <data name="ErrorImportExercisesUnique" xml:space="preserve">
+    <value>Exercise with identical ID alreday exists in the database. The exercise must have already been imported into the database.</value>
+  </data>
+  <data name="ErrorUnableToImportExercises" xml:space="preserve">
+    <value>Failed to import the exercises. Please check your log file. Error code: {0}.</value>
+  </data>
+  <data name="ErrorEntryObjectTypeAlreadyExists" xml:space="preserve">
+    <value>You cannot add this type of entry more than once.</value>
+  </data>
+  <data name="QAskForDeletingEntryObject" xml:space="preserve">
+    <value>Are you sure you want to delete this entry: {0}?</value>
+  </data>
+  <data name="ErrorCannotPaste" xml:space="preserve">
+    <value>Selected day already has an entry. You must first delete the existing entry.</value>
+  </data>
+  <data name="InfoNextEntryLimit" xml:space="preserve">
+    <value>This is the last entry in the database.</value>
+  </data>
+  <data name="InfoPreviousEntryLimit" xml:space="preserve">
+    <value>This is the first entry in the database.</value>
+  </data>
+  <data name="ErrorCannotDeleteTrainingDayPartOfTraining" xml:space="preserve">
+    <value>You can not delete the specified day because some entries are part of the training.</value>
+  </data>
+  <data name="SelectReportText" xml:space="preserve">
+    <value>(Choose the report)</value>
+  </data>
+  <data name="ErrorCannotGenerateReport" xml:space="preserve">
+    <value>Failed to generate a report. Please check your log file. Error code: {0}.</value>
+  </data>
+  <data name="ReportSavingFilter" xml:space="preserve">
+    <value>Png file (*.png)|*.png|Jpeg (*.jpg)|*.jpg|Bitmap (*.bmp)|*.bmp</value>
+  </data>
+  <data name="ErrorCannotCopyTrainingDayFixedEntries" xml:space="preserve">
+    <value>Unable to copy this day because it contains only permanent entries.</value>
+  </data>
+  <data name="ErrorCannotMoveTrainingDayFixedEntries" xml:space="preserve">
+    <value>Cannot move selected training day because it contains fixed entries.</value>
+  </data>
+  <data name="ReportingOptions_NoTemplate" xml:space="preserve">
+    <value>(None)</value>
+  </data>
+  <data name="OptionsRestartRequiredMsg" xml:space="preserve">
+    <value>Some changes require you to restart the application.</value>
+  </data>
+  <data name="OptionsCalendarTitle" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="OptionsReportingTitle" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="Reporting_GeneratingTimeStatus" xml:space="preserve">
+    <value>The report has been generated in the {0}.</value>
+  </data>
+  <data name="PluginsGrid_DefaultEntryColumn" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="PluginsGrid_IconColumn" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="PluginsGrid_PluginColumn" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="ErrorDeleteLogFile" xml:space="preserve">
+    <value>Failed to delete the file. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="ErrorSaveLogFile" xml:space="preserve">
+    <value>Failed to save the file. Please check your log file. Error code: {0}</value>
+  </data>
+  <data name="QAskClearLog" xml:space="preserve">
+    <value>Are you sure you want to clear this log?</value>
+  </data>
+  <data name="SaveLogFileFilter" xml:space="preserve">
+    <value>Text file (*.txt)|*.txt|Log file (*.log)|*.log|All files (*.*)|*.*</value>
+  </data>
+  <data name="QResetAllOptions" xml:space="preserve">
+    <value>Are you sure you want to restore the default settings?</value>
+  </data>
+  <data name="CompletePercentageResult" xml:space="preserve">
+    <value>Completed: {0}%</value>
+  </data>
+  <data name="ErrorCannotBeEmpty" xml:space="preserve">
+    <value>It cannot be empty</value>
+  </data>
+  <data name="ErrorMustBeUnique" xml:space="preserve">
+    <value>It must be unique and cannot be empty</value>
+  </data>
+  <data name="DeletedObject" xml:space="preserve">
+    <value>(Deleted)</value>
+  </data>
+  <data name="StatusBarCalendarViewText" xml:space="preserve">
+    <value>Calendar view: {0}</value>
+  </data>
+  <data name="usrUserInfo_Caption_UserInformation" xml:space="preserve">
+    <value>User information</value>
+  </data>
+  <data name="CalendarViewForUser_TabText" xml:space="preserve">
+    <value>Workouts-{0}</value>
+  </data>
+  <data name="ReportsForUser_TabText" xml:space="preserve">
+    <value>Reports-{0}</value>
+  </data>
+  <data name="QAskForPublicationExercise" xml:space="preserve">
+    <value>Do you want to make the selected exercise public?</value>
+  </data>
+  <data name="QDeleteMessage" xml:space="preserve">
+    <value>Do you want to delete this message?</value>
+  </data>
+  <data name="ErrMessageDoesntExist" xml:space="preserve">
+    <value>This message does not exist or has been removed.</value>
+  </data>
+  <data name="ErrCannotDeleteMessage" xml:space="preserve">
+    <value>Failed to delete the message. More information can be found in the log file. Error code = {0}</value>
+  </data>
+  <data name="Message_Receiver" xml:space="preserve">
+    <value>Recipient</value>
+  </data>
+  <data name="Message_Sender" xml:space="preserve">
+    <value>Sender</value>
+  </data>
+  <data name="ProgressIndicator_Processing" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+  <data name="PublishButton" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="AddButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ErrCannotCreateProfile" xml:space="preserve">
+    <value>Failed to create the profile.</value>
+  </data>
+  <data name="NotLoggedText" xml:space="preserve">
+    <value>Not logged in</value>
+  </data>
+  <data name="SplasScreen_PreparingGUI" xml:space="preserve">
+    <value>Preparing the GUI ...</value>
+  </data>
+  <data name="usrMessageView_MessageGroup_Text" xml:space="preserve">
+    <value>Message ({0})</value>
+  </data>
+  <data name="usrMessageView_ReplyTopic" xml:space="preserve">
+    <value>RE: {0}</value>
+  </data>
+  <data name="ForgotPasswordWindow_PasswordChangedInfo" xml:space="preserve">
+    <value>Your password has been changed. Please check your email.</value>
+  </data>
+  <data name="ErrProblemWithSendingEmail" xml:space="preserve">
+    <value>There was a problem with sending email. Please try again later.</value>
+  </data>
+  <data name="ForgotPasswordWindow_ProfileNotFoundError" xml:space="preserve">
+    <value>The given username or e-mail address was not found in our database.</value>
+  </data>
+  <data name="ErrorOldTrainingDay" xml:space="preserve">
+    <value>Selected day has been currently changed on the server and contains diffrent data. Please refresh the view.</value>
+  </data>
+  <data name="usrUserInvitationEntry_YouInvitedThisUser_Msg" xml:space="preserve">
+    <value>Invite this user to the circle of friends.</value>
+  </data>
+  <data name="usrUserInvitationEntry_CancelInvitation_ToolTip" xml:space="preserve">
+    <value>Cancel invitation</value>
+  </data>
+  <data name="usrUserInvitationEntry_YouAreInvitedByUser_Msg" xml:space="preserve">
+    <value>You have been invited to this user's circle of friends.</value>
+  </data>
+  <data name="usrUserInvitationEntry_RejectInvitation_ToolTIp" xml:space="preserve">
+    <value>Reject invitation</value>
+  </data>
+  <data name="ErrorCannotLoginToDeletedProfile" xml:space="preserve">
+    <value>Unable to log on to the deleted profile.</value>
+  </data>
+  <data name="ErrorInvitationDoesntExist" xml:space="preserve">
+    <value>The invitation does not exist or has been removed.</value>
+  </data>
+  <data name="QDeleteProfile" xml:space="preserve">
+    <value>Do you want to delete the current profile? After this operation, the profile will not be able to be logged in, and all data will be lost.</value>
+  </data>
+  <data name="SplashScreen_DownloadingNewVersion" xml:space="preserve">
+    <value>Downloading the new version of {2}: {0}/{1}</value>
+  </data>
+  <data name="SplashScreen_NewVersionFound" xml:space="preserve">
+    <value>A new version of {0} has appeared. Preparing for updates ...</value>
+  </data>
+  <data name="ErrorDuringCheckingUpdates" xml:space="preserve">
+    <value>Error occurred during checking update of application</value>
+  </data>
+  <data name="SplashScreen_CheckingNewVersion" xml:space="preserve">
+    <value>Checking out for a newer version of the program ...</value>
+  </data>
+  <data name="ErrorDuringUpdatingApplication" xml:space="preserve">
+    <value>An error occurred during the update.</value>
+  </data>
+  <data name="ErrorOldDataModification" xml:space="preserve">
+    <value>The modified data has been changed on the server. Please refresh the view and try again.</value>
+  </data>
+  <data name="ErrorConnectionProblem" xml:space="preserve">
+    <value>Problem with the connection to the server. Please try again later.</value>
+  </data>
+  <data name="usrInvitationsView_Caption" xml:space="preserve">
+    <value>Invitations ({0})</value>
+  </data>
+  <data name="usrMessagesBoard_Caption" xml:space="preserve">
+    <value>Messages ({0})</value>
+  </data>
+  <data name="ErrorCannotAddUserToFavorites" xml:space="preserve">
+    <value>Failed to add user to your Favorites list.</value>
+  </data>
+  <data name="ErrorCannotRemoveUserFromFavorites" xml:space="preserve">
+    <value>Failed to delete user from the list of favorites.</value>
+  </data>
+  <data name="usrUserSizes_Caption" xml:space="preserve">
+    <value>Measurements</value>
+  </data>
+  <data name="PartialLoadedStatus" xml:space="preserve">
+    <value>Loaded {0} of {1}</value>
+  </data>
+  <data name="usrUserInfo_InvitationsCount" xml:space="preserve">
+    <value>You have {0} invitations.</value>
+  </data>
+  <data name="usrUserInfo_MessagesCount" xml:space="preserve">
+    <value>You have {0} messages.</value>
+  </data>
+  <data name="usrUserInfo_LastLogin" xml:space="preserve">
+    <value>Last login: {0}</value>
+  </data>
+  <data name="ErrorMaintenanceMode" xml:space="preserve">
+    <value>BodyArchitect is temporary unavailable. This is due to software updates. Please try again later.</value>
+  </data>
+  <data name="ErrorOldVersionOfBodyArchitect" xml:space="preserve">
+    <value>You have an older version of the program. Please download the latest version and try again.</value>
+  </data>
+  <data name="RssHeaderTips" xml:space="preserve">
+    <value>Tips &amp; Tricks</value>
+  </data>
+  <data name="RssHeaderNews" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="UsersListView_Group_Friends" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+  <data name="UsersListView_Group_Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="UsersListView_Group_Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="ErrorMustActivateProfile" xml:space="preserve">
+    <value>Please check your email. We have sent an email with your account activation link. Please click on it to complete the registration of your account.</value>
+  </data>
+  <data name="ForgotPasswordWindow_SendActivationEmailDescription" xml:space="preserve">
+    <value>Enter your username or e-mail address (the same you entered when creating your account.) Activation email will be sent to your inbox.</value>
+  </data>
+  <data name="ForgotPasswordWindow_SendActivationEmailTitle" xml:space="preserve">
+    <value>Send e-mail with account activation</value>
+  </data>
+  <data name="ErrorProfileIsActivated" xml:space="preserve">
+    <value>The profile is already activated.</value>
+  </data>
+  <data name="ForgotPasswordWindow_ActivatedEmailSent" xml:space="preserve">
+    <value>Activation email has been sent. Please check your email.</value>
+  </data>
+  <data name="PhotoDoesntExist" xml:space="preserve">
+    <value>Error image</value>
+  </data>
+  <data name="ErrorProfileDeleted" xml:space="preserve">
+    <value>The selected profile is deleted, hence you cannot perform the current operation.</value>
+  </data>
+  <data name="ErrorCurrentProfileDeleted" xml:space="preserve">
+    <value>Your profile has been deleted. You will be logout</value>
+  </data>
+  <data name="ErrorProfileNotActivated" xml:space="preserve">
+    <value>You must activate your account first</value>
+  </data>
+  <data name="ErrorOpenWebBrowser" xml:space="preserve">
+    <value>Cannot start the webbrowser.</value>
+  </data>
+  <data name="usrUserInvitationEntry_AcceptInvitation_ToolTip" xml:space="preserve">
+    <value>Accept invitation</value>
+  </data>
+  <data name="usrUserInvitationEntry_MessageText" xml:space="preserve">
+    <value>Message from the user:</value>
+  </data>
+  <data name="usrUserInvitationEntry_NoMessageText" xml:space="preserve">
+    <value>(User did't put a message)</value>
+  </data>
+  <data name="UserListView_CalendarAllowedToolTip" xml:space="preserve">
+    <value>You can see the calendar of this user</value>
+  </data>
+  <data name="UserListView_MeasurementsAllowedToolTip" xml:space="preserve">
+    <value>You can see the measurements of this user</value>
+  </data>
+  <data name="LoginWindow_ShowConnectionSettings" xml:space="preserve">
+    <value>Show connection settings...</value>
+  </data>
+  <data name="LoginWindow_HideConnectionSettings" xml:space="preserve">
+    <value>Hide connection settings...</value>
+  </data>
+  <data name="UserStatistics_WorkoutPlansCountToolTip" xml:space="preserve">
+    <value>Number of public workout plans created by this user</value>
+  </data>
+  <data name="UserStatistics_TrainingDaysCount" xml:space="preserve">
+    <value>Number of entries in the calendar</value>
+  </data>
+  <data name="UserStatistics_LastEntryDateToolTip" xml:space="preserve">
+    <value>Last entry date: {0}</value>
+  </data>
+  <data name="UserStatistics_TrainingDaysCountText" xml:space="preserve">
+    <value>Entries in calendar: {0}</value>
+  </data>
+  <data name="UserStatistics_WorkoutPlansText" xml:space="preserve">
+    <value>Workout plans: {0}</value>
+  </data>
+  <data name="UserStatistics_FriendsCountText" xml:space="preserve">
+    <value>Number of friends: {0}</value>
+  </data>
+  <data name="UserStatistics_FollowersCountText" xml:space="preserve">
+    <value>Number of followers: {0}</value>
+  </data>
+  <data name="UserStatistics_VotesCountText" xml:space="preserve">
+    <value>Number of votes: {0}</value>
+  </data>
+  <data name="UserStatistics_BlogCommentsCountText" xml:space="preserve">
+    <value>Number of given comments: {0}</value>
+  </data>
+  <data name="UserStatistics_LastEntryDateText" xml:space="preserve">
+    <value>Last entry: {0}</value>
+  </data>
+  <data name="DateTimeExtension_LessThanMinute" xml:space="preserve">
+    <value>Less than a minute</value>
+  </data>
+  <data name="DateTimeExtension_OneMinute" xml:space="preserve">
+    <value>About a minute</value>
+  </data>
+  <data name="DateTimeExtension_XMinutes" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="DateTimeExtension_OneHour" xml:space="preserve">
+    <value>About an hour</value>
+  </data>
+  <data name="DateTimeExtension_XHours" xml:space="preserve">
+    <value>About {0} hours</value>
+  </data>
+  <data name="DateTimeExtension_OneDay" xml:space="preserve">
+    <value>A day</value>
+  </data>
+  <data name="DateTimeExtension_XDays" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+  <data name="DateTimeExtension_OneMonth" xml:space="preserve">
+    <value>About a month</value>
+  </data>
+  <data name="DateTimeExtension_XMonths" xml:space="preserve">
+    <value>{0} months</value>
+  </data>
+  <data name="DateTimeExtension_OneYear" xml:space="preserve">
+    <value>About a year</value>
+  </data>
+  <data name="DateTimeExtension_XYears" xml:space="preserve">
+    <value>{0} years</value>
+  </data>
+  <data name="DateTimeExtension_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="DateTimeExtension_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="DateTimeExtension_XDaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+  </data>
+  <data name="DateTimeExtension_OneMonthAgo" xml:space="preserve">
+    <value>About a month ago</value>
+  </data>
+  <data name="DateTimeExtension_XMonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+  </data>
+  <data name="DateTimeExtension_OneYearAgo" xml:space="preserve">
+    <value>About a year ago</value>
+  </data>
+  <data name="DateTimeExtension_XYearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+  </data>
+  <data name="DateTimeExtension_AgoPostfix" xml:space="preserve">
+    <value> ago</value>
+  </data>
+  <data name="DateTimeExtension_FromNowSuffix" xml:space="preserve">
+    <value> from now</value>
+  </data>
+  <data name="QDeleteSelectedMessages" xml:space="preserve">
+    <value>Do you want to delete a selected messages?</value>
+  </data>
+  <data name="UserStatistics_MyBlogCommentsCount" xml:space="preserve">
+    <value>Number of my blogs comments: {0}</value>
+  </data>
+  <data name="UserStatistics_StrengthTrainingEntriesCount" xml:space="preserve">
+    <value>Strength training entries: {0}</value>
+  </data>
+  <data name="ErrorTrainingIntegrity" xml:space="preserve">
+    <value>You cannot insert A6W entry in the middle of the started training.</value>
+  </data>
+  <data name="UserStatistics_LastLogin" xml:space="preserve">
+    <value>Last login: {0}</value>
+  </data>
+  <data name="ApplicationStrings.UserStatistics_FollowersCountToolTip" xml:space="preserve">
+    <value>Number of followers</value>
+  </data>
+  <data name="UserStatistics_StarToolTip" xml:space="preserve">
+    <value>{0} medal in {1} category.</value>
+  </data>
+  <data name="usrRssReader_TipTitle" xml:space="preserve">
+    <value>Tips {0}/{1}: {2}</value>
+  </data>
+  <data name="LengthType_Cm" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="LengthType_Inch" xml:space="preserve">
+    <value>inch</value>
+  </data>
+  <data name="WeightType_Kg" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="WeightType_Pound" xml:space="preserve">
+    <value>lbs</value>
+  </data>
+</root>

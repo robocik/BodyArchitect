@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cmbDays.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmbDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 32</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v11.2" name="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cmbDays.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbDays.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(Any)</value>
+  </data>
+  <data name="cmbDays.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbDays.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="cmbDays.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;cmbDays.Name" xml:space="preserve">
+    <value>cmbDays</value>
+  </data>
+  <data name="&gt;&gt;cmbDays.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbDays.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbDays.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 35</value>
+  </data>
+  <data name="lblDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="lblDays.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lblDays.Text" xml:space="preserve">
+    <value>D&amp;ays:</value>
+  </data>
+  <data name="&gt;&gt;lblDays.Name" xml:space="preserve">
+    <value>lblDays</value>
+  </data>
+  <data name="&gt;&gt;lblDays.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblDays.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblDays.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbPurposes.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbPurposes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 3</value>
+  </data>
+  <data name="cmbPurposes.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbPurposes.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(Any)</value>
+  </data>
+  <data name="cmbPurposes.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbPurposes.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbPurposes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="cmbPurposes.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;cmbPurposes.Name" xml:space="preserve">
+    <value>cmbPurposes</value>
+  </data>
+  <data name="&gt;&gt;cmbPurposes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbPurposes.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbPurposes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 6</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>&amp;Purpose:</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnReset.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnReset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 35</value>
+  </data>
+  <data name="btnReset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnReset.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnReset.Text" xml:space="preserve">
+    <value>&amp;Reset</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Name" xml:space="preserve">
+    <value>btnReset</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;btnReset.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmbLanguages.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbLanguages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 31</value>
+  </data>
+  <data name="cmbLanguages.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbLanguages.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(Any)</value>
+  </data>
+  <data name="cmbLanguages.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbLanguages.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbLanguages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="cmbLanguages.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cmbLanguages.Name" xml:space="preserve">
+    <value>cmbLanguages</value>
+  </data>
+  <data name="&gt;&gt;cmbLanguages.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbLanguages.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbLanguages.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblLanguages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 35</value>
+  </data>
+  <data name="lblLanguages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="lblLanguages.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblLanguages.Text" xml:space="preserve">
+    <value>&amp;Languages:</value>
+  </data>
+  <data name="&gt;&gt;lblLanguages.Name" xml:space="preserve">
+    <value>lblLanguages</value>
+  </data>
+  <data name="&gt;&gt;lblLanguages.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblLanguages.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblLanguages.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cmbSortOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 5</value>
+  </data>
+  <data name="cmbSortOrder.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbSortOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="cmbSortOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.Name" xml:space="preserve">
+    <value>cmbSortOrder</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblSortOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 6</value>
+  </data>
+  <data name="lblSortOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="lblSortOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblSortOrder.Text" xml:space="preserve">
+    <value>F&amp;irst show:</value>
+  </data>
+  <data name="&gt;&gt;lblSortOrder.Name" xml:space="preserve">
+    <value>lblSortOrder</value>
+  </data>
+  <data name="&gt;&gt;lblSortOrder.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblSortOrder.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblSortOrder.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cmbWorkoutPlanDifficult.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbWorkoutPlanDifficult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 32</value>
+  </data>
+  <data name="cmbWorkoutPlanDifficult.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbWorkoutPlanDifficult.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(Any)</value>
+  </data>
+  <data name="cmbWorkoutPlanDifficult.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbWorkoutPlanDifficult.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbWorkoutPlanDifficult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="cmbWorkoutPlanDifficult.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanDifficult.Name" xml:space="preserve">
+    <value>cmbWorkoutPlanDifficult</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanDifficult.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanDifficult.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanDifficult.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbWorkoutPlanType.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbWorkoutPlanType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 6</value>
+  </data>
+  <data name="cmbWorkoutPlanType.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbWorkoutPlanType.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(Any)</value>
+  </data>
+  <data name="cmbWorkoutPlanType.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbWorkoutPlanType.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbWorkoutPlanType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="cmbWorkoutPlanType.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanType.Name" xml:space="preserve">
+    <value>cmbWorkoutPlanType</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanType.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlanType.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnSearch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAA0xJREFUOE9Fk1lM
+        E1EUhvukjyYmJhpj4oMmRhAhqKBls5GiYG1QJKiI2NICiiwRVFSUiMUFCIpgiBLjg0vUGJRVukgKBdqA
+        OyKIUEU0Eahot1s6M/zeGbQ+fLm5mTnf/c+ZOyIAIp4tRcZUWZlZJy83/6S4KUSggl8tRF7WQ+IudfWL
+        j5muhmU0zvtXJxTzbNOYOqfsZOqn08PanB7YHP+ZsntAn+HDdzuKGsagqh52iTMa5/N1PkHcxa4Ju9vL
+        9nz2wvKFgWWMgfkzgy7rDIzDHjwbcMLDAE2DbhQ9+YK0qmF3xOGm+YLg1IWqhYojx6E6UoBm8whS1DnY
+        o8hCryCZQccnD7QDLirg8OI7C8s3L863jEFS2H5PpMwqWFBcXltZUlmHmO07cb+1FzGyBBRqruBs+Q10
+        j7hgGpmBfsgN6w+n0IqDMPgx7UL0mQ5GVHSpZlliitqRc0ID8eZYnCytQVRsIvJLqhAVI4fu1ThN4RVS
+        6GiK5n4HGt/+xi86J+k5ExGt2xihkSXsw5XbTxC/PxOq/FLsSFLiYu1DxMbvRXahBn10Jj3WOYnhoxs6
+        OodppxfSkm4ioqdPJx3MxFZ5IqTbZDheXI4QcRTCJFIEh4Zj5Sp/vBln5yQ0SSdthxfZqCD6HBXQGXjq
+        20youHEfR08Wo6lzAMnKLNyp16Gs9h6ksl14943D63EGfV/nknRTJuxeSIqp4EBGHh61GKHOLURisgJ1
+        D7TYr87G3acGHMo/A7+AYEHAp3gxxqKX/8QUOx1k5OkuIkrYpxROT0nPxabIaFyte4wdu5Nx9vJ10Paw
+        eMlSofglLe6jWOjdMFMB8XIQHzMSUWi4ZChMsnUoKCJuVp6QBElpC5YHhmPF+s1Y6heCRf5i7GwkAvEN
+        BPK/uGZYbMhpJ76bGHbCSL7aCLI7ONweBG59AG4OALV0vU7XGkr1e+BaP6B6zsBJWwhK1/0XhOa1u6yT
+        rtmMdg7pBlZ4Ke05K6Cge6WBwUE9g1R+r2f5W8mtSWtz+BIEZ+pHJ3577NYpwo1OujE64canv0w6vODh
+        J+8gLOj/xnGzs79Wp7a+9wnWHdIdDlRp9UFqnS1QrSU+VFqylhKgapsjTWDaX9FqCFC0Kv8A7DHi6/dp
+        SxUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 5</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>&amp;Find</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblWorkoutPlanDifficult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="lblWorkoutPlanDifficult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="lblWorkoutPlanDifficult.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblWorkoutPlanDifficult.Text" xml:space="preserve">
+    <value>&amp;Difficult:</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanDifficult.Name" xml:space="preserve">
+    <value>lblWorkoutPlanDifficult</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanDifficult.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanDifficult.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanDifficult.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblWorkoutPlanType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="lblWorkoutPlanType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="lblWorkoutPlanType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblWorkoutPlanType.Text" xml:space="preserve">
+    <value>&amp;Type:</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanType.Name" xml:space="preserve">
+    <value>lblWorkoutPlanType</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanType.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlanType.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="panelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>638, 65</value>
+  </data>
+  <data name="panelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Name" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="usrWorkoutPlansPagerListView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="usrWorkoutPlansPagerListView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="usrWorkoutPlansPagerListView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>638, 202</value>
+  </data>
+  <data name="usrWorkoutPlansPagerListView1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansPagerListView1.Name" xml:space="preserve">
+    <value>usrWorkoutPlansPagerListView1</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansPagerListView1.Type" xml:space="preserve">
+    <value>BodyArchitect.Module.StrengthTraining.Controls.usrWorkoutPlansPagerListView, BodyArchitect.Module.StrengthTraining, Version=4.0.0.0, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansPagerListView1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansPagerListView1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>644, 279</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panelControl1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="usrWorkoutPlansPagerListView1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,71,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>644, 279</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>usrWorkoutPlansSearch</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.usrBaseControl, BodyArchitect.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+</root>

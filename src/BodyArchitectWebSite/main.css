@@ -1,0 +1,29 @@
+﻿body
+{
+    font-size: xx-small;
+    font-family: Tahoma;
+}
+
+table.main
+{
+    border-style: solid;
+    border-width: 1px;
+}
+
+th
+{
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #6487dc;
+    text-align: left;
+}
+
+td.mainContent
+{
+    vertical-align: top;
+}
+
+a.profile
+{
+    font-weight: bold;
+}

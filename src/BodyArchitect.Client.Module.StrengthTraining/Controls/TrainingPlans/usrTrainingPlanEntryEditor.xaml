@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.StrengthTraining.Controls.TrainingPlans.usrTrainingPlanEntryEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:BodyArchitect.Client.Module.StrengthTraining.Controls"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/BodyArchitect.Client.Module.StrengthTraining;component/Themes/generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="{StaticResource MarginLargeLeftTopRightBottom}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrTrainingPlanEntryEditor_Content_Exercise}" Target="cmbExercises" Margin="{StaticResource MarginLargeRight}" />
+        <Controls:ExercisesFilteredComboBox x:Name="cmbExercises" Grid.Column="1" SelectionChanged="cmbExercises_SelectionChanged"
+                   TextSearch.TextPath="Name" ItemTemplate="{StaticResource ExerciseComboBoxItem}" ItemContainerStyle="{StaticResource StretchedComboBoxItemStyle}"
+                 ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TrainingPlanEntryEditor_ExerciseCMB}"/>
+
+        <Label  Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrTrainingPlanEntryEditor_Label_ExerciseDoneWay}" Target="cmbExerciseDoneWay" Margin="{StaticResource MarginLargeTop}" Grid.Row="1"/>
+        <ComboBox Margin="{StaticResource MarginLargeTop}" SelectionChanged="cmbExerciseDoneWay_SelectionChanged" SelectedValuePath="Value" DisplayMemberPath="Text" Grid.Column="1" Grid.Row="1" Name="cmbExerciseDoneWay"/>
+
+        <Label Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrTrainingPlanEntryEditor_Content_RestTime}" Target="txtRestTime" Grid.Row="2" Margin="{StaticResource MarginLargeTopRight}"/>
+        <xctk:IntegerUpDown Margin="{StaticResource MarginLargeTop}" Name="txtRestTime" Grid.Column="1" Grid.Row="2" ValueChanged="txtRestTime_TextChanged"
+                  ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TrainingPlanEntryEditor_RestTimeTXT}"/>
+
+        <Label Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrTrainingPlanEntryEditor_Content_Comment}" Target="txtRestTime"  Grid.Row="3" Grid.ColumnSpan="2" Margin="{StaticResource MarginLargeTopRight}"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginLargeTop}" Name="txtComment" Grid.Row="4" Grid.ColumnSpan="2" TextChanged="txtComment_TextChanged"
+                  ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TrainingPlanEntryEditor_CommentTXT}"/>
+    </Grid>
+</UserControl>

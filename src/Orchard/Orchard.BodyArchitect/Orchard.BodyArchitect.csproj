@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D73426F-DC9A-4E0E-A964-86830CE08BB5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orchard.BodyArchitect</RootNamespace>
+    <AssemblyName>Orchard.BodyArchitect</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Orchard.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Orchard\Orchard.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Framework, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Orchard\Orchard.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Users, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Orchard\Orchard.Users.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service References\WCF\BodyArchitect.disco" />
+    <Content Include="Service References\WCF\configuration91.svcinfo" />
+    <Content Include="Service References\WCF\configuration.svcinfo" />
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.ActivityDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.CustomerDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.CustomerGroupDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.ExerciseDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.FeaturedData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.FriendInvitationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.MeasurementsTimeReportResultItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.MyPlaceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.MyTrainingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfActivityDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfChampionshipDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfCommentEntryDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfCustomerDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfCustomerGroupDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfExerciseDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfExerciseRecordsReportResultItem5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfMessageDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfMyPlaceDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfMyTrainingDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfPaymentBasketDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfProductInfoDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfReminderItemDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfScheduleEntryBaseDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfSuplementDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfSupplementCycleDefinitionDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfTrainingDayCommentDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfTrainingDayDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfTrainingPlan5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PagedResultOfUserSearchDTO5oAtqRlh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.PaymentBasketDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.ProfileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.ProfileInformationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.ReminderItemDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.ReservationOperationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.SaveChampionshipResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.SaveTrainingDayResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.ScheduleEntryBaseDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.SessionData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.SuplementDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.SupplementCycleDefinitionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.TrainingDayCommentDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.TrainingDayDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.TrainingPlan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.TrialStatusInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.VoteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.WeightExerciseReportResultItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Orchard.BodyArchitect.WCF.WeightReperitionReportResultItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Module.txt" />
+    <Content Include="Service References\WCF\BodyArchitect.wsdl" />
+    <None Include="Service References\WCF\BodyArchitect10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\WCF\BodyArchitectAccessService.wsdl" />
+    <Content Include="Views\EditorTemplates\Parts\User.Create.cshtml" />
+    <Content Include="Views\EditorTemplates\Parts\User.Edit.cshtml" />
+    <Content Include="Views\LogOn.cshtml" />
+    <Content Include="Views\Register.cshtml" />
+    <Content Include="Views\Account\AccessDenied.cshtml" />
+    <Content Include="Views\Account\ChallengeEmailFail.cshtml" />
+    <Content Include="Views\Account\ChallengeEmailSent.cshtml" />
+    <Content Include="Views\Account\ChallengeEmailSuccess.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LostPassword.cshtml" />
+    <Content Include="Views\Account\RegistrationPending.cshtml" />
+    <Content Include="Views\Account\RequestLostPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAUser.cs" />
+    <Compile Include="BodyArchitectAuthenticationService.cs" />
+    <Compile Include="Commands\UserCommands.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="MembershipService.cs" />
+    <Compile Include="Models\BACreateUserParams.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="RolesBasedAuthorizationService.cs" />
+    <Compile Include="Service References\WCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoutes.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="ViewModels\UserCreateViewModel.cs" />
+    <Compile Include="ViewModels\UserEditViewModel.cs" />
+    <Compile Include="ViewModels\UsersIndexViewModel.cs" />
+    <Compile Include="WCF\APIKeyMessageInspector.cs" />
+    <Compile Include="WCF\CryptographyHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCF\BodyArchitect.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCF\BodyArchitect6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orchard.Roles\Orchard.Roles.csproj">
+      <Project>{d10ad48f-407d-4db5-a328-173ec7cb010f}</Project>
+      <Name>Orchard.Roles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+    <!-- If this is an area child project, uncomment the following line:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Child" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    -->
+    <!-- If this is an area parent project, uncomment the following lines:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Parent" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    <CopyAreaManifests ManifestPath="$(AreasManifestDir)" CrossCopy="false" RenameViews="true" />
+    -->
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

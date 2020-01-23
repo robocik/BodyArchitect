@@ -1,0 +1,115 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using BodyArchitect.Service.V2.Model;
+
+namespace BodyArchitect.Client.Module.GPSTracker
+{
+    class WeatherIcon
+    {
+        static public string GetIcon(WeatherCondition condition)
+        {
+            switch (condition)
+            {
+                case WeatherCondition.ModerateOrHeavySnowWithThunder:
+                    return "ModerateOrHeavySnowWithThunder.png";
+                case WeatherCondition.PatchyLightSnowWithThunder:
+                    return "PatchyLightSnowWithThunder.png";
+                case WeatherCondition.ModerateOrHeavyRainAreaWithThunder:
+                    return "ModerateOrHeavyRainAreaWithThunder.png";
+                case WeatherCondition.PatchyLightRainWithThunder:
+                    return "PatchyLightRainWithThunder.png";
+                case WeatherCondition.ModerateOrHeavyShowersOfIcePellets:
+                    return "ModerateOrHeavyShowersOfIcePellets.png";
+                case WeatherCondition.LightShowersOfIcePellets:
+                    return "LightShowersOfIcePellets.png";
+                case WeatherCondition.ModerateOrHeavySnowShowers:
+                    return "ModerateOrHeavySnowShowers.png";
+                case WeatherCondition.LightSnowShowers:
+                    return "LightSnowShowers.png";
+                case WeatherCondition.ModerateOrHeavySleetShowers:
+                    return "ModerateOrHeavyShowersOfIcePellets.png";
+                case WeatherCondition.LightSleetShowers:
+                    return "ModerateOrHeavyShowersOfIcePellets.png";
+                case WeatherCondition.TorrentialRainShower:
+                    return "TorrentialRainShower.png";
+                case WeatherCondition.ModerateOrHeavyRainShower:
+                    return "ModerateOrHeavyRainShower.png";
+                case WeatherCondition.LightRainShower:
+                    return "LightRainShower.png";
+                case WeatherCondition.IcePellets:
+                    return "ModerateOrHeavyShowersOfIcePellets.png";
+                case WeatherCondition.HeavySnow:
+                    return "HeavySnow.png";
+                case WeatherCondition.PatchyHeavySnow:
+                    return "HeavySnow.png";
+                case WeatherCondition.ModerateSnow:
+                    return "ModerateSnow.png";
+                case WeatherCondition.PatchyModerateSnow:
+                    return "ModerateSnow.png";
+                case WeatherCondition.LightSnow:
+                    return "LightSnowShowers.png";
+                case WeatherCondition.PatchyLightSnow:
+                    return "LightSnowShowers.png";
+                case WeatherCondition.ModerateOrHeavySleet:
+                    return "ModerateOrHeavyShowersOfIcePellets.png";
+                case WeatherCondition.LightSleet:
+                    return "LightSleet.png";
+                case WeatherCondition.ModerateOrHeavyFreezingRain:
+                    return "ModerateOrHeavyFreezingRain.png";
+                case WeatherCondition.LightFreezingRain:
+                    return "ModerateOrHeavyFreezingRain.png";
+                case WeatherCondition.HeavyRain:
+                    return "TorrentialRainShower.png";
+                case WeatherCondition.HeavyRainAtTimes:
+                    return "HeavyRainAtTimes.png";
+                case WeatherCondition.ModerateRain:
+                    return "ModerateOrHeavyRainShower.png";
+                case WeatherCondition.ModerateRainAtTimes:
+                    return "ModerateOrHeavyRainShower.png";
+                case WeatherCondition.LightRain:
+                    return "LightRainShower.png";
+                case WeatherCondition.PatchyLightRain:
+                    return "LightRainShower.png";
+                case WeatherCondition.HeavyFreezingDrizzle:
+                    return "HeavyFreezingDrizzle.png";
+                case WeatherCondition.FreezingDrizzle:
+                    return "HeavyFreezingDrizzle.png";
+                case WeatherCondition.LightDrizzle:
+                    return "LightRainShower.png";
+                case WeatherCondition.PatchyLightDrizzle:
+                    return "LightRainShower.png";
+                case WeatherCondition.FreezingFog:
+                    return "Fog.png";
+                case WeatherCondition.Fog:
+                    return "Fog.png";
+                case WeatherCondition.Blizzard:
+                    return "Blizzard.png";
+                case WeatherCondition.BlowingSnow:
+                    return "HeavySnow.png";
+                case WeatherCondition.ThunderyOutbreaksNearby:
+                    return "PatchyLightRainWithThunder.png";
+                case WeatherCondition.PatchyFreezingDrizzleNearby:
+                    return "LightSleet.png";
+                case WeatherCondition.PatchySleet:
+                    return "LightSleet.png";
+                case WeatherCondition.PatchySnow:
+                    return "LightSnowShowers.png";
+                case WeatherCondition.PatchyRain:
+                    return "LightRainShower.png";
+                case WeatherCondition.Mist:
+                    return "Fog.png";
+                case WeatherCondition.Overcast:
+                    return "Cloudy.png";
+                case WeatherCondition.Cloudy:
+                    return "Cloudy.png";
+                case WeatherCondition.PartlyCloudy:
+                    return "PartlyCloudy.png";
+                case WeatherCondition.ClearSunny:
+                    return "ClearSunny.png";
+            }
+            return null;
+        }
+    }
+}

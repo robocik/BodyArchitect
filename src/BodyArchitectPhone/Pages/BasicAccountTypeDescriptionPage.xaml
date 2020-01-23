@@ -1,0 +1,30 @@
+﻿<Controls:BodyArchitectPage 
+    x:Class="BodyArchitect.WP7.Pages.BasicAccountTypeDescriptionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480" Loaded="BodyArchitectPage_Loaded">
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="PageTitle" Foreground="{StaticResource splashScreenBrush}"  Style="{StaticResource CustomTextTitle1Style}"/>
+
+            <ScrollViewer Grid.Row="1">
+                <StackPanel Margin="0,0,0,0" Name="mainList" Grid.Row="1">
+                    <TextBlock Margin="12,0,0,42" Name="tbDescription" FontFamily="{StaticResource CustomFontFamilyNormal}" FontSize="{StaticResource CustomFontSizeMedium}" TextWrapping="Wrap" />
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Controls:BodyArchitectPage>

@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainerControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="colUserName.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colUserName.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="colTopic.Text" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="colTopic.Width" type="System.Int32, mscorlib">
+    <value>228</value>
+  </data>
+  <data name="colDate.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="colDate.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="listView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 279</value>
+  </data>
+  <data name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD+
+        DgAAAk1TRnQBSQFMAgEBBQEAARQBAAEUAQABEAEAARABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEYBgABGBgAA88DxQO7A7YDuQO8A70DwAPFA8oD0APSmQAD0gPMA7wDigOXA64GrwOx
+        A7cDwgPMA9KcAAPQA8IDfwOiA7wJwgPFA8oD0APSnAAD0wPEA3cDrwPKsQAD0gO9A3YDuAPNsQADzwOr
+        A4IDvQPQsQADzQOcA5IDwQPTCQAD0aUAA8oDkQOkA8UGAAPMAbYBtQGzAbEBsAGuAfUB8gHwAdkB1wHV
+        nwADxwOJA7EDyAYAAcIBvwG8Aa4BrAGpAcsByQHHAfgB8wHwAc4ByQHEnAAD0wPEA4QDtwLGAcUB3gHd
+        AdwB3QHZAdcBtAGvAaoBsAGvAa0B7AHoAecB6wHmAeMBvQG4AbScAAPSA70DhgK0AbMB0gHQAc4B9wHy
+        AfAB1AHOAcoBqwGmAaEBvAG6AbgB+gH1AfMB2AHTAc8BtgGzAa6cAAPQA6sDlQGvAa4BrQHrAecB5gHv
+        AeoB5wHEAb4BuQGnAaIBngHdAdoB2AHzAe0B6wHCAbwBtwG6AbcBtJwAA8wDnwOnAbYBtQG0AfkB9AHy
+        AeMB3QHaAbQBrgGpAawBqAGkAecB5QHjAd0B2gHXAa0BpwGhAcYBxAHDnAADygOYA7EByQHIAcYB9wHy
+        AfAB1AHOAcoBpgGgAZoBwwHBAb8GAAG/AbwBugPRnAADzAOjArEBsAHiAt4B7wHqAecBxAG+AbkBrQGo
+        AaSrAAPRA8wDywHeA9wB2QHXAckBxgHFA9OoAAPMA6MDnRWTA5oJoAOlA8oGAAPPA8UDuwO2A7kDvAO9
+        A8ADxQPKA9AD0gwAA88DxQO7A7YDuQO8A70DwAPFA8oD0APSDAADzwPFA7sDtgO5A7wDvQPAA8UDygPQ
+        A9IJAAG5Aa0BnwGoAZMBfAGoAZIBfQGoAZMBfQGpAZQBfgGqAZQBfwGqAZUBgQGrAZYBggGrAZYBgwGs
+        AZcBhAGsAZcBhAGtAZgBhQGuAZoBiAG+AbEBpwYAA9IDzAO8A4oDlwOuBq8DsQO3A8IDzAPSCQAD0gPM
+        A7wDigOXA64GrwOxA7cDwgPMA9IJAAPSA8wDvAOKA5cDrgavA7EDtwPCA8wD0gYAAc4BzAHJAa4BmAGB
+        AeABzAG5AeABzAG5AeABzAG5AeABzAG5AeABzAG5AeABzAG5AeABzAG5AeABzAG5AeABzAG5AeABzAG5
+        AeABzAG5AeABzAG5AbIBnQGLAdABzwHOBgAD0APCA38DogO8CcIDxQPKA9AD0gwAA9ADwgN/A6IDvAnC
+        A8UDygPQA9IMAAPQA8IDfwOiA7wJwgPFA8oD0APSBgABzgHMAckBrwGaAYMB6gHbAckB4wHRAb4B4AHM
+        AbkB4AHMAbkB4AHMAbkB4AHMAbkB4AHMAbkB4AHMAbkB4AHMAbkB4AHMAbkB4AHMAbkB4AHMAbkBsQGd
+        AYoB0AHPAc4GAAPTA8QDdwOvA8ohAAPTA8QDdwOvA8ohAAPTA8QDdwOvA8obAAHOAcsByQGuAZoBgwHv
+        AeQB0wHFAb4BsgG6AbMBqAHIAb0BsAG3AasBnwG+Aa8BogGtAaEBlgGzAaYBmgHEAbQBpQG9Aa4BoQHS
+        AcABrwHgAcwBuQGxAZwBiQHQAc8BzgYAA9IDvQN2A7gDzSEAA9IDvQN2A7gDzSEAA9IDvQN2A7gDzRsA
+        Ac4BywHIAa4BmQGCAe8B5AHTAe8B5AHSAe8B5AHSAe8B5AHTAe8B5AHTAe8B5AHSAeIB1QHDAdwBywG5
+        AeABzAG5AeABzAG5AeABzAG5AdwByAG2AbEBnAGIAdABzwHOBgADzwOrA4IDvQPQIQADzwOrA4IDvQPQ
+        IQADzwOrA4IDvQPQGwABzgHLAcgBrgGZAYEB8AHmAdYBwAG5Aa4BwQG6Aa8BvwG4Aa0B1AHLAb0B2QHP
+        AcEBuQGyAagB3wHVAcYBxQG9AbEBvAGyAaYBswGoAZwBzwG+Aa0BsAGbAYcB0AHPAc4GAAPNA5wDkgPB
+        A9MJAAPLFQADzQOcA5IDwQPTCQACzgHUFQADzQOcA5IDwQPTCQABywHRAdQPAAHOAcsByAGtAZkBgQHy
+        AegB2QHpAeAB0QHsAeIB0wHtAeMB0wHwAeUB1QHwAeUB1AHhAdcBxwHvAeQB0gHvAeQB0gHvAeQB0wHm
+        AdsBywHvAeQB0gGwAZsBiAHQAc8BzgYAA8oDkQOkA8UGAAOzAUkCSAEwAS8BLgGaAZEBjgHLAcYBxA8A
+        A8oDkQOkA8UGAAG7AbQB2gFzAWIB8wFfAWIB8QIUAc8CgQHNDwADygORA6QDxQYAAbEBxgHSAUEBngHS
+        AS0BvQHoATsBzAHvAZUBxQHaCQABzgHLAcgBrQGYAYEB8wHqAdwBxgHAAbYBxAG+AbQBxgG/AbUBvQG3
+        Aa0B2gHSAcQBwwG8AbEBxAG9AbIBzAHEAbgBuQGyAagB7wHkAdIB7wHkAdIBsAGbAYcB0AHPAc4GAAPH
+        A4kDsQPIBgABjAGJAYYBKwIqAVMBUAFOAboBrwGqAZ4BlwGQDwADxwOJA7EDyAYAAXcBbQHpAWMBVgH5
+        AVQBWAHrAgABygIKAcMPAAPHA4kDsQPIBgABYAG9Ad0BIAGZAdYBMAHFAewBMwHIAe8BOwGpAeEJAAHO
+        AcsByAGtAZgBgQH0AesB3gHnAd4B0gH0AesB3QHtAeUB2AHlAd4B0gHyAekB2gHcAdQBygHpAeAB0gHx
+        AecB1wHtAeMB1AHwAeUB1QHwAeUB1AGvAZsBhgHQAc8BzgMAA9MDxAODA6kBtwK2A9ABzwLRAYEBewF0
+        ASkCKAGBAXoBdwHCAbYBsQGMAYgBgwwAA9MDxAKDAYQCpAG3ApkBxgKbAdICbQHcAWIBYQHxAWABWQH4
+        AUMBRwHkAgAByAIqAcUMAAPTA8QBgwKEAaMBsQG6AZsBuwHLAbkB2wHgAYwB3wHrASwBwgHmASYBnwHZ
+        ATIBzAHvATMBwwHtAVIBqgHcCQABzgHLAcgBrAGXAYAB9AHrAd4B9AHrAd4B7gHmAdoBuwG6AbkBwwHB
+        Ab8BxwHDAb4BwwHBAb8BtwG1AbQBwgG/AbkBsAGvAa4B7gHkAdYB8QHnAdcBrwGaAYUB0AHPAc4DAAPS
+        A70DhgGXApYBnwGbAZkB2QHdAd8BuAG2AbIBXwFcAVgBPwE9ATwBqwGhAZwBrgGlAZ4BgwGCAX8MAAPS
+        A70DhgKCAbUCIwHCAiIB1gJDAecBcQFtAfYCYAH2AS8BMgHdAgABxgJSAcgMAAPSA70DhgF/AaUBuwFO
+        AbUB3AF/AfIB/wFTAdsB9AEmAbMB3gEoAakB3gEzAc8B8QEzAbwB6wFvAbEB2QkAAc4BywHIAawBlwF/
+        AfQB6wHeAfQB6wHeAe0B5QHZAb0BuwG6AfUB8wHuAeQB4gHeAfsB+AH0AecB5AHhAdgB1gHSAcQBwgHA
+        Ad4B1wHNAfIB6QHaAa4BmgGEAdABzwHOAwAD0AOrA5UBjgGMAYsBsQGuAa0B2wHgAeIBnQGXAZEBRgFE
+        AUMBagFkAWIBwgG2AbEBjAGGAX8CjwGODAAD0AOrA5UCYQG0Ah8ByQIqAdsCUQHtAXgBcAH4AWABYgH0
+        ARsBHQHVAgABxQJ8AcsMAAPQA6sDlQFcAZcBugFtAdcB7wF1Ae4B/QE+Ac8B7gEiAakB2QErAbMB4wEz
+        Ac8B8QEzAbUB6AGPAboB1QwAAbYBqQGaAaQBjQFzAaQBjQF0AaUBkQF6AbABrQGqAdYB0AHHAeEB2gHR
+        AeEB2gHRAeIB2gHSAdsB1AHMAbMBrwGrAacBmAGHAakBkwF9AboBrgGhBgADzAOfA6YBkQGOAY0DygHO
+        AtEBgQF7AXQBTQJMAbMBrgGsAcUBvQG5AWUBYQFdAa8CrgwAA8wDnwKlAacCRgG2Ah0B0QI2AeECYAHy
+        AYQBfAH1AZQBlgHjAUoBSwHQAgABwwKmAc8MAAPMA58BpQKnAU4BmwHBAYAB7gH9AWYB5gH5ASkBwwHo
+        ATUBqQHXAXkBxwHfAWYBzgHnATMBrgHlAa4BxAHSFQAD0AO3A88D5QPwBu8DvwPIDAADygOYA60BoAGd
+        AZwB2QHdAd8BuAG2AbIBXgFaAVUBowKiBgABmwGaAZkDzQwAA8oDmAKqAbECPAG8AiIB1gJDAecCbQH3
+        AboBuQHgBgAChAHNAswB0wwAA8oDmAGpAa8BsgFfAbIB0QF/AfIB/wFTAdsB9AEWAbcB4gGWAcYB1QYA
+        AZcBwwHZAc0B0QHTFQAD0AO4A9UDwwPlA84D0APBA8gMAAPMA6MBpAKjAbACrAHbAeAB4gGdAZcBkQFr
+        AWoBaRsAA8wDowKSAbMCMAHFAioB2wJRAe0ClAHwGwADzAOjAY8BqAG1AXQB0AHmAXUB7gH9AT4BzwHu
+        AUYBugHbJAAD0QO4A7oDwQO4A78DsQO2A88MAAPRA8wCyAHHA80B0ALRAbcBtAGyA9EbAAPRA8wCwQHL
+        ApAB0AJ0AdsCqwHeAtMB1BsAA9EDzAHCAckBzAGzAdoB4AGRAd4B6QGXAc4B2wHRAdMB1BgAAUIBTQE+
+        BwABPgMAASgDAAFAAwABIAMAAQEBAAEBBgABARYAA/8BAAHAAQMGAAGAAQMGAAHAAQMGAAHBAf8GAAHB
+        Af8GAAHBAf8GAAHBAd8GAAHDAQcGAAHDAQcGAAGAAQcGAAGAAQcGAAGAAQcGAAGAAQcGAAGAAWcGAAGA
+        Af8GAAGAAf8IAAHAAQMBwAEDAcABAwGAAQEBgAEDAYABAwGAAQMCAAHAAQMBwAEDAcABAwIAAcEB/wHB
+        Af8BwQH/AgABwQH/AcEB/wHBAf8CAAHBAf8BwQH/AcEB/wIAAcEB3wHBAd8BwQHfAgABwwEHAcMBBwHD
+        AQcCAAHDAQcBwwEHAcMBBwIAAYABBwGAAQcBgAEHAgABgAEHAYABBwGAAQcCAAGAAQcBgAEHAYABBwGA
+        AQEBgAEHAYABBwGAAQcB8AEHAYABZwGAAWcBgAFnAfABBwGAAf8BgAH/AYAB/wHwAQcBgAH/AYAB/wGA
+        Af8L
+</value>
+  </data>
+  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Panel1.Text" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="usrMessageView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="usrMessageView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="usrMessageView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 279</value>
+  </data>
+  <data name="usrMessageView1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;usrMessageView1.Name" xml:space="preserve">
+    <value>usrMessageView1</value>
+  </data>
+  <data name="&gt;&gt;usrMessageView1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.usrMessageView, BodyArchitect.Controls, Version=4.0.0.8, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrMessageView1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;usrMessageView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v11.2" name="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="labelControl1.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v11.2">
+    <value>None</value>
+  </data>
+  <data name="labelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 279</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>(Select the message to see details)</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerControl1.Panel2.Text" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>825, 279</value>
+  </data>
+  <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Text" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Name" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>825, 279</value>
+  </data>
+  <data name="&gt;&gt;colUserName.Name" xml:space="preserve">
+    <value>colUserName</value>
+  </data>
+  <data name="&gt;&gt;colUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTopic.Name" xml:space="preserve">
+    <value>colTopic</value>
+  </data>
+  <data name="&gt;&gt;colTopic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colDate.Name" xml:space="preserve">
+    <value>colDate</value>
+  </data>
+  <data name="&gt;&gt;colDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>usrMessagesBoard</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraUserControl, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>

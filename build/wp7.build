@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<project default="all">
+	<property name="basedir" value="c:\sources\BA" />
+	<property name="active.configuration" value="release" />
+	<property name="version" value="4.0.0.7" />
+    <property name="project.file" value="${basedir}\BA40\BodyArchitectPhone\BodyArchitectPhone.csproj" />
+	<property name="releases.dir" value="${basedir}\build\output\WP7" />
+  
+  <target name="all">
+	<call target="pro" />
+	<call target="free" />
+  </target>
+  
+  <target name="pro">
+	<property name="releases.dir" value="${basedir}\build\output\WP7\Pro" />
+	<property name="compilationSymbols" value="SILVERLIGHT;WINDOWS_PHONE;RELEASE" />
+	<property name="applicationName" value="" />
+	<property name="applicationGuid" value="a8ae97fa-f83a-460a-a681-325286430411" />
+	
+	<xmlpoke
+      file="${basedir}\BA40\BodyArchitectPhone\Properties\WMAppManifest.xml"
+      xpath="//App/@Title"
+      value="BodyArchitect" />
+	  
+	<call target="build" />
+  </target>
+  
+  <target name="free">
+	<property name="releases.dir" value="${basedir}\build\output\WP7\Free" />
+	<property name="compilationSymbols" value="SILVERLIGHT;WINDOWS_PHONE;FREE;RELEASE" />
+	<property name="applicationName" value="BodyArchitectFree" />
+	<property name="applicationGuid" value="1CACA9EE-A0BD-47AC-B682-BA38D02616C8" />
+	
+
+	<xmlpoke
+      file="${basedir}\BA40\BodyArchitectPhone\Properties\WMAppManifest.xml"
+      xpath="//App/@Title"
+      value="BodyArchitect Free" />
+	<call target="build" />
+  </target>
+
+  
+	<target name="build" depends="nant_contrib" >
+		<delete dir="${releases.dir}" failonerror="false" />
+		<mkdir dir="${releases.dir}" />
+		
+		<property name="MSBuildPath" value="C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe"/>    
+		<exec program="${MSBuildPath}">
+			<arg line='"${project.file}"' />				
+			<arg value="/t:rebuild" />
+			<arg value="/Property:Configuration=Release" />
+			<arg value="/Property:OutputPath=${releases.dir}\bin" />		 
+			<arg value="/Property:DefineConstants=&quot;${compilationSymbols}&quot;" />	
+		</exec>	
+			
+		
+		<copy file="${releases.dir}\bin\BodyArchitectPhone.xap" tofile="${releases.dir}\WithoutInstrumentation\BodyArchitectPhone.xap" />
+		<!--<copy file="${basedir}\build\InstrumentationWP7.xml" tofile="${releases.dir}\instrumentation.xml" /> 
+		
+		<xmlpoke
+      file="${releases.dir}\instrumentation.xml"
+      xpath="/dotfuscator/input/asmlist/package/file/@dir"
+      value="${releases.dir}\WithoutInstrumentation\" />
+	  <xmlpoke
+      file="${releases.dir}\instrumentation.xml"
+      xpath="/dotfuscator/extattributes/extattribute[@name='PreEmptive.Attributes.ApplicationAttribute']/propertylist/property[@name='Name']/@value"
+      value="${applicationName}" />
+	  <xmlpoke
+      file="${releases.dir}\instrumentation.xml"
+      xpath="/dotfuscator/extattributes/extattribute[@name='PreEmptive.Attributes.ApplicationAttribute']/propertylist/property[@name='Guid']/@value"
+      value="${applicationGuid}" />
+	  
+		<exec program="C:\Program Files (x86)\PreEmptive Solutions\Dotfuscator Windows Phone Edition 4.9\dotfuscator.exe">
+			<arg value="/out:${releases.dir}\Finall" />
+			<arg value="${releases.dir}\instrumentation.xml" />
+		</exec>-->
+	</target>
+
+
+	<target name="nant_contrib" description="Load extra tasks">
+		<loadtasks assembly="C:\nant\contrib\bin\NAnt.Contrib.Tasks.dll" />
+  </target>
+</project>

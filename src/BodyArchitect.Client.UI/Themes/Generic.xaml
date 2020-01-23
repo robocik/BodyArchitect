@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Controls\Calendar\Themes/generic.xaml" />
+        <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Controls\ProgressIndicator\Themes\Generic.xaml" />
+        <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Controls\vCalendar\Themes\Generic.xaml" />
+        <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Controls\Accordion\Themes\Generic.xaml" />
+        <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Controls\ExGridSplitter\generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    
+</ResourceDictionary>

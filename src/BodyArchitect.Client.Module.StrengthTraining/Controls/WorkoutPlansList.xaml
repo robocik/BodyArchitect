@@ -1,0 +1,130 @@
+﻿<Controls:usrBaseControl x:Class="BodyArchitect.Client.Module.StrengthTraining.Controls.WorkoutPlansList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+            xmlns:PlansUI="clr-namespace:BodyArchitect.Client.UI.Controls.PlansUI;assembly=BodyArchitect.Client.UI" mc:Ignorable="d" Name="Me"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <PlansUI:FeaturedListViewGroupStyleSelector x:Key="myStyleSelector" />
+        </Grid.Resources>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>-->
+        <ListView Name="lvPlans" SelectionMode="Single" SelectionChanged="lstPlans_SelectionChanged">
+            <ListView.View>
+                <GridView>
+
+                    <GridViewColumn Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Author}" Width="130">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Controls:CachedImage Stretch="Fill" Width="24" Height="24" PictureOwner="{Binding User}" />
+                                    <Button VerticalAlignment="Center" Content="{Binding User.UserName}" IsHitTestVisible="{Binding AllowRedirectToDetails}" FontSize="{StaticResource UserNameFontSize}" Tag="{Binding User}" Click="lblUserName_Click" Style="{StaticResource LinkButon}"  />
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="300" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Name}" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Name="tbName" Text="{Binding Name}"/>
+
+                                <DataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding FeaturedType}" Value="Random">
+                                        <Setter TargetName="tbName" Property="FontWeight" Value="Bold"/>
+                                        <Setter TargetName="tbName" Property="FontSize" Value="14"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding FeaturedType}" Value="Latest">
+                                        <Setter TargetName="tbName" Property="FontSize" Value="14"/>
+                                    </DataTrigger>
+                                </DataTemplate.Triggers>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="100" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Type}" DisplayMemberBinding="{Binding Type}"/>
+                    <GridViewColumn Width="100" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Difficulty}" DisplayMemberBinding="{Binding Difficult}"/>
+                    <GridViewColumn Width="40" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Days}" DisplayMemberBinding="{Binding Days}"/>
+                    <GridViewColumn Width="100" Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Purpose}" DisplayMemberBinding="{Binding Purpose}"/>
+                    <GridViewColumn Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Status}" Width="40">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Width="16" Height="16" ToolTip="{Binding StatusIconToolTip}" HorizontalAlignment="Right" Grid.Row="1" Source="{Binding StatusIcon,Converter={StaticResource nullImageConv}}" />
+
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:WorkoutPlansList_Header_Rating}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Controls:RatingControl HorizontalAlignment="Right"  RatingValue="{Binding Rating,Mode=OneWay}" Width="90" Height="13" IsHitTestVisible="false"/>
+
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+
+            <ListBox.GroupStyle>
+                <GroupStyle ContainerStyleSelector="{StaticResource myStyleSelector}"  />
+            </ListBox.GroupStyle>
+        </ListView>
+
+
+
+        <!--<ListBox Grid.Row="1"  Controls:ImageButtonExt.EmptyListMessage="{Binding EmptyListMessage,ElementName=Me,Mode=TwoWay}"  ItemContainerStyle="{StaticResource StretchedListBoxItemStyle}"  Name="lstPlans"  SelectionMode="Single"  SelectionChanged="lstPlans_SelectionChanged" >
+        
+        <ListBox.ItemTemplate>
+
+            <DataTemplate>
+                <Grid Margin="0,2,0,2" Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Margin="6,0,6,0">
+                            <Controls:CachedImage Stretch="Fill" Width="48" Height="48" PictureOwner="{Binding User}" />
+                            <Button Content="{Binding User.UserName}" IsHitTestVisible="{Binding AllowRedirectToDetails}" FontSize="{StaticResource UserNameFontSize}" Tag="{Binding User}" Click="lblUserName_Click" Style="{StaticResource LinkButon}"  />
+                        </StackPanel>
+
+                        <Grid Grid.Column="1" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="{Binding Name}" Style="{StaticResource largeTextBlock}" />
+
+                            <Controls:RatingControl HorizontalAlignment="Right"  RatingValue="{Binding Rating,Mode=OneWay}" Width="90" Height="13" IsHitTestVisible="false"/>
+
+                            <Image Width="16" Height="16" ToolTip="{Binding StatusIconToolTip}" HorizontalAlignment="Right" Grid.Row="1" Source="{Binding StatusIcon,Converter={StaticResource nullImageConv}}" />
+
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <TextBlock  Margin="0,0,4,0" Text="Type:" Style="{StaticResource infoLabel}"/>
+                                <TextBlock Text="{Binding Type}"  Style="{StaticResource titleTextBlock}"/>
+                                <TextBlock Margin="12,0,4,0" Text="Difficult:" Style="{StaticResource infoLabel}"/>
+                                <TextBlock Text="{Binding Difficult}" Style="{StaticResource titleTextBlock}" />
+                                <TextBlock Margin="12,0,4,0" Text="Weeks:" Style="{StaticResource infoLabel}"/>
+                                <TextBlock Text="{Binding Days}" Style="{StaticResource titleTextBlock}"/>
+                                <TextBlock Margin="12,0,4,0" Text="Publication date:" Style="{StaticResource infoLabel}"/>
+                                <TextBlock Text="{Binding PublicationDate}" Style="{StaticResource infoLabel}"/>
+
+                                <TextBlock Margin="12,0,4,0" Text="Purpose:" Style="{StaticResource infoLabel}"/>
+                                <TextBlock Text="{Binding Purpose}" Style="{StaticResource titleTextBlock}"/>
+
+                            </StackPanel>
+                        </Grid>
+                    </Grid>                
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+        <ListBox.GroupStyle>
+            <GroupStyle ContainerStyle="{StaticResource listViewGroup}"/>
+        </ListBox.GroupStyle>
+
+    </ListBox>-->
+</Grid>
+</Controls:usrBaseControl>

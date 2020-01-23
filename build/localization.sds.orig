@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<desktop scan="79" scanned="20110411095120" built="20110411094846" lang="pl" pane="TLogPane" viewmode="2" col="3" row="..\BA40\BodyArchitect\bin\x86\Release\BodyArchitect.Controls.dll.Strings.BodyArchitect.Controls.Localization.ApplicationStrings.ApplicationStrings.UserStatistics_FollowersCountToolTip">
+  <language id="pl" autoime="0" autokeyboard="0"/>
+  <triggers>
+    <item class="TRemoveUnusedItemsTrigger" position="7"/>
+    <item class="TValidateTrigger" position="3"/>
+  </triggers>
+  <validator>
+    <original>
+      <type class="TSpellingValidation" validate="1"/>
+      <type class="TCharacterWidthValidation" validate="1"/>
+      <type class="TAllSpacesOriginalValidation" validate="0"/>
+      <type class="TEmptyOriginalValidation" validate="0"/>
+    </original>
+    <translation>
+      <type class="TMissingTranslationValidation" validate="1"/>
+      <type class="TSpellingValidation" validate="1"/>
+      <type class="TAllSpacesTranslationValidation" validate="0"/>
+      <type class="TUnknownComponentValidation" validate="0"/>
+      <excludedvalidations>
+        <item class="TSpellingValidation" context="xtraTabControl.tpExerciseInfo.lblDifficuilt.Text" native="&amp;Difficult:"/>
+        <item class="TSpellingValidation" context="xtraTabControl.tpExerciseInfo.lblUrl.Text" native="&amp;Url:"/>
+        <item class="TMissingQuestionValidation" context="RssHeaderTips" native="Tips &amp; Tricks"/>
+        <item class="TSpellingValidation" context="splitContainer1.panel1.grSets.chkIncludeSetsWithoutBarrelWeight.Properties.Caption" native="&amp;Include sets without barrel weight"/>
+      </excludedvalidations>
+    </translation>
+  </validator>
+  <sheet>
+    <font name="Arial"/>
+    <columns>
+      <item class="TFlagsColumn" width="38"/>
+      <item class="TPathColumn" width="114"/>
+      <item class="TTranslationStatusColumn" width="117"/>
+      <item class="TOriginalColumn" width="111"/>
+      <item class="TTranslationColumn" lang="pl" width="103"/>
+    </columns>
+    <params>
+      <findtext>blok</findtext>
+      <findtext>opub</findtext>
+      <findtext>Opublik</findtext>
+      <findtext>Opublikuj</findtext>
+      <findtext>Czy wiesz</findtext>
+      <findtext>kadą</findtext>
+      <findtext>show</findtext>
+      <findtext>First show</findtext>
+    </params>
+  </sheet>
+  <path>
+    <item>All</item>
+  </path>
+  <exchange>
+    <filter>
+      <datatypes>
+        <class>TStringData</class>
+        <class>TPictureData</class>
+        <class>TFontData</class>
+      </datatypes>
+    </filter>
+  </exchange>
+  <export format="efExcel">
+    <filter translationcomments="1">
+      <datatypes>
+        <class>TStringData</class>
+        <class>TFontData</class>
+      </datatypes>
+    </filter>
+    <excel contextposition="cpFirst" commentcolumns="[ccTranslation,ccRow]"/>
+  </export>
+</desktop>

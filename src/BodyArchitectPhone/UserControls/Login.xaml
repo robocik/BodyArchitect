@@ -1,0 +1,53 @@
+﻿<UserControl xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls"  x:Class="BodyArchitect.WP7.UserControls.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:Controls1="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}" Loaded="UserControl_Loaded"
+    mc:Ignorable="d" Background="Transparent"  d:DesignHeight="768" d:DesignWidth="480">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+
+    
+    <Grid  Background="Transparent">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+
+            <RowDefinition Height="410"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+       
+        
+        
+        <ScrollViewer Name="loginBox" Grid.Row="2">
+            <StackPanel  >
+                <Controls1:FixedListPicker SelectionChanged="lpEndPointSelector_SelectionChanged" Visibility="Collapsed" Background="LightGray"  Margin="12,0,10,0" Name="lpEndPointSelector">
+                    <toolkit:ListPicker.Items>
+                        <toolkit:ListPickerItem Content="Production" Tag="Production" />
+                        <toolkit:ListPickerItem Content="TestWeb" Tag="TestWeb" />
+                        <toolkit:ListPickerItem Content="Test" Tag="Local" />
+                        <toolkit:ListPickerItem Content="Test2" Tag="Local2" />                        
+                    </toolkit:ListPicker.Items>
+                </Controls1:FixedListPicker>
+                <TextBlock Name="emptySpace" Margin="12,44,0,0" />
+                <TextBlock  Margin="12,0,0,0" Text="{Binding Path=Localizedresources.Login_UserName,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="Gray" Style="{StaticResource CustomTextLargeStyle}" />
+
+                <TextBox Background="LightGray" KeyDown="txtPassword_KeyDown" Name="txtUserName" Grid.Column="1"  />
+
+
+                <TextBlock Margin="12,0,0,0" Text="{Binding Path=Localizedresources.Login_Password,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="Gray" Style="{StaticResource CustomTextLargeStyle}" />
+                <PasswordBox Background="LightGray" KeyDown="txtPassword_KeyDown" Name="txtPassword"  Grid.Column="1"  />
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <my:CompanyAnimationControl x:Name="companyBox" Grid.Row="2" Height="340" Visibility="Collapsed"  VerticalAlignment="Bottom" />
+
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,1054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainerControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="xtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v11.2" name="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xtraTabControl1.HeaderLocation" type="DevExpress.XtraTab.TabHeaderLocation, DevExpress.XtraEditors.v11.2">
+    <value>Bottom</value>
+  </data>
+  <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="hostMyContacts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="hostMyContacts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="hostMyContacts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 466</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="hostMyContacts.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="hostMyContacts.Text" xml:space="preserve">
+    <value>elementHost2</value>
+  </data>
+  <data name="&gt;&gt;hostMyContacts.Name" xml:space="preserve">
+    <value>hostMyContacts</value>
+  </data>
+  <data name="&gt;&gt;hostMyContacts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Integration.ElementHost, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;hostMyContacts.Parent" xml:space="preserve">
+    <value>tpMyContacts</value>
+  </data>
+  <data name="&gt;&gt;hostMyContacts.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tpMyContacts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 466</value>
+  </data>
+  <data name="tpMyContacts.Text" xml:space="preserve">
+    <value>My contacts</value>
+  </data>
+  <data name="&gt;&gt;tpMyContacts.Name" xml:space="preserve">
+    <value>tpMyContacts</value>
+  </data>
+  <data name="&gt;&gt;tpMyContacts.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tpMyContacts.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tpMyContacts.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>743, 494</value>
+  </data>
+  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="baGroupControl1.AppearanceCaption.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>100, 135, 220</value>
+  </data>
+  <data name="chkSortOrder.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="chkSortOrder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsMAAALDAE/QCLIAAABKElE
+        QVQ4T2P4//8/AyWYIs0gi6lnQPRO7e3xu/X/gzCIjc1bfrsl/oMwshzcBUF75P5P+Fj9f/HnSf8T9umh
+        KAJpcF8v8n/e44n/N75a+j90vwJcHsWAkrdR/xd9mohhAEjzzIdd/2vuZPxveJj9f9uHVXBDUAwoeh3x
+        f+HHCSgG+O2U/A9yHQg3PMr5v+/TZrA8DKMYUPgy/P+8d31YvQAyoOV53v8DX7aiyKMYkPs05P+c1z04
+        DWh/Xfj/4Dc0A5CdmPEw8P+MF50oToSFOMgFXe9K/u//vgnTBaBA6n1R9T/lju//+Oue/ze8XIYS0iBD
+        QAZ0fyj5v/vbOuxeABmy6fVyoGbUaEJ2wb7vG/9v/7YKuwEghdgSCswAXAmNekmZ3BxJsQsALxjUxPH4
+        D1gAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="chkSortOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 79</value>
+  </data>
+  <data name="chkSortOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 20</value>
+  </data>
+  <data name="toolTipItem1.Text" xml:space="preserve">
+    <value>Changes sort order. Check to sort ascending, uncheck to sort descending</value>
+  </data>
+  <data name="chkSortOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="chkSortOrder.Text" xml:space="preserve">
+    <value>checkButton1</value>
+  </data>
+  <data name="&gt;&gt;chkSortOrder.Name" xml:space="preserve">
+    <value>chkSortOrder</value>
+  </data>
+  <data name="&gt;&gt;chkSortOrder.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkSortOrder.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;chkSortOrder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbSortOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 79</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v11.2" name="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cmbSortOrder.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbSortOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 20</value>
+  </data>
+  <data name="cmbSortOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.Name" xml:space="preserve">
+    <value>cmbSortOrder</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbSortOrder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelControl2.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 82</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>&amp;Sort order:</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblStatus.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v11.2">
+    <value>None</value>
+  </data>
+  <data name="lblStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 86</value>
+  </data>
+  <data name="lblStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="lblStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="lblStatus.Text" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Name" xml:space="preserve">
+    <value>lblStatus</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblStatus.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbWorkoutPlans.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 79</value>
+  </data>
+  <data name="cmbWorkoutPlans.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbWorkoutPlans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="cmbWorkoutPlans.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlans.Name" xml:space="preserve">
+    <value>cmbWorkoutPlans</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlans.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlans.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbWorkoutPlans.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblWorkoutPlans.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 82</value>
+  </data>
+  <data name="lblWorkoutPlans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="lblWorkoutPlans.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="lblWorkoutPlans.Text" xml:space="preserve">
+    <value>&amp;Workout plans:</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlans.Name" xml:space="preserve">
+    <value>lblWorkoutPlans</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlans.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlans.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblWorkoutPlans.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 79</value>
+  </data>
+  <data name="cmbPhoto.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="cmbPhoto.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;cmbPhoto.Name" xml:space="preserve">
+    <value>cmbPhoto</value>
+  </data>
+  <data name="&gt;&gt;cmbPhoto.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbPhoto.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbPhoto.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 82</value>
+  </data>
+  <data name="lblPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="lblPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lblPicture.Text" xml:space="preserve">
+    <value>&amp;Photo:</value>
+  </data>
+  <data name="&gt;&gt;lblPicture.Name" xml:space="preserve">
+    <value>lblPicture</value>
+  </data>
+  <data name="&gt;&gt;lblPicture.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblPicture.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblPicture.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbAccessSizes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 53</value>
+  </data>
+  <data name="cmbAccessSizes.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbAccessSizes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 20</value>
+  </data>
+  <data name="cmbAccessSizes.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessSizes.Name" xml:space="preserve">
+    <value>cmbAccessSizes</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessSizes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessSizes.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessSizes.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cmbAccessCalendar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 26</value>
+  </data>
+  <data name="cmbAccessCalendar.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbAccessCalendar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 20</value>
+  </data>
+  <data name="cmbAccessCalendar.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessCalendar.Name" xml:space="preserve">
+    <value>cmbAccessCalendar</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessCalendar.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessCalendar.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbAccessCalendar.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblAccessSizes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 56</value>
+  </data>
+  <data name="lblAccessSizes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="lblAccessSizes.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblAccessSizes.Text" xml:space="preserve">
+    <value>&amp;Measurements:</value>
+  </data>
+  <data name="&gt;&gt;lblAccessSizes.Name" xml:space="preserve">
+    <value>lblAccessSizes</value>
+  </data>
+  <data name="&gt;&gt;lblAccessSizes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblAccessSizes.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblAccessSizes.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblAccessCalendar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 30</value>
+  </data>
+  <data name="lblAccessCalendar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="lblAccessCalendar.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblAccessCalendar.Text" xml:space="preserve">
+    <value>&amp;Calendar:</value>
+  </data>
+  <data name="&gt;&gt;lblAccessCalendar.Name" xml:space="preserve">
+    <value>lblAccessCalendar</value>
+  </data>
+  <data name="&gt;&gt;lblAccessCalendar.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblAccessCalendar.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblAccessCalendar.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 29</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>G&amp;roups:</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="cmbSearchGroups.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 26</value>
+  </data>
+  <data name="cmbSearchGroups.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbSearchGroups.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(All)</value>
+  </data>
+  <data name="cmbSearchGroups.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbSearchGroups.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbSearchGroups.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="cmbSearchGroups.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cmbSearchGroups.Name" xml:space="preserve">
+    <value>cmbSearchGroups</value>
+  </data>
+  <data name="&gt;&gt;cmbSearchGroups.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbSearchGroups.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbSearchGroups.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblGenders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 56</value>
+  </data>
+  <data name="lblGenders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="lblGenders.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblGenders.Text" xml:space="preserve">
+    <value>&amp;Gender:</value>
+  </data>
+  <data name="&gt;&gt;lblGenders.Name" xml:space="preserve">
+    <value>lblGenders</value>
+  </data>
+  <data name="&gt;&gt;lblGenders.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblGenders.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblGenders.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="cmbGenders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 53</value>
+  </data>
+  <data name="cmbGenders.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbGenders.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(All)</value>
+  </data>
+  <data name="cmbGenders.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbGenders.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbGenders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="cmbGenders.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cmbGenders.Name" xml:space="preserve">
+    <value>cmbGenders</value>
+  </data>
+  <data name="&gt;&gt;cmbGenders.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbGenders.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbGenders.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="cmbCountries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 53</value>
+  </data>
+  <data name="cmbCountries.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbCountries.Properties.NullValuePrompt" xml:space="preserve">
+    <value>(All)</value>
+  </data>
+  <data name="cmbCountries.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbCountries.Properties.SelectAllItemCaption" xml:space="preserve">
+    <value> (Select All)</value>
+  </data>
+  <data name="cmbCountries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="cmbCountries.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;cmbCountries.Name" xml:space="preserve">
+    <value>cmbCountries</value>
+  </data>
+  <data name="&gt;&gt;cmbCountries.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckedComboBoxEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbCountries.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbCountries.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lblCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 56</value>
+  </data>
+  <data name="lblCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="lblCountry.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblCountry.Text" xml:space="preserve">
+    <value>C&amp;ountry:</value>
+  </data>
+  <data name="&gt;&gt;lblCountry.Name" xml:space="preserve">
+    <value>lblCountry</value>
+  </data>
+  <data name="&gt;&gt;lblCountry.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblCountry.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblCountry.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="txtUserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 27</value>
+  </data>
+  <data name="txtUserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="txtUserName.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.Name" xml:space="preserve">
+    <value>txtUserName</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lblUserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
+  </data>
+  <data name="lblUserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="lblUserName.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblUserName.Text" xml:space="preserve">
+    <value>&amp;User name:</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.Name" xml:space="preserve">
+    <value>lblUserName</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="progressIndicator1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="progressIndicator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 52</value>
+  </data>
+  <data name="progressIndicator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 21</value>
+  </data>
+  <data name="progressIndicator1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="progressIndicator1.Text" xml:space="preserve">
+    <value>progressIndicator1</value>
+  </data>
+  <data name="progressIndicator1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Name" xml:space="preserve">
+    <value>progressIndicator1</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.ProgressIndicator, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="btnMoreResults.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnMoreResults.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnMoreResults.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAxxJREFUOE9V0mtI
+        U2EcBnAlKOpD0IfoQ9iHJKioZXZF7Wa5UgsJukBFmTazBkkRkZVlU0lTS2NoEFhWRhciaVNr02TLTZfZ
+        Td0szaXmqrnp3OW8Zzvbnt5zrGUfHs7g8P+d5/3vDQMQtiVHk7qjuE2dUtI2SsPQECGl/NNAUopbSXKR
+        riv2TEt5XKZiKj/zN8KPxIKW1zYnsY26Wb/dzcLu+hebkwV9B5PFiZzng5DIez2xmYpp/wHJhTqrk/H5
+        W7/5YBjgYBjk0PaNg87shaaXxQujGywHKHsY5NQO4MiNXma9VCkgQoPtRXpm3ONFx5Af74Y4+uTQLiBe
+        aPtYqIweCgTQYfHDMOxDfv0g4rObH4SA5CI94YH3FPjwncP7734BezPgQ8tXLxo/MzD/cgtHcREOv8Y8
+        SLiopZ3+NOABh9uLTvqFLprOHwF8FBC+hU9ooaYt6rpcUHwah4PuSSxrISEgqVBPxihg+hGEkQ5303RZ
+        AvhEsbd0J63mCaTpCwM13cOY2wdxnv4fkEgBOwV6fgaFmGiMFOscnmjCI6ceiiG5vVyA7BRIkE0Ctubr
+        ic3lhTE0HAg14RF+L9L7m3BZsQ97by6E1elDfO4kIEGmIyP0/+a/yh+BT1bNOmTdj8Gxu6uRXhWNC892
+        43F7OU4/ScG28rnYcGHSDuJzdeTnOIvu4YnafKT31qD2XQWedsiFwYftZShrPI3q1qvIrBFj1ZUZWJoX
+        Hi7cg41UszgIditZ7FES7KojSKfn5YevqbJQ9EKKgvoM5CoOQ1Z3FDe1eThwJw4LLoV5BSDurIYM2QlO
+        aAO40wNUmYD9txbh0Zsy1LSVolp/FVW6QoocR6VWhoyabYg8FxGcmx02XQDWnmz2mEc8wczmAI42+SF5
+        xWFnZSQSyyOw+focxBbPwsHbMajQ5CLtnhhiuQhLJEpX6B6sONbYbx1nnWYbCfSPMOi3Muj7kxGXD3xi
+        SmbjUPVmJMmj6bVmHYtTG7pDwMrjammURNW4PENtj8pQkVAkKrKMRiR5Seafnxmcd34KREfqx5akNTSJ
+        0hrSeeA3DQQE/nytE/sAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnMoreResults.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 52</value>
+  </data>
+  <data name="btnMoreResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnMoreResults.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnMoreResults.Text" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="&gt;&gt;btnMoreResults.Name" xml:space="preserve">
+    <value>btnMoreResults</value>
+  </data>
+  <data name="&gt;&gt;btnMoreResults.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnMoreResults.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;btnMoreResults.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="btnSearch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnSearch.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAA0xJREFUOE9Fk1lM
+        E1EUhvukjyYmJhpj4oMmRhAhqKBls5GiYG1QJKiI2NICiiwRVFSUiMUFCIpgiBLjg0vUGJRVukgKBdqA
+        OyKIUEU0Eahot1s6M/zeGbQ+fLm5mTnf/c+ZOyIAIp4tRcZUWZlZJy83/6S4KUSggl8tRF7WQ+IudfWL
+        j5muhmU0zvtXJxTzbNOYOqfsZOqn08PanB7YHP+ZsntAn+HDdzuKGsagqh52iTMa5/N1PkHcxa4Ju9vL
+        9nz2wvKFgWWMgfkzgy7rDIzDHjwbcMLDAE2DbhQ9+YK0qmF3xOGm+YLg1IWqhYojx6E6UoBm8whS1DnY
+        o8hCryCZQccnD7QDLirg8OI7C8s3L863jEFS2H5PpMwqWFBcXltZUlmHmO07cb+1FzGyBBRqruBs+Q10
+        j7hgGpmBfsgN6w+n0IqDMPgx7UL0mQ5GVHSpZlliitqRc0ID8eZYnCytQVRsIvJLqhAVI4fu1ThN4RVS
+        6GiK5n4HGt/+xi86J+k5ExGt2xihkSXsw5XbTxC/PxOq/FLsSFLiYu1DxMbvRXahBn10Jj3WOYnhoxs6
+        OodppxfSkm4ioqdPJx3MxFZ5IqTbZDheXI4QcRTCJFIEh4Zj5Sp/vBln5yQ0SSdthxfZqCD6HBXQGXjq
+        20youHEfR08Wo6lzAMnKLNyp16Gs9h6ksl14943D63EGfV/nknRTJuxeSIqp4EBGHh61GKHOLURisgJ1
+        D7TYr87G3acGHMo/A7+AYEHAp3gxxqKX/8QUOx1k5OkuIkrYpxROT0nPxabIaFyte4wdu5Nx9vJ10Paw
+        eMlSofglLe6jWOjdMFMB8XIQHzMSUWi4ZChMsnUoKCJuVp6QBElpC5YHhmPF+s1Y6heCRf5i7GwkAvEN
+        BPK/uGZYbMhpJ76bGHbCSL7aCLI7ONweBG59AG4OALV0vU7XGkr1e+BaP6B6zsBJWwhK1/0XhOa1u6yT
+        rtmMdg7pBlZ4Ke05K6Cge6WBwUE9g1R+r2f5W8mtSWtz+BIEZ+pHJ3577NYpwo1OujE64canv0w6vODh
+        J+8gLOj/xnGzs79Wp7a+9wnWHdIdDlRp9UFqnS1QrSU+VFqylhKgapsjTWDaX9FqCFC0Kv8A7DHi6/dp
+        SxUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 23</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>&amp;Find</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="baGroupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="baGroupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="baGroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>731, 112</value>
+  </data>
+  <data name="baGroupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="baGroupControl1.Text" xml:space="preserve">
+    <value>Search criteria</value>
+  </data>
+  <data name="&gt;&gt;baGroupControl1.Name" xml:space="preserve">
+    <value>baGroupControl1</value>
+  </data>
+  <data name="&gt;&gt;baGroupControl1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.BaGroupControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;baGroupControl1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;baGroupControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="hostBrowser.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hostBrowser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="hostBrowser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 121</value>
+  </data>
+  <data name="hostBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>731, 342</value>
+  </data>
+  <data name="hostBrowser.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="hostBrowser.Text" xml:space="preserve">
+    <value>elementHost1</value>
+  </data>
+  <data name="&gt;&gt;hostBrowser.Name" xml:space="preserve">
+    <value>hostBrowser</value>
+  </data>
+  <data name="&gt;&gt;hostBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Integration.ElementHost, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;hostBrowser.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;hostBrowser.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 466</value>
+  </data>
+  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
+    <value>tpBrowser</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="baGroupControl1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="hostBrowser" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,20" /&gt;&lt;Rows Styles="Absolute,118,Percent,100,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tpBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 466</value>
+  </data>
+  <data name="tpBrowser.Text" xml:space="preserve">
+    <value>Browser</value>
+  </data>
+  <data name="&gt;&gt;tpBrowser.Name" xml:space="preserve">
+    <value>tpBrowser</value>
+  </data>
+  <data name="&gt;&gt;tpBrowser.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tpBrowser.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tpBrowser.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Panel1.Text" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="usrUserInformation1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="usrUserInformation1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="usrUserInformation1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 494</value>
+  </data>
+  <data name="usrUserInformation1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;usrUserInformation1.Name" xml:space="preserve">
+    <value>usrUserInformation1</value>
+  </data>
+  <data name="&gt;&gt;usrUserInformation1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.usrUserInformation, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrUserInformation1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;usrUserInformation1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Panel2.Text" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1057, 494</value>
+  </data>
+  <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Text" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Name" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1057, 494</value>
+  </data>
+  <data name="&gt;&gt;lstMyContacts.Name" xml:space="preserve">
+    <value>lstMyContacts</value>
+  </data>
+  <data name="&gt;&gt;lstMyContacts.Type" xml:space="preserve">
+    <value>WindowsFormsIntegration.Design.HostedComponent, WindowsFormsIntegration.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;lstUserBrowser.Name" xml:space="preserve">
+    <value>lstUserBrowser</value>
+  </data>
+  <data name="&gt;&gt;lstUserBrowser.Type" xml:space="preserve">
+    <value>WindowsFormsIntegration.Design.HostedComponent, WindowsFormsIntegration.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>usrProfilesBrowser</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.usrBaseControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+</root>

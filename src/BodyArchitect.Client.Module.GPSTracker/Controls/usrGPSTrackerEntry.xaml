@@ -1,0 +1,288 @@
+﻿    <userControls:usrEntryObjectBase x:Class="BodyArchitect.Client.Module.GPSTracker.Controls.usrGPSTrackerEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                                 xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension" 
+                                           xmlns:userControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI"
+                                 xmlns:controls="clr-namespace:BodyArchitect.Client.Module.StrengthTraining.Controls;assembly=BodyArchitect.Client.Module.StrengthTraining"
+                                 xmlns:controls1="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+                                 xmlns:Behaviors="clr-namespace:BodyArchitect.Client.UI.Controls.WatermarkExtension;assembly=BodyArchitect.Client.UI"
+                                 xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                                 xmlns:Converters="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI"
+                                 userControls:UserControlRibbon.RibbonTabDataContext="{Binding}" userControls:UserControlRibbon.RibbonTab="{DynamicResource Tab}"  
+                                 xmlns:progressIndicator="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator;assembly=BodyArchitect.Client.UI"
+                                 xmlns:charts="clr-namespace:Visiblox.Charts;assembly=Visiblox.Charts"
+                                     xmlns:exGridSplitter="clr-namespace:BodyArchitect.Client.UI.Controls.ExGridSplitter;assembly=BodyArchitect.Client.UI"
+                                     xmlns:controls2="clr-namespace:BodyArchitect.Client.Module.GPSTracker.Controls"
+                                     xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+                                     mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/BodyArchitect.Client.Module.StrengthTraining;component/Themes/generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Converters:TimeSpanConverter x:Key="timeSpanConv"/>
+
+
+            <r:RibbonTab x:Key="Tab" Uid="TrainingDayWindow" Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_RibbonContextPage}" ContextualTabGroupHeader="{lex:LocText  BodyArchitect.Client.Resources:Strings:Ribbon_Context_Header}">
+                <r:RibbonGroup  Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_RibbonGroup_Map}">
+
+                    <r:RibbonMenuButton Label="Mode" SmallImageSource="/BodyArchitect.Client.Module.GPSTracker;component/Resources/MapMode16.png" LargeImageSource="/BodyArchitect.Client.Module.GPSTracker;component/Resources/MapMode32.png">
+                        <r:RibbonMenuItem IsCheckable="true" Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_RibbonItem_RoadMap}"   Click="rbtnMapRoadMode_Click" IsChecked="{Binding MapRoadMode}"/>
+                        <r:RibbonMenuItem IsCheckable="true" Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_RibbonItem_SateliteMap}"  Click="rbtnMapAerialMode_Click" IsChecked="{Binding MapAerialMode}"/>
+                    </r:RibbonMenuButton>
+                </r:RibbonGroup>
+            </r:RibbonTab>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+           <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Margin="{StaticResource MarginMediumLeftTop}" VerticalContentAlignment="Center" Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Header_Workout}" MinWidth="300">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Margin="{StaticResource MarginMediumTop}" FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Exercise}"/>
+                <controls:ExercisesFilteredComboBox ShowOnlyExerciseType="Cardio" FontSize="{StaticResource LargeLabelFontSize}" Margin="{StaticResource MarginMediumLeftTop}" Name="cmbExercise" Grid.Column="1" Behaviors:WatermarkComboBoxBehavior.EnableWatermark="true" SelectedValue="{Binding Exercise,Mode=TwoWay}"
+                                      Behaviors:WatermarkComboBoxBehavior.Label="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrStrengthTraining_SelectExerciseWatermark}"
+                                      Behaviors:WatermarkComboBoxBehavior.LabelStyle="{StaticResource watermarkLabelStyle}" TextSearch.TextPath="Name" ItemTemplate="{StaticResource ExerciseComboBoxItem}" ItemContainerStyle="{StaticResource StretchedComboBoxItemStyle}" />
+
+                <Label Margin="{StaticResource MarginMediumTop}" FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Duration}" Grid.Row="1"/>
+                <controls1:TimeSpanUpDown FontSize="{StaticResource LargeLabelFontSize}" Margin="{StaticResource MarginMediumLeftTop}" Value="{Binding Duration,NotifyOnValidationError=True,Mode=TwoWay,Converter={StaticResource timeSpanConv}}" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Margin="{StaticResource MarginMediumTop}" FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Distance}" Grid.Row="2" Target="txtDistance"/>
+                <xctk:DecimalUpDown FontSize="{StaticResource LargeLabelFontSize}" Margin="{StaticResource MarginMediumLeftTop}" Name="txtDistance" FormatString="0.#" Value="{Binding Distance,NotifyOnValidationError=True,Mode=TwoWay}" Grid.Row="2" Grid.Column="1"/>
+                <TextBlock FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.DistanceType}" Grid.Row="2" Grid.Column="2"/>
+
+                <Label Margin="{StaticResource MarginMediumTop}" FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_MinAltitude}" Grid.Row="3" Target="txtMinAlt"/>
+                <xctk:DecimalUpDown FontSize="{StaticResource LargeLabelFontSize}" Margin="{StaticResource MarginMediumLeftTop}" Name="txtMinAlt" FormatString="0.#" Value="{Binding MinAltitude,NotifyOnValidationError=True,Mode=TwoWay}" Grid.Row="3" Grid.Column="1"/>
+                <TextBlock FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.AltitudeType}" Grid.Row="3" Grid.Column="2"/>
+
+                <Label Margin="{StaticResource MarginMediumTop}" FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_MaxAltitude}" Grid.Row="4" Target="txtMaxAlt"/>
+                <xctk:DecimalUpDown FontSize="{StaticResource LargeLabelFontSize}" Margin="{StaticResource MarginMediumLeftTop}" Name="txtMaxAlt" FormatString="0.#" Value="{Binding MaxAltitude,NotifyOnValidationError=True,Mode=TwoWay}" Grid.Row="4" Grid.Column="1"/>
+                <TextBlock FontSize="{StaticResource UserNameFontSize}" FontStyle="Italic" VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.AltitudeType}" Grid.Row="4" Grid.Column="2"/>
+                
+            </Grid>
+        </GroupBox>
+
+
+        <GroupBox Margin="{StaticResource MarginMediumLeftTop}" Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Header_Details}"  Grid.Column="1">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel.Resources>
+                    <Style TargetType="{x:Type Grid}">
+                        <Setter Property="Margin" Value="0,12,12,0" />
+                    </Style>
+                </WrapPanel.Resources>
+                <Grid Visibility="{Binding HasAvgSpeed,Converter={StaticResource boolVisibConv}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" FontStyle="Italic"  FontSize="{StaticResource UserNameFontSize}" Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_AvgSpeed}" Grid.Row="0"/>
+                    <TextBlock FontWeight="Bold" Margin="{StaticResource MarginMediumLeft}" FontSize="24" Text="{Binding DisplayAvgSpeed}" Grid.Row="0" Grid.Column="1"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="{StaticResource UserNameFontSize}" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.SpeedType}" Grid.Row="0" Grid.Column="2"/>
+
+                </Grid>
+
+                <Grid Visibility="{Binding HasMaxSpeed,Converter={StaticResource boolVisibConv}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" FontStyle="Italic" FontSize="{StaticResource UserNameFontSize}"   Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_MaxSpeed}" />
+                    <TextBlock FontWeight="Bold" FontSize="24" Margin="{StaticResource MarginMediumLeft}" Text="{Binding DisplayMaxSpeed}"  Grid.Column="1"/>
+                    <TextBlock FontSize="{StaticResource UserNameFontSize}"  VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.SpeedType}" Grid.Column="2"/>
+
+                </Grid>
+
+                <Grid Visibility="{Binding HasAvgSpeed,Converter={StaticResource boolVisibConv}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" FontStyle="Italic" FontSize="{StaticResource UserNameFontSize}" Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_AvgPace}"/>
+                    <TextBlock FontWeight="Bold" FontSize="24" Margin="{StaticResource MarginMediumLeft}" Text="{Binding DisplayAvgPace}" Grid.Column="1"/>
+                    <TextBlock FontSize="{StaticResource UserNameFontSize}" VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.PaceType}"  Grid.Column="2"/>
+
+                </Grid>
+
+                <Grid Visibility="{Binding HasCalories,Converter={StaticResource boolVisibConv}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" FontStyle="Italic" FontSize="{StaticResource UserNameFontSize}"  Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Calories}" />
+                    <TextBlock FontWeight="Bold" FontSize="24" Margin="{StaticResource MarginMediumLeft}" Text="{Binding Calories,StringFormat=0}" Grid.Column="1"/>
+                    <TextBlock FontSize="{StaticResource UserNameFontSize}" VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="kcal"  Grid.Column="3"/>
+                </Grid>
+
+                <Grid Visibility="{Binding HasTotalAscent,Converter={StaticResource boolVisibConv}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" FontStyle="Italic" FontSize="{StaticResource UserNameFontSize}"  Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_TotalAscent}"/>
+                    <TextBlock FontWeight="Bold" FontSize="24" Margin="{StaticResource MarginMediumLeft}" Text="{Binding DisplayTotalAscent}"  Grid.Column="1"/>
+                    <TextBlock FontSize="{StaticResource UserNameFontSize}" VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.AltitudeType}"  Grid.Column="2"/>
+
+                </Grid>
+
+                <Grid Visibility="{Binding HasTotalDescent,Converter={StaticResource boolVisibConv}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" FontStyle="Italic" FontSize="{StaticResource UserNameFontSize}"  Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_TotalDescent}" />
+                    <TextBlock FontWeight="Bold" FontSize="24" Margin="{StaticResource MarginMediumLeft}" Text="{Binding DisplayTotalDescent}"  Grid.Column="1"/>
+                    <TextBlock FontSize="{StaticResource UserNameFontSize}" VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{x:Static controls1:UIHelper.AltitudeType}"  Grid.Column="2"/>
+                </Grid>
+            </WrapPanel>
+            
+        </GroupBox>
+
+
+        <GroupBox Background="White" Margin="{StaticResource MarginMediumLeftTop}" Grid.Column="2" MinWidth="150">
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Header_Weather}" />
+                        <userControls:BAHelpButton Description="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Help_Weather}" AccountType="PremiumUser"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
+            <Grid>
+                <Grid Visibility="{Binding HasWeatherInfo,Converter={StaticResource boolVisibConv}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock  Grid.Row="0" Grid.RowSpan="2" Text="{Binding CurrentTemperature,StringFormat=0}" FontSize="36"/>
+                    <TextBlock  Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Text="{x:Static controls1:UIHelper.TemperatureType}" FontSize="20"/>
+                    <Image  Source="{Binding WeatherImage}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" />
+
+                </Grid>
+
+                <StackPanel HorizontalAlignment="Center"   VerticalAlignment="Center" Visibility="{Binding HasWeatherInfo,Converter={StaticResource negBoolVisibConv}}">
+                    <TextBlock Text="{Binding WeatherStatus}"  HorizontalAlignment="Center"   VerticalAlignment="Center" Style="{StaticResource featureBigInfo}" />
+                    <Button Visibility="{Binding WeatherRetrieving,Converter={StaticResource negBoolVisibConv}}" HorizontalAlignment="Center" Margin="{StaticResource MarginMediumTop}" Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Button_RetrieveWeather}" Style="{StaticResource LinkButon}" Click="btnWeather_Click" FontSize="20"/>
+                    <Viewbox  Width="20" Height="20"  >
+                        <progressIndicator:ProgressIndicator   IsIndeterminate="true" IsRunning="{Binding WeatherRetrieving}"   />
+                    </Viewbox>
+                </StackPanel>
+                
+            </Grid>
+            
+        </GroupBox>
+
+        <exGridSplitter:GridExpander  Grid.Row="1" Style="{StaticResource RowExpander}" Grid.ColumnSpan="4"/>
+        
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="4"  HorizontalAlignment="Center"   VerticalAlignment="Center" Visibility="{Binding GPSCoordinatesRetrieved,Converter={StaticResource negBoolVisibConv}}">
+            <TextBlock Text="{Binding GpsCoordinatesStatus}"  HorizontalAlignment="Center"   VerticalAlignment="Center" Style="{StaticResource featureBigInfo}" />
+            <Viewbox  Width="25" Height="25" Margin="15,15,15,15"  >
+                <progressIndicator:ProgressIndicator   IsIndeterminate="true" IsRunning="{Binding IsGpsCoordinatesInProgress}"   />
+            </Viewbox>
+        </StackPanel>
+
+        <Grid Visibility="{Binding GPSCoordinatesRetrieved ,Converter={StaticResource boolVisibConv}}" Grid.Row="2" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Header_Map}" Margin="{StaticResource MarginMediumLeft}">
+                <controls2:BAMap  x:Name="map" ZoomLevel="16"  />
+            </GroupBox>
+
+            <exGridSplitter:GridExpander  Grid.Column="1" Style="{StaticResource ColumnExpander}"/>
+
+            <GroupBox Grid.Column="2" Margin="{StaticResource MarginMediumRight}" Header="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Header_Chart}">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <controls2:GpsTrackerChart    x:Name="chart" HorizontalAlignment="Center" MouseEnter="Chart_OnMouseEnter" MouseLeave="Chart_OnMouseLeave" >
+                        <charts:Chart.Behaviour>
+                            <charts:BehaviourManager  AllowMultipleEnabled="True">
+                                <charts:TrackballBehaviour  PropertyChanged="Track_OnPropertyChanged" />
+                                <charts:ZoomBehaviour />
+                            </charts:BehaviourManager>
+                        </charts:Chart.Behaviour>
+                    </controls2:GpsTrackerChart>
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="0" Margin="0,0,0,0">
+                        <RadioButton Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Radio_Chart_ByTime}" Checked="reportType_CheckedChanged" IsChecked="{Binding ShowReportByTime,Mode=TwoWay}"/>
+                        <RadioButton Content="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Radio_Chart_ByDistance}" Checked="reportType_CheckedChanged" IsChecked="{Binding ShowReportByTime,Mode=TwoWay,Converter={StaticResource negConv}}"/>
+                    </StackPanel>
+
+                    <GroupBox MinWidth="150" Visibility="Collapsed" Name="pnlCurrent" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Chart_Distance}"/>
+                            <TextBlock Margin="{StaticResource MarginSmallLeft}" Name="tbCurrentDistance" Grid.Column="1"/>
+                            <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Chart_Time}" Grid.Row="1"/>
+                            <TextBlock Margin="{StaticResource MarginSmallLeft}" Name="tbCurrentTime" Grid.Row="1" Grid.Column="1"/>
+                            <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Chart_Speed}" Grid.Row="2"/>
+                            <TextBlock Margin="{StaticResource MarginSmallLeft}" Name="tbCurrentSpeed" Grid.Row="2" Grid.Column="1"/>
+                            <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Chart_Pace}" Grid.Row="3"/>
+                            <TextBlock Margin="{StaticResource MarginSmallLeft}" Name="tbCurrentPace" Grid.Row="3" Grid.Column="1"/>
+                            <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.GPSTracker:GPSStrings:usrGPSTrackerEntry_Label_Chart_Altitude}" Grid.Row="4"/>
+                            <TextBlock Margin="{StaticResource MarginSmallLeft}" Name="tbCurrentAltitude" Grid.Row="4" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+
+                </Grid>
+            </GroupBox>
+           
+        </Grid>
+       
+    </Grid>
+</userControls:usrEntryObjectBase>

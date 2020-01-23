@@ -1,0 +1,26 @@
+﻿<Controls:usrBaseControl x:Class="BodyArchitect.Client.UI.UserControls.usrRemindMe"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                         xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls" xmlns:Converters="clr-namespace:BodyArchitect.Client.UI.Converters" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="Me">
+  <UserControl.Resources>
+    <Converters:RemindBeforeToTimeSpanConverter x:Key="beforeConv"/>
+  </UserControl.Resources>
+  
+  <StackPanel>
+        <CheckBox Name="chkRemindMe" Margin="{StaticResource MarginMediumTop}" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_RemindMe}" IsChecked="{Binding HasReminder,ElementName=Me,Mode=TwoWay}" />
+        <ComboBox Name="cmbRemind" Margin="{StaticResource MarginMediumTop}" IsEnabled="{Binding HasReminder,ElementName=Me}" SelectedIndex="{Binding Entry.RemindBefore,ElementName=Me,Converter={StaticResource beforeConv},Mode=TwoWay}">
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_AtStartTime}" />
+            <ComboBoxItem Content="{lex:LocText BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_5Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_10Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_15Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_30Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_1Hour}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_18Hours}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_1Day}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrRemindMe_Content_1Week}" />
+    </ComboBox>
+  </StackPanel>
+</Controls:usrBaseControl>

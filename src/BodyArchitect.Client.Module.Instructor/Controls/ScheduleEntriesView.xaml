@@ -1,0 +1,292 @@
+﻿<Controls:BasePage xmlns:my="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls.Groups"  x:Class="BodyArchitect.Client.Module.Instructor.Controls.ScheduleEntriesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my1="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls"
+             xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ExGridSplitter;assembly=BodyArchitect.Client.UI"
+                xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI" 
+             xmlns:Calendar="clr-namespace:BodyArchitect.Client.UI.Controls.Calendar;assembly=BodyArchitect.Client.UI"
+             xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI"
+             xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+             xmlns:Converters="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI" xmlns:pi="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator;assembly=BodyArchitect.Client.UI"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                   xmlns:Customers="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls.Customers"
+                   xmlns:ComponentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+                   mc:Ignorable="d"  d:DesignHeight="300" d:DesignWidth="300"
+             UserControls:UserControlRibbon.RibbonTab="{DynamicResource Tab}" 
+            UserControls:UserControlRibbon.RibbonTabDataContext="{Binding}">
+    
+    <UserControl.Resources>
+        <Converters:NegationConverter x:Key="notConv" />
+        <Converters:NegateBoolToVisibilityConverter x:Key="notVisibConv" />
+        <BooleanToVisibilityConverter x:Key="visibConv" />
+
+        <DataTemplate x:Key="colorsComboBox">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16" Height="16" Source="{Binding Image}" />
+                <TextBlock Margin="{StaticResource MarginSmallLeft}" Text="{Binding Text}"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <r:RibbonTab x:Key="Tab"  Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_ActivitiesPlan}"   ContextualTabGroupHeader="{lex:LocText  BodyArchitect.Client.Resources:Strings:Ribbon_Context_Header}">
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_General}" >
+
+                <r:RibbonToggleButton Name="rchkEditMode" Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Ribbon_Design}"  IsChecked="{Binding ReadOnly,Mode=TwoWay,Converter={StaticResource notConv}}" LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntriesEditor32.png" SmallImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntriesEditor16.png"/>
+                
+                <Controls:RibbonComboBoxFocusFix Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_ColorBy}"  SmallImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ChangeColors16.png"  VerticalAlignment="Center" IsEditable="False"  >
+                    <r:RibbonGallery  IsSynchronizedWithCurrentItem="true" SelectedValue="{Binding ColorMode,Mode=TwoWay}"  SelectedValuePath="Value">
+                        <r:RibbonGalleryCategory ItemsSource="{Binding Path=ColorModes}"  ItemTemplate="{StaticResource colorsComboBox}"/>
+                    </r:RibbonGallery>
+                </Controls:RibbonComboBoxFocusFix>
+            </r:RibbonGroup>
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Design}" Visibility="{Binding ReadOnly,Converter={StaticResource notVisibConv}}" >
+
+                <r:RibbonSplitButton Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_Save}" LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntriesSave.png"  IsEnabled="{Binding CanSave}" Click="rbtnSave_Click">
+                    <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Save}" ImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntriesSave.png"  IsEnabled="{Binding CanSave}" Click="rbtnSave_Click" />
+                    <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_SaveCopy}" ImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntriesSave.png"  IsEnabled="{Binding CanSave}" Click="rbtnSaveAndCopy_Click" />
+                </r:RibbonSplitButton>
+                
+                
+            </r:RibbonGroup>
+
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Reservation}" Visibility="{Binding ReadOnly,Converter={StaticResource visibConv}}" >
+
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ReservationAdd32.png"  Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_Reservation}"  IsEnabled="{Binding CanReserve}" Click="rbtnReservation_Click"/>
+
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ReservationGroup48.png" Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Ribbon_GroupReservation}"  Visibility="{Binding CanGroupReserve,Converter={StaticResource visibConv}}" Click="rbtnGroupReservation_Click"/>
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ReservationCancel32.png" Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_CancelReservation}"  Visibility="{Binding CanCancelReserve,Converter={StaticResource visibConv}}" Click="rbtnCancelReservation_Click"/>
+
+                <r:RibbonSplitButton Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_MarkAsPaid}" LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\Paid.png"   IsEnabled="{Binding CanMarkAsPaid}" Click="rbtnMarkAsPaid_Click">
+                    <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Paid}" ImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\Paid.png"  IsEnabled="{Binding CanMarkAsPaid}" Click="rbtnMarkAsPaid_Click" />
+                </r:RibbonSplitButton>
+
+                <r:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_CalendarEntries}"  IsEnabled="{Binding CanCancelReserve}" Click="rbtnAddTrainingDay_Click" SmallImageSource="/BodyArchitect.Client.Resources;component/Images\AddTrainingDay.png"/>
+
+                <r:RibbonToggleButton Name="rchkPresent" Click="rchkPresent_Checked" SmallImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\Present.png" IsEnabled="{Binding CanBePresent}" Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_Present}" IsChecked="{Binding SelectedReservation.Reservation.IsPresent,Mode=OneWay}"/>
+            </r:RibbonGroup>
+
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_ScheduleEntry}" Visibility="{Binding ReadOnly,Converter={StaticResource visibConv}}">
+                <r:RibbonSplitButton Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Label_StatusDone}" LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntryDone.png"  IsEnabled="{Binding CanBeDone}" Click="rbtnSetStatusDone_Click">
+                    <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_StatusDone}" ImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntryDone.png"  IsEnabled="{Binding CanBeDone}" Click="rbtnSetStatusDone_Click" />
+                    <r:RibbonMenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_StatusCancelled}" ImageSource="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntryCancelled.png"  IsEnabled="{Binding CanBeCancelled}" Click="rbtnSetStatusCancelled_Click" />
+                </r:RibbonSplitButton>
+
+                <r:RibbonButton Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Championship}"  Visibility="{Binding IsChampionship,Converter={StaticResource boolVisibConv}}" Click="rbtnShowChampionship_Click" LargeImageSource="/BodyArchitect.Client.Module.Instructor;component/Images/Championship32.png" SmallImageSource="/BodyArchitect.Client.Module.Instructor;component/Images/Championship16.png" IsEnabled="{Binding CanShowChampionship}"/>
+
+            </r:RibbonGroup>
+        </r:RibbonTab>
+        
+        <Style TargetType="{x:Type Calendar:CalendarAppointmentItem}">
+            <Setter Property="BorderThickness" Value="1,1,1,1" />
+            <Setter Property="BorderBrush" Value="#5D8CC9" />
+            <Setter Property="Background" Value="#F1F5E3" />
+            <Setter Property="Margin" Value="1,1,5,1" />
+            <Setter Property="Padding" Value="3,1,0,1" />
+
+            <Setter Property="StartTime" Value="{Binding StartTime}" />
+            <Setter Property="EndTime" Value="{Binding EndTime}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Calendar:CalendarAppointmentItem}">
+
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStateGroup">
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <!--<ThicknessAnimation
+                Storyboard.TargetProperty="BorderThickness"  Storyboard.TargetName="appointmentBorder" 
+                Duration="0" FillBehavior="HoldEnd" From="1,1,1,1" To="2,2,2,2" />-->
+                                            <ColorAnimation Storyboard.TargetName="appointmentBorder"
+Storyboard.TargetProperty="BorderBrush.Color" To="Black" Duration="0" />
+                                        </Storyboard>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Selected">
+                                        <Storyboard>
+                                            <!--<ThicknessAnimation
+                Storyboard.TargetProperty="BorderThickness"  Storyboard.TargetName="appointmentBorder" 
+                Duration="0" FillBehavior="HoldEnd" From="1,1,1,1" To="3,3,3,3" />-->
+
+                                            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty=  "BorderThickness" Storyboard.TargetName="appointmentBorder">
+                                                <EasingThicknessKeyFrame KeyTime="0" Value="3,3,3,3"/>
+                                            </ThicknessAnimationUsingKeyFrames>
+                                            <ColorAnimationUsingKeyFrames
+                    Storyboard.TargetProperty=  "BorderBrush.Color" Storyboard.TargetName="appointmentBorder">
+                                                <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                            
+                                            <!--<ColorAnimation Storyboard.TargetName="appointmentBorder"
+Storyboard.TargetProperty="BorderBrush.Color" To="Black" Duration="0" />-->
+                                        </Storyboard>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+
+                            <Border Name="appointmentBorder"  Background="{Binding Background}"  CornerRadius="4,4,4,4" Height="{TemplateBinding Height}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"  Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}">
+                                <Border.ToolTip>
+
+                                    <ToolTip>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Subject}"/>
+                                            <TextBlock Text="{Binding StartTime}"/>
+                                            <TextBlock Text="{Binding RealEndTime}"/>
+                                        </StackPanel>
+                                    </ToolTip>
+                                </Border.ToolTip>
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.5" />
+                                </Border.Effect>
+                                <StackPanel>
+                                    
+                                    <Grid >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Visibility="Collapsed" ToolTip="{Binding ErrorToolTip}" Width="16" Height="16" Name="imgHasError" Source="/BodyArchitect.Client.Resources;component/Images\HasError.png"/>
+                                            <Image Visibility="Collapsed" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_EntryDuration}" Width="16" Height="16" Name="imgNextDay" Source="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntryNextDay.png"/>
+                                            <Image Visibility="Collapsed" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_Done}" Width="16" Height="16" Name="imgStatusDone" Source="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntryDone.png"/>
+                                            <Image Visibility="Collapsed" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_Cancelled}" Width="16" Height="16" Name="imgStatusCancelled" Source="/BodyArchitect.Client.Module.Instructor;component/Images\ScheduleEntryCancelled.png"/>
+                                            <Image Visibility="Collapsed" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_HasReminder}" Width="16" Height="16" Name="imgReminder" Source="/BodyArchitect.Client.Resources;component/Images\Reminder16.png"/>
+                                        </StackPanel>
+                                        
+                                        <TextBlock Text="{Binding Subject}" FontWeight="Bold"  Grid.Column="1"/>
+                                        <TextBlock Text="{Binding Persons}" TextTrimming="CharacterEllipsis" Grid.Column="2" Name="lblPersons"/>
+                                        <StackPanel Grid.Column="3" Name="panelButtons" Orientation="Horizontal">
+                                            <Button ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_ReduceBy}" Name="DecrementButton" Style="{StaticResource CloseableTabItemButtonStyle}" >
+                                                <Path Stretch="Fill" StrokeThickness="2" Stroke="#FF333333" Fill="#FF969696" Data="M0,5 H10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Button>
+                                            <Button ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_IncreaseBy}" Name="IncrementButton" Style="{StaticResource CloseableTabItemButtonStyle}" >
+                                                <Path  Stretch="Fill" StrokeThickness="0.5" Stroke="#FF333333" Fill="#FF969696" Data="M3.875,0 L5.125,0 5.125,3.875 9,3.875 9,5.125 5.125,5.125 5.125,9 3.875,9 3.875,5.125 0,5.125 0,3.875 3.875,3.875 3.875,0 z" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Button>
+                                            <Button ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_Delete}" Width="16" Height="16" Name="CloseButton" Style="{StaticResource CloseableTabItemButtonStyle}" >
+                                                <Path  Stretch="Fill" StrokeThickness="0.5" Stroke="#FF333333" Fill="#FF969696" Data="F1 M 2.28484e-007,1.33331L 1.33333,0L 4.00001,2.66669L 6.66667,6.10352e-005L 8,1.33331L 5.33334,4L 8,6.66669L 6.66667,8L 4,5.33331L 1.33333,8L 1.086e-007,6.66669L 2.66667,4L 2.28484e-007,1.33331 Z " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </Grid>
+
+                                    <StackPanel Orientation="Horizontal" Visibility="{Binding IsRunning,Converter={StaticResource visibConv}}">
+                                        <Viewbox Width="16" Height="16" Margin="0" >
+                                            <pi:ProgressIndicator  IsRunning="{Binding IsRunning}" IsIndeterminate="true"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Viewbox>
+                                        <Button ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_Cancel}" Tag="{Binding}" Click="btnCancelCurrentOperation_Click" Width="16" Height="16" Name="CancelButton" Style="{StaticResource CloseableTabItemButtonStyle}" >
+                                            <Path  Stretch="Fill" StrokeThickness="0.5" Stroke="#FF333333" Fill="#FF969696" Data="F1 M 2.28484e-007,1.33331L 1.33333,0L 4.00001,2.66669L 6.66667,6.10352e-005L 8,1.33331L 5.33334,4L 8,6.66669L 6.66667,8L 4,5.33331L 1.33333,8L 1.086e-007,6.66669L 2.66667,4L 2.28484e-007,1.33331 Z " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                        </Button>
+                                    </StackPanel>
+                                    
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding HasReminder}"  Value="true">
+                                <Setter Property="Visibility" TargetName="imgReminder" Value="Visible"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding HasError}"  Value="true">
+                                <Setter Property="Visibility" TargetName="imgHasError" Value="Visible"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding LastForNextDay}"  Value="true">
+                                <Setter Property="Visibility" TargetName="imgNextDay" Value="Visible"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Item.State}"  Value="Done">
+                                <Setter Property="Visibility" TargetName="imgStatusDone" Value="Visible"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Item.State}"  Value="Cancelled">
+                                <Setter Property="Visibility" TargetName="imgStatusCancelled" Value="Visible"/>
+                            </DataTrigger>
+                            </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <my1:ScheduleEntriesCalendar ReadOnly="{Binding ReadOnly}" x:Name="ctrlCalendar" Appointments="{Binding Entries}" ChangeAppointmentTime="ctrlCalendar_ChangeAppointmentTime"
+                                     CurrentDateChanged="ctrlCalendar_CurrentDateChanged" ShowSingleDay="false" EditAppointment="ScheduleEntriesCalendar_EditAppointment"
+                                     SelectedAppointmentChanged="ctrlCalendar_SelectedAppointmentChanged" SelectedAppointment="{Binding SelectedAppointment,Mode=TwoWay}"
+                                     ColorMode="{Binding ColorMode}" CurrentDayChanging="ctrlCalendar_CurrentDayChanging" />
+
+        <controls:GridExpander Uid="ScheduleEntriesView_Expander1"  Name="commentsSplitter" Grid.Column="1" Style="{StaticResource ColumnExpander}"/>
+
+        <Grid Grid.Column="2" Visibility="{Binding ReadOnly,Converter={StaticResource visibConv}}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="4" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Reservations}">
+                <GroupBox.Resources>
+                    <CollectionViewSource Source="{Binding Reservations}" x:Key="reservationsView">
+                        <CollectionViewSource.SortDescriptions>
+                            <ComponentModel:SortDescription PropertyName="Reservation.DateTime" Direction="Ascending" />
+                        </CollectionViewSource.SortDescriptions>
+                    </CollectionViewSource>
+                </GroupBox.Resources>
+                <ListView Name="lvReservations" ItemsSource="{Binding Source={StaticResource reservationsView}}" SelectedItem="{Binding SelectedReservation,Mode=TwoWay}" >
+                    <ListView.View>
+
+                        <GridView>
+                            <GridViewColumn Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Customer}" Width="200">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Background="Transparent" Orientation="Horizontal">
+                                            <Image Width="16" Height="16" Visibility="Collapsed" Name="imgIsPaid" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_ReservationPaid}" Source="/BodyArchitect.Client.Module.Instructor;component/Images/Paid.png"/>
+                                            <Image Name="imgPresent" Width="16" Height="16" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_ToolTip_Present}" Visibility="Collapsed" Source="/BodyArchitect.Client.Module.Instructor;component/Images\Present.png"/>
+                                            <TextBlock Text="{Binding Customer}"/>
+                                        </StackPanel>
+
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding Reservation.IsPaid}"  Value="true">
+                                                <Setter Property="Visibility" TargetName="imgIsPaid" Value="Visible"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Reservation.IsPresent}"  Value="true">
+                                                <Setter Property="Visibility" TargetName="imgPresent" Value="Visible"/>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </GroupBox>
+
+            <controls:GridExpander Grid.Row="1" Style="{StaticResource RowExpander}" />
+
+            <TabControl Grid.Row="2">
+                <TabItem Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Customers}">
+                    <Customers:usrCustomersList  x:Name="usrCustomers"  ItemsSource="{Binding Customers}"  SelectedCustomer="{Binding SelectedCustomer,Mode=TwoWay}" />    
+                </TabItem>
+
+                <TabItem Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:ScheduleEntriesView_Header_Groups}">
+                    <ListBox Name="lstGroups" ItemContainerStyle="{StaticResource StretchedListBoxItemStyle}" ItemTemplate="{StaticResource GroupsComboBoxItem}" Controls:ImageButtonExt.EmptyListMessage="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:CustomerGroupsView_EmptyListMessage_NoGroups}" ItemsSource="{Binding CustomerGroups}"  SelectedItem="{Binding SelectedGroup,Mode=TwoWay}" >
+                    </ListBox>
+                </TabItem>
+            </TabControl>
+            
+        </Grid>
+
+        <my1:ActivitiesListSelector DropScope="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type my1:ScheduleEntriesView}}}"  AllowDrag="true"  Activities="{Binding Activities}"   x:Name="activitiesSelector" Grid.Column="2" Visibility="{Binding ShowActivitesSelector,Converter={StaticResource visibConv}}"/>
+        <my:CustomerGroupsListSelector DropScope="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type my1:ScheduleEntriesView}}}"  AllowDrag="true"  CustomerGroups="{Binding CustomerGroups}"   x:Name="groupsSelector" Grid.Column="2" Visibility="{Binding ShowGroupsSelector,Converter={StaticResource visibConv}}"/>
+        <my1:MyPlacesListSelector DropScope="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type my1:ScheduleEntriesView}}}"  AllowDrag="true"  MyPlaces="{Binding MyPlaces}"   x:Name="myPlacesSelector" Grid.Column="2" Visibility="{Binding ShowMyPlacesSelector,Converter={StaticResource visibConv}}"/>
+
+    </Grid>
+</Controls:BasePage>

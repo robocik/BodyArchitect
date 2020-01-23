@@ -1,0 +1,80 @@
+﻿<Window x:Class="BodyArchitect.Client.Module.StrengthTraining.Controls.SetInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen"
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension" xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:controls1="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+        Title="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_Title}" Height="300" Width="300">
+
+    <Grid Margin="{StaticResource MarginLargeLeftRightBottom}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_CommentLabel}" Target="txtComment"  />
+        <TextBox Margin="{StaticResource MarginMediumBottom}" Name="txtComment" Grid.Row="1" ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SerieInfo_CommentTE}"/>
+        <Grid Grid.Row="2" Name="panel1">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Margin="{StaticResource MarginMediumBottom}" Grid.Row="0" Target="cmbDropSet" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_DropSetLabel}" />
+            <ComboBox Margin="{StaticResource MarginMediumBottom}" Name="cmbDropSet" Grid.Column="1" Grid.Row="0" ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SerieInfo_DropSetCMB}">
+                <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_DropSet_None}" />
+                <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_DropSet_1}" />
+                <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_DropSet_2}" />
+                <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_DropSet_3}" />
+                <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_DropSet_4}" />
+            </ComboBox>
+
+            <CheckBox Margin="{StaticResource MarginMediumBottom}" Grid.Row="1" Grid.ColumnSpan="2" Name="chkCiezarBezSztangi" ToolTip="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SerieInfo_CiezarBezSztangiCHK}" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_WeightWithoutBarbellCheck}"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2" Margin="{StaticResource MarginMediumBottom}">
+                <CheckBox  Name="chkRestPause" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_RestPause}"/>
+                <my:BAHelpButton Description="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_Help_RestPause}" AccountType="PremiumUser"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" Margin="{StaticResource MarginMediumBottom}">
+                <CheckBox  Name="chkSuperSlow" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_SuperSlow}"/>
+                <my:BAHelpButton Description="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_Help_SuperSlow}" AccountType="PremiumUser"/>
+            </StackPanel>
+
+
+            <Label Margin="{StaticResource MarginMediumBottom}" Grid.Row="4" Target="cmbDropSet" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_SetTypeLabel}" />
+            <ComboBox Margin="{StaticResource MarginMediumBottom}" Name="cmbSetType" Grid.Column="1" Grid.Row="4" DisplayMemberPath="Text" SelectedValuePath="Value"/>
+
+            
+        </Grid>
+        
+        <Grid Grid.Row="2" Name="cardioPane">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Margin="{StaticResource MarginMediumBottom}" Grid.Column="0" Target="txtDistance" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:SetInfoWindow_DistanceLabel}" />
+            <xctk:DecimalUpDown Name="txtDistance" Grid.Column="1" FormatString="F2"/>
+            <TextBlock Text="{x:Static controls1:UIHelper.DistanceType}" Margin="{StaticResource MarginSmallLeft}" VerticalAlignment="Center" Grid.Column="2"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <Button Margin="{StaticResource MarginLargeTopRight}" Name="btnOK" Style="{StaticResource OkButton}"  Click="btnOK_Click" />
+
+            <Button Margin="{StaticResource MarginLargeTop}" Style="{StaticResource CancelButton}" Name="btnCancel"  />
+        </StackPanel>
+    </Grid>
+    
+    
+</Window>

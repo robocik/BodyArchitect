@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="tcmbSeries.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tcmbSeries.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tcmbSeries.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tcmbSeries.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tcmbSeries.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tcmbSeries.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tcmbSeries.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tcmbSeries.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tcmbSeries.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tcmbSeries.Items9" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tcmbSeries.Items10" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tcmbSeries.Items11" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tcmbSeries.Items12" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="tcmbSeries.Items13" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tcmbSeries.Items14" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tcmbSeries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 25</value>
+  </data>
+  <data name="cmbExerciseColumns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 25</value>
+  </data>
+  <data name="tslSerieCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 22</value>
+  </data>
+  <data name="tslSerieCount.Text" xml:space="preserve">
+    <value>Set number:</value>
+  </data>
+  <data name="tslExerciseDisplayProperty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 22</value>
+  </data>
+  <data name="tslExerciseDisplayProperty.Text" xml:space="preserve">
+    <value>Exercise:</value>
+  </data>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>293, 54</value>
+  </metadata>
+  <metadata name="defaultToolTipController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>714, 54</value>
+  </metadata>
+  <assembly alias="DevExpress.Data.v11.2" name="DevExpress.Data.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="toolStrip1.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="tbShowPlan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANnSURBVDhPXdPbT1NJHAfwboz7amL8A4xPxsTEegc1aNTw
+        4IPiDW0pR6PrAhu8EIwmhqikqOwWqKKGhQC7FBWxIsqyNVw2lGKBFmihQG/Qy2lpSwu0hba05/Tw3UPR
+        mjjJN5mX+cz8Zn7D4Xwd2W/JvYTUrnzY5cUdmQf5n1zIaXVCICUDRJPVkSW1awgpOUQ0k53EO7KJeG87
+        ce3PofXf1nMETZZ8UY8XP45QjIF3iYbRF4XOFYXSGsZr9SyyGs3zgjcWQRLgNZqE1UpfYj3pj8MdYOAL
+        MlgIMwhGGSxTDKj4Gr9Mr6DHFAJfMulNAk9bqz/YhvmYH+PBNXQBM4Pn4VSehUNxkg0PTq8LzsCacPMv
+        G2I08PizFQkAzefWdXXnmZYshYg4ShG2lCBkfIig7i48vadgnGiFYZaC2RsHwwK3ascgNy7gTJV2JgG4
+        NWmbbf1p8ai7EiEDgYhNjMXJIswqTmN0pBkqksIwG+0MBWYF4FWokfFcFcyoVB/nYHzbz7MDh4RB42+I
+        ul9iUZOO0FQp7LL9GFZJIJ+mEumbjmHAToNmj5D5fABny5Qb13bvP7jP8yXFF3WJsewow+LYJYT0Qlja
+        D2BUXgKt/Hdou4sx8l8FVHp74iLPlMlx7EnnhgTg6U1VBQzX4dflYF5zDUtGIQs8QVBTBE8Xe5my09DX
+        bsFgjwRqSxDhWBzpxW00B/gpAbjkewsnZIer6/8uwNyECNPthxDQFmGuPx/kp2PQ/HMLfTozFGwZ424a
+        5HwYR++1OJPPtzpJK5BuPf9IBppaxHQLF66ODOjfpmJQ8YatP4YeMwXFFAWLj8Hw1BwO325WJYG0gleb
+        DlxvfCdqmYC1+xIc7Ueh/pgH2agP3aYoei1s99kpDDkpzLFN1TFCIvVGQ1sS2Jdbl5nyS03kvlgEzeuD
+        eFpfj7waPa68NEDwbBIXK8aRWa5Dbi2JUQeFhk4D9v9aV5cEdl+tKi1p7EfMb0DUb0x+hTj73qstG1xm
+        E1nBoxYnzB4KLz6MYM/Vqj+SwC6iMidf/BmSjkm0Ka1QjLuhsy6A9IbhD9GIsH9gtXmsPhouP40HtXLs
+        zK688R24KNq0gycW7uCVS7h88b9sBrn8MtN2vti3PVNEpVx+gSO51ThZKAFR/B5cntjIFZTv/gb8Dx44
+        t7MPSIbGAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tbShowPlan.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbShowPlan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbShowPlan.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbShowPlan.ToolTipText" xml:space="preserve">
+    <value>Shows which sets are in the training plan. This option is available only when your training is connected with the training plan.</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tbMoveUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE6SURBVDhPY2CgJSg+nHoy70DqEbLsKDySdrHjVN3/1hPV
+        /9O3x5wn2pD6K6FsRYfSbrefqvm//Nq8/0uvzPlfe6D4f9zq4Juhq0LZCBpUeDB5d976pO/Nxyr/L74y
+        6//CyzP+tx2u/e+/xP978BzPHQQNgClI3RL9f/6laf/nXJjyP3VN7P/AWR4WRGsGKYxfG/Z/1vnJ/2ec
+        m/A/YJbHf5I0gxRHLgv4P/VM3//Jp7v/e01yIt2A4Hle/yee6vrfd7L9v3OXDekG+Ex1/d9zvPV/57Gm
+        /7ZNZqQb4NZr/7/9aOP/1sN1/82qDEk3wL7V8n/Todr/DQer/hsUaZNugGWt8f+6A5X/a/aX/dfOViPd
+        AONS3f9Ve0v+V+wt+q+WqkS6Abp5Gv81M1X/q6Yo/ldKkCPdAGITDgCqAJclI3+GzgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="tbMoveUp.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbMoveUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbMoveUp.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbMoveUp.ToolTipText" xml:space="preserve">
+    <value>Moves selected exercises one level up</value>
+  </data>
+  <data name="tbMoveDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE3SURBVDhPY2CgFSg5nvG/+Fj6/4JDqf9z9yX9J9meoqNp
+        /1ffWPR/5fUF/zN2xJJuQP6B5P/Lr837v/TKnP/JmyJJNyBrd/z/xVdm/V94ecb/2FXBpBuQuiX6//xL
+        0/7PuTDlf/giP9INiF8b9n/W+cn/Z5yb8D9glgfpBkQuC/g/9Uzf/8mnu/97TXIi3YDgeV7/J57q+t93
+        sv2/c5cN6Qb4THX933O89X/nsab/tk1mpBngMc3FInSW3//2o43/Ww/X/TerMiTeAM+JTjtce/S/56xN
+        /d90qPZ/w8Gq/wGTvP/r5Kp/V09X3k0wRYbWa7HZNVncDJ8Z+L/uQOX/mv1l/7173f6rpcnf1grVYiNo
+        AEyBUanued9+j/9ePa7/VVKVLhKtEVmhZqbKEeUUuZNkaSZWEwDXq5RP/36YzAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbMoveDown.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbMoveDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbMoveDown.Text" xml:space="preserve">
+    <value>toolStripButton2</value>
+  </data>
+  <data name="tbMoveDown.ToolTipText" xml:space="preserve">
+    <value>Moves selected exercises one level down</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tbDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVDhPrZPrS1NxGMf9W2YRLJCgfFGEUJG0i85d2lzb
+        PMmpg5sZizDNsTNMM6hhzEUvwlm6rpoNYpoZRKYmmKOLQ6WzYmo7tVFrurNryrc5yEtNX0QPfF8+n+/v
+        932eJy/vf9dsTU2+32Awf6QoxkcQ0Q8ZzRA6ZorUmCcrVPlb+s1XV8sZg4H9bm9Fcvg5UpMTSL0eAefu
+        xpyRwrsKOevRSuQ5ISvNvqoqbrG3G8u+GaQHHyHttCHtuIKfD9qxNDaIoMmIUamYG1cXb4TM6vU8H0UF
+        ovecWGa8SN+4hIjNgoXWBiSvWZBqo5G0nkOy/z7mT5MYkx8ODMsO8VZf4tfr6VCTGUteT9YxYacRvlyL
+        ePOpDYqeJ5F03cZbSRFeKoroVcCnTGAx1x2kexyIWOvwjVDk1GIdCa61EUFLPV5I9zGrAC9JxlNPXUjb
+        LYhcNGKzCqpLEDZUYMFxHQPF/Pg6ABFP9HQi2WJE/ELVloAQpcVC+x+AaaKcCVsbkbDRiJ7VYcUppzQS
+        RJpMmDPVYlBYsO4LhIpmlCLEe7oQOaFEmJL9BWDLxWCPyRBz3sRI2R4MCPlrIb6vlPHe6OSB+epKxB52
+        ZgMMacuyEFZdClaZaVaWgevqwNRxBfoE/IBbtH1tjCtheNRi+ahUwPlPahG724kfLTSCpAZfdGqEm83g
+        bnVgWidFr5DH9Ql25N7GscyGvTp6kJ2Q7cfXhlqE265m9bn+DIZKduOxcCe7afPvkYyoDuQPSfaan0kL
+        GbewMOoW7oq6SwuYJyK+uf/Itq2P6V8u+xdk/dKJrDXR0gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbDelete.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbDelete.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbDelete.ToolTipText" xml:space="preserve">
+    <value>Deletes selected exercises</value>
+  </data>
+  <data name="tbAddSuperSet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAmBJREFUOE+lk91P
+        0nEUxrnqyqumaa7WWrXKlVoqKeqGQ0oEfOEdDTXI6H0rXGakswScUgRmJApIWII2RiYBOWfWHIWSrHLL
+        mlulf4Q3uqcfOFMu3Kguzt15Pud7nvN8SQBI/1N/JRbay/wcS+m2zQPjBgiesHMrzYxltpH+LQZw7lUV
+        1uvsSxGkbgFqn/MCEieHKhnm6cXPKub5NhbqBkVQ+hWQO2tB6ywIr0NIEfG7pTG8XXqNyUU/Jn75YJox
+        4Kq7HhddZ2AIdsAU1uNRSIeuGS0eBNtR0y8EpSV7KgIh1XvEmCTEbxZ9hNiL8Z8ejP0YxUC4F2JLBYwf
+        deieuQf9dAfuf9CgM9AGcS8XOTczglGA7IUQdS4+JEMc1Dr4UI0r4f7qgGfBBYmZD8XIZVRbuSjSUFBt
+        4UNkqkR2Y/qnPytsNkRgZSVwTAy1clSBke/DuONtAk2Tv0JV5zEjfeTrmatZN9IXtrwCYVZCRW+JmqWj
+        wfHFBuecHYW3yCt5DcejgMzzaatHpAdjAaeHuBA9LQevnwluXykuuWTRp7d5b2NwzgaVrxlcbRky5Gmo
+        0vEg6ORgn2DPxgrCgbIYh7XvVWj0XANPx4b9sxnWcA8sRPXNGtETeghjyIDyu0zsYu5cM5FIVozD7VOt
+        uDAsQ0ETGdIeCbQTaphmu/E41EVcQ4+uaR2YLSVIOblj7YxEssAwFKFYWwjCLOS35uCE8lggqyGdelR2
+        SH+4Zv/8AdFeUK6QITfLwGw+hRR60kaQ4v1Iu9mpuamM5OVkelJslOMFRPqSixP9idTt//aZthr0G00Q
+        nn6SdQcrAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tbAddSuperSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="tbAddSuperSet.Text" xml:space="preserve">
+    <value>Add superset</value>
+  </data>
+  <data name="tbAddSuperSet.ToolTipText" xml:space="preserve">
+    <value>Mark two or more exercises as superset</value>
+  </data>
+  <data name="tbRemoveSuperSet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAmJJREFUOE+lk+tP
+        ElAYxtnY/DP45NZWGmriqDA1SKQIb3hJGqkJ4YDkJuAVZpDKRVE0yDS8kFeKLC+jFeUFK2K6yGbrf/C7
+        bm5PyOaFgq3Wh7Odnfe8v/c8z55DAED4nxXTrAgITbJVgSER8PZMianSXRhTPwYo1oV2U0iP7mA7xG+r
+        bb9DeNMldvWSFIqFehQNFRzXCcoNETHS7DKFdHj+043ZnTEYAk0QLFQN176sIPI9XCJvqtilWpLgyZYd
+        js1eiOfuosCWO8wwZxMJ8nVhS8NKXbg3ZMTcj3HM7IxCv6JGjbcizJ/jaqsmi1vKx2+G5a9EcG7aMBiy
+        osErAt1EC+caL2qjEiTvakgK/z1M77gw+X0E1S/KI8ex5nKc+Rj4YoEt2A123zXkGKmkwztRQL2PT7r/
+        pg7u7WGMbz8Gf7YMt54VJR1BOI78JLadAdvnLlg+GcG05OGyjnICEC7ySOLFaox9c+Lp10dQL0tRNsq2
+        HgFYfVetgik+zB8N6Ap0gP4wG1nN6SeA2vlK4h1P2a5l4wGGtvojOnsg8daBPcjwsfryfLVuHjrXdegM
+        6CGfFyOrKW03ozGVeCzhcBNxmlsxwdnXLsvQHzRFtbb4VNAuyaJTDWttqJnggaJN289QpXKPXhcTpNKR
+        68mFTqbrxgD9QPlaiu6NjuhksUcAamvGAUVLdqUrU5JPGxw3xsyeHFqpgw3jWjs6VlvBMtORqSHT4iU0
+        4T+4YqDu6T40odWvwQX1+b1E8U4IuNSeibb3GjT7G0GWn/sjF3E9OD0l4jQiToMsO4sUyZl/B/ztF/8F
+        x4+bxwmPneQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbRemoveSuperSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="tbRemoveSuperSet.Text" xml:space="preserve">
+    <value>Remove superset</value>
+  </data>
+  <data name="tbRemoveSuperSet.ToolTipText" xml:space="preserve">
+    <value>Remove superset mark on selected sets</value>
+  </data>
+  <data name="tbSupersets.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAZxJREFUOE+V0V0v
+        gmEYB/COzLdwYl6SlcUyQ2O0YfMy2p4t1jLlQMqTqKQeSynLS6xNeWeWyWYcRNZWSSg20cLMJ/AJzNGf
+        58CJjafuw/u+rt/1crNYfxwyLo+rIgPJv97/vR+5kKcctybMJIxQnEses0aojDhPFZG92pOTOHjZxv7z
+        JqjYOKRHxJvYL85jhIaj/UFlSPZhvTbA97SBvcwaJsMaSA67PghfZ4gR+AlQBCTYzaxiJ+1Br78bWSf+
+        BPYfE9hKr2DjwQ1iryN3oM/fg/WUG96UC+oTBdq9zWROXdBVPfcuzCessESMaF1uuGxeEGaPdG+2wX03
+        B0N4BItJO4znWkh3CNRPC1BjrmQeqd0jguvWAVVADnVQASqqhy1uhiVmQpWexwy0LDXCeWODaLYBsm0J
+        dKckpqIGUBcGVIxymIEmZx0cVxboz0jUmgTga9nvfE35J5dkgzNcwgwIbdWwXtItG1Gl40JIFeTn9Av0
+        oqZiEzB/z87TlDFX/K3TizJFdJgIj4GjLM4doBdVri4Fe6gIJYOF/wJf93XWJ/NBMkMAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="tbSupersets.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 22</value>
+  </data>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>569, 54</value>
+  </metadata>
+  <data name="contextMenuStrip1.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="dodajInfoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 22</value>
+  </data>
+  <data name="dodajInfoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add &amp;info...</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 26</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grid1.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="grid1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="grid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="grid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 347</value>
+  </data>
+  <data name="grid1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;grid1.Name" xml:space="preserve">
+    <value>grid1</value>
+  </data>
+  <data name="&gt;&gt;grid1.Type" xml:space="preserve">
+    <value>SourceGrid.Grid, SourceGrid, Version=4.30.3817.19618, Culture=neutral, PublicKeyToken=df6f5e538749e85d</value>
+  </data>
+  <data name="&gt;&gt;grid1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grid1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 371</value>
+  </data>
+  <data name="&gt;&gt;tcmbSeries.Name" xml:space="preserve">
+    <value>tcmbSeries</value>
+  </data>
+  <data name="&gt;&gt;tcmbSeries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbExerciseColumns.Name" xml:space="preserve">
+    <value>cmbExerciseColumns</value>
+  </data>
+  <data name="&gt;&gt;cmbExerciseColumns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tslSerieCount.Name" xml:space="preserve">
+    <value>tslSerieCount</value>
+  </data>
+  <data name="&gt;&gt;tslSerieCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tslExerciseDisplayProperty.Name" xml:space="preserve">
+    <value>tslExerciseDisplayProperty</value>
+  </data>
+  <data name="&gt;&gt;tslExerciseDisplayProperty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbShowPlan.Name" xml:space="preserve">
+    <value>tbShowPlan</value>
+  </data>
+  <data name="&gt;&gt;tbShowPlan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbMoveUp.Name" xml:space="preserve">
+    <value>tbMoveUp</value>
+  </data>
+  <data name="&gt;&gt;tbMoveUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbMoveDown.Name" xml:space="preserve">
+    <value>tbMoveDown</value>
+  </data>
+  <data name="&gt;&gt;tbMoveDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbDelete.Name" xml:space="preserve">
+    <value>tbDelete</value>
+  </data>
+  <data name="&gt;&gt;tbDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbSupersets.Name" xml:space="preserve">
+    <value>tbSupersets</value>
+  </data>
+  <data name="&gt;&gt;tbSupersets.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbAddSuperSet.Name" xml:space="preserve">
+    <value>tbAddSuperSet</value>
+  </data>
+  <data name="&gt;&gt;tbAddSuperSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRemoveSuperSet.Name" xml:space="preserve">
+    <value>tbRemoveSuperSet</value>
+  </data>
+  <data name="&gt;&gt;tbRemoveSuperSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dodajInfoToolStripMenuItem.Name" xml:space="preserve">
+    <value>dodajInfoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;dodajInfoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;defaultToolTipController1.Name" xml:space="preserve">
+    <value>defaultToolTipController1</value>
+  </data>
+  <data name="&gt;&gt;defaultToolTipController1.Type" xml:space="preserve">
+    <value>DevExpress.Utils.DefaultToolTipController, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>usrStrengthTrainingSourceGridBase</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraUserControl, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BTNEditExercise" xml:space="preserve">
+    <value>&amp;Otwórz...</value>
+  </data>
+  <data name="BTNNewExercise" xml:space="preserve">
+    <value>&amp;Dodaj...</value>
+  </data>
+  <data name="CancelingOperation" xml:space="preserve">
+    <value>Anulowanie...</value>
+  </data>
+  <data name="CMBExerciseName" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="CMBExerciseShortcut" xml:space="preserve">
+    <value>Skrót</value>
+  </data>
+  <data name="CMBExerciseType" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="EmptyExerciseCellText" xml:space="preserve">
+    <value>[Wybierz ćwiczenie]</value>
+  </data>
+  <data name="ErrorAuthentication" xml:space="preserve">
+    <value>Nie udało się zalogować. Proszę sprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorAuthenticationWrongCredentials" xml:space="preserve">
+    <value>Nieprawidłowa nazwa użytkownika lub hasło.</value>
+  </data>
+  <data name="ErrorCheckUpdates" xml:space="preserve">
+    <value>Podczas sprawdzania aktualizacji wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorCreateProfile" xml:space="preserve">
+    <value>Podczas tworzenia profilu wystąpił błąd. Proszę wprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorCreateProfileUnique" xml:space="preserve">
+    <value>Profil o podanej nazwie już istnieje. Proszę podać inną nazwę.</value>
+  </data>
+  <data name="ErrorDeleteProfile" xml:space="preserve">
+    <value>Nie udało się usunąć profilu. Proszę sprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorDuringUpdates" xml:space="preserve">
+    <value>Podczas aktualizacji programu wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorFillCalendarView" xml:space="preserve">
+    <value>Podczas pobierania danych wystąpił wyjątek. Aplikacja zostanie zamknięta. Proszę sprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorFillTrainingDay" xml:space="preserve">
+    <value>Podczas wyświetlania danych wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="ErrorInvalidDatabaseVersion" xml:space="preserve">
+    <value>Aktualna baza jest przeznaczona dla innej wersji BodyArchitecta. Program zostanie zamknięty.</value>
+  </data>
+  <data name="ErrorLoadProfile" xml:space="preserve">
+    <value>Podczas pobierania profilu wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="ErrorMoveTrainingDay" xml:space="preserve">
+    <value>Nie udało się przenieść wpisu. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorOpenWebSite" xml:space="preserve">
+    <value>Nie udało się otworzyć strony. Proszę uruchomić przeglądarkę internetową ręcznie i wpisać adres.</value>
+  </data>
+  <data name="ErrorRemoveExercise" xml:space="preserve">
+    <value>Podczas operacji usuwania ćwiczenia wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorRemoveTrainingDay" xml:space="preserve">
+    <value>Podczas operacji usuwania wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="ErrorRetrievingRssFeed" xml:space="preserve">
+    <value>Nie udało się pobrać zawartości</value>
+  </data>
+  <data name="ErrorSaveExercise" xml:space="preserve">
+    <value>Podczas zapisu wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="ErrorSaveExerciseUnique" xml:space="preserve">
+    <value>Skrót ćwiczenia musi być unikatowy. Wybierz inny skrót</value>
+  </data>
+  <data name="ErrorSaveProfile" xml:space="preserve">
+    <value>Podczas zapisu profilu wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="ErrorSaveTrainingDay" xml:space="preserve">
+    <value>Podczas zapisu wystąpił błąd. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="ErrorSerieColumnCount" xml:space="preserve">
+    <value>Nie można wyświetlić mniejszej liczby serii niż aktualna liczba serii w ćwiczeniach.</value>
+  </data>
+  <data name="ErrorUnableConfigureNHibernate" xml:space="preserve">
+    <value>Inicializacja aplikacji nie powiodła się. Proszę sprawdzic plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="ErrorUnableUpdateDatabase" xml:space="preserve">
+    <value>Podczas aktualizacji bazy wystąpił wyjątek. Aplikacja zostanie zamknięta.</value>
+  </data>
+  <data name="ErrorUnhandledException" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd. Proszę sprawdzić plik z logami. Kod błędu: {0}</value>
+  </data>
+  <data name="InfoChangeLanguageRestart" xml:space="preserve">
+    <value>Nowy język będzie dostępny po ponownym uruchomieniu aplikacji.</value>
+  </data>
+  <data name="InfoDatabaseUpdatingStatus" xml:space="preserve">
+    <value>Aktualizacja bazy...</value>
+  </data>
+  <data name="InfoInicializingApplication" xml:space="preserve">
+    <value>Inicializacja...</value>
+  </data>
+  <data name="InfoNoUpdatesAvailable" xml:space="preserve">
+    <value>Masz zainstalowaną najnowszą wersję programu.</value>
+  </data>
+  <data name="InfoPreparingData" xml:space="preserve">
+    <value>Przygotowanie danych...</value>
+  </data>
+  <data name="InfoPreparingMainWindow" xml:space="preserve">
+    <value>Przygotowanie okna aplikacji...</value>
+  </data>
+  <data name="InfoRestartAfterUpdates" xml:space="preserve">
+    <value>Zmiany zostaną wprowadzone po ponownym uruchomieniu programu.</value>
+  </data>
+  <data name="InfoUpdateRequired" xml:space="preserve">
+    <value>Pojawiła się nowsza wersja programu i jest ona niezbędna do prawidłowego działania aplikacji. Po kliknięciu Ok, aplikacja zostanie zaktualizowana.</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="MNUNewTrainingDay" xml:space="preserve">
+    <value>&amp;Nowy...</value>
+  </data>
+  <data name="MNUOpenTrainingDay" xml:space="preserve">
+    <value>&amp;Otwórz...</value>
+  </data>
+  <data name="QAskForUpdate" xml:space="preserve">
+    <value>Pojawiła się nowsza wersja programu. Czy chcesz zaktualizować?</value>
+  </data>
+  <data name="QCloseTrainingDay" xml:space="preserve">
+    <value>Czy na pewno chcesz przerwać edycję?</value>
+  </data>
+  <data name="QMoveTrainingDay" xml:space="preserve">
+    <value>Czy na pewno chcesz przenieść wpis?</value>
+  </data>
+  <data name="QRemoveExercise" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć zaznaczone ćwiczenia? Spowoduje to również usunięcie wszystkich wpisów treningowych, w których są usunięte ćwiczenia!</value>
+  </data>
+  <data name="QRemoveProfile" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć profil '{0}'?</value>
+  </data>
+  <data name="QRemoveTrainingDay" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć wpis z {0}</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="CloseButton" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="ColumnExerciseName" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="ColumnExerciseShortcut" xml:space="preserve">
+    <value>Skrót</value>
+  </data>
+  <data name="SpecificCulture" xml:space="preserve">
+    <value>pl-PL</value>
+  </data>
+  <data name="ErrorCannotShowLogFile" xml:space="preserve">
+    <value>Nie udało się otworzyć pliku z logami.</value>
+  </data>
+  <data name="InfoNoTrainingDayEntires" xml:space="preserve">
+    <value>Bieżący profil nie zawiera żadnych wpisów.</value>
+  </data>
+  <data name="ErrorImportExercisesUnique" xml:space="preserve">
+    <value>W bazie istnieje juz ćwiczenie z tym samym id. Prawdopodobnie w przeszłości ćwiczenia zostały zaimportowane do tej bazy.</value>
+  </data>
+  <data name="ErrorUnableToImportExercises" xml:space="preserve">
+    <value>Nie udało się zaimportować ćwiczeń. Proszę sprawdzić plik z logami. Kod błędu: {0}.</value>
+  </data>
+  <data name="ErrorEntryObjectTypeAlreadyExists" xml:space="preserve">
+    <value>Nie możnesz dodać tego typu wpisu więcej niż raz.</value>
+  </data>
+  <data name="QAskForDeletingEntryObject" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć wpis: {0}?</value>
+  </data>
+  <data name="ErrorCannotPaste" xml:space="preserve">
+    <value>Zaznaczony dzien zawiera już wpis. Musisz najpierw usunać istniejący wpis.</value>
+  </data>
+  <data name="InfoImportExercisesProgress" xml:space="preserve">
+    <value>Import ćwiczeń: {0}</value>
+  </data>
+  <data name="InfoImportExercisesSuccessfully" xml:space="preserve">
+    <value>Całkowita liczba zaimportowanych ćwiczeń: {0}</value>
+  </data>
+  <data name="InfoNextEntryLimit" xml:space="preserve">
+    <value>Bieżący wpis jest ostatnim wpisem w bazie.</value>
+  </data>
+  <data name="InfoPreviousEntryLimit" xml:space="preserve">
+    <value>Bieżący wpis jest pierwszym wpisem w bazie.</value>
+  </data>
+  <data name="ErrorCannotDeleteTrainingDayPartOfTraining" xml:space="preserve">
+    <value>Nie można usunąć wybranego dnia ponieważ niektóre wpisy są częścią treningu.</value>
+  </data>
+  <data name="SelectReportText" xml:space="preserve">
+    <value>(Wybierz raport)</value>
+  </data>
+  <data name="ErrorCannotGenerateReport" xml:space="preserve">
+    <value>Nie udało się wygenerować raportu. Proszę sprawdzić plik z logami. Kod błędu: {0}.</value>
+  </data>
+  <data name="ReportSavingFilter" xml:space="preserve">
+    <value>Plik png (*.png)|*.png|Jpeg (*.jpg)|*.jpg|Bitmap (*.bmp)|*.bmp</value>
+  </data>
+  <data name="ErrorCannotCopyTrainingDayFixedEntries" xml:space="preserve">
+    <value>Nie można skopiować tego wpisu ponieważ zawiera on wyłącznie stałe pozycje.</value>
+  </data>
+  <data name="ErrorCannotMoveTrainingDayFixedEntries" xml:space="preserve">
+    <value>Nie możesz przenieść tego wpisu ponieważ zawiera on stałe pozycje.</value>
+  </data>
+  <data name="ReportingOptions_NoTemplate" xml:space="preserve">
+    <value>(Brak)</value>
+  </data>
+  <data name="OptionsRestartRequiredMsg" xml:space="preserve">
+    <value>Niektóre zmiany wymagają restartu aplikacji.</value>
+  </data>
+  <data name="OptionsCalendarTitle" xml:space="preserve">
+    <value>Kalendarz</value>
+  </data>
+  <data name="OptionsReportingTitle" xml:space="preserve">
+    <value>Różne</value>
+  </data>
+  <data name="Reporting_GeneratingTimeStatus" xml:space="preserve">
+    <value>Raport został wygenerowany w {0}.</value>
+  </data>
+  <data name="PluginsGrid_DefaultEntryColumn" xml:space="preserve">
+    <value>Domyślny</value>
+  </data>
+  <data name="PluginsGrid_IconColumn" xml:space="preserve">
+    <value>Ikona</value>
+  </data>
+  <data name="PluginsGrid_PluginColumn" xml:space="preserve">
+    <value>Moduł</value>
+  </data>
+  <data name="ErrorDeleteLogFile" xml:space="preserve">
+    <value>Nie udało się usunąć pliku. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="ErrorSaveLogFile" xml:space="preserve">
+    <value>Nie udało się zapisać pliku. Proszę sprawdzić plik z logami. Kod błędu:{0}</value>
+  </data>
+  <data name="QAskClearLog" xml:space="preserve">
+    <value>Czy na pewno chcesz wyczyścić ten log?</value>
+  </data>
+  <data name="SaveLogFileFilter" xml:space="preserve">
+    <value>Plik tekstowy (*.txt)|*.txt|Plik logów (*.log)|*.log|Wszystkie pliki (*.*)|*.*</value>
+  </data>
+  <data name="QAskForAutomaticImportExercises" xml:space="preserve">
+    <value>Czy chciałbyś teraz zaimportować standardową bazę ćwiczeń i suplementów? Możesz  to zrobić w każdym momencie wybierając menu Narzędzia-&gt;Dane standardowe...</value>
+  </data>
+  <data name="QResetAllOptions" xml:space="preserve">
+    <value>Czy na pewno chcesz przywrócić domyślne ustawienia?</value>
+  </data>
+  <data name="OptionResetAllBtn" xml:space="preserve">
+    <value>Przywraca wszystkie ustawienia do domyślnych wartości.</value>
+  </data>
+  <data name="CompletePercentageResult" xml:space="preserve">
+    <value>Ukończono: {0}%</value>
+  </data>
+  <data name="ErrorCannotBeEmpty" xml:space="preserve">
+    <value>Nie może być pusty</value>
+  </data>
+  <data name="ErrorMustBeUnique" xml:space="preserve">
+    <value>Musi być unikatowy i nie może być pusty</value>
+  </data>
+  <data name="DeletedObject" xml:space="preserve">
+    <value>(Usunięty)</value>
+  </data>
+  <data name="StatusBarCalendarViewText" xml:space="preserve">
+    <value>Widok kalendarza: {0}</value>
+  </data>
+</root>

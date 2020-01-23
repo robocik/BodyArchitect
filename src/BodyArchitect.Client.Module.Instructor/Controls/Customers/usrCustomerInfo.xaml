@@ -1,0 +1,106 @@
+﻿<Controls:usrBaseControl xmlns:my="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls" 
+                         x:Class="BodyArchitect.Client.Module.Instructor.Controls.Customers.usrCustomerInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+                         xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                         xmlns:Behaviors="clr-namespace:BodyArchitect.Client.UI.Controls.WatermarkExtension;assembly=BodyArchitect.Client.UI" xmlns:Converters="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI"
+                         xmlns:Converters1="clr-namespace:BodyArchitect.Client.Module.Instructor.Converters"
+                         xmlns:Customers="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls.Customers"
+                         mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="boolVisibConv"/>
+        <Converters1:CustomerToPictureConverter x:Key="custPictConv" />
+        <Converters:NullToVisibilityConverter x:Key="nullVisibConv"/>
+    </UserControl.Resources>
+    <!--TODO:Completed-->
+    <Grid Margin="{StaticResource MarginLargeLeftTopRightBottom}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+<!--Not connected panel-->
+        <StackPanel Visibility="{Binding ShowNotConnected,Converter={StaticResource boolVisibConv}}">
+            <TextBlock Style="{StaticResource featureBigInfo}" Text="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrCustomerInfo_Text_NotCustomer}" Grid.ColumnSpan="2"/>
+            <TextBlock Style="{StaticResource featureBigInfo}" >
+                <Hyperlink Click="btnStartEdit_Click">Click here</Hyperlink> to connect this user with your customer
+            </TextBlock>
+        </StackPanel>
+
+        <!--Edit panel-->
+        <Grid Grid.Row="1" Visibility="{Binding EditMode,Converter={StaticResource boolVisibConv}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Style="{StaticResource featureBigInfo}" Text="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrCustomerInfo_Text_SelectCustomer}" Grid.ColumnSpan="2"/>
+
+            <Customers:CustomersFilteredComboBox Margin="{StaticResource MarginLargeTop}" VerticalAlignment="Center" Grid.Row="1" Behaviors:WatermarkComboBoxBehavior.EnableWatermark="{Binding EditMode}" Grid.Column="0" SelectedItem="{Binding SelectedCustomer,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                  Behaviors:WatermarkComboBoxBehavior.Label="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrCustomerInfo_Watermark_SelectToConnect}" TextSearch.TextPath="FullName"
+                                  Behaviors:WatermarkComboBoxBehavior.LabelStyle="{StaticResource watermarkLabelStyle}">
+                <Customers:CustomersFilteredComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Controls:CachedImage Grid.RowSpan="2" PictureOwner="{Binding Converter={StaticResource custPictConv}}"/>
+                            
+                            <TextBlock FontWeight="Bold" Text="{Binding FullName}" Grid.Column="1" Grid.ColumnSpan="2"/>
+                            <TextBlock Text="{Binding Email}" Grid.Row="1" Grid.Column="1"/>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="2" Visibility="{Binding ConnectedAccount,Converter={StaticResource nullVisibConv}}">
+                                <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrCustomerInfo_Text_ConnectedWith}"/>
+                                <TextBlock Text="{Binding ConnectedAccount.UserName}"/>
+                            </StackPanel>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </Customers:CustomersFilteredComboBox.ItemTemplate>
+            </Customers:CustomersFilteredComboBox>
+            <Button Margin="6,12,0,0" Grid.Row="1" Grid.Column="1" Click="btnNewCustomer_Click">
+                <Image Width="16" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/Add16.png"/>
+            </Button>
+
+
+            <Controls:usrProgressIndicatorButtons Name="progressButtons" HorizontalAlignment="Right" Grid.Row="2" CancelClick="btnCancelSaveCustomer_Click" OkClick="usrProgressIndicatorButtons_OkClick"  Margin="0,18,0,0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <!--<Grid Grid.Row="2" Margin="0,18,0,0" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button Name="btnOK" IsEnabled="{Binding CanSave}"  Style="{StaticResource OkButton}" HorizontalAlignment="Right" Click="btnSaveCustomer_Click"  />
+
+                <Button Grid.Column="1" HorizontalAlignment="Left" Margin="12,0,0,0" Style="{StaticResource CancelButton}" Name="btnCancel" Click="btnCancelSaveCustomer_Click" />
+
+            </Grid>-->
+            
+            
+        </Grid>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Visibility="{Binding ShowConnected,Converter={StaticResource boolVisibConv}}">
+            <Controls:CachedImage x:Name="customerImage" PictureOwner="{Binding SelectedCustomer,Converter={StaticResource custPictConv}}"/>
+            <Button VerticalAlignment="Center" Margin="{StaticResource MarginMediumLeft}" Content="{Binding SelectedCustomer.FullName}"  Click="lblShowCustomer_Click" Style="{StaticResource LinkButon}"  />
+            <Button IsEnabled="{Binding CanDisconnect}" Margin="{StaticResource MarginLargeLeft}" Style="{StaticResource ImageButton}" Controls:ImageButtonExt.Image="/BodyArchitect.Client.Module.Instructor;component/Images/CustomerDisconnect.png" Width="120" Height="25"  Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrCustomerInfo_Content_Disconnect}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Click="btnDisconnectCustomer_Click"/>
+        </StackPanel>
+    </Grid>
+</Controls:usrBaseControl>

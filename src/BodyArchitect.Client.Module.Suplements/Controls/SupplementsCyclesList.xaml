@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.Suplements.Controls.SupplementsCyclesList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+             xmlns:PlansUI="clr-namespace:BodyArchitect.Client.UI.Controls.PlansUI;assembly=BodyArchitect.Client.UI" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <PlansUI:FeaturedListViewGroupStyleSelector x:Key="myStyleSelector" />
+    </UserControl.Resources>
+    
+    <ListView Name="lvPlans" SelectionMode="Single" SelectionChanged="lstPlans_SelectionChanged">
+        <ListView.View>
+            <GridView>
+
+                <GridViewColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SupplementsCyclesList_Header_Author}" Width="120">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Controls:CachedImage Stretch="Fill" Width="24" Height="24" PictureOwner="{Binding User}" />
+                                <Button Grid.Column="1" VerticalAlignment="Center" Content="{Binding User.UserName}" IsHitTestVisible="{Binding AllowRedirectToDetails}" FontSize="{StaticResource UserNameFontSize}" Tag="{Binding User}" Click="lblUserName_Click" Style="{StaticResource LinkButon}"  />
+                            </Grid>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Width="300" Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SupplementsCyclesList_Header_Name}">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Name="tbName" Text="{Binding Name}"/>
+
+                            <DataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding FeaturedType}" Value="Random">
+                                    <Setter TargetName="tbName" Property="FontWeight" Value="Bold"/>
+                                    <Setter TargetName="tbName" Property="FontSize" Value="14"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding FeaturedType}" Value="Latest">
+                                    <Setter TargetName="tbName" Property="FontSize" Value="14"/>
+                                </DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SupplementsCyclesList_Header_Status}" Width="50">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="16" Height="16" ToolTip="{Binding IsLegalToolTip}" HorizontalAlignment="Center" Source="{Binding IsLegalIcon,Converter={StaticResource nullImageConv}}" />
+                                <Image Width="16" Height="16" ToolTip="{Binding StatusIconToolTip}" HorizontalAlignment="Center"  Source="{Binding StatusIcon,Converter={StaticResource nullImageConv}}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SupplementsCyclesList_Header_Rating}" Width="100">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <Controls:RatingControl HorizontalAlignment="Center"  RatingValue="{Binding Rating,Mode=OneWay}" Width="90" Height="13" IsHitTestVisible="false"/>
+
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
+
+        <ListBox.GroupStyle>
+            <GroupStyle ContainerStyleSelector="{StaticResource myStyleSelector}"/>
+        </ListBox.GroupStyle>
+    </ListView>
+    <!--<ListBox Name="lstPlans"  SelectionMode="Single"  SelectionChanged="lstPlans_SelectionChanged" >
+        <ListBox.ItemTemplate>
+
+            <DataTemplate>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                    <StackPanel>
+                        <Controls:CachedImage Stretch="Fill" Width="48" Height="48" PictureOwner="{Binding User}" />
+                        <Button Content="{Binding User.UserName}" IsHitTestVisible="{Binding AllowRedirectToDetails}" Tag="{Binding User}" Click="lblUserName_Click" Style="{StaticResource LinkButon}"  />
+                    </StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="{Binding Name}" />
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+                            <Image Width="16" Height="16" Margin="3,0" Source="{Binding StatusIcon,Converter={StaticResource nullImageConv}}" />
+                            <Controls:RatingControl  RatingValue="{Binding Rating,Mode=OneWay}" Width="90" Height="13" IsHitTestVisible="false"/>
+
+
+                        </StackPanel>
+                    </Grid>
+
+
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+        <ListBox.GroupStyle>
+            <GroupStyle ContainerStyle="{StaticResource listViewGroup}"/>
+        </ListBox.GroupStyle>
+    </ListBox>-->
+</UserControl>

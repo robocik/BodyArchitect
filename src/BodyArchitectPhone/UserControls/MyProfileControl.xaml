@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.MyProfileControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:Controls1="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+             xmlns:UserControls="clr-namespace:BodyArchitect.WP7.UserControls" xmlns:WP7="clr-namespace:BodyArchitect.WP7" xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls" mc:Ignorable="d"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.Resources>
+            <Converters:BoolToVisibilityConverter x:Key="boolToVisibilityConverter" />
+        </Grid.Resources>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+                <Button VerticalAlignment="Top" Style="{StaticResource ImageButton}" BorderThickness="0" Click="btnEditProfile_Click"  Grid.Column="0" Width="100" Height="100">
+                    <Controls:CachedImageCtrl Name="profileImage" Width="100" Height="100"/>
+                </Button>
+
+                <HyperlinkButton HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Grid.Column="1"  Style="{StaticResource EmptyButtonStyle}"  NavigateUri="/Pages/AccountTypePage.xaml">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left"  FontSize="{StaticResource CustomFontSizeLarge}" FontWeight="Bold" FontFamily="{StaticResource CustomFontFamilyNormal}" Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding UserName}" />
+
+
+                        <UserControls:AwardsControl Grid.Row="1"  HorizontalAlignment="Left" x:Name="ctrlAwards" />
+
+                        <TextBlock Name="lblPoints" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" FontWeight="Bold" Text="{Binding Points}" FontSize="{StaticResource CustomFontSizeLarge}"/>
+                        <TextBlock Name="lblOffline" Grid.Row="1" Grid.Column="1" Text="{Binding Path=Localizedresources.MainPage_OfflineStatus,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                        <TextBlock HorizontalAlignment="Left" Grid.Row="2" Grid.ColumnSpan="2" Visibility="{Binding HasStatus,Converter={StaticResource boolToVisibilityConverter}}" Margin="12,3,0,0" Text="{Binding Status}" TextWrapping="Wrap" FontStyle="Italic" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomSubtleBrush}"/>
+
+                    </Grid>
+                </HyperlinkButton>
+
+
+            </Grid>
+
+            <ScrollViewer Grid.Row="1">
+                <StackPanel>
+                    <HyperlinkButton Foreground="{StaticResource panoramaMainBrush}" Margin="{StaticResource CustomTouchTargetOverhang}" HorizontalAlignment="Left" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding MessagesLinkText}" Visibility="{Binding MessagesLinkVisible}" NavigateUri="/Pages/MessagesPage.xaml?Page=0" />
+                    <HyperlinkButton Foreground="{StaticResource panoramaMainBrush}" Margin="{StaticResource CustomTouchTargetOverhang}" HorizontalAlignment="Left" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding InvitationsLinkText}" Visibility="{Binding InvitationsLinkVisible}" NavigateUri="/Pages/MessagesPage.xaml?Page=1" />
+
+                    <HyperlinkButton Foreground="{StaticResource panoramaMainBrush}" Name="lnkSynchronize"  Margin="{StaticResource CustomTouchTargetOverhang}" HorizontalAlignment="Left" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding LocalModifiedEntriesText}" NavigateUri="/Pages/SynchronizationPage.xaml" />
+                    <!--<HyperlinkButton Foreground="{StaticResource panoramaMainBrush}" Margin="{StaticResource CustomTouchTargetOverhang}" HorizontalAlignment="Left" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding Path=Localizedresources.MainPage_MyAccount,Mode=OneTime, Source={StaticResource LocalizedStrings}}" NavigateUri="/Pages/AccountTypePage.xaml" />-->
+
+                </StackPanel>
+
+            </ScrollViewer>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <HyperlinkButton Grid.Row="0" Content="{Binding Path=Localizedresources.StatisticsPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.ColumnSpan="2"   Style="{StaticResource HyperlinkButtonStyle}"  HorizontalAlignment="Left" FontSize="{StaticResource CustomFontSizeLarge}"   Click="hlStatistics_Click"/>
+
+                <!--<HyperlinkButton VerticalAlignment="Bottom" Grid.Row="2" Name="hlOfflineMode"  Style="{StaticResource HyperlinkButtonStyle}"  HorizontalAlignment="Left" FontSize="{StaticResource CustomFontSizeLarge}"   Click="offlineMode_Click"/>-->
+                <!--<Image Name="imgOnline" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Name="imgConnectionStatus" Width="32" Height="32" Source="/Images/Connected.png" />-->
+                
+                <!--<HyperlinkButton Name="hlLogout" Grid.Row="2"  Style="{StaticResource HyperlinkButtonStyle}"   FontSize="{StaticResource CustomFontSizeLarge}" VerticalAlignment="Bottom"  Content="{Binding Path=Localizedresources.MainPage_LogoutLink,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="logout_Click" />-->
+
+                <HyperlinkButton VerticalAlignment="Bottom" Grid.Row="1" Content="{Binding Path=Localizedresources.MainPage_MyAccount,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.ColumnSpan="2"   Style="{StaticResource HyperlinkButtonStyle}"  HorizontalAlignment="Left" FontSize="{StaticResource CustomFontSizeLarge}"  NavigateUri="/Pages/AccountTypePage.xaml"/>
+                
+                <StackPanel Name="pnlButtons" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Orientation="Horizontal">
+                    <Controls1:RoundButton Background="Transparent" Foreground="{StaticResource panoramaMainBrush}" BorderBrush="{StaticResource panoramaMainBrush}" ImageSource="/Icons/appbar.edit.rest.png" Click="btnEditProfile_Click" VerticalAlignment="Center"/>
+                    <!--<Controls1:RoundButton Background="Transparent" Foreground="{StaticResource panoramaMainBrush}" BorderBrush="{StaticResource panoramaMainBrush}" Click="btnRefresh_Click" VerticalAlignment="Center" ImageSource="/Icons/appbar.refresh.rest.png"/>-->
+                </StackPanel>
+            </Grid>
+            
+        </Grid>
+        
+    </Grid>
+</UserControl>

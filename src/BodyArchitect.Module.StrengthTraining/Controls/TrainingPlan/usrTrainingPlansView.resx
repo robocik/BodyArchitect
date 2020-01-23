@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="defaultToolTipController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>398, 17</value>
+  </metadata>
+  <assembly alias="DevExpress.Data.v11.2" name="DevExpress.Data.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="splitContainerControl1.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainerControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="tcPlans.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v11.2" name="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="tcPlans.HeaderLocation" type="DevExpress.XtraTab.TabHeaderLocation, DevExpress.XtraEditors.v11.2">
+    <value>Bottom</value>
+  </data>
+  <data name="tcPlans.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="workoutPlansListView1.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="workoutPlansListView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="workoutPlansListView1.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAlGYXZvcml0ZXMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAlGYXZvcml0ZXML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAARNaW5lBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEAAAAH
+        dmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAETWluZQs=
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups2" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZPdGhlcnMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZPdGhlcnML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups3" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAlGYXZvcml0ZXMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAlGYXZvcml0ZXML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups4" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAARNaW5lBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEAAAAH
+        dmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAETWluZQs=
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups5" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZPdGhlcnMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZPdGhlcnML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups6" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAlGYXZvcml0ZXMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAlGYXZvcml0ZXML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups7" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAARNaW5lBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEAAAAH
+        dmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAETWluZQs=
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups8" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZPdGhlcnMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZPdGhlcnML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups9" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAlGYXZvcml0ZXMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAlGYXZvcml0ZXML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups10" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAARNaW5lBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEAAAAH
+        dmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAETWluZQs=
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups11" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZPdGhlcnMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZPdGhlcnML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups12" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAlGYXZvcml0ZXMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAlGYXZvcml0ZXML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups13" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAARNaW5lBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEAAAAH
+        dmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAETWluZQs=
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups14" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZPdGhlcnMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZPdGhlcnML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups15" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAlGYXZvcml0ZXMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAlGYXZvcml0ZXML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups16" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAARNaW5lBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEAAAAH
+        dmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAETWluZQs=
+</value>
+  </data>
+  <data name="workoutPlansListView1.Groups17" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZPdGhlcnMF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZPdGhlcnML
+</value>
+  </data>
+  <data name="workoutPlansListView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="workoutPlansListView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 475</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="workoutPlansListView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;workoutPlansListView1.Name" xml:space="preserve">
+    <value>workoutPlansListView1</value>
+  </data>
+  <data name="&gt;&gt;workoutPlansListView1.Type" xml:space="preserve">
+    <value>BodyArchitect.Module.StrengthTraining.Controls.WorkoutPlansListView, BodyArchitect.Module.StrengthTraining, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;workoutPlansListView1.Parent" xml:space="preserve">
+    <value>tpPersnalPlans</value>
+  </data>
+  <data name="&gt;&gt;workoutPlansListView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tpPersnalPlans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 475</value>
+  </data>
+  <data name="tpPersnalPlans.Text" xml:space="preserve">
+    <value>Your plans</value>
+  </data>
+  <data name="&gt;&gt;tpPersnalPlans.Name" xml:space="preserve">
+    <value>tpPersnalPlans</value>
+  </data>
+  <data name="&gt;&gt;tpPersnalPlans.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tpPersnalPlans.Parent" xml:space="preserve">
+    <value>tcPlans</value>
+  </data>
+  <data name="&gt;&gt;tpPersnalPlans.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tcPlans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>622, 503</value>
+  </data>
+  <data name="tcPlans.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="usrWorkoutPlansSearch1.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="usrWorkoutPlansSearch1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="usrWorkoutPlansSearch1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="usrWorkoutPlansSearch1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 475</value>
+  </data>
+  <data name="usrWorkoutPlansSearch1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansSearch1.Name" xml:space="preserve">
+    <value>usrWorkoutPlansSearch1</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansSearch1.Type" xml:space="preserve">
+    <value>BodyArchitect.Module.StrengthTraining.Controls.usrWorkoutPlansSearch, BodyArchitect.Module.StrengthTraining, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansSearch1.Parent" xml:space="preserve">
+    <value>tpPlansBrowser</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutPlansSearch1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tpPlansBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 475</value>
+  </data>
+  <data name="tpPlansBrowser.Text" xml:space="preserve">
+    <value>Plans browser</value>
+  </data>
+  <data name="&gt;&gt;tpPlansBrowser.Name" xml:space="preserve">
+    <value>tpPlansBrowser</value>
+  </data>
+  <data name="&gt;&gt;tpPlansBrowser.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tpPlansBrowser.Parent" xml:space="preserve">
+    <value>tcPlans</value>
+  </data>
+  <data name="&gt;&gt;tpPlansBrowser.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tcPlans.Name" xml:space="preserve">
+    <value>tcPlans</value>
+  </data>
+  <data name="&gt;&gt;tcPlans.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tcPlans.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tcPlans.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Panel1.Text" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="usrWorkoutCommentsList1.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="usrWorkoutCommentsList1.CannotVoteMessage" xml:space="preserve">
+    <value>You cannot vote</value>
+  </data>
+  <data name="usrWorkoutCommentsList1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="usrWorkoutCommentsList1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="usrWorkoutCommentsList1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 503</value>
+  </data>
+  <data name="usrWorkoutCommentsList1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutCommentsList1.Name" xml:space="preserve">
+    <value>usrWorkoutCommentsList1</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutCommentsList1.Type" xml:space="preserve">
+    <value>BodyArchitect.Module.StrengthTraining.Controls.usrWorkoutCommentsList, BodyArchitect.Module.StrengthTraining, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutCommentsList1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;usrWorkoutCommentsList1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblSelectWorkoutPlanFirst.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v11.2">
+    <value>None</value>
+  </data>
+  <data name="lblSelectWorkoutPlanFirst.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblSelectWorkoutPlanFirst.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblSelectWorkoutPlanFirst.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 503</value>
+  </data>
+  <data name="lblSelectWorkoutPlanFirst.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblSelectWorkoutPlanFirst.Text" xml:space="preserve">
+    <value>You need to select a workout plan first to see the comments</value>
+  </data>
+  <data name="&gt;&gt;lblSelectWorkoutPlanFirst.Name" xml:space="preserve">
+    <value>lblSelectWorkoutPlanFirst</value>
+  </data>
+  <data name="&gt;&gt;lblSelectWorkoutPlanFirst.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblSelectWorkoutPlanFirst.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;lblSelectWorkoutPlanFirst.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerControl1.Panel2.Text" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 503</value>
+  </data>
+  <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="splitContainerControl1.Text" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Name" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>575, 17</value>
+  </metadata>
+  <data name="toolbar.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="tbView.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMNSURBVDhPZZNLTBNRFIZx4cKViXHjxrULF+D7sVAjxgXG
+        tzYUa2M0CiaIGg0LFj4iqJFCI2iqBjQ8FKSgAZV3oAULFIQqRfvAlg4FpKXQRtoyM53+nhlwjHqTP5nc
+        zP/d/5xzb0LC0jpdzWxR6z2mW20+ZDf+QGb9JNLfeqHSM0F1lXv8lN4zpNYzA+rXTKu6hqlS146lnH8y
+        sPy3P0FV5crM7/Th3zXPCvD95GH3L2B4cgEmdxgv+6dxqswZUL1yqWSAssJx56nJL/mZuRimggL8IQGz
+        YQGhBQFRTgAXW8RH+Tg6HfNIK7f6ZICiZORhpdkPXgBGpgXY/AKcPgHugACGYF6CeYOLhMsvxsDywN0m
+        N2TACZ2lot4SQDACmD0cBsZ5WEjDkzwBedimYwSMgfi4UvIFBvssjuksEzLgcHFvq8EehCfAUzwWxlEW
+        H10sesY4mBkOn0iWCQ5CHFAW9uNIsTl0pKh/nww4qOl22KbC+EI/tRGgzcmiw8nB8H1R3d9Z9Hp4qURF
+        cS+Oa0yrZLP4seteOxuMxNDjZtFOp3eMkpEAXWQ2LgH6xnipkcc0BiTfa10pA45rqlek5DZL3TVI5gVJ
+        nU4SnSyqi9TP8AizMey//ZxPAJbJgOTs+rVH85rBxuJkFKOTkQBGKkMEGiUAB+sUDyYQxt6cOu/f8a/q
+        153Ma6QGxWF0cVL8TjKLMogJxFJoz0Wj/TQ6g93XX5tlwK6rlat3Xqqoya8bwQTNu6wnitqhKN6PUC8c
+        lMJFt08cq5fDDF2qlkEGO7LKGmTA1oxSxfazzyKpue+QU2lHVqkNF599w9nHNqgefkVqoRWKgmFklDD4
+        PM6hrNWGbRdKS2XApnO6+7kVPf+9AWqH1NRQlBSJI6/OC+cPDo/eDGLzOd0DGbBRXZSeqW1CectXNJjc
+        6LJOYdg9C8YXxtw8jwi9AfHyuP08Jud43CwxYMPpoqw/gNT81YlK7Z1EZUF5Upr2A6kvKU3jWJ+m9a85
+        cIPbfuYR9mQ8xaFr5VDfrkWSUmtPUhVs+g34BZxivUGfxarNAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tbView.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbView.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="tbClone.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGWSURBVDhPhZNNSwJRFIZn0zbKZYRWZG5aSP2uoEXUImps
+        NkG/I2iR2IhfkbYqsE1YhKkxCpHOmFp+TWUUnM65eobGHDvwcj+Y89zzzrlX8u0nmot7cfDIMXDvRoU8
+        chQWAjHwKYms9F9QslNcag2YD8SOxjLoZIpw3hBSc4ZYT6wHxXiBEK8SPXSEUMkUqWIdzlFJrS7Wa8cZ
+        CzK7E6FKYA4PI2tLSjxoARmQfnqBKxSNj613m6vpTdW2tlljQKbahpuBMkYLrnUUjhSTGyFIlfqVsTWC
+        iEoYUGh0gfQwGGmeRzEgXW7+sUZ2LECl0wMdZXT7ojntMeCu1oZy+8NmxY3ttgDBbAVO7nWbaI8BJfwv
+        t2jxtzWqXuI2hgbJak7HVvZBtMcA460H2qspbLI1ARh3kbjeKeyC+fUNz+anzZoALMuJDkGox1QNX+mZ
+        7Qi4tlRwYfLKQRJOtRqE8ZJRZWxNADD8qNVh0R+mOCvWRHKkULUAbI0Oc7yhXsX5jbA1qtwRMMoaWyS7
+        lEzfjHtoI60NWfX/AFE1hjTBg69SAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tbClone.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbClone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbClone.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbClone.ToolTipText" xml:space="preserve">
+    <value>Clone selected workout plan</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tbNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMqSURBVDhPZZNLTBNBHMbrwYMnEsNBPJjoyYNGCAZCPBCN
+        xESNL1AErAVFRRBRPHDAhGjkoba0QVDEZ3goSDVSX1BKoAXL09BAwdJKS5eXtAFKpLS72+3n7KJr1Em+
+        7Gwy3+//n29mJJJf43QDFSVTO403dC7kffqObM0MMt5OQaqmPLJ6x+QptXNQpqYGZK+oVlkjVS97PXHg
+        /MOBtb/9Emm9PVve4cK/Y5nm4PrBYsztx/CMH0aHFy/653Cq2jYvfWmXioDkWuutKqNb8FOLAcx6OLiX
+        OCx4OSz5OfgYDkxgFe9jg+iwLiOlxuwSAYlPRsrq+txgOWBkjoPFzcHm4uCY50AR2BSBTXlWCVeeT4Bm
+        geJmB0TA8UpTrcY0D88K0OdkMDDJwkQ0PMMSIAvLXIAAAyB8XH0yBP3YAuIrTdMi4Eh5T6t+zAPnPEva
+        o2H4RuOznUb3BIM+isEXItM0Ay4IJCv7cbS8b+novf44EXBI0WW1zHoxRBbpCEBno9FuY6AfX1XXOI0e
+        JytsMbG8BwkK43rRzE9iS9poz0oA3Q4abaR6+zdiJIBOYjb8AvROsEKQ8Qo99pa0hoiABEXDugOFLUK6
+        esHsF9RhIyKVeXUS9VMsvHQA+24+YyXAGhGwN0+z6VhRC+hAkBj51omRAAxkGzzQQMxVWjWuVabifOlh
+        nCyIC+7L235dBMTmqreeKPpEAgrCYGeE9juImZeemMs/1OFGYxremytgmtFC2ZqJROV2RGWFySWxuXWh
+        uy7XNsrfjGCanHd1tw+vB334MEKysJIu7H6k3tmPpmEVmkbLhHsg152DUncBO7JCfJLoi08TY84+Wkkq
+        fI/8ujHkPLUg89FXnL1vgbRsFElKMw7mR+Cj+fFft1wzVIHorDBIdqZX3i6s7f7vDZA4hFCXfEHEXtmC
+        u9ozKNamCuuKW1L/dBApu5eRrWpGjXYU74wOdJpnMexYAOXyYnGZxQp5Aw80JYiXb4VCmw6+Mv/l/4UM
+        IpPkoeHJqlvhyaU1ESmqj0S9ESkK67YUlTvsYAETk1aB3RersCcnCTGXNgttR2dt9EZlbijhT+EnQTjK
+        ExuEbjUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbNew.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbNew.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbNew.ToolTipText" xml:space="preserve">
+    <value>New workout plan</value>
+  </data>
+  <data name="tbEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM8SURBVDhPXdNbTBNZHAZwXnzwnScffPTyYmDXu4nEuGsW
+        SdQoiBbKPEC8ZMVbjCjEoIaKIEIViBUD2VBYUQtqNSCWWxFbW0HGQrWlyLQD5dJaGNReZqbTb88WHTd7
+        kv/j9zvfOScnIeH7ynnAbqR0HtOVLh8KOmaRr5/GsSdTUOpYjmphJrN1nmFKxw5SD1kD9YhtoVrdaUfu
+        Di77kU9QtkzkV/T58P/1jZfg+yrC6Y9gZDoCExPE32/nkN3oCijvTyhlQNE0VlJn8sfz7EIUM5wE/6KE
+        +aCExYiEsCBBiC7xYTGGvrFvyNKO+mQgs95+u9nqhygB9jkJDr8El08CE5DAEmyKYFPcknD6Lzd4ESh9
+        wUAGMjR0k54OgAsBVo+AwUkRNJmRaZGAIhxzUQJGQXycqbfB6JzHAQ3tlYF9NW8MRicHT0Ak9Xj0j/N4
+        PcHD7BZgZQUMkbGPdsLRfAiupyrQ9bvQUptTLgN7bg6MOWaCsHkFdBGgy8Wj1yXA+GlphulWzPQUgLM9
+        B756sWDTob/8j1kZSLnezXOhKMwMj26ye+84CRLgFQkP0XoE7FfAT+ox03cDoZE2RN0DGK46Eo4D6Tcf
+        LE9TdcZv1xgPR+LT54rAauvG/OglSKEBhD6dQMCaj4/aXNB1mZ8t1ftWxYHfCvQr91/rBB+NkeC/1UmY
+        AJZ3BsyPXIQUNiM4TiHMZuHLh0L03kmRhqt+T/pZ/6xuzcFrHZBiMfRPCPH63T3kzG8LvodzEPYosDha
+        BNfdNOQVVdr/E25O3Hay6VFFmx1e8t6N5jCetD+GvfM8qd2PMJOLCKsER5qMa3ajxzSEracan8nApuMN
+        mVty74UOq56jqNmJy2VVsLcX4n2HGlOWDASZLAToC6Br98LmcKPR4MDmow0NMrA+T1OmajLLX+Bh2U7g
+        ixuOunT0FK7Aa00qTJWpqL5vgmtWQO3jd9iQp7khA79S1cfy1S+gffkBz0wMSo6uA2+uAW+5BYtqB9r+
+        XA3O6wDjFzG9IOJyvRG/5FSf+gkcrkhMUqhLkhSV2uQsdXvK9kSpmFobM5TuRnFxRiw1rxQ7jtdh7zkt
+        qKutSFaoncnKyvU/gH8AZV61Rwou4usAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbEdit.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbEdit.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbEdit.ToolTipText" xml:space="preserve">
+    <value>Edit workout plan</value>
+  </data>
+  <data name="tbDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMwSURBVDhPZZNZSFRhGIZP6Vx0FUVB3RRBFyFdFEUREbZY
+        XbTQbmrTEIpYYYtQtlxEkbbglKiFFVqkltUoYZljM5Iz1riM0ZRL40zOcnLJGdSRnOVs8/bNsQ5UP7xw
+        Ls7z/N//nvMzzO91+Bm7SqPzWi4bfcht+IHsuiFkvRyAWscGNNXu74d03k8aHdupec4aNC/Yak2NZ1vm
+        vU7VH55RV7uyC5p9+HdNchJ8PwX0+SPoGorA4g7iiXUEhx47R9VPXWpFkFrpuHrf4pd5dlzEcECCf0LC
+        WFDCRERCmJfAi1P6sBBFs2MSaRXdPkWQXNZTVNXhhyABPSMS7H4JTp8E96gElmQDJBsITBlOPfKAE4Br
+        ejcUwf5SW2WdbRSBENDh5dH5XYCN0jUkkFCAfUQkoQjy43TZF5j6xrC31DaoCHaVtBlMfQF4RwUaj4P5
+        G4cPLg6tHh4dLI+PFNsgDykKpN62YndJx8TuYutmRbBT+95hHw7iC71kJIHRyeGdk4epfyrv+zm0eQX5
+        iMklbdintcxW4NhD4vUmLhAS0erm0ES7v/tGIAlaCDb/FrR7BLnIvVoTkq4bZiqCfdpnM7blNcrtmmQ4
+        IqfZSaGdY2mhWFkBQU7E1isPBQaYpgiScusW7MlvBCdGCYyNTiAJzHSMmNAcE5QXwaxJgHGTCjUJc0V9
+        0vRziiAxR7fkQH4DFRSF2cXL4zcTHIuJYHNZMT6fWYdwvRbRXj2C1TmwHk8QDZvis5nEnKo5a09Uviio
+        7cEgfe/HrWHUfAqjvoe6cNAUrggMKYsRIhhFO4DcWUD+Ivhvrkf9hjgXs/poefKa9AehlLzXuFjVh5Pl
+        dhx78BXpd+1QF/Ui5XY3jBtViH6s/esvH780D5c3xkeZlRmlN/IqW/+7A1SHXOpEmHo5uBCTZekAQZGz
+        DMYo3qw46DfHDTArNMVZ2YV6VLztxSuLGy3dw+hyj4H1BTE+KSBEd8DzvADtmUswlLsIvvMq9GdMQ1NC
+        vNiQNP0CsyKlYM6y1MKry1JvVSxPK3xDaV+epnUsTSv0z99+iV9z5A42HL2P/MwM1O6YBwMd59UW1YgM
+        0/oFbgjIZVNZKoYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbDelete.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbDelete.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbDelete.ToolTipText" xml:space="preserve">
+    <value>Delete workout plan</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tbPublish.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOSSURBVDhPdZNtTJNnFIbfRDdjNrNlP5YtYZK4xWwkhDTO
+        6RCWJWTEEUWdQQPIR2W0DNoXEcSIw1Zgs4NV24UpAhXaWkBQ+0UL4tsPSkup/aYtLZQVh8xBN4ZhwxlZ
+        cq/ww0yTPcnz40nOfZ375Dw3QbxwWObCVLaZ3ls2Qp8pMdP/Is25T0gDfYE001VsU8HeF+ufvTkGzkbS
+        VHh9TXD3Zxkc0SHo71vQP2WBIqjDzWAXCjryVhlD2dpSQ9arz4EYDsZLsQ5mSeh7zK84MbXoh2/RBfmM
+        G5rIBCR+P8QeF3o9ZghtF5B7+6A3qzfrtWeQmGVZZ/ACIstGTCxbEVgKwL3gQVc4gL7INATOMJrGgrg4
+        bIM8oIPQWoMvJBnadQA5Qk8hVfuezv5pRP+SBjcfaTCwOIyBB360hybxo28KbI0TbLUVDXYNWmea4fxV
+        jgROwj8ZzZ8eIGLWb2kiLXD8pkH3khI3/rDBFvWC7w6gyT4JRr8TTIpCxUQrKiN1qJiugdQjxPUxHtIu
+        pdwhYvZnx39XQzLbBn5UFOvuhzXqAXnHDYbSgVM2O5jhauyfZGB/sBh5PhbO3a2EKSzDJ7zdDwnSkL0y
+        /UiP+tB5sMOn0fqLAd0zDuT13ANLZ0LT1CAKQ10o6U5BcQcNB6lssPqK4JpT4WNOwmOiaLDw8U9LetR6
+        K8HyCnDtPoX8bivyFT4cvjoKkhpFjVeOLyV7cF6dg6Mt74MpzYHrgRJJ5Ul/E6WG7Dn3ggICfz0apw2o
+        s4/giMSBclkq2NJkMMU7QRfR8LU8C712Iar6DiD90lugQmLQapLmieKhHJU8+AP6I504MdoArqcHx2QW
+        lEl3QeG6jFvO5nVhj10AAVUFsbURJbJ07OJtBu1MooE4rjqantdxeNUX1aCK+goVOhJsrR5FsXnXxBeH
+        yvHdYBm+0TLAVdNRp2GixVSPY50piC8gVtf/wpGefUq+sRrq4FVwjWdwzkQht+0D3LgngGyMD/FoI65Z
+        eDFIKa6Y6sCQ7cW7J19eiasgNq8DMtszt2S0fOb9duAErPO30TluxKEr2/C5MC626zexp+l15Hck4/Iw
+        F8el6XijdtOThNPbtj6Xh8z25C1p/FRtfGP8qsjSBpFJjfZhHUQjeijHFfiQ9woKxGl45+ym5cTq9+L+
+        N5W7G3Ye+oi7Y2BHLW1u+8ntK2s38VTiw7drNzzdenYDCA6x8b/ifwEcAFLBiT1uwwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="tbPublish.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbPublish.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbPublish.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbPublish.ToolTipText" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tbShowComments.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAITSURBVDhPlZLfa9NQFMf7Kgg++SaCD4IPvuiz/4OIa5Ii
+        6oM+i/gPbDKTW3EOxEeFoj7NuYlOktuNO4XtTVYZe5ll/iCmdmnTNumPNDddPZ6TdbJhnTTwJTcn9/M9
+        J9/cVEbnZxTDmlYYfzNMqsFnVN28kc4unUwNuxB6tLzuiKAj/5KPNdfviNmVolCZNTHUQDWstwTXSG1U
+        gNAfRUnddgOhMf78cAOEd8FIbPuRKNU6wkHR86EGGjMXaAJvAJcQ/rDhfLz9ZLV+bSrXu46iO04g8TMa
+        JFw7KuMG5ZfCgF552EXKviCYOt96uuJjLtAMYwj21ME1yke5fghzq1uARnOpDLNuTs0WRKHoCrnTT3T1
+        Qa5HcAM319sx1FoxVFsSqk0J+ElJ3a60QDHMYpJLJmteQLeXlLi1ZmNguR51JrgygDAX+NnoglPvJiYH
+        DMhEM6xniwVb4H/nGnvXanZj8LAzbS7vg20vhDIalbw2aJP8WzLB2MOZIxSmwkwrc3/x9GVmbmMuEPX6
+        B2CaooJ1ifXvbhM0g2/uGujmcZzg7thk/tRgGjY9/wnWv1Yh3uknIrMf1TZ8KQfwYnkTtHEe4hm6M/Rs
+        UBF/V/oS40EQSsiv2Qg8/oUdt3DSDTq9eLSP/RPee4HBfsZcqFuE4Ln/Avs3pMffH6UJLrLXXeWedX4k
+        mDZfyZonFJ3PK3r+7MjwKMBvLeQGuVRjgngAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbShowComments.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbShowComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbShowComments.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbShowComments.ToolTipText" xml:space="preserve">
+    <value>Show comments</value>
+  </data>
+  <data name="tbAddToFavorites.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALnSURBVDhPlZFbSJNhGMe/sJ105tzW1jZNl1o0cLNvTi2r
+        CyuhbiIsMbqoC72vTGbLkLoR7UwQgomyZc5crcw0MQ/ZmtNZHiolQxONsmye1qbu9O/7JDpACb3wu3gP
+        z+/5v+9LECuMR0Whd2sLOPqVzvxzz6hjkKN1ck9dIXvWqGWo/lvSUSocdL7QYOJ5LExnWT3/JTDmB+3+
+        1Bfrdb9Jhn86HPUXqRT5QftWlFSdJIRGLTPjzmnGNWtFmDMwRWLxbRJ8kyw4XnJhOsecqs5ffYqW02d/
+        ymp0jGKTjvGpNo+10HIhZO6VWQDnOx7gUMEzlgzXAGsZR7cSH18rMfJig/dNi9xnreK7Gku4t4iG4rCe
+        GfsWeCbS4HMmAm4u/F8JeEZ58H/eipkmAabaN+GgaR2yHsqQVS/Fl/EE9Faud9cWsOsJfS4helIc9nHe
+        TsLVT8V+p4FnfDMWh6OxNJyMmWYNGi0KZHTFQI14pA1IUHhjDVXM/PW9dYVE8LPrIsvkYzIw264Gzbw1
+        Dt96tsPdn4JHzXzst0lALsmR2ib2Z18Jbf3rgz67urbrQ1MMdQUGlSIUOaYoHDGvxeF7MuyzRYCcjoR6
+        MMKfoBd00SgNAusfIkMuw7swqQCWeLB1bERWixxJCwpo5qKXi8lxiqFIKO0RXmWn1Bt/Xzj2U2DUrt7Z
+        UMSZ8bv2YHEiEc9bVMhsi1qO/XtxYm8kEu0yqLuk+FNwmnHJXiH3+pzHMN2+Da6hFBwyS5BeJfBnmsXY
+        +1QGujipU4qtZeHvEwz8l8pKfh+dYBUFp7aA1TthTcOsbQ8cNg26y6W+6jOc8qs6dun5ohBXulEcoDun
+        PZbg+OWQUaVeLEoy8NfQgiAKoUHHdI88UMJWJnLr85gWMo7YQa0rKOKjjwefSq0RzmksEuy8KwqcuMD1
+        lhwl1v3+gKzsXcTG21p2qzYjaD+1IaeIopBRRNLz+Ju8btVNfr+mNHzsQE4w+aMx8R05YonfFMB+nwAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbAddToFavorites.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbAddToFavorites.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbAddToFavorites.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbAddToFavorites.ToolTipText" xml:space="preserve">
+    <value>Add to favorites</value>
+  </data>
+  <data name="tbRemoveFromFavorites.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALkSURBVDhPlZFdSNNRGIeP7OM/S9vyY65EbTqtxDL34Soq
+        Quui3XThTXcl2G1FJlMzopvMPigpRZFSLGs1NROzIq2VtrSZH4WCimKZbWZry7k5t//8dSaiBSV04OFw
+        znvO877nPYSsMB4XBtfpCwKrVzrzz5gunycfbZR6Gs8K7DotL/m/Ja/LwgYc71UYfyND7Rmm678EulzO
+        PnOvzOvqV8P3Yy2aLtMqcjmaFSU1J0mYTsvPeJDHKzZWCh3zU3K4B1PBWhhYu4NQe44/dS+Xe8ov959d
+        kt3P5xXV5vPM+hxmtvXS6p8fH4bCMSwCrMnwjKnh/MAsMG1KxuxgCsx9Mm9/q5Q11oQ4n1wMukOai4Rd
+        NlMKPONpYB1KwBUE33cCz6gIvskdsD0Lhf3VJriH5GDNChpTwmtRoKcq2qUvEDSR6mwibikSfp02yeHs
+        o2UPq+D5vJle2IC5ITVsz1Vw9adibjSBPkcE94QQLVcD7foC/vL3Np4lq9qui9stT+XzdoMCfqaN8Zjp
+        2gVX33Y43oZgdoBgZkiApvOMzd+nvza07Vp455dncbRMHq0iGNanKtiM4bC+VOJbcxIGq2K8tcdXlZSS
+        CLGfYhKy5g/R7Wyed9aSCMyJ4OhKQl1qPOrVUajfHge9IgH6bRtRFbvBWR4s7fZTIojqXRLotNw9zYWB
+        Np9zP9zjSkzUKdCgToRHo13AoTkBiyYLI5pD6NccXKAhXjm2LMjjXTFVSr2s4wh+GHZiskWJBprVxjmA
+        r9y9GOSmwMSVwsARwxAgZg1E7NVxIxcEAZRAfQHTM25Mg71jP6wdKry7uZ69GRX5qVwYYS5ZF86WRUvY
+        +1tjoUuKRqlIOHODSDpLAiRGv4BDCbudz3eNPNqKjgqxqzqH3y6PJ7vpfiJlC0Vx+SjnVnUeY++sCHPV
+        nGbcFw8Tye8NZLLSScJdreCFNoNzkAaklBhKJCVqcS2jc8KFTO6xzHQSu5iY/AIfVIzBVGNyWAAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="tbRemoveFromFavorites.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbRemoveFromFavorites.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbRemoveFromFavorites.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbRemoveFromFavorites.ToolTipText" xml:space="preserve">
+    <value>Remove from favorites</value>
+  </data>
+  <data name="toolbar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolbar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 25</value>
+  </data>
+  <data name="toolbar.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="toolbar.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Name" xml:space="preserve">
+    <value>toolbar</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolbar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AllowHtmlText" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.2">
+    <value>Default</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>989, 528</value>
+  </data>
+  <data name="&gt;&gt;defaultToolTipController1.Name" xml:space="preserve">
+    <value>defaultToolTipController1</value>
+  </data>
+  <data name="&gt;&gt;defaultToolTipController1.Type" xml:space="preserve">
+    <value>DevExpress.Utils.DefaultToolTipController, DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tbView.Name" xml:space="preserve">
+    <value>tbView</value>
+  </data>
+  <data name="&gt;&gt;tbView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbClone.Name" xml:space="preserve">
+    <value>tbClone</value>
+  </data>
+  <data name="&gt;&gt;tbClone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbNew.Name" xml:space="preserve">
+    <value>tbNew</value>
+  </data>
+  <data name="&gt;&gt;tbNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbEdit.Name" xml:space="preserve">
+    <value>tbEdit</value>
+  </data>
+  <data name="&gt;&gt;tbEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbDelete.Name" xml:space="preserve">
+    <value>tbDelete</value>
+  </data>
+  <data name="&gt;&gt;tbDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPublish.Name" xml:space="preserve">
+    <value>tbPublish</value>
+  </data>
+  <data name="&gt;&gt;tbPublish.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbShowComments.Name" xml:space="preserve">
+    <value>tbShowComments</value>
+  </data>
+  <data name="&gt;&gt;tbShowComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbAddToFavorites.Name" xml:space="preserve">
+    <value>tbAddToFavorites</value>
+  </data>
+  <data name="&gt;&gt;tbAddToFavorites.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRemoveFromFavorites.Name" xml:space="preserve">
+    <value>tbRemoveFromFavorites</value>
+  </data>
+  <data name="&gt;&gt;tbRemoveFromFavorites.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>usrTrainingPlansView</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.usrBaseControl, BodyArchitect.Controls, Version=4.5.2.1, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+</root>

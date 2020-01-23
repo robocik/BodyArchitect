@@ -1,0 +1,132 @@
+﻿<Window x:Class="BodyArchitect.Client.UI.Windows.AboutWindow"
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls" WindowStartupLocation="CenterScreen"
+        Title="AboutWindow" Height="500" Width="400" WindowStyle="None" ResizeMode="NoResize" Background="Black" MouseLeftButtonUp="Window_MouseLeftButtonUp_1">
+    <Grid Name="LayoutRoot">
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Grid.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+
+                        <DoubleAnimation
+                                Storyboard.TargetName="LayoutRoot" 
+                                Storyboard.TargetProperty="(Grid.Opacity)"
+                                From="0.0" To="1.0" Duration="0:0:3" 
+                                 />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center"   Margin="0,50,0,0" Foreground="White"  FontSize="36">
+                        <Run  FontWeight="Bold">Body</Run><Run FontStyle="Italic">Architect</Run></TextBlock>
+
+        <TextBlock Grid.Row="1" Text="Version: 1.0.0.0"  Margin="0,0,12,0" Name="tbVersion" FontWeight="Bold"   Foreground="White"  HorizontalAlignment="Right" >
+            <TextBlock.RenderTransform>
+        <TranslateTransform x:Name="versionTrans"
+                                  X="-500"/>
+      </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+        <EventTrigger RoutedEvent="TextBlock.Loaded">
+          <BeginStoryboard>
+            <Storyboard BeginTime="00:00:0.6">
+              <DoubleAnimation Duration="00:00:0.7"
+                                Storyboard.TargetName="versionTrans" 
+                                Storyboard.TargetProperty="X" 
+                                From="-500" To="0">
+                <DoubleAnimation.EasingFunction>
+                  <SineEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+              </DoubleAnimation>
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+      </TextBlock.Triggers>
+        </TextBlock>
+        
+        <Image Margin="0,0,0,24" Grid.Row="2" Width="150" Height="200" Stretch="Uniform"  Source="/BodyArchitect.Client.Resources;component/Images/BodyArchitect.jpg" />
+
+        <Button Name="btnWebSite" Grid.Row="3" Margin="{StaticResource MarginLargeLeftTop}" Click="btnOpenWebSite_Click" FontSize="16" Foreground="White" Style="{StaticResource LinkButon}" Content="http://bodyarchitectonline.com">
+            <Button.RenderTransform>
+                <TranslateTransform x:Name="linkTrans"
+                                  Y="500"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard  BeginTime="00:00:1.0">
+                            <DoubleAnimation  Duration="00:00:0.6"
+                                Storyboard.TargetName="linkTrans" 
+                                Storyboard.TargetProperty="Y" 
+                                From="500" To="0">
+                                <DoubleAnimation.EasingFunction>
+                                    <SineEase EasingMode="EaseOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button Name="btnFacebook" Grid.Row="4" Margin="{StaticResource MarginLargeLeftTop}" Click="btnOpenFacebook_Click" FontSize="16" Foreground="White" Style="{StaticResource LinkButon}" Content="Facebook">
+            <Button.RenderTransform>
+                <TranslateTransform x:Name="facebookTrans" Y="500"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard  BeginTime="00:00:1.0">
+                            <DoubleAnimation  Duration="00:00:0.8"
+                                Storyboard.TargetName="facebookTrans" 
+                                Storyboard.TargetProperty="Y" 
+                                From="500" To="0">
+                                <DoubleAnimation.EasingFunction>
+                                    <SineEase EasingMode="EaseOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button Name="btnEmailUs" Grid.Row="5" Margin="{StaticResource MarginLargeLeftTop}" Click="btnEMailUs_Click" FontSize="16" Foreground="White" Style="{StaticResource LinkButon}" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:AboutWindow_EMailUs}">
+            <Button.RenderTransform>
+                <TranslateTransform x:Name="linkReviewTrans"
+                                  Y="-1000"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard  BeginTime="00:00:0.7">
+                            <DoubleAnimation Duration="00:00:1.0"
+                                Storyboard.TargetName="linkReviewTrans" 
+                                Storyboard.TargetProperty="Y" 
+                                From="-1000" To="0">
+                                <DoubleAnimation.EasingFunction>
+                                    <SineEase EasingMode="EaseOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+
+        <Controls:CompanyAnimationControl x:Name="companyBox" VerticalAlignment="Bottom" Margin="0,-270,10,0" Grid.Row="6"  HorizontalAlignment="Right"/>
+
+    </Grid>
+</Window>

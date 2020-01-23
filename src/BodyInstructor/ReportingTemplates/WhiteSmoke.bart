@@ -1,0 +1,24 @@
+<Chart Palette="BrightPastel" BackColor="WhiteSmoke" BackGradientStyle="TopBottom" BackSecondaryColor="White" BorderColor="26, 59, 105" BorderWidth="2" BorderDashStyle="Solid">
+  <ChartAreas>
+    <ChartArea _Template_="All" BackColor="WhiteSmoke" BackSecondaryColor="White" ShadowColor="Transparent" BorderColor="64, 64, 64, 64" BorderDashStyle="Solid">
+      <AxisY LineColor="64, 64, 64, 64">
+        <MajorGrid LineColor="64, 64, 64, 64" />
+        <LabelStyle Font="Trebuchet MS, 8.25pt, style=Bold" />
+      </AxisY>
+      <AxisX LineColor="64, 64, 64, 64">
+        <MajorGrid LineColor="64, 64, 64, 64" />
+        <LabelStyle Font="Trebuchet MS, 8.25pt, style=Bold" />
+      </AxisX>
+      <Area3DStyle IsRightAngleAxes="False" IsClustered="False" Perspective="10" Inclination="15" Rotation="10" WallWidth="0" PointGapDepth="0" />
+    </ChartArea>
+  </ChartAreas>
+  <Legends>
+    <Legend _Template_="All" BackColor="Transparent" Font="Trebuchet MS, 8.25pt, style=Bold">
+    </Legend>
+  </Legends>
+  <Titles>
+    <Title _Template_="All" Font="Trebuchet MS, 14.25pt, style=Bold" ForeColor="26, 59, 105" ShadowOffset="3" ShadowColor="32, 0, 0, 0">
+    </Title>
+  </Titles>
+  <BorderSkin PageColor="White" SkinStyle="Emboss" />
+</Chart>

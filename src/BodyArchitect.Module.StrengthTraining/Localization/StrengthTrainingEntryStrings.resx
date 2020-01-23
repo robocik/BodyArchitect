@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EntryTypeName" xml:space="preserve">
+    <value>Strength training</value>
+  </data>
+  <data name="ImportTrainingPlan_OpeningFile" xml:space="preserve">
+    <value>Opening a file...</value>
+  </data>
+  <data name="ImportTrainingPlan_Saving" xml:space="preserve">
+    <value>Saving plan...</value>
+  </data>
+  <data name="ImportTrainingPlan_Verifying" xml:space="preserve">
+    <value>Verifying...</value>
+  </data>
+  <data name="Report_ExerciseWeight_AxisXTitle" xml:space="preserve">
+    <value>Workouts</value>
+  </data>
+  <data name="Report_ExerciseWeight_AxisYTitle" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="Report_ExerciseWeight_Name" xml:space="preserve">
+    <value>Changes in weight for selected exercise</value>
+  </data>
+  <data name="StrengthTrainingCalendarDayContentName" xml:space="preserve">
+    <value>Strength training</value>
+  </data>
+	<data name="usrExerciseWeightReport_chkIncludeSetsWithHelp" xml:space="preserve">
+    <value>If selected then generated report will contain also sets with help.</value>
+  </data>
+  <data name="usrExerciseWeightReport_chkIncludeSetsWithoutBarrelWeight" xml:space="preserve">
+    <value>If selected then generated report will contain also sets without barrel's weight.</value>
+  </data>
+  <data name="usrExerciseWeightReport_ListView" xml:space="preserve">
+    <value>List of all exercises. You can select more than one exercise to generate a report.</value>
+  </data>
+  <data name="usrExerciseWeightReport_RepetitionsRange" xml:space="preserve">
+    <value>You can filter the report by minimal and/or maximum repetitions number. For instance, you want to check your progress for 8-9 repetitions. So in From type 8 and in To set 9. You can also set only one value (for example only minimum). For example you set 7 in From field. This means that your report will show you weights for 7,8,9 and so on repetitions</value>
+  </data>
+  <data name="usrStrengthTrainingSourceGrid_Tip_ExerciseViewType" xml:space="preserve">
+    <value>Indicates how exercises will be displayed in the grid.</value>
+  </data>
+  <data name="usrStrengthTrainingSourceGrid_Tip_Grid" xml:space="preserve">
+    <value>Allows put detailed information about workout session like exercises, sets number with repetitions.
+For each set we use the following format: repetitions, then 'x' character and after this weight in kg (10x65).
+To add additional info about set, you can right click on the set cell and use context menu.</value>
+  </data>
+  <data name="usrStrengthTrainingSourceGrid_Tip_SetsNumber" xml:space="preserve">
+    <value>Number of Serie columns in the grid. When you did many series of one exercise and you have no more Serie columns to enter the data, then you can increase column number using this list.</value>
+  </data>
+  <data name="usrStrengthTraining_Tip_CommentTE" xml:space="preserve">
+    <value>Additional information about the workout session</value>
+  </data>
+  <data name="usrStrengthTraining_Tip_EndTimeTE" xml:space="preserve">
+    <value>Time of ending training session. Value 00:00 means that the time is not set.</value>
+  </data>
+  <data name="usrStrengthTraining_Tip_StartTimeTE" xml:space="preserve">
+    <value>Time of starting training session. Value 00:00 means that the time is not set.</value>
+  </data>
+  <data name="ImportTrainingPlan_FilterDialog" xml:space="preserve">
+    <value>Workout plan files (*.bap)|*.bap|All files (*.*)|*.*</value>
+  </data>
+  <data name="ExerciseColumnHeader" xml:space="preserve">
+    <value>Exercise</value>
+  </data>
+  <data name="SerieCellCiezarBezSztangiToolTip" xml:space="preserve">
+    <value>-Weight without barbell's weight</value>
+  </data>
+  <data name="SerieCellIsLastRepetitionWithHelpToolTip" xml:space="preserve">
+    <value>-Fake last repetition</value>
+  </data>
+  <data name="SerieColumnHeader" xml:space="preserve">
+    <value>Set {0}</value>
+  </data>
+  <data name="DeleteThisEntryBtn" xml:space="preserve">
+    <value>Delete this entry</value>
+  </data>
+  <data name="QAskDeleteExerciseRow" xml:space="preserve">
+    <value>Do you want to remove selected rows?</value>
+  </data>
+  <data name="SelectExercise" xml:space="preserve">
+    <value>(Select an exercise)</value>
+  </data>
+  <data name="TrainingPlanHtml_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TrainingPlanHtml_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="TrainingPlanHtml_ExerciseColumn" xml:space="preserve">
+    <value>Exercise</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoAuthor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoCreationDate" xml:space="preserve">
+    <value>Creation date</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoDifficult" xml:space="preserve">
+    <value>Difficult</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoRestTime" xml:space="preserve">
+    <value>Rest time</value>
+  </data>
+  <data name="TrainingPlanHtml_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoTrainingType" xml:space="preserve">
+    <value>Workout type</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="TrainingPlanHtml_MuscleColumn" xml:space="preserve">
+    <value>Muscle</value>
+  </data>
+  <data name="TrainingPlanHtml_RestTimeColumn" xml:space="preserve">
+    <value>Rest time</value>
+  </data>
+  <data name="TrainingPlanHtml_RestTimeValue" xml:space="preserve">
+    <value>{0} sec.</value>
+  </data>
+  <data name="TrainingPlanHtml_SetColumn" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="ErrorCannotVerifyTrainingPlan" xml:space="preserve">
+    <value>Cannot verify imporing workout plan.</value>
+  </data>
+  <data name="ErrorDuringDeleteTrainingPlan" xml:space="preserve">
+    <value>Cannot delete selected workout plan.</value>
+  </data>
+  <data name="ErrorTrainingPlanAlreadyImported" xml:space="preserve">
+    <value>This workout plan is already imported.</value>
+  </data>
+  <data name="ErrorTrainingPlanBroken" xml:space="preserve">
+    <value>Error occured during retrieving the workout plan. It seems that this workout plan is broken.</value>
+  </data>
+  <data name="ErrorTrainingPlanFile" xml:space="preserve">
+    <value>This file doeasn't contain workout plan.</value>
+  </data>
+  <data name="ErrorUnexpectedDuringImportTrainingPlan" xml:space="preserve">
+    <value>Unexpected exception during importing workout plan.</value>
+  </data>
+  <data name="QRemoveTrainingPlan" xml:space="preserve">
+    <value>Do you want to remove selected workout plan?</value>
+  </data>
+  <data name="TrainingPlanNewName" xml:space="preserve">
+    <value>(new name)</value>
+  </data>
+  <data name="CMBExerciseName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CMBExerciseShortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+  <data name="CMBExerciseType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ColumnExerciseName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ColumnExerciseShortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+  <data name="ExerciseEditor_DescriptionTE" xml:space="preserve">
+    <value>Exercise's description.</value>
+  </data>
+  <data name="ExerciseEditor_DifficuiltTE" xml:space="preserve">
+    <value>Exercise difficult level. Value 0 means, that difficult is not set.</value>
+  </data>
+  <data name="ExerciseEditor_ExerciseTypeCMB" xml:space="preserve">
+    <value>Main muscle used in this exercise.</value>
+  </data>
+  <data name="ExerciseEditor_NameTE" xml:space="preserve">
+    <value>Name of the exercise. It doesn't need to be unique.</value>
+  </data>
+  <data name="ExerciseEditor_ShortcutTE" xml:space="preserve">
+    <value>Shortcut for this exercise. Using it we can select exercise in training day editor much easier.</value>
+  </data>
+  <data name="ExerciseEditor_UrlTE" xml:space="preserve">
+    <value>Website url with description of this exercise.</value>
+  </data>
+  <data name="ExerciseView_AddExerciseBTN" xml:space="preserve">
+    <value>Shows window which allows create a new exercise</value>
+  </data>
+  <data name="ExerciseView_DeleteExerciseBTN" xml:space="preserve">
+    <value>Remove selected exercise from the database</value>
+  </data>
+  <data name="ExerciseView_ExerciseList" xml:space="preserve">
+    <value>Shows all exercises in the database</value>
+  </data>
+  <data name="DefaultExercisesName" xml:space="preserve">
+    <value>Exercises</value>
+  </data>
+  <data name="MNUExercises" xml:space="preserve">
+    <value>Exercises...</value>
+  </data>
+  <data name="ExerciseEditor_ForceCMB" xml:space="preserve">
+    <value>Determines a force type in the current exercise.</value>
+  </data>
+  <data name="ExerciseEditor_MechanicsTypeCMB" xml:space="preserve">
+    <value>Determines a type of an exercise. An isolation exercise is one where the movement is restricted to one joint only. Compound exercises work several muscle groups at once, and include movement around two or more joints.</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnAuthor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnCreationDate" xml:space="preserve">
+    <value>Creation date</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnDifficult" xml:space="preserve">
+    <value>Difficult</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnWorkoutType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="TrainingPlanDifficult_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="TrainingPlanDifficult_Beginner" xml:space="preserve">
+    <value>Beginner</value>
+  </data>
+  <data name="TrainingPlanDifficult_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+  <data name="TrainingPlanDifficult_Professional" xml:space="preserve">
+    <value>Professional</value>
+  </data>
+  <data name="SerieCellCiezarBezSztangiToolTip1" xml:space="preserve">
+    <value>-Weight without barbell</value>
+  </data>
+  <data name="SerieCellIsLastRepetitionWithHelpToolTip1" xml:space="preserve">
+    <value>-Cheated (with help) last repetition</value>
+  </data>
+  <data name="SerieInfo_CiezarBezSztangiCHK" xml:space="preserve">
+    <value>Indicates that entered weight is without barbell's weight (for example we don't know barbell's weight)</value>
+  </data>
+  <data name="SerieInfo_CommentTE" xml:space="preserve">
+    <value>Additional information related with the current serie.</value>
+  </data>
+  <data name="SerieInfo_DropSetCMB" xml:space="preserve">
+    <value>In bodybuilding and weight training, using drop sets is a technique for continuing an exercise with a lower weight once muscle failure has been achieved at a higher weight. Here you can select how many drops you had.</value>
+  </data>
+  <data name="SerieInfo_LastRepetitionWithHelpCHK" xml:space="preserve">
+    <value>Indicates if the last repetition was cheated or with partner's help.</value>
+  </data>
+  <data name="SetEditor_RepetitionsRange" xml:space="preserve">
+    <value>Here you can define how many reps you should do. For example:&lt;br&gt;&lt;b&gt;10&lt;/b&gt; - 10 reps &lt;br&gt;&lt;b&gt;10-&lt;/b&gt; - 10 or more reps&lt;br&gt;&lt;b&gt;-10&lt;/b&gt; - max. 10 reps or less &lt;br&gt;&lt;b&gt; 10-12&lt;/b&gt; - min. 10 and max. 12 reps.</value>
+  </data>
+  <data name="SetEditor_RepetitionType" xml:space="preserve">
+    <value>Indicates how you should perform the current set. &lt;br&gt;&lt;b&gt;Repetition range&lt;/b&gt; - (like 10-12) you should do at least 10 and max 12 repetitions. &lt;br&gt;&lt;b&gt;Max&lt;/b&gt; - you should to as many reps as you can&lt;br&gt;&lt;b&gt;Muscle failure&lt;/b&gt; should do as many reps as you can with the last repetition when you don't have strength to finish it (your buddy can help for example)</value>
+  </data>
+  <data name="TrainingPlanEditor_AuthorTXT" xml:space="preserve">
+    <value>Author (means you) of this workout plan. Cannot be empty</value>
+  </data>
+  <data name="TrainingPlanEditor_DescriptionTXT" xml:space="preserve">
+    <value>Description about the current workout plan, for example how to perform exercises, what weight should be use etc.</value>
+  </data>
+  <data name="TrainingPlanEditor_DifficultCMB" xml:space="preserve">
+    <value>Difficult of this workout plan</value>
+  </data>
+  <data name="TrainingPlanEditor_NameTXT" xml:space="preserve">
+    <value>Name of the workout plan. Cannot be empty.</value>
+  </data>
+  <data name="TrainingPlanEditor_RestTimeTXT" xml:space="preserve">
+    <value>Rest time between sets in every exercises. For specified exercise you can override it in Rest time in entry editor.</value>
+  </data>
+  <data name="TrainingPlanEditor_SuperSetsBTN" xml:space="preserve">
+    <value>Shows window to define supersets between exercises.</value>
+  </data>
+  <data name="TrainingPlanEditor_TrainingTypeCMB" xml:space="preserve">
+    <value>Workout type. This has impact on Validate process (some things are incorrect in some workout types).</value>
+  </data>
+  <data name="TrainingPlanEditor_ValidateBTN" xml:space="preserve">
+    <value>Checks this workout plan if there are any mistakes and displays the results in &lt;b&gt;Output&lt;/b&gt; section.</value>
+  </data>
+  <data name="ErrorCannotCreateSuperSetDifferentDays" xml:space="preserve">
+    <value>SuperSet cannot be created. You cannot join exercises from different training days.</value>
+  </data>
+  <data name="OptionsStrengthTraining" xml:space="preserve">
+    <value>Module Strength training</value>
+  </data>
+  <data name="Options_FillRepetitionsNumberFromPlanCHK" xml:space="preserve">
+    <value>If checked then when you use workout plan in strength workout in calendar then all single repetitions will be also filled in the grid (single means specific number like 10. Values like 10-12 will be not filled anyway).</value>
+  </data>
+  <data name="QAskDeleteSet" xml:space="preserve">
+    <value>Do you want to delete the current set?</value>
+  </data>
+  <data name="TrainingPlanEntryEditor_CommentTXT" xml:space="preserve">
+    <value>Additional information about this entry.</value>
+  </data>
+  <data name="TrainingPlanEntryEditor_ExerciseCMB" xml:space="preserve">
+    <value>Allows you to select an exercise for this entry.</value>
+  </data>
+  <data name="TrainingPlanEntryEditor_RestTimeTXT" xml:space="preserve">
+    <value>Allows you to overwrite a global &lt;b&gt;Rest time&lt;/b&gt; from &lt;b&gt;Information&lt;/b&gt; section.</value>
+  </data>
+  <data name="TrainingPlanNewDayName" xml:space="preserve">
+    <value>Day {0}</value>
+  </data>
+  <data name="ExerciseRemovedName" xml:space="preserve">
+    <value>(Deleted)</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_ExerciseColumn" xml:space="preserve">
+    <value>Exercise</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_MuscleColumn" xml:space="preserve">
+    <value>Muscle</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_SetColumn" xml:space="preserve">
+    <value>Set {0}</value>
+  </data>
+  <data name="TrainingPlanHtml_Legend" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="TrainingPlanHtml_LegendContent" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td class='legend'&gt;MF&lt;/td&gt;&lt;td&gt;Muscle failure. You should do as many reps as you can until you cannot do more&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;MAX&lt;/td&gt;&lt;td&gt;You should do as many reps as you can do correctly&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;W&lt;/td&gt;&lt;td&gt;Very light warm up set.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;AM&lt;/td&gt;&lt;td&gt;Almost max. You should do almost maximum reps (max-1 for example)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;X&lt;/td&gt;&lt;td&gt;You should do X reps (for example 10) and finish this set.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;-X&lt;/td&gt;&lt;td&gt;You should do maximum X reps and finish this set. For example -10 means that you should do maximum 10 reps (or less)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;X-&lt;/td&gt;&lt;td&gt;You should do minimum X reps. For example 10- means that you should do minimum 10 reps (or more).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;X-Y&lt;/td&gt;&lt;td&gt;You should do minimum X and maximum Y reps. You finish the current set when you reach the maximum number or you don't have strength to do more. For example 10-12 means that you should do minimum 10 and maximum 12 reps.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;^Z&lt;/td&gt;&lt;td&gt;Drop set. Z means how many drops we have, for example ^2 means that for this set you will have 2 additional drops of weight&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;8-10^1&lt;/td&gt;&lt;td&gt;This value means that you do minimum 8 and maximum 10 reps. After this you drop some weight (drop set) and you do next repetitions.&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="QDeleteTrainingDay" xml:space="preserve">
+    <value>Do you want to delete this training day with all entries?</value>
+  </data>
+  <data name="QDeleteTrainingPlanEntry" xml:space="preserve">
+    <value>Do you want to delete this entry with all sets?</value>
+  </data>
+  <data name="TrainingPlanHtml_CommentColumn" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoUrl" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="TrainingPlanImportDlgFilter" xml:space="preserve">
+    <value>Workout plan files (*.bap)|*.bap</value>
+  </data>
+  <data name="SelectLanguageText" xml:space="preserve">
+    <value>(Select a language)</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_AddToFavorites_Text" xml:space="preserve">
+    <value>Add to favorite</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_ExercisesLoading" xml:space="preserve">
+    <value>Exercises - loading...</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_ExercisesText" xml:space="preserve">
+    <value>Exercises</value>
+  </data>
+  <data name="ExercisesPublishedGroup" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="ExercisesPrivateGroup" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="TrainingPlanHtml_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="usrUserExercises_Caption" xml:space="preserve">
+    <value>Exercises</value>
+  </data>
+  <data name="usrUserWorkoutPlans_Caption" xml:space="preserve">
+    <value>Workout plans</value>
+  </data>
+  <data name="usrWorkoutCommentsList_SelectWorkoutPlanFirst_Msg" xml:space="preserve">
+    <value>(You must select a workout plan first)</value>
+  </data>
+  <data name="usrWorkoutCommentsList_NoComments_Msg" xml:space="preserve">
+    <value>There is no comments yet</value>
+  </data>
+  <data name="StrengthTrainingModule_WorkoutPlansTabText" xml:space="preserve">
+    <value>Workout plans</value>
+  </data>
+  <data name="ErrorExercisesPrivateInWorkout" xml:space="preserve">
+    <value>You cannot publish this workout plan because there are some exercises which are not published.</value>
+  </data>
+  <data name="WorkoutPlanLU_DayName" xml:space="preserve">
+    <value>Day name</value>
+  </data>
+  <data name="WorkoutPlanLU_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="WorkoutPlanLU_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="usrStrengthTraining_fillWorkoutPlans_NotLoaded" xml:space="preserve">
+    <value>(Not loaded)</value>
+  </data>
+  <data name="MNUExerciseForPublication" xml:space="preserve">
+    <value>Exercises for publication</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_EmptyDayName" xml:space="preserve">
+    <value>(No name)</value>
+  </data>
+  <data name="WorkoutPlansListView_GroupFavorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="WorkoutPlansListView_GroupMine" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="WorkoutPlansListView_GroupOthers" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="ExerciseMapper_DuplicatedExercisesError" xml:space="preserve">
+    <value>There are some duplicated exercises in From column.</value>
+  </data>
+  <data name="QWorkoutPlanEditorCloseWindow" xml:space="preserve">
+    <value>Do you want to reject your changes and close the window?</value>
+  </data>
+  <data name="ExerciseMapperWindow_ColumnFrom" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="ExerciseMapperWindow_ColumnTo" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="ExerciseMapperWindow_ColumnOperation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="Report_RepsWeight_AxisXTitle" xml:space="preserve">
+    <value>Repetitions</value>
+  </data>
+  <data name="Report_RepsWeight_AxisYTitle" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="WorkoutPlanLU_Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+</root>

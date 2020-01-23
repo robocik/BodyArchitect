@@ -1,0 +1,22 @@
+﻿<Toolkit:ChildWindow x:Class="BodyArchitect.Client.Module.StrengthTraining.Controls.TimerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension" xmlns:Toolkit="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit" Height="300" Width="400" Caption="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TimerWindow_Title}"
+                     WindowStartupLocation="Center" IsModal="false" Background="{StaticResource ListBackgroundBrush}" WindowBackground="{StaticResource WindowBackgroundBrush}">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" FontSize="32" Name="lblTime"/>
+        <Grid Grid.Row="1" Margin="{StaticResource MarginLargeTop}">
+            <Button Style="{StaticResource NormalButton}" HorizontalAlignment="Center" Name="btnStart" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TimerWindow_StartTimer_Button}" Click="btnStart_Click"/>
+            <Button Style="{StaticResource NormalButton}" HorizontalAlignment="Center" Name="btnStop" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TimerWindow_StopTimer_Button}" Click="btnStop_Click"/>
+        </Grid>
+        <TextBlock Margin="{StaticResource MarginLargeTop}" Foreground="{StaticResource DisabledForegroundBrush}" Grid.Row="2" TextWrapping="Wrap" Text="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TimerWindow_Timer_Description}"/>
+        <CheckBox Margin="{StaticResource MarginLargeTop}" Name="chkStartTimer" Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:TimerWindow_CheckBox_StartTimerAfterOpenWindow}" Grid.Row="3" Checked="chkStartTimer_Checked" Unchecked="chkStartTimer_Checked"/>
+    </Grid>
+</Toolkit:ChildWindow>

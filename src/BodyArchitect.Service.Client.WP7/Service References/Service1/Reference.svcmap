@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="59c71c8e-7d90-4f0f-bdc2-d8c78397f6c1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BodyArchitect7.xsd" MetadataType="Schema" ID="8cc30a99-6206-4511-ab8f-7cd0eebd7bb8" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd11" />
+    <MetadataFile FileName="BodyArchitect.xsd" MetadataType="Schema" ID="8e88e470-a496-4a60-bd38-4bf17c436dfa" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd5" />
+    <MetadataFile FileName="BodyArchitect4.xsd" MetadataType="Schema" ID="26c20a2e-163f-4a27-aa14-c025476365d8" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd10" />
+    <MetadataFile FileName="BodyArchitectAccessService.wsdl" MetadataType="Wsdl" ID="46e18508-94e2-40ea-8de6-fbc1b7f82e73" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?wsdl" />
+    <MetadataFile FileName="BodyArchitect.disco" MetadataType="Disco" ID="41ef0e14-4591-4d06-8f57-9d16ea60e446" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?disco" />
+    <MetadataFile FileName="BodyArchitect2.xsd" MetadataType="Schema" ID="6c80ebe6-ee70-48ca-8e86-a5b485b57b6c" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd1" />
+    <MetadataFile FileName="BodyArchitect3.xsd" MetadataType="Schema" ID="0ace94c0-6676-4c93-a021-d94339a45c9c" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd8" />
+    <MetadataFile FileName="BodyArchitect8.xsd" MetadataType="Schema" ID="637fac36-eac4-4a01-add9-c793dc2b30fa" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd3" />
+    <MetadataFile FileName="BodyArchitect5.xsd" MetadataType="Schema" ID="e3c6fa13-8cd7-4121-8357-c14378389c1a" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd6" />
+    <MetadataFile FileName="BodyArchitect6.xsd" MetadataType="Schema" ID="a1303747-13f2-4654-bbfe-d548a613b2bd" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd4" />
+    <MetadataFile FileName="BodyArchitect1.xsd" MetadataType="Schema" ID="c04ca653-d079-42cf-9a2e-83ae7a0ec287" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd2" />
+    <MetadataFile FileName="BodyArchitect9.xsd" MetadataType="Schema" ID="490b957e-720b-4fbb-af1b-6a6294edf906" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd9" />
+    <MetadataFile FileName="BodyArchitect11.xsd" MetadataType="Schema" ID="d656f5dd-b9b0-48cd-916e-edad43a87d7d" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd7" />
+    <MetadataFile FileName="BodyArchitect.wsdl" MetadataType="Wsdl" ID="ef1c1b0a-1e92-4fb6-aa40-af6b816ff6f4" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="BodyArchitect10.xsd" MetadataType="Schema" ID="938aa5da-fa71-4766-b156-a495e6321853" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

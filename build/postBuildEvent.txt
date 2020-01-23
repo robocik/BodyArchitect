@@ -1,0 +1,1 @@
+SlMake create $(ProjectDir)\..\..\build\localization.slp

@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ClipboardHelper_List_CannotConvertClipboardRawData" xml:space="preserve">
+    <value>Operacja nie powiodła się. {0}</value>
+  </data>
+  <data name="ClipboardHelper_List_UnableToParseRowData" xml:space="preserve">
+    <value>Operacja nie powiodła się</value>
+  </data>
+  <data name="CMBExerciseName" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="CMBExerciseShortcut" xml:space="preserve">
+    <value>Skrót</value>
+  </data>
+  <data name="CMBExerciseType" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="ColumnExerciseName" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="ColumnExerciseShortcut" xml:space="preserve">
+    <value>Skrót</value>
+  </data>
+  <data name="DefaultExercisesName" xml:space="preserve">
+    <value>Ćwiczenia</value>
+  </data>
+  <data name="DeleteThisEntryBtn" xml:space="preserve">
+    <value>Usuwa bieżący wiersz.</value>
+  </data>
+  <data name="EntryTypeName" xml:space="preserve">
+    <value>Trening siłowy</value>
+  </data>
+  <data name="EntryTypeShortDescription" xml:space="preserve">
+    <value>Możesz notować wszystkie istotne elementy Twojego treningu na siłowni.</value>
+  </data>
+  <data name="ErrorCannotCreateSuperSetDifferentDays" xml:space="preserve">
+    <value>Superseria/seria łączona nie może zostać utworzona. Nie możesz łączyć ćwiczeń z różnych dni treningowych.</value>
+  </data>
+  <data name="ErrorCannotVerifyTrainingPlan" xml:space="preserve">
+    <value>Nie można zweryfikować planu treningowego.</value>
+  </data>
+  <data name="ErrorDuringDeleteTrainingPlan" xml:space="preserve">
+    <value>Nie udało się usunąć zaznaczonego planu treningowego.</value>
+  </data>
+  <data name="ErrorTrainingPlanAlreadyImported" xml:space="preserve">
+    <value>Wybrany plan treningowy jest już zaimportowany.</value>
+  </data>
+  <data name="ErrorTrainingPlanBroken" xml:space="preserve">
+    <value>Wystąpił wyjątek podczas odczytu wybranego planu treningoweg. Wyglada na to, że jest on uszkodzony.</value>
+  </data>
+  <data name="ErrorTrainingPlanFile" xml:space="preserve">
+    <value>Wybrany plik nie zawiera planu treningowego lub jest on uszkodzony.</value>
+  </data>
+  <data name="ErrorUnexpectedDuringImportTrainingPlan" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd podczas importu planu treningowego.</value>
+  </data>
+  <data name="Exception_TrainingPlanReportData_NumberAtLeastSetSNumber_SetsNumberToPrint" xml:space="preserve">
+    <value>Ilość seri musi być równa lub większa liczbie serii z planu treningowego</value>
+  </data>
+  <data name="ExerciseColumnHeader" xml:space="preserve">
+    <value>Ćwiczenie</value>
+  </data>
+  <data name="ExerciseEditor_DescriptionTE" xml:space="preserve">
+    <value>Dowolny opis ćwiczenia.</value>
+  </data>
+  <data name="ExerciseEditor_DifficuiltTE" xml:space="preserve">
+    <value>Poziom trudności ćwiczenia. Wartość 0 oznacza, że trudność nie została ustawiona.</value>
+  </data>
+  <data name="ExerciseEditor_ExerciseTypeCMB" xml:space="preserve">
+    <value>Główna grupa mięśniowa zaangażowana w danym ćwiczeniu.</value>
+  </data>
+  <data name="ExerciseEditor_ForceCMB" xml:space="preserve">
+    <value>Określa rodzaj siły wykorzystywanej w danym ćwiczeniu.</value>
+  </data>
+  <data name="ExerciseEditor_MechanicsTypeCMB" xml:space="preserve">
+    <value>Określa typ ćwiczenia. Ćwiczenie izolowane to takie, gdzie pracuje tylko konkretny (wyizolowany) mięsień oraz jeden staw. Ćwiczenie złożone (wielostawowe) to takie, gdzie bierze udział kilka różnych mięśni i stawów.</value>
+  </data>
+  <data name="ExerciseEditor_NameTE" xml:space="preserve">
+    <value>Nazwa ćwiczenia. Nie musi być unikatowa</value>
+  </data>
+  <data name="ExerciseEditor_ShortcutTE" xml:space="preserve">
+    <value>Skrót dla ćwiczenia. Dzięki niemu łatwiej można wprowadzać ćwiczenie w oknie edycji treningu siłowego.</value>
+  </data>
+  <data name="ExerciseEditor_UrlTE" xml:space="preserve">
+    <value>Adres strony z opisem danego ćwiczenia.</value>
+  </data>
+  <data name="ExerciseRemovedName" xml:space="preserve">
+    <value>(Usunięte)</value>
+  </data>
+  <data name="ExerciseSearchCriteriaGroup_Favorites" xml:space="preserve">
+    <value>Ulubione</value>
+  </data>
+  <data name="ExerciseSearchCriteriaGroup_Global" xml:space="preserve">
+    <value>Globalne</value>
+  </data>
+  <data name="ExerciseSearchCriteriaGroup_Mine" xml:space="preserve">
+    <value>Moje</value>
+  </data>
+  <data name="ExerciseSearchCriteriaGroup_Other" xml:space="preserve">
+    <value>Pozostałę</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_EmptyDayName" xml:space="preserve">
+    <value>(Bez nazwy)</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_ExerciseColumn" xml:space="preserve">
+    <value>Ćwiczenie</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_MuscleColumn" xml:space="preserve">
+    <value>Mięsień</value>
+  </data>
+  <data name="ExercisesTrainingPlanListView_SetColumn" xml:space="preserve">
+    <value>Seria {0}</value>
+  </data>
+  <data name="ExercisesView_Fill_Header_Exercises" xml:space="preserve">
+    <value>Ćwiczenia</value>
+  </data>
+  <data name="ExercisesView_TabComments" xml:space="preserve">
+    <value>Komentarze</value>
+  </data>
+  <data name="ExercisesView_TabInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="ExercisesView_TabRecords" xml:space="preserve">
+    <value>Rekordy</value>
+  </data>
+  <data name="ExerciseView_AddExerciseBTN" xml:space="preserve">
+    <value>Wyświetla okno umożliwiające utworzenie nowego ćwiczenia.</value>
+  </data>
+  <data name="ExerciseView_DeleteExerciseBTN" xml:space="preserve">
+    <value>Usuwa zaznaczone ćwiczenie z bazy.</value>
+  </data>
+  <data name="ExerciseView_ExerciseList" xml:space="preserve">
+    <value>Wyświetla wszystkie dostępne ćwiczenia.</value>
+  </data>
+  <data name="ExerciseWeightReportSettings_Header_MoreOptions" xml:space="preserve">
+    <value>Więcej opcji</value>
+  </data>
+  <data name="Exercise_Name_Empty" xml:space="preserve">
+    <value>Nazwa ćwiczenia nie może być pusta.</value>
+  </data>
+  <data name="Exercise_Name_Length" xml:space="preserve">
+    <value>Nazwa ćwiczenia jest za długa.</value>
+  </data>
+  <data name="Exercise_Shortcut_Empty" xml:space="preserve">
+    <value>Musisz podać unikatowy skrót dla ćwiczenia.</value>
+  </data>
+  <data name="Exercise_Shortcut_Unique" xml:space="preserve">
+    <value>Skrót ćwiczenia musi być unikatowy.</value>
+  </data>
+  <data name="Exercise_Url_Length" xml:space="preserve">
+    <value>Adres Url jest za długi.</value>
+  </data>
+  <data name="MNUExercises" xml:space="preserve">
+    <value>Ćwiczenia...</value>
+  </data>
+  <data name="OptionsStrengthTraining" xml:space="preserve">
+    <value>Moduł Trening siłowy</value>
+  </data>
+  <data name="Options_FillRepetitionsNumberFromPlanCHK" xml:space="preserve">
+    <value>Jeśli zaznaczysz to pole to w przypadku, gdy w kalendarzu w treningu siłowym użyjesz planu treningowego to wszystkie konkretne powtórzenia będą także wstawione (konkretne, czyli np. 10 powtórzeń. Serie z wartością 10-12 nadal nie będą wypełniane).</value>
+  </data>
+  <data name="PrintOptions" xml:space="preserve">
+    <value>Opcje drukowania</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_AddToFavoritesDescription" xml:space="preserve">
+    <value>Dodanie tego planu treningowego do listy ulubionych pozwoli Ci korzystać z niego w dzienniku treningowym.</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_AddToFavorites_Text" xml:space="preserve">
+    <value>Dodaj do ulubionych</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_ErrProfileRank" xml:space="preserve">
+    <value>Aby móc publikować plany, musisz mieć przynajmniej {0} wpisów treningu siłowego w kalendarzu.</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_ExercisesHeader" xml:space="preserve">
+    <value>Ćwiczenia</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_ExercisesLoading" xml:space="preserve">
+    <value>Ćwiczenia - pobieranie...</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_ExerciseTypeListHeader" xml:space="preserve">
+    <value>Typ ćwiczenia</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_IdListHeader" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_NameListHeader" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_PublishDescription" xml:space="preserve">
+    <value>Publikacja planu treningowego spowoduje, że będzie on widoczny dla wszystkich użytkowników w programie. Po publikacji nie będziesz już mógł zmienić ani usunać tego planu.</value>
+  </data>
+  <data name="PublishWorkoutPlanWindow_TitlePublish" xml:space="preserve">
+    <value>Publikuj plan treningowy</value>
+  </data>
+  <data name="QAskDeleteExerciseRow" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąc zaznaczone pozycje?</value>
+  </data>
+  <data name="QAskDeleteSet" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć zaznaczoną serię?</value>
+  </data>
+  <data name="QDeleteTrainingDay" xml:space="preserve">
+    <value>Czy na pewno chcesz usunać dzień treningowy ze wszystkimi wpisami?</value>
+  </data>
+  <data name="QDeleteTrainingPlanEntry" xml:space="preserve">
+    <value>Czy na pewno chcesz usunać zaznaczony wpis ze wszystkimi seriami?</value>
+  </data>
+  <data name="QRemoveTrainingPlan" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć zaznaczony plan treningowy?</value>
+  </data>
+  <data name="QWorkoutPlanEditorCloseWindow" xml:space="preserve">
+    <value>Czy na pewno chcesz odrzucić zmiany i zamknąć okno?</value>
+  </data>
+  <data name="Report_ExerciseWeight_AxisXTitle" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Report_ExerciseWeight_AxisYTitle" xml:space="preserve">
+    <value>Ciężar</value>
+  </data>
+  <data name="Report_ExerciseWeight_Name" xml:space="preserve">
+    <value>Zmiana cieżaru dla wybranego ćwiczenia</value>
+  </data>
+  <data name="Report_RepsWeight_AxisXTitle" xml:space="preserve">
+    <value>Powtórzenia</value>
+  </data>
+  <data name="Report_RepsWeight_AxisYTitle" xml:space="preserve">
+    <value>Ciężar</value>
+  </data>
+  <data name="Report_WeightReps_Name" xml:space="preserve">
+    <value>Max ciężar dla określonej liczby powtórzeń</value>
+  </data>
+  <data name="SelectExercise" xml:space="preserve">
+    <value>(Wybierz ćwiczenie)</value>
+  </data>
+  <data name="SelectLanguageText" xml:space="preserve">
+    <value>(Wybierz język)</value>
+  </data>
+  <data name="SerieCellCiezarBezSztangiToolTip" xml:space="preserve">
+    <value>-Ciężar bez sztangi</value>
+  </data>
+  <data name="SerieCellCiezarBezSztangiToolTip1" xml:space="preserve">
+    <value>-Ciężar bez sztangi</value>
+  </data>
+  <data name="SerieCellIsLastRepetitionWithHelpToolTip" xml:space="preserve">
+    <value>-Niepełne ostatnie powtórzenie</value>
+  </data>
+  <data name="SerieColumnHeader" xml:space="preserve">
+    <value>Seria {0}</value>
+  </data>
+  <data name="SerieInfo_CiezarBezSztangiCHK" xml:space="preserve">
+    <value>Określa, że podany ciężar jest bez wagi sztangi (np. nie znamy cieżaru samej sztangi)</value>
+  </data>
+  <data name="SerieInfo_CommentTE" xml:space="preserve">
+    <value>Dowolne, dodatkowe informacje związane z serią.</value>
+  </data>
+  <data name="SerieInfo_DropSetCMB" xml:space="preserve">
+    <value>Drop set jest to metoda treningowa oznaczająca wykonaniu serii do załamania (bądź blisko załamania), a następnie zrzuceniu częśli obciążenia i kontynuacji ćwiczenia z mniejszym ciężarem. Zrzucanie obciążenia można wykonywać kilka razy.</value>
+  </data>
+  <data name="SetEditor_RepetitionsRange" xml:space="preserve">
+    <value>Tutaj możesz określić, ile powtórzeń powinno się wykonać podczas tej serii.10 - oznacza wykonanie dokładnie 10 powtórzeń.
+-10 - oznacza wykonanie maksymalnie 10 powtórzeń (może być mniej).
+10- - oznacza wykonanie minimum 10 powtórzeń (może być więcej).
+10-12 - oznacza wykonanie minimum 10 a maksymalnie 12 powtórzeń.</value>
+  </data>
+  <data name="SetEditor_RepetitionType" xml:space="preserve">
+    <value>Określa sposób wykonania powtórzeń.
+Zakres powtórzeń - (np. 10-12) oznacza, że powinieneś wykonać przynajmniej 10 a maksymalnie 12 powtórzeń w danej serii.
+Max - oznacza, że wykonujesz maksymalną liczbę poprawnych powtórzeń
+Upadek mięśniowy - oznacza, że wykonujesz makymalną liczbę powtórzeń łącznie z ostatnim powtórzeniem (jednym lub kilkoma), gdzie nie masz już siły aby poprawnie je dokończyć (pomoc kolegii jest wskazana).</value>
+  </data>
+  <data name="SetInfoWindow_CommentLabel" xml:space="preserve">
+    <value>_Info:</value>
+  </data>
+  <data name="SetInfoWindow_DropSetLabel" xml:space="preserve">
+    <value>_Drop set:</value>
+  </data>
+  <data name="SetInfoWindow_DropSet_1" xml:space="preserve">
+    <value>1 drop</value>
+  </data>
+  <data name="SetInfoWindow_DropSet_2" xml:space="preserve">
+    <value>2 dropy</value>
+  </data>
+  <data name="SetInfoWindow_DropSet_3" xml:space="preserve">
+    <value>3 dropy</value>
+  </data>
+  <data name="SetInfoWindow_DropSet_4" xml:space="preserve">
+    <value>4 dropy</value>
+  </data>
+  <data name="SetInfoWindow_DropSet_None" xml:space="preserve">
+    <value>Bez dropsetu</value>
+  </data>
+  <data name="SetInfoWindow_SetTypeLabel" xml:space="preserve">
+    <value>_Typ serii:</value>
+  </data>
+  <data name="SetInfoWindow_Title" xml:space="preserve">
+    <value>Dodatkowe informacje</value>
+  </data>
+  <data name="SetInfoWindow_WeightWithoutBarbellCheck" xml:space="preserve">
+    <value>_Ciężar bez ciężaru sztangi</value>
+  </data>
+  <data name="SetType_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="SetType_MuscleFailure" xml:space="preserve">
+    <value>UM</value>
+  </data>
+  <data name="SetType_Normalna" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="SetType_PrawieMax" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="SetType_Rozgrzewkowa" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="Split_IsolationExerciseBeforeCompoud" xml:space="preserve">
+    <value>Ćwiczenie izolowane jest przed ćwiczeniem wielostawowym. W treningu typu split zwykle ćwiczenia wielostawowe wykonuje się jako pierwsze (na daną partię mięśniową) a potem izolowane.</value>
+  </data>
+  <data name="StrengthTrainingCalendarDayContentName" xml:space="preserve">
+    <value>Trening siłowy</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_createReadOnly_RepsWeight" xml:space="preserve">
+    <value>(powt)x(ciężar)</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_EmptySetCellWatermark" xml:space="preserve">
+    <value>(powt)x(ciężar)</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_ExerciseColumnHeader" xml:space="preserve">
+    <value>Ćwiczenie</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_ExerciseInSuperSetTip" xml:space="preserve">
+    <value>To ćwiczenie jest częścią superserii</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_ExerciseTypeColumnHeader" xml:space="preserve">
+    <value>Typ ćwiczenia</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_RecordSet_ToolTip" xml:space="preserve">
+    <value>Rekord!</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_SetColumnHeader" xml:space="preserve">
+    <value>Seria {0}</value>
+  </data>
+  <data name="StrengthTrainingItemViewModel_NewExercise" xml:space="preserve">
+    <value>(Nowe ćwiczenie)</value>
+  </data>
+  <data name="StrengthTrainingItemViewModel_WithoutSupersetGroupName" xml:space="preserve">
+    <value>Bez superserii</value>
+  </data>
+  <data name="StrengthTrainingModule_CreateRibbon_Header_StrengthTraining" xml:space="preserve">
+    <value>Trening siłowy</value>
+  </data>
+  <data name="StrengthTrainingModule_CreateRibbon_Label_Exercises" xml:space="preserve">
+    <value>Ćwiczenia</value>
+  </data>
+  <data name="StrengthTrainingModule_CreateRibbon_Label_WorkoutPlans" xml:space="preserve">
+    <value>Plany treningowe</value>
+  </data>
+  <data name="StrengthTrainingModule_ShareSocialContent_Caption_BodyArchitect" xml:space="preserve">
+    <value>BodyArchitect - dziennik treningowy stworzony dla profesjonalnych kulturystów.</value>
+  </data>
+  <data name="StrengthTrainingModule_ShareSocialContent_Date" xml:space="preserve">
+    <value>&lt;br/&gt;Data: {0}&lt;br/&gt;</value>
+  </data>
+  <data name="StrengthTrainingModule_ShareSocialContent_Facebook" xml:space="preserve">
+    <value>&lt;center&gt;-&lt;/center&gt;&lt;a href=\"http://www.facebook.com\"&gt;Facebook&lt;/a&gt;</value>
+  </data>
+  <data name="StrengthTrainingModule_ShareSocialContent_Name" xml:space="preserve">
+    <value>Nowy wpis: Trening siłowy</value>
+  </data>
+  <data name="StrengthTrainingModule_ShareSocialContent_Name_NewEntry" xml:space="preserve">
+    <value>Nowy wpis: Trening siłowy</value>
+  </data>
+  <data name="StrengthTrainingModule_WorkoutPlansTabText" xml:space="preserve">
+    <value>Plany treningowe</value>
+  </data>
+  <data name="TrainingPlanDayEntry_Object" xml:space="preserve">
+    <value>Wpis w dniu treningowym</value>
+  </data>
+  <data name="TrainingPlanDay_Name_Empty" xml:space="preserve">
+    <value>Dzień treningowy musi mieć nazwę.</value>
+  </data>
+  <data name="TrainingPlanDay_Name_Length" xml:space="preserve">
+    <value>Nazwa dnia treningowego jest za długa.</value>
+  </data>
+  <data name="TrainingPlanDay_Object" xml:space="preserve">
+    <value>Dzień treningowy</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_Author" xml:space="preserve">
+    <value>_Autor</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_Difficulty" xml:space="preserve">
+    <value>_Trudność</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_Language" xml:space="preserve">
+    <value>_Język</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_Name" xml:space="preserve">
+    <value>_Nazwa</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_Purpose" xml:space="preserve">
+    <value>_Cel</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_RemainingTime" xml:space="preserve">
+    <value>Pozostały czas</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_Type" xml:space="preserve">
+    <value>T_yp</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Content_Url" xml:space="preserve">
+    <value>_Url</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Details" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Edit" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Editor" xml:space="preserve">
+    <value>Edytor</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Information" xml:space="preserve">
+    <value>Informacje</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Message" xml:space="preserve">
+    <value>Wiadomość</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Object" xml:space="preserve">
+    <value>Obiekt</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Output" xml:space="preserve">
+    <value>Wyniki</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Header_Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Label_Save" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Label_SuperSets" xml:space="preserve">
+    <value>Superserie</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Label_Validate" xml:space="preserve">
+    <value>Sprawdź</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_Text_Sec" xml:space="preserve">
+    <value>.sek</value>
+  </data>
+  <data name="TrainingPlanEditor_AuthorTXT" xml:space="preserve">
+    <value>Autor (czyli Ty) tworzonego planu treningowego. Nie może być pusty.</value>
+  </data>
+  <data name="TrainingPlanEditor_DescriptionTXT" xml:space="preserve">
+    <value>Opis planu treningowego ze wszystkimi szczegółami, np. jak wykonywać ćwiczenia, jakie obciążenie itp</value>
+  </data>
+  <data name="TrainingPlanEditor_DifficultCMB" xml:space="preserve">
+    <value>Stopień trudności (ciężkości) planu treningowego.</value>
+  </data>
+  <data name="TrainingPlanEditor_NameTXT" xml:space="preserve">
+    <value>Nazwa planu treningowego. Nie może być pusta.</value>
+  </data>
+  <data name="TrainingPlanEditor_RestTimeTXT" xml:space="preserve">
+    <value>Długość przerw między seriami we wszystkich ćwiczeniach. Dla konkretnych ćwiczeń możesz nadpisać ten czas w &lt;b&gt;edytorze wpisu&lt;/b&gt;, wybierając w drzewku w &lt;b&gt;Szczegółach&lt;/b&gt; planu wpis i zmienić wartość w polu &lt;b&gt;Przerwa&lt;/b&gt;.</value>
+  </data>
+  <data name="TrainingPlanEditor_SuperSetsBTN" xml:space="preserve">
+    <value>Wyświetla okno do definiowania superserii/serii łączonych pomiędzy ćwiczeniami.</value>
+  </data>
+  <data name="TrainingPlanEditor_TrainingTypeCMB" xml:space="preserve">
+    <value>Typ treningu. Ma on wpływ między innymi na Walidację (przycisk Sprawdź). Niektórze techniki treningowe są błędę w niektórych typach.</value>
+  </data>
+  <data name="TrainingPlanEditor_ValidateBTN" xml:space="preserve">
+    <value>Sprawdza poprawność planu treningowego i wyświetla wyniki w sekcji &lt;b&gt;Wyniki&lt;b&gt;.</value>
+  </data>
+  <data name="TrainingPlanEntryEditor_CommentTXT" xml:space="preserve">
+    <value>Dodatkowe informacje na temat danego ćwiczenia.</value>
+  </data>
+  <data name="TrainingPlanEntryEditor_ExerciseCMB" xml:space="preserve">
+    <value>Umożliwia wybranie ćwiczenia.</value>
+  </data>
+  <data name="TrainingPlanEntryEditor_RestTimeTXT" xml:space="preserve">
+    <value>Tutaj możesz podać inny czas przerwy między seriami. (Nadpisać wartość &lt;b&gt;Przerwy&lt;/b&gt; z sekcji &lt;b&gt;Informacje&lt;/b&gt;)</value>
+  </data>
+  <data name="TrainingPlanHtml_CommentColumn" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="TrainingPlanHtml_Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="TrainingPlanHtml_Details" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="TrainingPlanHtml_ExerciseColumn" xml:space="preserve">
+    <value>Ćwiczenie</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoAuthor" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoCreationDate" xml:space="preserve">
+    <value>Data utworzenia</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoDifficult" xml:space="preserve">
+    <value>Trudność</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoRestTime" xml:space="preserve">
+    <value>Przerwy</value>
+  </data>
+  <data name="TrainingPlanHtml_Information" xml:space="preserve">
+    <value>Informacje</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoTrainingType" xml:space="preserve">
+    <value>Typ treningu</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoUrl" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="TrainingPlanHtml_InfoVersion" xml:space="preserve">
+    <value>Wersja</value>
+  </data>
+  <data name="TrainingPlanHtml_Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="TrainingPlanHtml_Legend" xml:space="preserve">
+    <value>Legenda</value>
+  </data>
+  <data name="TrainingPlanHtml_LegendContent" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td class='legend'&gt;MF&lt;/td&gt;&lt;td&gt;Upadek mięśniowy. Wykonujesz powtórzenia aż do upadku mięśniowego (ostatnie powtórzenie wykonujesz niepełne, z pomocą partnera itp)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;SS&lt;/td&gt;&lt;td&gt;Super slow. Wykonujesz powtórzenia bardzo powoli i dokładnie.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;RP&lt;/td&gt;&lt;td&gt;Rest pause. Wykonaj tą serię od razu jak tylko przestaniesz czuć ból w mięśniach po poprzedniej serii (np . po 10 sek.)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;MAX&lt;/td&gt;&lt;td&gt;Wykonujesz tyle powtórzeń, że nie masz już siły na następne. Jednak wszystkie powtórzenia są wykonane z prawidłową techniką (i bez pomocy)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;R&lt;/td&gt;&lt;td&gt;Lekka seria rozgrzewkowa&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;PM&lt;/td&gt;&lt;td&gt;Prawie max, czyli robisz powtórzenia aż dojdziesz do maksa (brakuje Ci np. jednego powtórzenia do maksa) i przestajesz&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;X&lt;/td&gt;&lt;td&gt;Wykonujesz X powtórzeń, np. 10 powtórzeń w serii&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;-X&lt;/td&gt;&lt;td&gt;Wykonujesz maksymalnie X powtórzeń w serii (może być mniej), np. -10 oznacza, że wykonujesz maksymalnie 10 powtórzeń (może być 8 lub 9)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;X-&lt;/td&gt;&lt;td&gt;Wykonujesz minimum X powtórzeń w serii (może być więcej), np 10- oznacza, że wykonujesz minimum 10 powtórzeń.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;X-Y&lt;/td&gt;&lt;td&gt;Wykonujesz minimum X i maksymalnie Y powtórzeń w serii. 10-12 oznacza, że w danej serii wykonujesz od 10 do 12 powtórzeń.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;^Z&lt;/td&gt;&lt;td&gt;Drop set. Wartość Z określa ile zrzuceń ciężaru należy wykonać (patrz definicja dropsetu), np. ^1 oznacza, że po wykonaniu serii głownej, wykonujesz jeden drop set(raz zrzucasz troche cieżaru i kontynuujesz serię bez odpoczynku) &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class='legend'&gt;8-10^2&lt;/td&gt;&lt;td&gt;Ten przykład pokazuje serię, w której wykonujesz minimum 8 a maksymalnie 10 powtórzeń, a następnie zrzucasz trochę ciężaru i wykonujesz drop set. Gdy już nie masz sił, zrzucasz znowu trochę ciężaru i wykonujesz następney drop set (cyfra 2 oznacza dwa razy zrzucenie ciężaru i wykonanie serii)&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="TrainingPlanHtml_MuscleColumn" xml:space="preserve">
+    <value>Mięsień</value>
+  </data>
+  <data name="TrainingPlanHtml_RestTimeColumn" xml:space="preserve">
+    <value>Przewra</value>
+  </data>
+  <data name="TrainingPlanHtml_RestTimeValue" xml:space="preserve">
+    <value>{0} sek.</value>
+  </data>
+  <data name="TrainingPlanHtml_SetColumn" xml:space="preserve">
+    <value>Seria</value>
+  </data>
+  <data name="TrainingPlanImportDlgFilter" xml:space="preserve">
+    <value>Pliki planów treningowych (*.bap)|*.bap</value>
+  </data>
+  <data name="TrainingPlanNewDayName" xml:space="preserve">
+    <value>Dzień {0}</value>
+  </data>
+  <data name="TrainingPlanNewName" xml:space="preserve">
+    <value>(nowa nazwa)</value>
+  </data>
+  <data name="TrainingPlanReportData_createSetsMatrix_ColumName_Comment" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="TrainingPlanReportData_createSetsMatrix_ColumName_CommentIndex" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="TrainingPlanReportData_createSetsMatrix_ColumName_ExerciseType" xml:space="preserve">
+    <value>Typ ćwiczenia</value>
+  </data>
+  <data name="TrainingPlanReportData_createSetsMatrix_ColumName_SetIndex" xml:space="preserve">
+    <value>Seria</value>
+  </data>
+  <data name="TrainingPlanReportView_Fill_Header_TrainingPlan" xml:space="preserve">
+    <value>Plan treningowy</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_MuscleFailure" xml:space="preserve">
+    <value>UM</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Normalna" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_PrawieMax" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Rozgrzewkowa" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="TrainingPlanSerie_Object" xml:space="preserve">
+    <value>Seria</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnAuthor" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnCreationDate" xml:space="preserve">
+    <value>Data utworzenia</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnDifficult" xml:space="preserve">
+    <value>Trudność</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnName" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="TrainingPlansTree_ColumnWorkoutType" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="TrainingPlanSuperSetsEditor_Description" xml:space="preserve">
+    <value>Wybierz 2 ćwiczenia (lub więcej) a następnie kliknij przycisk Połącz. Spowoduje to utworzenie superserii/serii łączonej między tymi ćwiczeniami. Przycisk Rozłącz umożliwia usunięcie superserii (same ćwiczenia pozostaną, usunięte zostanie tylko "połączenie"). Nie możesz łączyć ćwiczeń z różnych dni treningowych.</value>
+  </data>
+  <data name="TrainingPlanSuperSetsEditor_JoinButton" xml:space="preserve">
+    <value>Połącz</value>
+  </data>
+  <data name="TrainingPlanSuperSetsEditor_SplitButton" xml:space="preserve">
+    <value>Rozłącz</value>
+  </data>
+  <data name="TrainingPlanSuperSetsEditor_Title" xml:space="preserve">
+    <value>Edytor superserii/serii łączonej</value>
+  </data>
+  <data name="TrainingPlansView_Fill_Header_TrainingPlans" xml:space="preserve">
+    <value>Plany treningowe</value>
+  </data>
+  <data name="TrainingPlanTreeView_Header_Details" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_DeleteDay" xml:space="preserve">
+    <value>Usuń dzień</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_DeleteEntry" xml:space="preserve">
+    <value>Usuń ćwiczenie</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_DeleteSet" xml:space="preserve">
+    <value>Usuń serię</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_Down" xml:space="preserve">
+    <value>W dół</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_EditDay" xml:space="preserve">
+    <value>Edytuj dzień</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_NewDay" xml:space="preserve">
+    <value>Nowy dzień</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_NewEntry" xml:space="preserve">
+    <value>Nowe ćwiczenie</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_NewSet" xml:space="preserve">
+    <value>Nowa seria</value>
+  </data>
+  <data name="TrainingPlanTreeView_Label_Up" xml:space="preserve">
+    <value>W górę</value>
+  </data>
+  <data name="TrainingPlanViewModel_Header_EditPlan" xml:space="preserve">
+    <value>Edycja planu:</value>
+  </data>
+  <data name="TrainingPlanViewModel_Update_SelectExercise" xml:space="preserve">
+    <value>Wybierz ćwiczenie</value>
+  </data>
+  <data name="TrainingPlan_Author_Empty" xml:space="preserve">
+    <value>Plan treningowy musi miec autora.</value>
+  </data>
+  <data name="TrainingPlan_Author_Length" xml:space="preserve">
+    <value>Nazwa autora planu jest za długa.</value>
+  </data>
+  <data name="TrainingPlan_DaysName_Unique" xml:space="preserve">
+    <value>Niektóre dni treningowe mają takie same nazwy. Wszystkie nazwy dni treningowych muszą być unikatowe.</value>
+  </data>
+  <data name="TrainingPlan_DropSetInNotOnlyLastSet" xml:space="preserve">
+    <value>Drop set jest zwykle wykonywany podczas ostatniej serii w danym ćwiczeniu.</value>
+  </data>
+  <data name="TrainingPlan_EmptyDay" xml:space="preserve">
+    <value>Powinieneś dodać wpisy do dnia treningowego.</value>
+  </data>
+  <data name="TrainingPlan_ExerciseDoesntExist" xml:space="preserve">
+    <value>Ćwiczenie nie zostało ustawione lub zostało usunięte. Musisz wybrać nowe.</value>
+  </data>
+  <data name="TrainingPlan_Name_Empty" xml:space="preserve">
+    <value>Plan treningowy musi mieć nazwę</value>
+  </data>
+  <data name="TrainingPlan_Object" xml:space="preserve">
+    <value>Plan treningowy</value>
+  </data>
+  <data name="TrainingPlan_RestSecond_Empty" xml:space="preserve">
+    <value>Powinieneś określić długość przerw między ćwiczeniami.</value>
+  </data>
+  <data name="usrExerciseEditor_DescriptionLabel" xml:space="preserve">
+    <value>_Opis:</value>
+  </data>
+  <data name="usrExerciseEditor_DifficultLabel" xml:space="preserve">
+    <value>_Trudność:</value>
+  </data>
+  <data name="usrExerciseEditor_ExerciseTypeLabel" xml:space="preserve">
+    <value>T_yp:</value>
+  </data>
+  <data name="usrExerciseEditor_ForceLabel" xml:space="preserve">
+    <value>Typ _siły:</value>
+  </data>
+  <data name="usrExerciseEditor_MechanicsTypeLabel" xml:space="preserve">
+    <value>_Mechanika:</value>
+  </data>
+  <data name="usrExerciseEditor_NameLabel" xml:space="preserve">
+    <value>_Nazwa:</value>
+  </data>
+  <data name="usrExerciseEditor_ShortcutLabel" xml:space="preserve">
+    <value>_Skrót:</value>
+  </data>
+  <data name="usrExerciseEditor_UrlLabel" xml:space="preserve">
+    <value>_Url:</value>
+  </data>
+  <data name="usrExerciseRecords_Label_DateTime" xml:space="preserve">
+    <value>Kiedy</value>
+  </data>
+  <data name="usrExercisesView_GlobalRecord_ToolTip" xml:space="preserve">
+    <value>To ćwiczenie jest wyświetlane w sekcji Rekordy przy informacjach o użytkowniku.</value>
+  </data>
+  <data name="usrExercisesView_Header_Ascending" xml:space="preserve">
+    <value>Rosnąco</value>
+  </data>
+  <data name="usrExercisesView_Header_Criteria" xml:space="preserve">
+    <value>Kryteria</value>
+  </data>
+  <data name="usrExercisesView_Header_Descending" xml:space="preserve">
+    <value>Malejąco</value>
+  </data>
+  <data name="usrExercisesView_Header_Edit" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="usrExercisesView_Header_Exercises" xml:space="preserve">
+    <value>Ćwiczenia</value>
+  </data>
+  <data name="usrExercisesView_Header_Favorities" xml:space="preserve">
+    <value>Ulubione</value>
+  </data>
+  <data name="usrExercisesView_Header_MyExercises" xml:space="preserve">
+    <value>Moje ćwiczenia</value>
+  </data>
+  <data name="usrExercisesView_Header_Search_RibbonGroup" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrExercisesView_Header_Search_RibbonTab" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrExercisesView_Header_Search_TabItem" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrExercisesView_Header_SortOrder" xml:space="preserve">
+    <value>Kierunek sortowania</value>
+  </data>
+  <data name="usrExercisesView_Label_Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="usrExercisesView_Label_Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="usrExercisesView_Label_Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="usrExercisesView_Label_ExerciseTypes" xml:space="preserve">
+    <value>Typ ćwiczeń</value>
+  </data>
+  <data name="usrExercisesView_Label_More" xml:space="preserve">
+    <value>Więcej</value>
+  </data>
+  <data name="usrExercisesView_Label_Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="usrExercisesView_Label_New" xml:space="preserve">
+    <value>Nowe</value>
+  </data>
+  <data name="usrExercisesView_Label_Order" xml:space="preserve">
+    <value>Sortowanie</value>
+  </data>
+  <data name="usrExercisesView_Label_Remove" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="usrExercisesView_Label_Search" xml:space="preserve">
+    <value>Znajdź</value>
+  </data>
+  <data name="usrExercisesView_Label_SearchIn" xml:space="preserve">
+    <value>Szukaj w</value>
+  </data>
+  <data name="usrExercisesView_Label_SortOrder" xml:space="preserve">
+    <value>Kierunek sortowania</value>
+  </data>
+  <data name="usrExercisesView_RibbonGroup_View" xml:space="preserve">
+    <value>Widok</value>
+  </data>
+  <data name="usrExercisesView_RibbonItem_View_Customers" xml:space="preserve">
+    <value>Klienci</value>
+  </data>
+  <data name="usrExercisesView_RibbonItem_View_Friends" xml:space="preserve">
+    <value>Znajomi</value>
+  </data>
+  <data name="usrExercisesView_RibbonItem_View_Users" xml:space="preserve">
+    <value>Użytkownicy</value>
+  </data>
+  <data name="usrExercisesView_StatusIconToolTip_Favorite" xml:space="preserve">
+    <value>Ulubione</value>
+  </data>
+  <data name="usrExercisesView_StatusIconToolTip_Global" xml:space="preserve">
+    <value>Globalne</value>
+  </data>
+  <data name="usrExercisesView_StatusIconToolTip_Private" xml:space="preserve">
+    <value>Prywatne</value>
+  </data>
+  <data name="usrExerciseWeightReport_chkIncludeSetsWithHelp" xml:space="preserve">
+    <value>Jeśli to pole jest zaznaczone, to oprócz standardowych serii do wygenerowania raportu będą dodane serie niepełne (z pomocą).</value>
+  </data>
+  <data name="usrExerciseWeightReport_chkIncludeSetsWithoutBarrelWeight" xml:space="preserve">
+    <value>Jeśli to pole jest zaznaczone, to oprócz standardowych serii do wygenerowania raportu będą dodane serie bez cieżaru sztangi.</value>
+  </data>
+  <data name="usrExerciseWeightReport_ListView" xml:space="preserve">
+    <value>Lista wszystkich ćwiczeń. Możesz znaznaczyć więcej niż jedno ćwiczenie do wygenerowania raportu.</value>
+  </data>
+  <data name="usrExerciseWeightReport_RepetitionsHeader" xml:space="preserve">
+    <value>Powtórzenia</value>
+  </data>
+  <data name="usrExerciseWeightReport_RepetitionsRange" xml:space="preserve">
+    <value>Tutaj możesz przefiltrować swój raport do określonej liczby powtórzeń. Na przykład chciałbyś zobaczyć swoje postępy dla zakresu 8-9 powtórzeń. W tym celu w polu Min wpisz 8 a w polu Max wpisz 9. Możesz oczywiście podać tylko jedną wartość, np min 8 i wtedy raport wyświetli wyniki dla wszystkich powtórzeń od 8 czyli 8,9,10 itp</value>
+  </data>
+  <data name="usrExerciseWeightReport_RepsFromLabel" xml:space="preserve">
+    <value>_Od:</value>
+  </data>
+  <data name="usrExerciseWeightReport_RepsToLabel" xml:space="preserve">
+    <value>_Do:</value>
+  </data>
+  <data name="usrExerciseWeightReport_SetsHeader" xml:space="preserve">
+    <value>Serie</value>
+  </data>
+  <data name="usrExerciseWeightReport_SetsWithoutBarbellWeightCHK" xml:space="preserve">
+    <value>Uwzględniaj serie bez ciężaru sztangi</value>
+  </data>
+  <data name="usrIntensity_Header" xml:space="preserve">
+    <value>Intensywność</value>
+  </data>
+  <data name="usrIntensity_High" xml:space="preserve">
+    <value>Wysoka</value>
+  </data>
+  <data name="usrIntensity_Low" xml:space="preserve">
+    <value>Niska</value>
+  </data>
+  <data name="usrIntensity_Medium" xml:space="preserve">
+    <value>Średnia</value>
+  </data>
+  <data name="usrIntensity_NotSet" xml:space="preserve">
+    <value>Nie ustawiona</value>
+  </data>
+  <data name="usrStrengthTrainingOptions_Content_FillUsingPlan" xml:space="preserve">
+    <value>_Wypełniaj powtórzenia, gdy korzystamy z planu treningowego</value>
+  </data>
+  <data name="usrStrengthTrainingOptions_Content_ShowExtendedInfo" xml:space="preserve">
+    <value>W_yświetl rozszerzone info o serii.</value>
+  </data>
+  <data name="usrStrengthTrainingSourceGrid_Tip_ExerciseViewType" xml:space="preserve">
+    <value>Określa sposób wyświetlania ćwiczeń w tabeli.</value>
+  </data>
+  <data name="usrStrengthTrainingSourceGrid_Tip_Grid" xml:space="preserve">
+    <value>Umożliwia zapisywanie dokładnych informacji na temat przeprowadzonego treningu, wykonywanych ćwiczeń a także ilość serii z powtórzeniami.
+Kadą serię wprowadzamy podając najpierw ilość powtórzeń a po znaku 'x' cieżar w kg (10x65). 
+Aby dodać dodatkowe informacje na temat serii, wystarczy kliknąc prawym przyciskiem myszy i skorzystać z kontektowego menu.</value>
+  </data>
+  <data name="usrStrengthTrainingSourceGrid_Tip_SetsNumber" xml:space="preserve">
+    <value>Ilość kolumn Serii w tabeli. Jeśli wykonałeś dużo serii jednego ćwiczenia i nie masz już gdzie wpisać, zwiększ liczbę kolumn za pomocą tej listy</value>
+  </data>
+  <data name="usrStrengthTraining_CommentHeader" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="usrStrengthTraining_DeleteRowButtonTip" xml:space="preserve">
+    <value>Usuwa wybrane ćwiczenie</value>
+  </data>
+  <data name="usrStrengthTraining_fillWorkoutPlans_NotLoaded" xml:space="preserve">
+    <value>(Nie wczytane)</value>
+  </data>
+  <data name="usrStrengthTraining_GroupByExerciseType" xml:space="preserve">
+    <value>Po typie ćwiczenia</value>
+  </data>
+  <data name="usrStrengthTraining_GroupByLabel" xml:space="preserve">
+    <value>Grupuj:</value>
+  </data>
+  <data name="usrStrengthTraining_GroupByNone" xml:space="preserve">
+    <value>Brak</value>
+  </data>
+  <data name="usrStrengthTraining_GroupBySupersets" xml:space="preserve">
+    <value>Po superseriach</value>
+  </data>
+  <data name="usrStrengthTraining_Header_AdditionalInfo" xml:space="preserve">
+    <value>Dodatkowe informacje</value>
+  </data>
+  <data name="usrStrengthTraining_Header_General" xml:space="preserve">
+    <value>Ogólne</value>
+  </data>
+  <data name="usrStrengthTraining_Header_MyPlace" xml:space="preserve">
+    <value>Moje miejsca</value>
+  </data>
+  <data name="usrStrengthTraining_Header_Remind" xml:space="preserve">
+    <value>Przypomnij</value>
+  </data>
+  <data name="usrStrengthTraining_Header_StrengthTrainingItem_Options" xml:space="preserve">
+    <value>Opcje</value>
+  </data>
+  <data name="usrStrengthTraining_Header_StrengthTraining_RibbonGroup" xml:space="preserve">
+    <value>Trening siłowy</value>
+  </data>
+  <data name="usrStrengthTraining_Header_StrengthTraining_RibbonTab" xml:space="preserve">
+    <value>Trening siłowy</value>
+  </data>
+  <data name="usrStrengthTraining_Help_DoneWay" xml:space="preserve">
+    <value>Określa sposób wykonania ćwiczenia. W przypadku, gdy ćwiczenie wykonujesz w standardowy sposób to ustaw domyślnie. Każda inna opcja przeznaczona jest tylko w wyjątkowych sytuacjach. Tylko ćwiczenia z domyślnym przyrządem są uwzględniane w rekordach.
+
+Opcja dostępna tylko dla konta Premium lub Instruktor</value>
+  </data>
+  <data name="usrStrengthTraining_Help_MyPlaces" xml:space="preserve">
+    <value>Moje miejsca dają możliwość określenie, na której siłowni odbył się trening. Dzięki temu można np wygenerować wykres uwzględniający treningi tylko z konkretnego miejsca.
+
+Opcja dostępna tylko dla konta Premium lub Instruktor</value>
+  </data>
+  <data name="usrStrengthTraining_JoinInSuperSetButton" xml:space="preserve">
+    <value>Dodaj superserię</value>
+  </data>
+  <data name="usrStrengthTraining_Label_DoneWay" xml:space="preserve">
+    <value>_Przyrząd:</value>
+  </data>
+  <data name="usrStrengthTraining_Label_MyPlace" xml:space="preserve">
+    <value>Wybierz _siłownię, na której wykonałeś bieżący trening:</value>
+  </data>
+  <data name="usrStrengthTraining_Label_MyPlaces" xml:space="preserve">
+    <value>Moje _miejsca:</value>
+  </data>
+  <data name="usrStrengthTraining_Label_StrengthTrainingItem_Comment" xml:space="preserve">
+    <value>_Komentarz:</value>
+  </data>
+  <data name="usrStrengthTraining_Mnu_DeleteSet" xml:space="preserve">
+    <value>Usuń serię</value>
+  </data>
+  <data name="usrStrengthTraining_MsgIncorrectSetsValidation" xml:space="preserve">
+    <value>Program wykrył, że niektóre serię mają prawdopodobnie błędne dane. Wybierz Tak, aby zapisać trening lub Nie aby wrócić do edycji i poprawić błędy.
+
+Nieprawidłowe serie:</value>
+  </data>
+  <data name="usrStrengthTraining_RemoveSuperSetButton" xml:space="preserve">
+    <value>Usuń superserię</value>
+  </data>
+  <data name="usrStrengthTraining_SelectExerciseWatermark" xml:space="preserve">
+    <value>Wybierz ćwiczenie...</value>
+  </data>
+  <data name="usrStrengthTraining_SetsNumberLabel" xml:space="preserve">
+    <value>Serie</value>
+  </data>
+  <data name="usrStrengthTraining_StrengthTrainingItem_MoreSettings_ToolTip" xml:space="preserve">
+    <value>Więcej ustawień</value>
+  </data>
+  <data name="usrStrengthTraining_tbShowPlan_Click_RefreshCombobox" xml:space="preserve">
+    <value>Odśwież listę planów treningowych i spróbuj ponownie</value>
+  </data>
+  <data name="usrStrengthTraining_Tip_CommentTE" xml:space="preserve">
+    <value>Dowolne dodatkowe informacje na temat treningu.</value>
+  </data>
+  <data name="usrStrengthTraining_Tip_EndTimeTE" xml:space="preserve">
+    <value>Czas zakończenia treningu. Wartość 00:00 oznacza, że godzina nie została wpisana.</value>
+  </data>
+  <data name="usrStrengthTraining_Tip_StartTimeTE" xml:space="preserve">
+    <value>Czas rozpoczęcia treningu. Wartość 00:00 oznacza, że godzina nie została wpisana.</value>
+  </data>
+  <data name="usrStrengthTraining_Watermark_MyPlace" xml:space="preserve">
+    <value>(Domyślne)</value>
+  </data>
+  <data name="usrStrengthTraining_WorkoutEndTimeLabel" xml:space="preserve">
+    <value>_Koniec:</value>
+  </data>
+  <data name="usrStrengthTraining_WorkoutPlanLabel" xml:space="preserve">
+    <value>_Plan treningowy:</value>
+  </data>
+  <data name="usrStrengthTraining_WorkoutStartTimeLabel" xml:space="preserve">
+    <value>_Start:</value>
+  </data>
+  <data name="usrStrengthTraining_WorkoutTimeLabel" xml:space="preserve">
+    <value>Godzina treningu:</value>
+  </data>
+  <data name="usrTrainingPlanEntryEditor_Content_Comment" xml:space="preserve">
+    <value>_Komentarz</value>
+  </data>
+  <data name="usrTrainingPlanEntryEditor_Content_Exercise" xml:space="preserve">
+    <value>_Ćwiczenie:</value>
+  </data>
+  <data name="usrTrainingPlanEntryEditor_Content_RestTime" xml:space="preserve">
+    <value>_Długość przerw:</value>
+  </data>
+  <data name="usrTrainingPlanEntryEditor_Label_ExerciseDoneWay" xml:space="preserve">
+    <value>_Przyrząd:</value>
+  </data>
+  <data name="usrTrainingPlanSerieEditor_Content_Comment" xml:space="preserve">
+    <value>_Komentarz:</value>
+  </data>
+  <data name="usrTrainingPlanSerieEditor_Content_Dropset" xml:space="preserve">
+    <value>_Dropset:</value>
+  </data>
+  <data name="usrTrainingPlanSerieEditor_Content_Reps" xml:space="preserve">
+    <value>_Powtórzenia:</value>
+  </data>
+  <data name="usrTrainingPlanSerieEditor_Content_SetType" xml:space="preserve">
+    <value>_Typ serii:</value>
+  </data>
+  <data name="usrTrainingPlanSerieEditor_Content_Time" xml:space="preserve">
+    <value>_Czas:</value>
+  </data>
+  <data name="usrTrainingPlansView_EmptyListMessage_MyPlans" xml:space="preserve">
+    <value>Nie stworzyłeś jeszczee żadnego planu</value>
+  </data>
+  <data name="usrTrainingPlansView_EmptyListMessage_Search" xml:space="preserve">
+    <value>Możesz przeszukać bazę wszystkich planów treningowych, aby znaleźć idealny plan dla siebie</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Ascending" xml:space="preserve">
+    <value>Rosnąco</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Criteria" xml:space="preserve">
+    <value>Kryteria</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Descending" xml:space="preserve">
+    <value>Malejąco</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Edit" xml:space="preserve">
+    <value>Edycja</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Favorities" xml:space="preserve">
+    <value>Ulubione</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_MyPlans" xml:space="preserve">
+    <value>Moje plany</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Operations" xml:space="preserve">
+    <value>Operacje</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Plans" xml:space="preserve">
+    <value>Plany</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Search_RibbonGroup" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Search_RibbonTab" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_Search_TabItem" xml:space="preserve">
+    <value>Wyszukiwanie</value>
+  </data>
+  <data name="usrTrainingPlansView_Header_SortOrder" xml:space="preserve">
+    <value>Kierunek sortowania</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Clone" xml:space="preserve">
+    <value>Klonuj</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Difficulty" xml:space="preserve">
+    <value>Trudność</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_More" xml:space="preserve">
+    <value>Więcej</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_New" xml:space="preserve">
+    <value>Nowy</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Order" xml:space="preserve">
+    <value>Sortowanie</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Publish" xml:space="preserve">
+    <value>Publikuj</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Purpose" xml:space="preserve">
+    <value>Cel</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Remove" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Search" xml:space="preserve">
+    <value>Znajdź</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_SortOrder" xml:space="preserve">
+    <value>Kierunek sortowania</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_View" xml:space="preserve">
+    <value>Wyświetl</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_View2" xml:space="preserve">
+    <value>Wyświetl</value>
+  </data>
+  <data name="usrTrainingPlansView_Label_Weeks" xml:space="preserve">
+    <value>Tydzień</value>
+  </data>
+  <data name="usrUserExercises_Caption" xml:space="preserve">
+    <value>Ćwiczenia</value>
+  </data>
+  <data name="usrUserRecords_Button_ShowRecords_ToolTip" xml:space="preserve">
+    <value>Pokaż rekordy innych użytkowników dla tego ćwiczenia</value>
+  </data>
+  <data name="usrUserRecords_Header" xml:space="preserve">
+    <value>Rekordy</value>
+  </data>
+  <data name="usrUserWorkoutPlans_Caption" xml:space="preserve">
+    <value>Plany treningowe</value>
+  </data>
+  <data name="usrWorkoutPlansChooser_ChoosePlanWatermark" xml:space="preserve">
+    <value>Wybierz plan...</value>
+  </data>
+  <data name="WorkoutPlanLU_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="WorkoutPlanLU_DayName" xml:space="preserve">
+    <value>Nazwa dnia</value>
+  </data>
+  <data name="WorkoutPlanLU_Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="WorkoutPlanLU_Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Days" xml:space="preserve">
+    <value>Dni</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Difficulty" xml:space="preserve">
+    <value>Trudność</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Purpose" xml:space="preserve">
+    <value>Cel</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Rating" xml:space="preserve">
+    <value>Ocena</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="WorkoutPlansList_Header_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SetRestTimeWindow_RestTime_Label" xml:space="preserve">
+    <value>_Przerwa między seriami:</value>
+  </data>
+  <data name="SetRestTimeWindow_Title" xml:space="preserve">
+    <value>Przerwa między seriami</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_RestTimeColumnHeader" xml:space="preserve">
+    <value>Przerwa</value>
+  </data>
+  <data name="TimerWindow_StartTimer_Button" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="TimerWindow_StopTimer_Button" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="TimerWindow_Timer_Description" xml:space="preserve">
+    <value>Stoper najlepiej wykorzystać do wprowadzania serii podczas treningu. Zaznacz w treningu siłowym serię, którą zaraz będziesz robił (lub kolumnę Przerwa), kliknij przycisk Stoper na Wstążce i przygotuj się do wykonania serii. Gdy będziesz gotowy, wciśnij przycisk Start a zaraz po zakończeniu przycisk Stop. Spowoduje to zarejestrowanie czasu wykonania serii oraz przerwę między tą a poprzednią serią.</value>
+  </data>
+  <data name="TimerWindow_Title" xml:space="preserve">
+    <value>Stoper</value>
+  </data>
+  <data name="usrStrengthTraining_Button_SetRestTime" xml:space="preserve">
+    <value>Ustaw przerwy...</value>
+  </data>
+  <data name="usrStrengthTraining_RibbonButton_Timer" xml:space="preserve">
+    <value>Stoper</value>
+  </data>
+  <data name="usrStrengthTraining_ShowExerciseTypeColumn" xml:space="preserve">
+    <value>Typ ćwiczenia</value>
+  </data>
+  <data name="usrStrengthTraining_ShowRestTimeColumn" xml:space="preserve">
+    <value>Przerwy</value>
+  </data>
+  <data name="StrengthTrainingDataGrid_ContainsTimeData_ToolTip" xml:space="preserve">
+    <value>Czas trwania serii: {0}</value>
+  </data>
+  <data name="TimerWindow_CheckBox_StartTimerAfterOpenWindow" xml:space="preserve">
+    <value>_Uruchom stoper automatycznie po otwarciu tego okna</value>
+  </data>
+  <data name="ErrTimerGridChanged" xml:space="preserve">
+    <value>Widok treningu siłowego został zmieniony, dlatego stoper nie może zapisać czasu. W czasie działania stopera nie powinno się korzystać z żadnych opcji, które powodują zmianę widoku.</value>
+  </data>
+  <data name="SetInfoWindow_Help_RestPause" xml:space="preserve">
+    <value>Przerwa od poprzedniej serii jest bardzo krótka. Ta seria została wykonana od razu gdy przestałeś czuć ból w męśniach.</value>
+  </data>
+  <data name="SetInfoWindow_RestPause" xml:space="preserve">
+    <value>_Rest pause</value>
+  </data>
+  <data name="SetInfoWindow_Help_SuperSlow" xml:space="preserve">
+    <value>Powtórzenia podczas serii super slow wykonywane są bardzo powoli i dokładnie. Zwykle mniejszym ciężarem.
+
+Dostępne tylko dla konta Premium lub Instruktor.</value>
+  </data>
+  <data name="SetInfoWindow_SuperSlow" xml:space="preserve">
+    <value>_Super slow</value>
+  </data>
+  <data name="usrExerciseWeightReport_RestPauseCHK" xml:space="preserve">
+    <value>_rest pause</value>
+  </data>
+  <data name="usrExerciseWeightReport_SuperSlowCHK" xml:space="preserve">
+    <value>_super slow</value>
+  </data>
+  <data name="TrainingPlanEditorWindow_ErrSaveWorkoutPlan" xml:space="preserve">
+    <value>Nie udało się zapisać planu treningowego.</value>
+  </data>
+  <data name="usrTrainingPlanSerieEditor_CHK_RestPause" xml:space="preserve">
+    <value>R_est pause</value>
+  </data>
+  <data name="usrTrainingPlanSerieEditor_CHK_SuperSlow" xml:space="preserve">
+    <value>_Super slow</value>
+  </data>
+  <data name="SetInfoWindow_DistanceLabel" xml:space="preserve">
+    <value>_Dystans:</value>
+  </data>
+  <data name="SetViewModel_CaloriesToolTipFormat" xml:space="preserve">
+    <value>Kalorie: {0:0} kcal
+</value>
+  </data>
+  <data name="SetViewModel_DistanceToolTipFormat" xml:space="preserve">
+    <value>Dystans: {0:0.##} {1}
+</value>
+  </data>
+  <data name="usrMood_Header_Mood" xml:space="preserve">
+    <value>Samopoczucie</value>
+  </data>
+  <data name="usrMood_Title_Mood" xml:space="preserve">
+    <value>Jak się dzisiaj czujesz?</value>
+  </data>
+  <data name="usrExerciseEditor_MetHelp" xml:space="preserve">
+    <value>Równoważnik metaboliczny. 1 MET odpowiada zużyciu O2 w spoczynku i wynosi 3,5 ml O2/kg masy ciała/min, lub 1 kcal/kg/godz lub 4,184 kJ/kg/godz. Jest używany do obliczenia spalanych kalorii dla ćwiczeń kardio. Dla większości ćwiczeń siłowych MET wynosi 5.
+
+Kliknij na link obok aby zobaczyć listę ćwiczeń wraz ze współczynnikami MET</value>
+  </data>
+  <data name="usrExerciseEditor_MetLabel" xml:space="preserve">
+    <value>M_ET:</value>
+  </data>
+  <data name="usrExerciseEditor_MetLink" xml:space="preserve">
+    <value>Pokaż ćwiczenia z MET</value>
+  </data>
+  <data name="usrExercisesView_Ribbon_Records" xml:space="preserve">
+    <value>Rekordy</value>
+  </data>
+</root>

@@ -1,0 +1,113 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.CustomerInfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls" SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}" toolkit:TiltEffect.IsTiltEnabled="true"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480">
+
+<Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <Converters:BoolToVisibilityConverter x:Key="boolToVisibilityConverter" />
+            <Converters:NegateBoolToVisibilityConverter x:Key="negateVisibilityConv" />
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" Title="{Binding FULLNAME}" SelectionChanged="pivot_SelectionChanged">
+                <controls:PivotItem Header="{Binding Path=Localizedresources.CustomerInfoPage_Header_Info,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <Controls:CachedImageCtrl  Margin="{StaticResource CustomMargin}" HorizontalAlignment="Left" Picture="{Binding Picture}" Width="140" Height="140">
+                                <Controls:CachedImageCtrl.RenderTransform>
+                                    <TranslateTransform x:Name="createdByTrans" X="700"/>
+                                </Controls:CachedImageCtrl.RenderTransform>
+                                <Controls:CachedImageCtrl.Triggers>
+                                    <EventTrigger >
+                                        <BeginStoryboard>
+                                            <Storyboard x:Name="createdAnimation"   >
+                                                <DoubleAnimation Duration="00:00:0.4"
+                                                        Storyboard.TargetName="createdByTrans" 
+                                                        Storyboard.TargetProperty="X" 
+                                                        From="700" To="0">
+                                                    <DoubleAnimation.EasingFunction>
+                                                        <SineEase EasingMode="EaseOut"/>
+                                                    </DoubleAnimation.EasingFunction>
+                                                </DoubleAnimation>
+
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Controls:CachedImageCtrl.Triggers>
+                            </Controls:CachedImageCtrl>
+
+                            <StackPanel Orientation="Horizontal" Margin="12,12,0,0" Visibility="{Binding Customer.IsVirtual,Converter={StaticResource boolToVisibilityConverter}}">
+                                <Image Margin="0" Source="/Images/VirtualCustomer32.png" Width="32" Height="32" />
+                                <TextBlock Margin="12,0,0,0" Text="{Binding Path=Localizedresources.CustomerInfoPage_VirtualCustomer,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomAccentFullBrush}"  Style="{StaticResource CustomTextLargeStyle}" />    
+                            </StackPanel>
+                            
+
+                            <TextBlock Margin="12,12,0,0" Text="{Binding Path=Localizedresources.ProfileInfoPage_Gender,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}"  Style="{StaticResource CustomTextLargeStyle}" />
+                            <TextBlock Text="{Binding Gender}" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomSubtleBrush}"/>
+
+                            <TextBlock Margin="12,12,0,0" Text="{Binding Path=Localizedresources.CustomerInfoPage_Birthday,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}"  Style="{StaticResource CustomTextLargeStyle}" Visibility="{Binding HasBirthday,Converter={StaticResource boolToVisibilityConverter}}"/>
+                            <TextBlock Text="{Binding Customer.Birthday,StringFormat=d}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Visibility="{Binding HasBirthday,Converter={StaticResource boolToVisibilityConverter}}"/>
+
+                            <StackPanel Name="pnlLinks">
+                                <HyperlinkButton Margin="0" Visibility="{Binding HasEmail,Converter={StaticResource boolToVisibilityConverter}}" Style="{StaticResource HyperlinkButtonStyle}"   FontSize="{StaticResource CustomFontSizeLarge}" VerticalAlignment="Bottom"   Click="btnSendEmail_Click" >
+                                    <StackPanel>
+                                        <TextBlock Margin="0"  Text="{Binding Path=Localizedresources.CustomerInfoPage_EMail,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                        <TextBlock Margin="0" Text="{Binding Customer.Email}" Style="{StaticResource CustomTextAccentStyle}"/>
+                                    </StackPanel>
+                                </HyperlinkButton>
+
+                                <HyperlinkButton Margin="0" Visibility="{Binding HasPhone,Converter={StaticResource boolToVisibilityConverter}}" Style="{StaticResource HyperlinkButtonStyle}"   FontSize="{StaticResource CustomFontSizeLarge}" VerticalAlignment="Bottom"   Click="btnCallPhone_Click" >
+                                    <StackPanel>
+                                        <TextBlock Margin="0"  Text="{Binding Path=Localizedresources.CustomerInfoPage_Phone,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                        <TextBlock Margin="0" Text="{Binding Customer.PhoneNumber}" Style="{StaticResource CustomTextAccentStyle}"/>
+                                    </StackPanel>
+                                </HyperlinkButton>
+                                
+                                <HyperlinkButton Margin="0"  Style="{StaticResource HyperlinkButtonStyle}"   FontSize="{StaticResource CustomFontSizeLarge}" VerticalAlignment="Bottom"   Click="btnShowCalendar_Click" Content="{Binding Path=Localizedresources.ProfileInfoPage_ShowCalendar,Mode=OneTime, Source={StaticResource LocalizedStrings}}" >
+                                </HyperlinkButton>
+                            </StackPanel>
+                            
+                            
+                            <!--<TextBlock Margin="12,12,0,0" Text="{Binding Path=Localizedresources.CustomerInfoPage_EMail,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}"  Style="{StaticResource CustomTextLargeStyle}" Visibility="{Binding HasEmail,Converter={StaticResource boolToVisibilityConverter}}"/>
+                            <TextBlock Text="{Binding Customer.Email}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Visibility="{Binding HasEmail,Converter={StaticResource boolToVisibilityConverter}}"/>
+
+                            <TextBlock Margin="12,12,0,0" Text="{Binding Path=Localizedresources.CustomerInfoPage_Phone,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}"  Style="{StaticResource CustomTextLargeStyle}" Visibility="{Binding HasPhone,Converter={StaticResource boolToVisibilityConverter}}"/>
+                            <TextBlock Text="{Binding Customer.PhoneNumber}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Visibility="{Binding HasPhone,Converter={StaticResource boolToVisibilityConverter}}"/>-->
+
+                            <TextBlock Margin="12,12,0,0" Text="{Binding Path=Localizedresources.CustomerInfoPage_CreatedDate,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}"  Style="{StaticResource CustomTextLargeStyle}" />
+                            <TextBlock Text="{Binding CreatedDate}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" />
+                            
+
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+                <controls:PivotItem Header="{Binding Path=Localizedresources.ProfileInfoPage_HeaderMeasurements,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBlock Name="lblOfflineMode1"  Foreground="{StaticResource CustomForegroundBrush}" TextWrapping="Wrap" Style="{StaticResource CustomTextLargeStyle}" Visibility="Collapsed" Text="{Binding Path=Localizedresources.OfflineModeFeatureNotAvailable,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <TextBlock Name="lblStatus" TextWrapping="Wrap" Foreground="{StaticResource CustomForegroundBrush}"  Visibility="{Binding HasMeasurements,Converter={StaticResource negateVisibilityConv}}" Text="{Binding Path=Localizedresources.CustomerInfoPage_MsgNoMeasurements,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" />
+                            <!--<TextBlock Text="User didn't put any measurements yet"  Visibility="{Binding HasMeasurements,Converter={StaticResource negateBoolToVisibilityConverter}}" Style="{StaticResource CustomTextLargeStyle}"/>-->
+                            <my:MeasurementsControl x:Name="sizesCtrl"  ReadOnly="true" Visibility="Collapsed"  />
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+            </controls:Pivot>
+
+        </Grid>
+    </Grid>
+</Animations:AnimatedBasePage>

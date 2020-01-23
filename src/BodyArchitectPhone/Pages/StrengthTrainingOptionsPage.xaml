@@ -1,0 +1,86 @@
+﻿<pages:StrengthTrainingPageBase  x:Class="BodyArchitect.WP7.Pages.StrengthTrainingOptionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls" xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls" xmlns:conv="clr-namespace:BodyArchitect.WP7"
+    xmlns:pages="clr-namespace:BodyArchitect.WP7.Pages"
+                              FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}" toolkit:TiltEffect.IsTiltEnabled="true"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480">
+
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        
+        <Grid.Resources>
+            <Converters:ColorToBrushConverter x:Key="colorConv"/>
+            <Converters:NegateBoolToVisibilityConverter x:Key="notBoolToVisibility" />
+            <Converters:BoolToVisibilityConverter x:Key="boolToVisib"/>
+            <conv:ReportStatusToBoolConverter x:Key="reportStatusConverter" />
+            
+            <DataTemplate x:Name="MyPlacesTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <Border Background="{Binding Color,Converter={StaticResource colorConv}}" Width="34" Height="34"/>
+                    <Image Margin="12 0 0 0" Source="/Images/Records32.png" Visibility="{Binding NotForRecords,Converter={StaticResource notBoolToVisibility}}" Width="32" Height="32" />
+                    <Rectangle Fill="Transparent"  Width="44" Height="32" Visibility="{Binding NotForRecords,Converter={StaticResource boolToVisib}}"/>
+                    <TextBlock Text="{Binding Name}" Margin="12 0 0 0"/>
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Name="MyPlacesFullTemplate">
+                <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
+                    <Border Background="{Binding Color,Converter={StaticResource colorConv}}" Width="34" Height="34"/>
+                    <Image Margin="12 0 0 0" Source="/Images/Records32.png" Visibility="{Binding NotForRecords,Converter={StaticResource notBoolToVisibility}}" Width="32" Height="32" />
+                    <Rectangle Fill="Transparent"  Width="44" Height="32" Visibility="{Binding NotForRecords,Converter={StaticResource boolToVisib}}"/>
+                    <TextBlock Text="{Binding Name}" Style="{StaticResource CustomTextExtraLargeStyle}" Margin="12 0 0 0"/>
+                </StackPanel>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+
+            <my:TimerControl Grid.Row="1" HorizontalAlignment="Center" Name="ctrlTimer"/>
+            
+            <StackPanel x:Name="TitlePanel" Grid.Row="2" Margin="12,17,0,28">
+                <TextBlock Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                </TextBlock>
+                <TextBlock x:Name="PageTitle" Foreground="{StaticResource CustomForegroundBrush}" Text="{Binding Path=Localizedresources.StrengthTrainingItemOptionsPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource CustomTextTitle1Style}" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="3">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="{StaticResource CustomSubtleBrush}" VerticalAlignment="Center" Text="{Binding Path=Localizedresources.StrengthTrainingOptionsPage_MyPlaces_Label,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="12,0,12,0" />
+                    <Button Visibility="{Binding ShowMyPlacesHelp,Converter={StaticResource boolToVisib}}" Style="{StaticResource ImageButton}" BorderThickness="0" Click="btnMyPlacesHelp_Click" >
+                        <Image Source="/Images/HelpLicence16.png" Height="32" Width="32" />
+                    </Button>
+                </StackPanel>
+
+                <TextBlock Style="{StaticResource CustomTextLargeStyle}" Text="{Binding SelectedMyPlace.Name}" Margin="12,6,12,0" Visibility="{Binding EditMode,Converter={StaticResource notBoolToVisibility}}"/>
+
+                <Controls:FixedListPicker ItemCountThreshold="9" FullModeItemTemplate="{StaticResource MyPlacesFullTemplate}" ItemTemplate="{StaticResource MyPlacesTemplate}" ItemsSource="{Binding MyPlaces}"  
+                                    SelectedItem="{Binding SelectedMyPlace,Mode=TwoWay}" IsEnabled="{Binding CanChangeMyPlace}"  Visibility="{Binding EditMode,Converter={StaticResource boolToVisib}}"/>
+
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,0" Text="{Binding Path=Localizedresources.StrengthTrainingOptionsPage_MyPlaces_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+
+                <toolkit:ToggleSwitch  Margin="0,18,0,0" Foreground="{StaticResource CustomForegroundBrush}" IsHitTestVisible="{Binding EditMode}" Content="{Binding Path=Localizedresources.HideInReports,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Unchecked="tsShowInReports_Checked" Checked="tsShowInReports_Checked" Header="{Binding Path=Localizedresources.StrengthWorkoutPage_ShowInReportsHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Entry.ReportStatus,Mode=TwoWay,Converter={StaticResource reportStatusConverter}}" Name="tsShowInReports" />
+
+
+                <TextBlock Margin="12,-12,0,0" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Path=Localizedresources.StrengthWorkoutPage_Comment,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:PhoneTextBox IsHitTestVisible="{Binding EditMode}"  Hint="{Binding Path=Localizedresources.CommentWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Text="{Binding Entry.Comment,Mode=TwoWay}" AcceptsReturn="True" Height="160" TextWrapping="Wrap" />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+
+</pages:StrengthTrainingPageBase>

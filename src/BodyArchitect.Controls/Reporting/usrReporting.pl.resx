@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbReportSettings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAqRJREFUOE+NkmtI
+        U3EYxhdIn6svQV+yvAVFUNAFIqICTQaholENNZmXgvy08LIuy9QiIsqQykuYmkhlk+NtKqXTpqc5J84t
+        FVLcvE+Y6S6enXnk6fyP7ujsiy88Xw7ned7f/+HdJeHHaDRe8XS803COGQlnn5BEVoyeId93MAvEfFyv
+        17v7aB2MdBdakyPAcdyOxC84LVGpVLspirrV9iwDPaUZaE2KAMMwAfJ4PHC73aKcTidWV1chBAQSaKGR
+        hf8XQAJJiF8ulws+n289wE+gyc+AriQdmhvh8Hq9gpQ1NuRU25DNK6vKiqyPVtzjRWjEAJGgl3SgRfO1
+        cLAsK4iYq7ULqOJV2bmApjY1Rmuu4w9ViMEPkSjJPPhYJGh+ko6fb9PQlBAmpBNt3VpWW465jmwsDTUB
+        rhn8HaqD9mmUY7ODDYKGuDChIBLgf8ryJIXF4TywUw2Y077AilkNzqrDQFkau0mgSkN3cSoaYkNFs6LC
+        iqJPn+GwPMTaig4r43fh6MvESLUclsrbkF0KjQ8k6NWCuhoiBJAOlqbasWjOxRpDwzOWDGZSBuewErbK
+        GAzqWhAUFHRWJGh8kIquN3LUS0ME89TQN8wZsjfMSWBsN7FsuY/xUin6f3zF/Pz8tjvgO+jnCdTRhzFt
+        pjDSnsVjd4OZkMM7mYglnmTsfTT6u1sxOzsrXGrAHTTmytH5KgW18cH43aKESfMa0/oEeCZkcAzmYKw8
+        hjdrBDMpWQzYegeE4Mvzy4DTitHSeHQoD6CH39rzMgqWX+2w2+3YOiKBQqE4VCM9hvrEUyhIPQqWLgar
+        L4K+8CLq7oTB2NUIs9kMk8kEg8EAfiloml5/gn9SQvdceHRif17c+b2+/OQj3PeCSE5dcG5AenJf7MaP
+        5OftCv4HxVC+pEwOZZMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbReportSettings.ToolTipText" xml:space="preserve">
+    <value>Wyświetla panel umożliwiający zmianę parametrów raportu</value>
+  </data>
+  <data name="tbSaveReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAArVJREFUOE+NkulO
+        E1EcxW/B8Ml3MPEBTChtNdEn8B00bC0tSwKIyKbRxA9iBAlGIoug0LCjKFtpFQ3KUgQsGEyBFtoilAJd
+        gU7ptHP8z1T5SJjk5GZm7vmdcxeZKtdUBMYuQcZuMMYuJzHhImO4wFiyjNEP8UlOkrEkEiCwOB8PpKQk
+        28Ixvnqh4WY/U+lMzUuOMJYcHCK8AI4UPokjcBzDXiAKb4iX3rloHPtBHradY8Fo8fC3q6cPVLrhLKbK
+        M1qXNsN42OtBOEpmmpj9bBa+Qx57ZAiFYxI4SKPr4ATr7giMFh8+Ww5wvdAUIcCngIUAD7p3pUmiRIAn
+        GIXviJeSxQa71Ma+G8H6DoeKDie+rfih1A0LBBiPztuPCeCWJonS1JjhofEwEkeEWvmPYtj0iOkcVrc5
+        lLU70DPphlI7CgIYBLPtCPe73HBSRVFb3hNKj0nph1wc297oqdm6Hca9NxvQT/yBImdYBJgws0qAzh2p
+        uprSc2rNyK//gQKSrm4Oavou/vuvkpY1tBmdUGiGCJBrwpQ1hEr9Fq2NRGOl3oXKDlFOlLc7KXETpW0b
+        KGm1o7hlHSWvbWgasUOh/pAATK6EEmZSwkgiiGgue+uQKt9tJQAZ7zSvkVbxcnANadnvE4CJ5QCZXf/k
+        PE2XzJRc2maXzMVkLGq0orDxN2r7VpCWNSACjDBZ/Khod0nnfR4VNPzC065lyDP7wK7RJhoW/VJdjo7s
+        ydfMMyXeidwXP/G4YxHyjF4C5JswOu+jBgnApO3LmRIB2roFPGqdJ0A32NW8MWFozksAx7kbqGvmUNVs
+        Rmq6XmByrXFjYHofA1N751q/uEdVTbMofzWD1Ft6L1Pqxp8rdYYRhcbgU2rH6HqOSDdMofmINPUgHdU7
+        yLP6acN6qXIPpXZLyVfSO4OpGZ3f/wLAiwVv0HMeJgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbSaveReport.ToolTipText" xml:space="preserve">
+    <value>Zapisuje wygenerowany raport do pliku graficznego</value>
+  </data>
+  <data name="tbGenerateReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAtlJREFUOE9jYKAG
+        MCk79j96+t0Qss0CGWBXezTNf9Ld5ciGvIuI6nofFv7gfXjk5XdhkXE4LTApPfrfvP2hsX3n7b8WvY84
+        QQo/+Podfu/j/+uTf9Cpt37Bd98GBv/+EBj86ENQkBKGQSYlR/4zrPrPrFPz4Kd+/YNtX+0c2j86OP/7
+        5OJiA1P8wdlb6aOr98d37r7fvCffb0AxxLj48H9lt2ZZ6bKHXemx63990jf9/s3MYiqyIqO6B73mjXf+
+        mjXd/23Tdv+nXeudf3B5o+JD/2GcF1qW/x4aOv1E1iyX+2CFYv6932rFd+f/MDBX/WZs9n9pdMd0hAFF
+        B8AG/BKVWvpNUua3ld/271yJ9ycxhP5nFki6v0Mw7t6PzEVWv1LnG/4PWWnB+UNL98A3Le0PcAMMCvf9
+        rzEI1P/FK/jvN69gG0PEgxaG8Af/mULu/mUOv/uPNeReeMJ8va+Nm6P+h8/Q+B/SK8P5TU7xF8KA/L3/
+        /zGw+f9hYr4DE8xfavs/d4HFv/R5xv8S5+r/r1kf+n/V6Yn/S1b7/3fqF//7Rl5yC9wA/bzd/38wMIcA
+        Q0UcJpi92Pz/hnPT/q89OwWsccXpCf8n7Cn5v/B41/+MpW7/TdvZ/xp3MPCD1evl7vw/W1jdAabZoc1w
+        WjLQvyDNfbvy/3fuyP7fui3tf8PmxP9NW9P/zzjU/D9mgc1/1XqGP2A9utnb/9sWaEhalGjPNC/VfWRa
+        qv02erbm/5WnJvxfeqL3/8JjXf/nHe0AGpL1f/qhpv9pSz3+y9UyvJKqYjCAGJC17b9Buqa/fqaGm0ag
+        uatFoQxn4BTFf5590v+ce0T/WXfw/4ubb/V/2sGG/0mL3f7LVDB9lC3lNIGHgXbmlv/aGZv/a2VsAuKN
+        /7XSNgDx+v+aIJy67r8GEGs3cfyPX+j8X6FS6L9a2sT/Gsmr4WkHI2ljE1CsYvgqV838X7yaQRFZHgAB
+        5FYTAl29fwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbGenerateReport.ToolTipText" xml:space="preserve">
+    <value>Generuje raport korzystając z bieżących ustawień</value>
+  </data>
+</root>

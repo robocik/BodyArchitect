@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://MYBASERVICE.TK/" elementFormDefault="qualified" targetNamespace="http://MYBASERVICE.TK/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd2" namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Admin" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" />
+  <xs:element name="DeleteOldProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q1:DeleteOldProfilesParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOldProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="DeleteOldProfilesResult" nillable="true" type="q2:ArrayOfUserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="topic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Admin" minOccurs="0" name="mode" type="q3:SendMessageMode" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="countriesId" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUnusedImages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q5:DeleteOldProfilesParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUnusedImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" minOccurs="0" name="DeleteUnusedImagesResult" nillable="true" type="q6:ArrayOfPictureInfoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOrphandExerciseRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q7:DeleteOldProfilesParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOrphandExerciseRecordsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

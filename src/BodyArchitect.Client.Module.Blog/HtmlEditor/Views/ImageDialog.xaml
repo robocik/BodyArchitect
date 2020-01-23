@@ -1,0 +1,146 @@
+﻿<Window x:Class="BodyArchitect.Client.Module.Blog.ImageDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:BodyArchitect.Client.Module.Blog"
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+        Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False"
+        Title="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:WinTitle_InsertImage}"
+		Height="470" Width="780" Icon="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/image.png">
+    <Window.Resources>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+			<Setter Property="HorizontalContentAlignment" Value="Right" />
+			<Setter Property="VerticalContentAlignment" Value="Center" />
+		</Style>
+        <Style x:Key="NumericText" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Margin" Value="5" />
+			<Setter Property="Width" Value="60" />
+			<Setter Property="local:PositiveIntegerInput.Enable" Value="True" />
+		</Style>
+        <Style x:Key="StringText" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Margin" Value="5" />
+			<Setter Property="Width" Value="150" />
+		</Style>
+        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+			<Setter Property="Margin" Value="5" />
+		</Style>
+        <Style x:Key="ZoomButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ContentPresenter />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <local:ObjectToBooleanConverter x:Key="BooleanConverter" />
+        <local:ObjectToVisibilityConverter x:Key="VisibilityConverter" />
+        <local:ReversedObjectToVisibilityConverter x:Key="ReversedVisibilityConverter" />
+    </Window.Resources>
+    <DockPanel>
+        <Border x:Name="TopContentArea" BorderThickness="0" Padding="8" DockPanel.Dock="Top">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                    <Button x:Name="RefreshButton" Padding="3,2" Margin="5,0,5,0" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Button_Refresh}">
+                        <Image Source="/BodyArchitect.Client.Resources;Component/Images/refresh32.png" Width="16" Height="16" />
+                    </Button>
+                    <Button x:Name="BrowseButton" Visibility="Collapsed" Padding="3,2" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Button_Browse}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/browser.png" Width="16" Height="16" />
+                            <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Button_Browse}" Padding="4,0" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <Border BorderThickness="0" CornerRadius="2">
+                     <TextBox x:Name="UrlText" Padding="3,2,3,1" Text="{Binding Path=ImageUrl, Mode=TwoWay}" />
+                </Border>
+            </DockPanel>
+        </Border>
+        <Border  BorderThickness="0" Padding="8" DockPanel.Dock="Bottom">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="OkayButton"  Margin="8,0" Style="{StaticResource OkButton}"
+							IsEnabled="{Binding Path=Image, Converter={StaticResource BooleanConverter}}" />
+                <Button x:Name="CancelButton" Style="{StaticResource CancelButton}"  />
+            </StackPanel>
+        </Border>
+        <Border  BorderThickness="0" Padding="8" DockPanel.Dock="Right">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_ImgWidth}" Grid.Row="0" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_ImgHeight}" Grid.Row="1" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_HSpace}" Grid.Row="2" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_VSpace}" Grid.Row="3" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_Border}" Grid.Row="4" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_ImgAlignment}" Grid.Row="5" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_ImgTitle}" Grid.Row="6" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_AltText}" Grid.Row="7" />
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_Link}" Grid.Row="8" />
+                    <TextBox Grid.Row="0" Grid.Column="1"
+								 Style="{StaticResource NumericText}" Text="{Binding Path=Width, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox Grid.Row="1" Grid.Column="1"
+								 Style="{StaticResource NumericText}" Text="{Binding Path=Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox Grid.Row="2" Grid.Column="1"
+								 Style="{StaticResource NumericText}" Text="{Binding Path=HorizontalSpace, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox Grid.Row="3" Grid.Column="1"
+								 Style="{StaticResource NumericText}" Text="{Binding Path=VerticalSpace, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox Grid.Row="4" Grid.Column="1"
+								 Style="{StaticResource NumericText}" Text="{Binding Path=BorderSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <ComboBox x:Name="ImageAlignmentSelection" Grid.Row="5" Grid.Column="1" SelectedItem="{Binding Path=Alignment, Mode=TwoWay}" />
+
+                    <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" 
+								 Style="{StaticResource StringText}" Text="{Binding Path=TitleText, Mode=TwoWay}" />
+                    <TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3"
+								 Style="{StaticResource StringText}" Text="{Binding Path=AltText, Mode=TwoWay}" />
+                    <TextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3"
+								 Style="{StaticResource StringText}" Text="{Binding Path=LinkUrl, Mode=TwoWay}" />
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Border Background="{StaticResource ControlBackgroundBrush}">
+            <Grid>
+                <Label x:Name="StatusPrompt" HorizontalContentAlignment="Center"
+						   Content="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Label_NoPreview}"
+						   Visibility="{Binding Path=Image, Converter={StaticResource ReversedVisibilityConverter}}" />
+                <ScrollViewer x:Name="PreviewScroll" Panel.ZIndex="1"
+								  HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+                    <Image x:Name="PreviewImage" Stretch="Fill" Width="{Binding Path=Width, Mode=OneWay}" Height="{Binding Path=Height, Mode=OneWay}" />
+                </ScrollViewer>
+                <StackPanel x:Name="SliderGroup" Panel.ZIndex="2" Margin="{StaticResource MarginLargeLeft}"
+								HorizontalAlignment="Right" VerticalAlignment="Bottom"
+								Visibility="{Binding Path=Image, Converter={StaticResource VisibilityConverter}}" >
+                    <Button x:Name="ZoomInButton" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Button_ZoomIn}" Style="{StaticResource ZoomButton}">
+                        <Image Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/ZoomIn.png" Width="16" Height="16" />
+                    </Button>
+                    <Slider x:Name="ResizeSlider" Orientation="Vertical" HorizontalAlignment="Center"
+								Height="100" Margin="2" Maximum="200" Minimum="0" LargeChange="1" TickFrequency="25"
+								AutoToolTipPlacement="BottomRight" TickPlacement="BottomRight" />
+                    <Button x:Name="ZoomOutButton" ToolTip="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Button_ZoomOut}" Style="{StaticResource ZoomButton}">
+                        <Image Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/ZoomOut.png" Width="16" Height="16" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </DockPanel>
+</Window>

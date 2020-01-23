@@ -1,0 +1,166 @@
+﻿<my:usrEntryObjectBase xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI" 
+             x:Class="BodyArchitect.Client.Module.Suplements.Controls.usrSupplementsEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+                         xmlns:local="clr-namespace:BodyArchitect.Client.Module.Suplements.Controls"
+                         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                         xmlns:Suplements="clr-namespace:BodyArchitect.Client.Module.Suplements" xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ExGridSplitter;assembly=BodyArchitect.Client.UI" d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/BodyArchitect.Client.Module.Suplements;component/Themes/generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        
+            <Suplements:LocalizedDosageTypeConverter x:Key="dosageTypeConv" />
+            <Suplements:LocalizedTimeTypeConverter x:Key="timeTypeConv" />
+            
+            <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource CellStyle}">
+                <EventSetter Event="PreviewMouseLeftButtonDown" Handler="DataGridCell_PreviewMouseLeftButtonDown"></EventSetter>
+                <EventSetter Event="PreviewTextInput" Handler="DataGridCell_PreviewTextInput"></EventSetter>
+            </Style>
+            <Style x:Key="RowStyle" TargetType="{x:Type DataGridRow}" BasedOn="{StaticResource RowStyle}">
+                <Setter Property="ValidationErrorTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid ToolTip="{Binding RelativeSource={RelativeSource
+                                     FindAncestor, AncestorType={x:Type DataGridRow}},
+                                     Path=(Validation.Errors)[0].ErrorContent}">
+                                <Ellipse Width="12" Height="12"
+                            Fill="Red" Stroke="Black"
+                            StrokeThickness="0.5"/>
+                                <TextBlock FontWeight="Bold" Padding="4,0,0,0"
+                              VerticalAlignment="Top" Foreground="White" Text="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_Text_ExclamationMark}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Controls:BADataGrid RowStyle="{StaticResource RowStyle}"  Name="grid" ItemsSource="{Binding Items}" AutoGenerateColumns="false"
+                                 CellEditEnding="grid_CellEditEnding" VerticalAlignment="Top"
+                     ClipboardCopyMode="ExcludeHeader" CurrentCellChanged="grid_CurrentCellChanged" CanUserAddRows="false">
+        <Controls:BADataGrid.Columns>
+            <DataGridTemplateColumn Header="" >
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Visibility="{Binding CanDelete,Converter={StaticResource boolVisibConv}}" Tag="{Binding}" Click="btnDelete_Click"
+                                         ToolTip="{lex:LocText BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_DeleteRowButtonTip}">
+                            <Image Stretch="Uniform" Source="/BodyArchitect.Client.Module.Suplements;component/Resources/Delete.png" />
+                        </Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn  Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_SupplementsColumnHeader}" Width="*">
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <local:SupplementsFilteredComboBox  ItemContainerStyle="{StaticResource StretchedComboBoxItemStyle}" ItemTemplate="{StaticResource SupplementsComboBoxItem}" TextSearch.TextPath="Name"  SelectedValue="{Binding Supplement,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"    >
+                        </local:SupplementsFilteredComboBox>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Supplement.Name}" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+
+            <DataGridTemplateColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_NameColumnHeader}" Width="200">
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <TextBox  Text="{Binding Name,Mode=TwoWay}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_InfoColumnHeader}" Width="100">
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+
+                        <Controls:MyMultiLineTextEditor  Text="{Binding Comment,Mode=TwoWay}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <!--<xctk:WatermarkTextBox HorizontalAlignment="Stretch" IsReadOnly="true" Text="{Binding Comment}" />-->
+                        <TextBlock Text="{Binding Comment}" TextTrimming="CharacterEllipsis" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_DosageColumnHeader}" Width="70">
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <xctk:DoubleUpDown  ShowButtonSpinner="False"  AllowSpin="False" Value="{Binding Dosage,Mode=TwoWay}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Dosage,StringFormat={}{0:.##}}" />
+
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+
+            <DataGridTemplateColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_DosageTypeColumnHeader}" Width="100">
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <ComboBox  SelectedValue="{Binding DosageType,Mode=TwoWay}"  ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, 
+                                        AncestorType={x:Type DataGrid}}, Path=DataContext.DosageTypes}" DisplayMemberPath="Text" SelectedValuePath="Value" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding DosageType,Converter={StaticResource dosageTypeConv}}" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_TimeTypeColumnHeader}" Width="70">
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <ComboBox  SelectedValue="{Binding TimeType,Mode=TwoWay}"  ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, 
+                                        AncestorType={x:Type DataGrid}}, Path=DataContext.TimeTypes}" DisplayMemberPath="Text" SelectedValuePath="Value" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding TimeType,Converter={StaticResource timeTypeConv}}" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:usrSupplementsEntry_TimeColumnHeader}" Width="70">
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <xctk:TimePicker  Value="{Binding Time,Mode=TwoWay}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Name="tbTime" Text="{Binding Time,StringFormat=t}" />
+                        <DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding HasTime}" Value="false">
+                                <!--<Setter Property="Visibility" TargetName="tbTime" Value="Collapsed"/>-->
+                                <Setter Property="Text" TargetName="tbTime" Value=""/>
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+        </Controls:BADataGrid.Columns>
+    </Controls:BADataGrid>
+
+</my:usrEntryObjectBase>

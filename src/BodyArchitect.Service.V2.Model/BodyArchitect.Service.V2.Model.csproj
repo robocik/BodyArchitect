@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DCFCC632-2849-421F-BF34-054B8DF0F6E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Service.V2.Model</RootNamespace>
+    <AssemblyName>BodyArchitect.Service.V2.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Service.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BodyArchitect.Service.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Service.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Service.Model.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A6WDay.cs" />
+    <Compile Include="A6WEntryDTO.cs" />
+    <Compile Include="A6WManager.cs" />
+    <Compile Include="Achievements\Achievements.cs" />
+    <Compile Include="AddressDTO.cs" />
+    <Compile Include="BAGlobalObject.cs" />
+    <Compile Include="Championships\ChampionshipOperationParams.cs" />
+    <Compile Include="Championships\GetChampionshipsCriteria.cs" />
+    <Compile Include="Championships\ScheduleChampionshipDTO.cs" />
+    <Compile Include="CloneCleaner.cs" />
+    <Compile Include="FeaturedEntryObjectDTO.cs" />
+    <Compile Include="FeaturedData.cs" />
+    <Compile Include="GetFeaturedDataParam.cs" />
+    <Compile Include="GetGPSCoordinatesParams.cs" />
+    <Compile Include="GPSCoordinatesDTO.cs" />
+    <Compile Include="GPSCoordinatesOperationParam.cs" />
+    <Compile Include="GPSOperationParam.cs" />
+    <Compile Include="GPSTrackerEntryDTO.cs" />
+    <Compile Include="GPSTrackerHelper.cs" />
+    <Compile Include="LicenceInfoDTO.cs" />
+    <Compile Include="MyPlaceDTO.cs" />
+    <Compile Include="MyPlaceLightDTO.cs" />
+    <Compile Include="MyPlaceOperationParam.cs" />
+    <Compile Include="MyPlaceSearchCriteria.cs" />
+    <Compile Include="PaymentAccountType.cs" />
+    <Compile Include="Reports\ExerciseRecordsParams.cs" />
+    <Compile Include="Reports\ExerciseRecordsReportResultItem.cs" />
+    <Compile Include="Reports\MeasurementsTimeReportResultItem.cs" />
+    <Compile Include="Reports\WeightExerciseReportResultItem.cs" />
+    <Compile Include="Reports\WeightReperitionReportResultItem.cs" />
+    <Compile Include="SaveChampionshipResult.cs" />
+    <Compile Include="SaveTrainingDayResult.cs" />
+    <Compile Include="SupplementsCycle\SupplementsCycleRepetiter.cs" />
+    <Compile Include="TrainingDayCommentDTO.cs" />
+    <Compile Include="BlogEntryDTO.cs" />
+    <Compile Include="ClientInformation.cs" />
+    <Compile Include="CommentEntryDTO.cs" />
+    <Compile Include="CommentsListPack.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="CustomerSettingsDTO.cs" />
+    <Compile Include="DataInfoDTO.cs" />
+    <Compile Include="DeleteTrainingDayParam.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Exceptions\BAAuthenticationException.cs" />
+    <Compile Include="ExerciseLightDTO.cs" />
+    <Compile Include="ExerciseOperationParam.cs" />
+    <Compile Include="ExerciseSearchCriteria.cs" />
+    <Compile Include="FriendInvitationDTO.cs" />
+    <Compile Include="GetMessagesCriteria.cs" />
+    <Compile Include="GetMyTrainingsParam.cs" />
+    <Compile Include="GetProfileInformationCriteria.cs" />
+    <Compile Include="GetRemindersParam.cs" />
+    <Compile Include="GetSupplementsCycleDefinitionsParam.cs" />
+    <Compile Include="GetSupplementsParam.cs" />
+    <Compile Include="ImportDataHolder.cs" />
+    <Compile Include="Instructor\ActivityDTO.cs" />
+    <Compile Include="Instructor\CustomerDTO.cs" />
+    <Compile Include="Instructor\CustomerGroupDTO.cs" />
+    <Compile Include="Instructor\CustomerGroupSearchCriteria.cs" />
+    <Compile Include="Instructor\CustomerSearchCriteria.cs" />
+    <Compile Include="Instructor\GetPaymentBasketParam.cs" />
+    <Compile Include="Instructor\GetProductsParam.cs" />
+    <Compile Include="Instructor\GetScheduleEntriesParam.cs" />
+    <Compile Include="Instructor\PaymentBaseDTO.cs" />
+    <Compile Include="Instructor\PaymentBasketDTO.cs" />
+    <Compile Include="Instructor\ProductDTO.cs" />
+    <Compile Include="Instructor\ProductInfoDTO.cs" />
+    <Compile Include="Instructor\ReservationOperationResult.cs" />
+    <Compile Include="Instructor\ReservationsOperationParam.cs" />
+    <Compile Include="Instructor\SaveScheduleEntryRangeParam.cs" />
+    <Compile Include="Instructor\ScheduleEntryDTO.cs" />
+    <Compile Include="Instructor\ScheduleEntryReservationDTO.cs" />
+    <Compile Include="InviteFriendOperationData.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="Localization\ValidationStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MapperData.cs" />
+    <Compile Include="MessageDTO.cs" />
+    <Compile Include="MessageOperationParam.cs" />
+    <Compile Include="PartialRetrievingInfo.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="EntryObjectDTO.cs" />
+    <Compile Include="Exceptions\BAServiceException.cs" />
+    <Compile Include="ExerciseDTO.cs" />
+    <Compile Include="IHasPicture.cs" />
+    <Compile Include="IHtmlProvider.cs" />
+    <Compile Include="IMovable.cs" />
+    <Compile Include="IRepositionableParent.cs" />
+    <Compile Include="ModelHelper.cs" />
+    <Compile Include="MyTrainingDTO.cs" />
+    <Compile Include="PictureDTO.cs" />
+    <Compile Include="ProfileDTO.cs" />
+    <Compile Include="ProfileInformationDTO.cs" />
+    <Compile Include="ProfileOperationParam.cs" />
+    <Compile Include="ProfilePrivacyDTO.cs" />
+    <Compile Include="ProfileSettingsDTO.cs" />
+    <Compile Include="ProfileStatisticsDTO.cs" />
+    <Compile Include="ProfileUpdateData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReminderItemDTO.cs" />
+    <Compile Include="ReminderOperationParam.cs" />
+    <Compile Include="Reports\ReportExerciseWeightParams.cs" />
+    <Compile Include="Reports\ReportMeasurementsTimeParams.cs" />
+    <Compile Include="Reports\ReportWeightRepetitionsParams.cs" />
+    <Compile Include="SerieDTO.cs" />
+    <Compile Include="SessionData.cs" />
+    <Compile Include="SizeEntryDTO.cs" />
+    <Compile Include="StrengthTrainingEntryDTO.cs" />
+    <Compile Include="StrengthTrainingItemDTO.cs" />
+    <Compile Include="SuplementDTO.cs" />
+    <Compile Include="SuplementItemDTO.cs" />
+    <Compile Include="SuplementsEntryDTO.cs" />
+    <Compile Include="SupplementsCycleDefinitionOperationParam.cs" />
+    <Compile Include="SupplementsCycle\SupplementCycleDefinitionDTO.cs" />
+    <Compile Include="SupplementsCycle\SupplementCycleDosageDTO.cs" />
+    <Compile Include="SupplementsCycle\SupplementCycleWeekDTO.cs" />
+    <Compile Include="SupplementsCycle\SupplementsCycleDTO.cs" />
+    <Compile Include="SupplementsCycleEngine\XmlSerializationSupplementsCycleDefinitionFormatter.cs" />
+    <Compile Include="SupplementsCycleOperationParams.cs" />
+    <Compile Include="TrainingDayDTO.cs" />
+    <Compile Include="TrainingDayInfoDTO.cs" />
+    <Compile Include="TrainingPlans\TrainingBuilder.cs" />
+    <Compile Include="UserDTO.cs" />
+    <Compile Include="UserSearchCriteria.cs" />
+    <Compile Include="UserSearchDTO.cs" />
+    <Compile Include="Validators\ColorValidator.cs" />
+    <Compile Include="Validators\LanguageValidator.cs" />
+    <Compile Include="Validators\LanguageValidatorAttribute.cs" />
+    <Compile Include="Validators\SerieValidator.cs" />
+    <Compile Include="VoteParams.cs" />
+    <Compile Include="VoteResult.cs" />
+    <Compile Include="WeatherDTO.cs" />
+    <Compile Include="WeatherCondition.cs" />
+    <Compile Include="WorkoutDayGetOperation.cs" />
+    <Compile Include="WorkoutDaysSearchCriteria.cs" />
+    <Compile Include="WorkoutPlanDTO.cs" />
+    <Compile Include="TrainingPlans\SplitPlanChecker.cs" />
+    <Compile Include="TrainingPlans\TrainingPlan.cs" />
+    <Compile Include="TrainingPlans\TrainingPlanBase.cs" />
+    <Compile Include="TrainingPlans\TrainingPlanChecker.cs" />
+    <Compile Include="TrainingPlans\TrainingPlanCheckResult.cs" />
+    <Compile Include="TrainingPlans\TrainingPlanDay.cs" />
+    <Compile Include="TrainingPlans\TrainingPlanEntry.cs" />
+    <Compile Include="TrainingPlans\TrainingPlanPack.cs" />
+    <Compile Include="TrainingPlans\TrainingPlanSerie.cs" />
+    <Compile Include="TrainingPlans\XmlSerializationTrainingPlanFormatter.cs" />
+    <Compile Include="Validators\CountryValidator.cs" />
+    <Compile Include="Validators\CountryValidatorAttribute.cs" />
+    <Compile Include="Validators\EmailValidator.cs" />
+    <Compile Include="Validators\EMailValidatorAttribute.cs" />
+    <Compile Include="WorkoutPlanOperationParam.cs" />
+    <Compile Include="WorkoutPlanSearchCriteria.cs" />
+    <Compile Include="WP7\TrialStatusInfo.cs" />
+    <Compile Include="WymiaryDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\ValidationStrings.pl.resx" />
+    <EmbeddedResource Include="Localization\ValidationStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

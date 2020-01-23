@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="094A2EC2-D81C-4B41-B8F5-2A2DEB4BFF2F_Name" xml:space="preserve">
+    <value>Kreatyna - jabłczan</value>
+  </data>
+  <data name="094A2EC2-D81C-4B41-B8F5-2A2DEB4BFF2F_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="0BB3367F-509A-4CD2-9BB0-5CE9740A2DF8_Name" xml:space="preserve">
+    <value>Carbo</value>
+  </data>
+  <data name="0BB3367F-509A-4CD2-9BB0-5CE9740A2DF8_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="1062465F-365A-432E-BAEB-6A7ADA1A43EC_Name" xml:space="preserve">
+    <value>Regeneracja stawów</value>
+  </data>
+  <data name="1062465F-365A-432E-BAEB-6A7ADA1A43EC_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="13826022-8F20-4210-BF5E-0AA963CFC194_Name" xml:space="preserve">
+    <value>Tauryna</value>
+  </data>
+  <data name="13826022-8F20-4210-BF5E-0AA963CFC194_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="1C056347-996B-444A-98B9-4D00B1AF2663_Name" xml:space="preserve">
+    <value>CLA</value>
+  </data>
+  <data name="1C056347-996B-444A-98B9-4D00B1AF2663_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="1EE3FA0F-0835-4462-B8F7-1C036EFD5097_Name" xml:space="preserve">
+    <value>Glutamina</value>
+  </data>
+  <data name="1EE3FA0F-0835-4462-B8F7-1C036EFD5097_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="1F052451-42AA-4C8D-8FD8-E099C5237B1A_Name" xml:space="preserve">
+    <value>Gainer</value>
+  </data>
+  <data name="1F052451-42AA-4C8D-8FD8-E099C5237B1A_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="20F62CA7-B5CC-4765-B17E-B807F72C6234_Name" xml:space="preserve">
+    <value>Bulk</value>
+  </data>
+  <data name="20F62CA7-B5CC-4765-B17E-B807F72C6234_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="296004CF-4F0D-4FA9-8897-2349F3F411D3_Name" xml:space="preserve">
+    <value>Kreatyna - monohydrat</value>
+  </data>
+  <data name="296004CF-4F0D-4FA9-8897-2349F3F411D3_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="34A141F4-3448-4552-9AB7-1B2537F7DA1A_Name" xml:space="preserve">
+    <value>BCAA</value>
+  </data>
+  <data name="34A141F4-3448-4552-9AB7-1B2537F7DA1A_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="3B2BF26F-5310-4148-8E4E-3C0431C0FA75_Name" xml:space="preserve">
+    <value>Białko</value>
+  </data>
+  <data name="3B2BF26F-5310-4148-8E4E-3C0431C0FA75_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="4B1DF63B-24AF-4B98-95AE-70407BC4193E_Name" xml:space="preserve">
+    <value>Izotonik</value>
+  </data>
+  <data name="4B1DF63B-24AF-4B98-95AE-70407BC4193E_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="4E9DF6C8-9652-4C15-9CC5-A09A33F19C97_Name" xml:space="preserve">
+    <value>Odżywka przedtreningowa</value>
+  </data>
+  <data name="4E9DF6C8-9652-4C15-9CC5-A09A33F19C97_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="598A10DA-EE36-4706-8ABC-AA218B0AC142_Name" xml:space="preserve">
+    <value>Kreatyna - stack</value>
+  </data>
+  <data name="598A10DA-EE36-4706-8ABC-AA218B0AC142_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="677EBCC7-8113-4B81-9061-54D8CC07C7D2_Name" xml:space="preserve">
+    <value>Kofeina</value>
+  </data>
+  <data name="677EBCC7-8113-4B81-9061-54D8CC07C7D2_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="6924B01A-AE6B-4056-BEDA-7EDAE5F5B1C4_Name" xml:space="preserve">
+    <value>Spalacz tłuszczu</value>
+  </data>
+  <data name="6924B01A-AE6B-4056-BEDA-7EDAE5F5B1C4_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="6930E4C1-18E9-482E-BAF2-90697F4AE75E_Name" xml:space="preserve">
+    <value>Leucyna</value>
+  </data>
+  <data name="6930E4C1-18E9-482E-BAF2-90697F4AE75E_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="6F1E5C88-4BB2-4E61-BACE-F05BF4442AEB_Name" xml:space="preserve">
+    <value>L-Arginina</value>
+  </data>
+  <data name="6F1E5C88-4BB2-4E61-BACE-F05BF4442AEB_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="7281644E-6231-435A-A9F3-2E0D07411578_Name" xml:space="preserve">
+    <value>Dekstroza</value>
+  </data>
+  <data name="7281644E-6231-435A-A9F3-2E0D07411578_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="85BECB6E-6469-48FC-8249-3BC283ADEF4E_Name" xml:space="preserve">
+    <value>Ryboza</value>
+  </data>
+  <data name="85BECB6E-6469-48FC-8249-3BC283ADEF4E_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="9800EB48-DECF-4F1B-A9B2-0EC1BEAEF70C_Name" xml:space="preserve">
+    <value>Witaminy</value>
+  </data>
+  <data name="9800EB48-DECF-4F1B-A9B2-0EC1BEAEF70C_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="98A601E6-7637-431D-ABDD-2EB165875D30_Name" xml:space="preserve">
+    <value>Booster - NO</value>
+  </data>
+  <data name="98A601E6-7637-431D-ABDD-2EB165875D30_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="A1D6A2FC-3FC1-4EF8-B0C3-E591E553E8EA_Name" xml:space="preserve">
+    <value>ZMA</value>
+  </data>
+  <data name="A1D6A2FC-3FC1-4EF8-B0C3-E591E553E8EA_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="B17BAD16-553E-4107-B06E-197F5DF7ACF3_Name" xml:space="preserve">
+    <value>Hormon wzrostu</value>
+  </data>
+  <data name="B17BAD16-553E-4107-B06E-197F5DF7ACF3_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="C5660BD4-77EC-465B-A752-5D808662078E_Name" xml:space="preserve">
+    <value>HMB</value>
+  </data>
+  <data name="C5660BD4-77EC-465B-A752-5D808662078E_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CFE109F9-B382-41D2-AB77-B0F5825B6744_Name" xml:space="preserve">
+    <value>Tribulus</value>
+  </data>
+  <data name="CFE109F9-B382-41D2-AB77-B0F5825B6744_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="D19B1D8D-872D-42E8-8737-55CCB9B958B2_Name" xml:space="preserve">
+    <value>Beta-Alanina</value>
+  </data>
+  <data name="D19B1D8D-872D-42E8-8737-55CCB9B958B2_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="D8F8FD0D-31E0-4763-9F1E-ED5AE49DFBD8_Name" xml:space="preserve">
+    <value>Prohormon</value>
+  </data>
+  <data name="D8F8FD0D-31E0-4763-9F1E-ED5AE49DFBD8_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="E2C2CEC8-F84F-42C4-A338-F0B13FF10323_Name" xml:space="preserve">
+    <value>Booster - Testosteronu</value>
+  </data>
+  <data name="E2C2CEC8-F84F-42C4-A338-F0B13FF10323_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="E6BB4CF7-60B2-46A4-9E83-252E386C6F2B_Name" xml:space="preserve">
+    <value>Aminokwasy</value>
+  </data>
+  <data name="E6BB4CF7-60B2-46A4-9E83-252E386C6F2B_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ED696310-1AE1-4E3A-99DA-78B05A21F73A_Name" xml:space="preserve">
+    <value>Karnityna</value>
+  </data>
+  <data name="ED696310-1AE1-4E3A-99DA-78B05A21F73A_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="F099FF98-BB78-4E99-AFA3-EE0355974CD9_Name" xml:space="preserve">
+    <value>Steryd</value>
+  </data>
+  <data name="F099FF98-BB78-4E99-AFA3-EE0355974CD9_Url" xml:space="preserve">
+    <value />
+  </data>
+  <data name="F4DD2D72-6C9A-4E69-9017-95C72291BA8C_Name" xml:space="preserve">
+    <value>Odżywka potreningowa</value>
+  </data>
+  <data name="F4DD2D72-6C9A-4E69-9017-95C72291BA8C_Url" xml:space="preserve">
+    <value />
+  </data>
+</root>

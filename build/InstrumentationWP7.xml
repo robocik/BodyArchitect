@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.3.dtd">
+<dotfuscator version="2.3">
+  <!--This is application generated code. Do not edit manually.-->
+  <input>
+    <loadpaths />
+    <asmlist>
+      <package refid="5bb90e7c-5d98-4be0-9c6a-48b1b4675697">
+        <file dir="D:\BA40\BA40\BodyArchitectPhone\Bin\Debug" name="BodyArchitectPhone.xap" />
+        <asmlist>
+          <inputassembly refid="2a03d240-692b-4afc-961b-59cd4ce5a369">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="BodyArchitect.Service.Client.WP7.dll" />
+          </inputassembly>
+          <inputassembly refid="da80f0be-089a-4267-b21f-3effed749c13">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="BodyArchitect.WP7.Controls.dll" />
+          </inputassembly>
+          <inputassembly refid="570183e1-7c72-46f1-a065-0d6e6274046e">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="BodyArchitectPhone.dll" />
+          </inputassembly>
+          <inputassembly refid="e505e2bb-1c5b-48dc-b514-9e345b62f772">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="Coding4Fun.Phone.Controls.dll" />
+          </inputassembly>
+          <inputassembly refid="08164124-4825-4cdd-9877-b819e8959510">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="Coding4Fun.Phone.Controls.Toolkit.dll" />
+          </inputassembly>
+          <inputassembly refid="de6e6ccb-f74a-4626-aa02-3fb6b09a8562">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="ICSharpCode.SharpZLib.Phone.dll" />
+          </inputassembly>
+          <inputassembly refid="9310d980-a676-48bb-b8ab-8389f5094075">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="ImageTools.dll" />
+          </inputassembly>
+          <inputassembly refid="2c477ee4-e5b5-42bd-9f53-fa77601f91ea">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="ImageTools.IO.Bmp.dll" />
+          </inputassembly>
+          <inputassembly refid="6110c7ed-99c6-4d26-89ea-828360778256">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="ImageTools.IO.Gif.dll" />
+          </inputassembly>
+          <inputassembly refid="dd784796-df81-4b8e-9899-6e0b91c09c7a">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="ImageTools.IO.Jpeg.dll" />
+          </inputassembly>
+          <inputassembly refid="8976420a-9f1d-4d70-a57f-ec6d3189faef">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="ImageTools.IO.Png.dll" />
+          </inputassembly>
+          <inputassembly refid="0256c8d5-cfe8-47db-9071-cbb2b19f4460">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="ImageTools.Utils.dll" />
+          </inputassembly>
+          <inputassembly refid="b28f788b-e168-4f5d-90ab-d3c5be537b2e">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="LazyListBox.dll" />
+          </inputassembly>
+          <inputassembly refid="3e8afd42-2c9a-4d49-89c4-f29671c22db6">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="PhoneCodeContractsAssemblies.dll" />
+          </inputassembly>
+          <inputassembly refid="cea5ddc9-9e66-484f-96f9-97f6af2a48a4">
+            <option>honoroas</option>
+            <option>stripoa</option>
+            <option>library</option>
+            <option>transformxaml</option>
+            <file dir="" name="TombstoneHelper.dll" />
+          </inputassembly>
+        </asmlist>
+      </package>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="${configdir}\Dotfuscated" />
+  </output>
+  <renaming>
+    <option>disable</option>
+    <option>xmlserialization</option>
+    <mapping>
+      <mapoutput overwrite="false">
+        <file dir="${configdir}\Dotfuscated" name="Map.xml" />
+      </mapoutput>
+    </mapping>
+    <referencerulelist>
+      <referencerule rulekey="{6655B10A-FD58-462d-8D4F-5B1316DFF0FF}" />
+      <referencerule rulekey="{229FD6F8-5BCC-427b-8F72-A7A413ECDF1A}" />
+      <referencerule rulekey="{2B7E7C8C-A39A-4db8-9DFC-6AFD38509061}" />
+      <referencerule rulekey="{494EA3BA-B947-44B5-BEE8-A11CC85AAF9B}" />
+      <referencerule rulekey="{89769974-93E9-4e71-8D92-BE70E855ACFC}" />
+      <referencerule rulekey="{7D9C8B02-2383-420f-8740-A9760394C2C1}" />
+    </referencerulelist>
+  </renaming>
+  <sos mergeruntime="true">
+    <option>sendanalytics</option>
+    <option>dontsendtamper</option>
+  </sos>
+  <extattributes>
+    <extattribute name="PreEmptive.Attributes.TeardownAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitectPhone.App">
+        <method name="Application_Deactivated" signature="void(object, Microsoft.Phone.Shell.DeactivatedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.TeardownAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitectPhone.App">
+        <method name="Application_Closing" signature="void(object, Microsoft.Phone.Shell.ClosingEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.SetupAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitectPhone.App">
+        <method name="&lt;Application_Activated&gt;b__2" signature="void(object)" />
+      </type>
+      <propertylist>
+        <property name="OfflineStorageResultSinkElement" value="None" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="OptInSourceName" value="SendUsageData" />
+        <property name="CustomEndpoint" value="wp7data.runtimeintelligence.com/PreEmptive.Web.Services.Messaging/MessagingServiceV2.asmx" />
+        <property name="OfflineStorageResultSinkName" value="" />
+        <property name="OfflineStateSourceOwner" value="" />
+        <property name="OfflineStorageResultSinkOwner" value="" />
+        <property name="OptInSourceElement" value="Property" />
+        <property name="InstanceIdSourceElement" value="Property" />
+        <property name="InstanceIdSourceName" value="ClientId" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="OptInSourceOwner" value="BodyArchitect.Service.Client.WP7.Settings" />
+        <property name="OfflineStateSourceElement" value="DefaultAction" />
+        <property name="OfflineStateSourceName" value="" />
+        <property name="InstanceIdSourceOwner" value="BodyArchitect.Service.Client.WP7.Settings" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="UseSSL" value="True" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.SetupAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitectPhone.App">
+        <method name="&lt;Application_Launching&gt;b__0" signature="void(object)" />
+      </type>
+      <propertylist>
+        <property name="OfflineStorageResultSinkElement" value="None" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="OptInSourceName" value="SendUsageData" />
+        <property name="CustomEndpoint" value="wp7data.runtimeintelligence.com/PreEmptive.Web.Services.Messaging/MessagingServiceV2.asmx" />
+        <property name="OfflineStorageResultSinkName" value="" />
+        <property name="OfflineStateSourceOwner" value="" />
+        <property name="OfflineStorageResultSinkOwner" value="" />
+        <property name="OptInSourceElement" value="Property" />
+        <property name="InstanceIdSourceElement" value="Property" />
+        <property name="InstanceIdSourceName" value="ClientId" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="OptInSourceOwner" value="BodyArchitect.Service.Client.WP7.Settings" />
+        <property name="OfflineStateSourceElement" value="DefaultAction" />
+        <property name="OfflineStateSourceName" value="" />
+        <property name="InstanceIdSourceOwner" value="BodyArchitect.Service.Client.WP7.Settings" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="UseSSL" value="True" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.SendMessagePage">
+        <method name="btnSend_Click" signature="void(object, System.EventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="SendMessage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.ProfilePage">
+        <method name="btnProfileImage_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="ChangePhoto" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.VotingPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="VotingPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.SupplementsPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="SupplementsPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.ProfileInfoPage">
+        <method name="btnShowCalendar_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="ShowCalendar" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.ProfileInfoPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="ProfileInfoPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.TipsPage">
+        <method name="showItem" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="ShowTip" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.ProfilePage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="ProfilePage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.TrainingPlanEntryPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="TrainingPlanEntryPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.WorkoutPlanViewPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="WorkoutPlanViewPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.WorkoutPlans">
+        <method name="retrievePlansPage" signature="void(int32)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="RetrievePlansList" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.EntryObjectPageBase">
+        <method name="CopyEntryToToday" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="CopyEntryToToday" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.UserControls.WorkoutPlanViewControl">
+        <method name="btnUseInToday_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="UseWorkoutPlanInCalendar" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.TrainingDayEntrySelectorPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="TrainingDaySelectorPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.VotingPage">
+        <method name="voteOnExercise" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="VoteOnExercise" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.VotingPage">
+        <method name="voteOnWorkoutPlan" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="VoteOnPlan" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.WorkoutPlans">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="WorkoutPlans" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.CalendarPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="CalendarPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.CardioSetPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="CardioSetPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.CardioSetPage">
+        <method name="btnStartTimer_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="CardioSetTimerStartStop" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitectPhone.MainPage">
+        <method name="btnSettings_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="Settings" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.AboutPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="AboutPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.BlogPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="BlogPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.CardioStrengthTrainingItemPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="CardioStrengthTrainingItemPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.MessagesPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="MessagesPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.SynchronizationPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="SynchronizationPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.InvitationViewPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="InvitationViewPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.MessageViewPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="MessageViewPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.PeoplePage">
+        <method name="retrievePlansPage" signature="void(int32)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="RetrieveUsersList" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.CommentPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="CommentPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.MeasurementsPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="MeasurementsPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.UserControls.Login">
+        <method name="offlineMode_Click" signature="void(object, System.EventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="LoginInOfflineMode" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.PeoplePage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="Name" value="PeoplePage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.SynchronizationPage">
+        <method name="btnSynchronize_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="SynchronizationProcess" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.ExceptionTrackAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <assembly>
+        <packageref refid="5bb90e7c-5d98-4be0-9c6a-48b1b4675697" />
+        <file dir="" name="BodyArchitectPhone.dll" />
+      </assembly>
+      <propertylist>
+        <property name="ExceptionType" value="Unhandled" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ReportInfoSourceName" value="GetDictionary" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExceptionNotificationSinkName" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="PrivacyPolicyURI" value="" />
+        <property name="ExceptionNotificationSinkOwner" value="" />
+        <property name="SendReport" value="True" />
+        <property name="ReportInfoSourceElement" value="Method" />
+        <property name="ExceptionNotificationSinkElement" value="None" />
+        <property name="ReportInfoSourceOwner" value="BodyArchitect.Service.Client.WP7.Settings" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.BusinessAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <assembly>
+        <packageref refid="5bb90e7c-5d98-4be0-9c6a-48b1b4675697" />
+        <file dir="" name="BodyArchitectPhone.dll" />
+      </assembly>
+      <propertylist>
+        <property name="CompanyName" value="" />
+        <property name="CompanyKey" value="f7cf75c9-fdd0-477c-9bd0-80233f0919d6" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.ApplicationAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <assembly>
+        <packageref refid="5bb90e7c-5d98-4be0-9c6a-48b1b4675697" />
+        <file dir="" name="BodyArchitectPhone.dll" />
+      </assembly>
+      <propertylist>
+        <property name="Name" value="" />
+        <property name="ApplicationType" value="" />
+        <property name="Version" value="" />
+        <property name="Guid" value="a8ae97fa-f83a-460a-a681-325286430411" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.StrengthWorkoutPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="StrengthWorkoutPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.ExerciseViewPage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="ExerciseViewPage" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.MoreFeaturePage">
+        <method name=".ctor" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="MoreFeaturesPages" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.ProVsFreePage">
+        <method name="btnBuy_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="BuyClickInProVsFree" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="BodyArchitect.WP7.Pages.AboutPage">
+        <method name="hlBuy_Click" signature="void(object, System.Windows.RoutedEventArgs)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="Name" value="BuyClickInAbout" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="FeatureEventType" value="Tick" />
+      </propertylist>
+    </extattribute>
+  </extattributes>
+  <smartobfuscation>
+    <smartobfuscationreport verbosity="all" overwrite="false" />
+  </smartobfuscation>
+</dotfuscator>

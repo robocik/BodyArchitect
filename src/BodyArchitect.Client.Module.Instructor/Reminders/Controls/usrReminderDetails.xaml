@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.Instructor.Controls.usrReminderDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:Converters="clr-namespace:BodyArchitect.Client.Module.Instructor.Converters"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:Converters1="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <Converters:ReminderRepetitionsToIntConverter x:Key="repsConv" />
+        <Converters1:RemindBeforeToTimeSpanConverter x:Key="beforeConv" />
+        <Converters1:UtcDateTimeToLocalConverter x:Key="utcConv"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Target="txtName" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_Name}"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeft}" Name="txtName" Text="{Binding Name,Mode=TwoWay}" MaxLength="100" Grid.Column="1"/>
+
+        <Label Target="dpDateTime" Grid.Row="1" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_When}"/>
+        <xctk:DateTimePicker Margin="{StaticResource MarginMediumLeftTop}" Name="dpDateTime" Value="{Binding DateTime,Mode=TwoWay,Converter={StaticResource utcConv}}" Grid.Row="1" Grid.Column="1"/>
+
+        <Label Target="cmbRepeat" Grid.Row="2" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_Repeat}"/>
+        <ComboBox Margin="{StaticResource MarginMediumLeftTop}" Name="cmbRepeat" Grid.Column="1" Grid.Row="2" SelectedIndex="{Binding Repetitions,Converter={StaticResource repsConv}}">
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_OnlyOnce}"  />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_EveryDay}"  />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_EveryWeek}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_EveryMonth}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_EveryYear}" />
+        </ComboBox>
+
+        <Label Target="cmbRemind" Grid.Row="3" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_Remind}"/>
+        <ComboBox Margin="{StaticResource MarginMediumLeftTop}" Name="cmbRemind" Grid.Column="1" Grid.Row="3" SelectedIndex="{Binding RemindBefore,Converter={StaticResource beforeConv}}">
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_AtStartTime}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_5Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_10Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_15Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_30Minutes}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_1Hour}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_18Hours}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_1Day}" />
+            <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrReminderDetails_Content_1Week}" />
+        </ComboBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47e16b23-cec9-4016-975a-7aa2cb2481e9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="3e4a4883-5406-483c-b0d9-1a205cf9a4f7" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c6f97b13-a64e-47b5-9a77-7a5b58aa6d87" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="22e08a9c-cca8-4e3e-bec7-d7cfa194f5d2" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b8bb43bd-67f3-4e78-aa03-dacd750fe20b" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="fcadf740-0d1d-4644-98b8-f9b59cea4eee" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="880b46b6-ca4d-4d78-9454-7dcfefa48c84" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="BodyArchitect.Service.Model.TrainingPlans.xsd" MetadataType="Schema" ID="69dac8e2-60c6-45e6-b31c-bf6f8b1151be" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="BodyArchitect.Service.Model.xsd" MetadataType="Schema" ID="bde1dfb7-6288-4511-a0f8-8451ce4e1926" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="validation.xsd" MetadataType="Schema" ID="f89cc18d-e830-4c2e-998f-e4c1db0f514a" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.xsd" MetadataType="Schema" ID="8634bfb3-faf5-41b2-a87c-66091a2d4043" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="BodyArchitect.Service.Model.Exceptions1.xsd" MetadataType="Schema" ID="65aad3e5-82f1-4ea6-b9c0-5a664de92a4f" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="2d3c23eb-fe6c-4685-a118-61d7de5e5520" SourceId="1" SourceUrl="http://localhost/BodyArchitectWebSite/BodyArchitect.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BlogModule_ShareToSocial_Description" xml:space="preserve">
+    <value>Data: {0}&lt;br/&gt;</value>
+  </data>
+	<data name="BlogModule_ShareToSocial_Name" xml:space="preserve">
+    <value>Nowy wpis: Blog</value>
+  </data>
+	<data name="EntryTypeName" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+	<data name="BlogCalendarDayContent_Name" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+	<data name="EntryTypeShortDescription" xml:space="preserve">
+    <value>Podziel się z innymi użytkownikami tym, co uważasz, że jest najważniejsze w osiągnięciu wymarzonej sylwetki.</value>
+  </data>
+	<data name="Align_Bottom" xml:space="preserve">
+    <value>Dół</value>
+  </data>
+	<data name="Align_Center" xml:space="preserve">
+    <value>Wyśrodkuj</value>
+  </data>
+	<data name="Align_Default" xml:space="preserve">
+    <value>Domyślnie</value>
+  </data>
+	<data name="Align_Left" xml:space="preserve">
+    <value>Lewo</value>
+  </data>
+	<data name="Align_Right" xml:space="preserve">
+    <value>Prawo</value>
+  </data>
+	<data name="Align_Top" xml:space="preserve">
+    <value>Góra</value>
+  </data>
+	<data name="Button_Bold" xml:space="preserve">
+    <value>Pogrubienie</value>
+  </data>
+	<data name="Button_Browse" xml:space="preserve">
+    <value>Przeglądaj</value>
+  </data>
+	<data name="Button_BulletedList" xml:space="preserve">
+    <value>Lista nieponumerowana</value>
+  </data>
+	<data name="Button_ClearStyle" xml:space="preserve">
+    <value>Wyczyść styl</value>
+  </data>
+	<data name="Button_CodeMode" xml:space="preserve">
+    <value>Kolory</value>
+  </data>
+	<data name="Button_FontColor" xml:space="preserve">
+    <value>Kolor czcionki</value>
+  </data>
+	<data name="Button_Indent" xml:space="preserve">
+    <value>Wcięcie</value>
+  </data>
+	<data name="Button_InsertHyperlink" xml:space="preserve">
+    <value>Wstaw link</value>
+  </data>
+	<data name="Button_InsertImage" xml:space="preserve">
+    <value>Wstaw obraz</value>
+  </data>
+	<data name="Button_InsertTable" xml:space="preserve">
+    <value>Wstaw tabelę</value>
+  </data>
+	<data name="Button_Italic" xml:space="preserve">
+    <value>Kursywa</value>
+  </data>
+	<data name="Button_JustifyCenter" xml:space="preserve">
+    <value>Wyśrodkuj</value>
+  </data>
+	<data name="Button_JustifyLeft" xml:space="preserve">
+    <value>Do lewej</value>
+  </data>
+	<data name="Button_JustifyRight" xml:space="preserve">
+    <value>Do prawej</value>
+  </data>
+	<data name="Button_LineColor" xml:space="preserve">
+    <value>Kolor linii</value>
+  </data>
+	<data name="Button_NumberedList" xml:space="preserve">
+    <value>Lista numerowana</value>
+  </data>
+	<data name="Button_Refresh" xml:space="preserve">
+    <value>Odśwież</value>
+  </data>
+	<data name="Button_Underline" xml:space="preserve">
+    <value>Podkreślenie</value>
+  </data>
+	<data name="Button_ZoomIn" xml:space="preserve">
+    <value>Przybliż</value>
+  </data>
+	<data name="Button_ZoomOut" xml:space="preserve">
+    <value>Oddal</value>
+  </data>
+	<data name="Cmd_Copy" xml:space="preserve">
+    <value>Kopiuj</value>
+  </data>
+	<data name="Cmd_Cut" xml:space="preserve">
+    <value>Wytnij</value>
+  </data>
+	<data name="Cmd_Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+	<data name="Cmd_Paste" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+	<data name="Cmd_Redo" xml:space="preserve">
+    <value>Przywróć</value>
+  </data>
+	<data name="Cmd_SelectAll" xml:space="preserve">
+    <value>Zaznacz wszystko</value>
+  </data>
+	<data name="Cmd_Undo" xml:space="preserve">
+    <value>Cofnij</value>
+  </data>
+	<data name="Header_Default" xml:space="preserve">
+    <value>Domyślny</value>
+  </data>
+	<data name="Header_FirstColumn" xml:space="preserve">
+    <value>Pierwsza kolumna</value>
+  </data>
+	<data name="Header_FirstRow" xml:space="preserve">
+    <value>Pierwszy wiersz</value>
+  </data>
+	<data name="Header_FirstRowAndColumn" xml:space="preserve">
+    <value>Pierwsza kolumna i wiersz</value>
+  </data>
+	<data name="Label_AltText" xml:space="preserve">
+    <value>Cały tekst</value>
+  </data>
+	<data name="Label_Border" xml:space="preserve">
+    <value>Obramowanie</value>
+  </data>
+	<data name="Label_ColCount" xml:space="preserve">
+    <value>Kolumny</value>
+  </data>
+	<data name="Label_ImgAlignment" xml:space="preserve">
+    <value>Wyrównianie</value>
+  </data>
+	<data name="Label_ImgHeight" xml:space="preserve">
+    <value>Wysokość</value>
+  </data>
+	<data name="Label_ImgTitle" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+	<data name="Label_ImgWidth" xml:space="preserve">
+    <value>Szerokość</value>
+  </data>
+	<data name="Label_Link" xml:space="preserve">
+    <value>Link do</value>
+  </data>
+	<data name="Label_NoPreview" xml:space="preserve">
+    <value>Brak podglądu</value>
+  </data>
+	<data name="Label_RowCount" xml:space="preserve">
+    <value>Wiersze</value>
+  </data>
+	<data name="Label_TableAlignment" xml:space="preserve">
+    <value>Wyrównanie</value>
+  </data>
+	<data name="Label_TableBorder" xml:space="preserve">
+    <value>Obramowanie</value>
+  </data>
+	<data name="Label_TableHeader" xml:space="preserve">
+    <value>Nagłówek</value>
+  </data>
+	<data name="Label_TableHeight" xml:space="preserve">
+    <value>Wysokość</value>
+  </data>
+	<data name="Label_TableTitle" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+	<data name="Label_TableWidth" xml:space="preserve">
+    <value>Szerokość</value>
+  </data>
+	<data name="Label_Text" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+	<data name="Label_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+	<data name="WinTitle_InsertHyperlink" xml:space="preserve">
+    <value>Wstaw link</value>
+  </data>
+	<data name="WinTitle_InsertImage" xml:space="preserve">
+    <value>Wstaw obraz</value>
+  </data>
+	<data name="WinTitle_InsertTable" xml:space="preserve">
+    <value>Wstaw tabelę</value>
+  </data>
+	<data name="BlogModule_ShareToSocial_Caption" xml:space="preserve">
+    <value>BodyArchitect - dziennik treningowy stworzony dla profesjonalnych kulturystów.</value>
+  </data>
+	<data name="usrHtmlEditor_Label_Copy" xml:space="preserve">
+    <value>Kopiuj</value>
+  </data>
+	<data name="usrHtmlEditor_Label_Cut" xml:space="preserve">
+    <value>Wytnij</value>
+  </data>
+	<data name="usrHtmlEditor_Foreground_Header_MoreColors" xml:space="preserve">
+    <value>Więcej kolorów...</value>
+  </data>
+	<data name="usrHtmlEditor_Foreground_Header_StandardColors" xml:space="preserve">
+    <value>Kolory standardowe</value>
+  </data>
+	<data name="usrHtmlEditor_Foreground_Header_ThemeColors" xml:space="preserve">
+    <value>Kolory tematyczne</value>
+  </data>
+	<data name="usrHtmlEditor_Foreground_Text_AutomaticColor" xml:space="preserve">
+    <value>Kolor automatyczny</value>
+  </data>
+	<data name="usrHtmlEditor_Header_Clipboard" xml:space="preserve">
+    <value>Schowek</value>
+  </data>
+	<data name="usrHtmlEditor_Header_Font" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+	<data name="usrHtmlEditor_Header_Insert" xml:space="preserve">
+    <value>Wstaw</value>
+  </data>
+	<data name="usrHtmlEditor_Header_Paragraph" xml:space="preserve">
+    <value>Paragraf</value>
+  </data>
+	<data name="usrHtmlEditor_Label_Table" xml:space="preserve">
+    <value>Tabela</value>
+  </data>
+	<data name="usrHtmlEditor_Header_InsertTable" xml:space="preserve">
+    <value>Wstaw tabelę...</value>
+  </data>
+	<data name="usrHtmlEditor_Header_Paste" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+	<data name="usrHtmlEditor_Label_Paste" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+	<data name="usrHtmlEditor_Header_Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+	<data name="usrHtmlEditor_Background_Header_MoreColors" xml:space="preserve">
+    <value>Więcej kolorów...</value>
+  </data>
+	<data name="usrHtmlEditor_Background_Header_StandardColors" xml:space="preserve">
+    <value>Kolory standardowe</value>
+  </data>
+	<data name="usrHtmlEditor_Background_Header_ThemeColors" xml:space="preserve">
+    <value>Kolory tematyczne</value>
+  </data>
+	<data name="usrHtmlEditor_Background_Text_AutomaticColor" xml:space="preserve">
+    <value>Kolor automatyczny</value>
+  </data>
+	<data name="TrainingDayInfoDayContent_Name_Summary" xml:space="preserve">
+    <value>Podsumowanie</value>
+  </data>
+</root>

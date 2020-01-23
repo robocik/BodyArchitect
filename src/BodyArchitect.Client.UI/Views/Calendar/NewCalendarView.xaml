@@ -1,0 +1,99 @@
+﻿<Controls:BasePage xmlns:my="clr-namespace:vhCalendar" 
+             x:Class="BodyArchitect.Client.UI.Views.Calendar.NewCalendarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls"
+                         xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                         xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+                         xmlns:a="clr-namespace:BodyArchitect.Client.UI.UserControls" mc:Ignorable="d" 
+                          a:UserControlRibbon.RibbonTab="{DynamicResource Tab}"
+            a:UserControlRibbon.RibbonTabDataContext="{Binding}"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+
+    <Controls:usrBaseControl.Resources>
+        <!--<RoutedUICommand x:Key="Today" Text="Today" />
+        <RoutedUICommand x:Key="First" Text="First" />
+        <RoutedUICommand x:Key="Last" Text="Last" />-->
+
+            <r:RibbonTab x:Key="Tab"  Uid="Calendar" ContextualTabGroupHeader="{lex:LocText  BodyArchitect.Client.Resources:Strings:Ribbon_Context_Header}"  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_RibbonTabHeader}">
+            <r:RibbonGroup  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_RibbonGroupNavigation}">
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Today.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_RibbonToday}" QuickAccessToolBarId="Today" Click="btnToday_Click"/>
+                <!--<r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/First.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_RibbonFirstEntry}" Click="btnFirstEntry_Click"/>
+                <r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Last.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_RibbonLastEntry}" Click="btnLastEntry_Click"/>-->
+                <r:RibbonControlGroup >
+                    <r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/First.png" QuickAccessToolBarId="First" Click="btnFirstEntry_Click" />
+                    <r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Last.png" QuickAccessToolBarId="Last" Click="btnLastEntry_Click"/>
+                </r:RibbonControlGroup>
+
+                <r:RibbonSplitButton Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:NewCalendarView_Label_View}" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/FilterAllEntries.png"  Click="rbtnFilterAll_Click">
+                    <r:RibbonMenuItem IsCheckable="true" IsChecked="{Binding IsFilterViewAll,Mode=OneWay}" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:NewCalendarView_Header_All}" ImageSource="/BodyArchitect.Client.Resources;component/Images/FilterAllEntries.png"  Click="rbtnFilterAll_Click" />
+                    <r:RibbonMenuItem IsCheckable="true" IsChecked="{Binding IsFilterViewOnlyPlanned,Mode=OneWay}" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:NewCalendarView_Header_PlannedOnly}" ImageSource="/BodyArchitect.Client.Resources;component/Images/FilterOnlyFuture.png"  Click="rbtnFilterPlannedOnly_Click" />
+                    <r:RibbonMenuItem IsCheckable="true" IsChecked="{Binding IsFilterViewOnlyDone,Mode=OneWay}" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:NewCalendarView_Header_DoneOnly}" ImageSource="/BodyArchitect.Client.Resources;component/Images/FilterOnlyDone.png"  Click="rbtnFilterDoneOnly_Click" />
+                </r:RibbonSplitButton>
+            </r:RibbonGroup>
+        </r:RibbonTab>
+    </Controls:usrBaseControl.Resources>
+
+    <!--<Controls:usrBaseControl.CommandBindings>
+        <CommandBinding Command="{StaticResource Today}"
+			Executed="btnToday_Click"/>
+        <CommandBinding Command="{StaticResource First}"
+			Executed="btnFirstEntry_Click"/>
+        <CommandBinding Command="{StaticResource Last}"
+			Executed="btnLastEntry_Click"/>
+        </Controls:usrBaseControl.CommandBindings>
+
+    <Controls:usrBaseControl.InputBindings>
+        <KeyBinding Command="{StaticResource Today}"
+			Gesture="Ctrl+M" />
+        <KeyBinding Command="{StaticResource First}"
+			Gesture="Ctrl+F" />
+        <KeyBinding Command="{StaticResource Last}"
+			Gesture="Ctrl+L" />
+    </Controls:usrBaseControl.InputBindings>-->
+
+    <Grid>
+        <a:usrEntriesCalendarView ActiveMonthDateTime="{Binding ActiveMonthDateTime,Mode=TwoWay}"   x:Name="entriesViewer" KeyDown="monthCalendar1_KeyDown"  PreviewMouseRightButtonUp="monthCalendar1_PreviewMouseRightButtonUp" >
+            <a:usrEntriesCalendarView.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Visibility="{Binding MnuOpenTrainingDayVisbility}"  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_Open}" Click="mnuOpen_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/OpenTrainingDay.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Visibility="{Binding MnuNewTrainingDayVisbility}"  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_New}" Click="mnuNew_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/AddTrainingDay.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Visibility="{Binding MnuDeleteDayVisbility}"  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_Delete}"  Click="mnuDelete_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/DeleteTrainingDay.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator  Visibility="{Binding MnuSeparatorVisbility}"/>
+                    <MenuItem  Visibility="{Binding MnuEditCopyVisbility}" IsEnabled="{Binding MnuEditCopyEnabled}" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_Copy}"  Click="mnuCopy_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/HtmlEditor/Copy_16x16.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem  Visibility="{Binding MnuEditCutVisbility}" IsEnabled="{Binding MnuEditCutEnabled}" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_Cut}" Click="mnuCut_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/Cut.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Visibility="{Binding MnuEditPasteVisbility}" IsEnabled="{Binding MnuEditPasteEnabled}" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:CalendarView_Paste}"  Click="mnuPaste_Click">
+                        <MenuItem.Icon>
+                            <Image Width="16" Height="16" Source="/BodyArchitect.Client.Resources;component/Images/Paste.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </a:usrEntriesCalendarView.ContextMenu>
+        </a:usrEntriesCalendarView>
+    </Grid>
+    
+
+</Controls:BasePage>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.UpdateInfoControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}" Height="450"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Path=Localizedresources.UpdateInfoControl_WhatsNew,Mode=OneTime, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource CustomFontSizeExtraLarge}"/>
+
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <TextBlock Margin="0,12,0,0" Text="{Binding Path=Localizedresources.UpdateInfoControl_PromotionTitle,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomAccentFullBrush}" FontSize="{StaticResource CustomFontSizeMediumLarge}"/>
+                <TextBlock FontSize="{StaticResource CustomFontSizeMedium}"  Margin="0,3,0,0" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.UpdateInfoControl_PromotionDescription,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                <TextBlock FontSize="{StaticResource CustomFontSizeMedium}" Foreground="{StaticResource CustomSubtleBrush}"  Margin="0,20,0,0" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.UpdateInfoControl_PromotionDescription2,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <HyperlinkButton Visibility="Collapsed" Grid.Row="2" Margin="0,18,0,0"  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}"    Content="{Binding Path=Localizedresources.UpdateInfoControl_VersionChangesVideo_Link,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="btnGoToWeb_Click" />
+        <HyperlinkButton Grid.Row="2" Margin="0,18,0,0"  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}"    Content="{Binding Path=Localizedresources.UpdateInfoControl_VersionChangesVideo_Link,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="btnGoToWebPrices_Click" />
+    </Grid>
+    
+</UserControl>

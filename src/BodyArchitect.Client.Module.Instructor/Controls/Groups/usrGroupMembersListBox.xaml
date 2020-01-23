@@ -1,0 +1,70 @@
+﻿<UserControls:DragSourceUserControl x:Class="BodyArchitect.Client.Module.Instructor.Controls.Groups.usrGroupMembersListBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI" xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI" xmlns:Converters="clr-namespace:BodyArchitect.Client.Module.Instructor.Converters" 
+                                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Name="Me">
+    <!--TODO:Completed-->
+    <UserControl.Resources>
+        <Converters:CustomerToPictureConverter x:Key="custPictConv" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <xctk:WatermarkTextBox Watermark="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrGroupMembersListBox_Watermark_Filter}" Text="{Binding QueryText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ElementName=Me}" />
+
+        <ListBox Name="lvCustomers" Grid.Row="1" Controls:ImageButtonExt.EmptyListMessage="{Binding (Controls:ImageButtonExt.EmptyListMessage),ElementName=Me}" SelectedItem="{Binding SelectedCustomer,Mode=TwoWay,ElementName=Me}"  MouseDoubleClick="lvCustomers_MouseDoubleClick" >
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                    <Setter Property="IsEnabled" Value="{Binding IsEnabled}"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Border Name="border" ToolTip="{Binding ErrorToolTip}"  Background="LightCyan" CornerRadius="4,4,4,4" BorderThickness="1" BorderBrush="#5D8CC9" Margin="1,1,5,1" Padding="3,1,0,1">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.5" />
+                        </Border.Effect>
+                        <!--<Border.Background>
+                            <SolidColorBrush Color="{Binding Color,Converter={StaticResource colorConv}}" />
+                        </Border.Background>-->
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Controls:CachedImage Grid.RowSpan="2" Stretch="Fill" Width="48" Height="48" PictureOwner="{Binding Customer,Converter={StaticResource custPictConv}}" />
+
+                            <TextBlock Grid.Column="1" FontWeight="Bold" Text="{Binding Customer.FullName}"/>
+
+                        </Grid>
+
+
+                    </Border>
+
+                    <DataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding IsError}"  Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="Red"/>
+                            <Setter Property="BorderThickness" TargetName="border" Value="3"/>
+                        </DataTrigger>
+                    </DataTemplate.Triggers>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControls:DragSourceUserControl>

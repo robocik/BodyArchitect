@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.A6W.Controls.usrA6WPartialCompleted"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label VerticalAlignment="Center" Content="{lex:LocText  BodyArchitect.Client.Module.A6W:A6WEntryStrings:usrA6WPartialCompleted_Reps1Label}" Target="txtSet1"/>
+        <xctk:IntegerUpDown Margin="{StaticResource MarginSmallLeft}" Value="0" Name="txtSet1" Grid.Column="1" ToolTip="{lex:LocText  BodyArchitect.Client.Module.A6W:A6WEntryStrings:A6W_PartialCompleteSet}" ValueChanged="txtSet1_ValueChanged"/>
+
+        <Label VerticalAlignment="Center" Margin="{StaticResource MarginMediumTop}" Name="lblSet2" Content="{lex:LocText  BodyArchitect.Client.Module.A6W:A6WEntryStrings:usrA6WPartialCompleted_Reps2Label}" Target="txtSet2" Grid.Row="1"/>
+        <xctk:IntegerUpDown Margin="3,6,0,0" Value="0" Name="txtSet2" Grid.Column="1" Grid.Row="1" ToolTip="{lex:LocText  BodyArchitect.Client.Module.A6W:A6WEntryStrings:A6W_PartialCompleteSet}" ValueChanged="txtSet2_ValueChanged"/>
+
+        <Label VerticalAlignment="Center" Margin="{StaticResource MarginMediumTop}" Name="lblSet3" Content="{lex:LocText  BodyArchitect.Client.Module.A6W:A6WEntryStrings:usrA6WPartialCompleted_Reps3Label}" Target="txtSet3" Grid.Row="2"/>
+        <xctk:IntegerUpDown Margin="3,6,0,0" Value="0"  Name="txtSet3" Grid.Column="1" Grid.Row="2" ToolTip="{lex:LocText  BodyArchitect.Client.Module.A6W:A6WEntryStrings:A6W_PartialCompleteSet}" ValueChanged="txtSet3_ValueChanged"/>
+    </Grid>
+    
+    
+</UserControl>

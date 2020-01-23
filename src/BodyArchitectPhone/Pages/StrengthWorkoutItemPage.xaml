@@ -1,0 +1,115 @@
+﻿<Pages:StrengthTrainingItemPageBase x:Class="BodyArchitect.WP7.StrengthWorkoutItemPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:Controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Pages="clr-namespace:BodyArchitect.WP7.Pages" xmlns:conv="clr-namespace:BodyArchitect.WP7" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    Controls:TiltEffect.IsTiltEnabled="true" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls"
+                                    xmlns:userControls="clr-namespace:BodyArchitect.WP7.UserControls" xmlns:Controls1="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" d:DesignHeight="728" d:DesignWidth="480">
+
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <conv:WeightToStringConverter x:Key="weightConverter"/>
+            <Converters:BoolToVisibilityConverter x:Key="booleanToVisibility" />
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+    
+    <Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar   ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+        </shell:ApplicationBar>
+	</Custom:PhoneApplicationPage.ApplicationBar>
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <userControls:TimerControl Grid.Row="0" x:Name="ctrlTimer" Grid.ColumnSpan="2"/>
+
+            <StackPanel x:Name="TitlePanel" Grid.Row="1" Grid.Column="1">
+                <TextBlock Style="{StaticResource CustomTextNormalStyle}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Text="{Binding Exercise.Name}" Margin="9,10,0,0" Style="{StaticResource CustomTextTitle2Style}" />
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="2" Grid.Column="1">
+
+                <TextBlock Margin="12,24,0,12" Text="{Binding Path=Localizedresources.StrengthWorkoutItemPage_NoSets,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="lblNoSets" Style="{StaticResource CustomTextLargeStyle}" />
+
+                <Controls1:ReorderListBox SelectionChanged="lstSets_SelectionChanged" ItemsSource="{Binding Sets}" Name="lstSets" Grid.Column="0" Grid.Row="0" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+
+
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+
+                            <StackPanel>
+                                <TextBlock Grid.Column="3" Margin="0,0,0,12"  HorizontalAlignment="Center" Foreground="{StaticResource CustomSubtleBrush}"  Style="{StaticResource CustomTextTitle3Style}" Text="{Binding RestTime}" />
+                                
+                                    <Grid Tag="{Binding}" HorizontalAlignment="Stretch">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Controls:ContextMenuService.ContextMenu>
+                                            <Controls:ContextMenu IsEnabled="{Binding EditMode}" Opened="Menu_Opened" Closed="Menu_Closed">
+                                                <Controls:MenuItem Header="{Binding Path=Localizedresources.MenuDelete,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="mnuDelete_Click" />
+                                            </Controls:ContextMenu>
+                                        </Controls:ContextMenuService.ContextMenu>
+
+                                        <TextBlock Grid.Column="0" Style="{StaticResource CustomTextExtraLargeStyle}" FontSize="{StaticResource CustomFontSizeExtraExtraLarge}" Text="{Binding SetIndex}" />
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+
+                                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                                <TextBlock Style="{StaticResource CustomTextExtraLargeStyle}" Text="{Binding Set.RepetitionNumber,StringFormat='#'}" />
+                                                <TextBlock Style="{StaticResource CustomTextExtraLargeStyle}" Text="x" Foreground="{StaticResource CustomSubtleBrush}" />
+                                                <TextBlock Style="{StaticResource CustomTextExtraLargeStyle}" Text="{Binding Set.Weight,Converter={StaticResource weightConverter}}" />
+                                                <TextBlock Style="{StaticResource CustomTextNormalStyle}" VerticalAlignment="Bottom" Visibility="{Binding WeightKgVisible}" Foreground="{StaticResource CustomSubtleBrush}" Text="{Binding WeightType}" />
+                                            </StackPanel>
+
+                                            <Grid Grid.Row="1">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                                <Image Source="/Images/Records32.png" Visibility="{Binding IsRecord,Converter={StaticResource booleanToVisibility}}" Grid.Column="0" Width="32" Height="32" />
+                                                <TextBlock Grid.Column="1" Style="{StaticResource CustomTextAccentStyle}" Text="{Binding SetTypeInfo}" />
+                                                <TextBlock Grid.Column="2" HorizontalAlignment="Right" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding DropSetInfo}" />
+                                            <TextBlock Grid.Column="3" HorizontalAlignment="Right" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding SuperSlowInfo}" />
+
+                                        </Grid>
+                                        </Grid>
+                                    </Grid>
+
+                                
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </Controls1:ReorderListBox>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Pages:StrengthTrainingItemPageBase>

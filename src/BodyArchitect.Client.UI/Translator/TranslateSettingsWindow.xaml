@@ -1,0 +1,54 @@
+﻿<Windows:BaseWindow x:Class="BodyArchitect.Client.UI.Translator.TranslateSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen"
+        xmlns:Behaviors="clr-namespace:BodyArchitect.Client.UI.Controls.WatermarkExtension"
+            xmlns:Windows="clr-namespace:BodyArchitect.Client.UI.Windows"
+                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                    xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator"
+                    Title="{lex:LocText  BodyArchitect.Client.Resources:Strings:TranslateSettingsWindow_Title}" Height="300" Width="350" >
+
+    <Grid Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Image Stretch="Uniform" Width="64" Height="64" Source="/BodyArchitect.Client.Resources;component/Images/Translate128.png"/>
+
+        <StackPanel Margin="{StaticResource MarginMediumLeft}" Grid.Column="1" Orientation="Vertical" Visibility="{Binding IsRunning,ElementName=progressIndicator,Converter={StaticResource negBoolVisibConv}}">
+            <Label Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:TranslateSettingsWindow_Label_TranslateTo}" />
+            <ComboBox Margin="{StaticResource MarginMediumTop}" ItemsSource="{Binding Languages}"  DisplayMemberPath = "EnglishName"  SelectedValuePath = "Shortcut"
+                          Behaviors:WatermarkComboBoxBehavior.EnableWatermark="true" SelectedValue="{Binding SelectedLanguage,Mode=TwoWay}" 
+                                  Behaviors:WatermarkComboBoxBehavior.Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:TranslateSettingsWindow_Watermark_ChooseLanguage}"
+                                  Behaviors:WatermarkComboBoxBehavior.LabelStyle="{StaticResource watermarkLabelStyle}"/>
+        </StackPanel>
+
+
+        <StackPanel Margin="0,12,0,0" Orientation="Horizontal" Grid.Column="1" Visibility="{Binding IsRunning,ElementName=progressIndicator,Converter={StaticResource boolVisibConv}}">
+            <Viewbox Width="20" Height="20" Margin="0,0,15,0" VerticalAlignment="Center" Grid.Row="2" HorizontalAlignment="Left">
+                <controls:ProgressIndicator   IsIndeterminate="true"  x:Name="progressIndicator"    HorizontalAlignment="Center"   VerticalAlignment="Center"/>
+            </Viewbox>
+            <TextBlock TextTrimming="CharacterEllipsis" Style="{StaticResource infoLabel}" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:TranslateSettingsWindow_RetrievingSupportedLanguages}" VerticalAlignment="Center"  />
+        </StackPanel>
+
+        <TextBlock Margin="{StaticResource MarginLargeTop}" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:TranslateSettingsWindow_CacheDescription}" TextWrapping="Wrap" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+        <TextBlock Margin="{StaticResource MarginLargeTop}" Foreground="{StaticResource DisabledForegroundBrush}" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:TranslateSettingsWindow_ExternalServiceDescription}" TextWrapping="Wrap" Grid.Row="2" Grid.ColumnSpan="2"/>
+        
+
+        <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="3" HorizontalAlignment="Right">
+            
+            <Button Click="btnOk_Click" Name="btnOK"  Style="{StaticResource OkButton}"  />
+
+            <Button Margin="{StaticResource MarginMediumLeft}"   Style="{StaticResource CancelButton}" Name="btnCancel"/>
+        </StackPanel>
+    </Grid>
+</Windows:BaseWindow>

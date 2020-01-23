@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mnuJoinSuperSet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAmJJREFUOE+lk99P
+        0mEUxu2mK6+ahrlaa9UqV2ip5M8Nh5YIKPIbDTHI7PdWuMxIZyk4oQjISBCQtBRpjEwCcs6sOQslWeWW
+        NbdK/whvdE9fcKZcuLF6t3N3nud9z+c87zYACf91IgbxlrCvPMCxlW3f3B+3WPCUlVNppS+zTCXfYwzO
+        v67Cep17JYLMI4D0BW9K4uRQJS6eXvycPc93MFE7IIIyoEC9UwqapiC8bpIQEb9fGsW7pTeYWAxg/Lcf
+        5hkDrnnqcMl9FoZgJ8xhPR6HdDDOaPEw2IGaXiHyWrImo/zqvGJMEOK3i35C7MPYLy9Gf46gP2yB2MaG
+        6ZMOXTP3oZ/uxIOPamim2iC2cJF9Kz0YNZC/FKLWzYdkiAPpIB/tY0p4vg3Cu+CGxMqHYvgKqu1cFKnz
+        UG3jQ2SuRFYj+fPfETYDEdiZiRwzXaUcUWD4hwt3fU2gqfNXqKpcRqSPciNjNfMmeWHLLRCwEtmWUhVT
+        R8PgVwecc30ovE1ZyW04ETXIuJC2elR2KNbgzBAXomcV4PUywO0pw2W3PPr0Nt8dDMw50O5vBldbjvT6
+        NFTpeBBoONgv2LsxgrC/PIaw9kM7Gr3XwdOx0PfFCnu4GzaiemZN6A49gilkQMU9BnYzdq1BJJIVQ7hj
+        shUXXXIUNFEg65ZAO66CebYLT0JGYht6GKd1YLSUIuXUzrU1EskC3VCEYm0hCFjIb83GSeXxqcwGMvWY
+        /LD+SM2B+YOifci7SkG9VQ5G82mklCRvBCnef7CHlZqTSictk0qSY6Mcr0Gkj1ScFEii7vi3z7TVRX8A
+        IaZxrNBRVxQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="mnuJoinSuperSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="mnuJoinSuperSet.Text" xml:space="preserve">
+    <value>&amp;Join in superset</value>
+  </data>
+  <data name="mnuRemoveSuperSet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAm1JREFUOE+lkm1P
+        ElAUx2lsfgxeubWVhpo6KkwNEynyEcSkkRIQDkxABFQUZ5DypCiaZBo+kM9mluJoZalgZUwX2Wx9B9/r
+        5vYP2HjQ9EXrbvfu7Jx7f+ec/z3nABD+a4UAka3wiUyydaE+3hdv35suNVW4io7FY4+9IrvJ3wbjVisk
+        76tsJyHcqVK7yl0LxVINigcLonFC/aaYqPCKnCa/DvO/XZjZG4Xe1wjhUuUQ/zWHyJtjEbmTJU6lW4rn
+        O3YMbHdDMvsABbacoTxzFpEg94qa69YEgW6/AbO/xjC9N4K2NRWqFzgB3ixLUzlR0lw+dicgfyOGY9uG
+        fr8VdQti0EzUQI7hiibcgvRDNUmx+hBTe05M/BxG1avyoDumTcgudOSj75sFti0jmD03kW2gkMIfEDpq
+        PDzSo3cCuHaHMLb7DLwZNu6+LE6IQAoH8hOY9jzYvnbC8sUAuiUX13QZMYBomUuSLFdh9IcDL74/hWql
+        FuwRpjUCYPTcsAoneTB/1qPT1w7akyxkNqXGAPzFCuL9Ofa+ZfMxBnd6g312QbogALM/z8PoyfXwXVx0
+        eHXo8LVBvihBZmPKflpDMjHaQsgIKs3ijBcealZk6N0yhXtt9iihccvCWfUbLage5yJDk3KYpkxmRaqL
+        zkHIUTZ8K7HIQXfe7qMd1b+thXGzPZxZMicERZt2lKEhO1PrkxLjBT4GiAToXdnUsgEmDButaF/XgmGm
+        IV1Npp42oacCQhev6ykHuk+N0K6qcVl16eCs8T4TcLU1HS0f1WhabQBZfvGvuThVg/gsQaURVBpk2QUk
+        Sc//O+Cskk/6/wCcJW71k6R+PwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="mnuRemoveSuperSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="mnuRemoveSuperSet.Text" xml:space="preserve">
+    <value>&amp;Remove from superset</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 70</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnJoinAsSuperset.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnJoinAsSuperset.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnJoinAsSuperset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAmJJREFUOE+lk99P
+        0mEUxu2mK6+ahrlaa9UqV2ip5M8Nh5YIKPIbDTHI7PdWuMxIZyk4oQjISBCQtBRpjEwCcs6sOQslWeWW
+        NbdK/whvdE9fcKZcuLF6t3N3nud9z+c87zYACf91IgbxlrCvPMCxlW3f3B+3WPCUlVNppS+zTCXfYwzO
+        v67Cep17JYLMI4D0BW9K4uRQJS6eXvycPc93MFE7IIIyoEC9UwqapiC8bpIQEb9fGsW7pTeYWAxg/Lcf
+        5hkDrnnqcMl9FoZgJ8xhPR6HdDDOaPEw2IGaXiHyWrImo/zqvGJMEOK3i35C7MPYLy9Gf46gP2yB2MaG
+        6ZMOXTP3oZ/uxIOPamim2iC2cJF9Kz0YNZC/FKLWzYdkiAPpIB/tY0p4vg3Cu+CGxMqHYvgKqu1cFKnz
+        UG3jQ2SuRFYj+fPfETYDEdiZiRwzXaUcUWD4hwt3fU2gqfNXqKpcRqSPciNjNfMmeWHLLRCwEtmWUhVT
+        R8PgVwecc30ovE1ZyW04ETXIuJC2elR2KNbgzBAXomcV4PUywO0pw2W3PPr0Nt8dDMw50O5vBldbjvT6
+        NFTpeBBoONgv2LsxgrC/PIaw9kM7Gr3XwdOx0PfFCnu4GzaiemZN6A49gilkQMU9BnYzdq1BJJIVQ7hj
+        shUXXXIUNFEg65ZAO66CebYLT0JGYht6GKd1YLSUIuXUzrU1EskC3VCEYm0hCFjIb83GSeXxqcwGMvWY
+        /LD+SM2B+YOifci7SkG9VQ5G82mklCRvBCnef7CHlZqTSictk0qSY6Mcr0Gkj1ScFEii7vi3z7TVRX8A
+        IaZxrNBRVxQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnJoinAsSuperset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 301</value>
+  </data>
+  <data name="btnJoinAsSuperset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnJoinAsSuperset.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnJoinAsSuperset.Text" xml:space="preserve">
+    <value>Join</value>
+  </data>
+  <data name="&gt;&gt;btnJoinAsSuperset.Name" xml:space="preserve">
+    <value>btnJoinAsSuperset</value>
+  </data>
+  <data name="&gt;&gt;btnJoinAsSuperset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnJoinAsSuperset.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnJoinAsSuperset.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnRemoveFromSuperset.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnRemoveFromSuperset.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnRemoveFromSuperset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAm1JREFUOE+lkm1P
+        ElAUx2lsfgxeubWVhpo6KkwNEynyEcSkkRIQDkxABFQUZ5DypCiaZBo+kM9mluJoZalgZUwX2Wx9B9/r
+        5vYP2HjQ9EXrbvfu7Jx7f+ec/z3nABD+a4UAka3wiUyydaE+3hdv35suNVW4io7FY4+9IrvJ3wbjVisk
+        76tsJyHcqVK7yl0LxVINigcLonFC/aaYqPCKnCa/DvO/XZjZG4Xe1wjhUuUQ/zWHyJtjEbmTJU6lW4rn
+        O3YMbHdDMvsABbacoTxzFpEg94qa69YEgW6/AbO/xjC9N4K2NRWqFzgB3ixLUzlR0lw+dicgfyOGY9uG
+        fr8VdQti0EzUQI7hiibcgvRDNUmx+hBTe05M/BxG1avyoDumTcgudOSj75sFti0jmD03kW2gkMIfEDpq
+        PDzSo3cCuHaHMLb7DLwZNu6+LE6IQAoH8hOY9jzYvnbC8sUAuiUX13QZMYBomUuSLFdh9IcDL74/hWql
+        FuwRpjUCYPTcsAoneTB/1qPT1w7akyxkNqXGAPzFCuL9Ofa+ZfMxBnd6g312QbogALM/z8PoyfXwXVx0
+        eHXo8LVBvihBZmPKflpDMjHaQsgIKs3ijBcealZk6N0yhXtt9iihccvCWfUbLage5yJDk3KYpkxmRaqL
+        zkHIUTZ8K7HIQXfe7qMd1b+thXGzPZxZMicERZt2lKEhO1PrkxLjBT4GiAToXdnUsgEmDButaF/XgmGm
+        IV1Npp42oacCQhev6ykHuk+N0K6qcVl16eCs8T4TcLU1HS0f1WhabQBZfvGvuThVg/gsQaURVBpk2QUk
+        Sc//O+Cskk/6/wCcJW71k6R+PwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRemoveFromSuperset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 301</value>
+  </data>
+  <data name="btnRemoveFromSuperset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnRemoveFromSuperset.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnRemoveFromSuperset.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveFromSuperset.Name" xml:space="preserve">
+    <value>btnRemoveFromSuperset</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveFromSuperset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveFromSuperset.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveFromSuperset.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 302</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 22</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="exercisesTrainingPlanListView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="exercisesTrainingPlanListView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 62</value>
+  </data>
+  <data name="exercisesTrainingPlanListView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 233</value>
+  </data>
+  <data name="exercisesTrainingPlanListView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;exercisesTrainingPlanListView1.Name" xml:space="preserve">
+    <value>exercisesTrainingPlanListView1</value>
+  </data>
+  <data name="&gt;&gt;exercisesTrainingPlanListView1.Type" xml:space="preserve">
+    <value>FM.StrengthTraining.Controls.ExercisesTrainingPlanListView, FM.StrengthTraining.Module, Version=1.0.0.0, Culture=neutral, PublicKeyToken=82c221bace6193dd</value>
+  </data>
+  <data name="&gt;&gt;exercisesTrainingPlanListView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;exercisesTrainingPlanListView1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblHelp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v11.2" name="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lblHelp.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v11.2">
+    <value>None</value>
+  </data>
+  <data name="lblHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 1</value>
+  </data>
+  <data name="lblHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 55</value>
+  </data>
+  <data name="lblHelp.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblHelp.Text" xml:space="preserve">
+    <value>Select 2 or more exercises and press &lt;b&gt;Join&lt;/b&gt; button to create superset. &lt;b&gt;Remove&lt;/b&gt; button allows you to remove superset (exercises will be the same, the "connection" will be removed).&lt;br&gt;You cannot Join exercises from different training days.</value>
+  </data>
+  <data name="&gt;&gt;lblHelp.Name" xml:space="preserve">
+    <value>lblHelp</value>
+  </data>
+  <data name="&gt;&gt;lblHelp.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblHelp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHelp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>452, 336</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SuperSets editor</value>
+  </data>
+  <data name="&gt;&gt;mnuJoinSuperSet.Name" xml:space="preserve">
+    <value>mnuJoinSuperSet</value>
+  </data>
+  <data name="&gt;&gt;mnuJoinSuperSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuRemoveSuperSet.Name" xml:space="preserve">
+    <value>mnuRemoveSuperSet</value>
+  </data>
+  <data name="&gt;&gt;mnuRemoveSuperSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TrainingPlanSuperSetsEditor</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>FM.Controls.Forms.BaseWindow, FM.Controls, Version=3.0.0.0, Culture=neutral, PublicKeyToken=82c221bace6193dd</value>
+  </data>
+</root>

@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActivitiesListSelector_Header_Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="ActivitiesListSelector_Text_Duration" xml:space="preserve">
+    <value>Duration:</value>
+  </data>
+  <data name="ActivitiesViewModel_DeleteSelectedActivity" xml:space="preserve">
+    <value>Do you want to delete {0} activity?</value>
+  </data>
+  <data name="ActivitiesView_Header_Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="ActivitiesView_Header_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ActivitiesView_Label_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ActivitiesView_Label_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ActivitiesView_Label_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ActivitiesView_Text_Duration" xml:space="preserve">
+    <value>Duration:</value>
+  </data>
+  <data name="AlreadyOccupiedException_ScheduleEntriesDesignViewModel_reservationOperation" xml:space="preserve">
+    <value>Customer is already in the reservation list</value>
+  </data>
+  <data name="AlreadyOccupiedException_ScheduleEntriesDesignViewModel_Save" xml:space="preserve">
+    <value>Some entries are overlapped already</value>
+  </data>
+  <data name="CustomerGroupsListSelector_Header_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="CustomerGroupsViewModel_DeleteSelectedGroup" xml:space="preserve">
+    <value>Do you want to delete group {0}?</value>
+  </data>
+  <data name="CustomerGroupsView_EmptyListMessage_NoGroups" xml:space="preserve">
+    <value>There are no groups yet</value>
+  </data>
+  <data name="CustomerGroupsView_Header_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CustomerGroupsView_Header_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="CustomerGroupsView_Label_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="CustomerGroupsView_Label_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CustomerGroupsView_Label_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="CustomerGroupsView_Text_MaxPersons" xml:space="preserve">
+    <value>Max persons:</value>
+  </data>
+  <data name="CustomersView_Header_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="CustomersView_Header_Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="CustomersView_Header_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CustomersView_Header_Sport" xml:space="preserve">
+    <value>Sport</value>
+  </data>
+  <data name="CustomersView_Label_Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="CustomersView_Label_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="CustomersView_Label_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CustomersView_Label_Finance" xml:space="preserve">
+    <value>Finance</value>
+  </data>
+  <data name="CustomersView_Label_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="CustomersView_Label_Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="DeleteConstraintException_ScheduleEntriesDesignViewModel_Save" xml:space="preserve">
+    <value>Cannot delete some entries because they are used already</value>
+  </data>
+  <data name="ErrorToolTip_ScheduleEntryViewModel" xml:space="preserve">
+    <value>You must set an activity for this entry</value>
+  </data>
+  <data name="Error_CustomerGroupDetailsViewModel_AddMember_AlreadyInGroup" xml:space="preserve">
+    <value>This user is already in this group</value>
+  </data>
+  <data name="Error_CustomerGroupDetailsViewModel_AddMember_InAnotherGroup" xml:space="preserve">
+    <value>This user belongs to another group already</value>
+  </data>
+  <data name="Error_CustomerGroupDetailsViewModel_AddMember_InRestrictedGroup" xml:space="preserve">
+    <value>This user belongs to another partiall or fully restricted group already</value>
+  </data>
+  <data name="Exception_ActivitiesViewModel_DeleteSelectedActivity_CannotRemove" xml:space="preserve">
+    <value>Cannot remove selected activity</value>
+  </data>
+  <data name="Exception_CustomerGroupsViewModel_DeleteSelectedGroup_CannotRemove" xml:space="preserve">
+    <value>Cannot remove selected group</value>
+  </data>
+  <data name="Exception_ScheduleEntriesDesignViewModel_MarkAsPaid" xml:space="preserve">
+    <value>Exception occurred</value>
+  </data>
+  <data name="Exception_ScheduleEntriesDesignViewModel_reservationOperation" xml:space="preserve">
+    <value>Exception occurred</value>
+  </data>
+  <data name="Exception_ScheduleEntriesDesignViewModel_Save" xml:space="preserve">
+    <value>Exception occurred</value>
+  </data>
+  <data name="CustomerGroup_Text_Members" xml:space="preserve">
+    <value>Members:</value>
+  </data>
+  <data name="Activity_Text_Price" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_ButtonLabel_Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_CustomerGroups_Label_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_CustomerHeader_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_Customers_Label_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_Reminders_Label_Reminders" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_RibbonHeader_Catalogs" xml:space="preserve">
+    <value>Catalogs</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_ScheduleEntries_Label_Sheduler" xml:space="preserve">
+    <value>Scheduler</value>
+  </data>
+  <data name="InstructorModule_createBodyInstructorRibbon_TabName" xml:space="preserve">
+    <value>BodyInstructor</value>
+  </data>
+  <data name="ModuleName" xml:space="preserve">
+    <value>BodyInstructor</value>
+  </data>
+  <data name="RemindersViewModel_Delete_CannotRemoveReminder" xml:space="preserve">
+    <value>Cannot remove selected reminder</value>
+  </data>
+  <data name="RemindersViewModel_Delete_DeleteReminder" xml:space="preserve">
+    <value>Do you want to delete {0} reminder?</value>
+  </data>
+  <data name="RemindersViewModel_IList_Birthdays" xml:space="preserve">
+    <value>Birthdays</value>
+  </data>
+  <data name="RemindersViewModel_IList_Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="RemindersViewModel_IList_Schedules" xml:space="preserve">
+    <value>Schedules</value>
+  </data>
+  <data name="RemindersViewModel_IList_Yours" xml:space="preserve">
+    <value>Yours</value>
+  </data>
+  <data name="RemindersView_EmptyListMessage_NoReminders" xml:space="preserve">
+    <value>No reminders defined yet</value>
+  </data>
+  <data name="RemindersView_Header_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="RemindersView_Header_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="RemindersView_Header_Reminders" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="RemindersView_Header_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="RemindersView_Header_When" xml:space="preserve">
+    <value>When</value>
+  </data>
+  <data name="RemindersView_Label_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="RemindersView_Label_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="RemindersView_Label_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="RemindersView_Label_Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="RemindersView_Text_ViewOnly" xml:space="preserve">
+    <value>You can view only reminders from this category</value>
+  </data>
+  <data name="SaveScheduleEntriesWindow_Content_From" xml:space="preserve">
+    <value>_From</value>
+  </data>
+  <data name="SaveScheduleEntriesWindow_Content_To" xml:space="preserve">
+    <value>_To</value>
+  </data>
+  <data name="ScheduleEntriesDesignViewModel_ColorModes_Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="ScheduleEntriesDesignViewModel_ColorModes_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="ScheduleEntriesDesignViewModel_ReadOnly" xml:space="preserve">
+    <value>Your plan has been modified. Do you want to reject your changes and go into readonly mode?</value>
+  </data>
+  <data name="ScheduleEntriesDesignViewModel_SaveAndCopy_Finished" xml:space="preserve">
+    <value>Copy is finished. Number of created entries: {0}</value>
+  </data>
+  <data name="ScheduleEntriesDesignViewModel_ShouldCancelChaningDay" xml:space="preserve">
+    <value>Your plan has been modified. Do you want to reject your changes and change the current date?</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_ActivitiesPlan" xml:space="preserve">
+    <value>Activities plan</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Design" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Paid" xml:space="preserve">
+    <value>Paid</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Reservation" xml:space="preserve">
+    <value>Reservation</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Reservations" xml:space="preserve">
+    <value>Reservations</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_SaveCopy" xml:space="preserve">
+    <value>Save and copy...</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_ScheduleEntry" xml:space="preserve">
+    <value>Schedule entry</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_StatusCancelled" xml:space="preserve">
+    <value>Status: Cancelled</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_StatusDone" xml:space="preserve">
+    <value>Status: Done</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_CalendarEntries" xml:space="preserve">
+    <value>Calendar entries</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_CancelReservation" xml:space="preserve">
+    <value>Cancel reservation</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_ColorBy" xml:space="preserve">
+    <value>Color by</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_DesignSchedule" xml:space="preserve">
+    <value>Design your schedule</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_MarkAsPaid" xml:space="preserve">
+    <value>Mark as paid</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_Present" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_Reservation" xml:space="preserve">
+    <value>Reservation</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ScheduleEntriesView_Label_StatusDone" xml:space="preserve">
+    <value>Status: Done</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_EntryDuration" xml:space="preserve">
+    <value>This entry lasts till next day</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_HasReminder" xml:space="preserve">
+    <value>Has reminder</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_IncreaseBy" xml:space="preserve">
+    <value>Increase by 30 minutes</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_Present" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_ReduceBy" xml:space="preserve">
+    <value>Reduce by 30 minutes</value>
+  </data>
+  <data name="ScheduleEntriesView_ToolTip_ReservationPaid" xml:space="preserve">
+    <value>Reservation is paid</value>
+  </data>
+  <data name="ScheduleEntryReservationViewModel_Customer_Deleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="ScheduleEntryViewModel_Subject_Choose" xml:space="preserve">
+    <value>(Choose activity)</value>
+  </data>
+  <data name="usrActivityDetails_Content_Color" xml:space="preserve">
+    <value>_Color:</value>
+  </data>
+  <data name="usrActivityDetails_Content_Duration" xml:space="preserve">
+    <value>_Duration:</value>
+  </data>
+  <data name="usrActivityDetails_Content_MaxPersons" xml:space="preserve">
+    <value>_Max persons:</value>
+  </data>
+  <data name="usrActivityDetails_Content_Name" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="usrActivityDetails_Content_Price" xml:space="preserve">
+    <value>_Price:</value>
+  </data>
+  <data name="usrCustomerDetails_Content_Automatic" xml:space="preserve">
+    <value>Automatically update measurements from calendar</value>
+  </data>
+  <data name="usrCustomerDetails_Content_Birthday" xml:space="preserve">
+    <value>_Birthday:</value>
+  </data>
+  <data name="usrCustomerDetails_Content_Email" xml:space="preserve">
+    <value>_Email:</value>
+  </data>
+  <data name="usrCustomerDetails_Content_FirstName" xml:space="preserve">
+    <value>_First name:</value>
+  </data>
+  <data name="usrCustomerDetails_Content_Gender" xml:space="preserve">
+    <value>_Gender:</value>
+  </data>
+  <data name="usrCustomerDetails_Content_LastName" xml:space="preserve">
+    <value>_Last name:</value>
+  </data>
+  <data name="usrCustomerDetails_Content_Phone" xml:space="preserve">
+    <value>_Phone:</value>
+  </data>
+  <data name="usrCustomerDetails_Content_Virtual" xml:space="preserve">
+    <value>Is Virtual</value>
+  </data>
+  <data name="usrCustomerDetails_Header_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="usrCustomerDetails_Header_Measurments" xml:space="preserve">
+    <value>Measurements</value>
+  </data>
+  <data name="usrCustomerDetails_Header_Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Content_Color" xml:space="preserve">
+    <value>_Color:</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Content_DefaultActivity" xml:space="preserve">
+    <value>Default _activity:</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Content_Fully" xml:space="preserve">
+    <value>Fully</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Content_MaxPersons" xml:space="preserve">
+    <value>_Max persons:</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Content_Name" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Content_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Content_Partially" xml:space="preserve">
+    <value>Partially</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Header_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Header_Members" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Header_Restrictions" xml:space="preserve">
+    <value>Restrictions</value>
+  </data>
+  <data name="usrCustomerGroupMembersEditor_EmptyListMessage_NoCustomers" xml:space="preserve">
+    <value>There are no customers</value>
+  </data>
+  <data name="usrCustomerGroupMembersEditor_EmptyListMessage_NoMembers" xml:space="preserve">
+    <value>This group has no members</value>
+  </data>
+  <data name="usrCustomerInfo_Content_Disconnect" xml:space="preserve">
+    <value>Disconnect...</value>
+  </data>
+  <data name="usrCustomerInfo_Watermark_SelectToConnect" xml:space="preserve">
+    <value>Select an existing customer to connect</value>
+  </data>
+  <data name="usrCustomerInfo_Text_ConnectedWith" xml:space="preserve">
+    <value>Connected with:</value>
+  </data>
+  <data name="usrCustomerInfo_Text_NotCustomer" xml:space="preserve">
+    <value>This user is not your customer yet.</value>
+  </data>
+  <data name="usrCustomerInfo_Text_SelectCustomer" xml:space="preserve">
+    <value>Select a customer for this user. If selected customer already has a different user, it will be disconnected automatically</value>
+  </data>
+  <data name="usrCustomersListBox_EmptyListMessage_NoCustomers" xml:space="preserve">
+    <value>There are no customers</value>
+  </data>
+  <data name="usrCustomersListBox_Watermark_Filter" xml:space="preserve">
+    <value>Type name or email to filter</value>
+  </data>
+  <data name="usrCustomersList_Header_FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="usrCustomersList_Header_LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="usrCustomersList_Header_Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="usrCustomersList_Header_Virtual" xml:space="preserve">
+    <value>Is Virtual</value>
+  </data>
+  <data name="usrCustomersList_Watermark_Filter" xml:space="preserve">
+    <value>Type name or email to filter</value>
+  </data>
+  <data name="usrGroupMembersListBox_Watermark_Filter" xml:space="preserve">
+    <value>Type name or email to filter</value>
+  </data>
+  <data name="usrPaymentDetails_Text_Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="usrProductDetails_Content_Date" xml:space="preserve">
+    <value>_Date:</value>
+  </data>
+  <data name="usrProductDetails_Content_Name" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="usrProductDetails_Content_Price" xml:space="preserve">
+    <value>_Price:</value>
+  </data>
+  <data name="usrProductDetails_Header_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="usrProductDetails_Header_Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="usrProductDetails_Text_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="usrProductsList_Header_Ascending" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="usrProductsList_Header_Criteria" xml:space="preserve">
+    <value>Criteria</value>
+  </data>
+  <data name="usrProductsList_Header_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="usrProductsList_Header_Descending" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="usrProductsList_Header_Finances" xml:space="preserve">
+    <value>Finances</value>
+  </data>
+  <data name="usrProductsList_Header_Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="usrProductsList_Header_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="usrProductsList_Header_ProductName" xml:space="preserve">
+    <value>Product name</value>
+  </data>
+  <data name="usrProductsList_Header_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="usrProductsList_Label_More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="usrProductsList_Label_Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="usrProductsList_Label_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="usrProductsList_Text_EndDate" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="usrProductsList_Text_StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="usrReminderDetails_Content_10Minutes" xml:space="preserve">
+    <value>10 minutes</value>
+  </data>
+  <data name="usrReminderDetails_Content_15Minutes" xml:space="preserve">
+    <value>15 minutes</value>
+  </data>
+  <data name="usrReminderDetails_Content_18Hours" xml:space="preserve">
+    <value>18 hours</value>
+  </data>
+  <data name="usrReminderDetails_Content_1Day" xml:space="preserve">
+    <value>1 day</value>
+  </data>
+  <data name="usrReminderDetails_Content_1Hour" xml:space="preserve">
+    <value>1 hour</value>
+  </data>
+  <data name="usrReminderDetails_Content_1Week" xml:space="preserve">
+    <value>1 week</value>
+  </data>
+  <data name="usrReminderDetails_Content_30Minutes" xml:space="preserve">
+    <value>30 minutes</value>
+  </data>
+  <data name="usrReminderDetails_Content_5Minutes" xml:space="preserve">
+    <value>5 minutes</value>
+  </data>
+  <data name="usrReminderDetails_Content_AtStartTime" xml:space="preserve">
+    <value>At start time</value>
+  </data>
+  <data name="usrReminderDetails_Content_EveryDay" xml:space="preserve">
+    <value>Every day</value>
+  </data>
+  <data name="usrReminderDetails_Content_EveryMonth" xml:space="preserve">
+    <value>Every month</value>
+  </data>
+  <data name="usrReminderDetails_Content_EveryWeek" xml:space="preserve">
+    <value>Every week</value>
+  </data>
+  <data name="usrReminderDetails_Content_EveryYear" xml:space="preserve">
+    <value>Every year</value>
+  </data>
+  <data name="usrReminderDetails_Content_Name" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="usrReminderDetails_Content_OnlyOnce" xml:space="preserve">
+    <value>Only once</value>
+  </data>
+  <data name="usrReminderDetails_Content_Remind" xml:space="preserve">
+    <value>_Remind:</value>
+  </data>
+  <data name="usrReminderDetails_Content_Repeat" xml:space="preserve">
+    <value>_Repeat:</value>
+  </data>
+  <data name="usrReminderDetails_Content_When" xml:space="preserve">
+    <value>_When:</value>
+  </data>
+  <data name="usrScheduleEntryDetails_Content_Activity" xml:space="preserve">
+    <value>_Activity:</value>
+  </data>
+  <data name="usrScheduleEntryDetails_Content_AssignedGroup" xml:space="preserve">
+    <value>Assigned _group:</value>
+  </data>
+  <data name="usrScheduleEntryDetails_Content_MaxPersons" xml:space="preserve">
+    <value>_Max persons:</value>
+  </data>
+  <data name="usrScheduleEntryDetails_Content_Price" xml:space="preserve">
+    <value>_Price:</value>
+  </data>
+  <data name="usrScheduleEntryDetails_Header_Remind" xml:space="preserve">
+    <value>Remind</value>
+  </data>
+  <data name="usrScheduleEntryDetails_Watermark_NotSet" xml:space="preserve">
+    <value>(Not set)</value>
+  </data>
+  <data name="usrUserReminders_EmptyListMessage_NoThings" xml:space="preserve">
+    <value>No important things for today</value>
+  </data>
+  <data name="ActivitiesView_Fill_Header_Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="AlreadyOccupiedException_SaveScheduleEntriesWindow_Save" xml:space="preserve">
+    <value>Selected date range contains some entries. You can copy to empty range only.</value>
+  </data>
+  <data name="AlreadyOccupiedException_usrCustomerGroupDetails_Save" xml:space="preserve">
+    <value>One or more members belong to another partially or fully restricted group.</value>
+  </data>
+  <data name="CustomerGroupsView_Fill_Header_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="CustomersViewModel_DeleteSelectedActivity_DeleteCustomerQuestion" xml:space="preserve">
+    <value>Do you want to delete customer {0}?</value>
+  </data>
+  <data name="CustomersView_Fill_Header_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="ProductsView_Fill_Header_Products" xml:space="preserve">
+    <value>Products:</value>
+  </data>
+  <data name="RemindersView_Fill_Header_Reminders" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="ScheduleEntriesView_Fill_Header_MySchedule" xml:space="preserve">
+    <value>My Schedule</value>
+  </data>
+  <data name="usrCustomerInfo_Caption_CustomerDetails" xml:space="preserve">
+    <value>Customer details</value>
+  </data>
+  <data name="usrUserRemindersViewModel_Caption_Notifications" xml:space="preserve">
+    <value>Notifications: ({0})</value>
+  </data>
+  <data name="usrUserReminders_Caption_Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="usrProductsList_ToolTip_ReservationIsPaid" xml:space="preserve">
+    <value>Reservation is paid</value>
+  </data>
+  <data name="usrPaymentDetails_Content_Count" xml:space="preserve">
+    <value>_Count:</value>
+  </data>
+  <data name="usrPaymentDetails_Content_Date" xml:space="preserve">
+    <value>_Date:</value>
+  </data>
+  <data name="usrPaymentDetails_Content_Price" xml:space="preserve">
+    <value>_Price:</value>
+  </data>
+  <data name="ErrInstructorAccountRequired" xml:space="preserve">
+    <value>This operation is available only in Instructor account</value>
+  </data>
+  <data name="ErrDeleteCustomer" xml:space="preserve">
+    <value>Cannot delete selected customer. It is already used in the rest of the system.</value>
+  </data>
+  <data name="ScheduleEntriesDesignViewModel_ColorModes_MyPlaces" xml:space="preserve">
+    <value>My places</value>
+  </data>
+  <data name="CustomerGroupsView_Text_RestrictedType" xml:space="preserve">
+    <value>Restricted:</value>
+  </data>
+  <data name="MyPlacesListSelector_Header_MyPlaces" xml:space="preserve">
+    <value>My places</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="ScheduleEntriesView_Ribbon_Design" xml:space="preserve">
+    <value>Design your schedule</value>
+  </data>
+  <data name="ScheduleEntriesView_Ribbon_GroupReservation" xml:space="preserve">
+    <value>Group reservation</value>
+  </data>
+  <data name="usrCustomerDetails_Header_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="usrProductsList_Header_Present" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="usrProductsList_Ribbon_OrderBy" xml:space="preserve">
+    <value>Order by</value>
+  </data>
+  <data name="usrProductsList_Ribbon_SortOrderDirection" xml:space="preserve">
+    <value>Sort order</value>
+  </data>
+  <data name="usrProductsList_ToolTip_Present" xml:space="preserve">
+    <value>Customer was present</value>
+  </data>
+  <data name="usrScheduleEntryDetails_Label_MyPlace" xml:space="preserve">
+    <value>_Place:</value>
+  </data>
+  <data name="usrCustomerDetails_Description_VirtualCustomer" xml:space="preserve">
+    <value>Virtual client represents a group of people like women, student, policeman etc. You can make a reservation for virtual customer many times for the same activity and they cannot be a part of any customers groups. </value>
+  </data>
+  <data name="usrCustomerGroupDetails_Description_CustomerGroupRestiction_Fully" xml:space="preserve">
+    <value>Customers added to this group cannot be members of any other groups (regardless restriction level).</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Description_CustomerGroupRestiction_None" xml:space="preserve">
+    <value>Customers added to this group will be able to be member of any other group except groups with Full restriction level.</value>
+  </data>
+  <data name="usrCustomerGroupDetails_Description_CustomerGroupRestiction_Partially" xml:space="preserve">
+    <value>Customers added to this group can be members of group without any restriction level only. They cannot be a part of groups with Full or Partially restriction level.</value>
+  </data>
+  <data name="ErrCopyRangeIsNotValidRequired" xml:space="preserve">
+    <value>Destination date range must be at least one week</value>
+  </data>
+  <data name="SaveScheduleEntriesWindow_Description" xml:space="preserve">
+    <value>Destination date range must be at least one week and cannot contains any entries.</value>
+  </data>
+  <data name="SaveScheduleEntriesWindow_Title" xml:space="preserve">
+    <value>Copy schedule entries</value>
+  </data>
+  <data name="usrProductsList_Header_IsPaid" xml:space="preserve">
+    <value>Paid</value>
+  </data>
+  <data name="usrCustomersList_ToolTip_BirthdayToday" xml:space="preserve">
+    <value>This customer has birthday today</value>
+  </data>
+  <data name="usrCustomersList_ToolTip_IsVirtual" xml:space="preserve">
+    <value>This customer is virtual</value>
+  </data>
+  <data name="ActivitiesListSelector_Header_Championships" xml:space="preserve">
+    <value>Championships</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_ByWeight_Open" xml:space="preserve">
+    <value>_Open</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_ByWeight_Weight" xml:space="preserve">
+    <value>_Weight</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Gender_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Gender_Men" xml:space="preserve">
+    <value>Men</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Label_ByWeight" xml:space="preserve">
+    <value>By weight</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Label_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Label_Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Label_Women" xml:space="preserve">
+    <value>Women</value>
+  </data>
+  <data name="ChampionshipExerciseViewModel_DisplayWeightCategory" xml:space="preserve">
+    <value>{0}: Category {1}</value>
+  </data>
+  <data name="ChampionshipExerciseViewModel_NeedsMeasure" xml:space="preserve">
+    <value>(Needs measure)</value>
+  </data>
+  <data name="ChampionshipExerciseViewModel_Wilks" xml:space="preserve">
+    <value>{0:.####} pkt</value>
+  </data>
+  <data name="ChampionshipType_Trojboj" xml:space="preserve">
+    <value>Powerlifting</value>
+  </data>
+  <data name="ChampionshipType_ZawodyWyciskanieSztangi" xml:space="preserve">
+    <value>Bench press</value>
+  </data>
+  <data name="ChampionshipView_ErrSaveUnhandled" xml:space="preserve">
+    <value>Unhandled exception</value>
+  </data>
+  <data name="ChampionshipView_Grouping_ByGender" xml:space="preserve">
+    <value>By gender</value>
+  </data>
+  <data name="ChampionshipView_Grouping_ByTeam" xml:space="preserve">
+    <value>By team</value>
+  </data>
+  <data name="ChampionshipView_Grouping_ByWeight" xml:space="preserve">
+    <value>By weight categories</value>
+  </data>
+  <data name="ChampionshipView_Grouping_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ChampionshipView_Header" xml:space="preserve">
+    <value>Championship: {0}</value>
+  </data>
+  <data name="ChampionshipView_QDeleteGroup" xml:space="preserve">
+    <value>Do you want to delete the selected group?</value>
+  </data>
+  <data name="usrChampionshipScheduleEntryEditor_Content_Price" xml:space="preserve">
+    <value>_Price:</value>
+  </data>
+  <data name="usrChampionshipScheduleEntryEditor_ErrCategoryAlreadySelected" xml:space="preserve">
+    <value>You have already this category in the list</value>
+  </data>
+  <data name="usrChampionshipScheduleEntryEditor_Header_Categories" xml:space="preserve">
+    <value>Winning categories</value>
+  </data>
+  <data name="usrChampionshipScheduleEntryEditor_Label_MyPlace" xml:space="preserve">
+    <value>_My place:</value>
+  </data>
+  <data name="usrChampionshipScheduleEntryEditor_Label_Name" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="usrChampionshipScheduleEntryEditor_Label_TeamCount" xml:space="preserve">
+    <value>_Team count:</value>
+  </data>
+  <data name="ScheduleEntriesView_Header_Championship" xml:space="preserve">
+    <value>Championship</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Title" xml:space="preserve">
+    <value>Winning category</value>
+  </data>
+  <data name="ChampionshipDataGrid_Grid_Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="ChampionshipDataGrid_Grid_Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="ChampionshipDataGrid_Grid_Team" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="ChampionshipDataGrid_Grid_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="ChampionshipView_ErrCustomerWithoutGender" xml:space="preserve">
+    <value>One of the customer doesn't have gender specified. All customers in championship must have gender specified.</value>
+  </data>
+  <data name="ChampionshipView_Fail" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="ChampionshipView_Grid_Customer" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="ChampionshipView_Grid_Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="ChampionshipView_Grid_TeamName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ChampionshipView_Grid_TeamPoints" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="ChampionshipView_Grid_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="ChampionshipView_Grid_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="ChampionshipView_Grid_Wilks" xml:space="preserve">
+    <value>Wilks</value>
+  </data>
+  <data name="ChampionshipView_Grid_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="ChampionshipView_Group_Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="ChampionshipView_Group_Teams" xml:space="preserve">
+    <value>Teams</value>
+  </data>
+  <data name="ChampionshipView_Planned" xml:space="preserve">
+    <value>Planned</value>
+  </data>
+  <data name="ChampionshipView_RibbonGroup_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="ChampionshipView_RibbonGroup_Team" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="ChampionshipView_RibbonTab_Header" xml:space="preserve">
+    <value>Championship</value>
+  </data>
+  <data name="ChampionshipView_Ribbon_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ChampionshipView_Ribbon_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ChampionshipView_Ribbon_GroupBy" xml:space="preserve">
+    <value>Group by</value>
+  </data>
+  <data name="ChampionshipView_Ribbon_MoreOptions" xml:space="preserve">
+    <value>More options</value>
+  </data>
+  <data name="ChampionshipView_Ribbon_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ChampionshipView_Ribbon_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="ChampionshipView_Ribbon_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ChampionshipView_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="ChampionshipView_Tab_Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="ChampionshipView_Tab_Results" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="ChampionshipView_Try1" xml:space="preserve">
+    <value>Try 1</value>
+  </data>
+  <data name="ChampionshipView_Try2" xml:space="preserve">
+    <value>Try 2</value>
+  </data>
+  <data name="ChampionshipView_Try3" xml:space="preserve">
+    <value>Try 3</value>
+  </data>
+  <data name="ScheduleChampionshipViewModel_ErrChampionshipWithoutCategory" xml:space="preserve">
+    <value>No winning categories</value>
+  </data>
+  <data name="ScheduleEntriesDesignViewModel_ErrChampionshipWithoutCategories" xml:space="preserve">
+    <value>You must add at least one winning category before you mark this as Done.</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_CheckBox_IsAgeStrict" xml:space="preserve">
+    <value>Is age strict</value>
+  </data>
+  <data name="ChampionshipCategoryViewModel_AgeLoose" xml:space="preserve">
+    <value>(Loose)</value>
+  </data>
+  <data name="ChampionshipCategoryViewModel_AgeStrict" xml:space="preserve">
+    <value>(Strict)</value>
+  </data>
+  <data name="ChampionshipsView_ColumnHeader_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ChampionshipsView_ColumnHeader_StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="ChampionshipsView_ColumnHeader_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ChampionshipsView_CreateNew_Message" xml:space="preserve">
+    <value>To create a new championship, you need to go to the Scheduler and add a new Championship in Design mode.</value>
+  </data>
+  <data name="ChampionshipsView_Header" xml:space="preserve">
+    <value>Championships</value>
+  </data>
+  <data name="ChampionshipsView_RibbonButton_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ChampionshipsView_RibbonButton_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ChampionshipsView_RibbonGroup_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="ChampionshipCategoryViewModel_Category_NotOfficial" xml:space="preserve">
+    <value>Not official</value>
+  </data>
+  <data name="ChampionshipCategoryViewModel_Category_Official" xml:space="preserve">
+    <value>Official</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_CHK_OfficialCategory" xml:space="preserve">
+    <value>_Official category</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_OfficialCategory_Description" xml:space="preserve">
+    <value>Official category means that only lifters with Normal status will be taken to the results. Not official will take all lifters (except Disqualified).</value>
+  </data>
+  <data name="ChampionshipView_Label_CustomerType" xml:space="preserve">
+    <value>_Lifter status:</value>
+  </data>
+  <data name="ChampionshipView_ToolTip_AdvancedOptions" xml:space="preserve">
+    <value>Advanced options</value>
+  </data>
+  <data name="ChampionshipEntryViewModel_WithoutTeam" xml:space="preserve">
+    <value>(none)</value>
+  </data>
+  <data name="ChampionshipView_ToolTip_CustomerError" xml:space="preserve">
+    <value>This lifter doesn't have birthday or gender specified. Go to the Customers view and fill these information.</value>
+  </data>
+  <data name="ChampionshipView_EmptyResults" xml:space="preserve">
+    <value>You must save the data to see results</value>
+  </data>
+  <data name="SaveScheduleEntriesWindow_TitleMessage" xml:space="preserve">
+    <value>Choose where you want to copy the current week</value>
+  </data>
+  <data name="ChampionshipCategoryEditor_Help_IsAgeStrict" xml:space="preserve">
+    <value>Is age strict option determines if lifter birthday must match to age category. If is unchecked then all lifter without a specific age category will be counted in nearest one.
+
+Example: you've choosen Junior (19-23 yr) and Master 2 (50-59yr). Your lifter is 30. Now if Is age strict is selected then this lifter won't be in results (there is no age category for him), but if you uncheck this option, he will be counted in Junior category.
+Basically all lifter &lt;50yr will be in Junior category if Is age strict is unchecked.</value>
+  </data>
+</root>

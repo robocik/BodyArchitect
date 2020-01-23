@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="luTrainingPlans.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v11.2" name="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="luTrainingPlans.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.2">
+    <value>Combo</value>
+  </data>
+  <data name="luTrainingPlans.Properties.NullText" xml:space="preserve">
+    <value>(Select a workout plan)</value>
+  </data>
+  <data name="luTrainingPlans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="luTrainingPlans.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;luTrainingPlans.Name" xml:space="preserve">
+    <value>luTrainingPlans</value>
+  </data>
+  <data name="&gt;&gt;luTrainingPlans.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;luTrainingPlans.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;luTrainingPlans.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnShowTrainingPlan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAsVJREFUOE9lk01I
+        FGEYx+3QoVMQnjt3jUIQOhQRHYQCo8xEJOqggVhQdPBSolZkKqJBhha6hlRaaeU37q7mx/qZurYfuqvj
+        +rXr6i65u868O/vvP2MORAM/GF6e/2+e93nfSQKQpJHzUUohQ497/XjYsYH8tjXkfvaBayGyQqbIOOkh
+        zSSNHNbDGtnNnvwys5+v/z67sgr/bwFnYA+za3sY8kbwbmwTrA+SbEOQZXIV1w4F9LS0E8d6SEUgrGI7
+        oiK8pyKmqFDi+/KYSMDs2gUzfkNw/Y29qskWgFAB+6YKR0CF26/CG1QhUeajzBfaN9x9uwRZAE86vfvt
+        a1ytnTa1TQcRigK2ZQXjKwLTZHZNUCjg2IxTGAf9uFc3A4tzG8ysGoL0aluPxRnCclCwPRnWBRk/PDKG
+        lxTYJAUTZHpVgZoAblSMgfVhcsEQXCofdDnWI5hhUS8FvW4Z/W4FlsV9BhdljCwLfYsZ1SNg/TGtc0OQ
+        9rRPDkXjGPbK6OPX+xcYpGCAYetfweiS0Ad55YUFrD9qCC4WdRxJK+nSp2vRw3s6ZjfhlzUGyJgkEJHj
+        YL0ghwzB+cIvx9NLuyDHEwxqrTNIgZXb0IRWXaBgbl1ACkbAet/B8PUtnH3w/sS10g4OKAGrR9HbNzOs
+        YdE60LbCNQ+PdmJhC6y3GYIzBaZk8qGs1Y5VnnfDcAwtUzF8s3MWLnbh4e3TjtWnYIuXqntSAuvbDUFq
+        Xn0GiWaWfEVhkxMF9Q7cef0Lt146kF01j8yKOWSUzyKvTsLPFQUNPQ6wvt4QpNx+9azENPzfP8Bx6EMN
+        x0g0gdJWH9wbCmo+TYKZ54bgVE51bn5lJxq759E+5MXA3DpmvduQ/BHs7ApE+Q9ol8cbEFjbEXhUZwEz
+        BYbgZFZlMikmjeQ7GSUuEiBK6s0anMurxeX7jcgpagHXnOT0geAPRs4pRWFJrysAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnShowTrainingPlan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 3</value>
+  </data>
+  <data name="btnShowTrainingPlan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 23</value>
+  </data>
+  <data name="btnShowTrainingPlan.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="btnShowTrainingPlan.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnShowTrainingPlan.Name" xml:space="preserve">
+    <value>btnShowTrainingPlan</value>
+  </data>
+  <data name="&gt;&gt;btnShowTrainingPlan.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnShowTrainingPlan.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnShowTrainingPlan.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="progressIndicator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 3</value>
+  </data>
+  <data name="progressIndicator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="progressIndicator1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="progressIndicator1.Text" xml:space="preserve">
+    <value>progressIndicator1</value>
+  </data>
+  <data name="progressIndicator1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Name" xml:space="preserve">
+    <value>progressIndicator1</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.ProgressIndicator, BodyArchitect.Controls, Version=4.0.0.5, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;progressIndicator1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADb0lEQVQ4T12SaUwTQRSA1wux
+        gEBBBYwFCmqNoiB4YvDmKF71iFVBpIVtd7cqVYLxQAEjBlOvCBrxjmIMMdEASjSKImBokFOBSrcKGkVR
+        4t3LbZ8zFYn648tM3nv7zXszS2wpzRhOG9zfUx1eWqYqfipTEx1O671bNr/kmzJ7xnNZvRNh57sga1rX
+        KKPSwDNTulFF+BvEAJJ1IghVhVSgYJ1tGa+C7CQ71K5kXX8c6J0G+eYlcJFLhNv2bLgF++AirINTXDxk
+        vPE3Mx0+95DA9bfg/voAUj/Mtv/1XDj4bgHk9kTBkc8xcN2UAZq3MRaa9bCqWG9L/nsJV2SXwxmQwNYu
+        H6OyUSRFkoEEc29DQGqbq23vizmQ82ou5HbPB83HOFC2e/5UNAsu0JXiMKpq8SzmqbBsf1ekGQvyvs4G
+        VduYeiTgEczdhABZk7ttl24mZBoiIbsrCtQdY+1kg6BFVa4U4FPwvAgPpjmoXfNlPpznpJDSzLegmCfB
+        lMt8N2m97JfeqOFSdxpc7lFD0cftsEcX+VNRJ6xFRUOTtJ4EFiXXBB4q6NzIadhVFnmdjwnF3HGCR1aL
+        Hsmq/K0p1UJLPzVCM1kz7jnKOydUjiQw5B3xyOTK4HNJFaJMFB+BGIIFuD2evDxWhAhHRMhvi6fLy6PD
+        UNwNMQjhpHq42o+ujYroRzsr1NHB2pIAB/gkqn7yPEWrXw7dwS/D0j85plLig5+aMrha/oYxeLwlVhcH
+        O7qgnvMLKL27UaUbbcUrluF4X96DNrgZL39XwPHvYsg3LYGT1mVAGVyshOSKyAE6OX33yxDztqZwUOl8
+        rco2v2u4iz8johFilSyPO/wpBo59i4MTxnjAXRHLz09ygAq9Fa18Y7YuGtSNoZD6lG8iG8dcJ+smMKn1
+        Qk3qM89v29mxtrwPi+AIlnyNg5RnbjZiWeFkB/hGZY8DT6e3hBkPtC+FtIYwUD4RcmSdwEw3BnG79TPQ
+        jxYFhb2bQNO5Ak58lkCydgTXL+iTuMjuTyxJq51pPPuagZz2GEhvjoAdrdMhr3MpXPmgBro61JTyIESf
+        1SK2JFUEWv4X4Cd1WXdjymnpzXHW9Kpo09FWORxtkwPery+Z8CPp5sKVqMY3sSS0OLF0Uvc/gr/GccJ3
+        Ir0aSa0pmnYKg/co5oUY3HexuGbYLw4UD7hOS2OXAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 3</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 23</value>
+  </data>
+  <data name="btnRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 28</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 28</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>usrWorkoutPlansChooser</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.usrBaseControl, BodyArchitect.Controls, Version=4.0.0.5, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+</root>

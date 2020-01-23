@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4814A24-197F-461A-8230-191D832C4140}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Client.Module.StrengthTraining</RootNamespace>
+    <AssemblyName>BodyArchitect.Client.Module.StrengthTraining</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.Module.StrengthTraining.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.Module.StrengthTraining.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BodyArchitect.Client.Module.StrengthTraining.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.Module.StrengthTraining.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="RibbonControlsLibrary, Version=4.0.0.11019, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Visiblox.Charts, Version=2.2.0.38099, Culture=neutral, PublicKeyToken=1543c03f04c4461b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Visiblox.Charts\Visiblox.Charts.Wpf\4.0\Visiblox.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFLocalizeExtension, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WpfLocalizeExtension.2.2.1\lib\net35\WPFLocalizeExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.1.6.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XAMLMarkupExtensions.1.1.6.3\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ClipboardHelper.cs" />
+    <Compile Include="Controls\ExercisesFilteredComboBox.cs" />
+    <Compile Include="Controls\ExercisesList.xaml.cs">
+      <DependentUpon>ExercisesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExercisesPagerList.cs" />
+    <Compile Include="Controls\ExercisesView.xaml.cs">
+      <DependentUpon>ExercisesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PublishWorkoutPlanWindow.xaml.cs">
+      <DependentUpon>PublishWorkoutPlanWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RectanglesControl.cs" />
+    <Compile Include="Controls\SetInfoWindow.xaml.cs">
+      <DependentUpon>SetInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SetRestTimeWindow.xaml.cs">
+      <DependentUpon>SetRestTimeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimerWindow.xaml.cs">
+      <DependentUpon>TimerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlansView.xaml.cs">
+      <DependentUpon>TrainingPlansView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlans\TrainingPlanEditorWindow.xaml.cs">
+      <DependentUpon>TrainingPlanEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlans\TrainingPlanSetEditorItemViewModel.cs" />
+    <Compile Include="Controls\TrainingPlans\TrainingPlanSuperSetsEditor.xaml.cs">
+      <DependentUpon>TrainingPlanSuperSetsEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlans\TrainingPlanTreeView.xaml.cs">
+      <DependentUpon>TrainingPlanTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlans\TrainingPlanViewModel.cs" />
+    <Compile Include="Controls\TrainingPlans\usrTrainingPlanEntryEditor.xaml.cs">
+      <DependentUpon>usrTrainingPlanEntryEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrainingPlans\usrTrainingPlanSerieEditor.xaml.cs">
+      <DependentUpon>usrTrainingPlanSerieEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrExerciseEditor.xaml.cs">
+      <DependentUpon>usrExerciseEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrExerciseRecords.xaml.cs">
+      <DependentUpon>usrExerciseRecords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrExercisesView.xaml.cs">
+      <DependentUpon>usrExercisesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrStrengthTrainingDetails.xaml.cs">
+      <DependentUpon>usrStrengthTrainingDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrStrengthTrainingOptions.xaml.cs">
+      <DependentUpon>usrStrengthTrainingOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrStrengthTrainingProgress.xaml.cs">
+      <DependentUpon>usrStrengthTrainingProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrTrainingPlansView.xaml.cs">
+      <DependentUpon>usrTrainingPlansView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrUserRecords.xaml.cs">
+      <DependentUpon>usrUserRecords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrUserWorkoutPlans.xaml.cs">
+      <DependentUpon>usrUserWorkoutPlans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrWorkoutPlansChooser.xaml.cs">
+      <DependentUpon>usrWorkoutPlansChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkoutPlansList.xaml.cs">
+      <DependentUpon>WorkoutPlansList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkoutPlansPagerList.cs" />
+    <Compile Include="Controls\WorkoutPlanViewModel.cs" />
+    <Compile Include="Converters\ExerciseToStatusIconConverter.cs" />
+    <Compile Include="Converters\ExerciseTypeToLocalizedStringConverter.cs" />
+    <Compile Include="Converters\GuidToStringConverter.cs" />
+    <Compile Include="Controls\SetViewModel.cs" />
+    <Compile Include="Controls\StrengthTrainingDataGrid.cs" />
+    <Compile Include="Controls\StrengthTrainingItemViewModel.cs" />
+    <Compile Include="Controls\StrengthTrainingViewModel.cs" />
+    <Compile Include="Controls\usrIntensity.xaml.cs">
+      <DependentUpon>usrIntensity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\ExerciseLocalizer.cs" />
+    <Compile Include="Localization\StrengthTrainingEntryStrings.Designer.cs">
+      <DependentUpon>StrengthTrainingEntryStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Localization\StrengthTrainingEntryStrings.pl.Designer.cs">
+      <DependentUpon>StrengthTrainingEntryStrings.pl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Model\LocalizedExercise.cs" />
+    <Compile Include="Model\LocalizedExerciseType.cs" />
+    <Compile Include="Model\ModelExtensions.cs" />
+    <Compile Include="RecordNotifyObject.cs" />
+    <Compile Include="Reports\ExerciseWeightReport.cs" />
+    <Compile Include="Reports\ExerciseWeightReportSettings.xaml.cs">
+      <DependentUpon>ExerciseWeightReportSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TrainingPlanHtmlExporter.cs" />
+    <Compile Include="ObjectsReposidory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\WeightRepetitionsReportSettings.xaml.cs">
+      <DependentUpon>WeightRepetitionsReportSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\WeightRepetitionsReport.cs" />
+    <Compile Include="StrengthTraining.Designer.cs">
+      <DependentUpon>StrengthTraining.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StrengthTrainingCalendarDayContent.cs" />
+    <Compile Include="StrengthTrainingModule.cs" />
+    <Compile Include="Controls\usrStrengthTraining.xaml.cs">
+      <DependentUpon>usrStrengthTraining.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SuperSetViewManager.cs" />
+    <Compile Include="WorkoutPlanOperationHelper.cs" />
+    <EmbeddedResource Include="Localization\StrengthTrainingEntryStrings.pl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StrengthTrainingEntryStrings.pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\StrengthTrainingEntryStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StrengthTrainingEntryStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WorkoutPlan.rdlc" />
+    <None Include="app.config" />
+    <None Include="key.snk" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="StrengthTraining.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>StrengthTraining.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Client.Common\BodyArchitect.Client.Common.csproj">
+      <Project>{FB6880D6-08E2-4FB1-B308-8E0AD62B6BE2}</Project>
+      <Name>BodyArchitect.Client.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Resources\BodyArchitect.Client.Resources.csproj">
+      <Project>{06E5FC11-6938-4226-9567-ACD5B75619EE}</Project>
+      <Name>BodyArchitect.Client.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.UI\BodyArchitect.Client.UI.csproj">
+      <Project>{88EEC43D-7F8E-46DA-8734-94664C03E246}</Project>
+      <Name>BodyArchitect.Client.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.WCF\BodyArchitect.Client.WCF.csproj">
+      <Project>{E0C4293B-9D71-4415-8062-4C35ADD13640}</Project>
+      <Name>BodyArchitect.Client.WCF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.V2.Model\BodyArchitect.Service.V2.Model.csproj">
+      <Project>{DCFCC632-2849-421F-BF34-054B8DF0F6E9}</Project>
+      <Name>BodyArchitect.Service.V2.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Settings\BodyArchitect.Settings.csproj">
+      <Project>{769DFF6C-B952-40C4-B087-5C004E06D89C}</Project>
+      <Name>BodyArchitect.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\AvalonDock\AvalonDock\AvalonDock.csproj">
+      <Project>{DB81988F-E0F2-45A0-A1FD-8C37F3D35244}</Project>
+      <Name>AvalonDock</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StrengthTraining.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ExercisesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExercisesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SetRestTimeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TimerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TrainingPlans\TrainingPlanSuperSetsEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TrainingPlans\TrainingPlanTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrExerciseEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrExerciseRecords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrExercisesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrStrengthTrainingDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrStrengthTrainingOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrStrengthTrainingProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrTrainingPlansView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrUserRecords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrUserWorkoutPlans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\ExerciseWeightReportSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\WeightRepetitionsReportSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PublishWorkoutPlanWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SetInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TrainingPlansView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TrainingPlans\TrainingPlanEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TrainingPlans\usrTrainingPlanEntryEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TrainingPlans\usrTrainingPlanSerieEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrIntensity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrStrengthTraining.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrWorkoutPlansChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\WorkoutPlansList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MoveDown.png" />
+    <Resource Include="Images\MoveUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Split.png" />
+    <Resource Include="Images\Join.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddToFavoritesBig.png" />
+    <Resource Include="Images\PublishBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EditDay.gif" />
+    <Resource Include="Images\DeleteDay.gif" />
+    <Resource Include="Images\NewDay.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Set.png" />
+    <Resource Include="Images\AddSet.png" />
+    <Resource Include="Images\DeleteSet.png" />
+    <Resource Include="Images\AddTrainingPlanEntry.png" />
+    <Resource Include="Images\DeleteTrainingPlanEntry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TrainingDay.gif" />
+    <Resource Include="Images\TrainingPlanEntry.png" />
+    <Resource Include="Images\TrainingPlanEntry_Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Exercises.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TrainingPlanValid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TrainingPlanView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlan16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TrainingPlanView16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SetNumbers16.png" />
+    <Resource Include="Images\SetNumbers32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TrainingPlanEditor16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StartTimer16.png" />
+    <Resource Include="Images\StartTimer32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RestTime26.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+ 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

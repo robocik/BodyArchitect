@@ -1,0 +1,171 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.AccountTypePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" 
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" 
+    xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+
+
+    <Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="false"  ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+        </shell:ApplicationBar>
+    </Custom:PhoneApplicationPage.ApplicationBar>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <!--TitlePanel contains the name of the application and page title-->
+            
+
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" SelectionChanged="pivot_SelectionChanged">
+                <controls:Pivot.TitleTemplate>
+                    <DataTemplate>
+                        <TextBlock Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+                                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </controls:Pivot.TitleTemplate>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.AccountTypePage_Header_MyAccount,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="{Binding Path=Localizedresources.AccountTypePage_MyPoints,Mode=OneTime, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"  Style="{StaticResource CustomTextGroupHeaderStyle}"/>
+                            <TextBlock Name="tbPoints" Margin="0,-30,0,0" HorizontalAlignment="Center" Grid.Row="1" FontSize="{StaticResource CustomFontSizeHuge}"/>
+                            <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.AccountTypePage_MyPoints_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center"  Style="{StaticResource CustomTextSubtleStyle}"/>
+
+                            <HyperlinkButton HorizontalAlignment="Center" Grid.Row="3" Foreground="{StaticResource panoramaMainBrush}" Margin="0,10,0,0" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding Path=Localizedresources.AccountTypePage_BuyMore_Link,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Click="btnBuyPoints_Click" />
+
+                            <HyperlinkButton HorizontalAlignment="Center" Name="hlAccountType" Margin="0,20,0,0" FontWeight="Bold" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}" Grid.Row="4" FontSize="{StaticResource CustomFontSizeExtraExtraLarge}" Click="btnChangeAccountType_Click"/>
+
+                        </Grid>
+                    </ScrollViewer>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.AccountTypePage_Header_ChangeAccount,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                    <Grid x:Name="ContentPanel" Height="640" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+
+                        </Grid.RowDefinitions>
+
+                        <HyperlinkButton Name="btnBasic" Click="btnBasicAccountType_Click" Style="{StaticResource EmptyButtonStyle}">
+                            <Border Name="basicBorder" Background="Transparent" Margin="24,12,12,12">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Name="tbBasic" FontWeight="Bold" FontSize="{StaticResource CustomFontSizeExtraLarge}" Style="{StaticResource CustomTextTitle2Style}" />
+                                        <TextBlock TextTrimming="WordEllipsis" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.AccountTypePage_BasicAccount_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSubtleStyle}" />
+                                        <HyperlinkButton Grid.Row="2" HorizontalAlignment="Left"  Foreground="{StaticResource panoramaMainBrush}" Margin="0,10,0,0" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding Path=Localizedresources.AccountTypePage_Button_More,Mode=OneTime, Source={StaticResource LocalizedStrings}}" NavigateUri="/Pages/BasicAccountTypeDescriptionPage.xaml?Account=0" />
+                                    </Grid>
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="{Binding Path=Localizedresources.AccountTypePage_PointsPerDay,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                        <TextBlock HorizontalAlignment="Right" Margin="10,-30,0,0" Text="0"  FontSize="{StaticResource CustomFontSizeHuge}"/>
+
+                                    </StackPanel>
+
+                                </Grid>
+
+                            </Border>
+                        </HyperlinkButton>
+
+                        <HyperlinkButton Name="btnPremium" Click="btnPremiumAccountType_Click" Style="{StaticResource EmptyButtonStyle}" Grid.Row="1">
+                            <Border Name="premiumBorder" Background="Transparent"  Margin="24,12,12,12">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Name="tbPremium" FontWeight="Bold"  FontSize="{StaticResource CustomFontSizeExtraLarge}" Style="{StaticResource CustomTextTitle2Style}" />
+                                        <TextBlock TextTrimming="WordEllipsis" TextWrapping="Wrap" Grid.Row="1" Text="{Binding Path=Localizedresources.AccountTypePage_PremiumAccount_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSubtleStyle}" />
+                                        <HyperlinkButton Grid.Row="2" HorizontalAlignment="Left"  Foreground="{StaticResource panoramaMainBrush}" Margin="0,10,0,0" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding Path=Localizedresources.AccountTypePage_Button_More,Mode=OneTime, Source={StaticResource LocalizedStrings}}" NavigateUri="/Pages/BasicAccountTypeDescriptionPage.xaml?Account=1" />
+                                    </Grid>
+
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="{Binding Path=Localizedresources.AccountTypePage_PointsPerDay,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                        <TextBlock HorizontalAlignment="Right" Margin="10,-30,0,0" Text="1"  FontSize="{StaticResource CustomFontSizeHuge}"/>
+
+                                    </StackPanel>
+
+                                </Grid>
+                            </Border>
+                        </HyperlinkButton>
+
+                        <HyperlinkButton Name="btnInstructor" Click="btnInstructorAccountType_Click" Style="{StaticResource EmptyButtonStyle}" Grid.Row="2">
+                            <Border Name="instructorBorder" Background="Transparent" Margin="24,12,12,12">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Name="tbInstructor" FontWeight="Bold" FontSize="{StaticResource CustomFontSizeExtraLarge}" Style="{StaticResource CustomTextTitle2Style}" />
+                                        <TextBlock TextTrimming="WordEllipsis" TextWrapping="Wrap" Grid.Row="1" Text="{Binding Path=Localizedresources.AccountTypePage_InstructorAccount_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSubtleStyle}" />
+                                        <HyperlinkButton Grid.Row="2" HorizontalAlignment="Left"  Foreground="{StaticResource panoramaMainBrush}" Margin="0,10,0,0" FontSize="{StaticResource CustomFontSizeLarge}" Content="{Binding Path=Localizedresources.AccountTypePage_Button_More,Mode=OneTime, Source={StaticResource LocalizedStrings}}" NavigateUri="/Pages/BasicAccountTypeDescriptionPage.xaml?Account=2" />
+                                    </Grid>
+                                    <StackPanel Grid.Column="1" >
+                                        <TextBlock Text="{Binding Path=Localizedresources.AccountTypePage_PointsPerDay,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                        <TextBlock HorizontalAlignment="Right" Margin="10,-30,0,0" Text="2"  FontSize="{StaticResource CustomFontSizeHuge}"/>
+
+                                    </StackPanel>
+
+                                </Grid>
+                            </Border>
+                        </HyperlinkButton>
+
+                    </Grid>
+                    </ScrollViewer>
+                </controls:PivotItem>
+            </controls:Pivot>
+            
+            <!--ContentPanel - place additional content here-->
+            
+        </Grid>
+    </Grid>
+</Animations:AnimatedBasePage>

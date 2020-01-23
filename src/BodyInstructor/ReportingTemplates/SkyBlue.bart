@@ -1,0 +1,24 @@
+<Chart BackColor="243, 223, 193" Size="412, 296" BackGradientStyle="TopBottom" BorderlineColor="181, 64, 1" BorderlineWidth="2" BorderlineDashStyle="Solid">
+  <Legends>
+    <Legend _Template_="All" Enabled="False" IsTextAutoFit="False" BackColor="Transparent" Font="Trebuchet MS, 8.25pt, style=Bold">
+    </Legend>
+  </Legends>
+  <ChartAreas>
+    <ChartArea _Template_="All" BackColor="OldLace" BackGradientStyle="TopBottom" BackSecondaryColor="White" ShadowColor="Transparent" BorderColor="64, 64, 64, 64" BorderDashStyle="Solid">
+      <CursorX IsUserEnabled="True" IsUserSelectionEnabled="True" SelectionColor="LightBlue" />
+      <AxisY LineColor="64, 64, 64, 64">
+        <MajorGrid LineColor="64, 64, 64, 64" />
+        <LabelStyle Font="Trebuchet MS, 8.25pt, style=Bold" />
+        <ScrollBar Size="12" ButtonColor="224, 224, 224" LineColor="Black" BackColor="White" />
+      </AxisY>
+      <AxisX LineColor="64, 64, 64, 64" IsMarginVisible="False">
+        <MajorGrid LineColor="64, 64, 64, 64" />
+        <LabelStyle Font="Trebuchet MS, 18.25pt, style=Bold" />
+        <ScaleView MinSize="0" />
+        <ScrollBar Size="12" ButtonColor="224, 224, 224" LineColor="Black" BackColor="White" />
+      </AxisX>
+      <Area3DStyle IsRightAngleAxes="False" IsClustered="True" Perspective="10" Inclination="15" Rotation="10" WallWidth="0" />
+    </ChartArea>
+  </ChartAreas>
+  <BorderSkin SkinStyle="Emboss" />
+</Chart>

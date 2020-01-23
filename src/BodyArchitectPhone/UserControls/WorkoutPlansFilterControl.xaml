@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.WorkoutPlansFilterControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" mc:Ignorable="d"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot" Background="{StaticResource CustomChromeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock VerticalAlignment="Center" Text="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+        <Controls:FixedListPicker Grid.Column="1"   SelectedIndex="0"  Name="lpType"  ItemCountThreshold="9" >
+            <toolkit:ListPicker.Items>
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_AllTypes,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_Split,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_FBW,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_HIT,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_ABW,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_HST,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_PushPull,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_ACT,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Type_Other,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+            </toolkit:ListPicker.Items>
+        </Controls:FixedListPicker>
+
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+        <Controls:FixedListPicker Grid.Row="1" Grid.Column="1" ItemCountThreshold="9"   SelectedIndex="0"  Name="lpPurpose" >
+            <toolkit:ListPicker.Items>
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose_All,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose_NotSet,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose_Strength,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose_MuscleMass,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose_FatLost,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose_MuscleDefinition,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Purpose_Other,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+            </toolkit:ListPicker.Items>
+        </Controls:FixedListPicker>
+
+        <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Difficult,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+        <Controls:FixedListPicker Grid.Row="2" Grid.Column="1"   SelectedIndex="0"  Name="lpDifficult" >
+            <toolkit:ListPicker.Items>
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Difficult_Any,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Difficult_NotSet,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Difficult_Beginner,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Difficult_Advanced,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Difficult_Pro,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+            </toolkit:ListPicker.Items>
+        </Controls:FixedListPicker>
+
+        <toolkit:ToggleSwitch Grid.Row="3" Content="{Binding Path=Localizedresources.WorkoutPlansFilterControl_Order_TopRated,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.ColumnSpan="2" Name="tsOrderBy" Header="{Binding Path=Localizedresources.WorkoutPlansFilterControl_OrderBy,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Checked="tsOrder_Checked" Unchecked="tsOrder_Checked" />
+    </Grid>
+</UserControl>

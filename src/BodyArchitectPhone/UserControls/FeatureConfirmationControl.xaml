@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.FeatureConfirmationControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+        </TextBlock>
+
+        <TextBlock Grid.Row="1" Margin="12,24,12,12" Style="{StaticResource CustomTextNormalStyle}" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.FeatureConfirmationControl_IntroMessage,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomForegroundBrush}"/>
+        <CheckBox Name="tsEnablePushNotificaions" Content="{Binding Path=Localizedresources.FeatureConfirmationControl_EnablePushNotifications,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Row="2" Checked="Settings_Changed" Unchecked="Settings_Changed"/>
+        <CheckBox Name="tsSendUsageInfo" Content="{Binding Path=Localizedresources.FeatureConfirmationControl_SendUsageData,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Row="3" Checked="Settings_Changed" Unchecked="Settings_Changed"/>
+        <CheckBox Name="tsSendCrashData" Content="{Binding Path=Localizedresources.FeatureConfirmationControl_SendCrashData,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Grid.Row="4" Checked="Settings_Changed" Unchecked="Settings_Changed"/>
+
+        <TextBlock Grid.Row="5" Text="{Binding Path=Localizedresources.FeatureConfirmationControl_PrivacyInfo,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="6" Margin="12,32,12,0" Text="{Binding Path=Localizedresources.FeatureConfirmationControl_Bye,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextSmallStyle}" TextWrapping="Wrap"/>
+    </Grid>
+</UserControl>

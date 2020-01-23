@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://MYBASERVICE.TK/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://MYBASERVICE.TK/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://MYBASERVICE.TK/Imports">
+      <xsd:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd0" namespace="http://MYBASERVICE.TK/" />
+      <xsd:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd2" namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+      <xsd:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" />
+      <xsd:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Admin" />
+      <xsd:import schemaLocation="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdminService_DeleteOldProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOldProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteOldProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOldProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteUnusedImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUnusedImages" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteUnusedImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUnusedImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteOrphandExerciseRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrphandExerciseRecords" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteOrphandExerciseRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrphandExerciseRecordsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdminService">
+    <wsdl:operation name="DeleteOldProfiles">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IAdminService/DeleteOldProfiles" message="tns:IAdminService_DeleteOldProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IAdminService/DeleteOldProfilesResponse" message="tns:IAdminService_DeleteOldProfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IAdminService/SendMessage" message="tns:IAdminService_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IAdminService/SendMessageResponse" message="tns:IAdminService_SendMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUnusedImages">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IAdminService/DeleteUnusedImages" message="tns:IAdminService_DeleteUnusedImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IAdminService/DeleteUnusedImagesResponse" message="tns:IAdminService_DeleteUnusedImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrphandExerciseRecords">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IAdminService/DeleteOrphandExerciseRecords" message="tns:IAdminService_DeleteOrphandExerciseRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IAdminService/DeleteOrphandExerciseRecordsResponse" message="tns:IAdminService_DeleteOrphandExerciseRecords_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

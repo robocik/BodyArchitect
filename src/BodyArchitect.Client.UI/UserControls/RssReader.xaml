@@ -1,0 +1,42 @@
+﻿<Controls:usrBaseControl x:Class="BodyArchitect.Client.UI.UserControls.RssReader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator"
+                xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls" mc:Ignorable="d" 
+                         FontSize="14" x:Name="Me"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="{StaticResource ListBackgroundBrush}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Orientation="Horizontal" >
+            <Viewbox Width="16" Height="16" Margin="0"  Visibility="{Binding IsRunning,ElementName=progressIndicator1,Converter={StaticResource boolVisibConv}}" >
+                <controls:ProgressIndicator   IsIndeterminate="true" x:Name="progressIndicator1" IsRunning="{Binding IsProgress,ElementName=Me}"   HorizontalAlignment="Center"   VerticalAlignment="Center"/>
+            </Viewbox>
+
+            <Button FontWeight="Bold" Margin="{StaticResource MarginSmallLeftTop}" Name ="hlRssTitle" Click="btnTitle_Click"  Style="{StaticResource LinkButon}"/>
+
+            <Button Width="16" Margin="{StaticResource MarginMediumLeft}" Padding="0" Style="{StaticResource flat}" Click="btnPrevious_Click">
+                <Path Data="M0,6 L6,12 L6,0 Z" 
+                                  Fill="{DynamicResource GlyphBrush}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center">
+                </Path>
+            </Button>
+            <Button Width="16" Padding="0" Style="{StaticResource flat}" Click="btnNext_Click" >
+                <Path Data="M0,0 L0,12 L6,6 Z" 
+                                  Fill="{DynamicResource GlyphBrush}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center">
+                </Path>
+            </Button>
+        </StackPanel>
+        <TextBlock Margin="{StaticResource MarginSmallLeftTopRightBottom}"  Grid.Row="1" TextWrapping="Wrap"  Name="lblRssDescription"/>
+    </Grid>
+
+</Controls:usrBaseControl>

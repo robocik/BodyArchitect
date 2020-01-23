@@ -1,0 +1,26 @@
+﻿<Controls:usrBaseControl x:Class="BodyArchitect.Client.UI.Controls.usrProgressIndicatorButtons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator"
+                         mc:Ignorable="d" 
+                         xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls"
+                         d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <Viewbox Width="25" Height="25" Margin="15,15,15,15"  >
+            <controls:ProgressIndicator   IsIndeterminate="true"  x:Name="progressIndicator1"    HorizontalAlignment="Center"   VerticalAlignment="Center"/>
+        </Viewbox>
+
+        <Button Name="btnOK" Style="{StaticResource OkButton}" Click="btnOK_Click"  Grid.Column="1" />
+
+        <Button Margin="{StaticResource MarginLargeLeft}" Style="{StaticResource CancelButton}" Name="btnCancel" Click="btnCancel_Click" Grid.Column="2" />
+    </Grid>
+</Controls:usrBaseControl>

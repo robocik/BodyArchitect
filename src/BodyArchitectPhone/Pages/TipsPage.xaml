@@ -1,0 +1,57 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.TipsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"
+    xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="1" Margin="12,17,0,28">
+                <TextBlock Foreground="{StaticResource CustomForegroundBrush}" Text="{Binding Path=Localizedresources.TipsPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextNormalStyle}"/>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="PageTitle" Foreground="{StaticResource CustomForegroundBrush}" Text="{Binding Path=Localizedresources.TipsPage_Loading,Mode=OneTime, Source={StaticResource LocalizedStrings}}" FontFamily="{StaticResource CustomFontFamilySemiBold}" FontSize="{StaticResource CustomFontSizeExtraLarge}" Style="{StaticResource CustomTextTitle2Style}"/>
+                    <TextBlock x:Name="PageTipNumber" Foreground="{StaticResource CustomForegroundBrush}" Grid.Column="1"  FontFamily="{StaticResource CustomFontFamilySemiBold}" FontSize="{StaticResource CustomFontSizeExtraLarge}" Style="{StaticResource CustomTextTitle2Style}"/>
+                </Grid>
+
+            </StackPanel>
+
+
+            <ScrollViewer  Grid.Row="2" Margin="12,0,12,0">
+                <Grid>
+
+                    <TextBlock Foreground="{StaticResource CustomForegroundBrush}" Grid.Column="0" Name="htmlBlock" TextWrapping="Wrap" FontSize="{StaticResource CustomFontSizeMediumLarge}" Style="{StaticResource CustomTextNormalStyle}"/>
+
+                </Grid>
+            </ScrollViewer>
+
+        </Grid>
+    </Grid>
+    <toolkit:GestureService.GestureListener>
+        <toolkit:GestureListener Flick="GestureListener_Flick">
+        </toolkit:GestureListener>
+    </toolkit:GestureService.GestureListener>
+</Animations:AnimatedBasePage>

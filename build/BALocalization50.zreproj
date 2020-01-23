@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project>
+  <configuration createBackupFiles="False" hideEmptyRows="False" hideTranslatedRows="False" useSpellChecker="True" neutralLanguageCode="en-US" languagesToDisplay="">
+    <globalSetting name="Filter-ResourceEditorGrid">&lt;XtraSerializer version="1.0" application="View"&gt;
+  &lt;property name="#LayoutVersion" /&gt;
+  &lt;property name="ActiveFilterString" /&gt;
+&lt;/XtraSerializer&gt;</globalSetting>
+    <globalSetting name="Sort-ResourceEditorGrid">&lt;XtraSerializer version="1.0" application="View"&gt;
+  &lt;property name="#LayoutVersion" /&gt;
+  &lt;property name="SortInfo"&gt;~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAF1EZXZFeHByZXNzLlh0cmFHcmlkLnYxMS4xLCBWZXJzaW9uPTExLjEuOC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEFAQAAADhEZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvQ29sbGVjdGlvbgQAAAAKZ3JvdXBDb3VudAVjbG9uZQ9jbG9uZUdyb3VwQ291bnQTQ29sbGVjdGlvbkJhc2UrbGlzdAADAAMIsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjExLjEsIFZlcnNpb249MTEuMS44LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dCBxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AgAAAAAAAAAJAwAAAAAAAAAJBAAAAAQDAAAAsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjExLjEsIFZlcnNpb249MTEuMS44LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAwRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mb1tdAgAAAAgICQUAAAAAAAAAAAAAAAQEAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QDAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgUAAAgICQYAAAABAAAABAAAAAcFAAAAAAEAAAAAAAAABC5EZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvAgAAABAGAAAABAAAAAkHAAAADQMMCAAAABlEZXZFeHByZXNzLlh0cmFHcmlkLnYxMS4xBQcAAAAuRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mbwIAAAAJU29ydE9yZGVyCkNvbHVtbk5hbWUAAQgIAAAAAQAAAAYJAAAAB2NvbE5hbWUL&lt;/property&gt;
+&lt;/XtraSerializer&gt;</globalSetting>
+    <globalSetting name="sendFileToTranslator.destinationFilePathTextEdit.Text">C:\Users\robocik\Desktop\test.xls</globalSetting>
+    <globalSetting name="sendFileToTranslator.fileGroupsListBox">..\BA40\BodyArchitect.Client.Module.A6W\Localization\A6WEntryStrings###{{{}}}###..\BA40\BodyArchitect.Client.Module.Blog\Localization\BlogEntryStrings###{{{}}}###..\BA40\BodyArchitect.Client.Module.Instructor\InstructorStrings###{{{}}}###..\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings###{{{}}}###..\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\LocalizedPropertyGridStrings###{{{}}}###..\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings###{{{}}}###..\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings###{{{}}}###..\BA40\BodyArchitect.Client.Resources\Localization\Strings###{{{}}}###..\BA40\BodyArchitect.Service.Client.WP7\ApplicationStrings###{{{}}}###..\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings###{{{}}}###..\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings###{{{}}}###..\BA40\BodyArchitectWebSite\App_GlobalResources\Payments</globalSetting>
+    <globalSetting name="sendFileToTranslator.languagesToExportCheckListBox">Polish (pl)###{{{}}}###Polish (Poland) (pl-pl)</globalSetting>
+    <globalSetting name="sendFileToTranslator.referenceLanguageComboBoxEdit.SelectedIndex">0</globalSetting>
+    <globalSetting name="sendFileToTranslator.openFileAfterGeneratingCheckEdit.Checked">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.openAfterGeneratingCheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.eliminateDuplicateRowsCheckEdit.Checked">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportWithoutDestinationTranslationOnlyCheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportCompletelyEmptyRowsCheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportGroupsAsOneWorkSheetCheckEdit.Checked">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportNameColumnCheckEdit.Checked">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportCommentColumnCheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportReferenceLanguageColumnCheckEdit.Checked">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportFileGroupColumnCheckEdit.Checked">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportGroupsAsWorkSheetsCheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportGroupsAsExcelFilesCheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.exportEachLanguageIntoSeparateExcelFileCheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.useCrypticExcelExportSheetNamesCheckEdit.Checked">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.sendFilesToEMailReceivers2CheckEdit.Checked">False</globalSetting>
+    <globalSetting name="sendFileToTranslator.zulReceiversTextEdit.Text">someone@example.org, someone-other@example.org</globalSetting>
+    <globalSetting name="sendFileToTranslator.zulSubjectTextEdit.Text">[ZRE] Excel files for translating project "{ProjectName}"</globalSetting>
+    <globalSetting name="sendFileToTranslator.zulBodyTextEdit.Text">Please download the Excel documents in the link to translate the project "{ProjectName}".
+
+To send me the translated files back, simply use https://www.zeta-uploader.com
+
+Kind regards</globalSetting>
+    <globalSetting name="receiveFileFromTranslator.sourceFilePathTextEdit.Text">C:\Users\robocik\Desktop\test.xls</globalSetting>
+    <globalSetting name="receiveFileFromTranslator.fileGroupsListBox">0;1;2;3;4;5;6;7;8;9;10;11</globalSetting>
+    <globalSetting name="receiveFileFromTranslator.languagesToImportCheckListBox">0;1;2</globalSetting>
+    <globalSetting name="projectMruItems">&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;items&gt;&lt;item type="2" checksum="951311391" /&gt;&lt;item type="2" checksum="2340952984" /&gt;&lt;item type="2" checksum="3659071517" /&gt;&lt;item type="2" checksum="2109414631" /&gt;&lt;item type="2" checksum="948705650" /&gt;&lt;item type="2" checksum="2984403380" /&gt;&lt;item type="2" checksum="2468362911" /&gt;&lt;/items&gt;</globalSetting>
+    <globalSetting name="AddNewFileGroupForm.destinationLanguagesListBox">
+    </globalSetting>
+    <globalSetting name="AddNewFileGroupForm.extensionComboBoxEdit">0</globalSetting>
+    <globalSetting name="AddNewFileGroupForm.baseFolderTextEdit.Text">
+    </globalSetting>
+    <globalSetting name="AddNewFileGroupForm.baseFileNameTextEdit.Text">
+    </globalSetting>
+    <globalSetting name="advancedOptionsPanel.Visible">True</globalSetting>
+    <globalSetting name="sendFileToTranslator.destinationFilePathTextEdit.InitialDirectory">C:\Users\robocik\Desktop</globalSetting>
+    <userSetting name="roman_000@ROBOCIKPC.filesInitialDir">C:\sources\BA40\BA40\BodyArchitect.Client.Resources\Localization</userSetting>
+    <userSetting name="roman_000@ROBOCIKPC.FindText">
+    </userSetting>
+    <userSetting name="roman_000@ROBOCIKPC.RecentFiles">C:\sources\BA40\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.resx;C:\sources\BA40\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.pl.resx###***###C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.resx;C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.pl.resx###***###C:\sources\BA40\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.resx;C:\sources\BA40\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.pl.resx###***###C:\sources\BA40\BA40\BodyArchitect.Client.Resources\Localization\Strings.resx;C:\sources\BA40\BA40\BodyArchitect.Client.Resources\Localization\Strings.pl.resx###***###C:\sources\BA40\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.resx;C:\sources\BA40\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.pl.resx###***###C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.resx;C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.pl.resx###***###C:\sources\BA40\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.resx;C:\sources\BA40\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.pl.resx</userSetting>
+    <userSetting name="robocik@robocik-PC.filesInitialDir">C:\Sources\BA\BA40\BodyArchitectWebSite\App_GlobalResources</userSetting>
+    <userSetting name="robocik@robocik-PC.FindText">
+    </userSetting>
+    <userSetting name="robocik@robocik-PC.RecentFiles">C:\Sources\BA\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.resx;C:\Sources\BA\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.pl.resx###***###C:\Sources\BA\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.resx;C:\Sources\BA\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.pl.resx###***###C:\Sources\BA\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.resx;C:\Sources\BA\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.pl.resx###***###C:\Sources\BA\BA40\BodyArchitect.Client.Resources\Localization\Strings.resx;C:\Sources\BA\BA40\BodyArchitect.Client.Resources\Localization\Strings.pl.resx###***###C:\Sources\BA\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.resx;C:\Sources\BA\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.pl.resx###***###C:\Sources\BA\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.resx;C:\Sources\BA\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.pl.resx###***###C:\Sources\BA\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.resx;C:\Sources\BA\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.pl.resx</userSetting>
+    <description>
+    </description>
+  </configuration>
+  <fileGroups>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="fbb17c23-01a6-492f-af1b-c3083069784e">
+      <file filePath="..\BA40\BodyArchitect.Client.Module.A6W\Localization\A6WEntryStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.A6W\Localization\A6WEntryStrings.resx" uniqueID="36faaafb-71bc-444b-892b-5a504d4d210e" />
+      <file filePath="..\BA40\BodyArchitect.Client.Module.A6W\Localization\A6WEntryStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.A6W\Localization\A6WEntryStrings.pl.resx" uniqueID="258ccf5f-6274-42ad-8fff-7c6129d23119" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a7830722-ef85-4ca2-b723-ec599948ba9b">
+      <file filePath="..\BA40\BodyArchitect.Service.Client.WP7\ApplicationStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.Client.WP7\ApplicationStrings.resx" uniqueID="1e989b37-15fc-4259-9a9c-a74e83dae1c5" />
+      <file filePath="..\BA40\BodyArchitect.Service.Client.WP7\ApplicationStrings.pl-PL.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.Client.WP7\ApplicationStrings.pl-PL.resx" uniqueID="805a53cc-07a9-4dbb-ac1a-9282fb25865b" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="e592173f-fbda-4fc7-b813-1c8113b4b660">
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Blog\Localization\BlogEntryStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Blog\Localization\BlogEntryStrings.resx" uniqueID="d63dedfa-2f24-495e-a87b-b285b4e6166f" />
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Blog\Localization\BlogEntryStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Blog\Localization\BlogEntryStrings.pl.resx" uniqueID="7840d449-5d8d-4092-9b41-5c41e0e5ffa9" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="d685bd98-a4a4-41d5-83a6-974e5c2a90b5">
+      <file filePath="..\BA40\BodyArchitectWebSite\App_GlobalResources\Payments.aspx.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitectWebSite\App_GlobalResources\Payments.aspx.resx" uniqueID="31ee6e9c-2ecc-4af2-a2e7-f9966198f201" />
+      <file filePath="..\BA40\BodyArchitectWebSite\App_GlobalResources\Payments.aspx.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitectWebSite\App_GlobalResources\Payments.aspx.pl.resx" uniqueID="70170108-5aea-4510-9175-a7634735fd3d" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a341f32f-2b04-41ad-afbb-d49f0b454f86">
+      <file filePath="..\BA40\BodyArchitect.Service.V2\Localization\ExercisesStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\ExercisesStrings.resx" uniqueID="b35b0f1f-dfc5-4398-b480-a47eb5e025c6" />
+      <file filePath="..\BA40\BodyArchitect.Service.V2\Localization\ExercisesStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\ExercisesStrings.pl.resx" uniqueID="80c90563-e935-4efc-86d1-d2488e162964" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="063bc720-185e-435e-9a2c-c3296910c32f">
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Instructor\InstructorStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Instructor\InstructorStrings.resx" uniqueID="4ddfe5eb-73db-4ee5-8704-c8448946f7aa" />
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Instructor\InstructorStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Instructor\InstructorStrings.pl.resx" uniqueID="0c604367-8164-42fd-9954-65015cfe6b86" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="1c8bc3c2-75a8-463f-a5aa-56d094063d46">
+      <file filePath="..\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.resx" uniqueID="f0fee989-7e4e-476b-b214-97d9b2ce43ff" />
+      <file filePath="..\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\LocalizedStrings.pl.resx" uniqueID="fe8e4258-aa2f-42be-9fae-cde9d09dfe80" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="a1c85c2e-403a-4afd-8e06-4919e0819596">
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.resx" uniqueID="586d22f0-a384-4972-90e0-d8fb38dab88d" />
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Measurements\SizeEntryStrings.pl.resx" uniqueID="1ac73767-0c41-4be0-856b-8142ae69ec6f" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="0f431b2d-9a7e-403c-a2e7-d07cbb0bc736">
+      <file filePath="..\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.resx" uniqueID="3928cc52-f12c-414d-8352-c4e2d743e079" />
+      <file filePath="..\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.StrengthTraining\Localization\StrengthTrainingEntryStrings.pl.resx" uniqueID="a2ca6f95-a327-4bd4-8835-af68ab655a2e" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="10a2a017-f46f-476e-b0fb-6c5516089627">
+      <file filePath="..\BA40\BodyArchitect.Client.Resources\Localization\Strings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Resources\Localization\Strings.resx" uniqueID="18801a41-118a-4bba-b573-27b4cb982f92" />
+      <file filePath="..\BA40\BodyArchitect.Client.Resources\Localization\Strings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Resources\Localization\Strings.pl.resx" uniqueID="d8ca9d28-fe7e-4e69-9037-634e25a710df" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="d609bcbd-a7de-4290-8771-58ee16c9048c">
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.resx" uniqueID="b212fed5-5bf5-4fd9-864e-549880421304" />
+      <file filePath="..\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Client.Module.Suplements\SuplementsEntryStrings.pl.resx" uniqueID="3c5abc80-1acc-49ce-a895-87c0e6e29f66" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="debc2af3-295f-4eff-93b4-ecc8e1216f56">
+      <file filePath="..\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.resx" uniqueID="b9b1b19f-601f-41cd-8249-95f2879ed514" />
+      <file filePath="..\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2\Localization\SupplementsStrings.pl.resx" uniqueID="53fdde5d-9e48-48bd-9a12-bc943b52594b" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="fab718b5-57f4-495f-abd2-3e925bc4fb2a">
+      <file filePath="..\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.resx" uniqueID="ff2b738c-ed64-478d-a1a2-d0061ccc05b9" />
+      <file filePath="..\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.pl.resx" absoluteFilePath="C:\sources\BA40\BA40\BodyArchitect.Service.V2.Model\Localization\ValidationStrings.pl.resx" uniqueID="22377889-5337-4379-974b-f3bc223c8541" />
+      <remarks>
+      </remarks>
+    </fileGroup>
+  </fileGroups>
+  <projectFolders />
+</project>

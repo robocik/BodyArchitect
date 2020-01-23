@@ -1,0 +1,136 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.Blog.HtmlEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" x:Name="This">
+    <UserControl.Resources>
+        <Style x:Key="ToolBarImage" TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="16" />
+            <Setter Property="Height"  Value="16" />
+        </Style>
+        <Style x:Key="ToggleContextMenu"
+               TargetType="{x:Type ContextMenu}" BasedOn="{StaticResource {x:Type ContextMenu}}">
+            <Setter Property="Background"
+                    Value="#FFF" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContextMenu}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ItemsPresenter Margin="{TemplateBinding Padding}"
+                                            SnapsToDevicePixels="true" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource {x:Type MenuItem}}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type MenuItem}">
+                                    <ContentPresenter Margin="{TemplateBinding Padding}"
+                                                      ContentSource="Header"
+                                                      RecognizesAccessKey="False" />
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.ContextMenu>
+        <ContextMenu x:Name="EditingContextMenu">
+            <ContextMenu.CommandBindings>
+                <CommandBinding Command="Undo"
+                                Executed="UndoExecuted"
+                                CanExecute="UndoCanExecute" />
+                <CommandBinding Command="Redo"
+                                Executed="RedoExecuted"
+                                CanExecute="RedoCanExecute" />
+                <CommandBinding Command="Cut"
+                                Executed="CutExecuted"
+                                CanExecute="CutCanExecute" />
+                <CommandBinding Command="Copy"
+                                Executed="CopyExecuted"
+                                CanExecute="CopyCanExecute" />
+                <CommandBinding Command="Paste"
+                                Executed="PasteExecuted"
+                                CanExecute="PasteCanExecute" />
+                <CommandBinding Command="Delete"
+                                Executed="DeleteExecuted"
+                                CanExecute="DeleteCanExecute" />
+                <CommandBinding Command="SelectAll"
+                                Executed="SelectAllExecuted" />
+            </ContextMenu.CommandBindings>
+            <MenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Cmd_Undo}"
+                      Command="Undo"
+                      CommandTarget="{Binding ElementName=This}">
+                <MenuItem.Icon>
+                    <Image Style="{StaticResource ToolBarImage}"
+                           Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/undo.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Cmd_Redo}"
+                      Command="Redo"
+                      CommandTarget="{Binding ElementName=This}">
+                <MenuItem.Icon>
+                    <Image Style="{StaticResource ToolBarImage}"
+                           Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/redo.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <Separator Margin="0,-2" />
+            <MenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Cmd_Cut}"
+                      Command="Cut"
+                      CommandTarget="{Binding ElementName=This}">
+                <MenuItem.Icon>
+                    <Image Style="{StaticResource ToolBarImage}"
+                           Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/cut_16x16.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Cmd_Copy}"
+                      Command="Copy"
+                      CommandTarget="{Binding ElementName=This}">
+                <MenuItem.Icon>
+                    <Image Style="{StaticResource ToolBarImage}"
+                           Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/copy_16x16.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Cmd_Paste}"
+                      Command="Paste"
+                      CommandTarget="{Binding ElementName=This}">
+                <MenuItem.Icon>
+                    <Image Style="{StaticResource ToolBarImage}"
+                           Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/paste_16x16.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Cmd_Delete}"
+                      Command="Delete"
+                      CommandTarget="{Binding ElementName=This}">
+                <MenuItem.Icon>
+                    <Image Style="{StaticResource ToolBarImage}"
+                           Source="/BodyArchitect.Client.Resources;Component/Images/HtmlEditor/del.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <Separator Margin="0,-2" />
+            <MenuItem Header="{lex:LocText  BodyArchitect.Client.Module.Blog:BlogEntryStrings:Cmd_SelectAll}"
+                      Command="SelectAll"
+                      CommandTarget="{Binding ElementName=This}" />
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Grid>
+        <Grid>
+            <TextBox x:Name="CodeEditor"
+                         AcceptsReturn="True"
+                         AcceptsTab="True"
+                         AutoWordSelection="True"
+                         VerticalScrollBarVisibility="Auto"
+                         TextWrapping="Wrap" />
+            <WindowsFormsHost x:Name="BrowserHost">
+                <wf:WebBrowser x:Name="VisualEditor" />
+            </WindowsFormsHost>
+        </Grid>
+    </Grid>
+</UserControl>

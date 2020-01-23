@@ -1,0 +1,33 @@
+﻿<controls:usrBaseControl x:Class="BodyArchitect.Client.UI.UserControls.usrMood"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                                       xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls"
+                                       d:DesignHeight="300" d:DesignWidth="300">
+
+    <GroupBox Header="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrMood_Header_Mood}">
+        <StackPanel Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+            <Label Content="{lex:LocText  BodyArchitect.Client.Module.StrengthTraining:StrengthTrainingEntryStrings:usrMood_Title_Mood}" Target="cmbStatus" />
+            <ComboBox Margin="{StaticResource MarginSmallTop}" Name="cmbStatus" ItemsSource="{Binding Moods}" 
+                  SelectedValue="{Binding SelectedMood,Mode=TwoWay}" SelectedValuePath="Value" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Image Source="{Binding Image}" Height="16" Width="16"/>
+                            <TextBlock Margin="{StaticResource MarginSmallLeft}" Grid.Column="1" Text="{Binding Text}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+        </StackPanel>
+
+    </GroupBox>
+</controls:usrBaseControl>

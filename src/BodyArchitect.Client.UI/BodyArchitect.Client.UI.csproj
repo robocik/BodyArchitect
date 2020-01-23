@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88EEC43D-7F8E-46DA-8734-94664C03E246}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Client.UI</RootNamespace>
+    <AssemblyName>BodyArchitect.Client.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.UI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.UI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BodyArchitect.Client.UI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.UI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.3.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Facebook.6.8.0\lib\net40-client\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.5\lib\net40-client\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net40-client\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Assemblies\WPF Ribbon\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\..\Assemblies\Windows API Code Pack 1.1\binaries\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.3.0.18, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Quartz.2.3\lib\net40-client\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RibbonControlsLibrary, Version=4.0.0.11019, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Assemblies\WPF Ribbon\RibbonControlsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="Visiblox.Charts">
+      <HintPath>..\..\Assemblies\Visiblox.Charts\Visiblox.Charts.Wpf\4.0\Visiblox.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFLocalizeExtension, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WpfLocalizeExtension.2.2.1\lib\net35\WPFLocalizeExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.1.6.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XAMLMarkupExtensions.1.1.6.3\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AchievementsHelper.cs" />
+    <Compile Include="BAMessageBox.cs" />
+    <Compile Include="Cache\CustomersReposidory.cs" />
+    <Compile Include="Cache\PictureDownloadingServiceCommand.cs" />
+    <Compile Include="Cache\PicturesCache.cs" />
+    <Compile Include="Cache\TrainingDaysReposidory.cs" />
+    <Compile Include="Cache\TranslationsCache.cs" />
+    <Compile Include="Controls\Accordion\System\TransitioningContentControl.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Automation\Peers\AccordionAutomationPeer.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Automation\Peers\AccordionItemAutomationPeer.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Automation\Peers\AccordionItemWrapperAutomationPeer.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Controls\Accordion.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Controls\AccordionAction.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Controls\AccordionButton.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Controls\AccordionItem.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Controls\AccordionSelectionMode.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Controls\ExpandableContentControl.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\Controls\SelectionSequence.cs" />
+    <Compile Include="Controls\Accordion\System\Windows\VisualStates.cs" />
+    <Compile Include="Controls\BAChart.cs" />
+    <Compile Include="Controls\BADataGrid.cs" />
+    <Compile Include="Controls\CachedFilteredComboBox.cs" />
+    <Compile Include="Controls\CachedImage.cs" />
+    <Compile Include="Controls\Calendar\Common\IAppointment.cs" />
+    <Compile Include="Controls\Calendar\Common\BindableObject.cs" />
+    <Compile Include="Controls\Calendar\Common\ChangeAppointmentTimeEventArgs.cs" />
+    <Compile Include="Controls\Calendar\Common\Filters.cs" />
+    <Compile Include="Controls\Calendar\Common\ICalendarControl.cs" />
+    <Compile Include="Controls\Calendar\Controls\Calendar.cs" />
+    <Compile Include="Controls\Calendar\Controls\CalendarAppointmentItem.cs" />
+    <Compile Include="Controls\Calendar\Controls\CalendarDay.cs" />
+    <Compile Include="Controls\Calendar\Controls\CalendarDayHeader.cs" />
+    <Compile Include="Controls\Calendar\Controls\CalendarLedger.cs" />
+    <Compile Include="Controls\Calendar\Controls\CalendarLedgerItem.cs" />
+    <Compile Include="Controls\Calendar\Controls\CalendarTimeslotItem.cs" />
+    <Compile Include="Controls\Calendar\Controls\DragAdorner.cs" />
+    <Compile Include="Controls\Calendar\Controls\TimeslotPanel.cs" />
+    <Compile Include="Controls\CompanyAnimationControl.xaml.cs">
+      <DependentUpon>CompanyAnimationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlValidatedEventArgs.cs" />
+    <Compile Include="Controls\DragDropHelper\DragDropHelper.cs" />
+    <Compile Include="Controls\DragDropHelper\DraggedAdorner.cs" />
+    <Compile Include="Controls\DragDropHelper\InsertionAdorner.cs" />
+    <Compile Include="Controls\DragDropHelper.cs" />
+    <Compile Include="Controls\DragDropHelper\Utilities.cs" />
+    <Compile Include="Controls\ErrorProvider\EnterpriseValidationRule.cs" />
+    <Compile Include="Controls\ErrorProvider\ErrorProvider.cs" />
+    <Compile Include="Controls\ErrorProvider\PropertyMappedValidatorValueAccess.cs" />
+    <Compile Include="Controls\ExBaImage.xaml.cs">
+      <DependentUpon>ExBaImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExGridSplitter\GridExpander.cs" />
+    <Compile Include="Controls\FilteredComboBox.cs" />
+    <Compile Include="Controls\ImageButtonExt.cs" />
+    <Compile Include="Controls\MinSizeScrollViewer.cs" />
+    <Compile Include="Controls\MyMultiLineTextEditor.cs" />
+    <Compile Include="Controls\NavigationService.cs" />
+    <Compile Include="Controls\PlansUI\FeaturedListViewGroupStyleSelector.cs" />
+    <Compile Include="Controls\PlansUI\PlanViewModel.cs" />
+    <Compile Include="Controls\ProgressIndicator\ProgressIndicator.cs" />
+    <Compile Include="Controls\ProgressIndicator\StatusBarItemProgressIndicator.xaml.cs">
+      <DependentUpon>StatusBarItemProgressIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RatingControl.xaml.cs">
+      <DependentUpon>RatingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RibbonComboBoxFocusFix.cs" />
+    <Compile Include="Controls\Calendar\Common\Appointment.cs" />
+    <Compile Include="Controls\Calendar\Common\AppointmentsConverter.cs" />
+    <Compile Include="Controls\TimeSpanUpDown.cs" />
+    <Compile Include="Controls\UIHelper.cs" />
+    <Compile Include="Controls\usrBaseControl.cs" />
+    <Compile Include="Controls\usrProgressIndicatorButtons.xaml.cs">
+      <DependentUpon>usrProgressIndicatorButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\vCalendar\BlackoutDatesCollection.cs" />
+    <Compile Include="Controls\vCalendar\Calendar.cs" />
+    <Compile Include="Controls\vCalendar\DateButton.cs" />
+    <Compile Include="Controls\vCalendar\DateRangeChangingEventArgs.cs" />
+    <Compile Include="Controls\vCalendar\DateRangeHelper.cs" />
+    <Compile Include="Controls\vCalendar\DisplayModeChangedEventArgs.cs" />
+    <Compile Include="Controls\vCalendar\DisplayType.cs" />
+    <Compile Include="Controls\vCalendar\DragAdorner.cs" />
+    <Compile Include="Controls\vCalendar\DragData.cs" />
+    <Compile Include="Controls\vCalendar\ResourceKeys.cs" />
+    <Compile Include="Controls\vCalendar\SelectedDateChangedEventArgs.cs" />
+    <Compile Include="Controls\vCalendar\SelectedDatesChangedEventArgs.cs" />
+    <Compile Include="Controls\vCalendar\SelectionType.cs" />
+    <Compile Include="Controls\vCalendar\ThemePath.cs" />
+    <Compile Include="Controls\vCalendar\Themes.cs" />
+    <Compile Include="Controls\WatermarkExtension\AdornerExtensions.cs" />
+    <Compile Include="Controls\WatermarkExtension\KeyboardFocusBehavior.cs" />
+    <Compile Include="Controls\WatermarkExtension\TextBlockAdorner.cs" />
+    <Compile Include="Controls\WatermarkExtension\WatermarkCheckComboBoxBehavior.cs" />
+    <Compile Include="Controls\WatermarkExtension\WatermarkComboBoxBehavior.cs" />
+    <Compile Include="Controls\WatermarkExtension\WatermarkTextBoxBehavior.cs" />
+    <Compile Include="Converters\BooleanToColorConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityMultiBinding.cs" />
+    <Compile Include="Converters\ColorsConverter.cs" />
+    <Compile Include="Converters\DateTimeToRelativeStringConverter.cs" />
+    <Compile Include="Converters\GlobalObjectsToDefaultImageConverter.cs" />
+    <Compile Include="Converters\HtmlToTextConverter.cs" />
+    <Compile Include="Converters\ImageConverter.cs" />
+    <Compile Include="Converters\IsNullConverter.cs" />
+    <Compile Include="Converters\MessagePriorityToImageConverter.cs" />
+    <Compile Include="Converters\NegateBoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\NegateNullToVisibilityConverter.cs" />
+    <Compile Include="Converters\NegationConverter.cs" />
+    <Compile Include="Converters\NullImageConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="Converters\RemindBeforeToTimeSpanConverter.cs" />
+    <Compile Include="Converters\TimeSpanConverter.cs" />
+    <Compile Include="Converters\UserToHitTestConverter.cs" />
+    <Compile Include="Converters\UtcDateTimeToLocalConverter.cs" />
+    <Compile Include="Converters\VisiblityToBoolConverter.cs" />
+    <Compile Include="DomainObjectOperatonHelper.cs" />
+    <Compile Include="EnumLocalizer.cs" />
+    <Compile Include="FeaturedDataReposidory.cs" />
+    <Compile Include="MessagesReposidory.cs" />
+    <Compile Include="MyTrainingsReposidory.cs" />
+    <Compile Include="PreviewGenerator\HtmlCycleExporterBase.cs" />
+    <Compile Include="PreviewGenerator\HtmlExporterBase.cs" />
+    <Compile Include="IControlView.cs" />
+    <Compile Include="IEditableControl.cs" />
+    <Compile Include="IValidationControl.cs" />
+    <Compile Include="Masking.cs" />
+    <Compile Include="PleaseWait\IProgressWindow.cs" />
+    <Compile Include="PleaseWait\MethodParameters.cs" />
+    <Compile Include="PleaseWait\PleaseWait.cs" />
+    <Compile Include="PleaseWait\PleaseWaitContext.cs" />
+    <Compile Include="PleaseWait\ProgressOperationContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SchedulerEngine\PopupNotificationCtrl.xaml.cs">
+      <DependentUpon>PopupNotificationCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerEngine\PopupNotificationTemplateSelector.cs" />
+    <Compile Include="SchedulerEngine\ReminderItemsReposidory.cs" />
+    <Compile Include="SchedulerEngine\Scheduler.cs" />
+    <Compile Include="PreviewGenerator\SRCategoryAttribute.cs" />
+    <Compile Include="Social\FacebookLoginWindow.xaml.cs">
+      <DependentUpon>FacebookLoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Social\SocialNetworkShare.cs" />
+    <Compile Include="Translator\HtmlTranslator.cs" />
+    <Compile Include="Translator\TranslateSettingsWindow.xaml.cs">
+      <DependentUpon>TranslateSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BAHelpButton.xaml.cs">
+      <DependentUpon>BAHelpButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BlogCommentsList.xaml.cs">
+      <DependentUpon>BlogCommentsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DragSourceUserControl.cs" />
+    <Compile Include="UserControls\InvitationListControl.xaml.cs">
+      <DependentUpon>InvitationListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MessageEventArgs.cs" />
+    <Compile Include="UserControls\PagerListUserControl.cs" />
+    <Compile Include="UserControls\RatingsControl.xaml.cs">
+      <DependentUpon>RatingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RssReader.xaml.cs">
+      <DependentUpon>RssReader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StarControl.xaml.cs">
+      <DependentUpon>StarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SystemMessages.cs" />
+    <Compile Include="UserControls\TrainingDayCommentsControl.xaml.cs">
+      <DependentUpon>TrainingDayCommentsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlRibbon.cs" />
+    <Compile Include="UserControls\UsersListView.xaml.cs">
+      <DependentUpon>UsersListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrAddressDetails.xaml.cs">
+      <DependentUpon>usrAddressDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrApplicationName.xaml.cs">
+      <DependentUpon>usrApplicationName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrCalendarOptions.xaml.cs">
+      <DependentUpon>usrCalendarOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrCreateProfile.xaml.cs">
+      <DependentUpon>usrCreateProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrDateRange.xaml.cs">
+      <DependentUpon>usrDateRange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrEntriesCalendarView.xaml.cs">
+      <DependentUpon>usrEntriesCalendarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrEntryObjectBase.cs" />
+    <Compile Include="UserControls\usrEntryObjectDetailsBase.cs" />
+    <Compile Include="UserControls\usrMessagesBoard.xaml.cs">
+      <DependentUpon>usrMessagesBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrMessageView.xaml.cs">
+      <DependentUpon>usrMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrMood.xaml.cs">
+      <DependentUpon>usrMood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrMyTrainingStatus.xaml.cs">
+      <DependentUpon>usrMyTrainingStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfileEdit.xaml.cs">
+      <DependentUpon>usrProfileEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfileListEntry.xaml.cs">
+      <DependentUpon>usrProfileListEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfileNotifications.xaml.cs">
+      <DependentUpon>usrProfileNotifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfilePersonalInfo.xaml.cs">
+      <DependentUpon>usrProfilePersonalInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrProfilePrivacy.xaml.cs">
+      <DependentUpon>usrProfilePrivacy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrRating.xaml.cs">
+      <DependentUpon>usrRating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrRemindMe.xaml.cs">
+      <DependentUpon>usrRemindMe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrReportingEntryStatus.xaml.cs">
+      <DependentUpon>usrReportingEntryStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrReportStatus.xaml.cs">
+      <DependentUpon>usrReportStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrTrainingDay.xaml.cs">
+      <DependentUpon>usrTrainingDay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrUserInfo.xaml.cs">
+      <DependentUpon>usrUserInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrUserInformation.xaml.cs">
+      <DependentUpon>usrUserInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrUserSizes.xaml.cs">
+      <DependentUpon>usrUserSizes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrWorkoutCommentsList.xaml.cs">
+      <DependentUpon>usrWorkoutCommentsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\usrWymiaryEditor.xaml.cs">
+      <DependentUpon>usrWymiaryEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WorkoutPlanCommentListControl.xaml.cs">
+      <DependentUpon>WorkoutPlanCommentListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calendar\CalendarViewDayInfo.cs" />
+    <Compile Include="Views\Calendar\NewCalendarView.xaml.cs">
+      <DependentUpon>NewCalendarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangeAccountTypeView.xaml.cs">
+      <DependentUpon>ChangeAccountTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FeaturedItemsView.xaml.cs">
+      <DependentUpon>FeaturedItemsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HtmlPreviewView.xaml.cs">
+      <DependentUpon>HtmlPreviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogView.xaml.cs">
+      <DependentUpon>LogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyPlace\MyPlacesFilteredComboBox.cs" />
+    <Compile Include="Views\MyPlace\MyPlacesReposidory.cs" />
+    <Compile Include="Views\MyPlace\MyPlacesView.xaml.cs">
+      <DependentUpon>MyPlacesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyPlace\usrMyPlaceDetails.xaml.cs">
+      <DependentUpon>usrMyPlaceDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyTrainingsView.xaml.cs">
+      <DependentUpon>MyTrainingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyTrainingsViewModel.cs" />
+    <Compile Include="Views\NewReportingView.xaml.cs">
+      <DependentUpon>NewReportingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeoplePagerList.cs" />
+    <Compile Include="Views\PeopleView.xaml.cs">
+      <DependentUpon>PeopleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\usrPeopleView.xaml.cs">
+      <DependentUpon>usrPeopleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsSevenIntegration\JumplistHelper.cs" />
+    <Compile Include="WindowsSevenIntegration\TaskbarProgressWrapper.cs" />
+    <Compile Include="WindowsSevenIntegration\ThumbnailButtonsHelper.cs" />
+    <Compile Include="WindowsSevenIntegration\TThumbnailHelper.cs" />
+    <Compile Include="Windows\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BaseWindow.cs" />
+    <Compile Include="Windows\ChangeAccountTypeWindow.xaml.cs">
+      <DependentUpon>ChangeAccountTypeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CreateProfileWindow.xaml.cs">
+      <DependentUpon>CreateProfileWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditDomainObjectWindow.xaml.cs">
+      <DependentUpon>EditDomainObjectWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ForgotPasswordWindow.xaml.cs">
+      <DependentUpon>ForgotPasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ImportLicenceKeyWindow.xaml.cs">
+      <DependentUpon>ImportLicenceKeyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InputWindow.xaml.cs">
+      <DependentUpon>InputWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InvitationWindow.xaml.cs">
+      <DependentUpon>InvitationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindowViewModel.cs" />
+    <Compile Include="Windows\OptionsWindow.xaml.cs">
+      <DependentUpon>OptionsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProfileEditWindow.xaml.cs">
+      <DependentUpon>ProfileEditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SendErrorWindow.xaml.cs">
+      <DependentUpon>SendErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SendMessageWindow.xaml.cs">
+      <DependentUpon>SendMessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TrainingDayWindow.xaml.cs">
+      <DependentUpon>TrainingDayWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UpdateInfoWindow.xaml.cs">
+      <DependentUpon>UpdateInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WilksCalculatorWindow.xaml.cs">
+      <DependentUpon>WilksCalculatorWindow.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\Accordion\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Calendar\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CompanyAnimationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ExBaImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExGridSplitter\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ProgressIndicator\StatusBarItemProgressIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProgressIndicator\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RatingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrProgressIndicatorButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\vCalendar\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\vCalendar\Themes\Office.Silver.Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\vCalendar\Themes\Office.Silver.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\vCalendar\Themes\Office.Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\vCalendar\Themes\vhCalendar.Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SchedulerEngine\PopupNotificationCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Social\FacebookLoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MyStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Translator\TranslateSettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BAHelpButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BlogCommentsList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\InvitationListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RatingsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\RssReader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TrainingDayCommentsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UsersListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StarControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\usrAddressDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrApplicationName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrCalendarOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrCreateProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrDateRange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrEntriesCalendarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrMessagesBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrMood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrMyTrainingStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrProfileEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrProfileListEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrProfileNotifications.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrProfilePersonalInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrProfilePrivacy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrRating.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrRemindMe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrReportingEntryStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrReportStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="UserControls\usrTrainingDay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <Page Include="UserControls\usrUserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrUserInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrUserSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\usrWorkoutCommentsList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\usrWymiaryEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\WorkoutPlanCommentListControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Calendar\NewCalendarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChangeAccountTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DashboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FeaturedItemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HtmlPreviewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MyPlace\MyPlacesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MyPlace\usrMyPlaceDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MyTrainingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewReportingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PeopleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\usrPeopleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ChangeAccountTypeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CreateProfileWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EditDomainObjectWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ForgotPasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ImportLicenceKeyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\InputWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\InvitationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OptionsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ProfileEditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SendErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SendMessageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TrainingDayWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UpdateInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WilksCalculatorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Client.Common\BodyArchitect.Client.Common.csproj">
+      <Project>{FB6880D6-08E2-4FB1-B308-8E0AD62B6BE2}</Project>
+      <Name>BodyArchitect.Client.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Resources\BodyArchitect.Client.Resources.csproj">
+      <Project>{06E5FC11-6938-4226-9567-ACD5B75619EE}</Project>
+      <Name>BodyArchitect.Client.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.WCF\BodyArchitect.Client.WCF.csproj">
+      <Project>{E0C4293B-9D71-4415-8062-4C35ADD13640}</Project>
+      <Name>BodyArchitect.Client.WCF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.V2.Model\BodyArchitect.Service.V2.Model.csproj">
+      <Project>{DCFCC632-2849-421F-BF34-054B8DF0F6E9}</Project>
+      <Name>BodyArchitect.Service.V2.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Settings\BodyArchitect.Settings.csproj">
+      <Project>{769DFF6C-B952-40C4-B087-5C004E06D89C}</Project>
+      <Name>BodyArchitect.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\AvalonDock\AvalonDock.Themes.Expression\AvalonDock.Themes.Expression.csproj">
+      <Project>{488DD8F7-9D3C-4F53-BD1F-84A095D9BC10}</Project>
+      <Name>AvalonDock.Themes.Expression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\AvalonDock\AvalonDock\AvalonDock.csproj">
+      <Project>{DB81988F-E0F2-45A0-A1FD-8C37F3D35244}</Project>
+      <Name>AvalonDock</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

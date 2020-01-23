@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.MoodControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             mc:Ignorable="d" toolkit:TiltEffect.IsTiltEnabled="true"  
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <StackPanel>
+        <TextBlock Margin="12,0,0,0" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Path=Localizedresources.MoodControl_Header_Mood,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+        <HyperlinkButton Margin="0,-12,0,0" FontWeight="Bold" Style="{StaticResource HyperlinkButtonStyle}"  Click="btnMood_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Name="imgMood" Height="32" Width="32" Source="/Images/Mood_Normal32.png"/>
+                <TextBlock  Style="{StaticResource CustomTextTitle2Style}" Name="tbMood" Text=""/>
+            </StackPanel>
+        </HyperlinkButton>
+    </StackPanel>
+    
+</UserControl>

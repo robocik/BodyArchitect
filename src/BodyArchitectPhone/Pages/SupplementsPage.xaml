@@ -1,0 +1,139 @@
+﻿<Pages:PreviousEntryObjectPageBase 
+    x:Class="BodyArchitect.WP7.Pages.SupplementsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:conv="clr-namespace:BodyArchitect.WP7" xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" xmlns:Pages="clr-namespace:BodyArchitect.WP7.Pages" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls"
+    xmlns:local="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <conv:ReportStatusToBoolConverter x:Key="reportStatusConverter" />
+            <conv:EntryStatusToBoolConverter x:Key="entryStatusConv" />
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" Title="{Binding Path=Localizedresources.SupplementsPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" >
+                <controls:PivotItem Header="{Binding Path=Localizedresources.SupplementsPage_SuppleHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <my:HeaderControl x:Name="headerTrainingDate" Text="{Binding TrainingDate}"/>
+                        <TextBlock TextWrapping="Wrap" Margin="12,24,0,12" Grid.Row="1" Text="{Binding Path=Localizedresources.SupplementsPage_NoSupplements,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="lblNoSupplements" Style="{StaticResource CustomTextLargeStyle}" />
+
+                        <ListBox  local:ListAnimation.IsPivotAnimated="True" Name="lsItems" SelectionChanged="lsItems_SelectionChanged" ItemsSource="{Binding Supplements}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <ListBox.ItemTemplate>
+
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <toolkit:ContextMenuService.ContextMenu>
+                                            <toolkit:ContextMenu Opened="Menu_Opened" Closed="Menu_Closed">
+                                                <toolkit:MenuItem Header="{Binding Path=Localizedresources.MenuDelete,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="mnuDelete_Click" />
+                                            </toolkit:ContextMenu>
+                                        </toolkit:ContextMenuService.ContextMenu>
+                                        <StackPanel Grid.Column="1" Tag="{Binding}">
+                                            <TextBlock Tag="{Binding}" Text="{Binding Name}" Style="{StaticResource CustomTextLargeStyle}" />
+                                            <StackPanel local:ListAnimation.AnimationLevel="1" Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Dosage}" Style="{StaticResource CustomTextAccentStyle}" />
+                                                <TextBlock Margin="0,0,0,0" Text="{Binding DosageType}" Style="{StaticResource CustomTextAccentStyle}" />
+                                                <TextBlock Margin="24,0,0,0" Text="{Binding Time}" Style="{StaticResource CustomTextSmallStyle}" />
+                                                <TextBlock Margin="12,0,0,0" Text="{Binding TimeType}" Style="{StaticResource CustomTextSmallStyle}" />
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                    </Grid>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.SupplementsPage_InfoHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <toolkit:ToggleSwitch Foreground="{StaticResource CustomForegroundBrush}" Margin="0,24,0,0" IsEnabled="{Binding EditMode}" Content="{Binding Path=Localizedresources.EntryStatusPlanned,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Unchecked="tsEntryStatus_Checked" Checked="tsEntryStatus_Checked" Header="{Binding Path=Localizedresources.StrengthWorkoutPage_EntryStatusHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Entry.Status,Mode=TwoWay,Converter={StaticResource entryStatusConv}}"  Name="tsEntryStatus" />
+
+                            <toolkit:ToggleSwitch Foreground="{StaticResource CustomForegroundBrush}" IsEnabled="{Binding EditMode}" Content="{Binding Path=Localizedresources.HideInReports,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Unchecked="tsShowInReports_Checked" Checked="tsShowInReports_Checked" Header="{Binding Path=Localizedresources.StrengthWorkoutPage_ShowInReportsHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Entry.ReportStatus,Mode=TwoWay,Converter={StaticResource reportStatusConverter}}" Name="tsShowInReports" />
+
+
+                            <TextBlock Margin="12,-12,0,0" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Path=Localizedresources.SupplementsPage_Comments,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:PhoneTextBox  IsEnabled="{Binding EditMode}"  Hint="{Binding Path=Localizedresources.CommentWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Text="{Binding Entry.Comment,Mode=TwoWay}" AcceptsReturn="True" Height="160" TextWrapping="Wrap" />
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+
+                <controls:PivotItem  Header="{Binding Path=Localizedresources.StrengthWorkoutPage_PreviewHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <Grid  Margin="12,0,12,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <my:HeaderControl x:Name="headerOldTrainingDate"/>
+
+
+                        <toolkit:MultiselectList local:ListAnimation.IsPivotAnimated="True"  Name="lstOldItems" ItemsSource="{Binding OldSupplements}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <toolkit:MultiselectList.ItemTemplate>       
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <toolkit:ContextMenuService.ContextMenu >
+                                            <toolkit:ContextMenu  Tag="{Binding}" Opened="Menu_Opened" Closed="Menu_Closed">
+                                                <toolkit:MenuItem  Header="{Binding Path=Localizedresources.MenuUseIt,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="mnuCopyPreviousItem_Click" />
+                                            </toolkit:ContextMenu>
+                                        </toolkit:ContextMenuService.ContextMenu>
+                                        <StackPanel Grid.Column="1" Tag="{Binding}">
+                                            <TextBlock Tag="{Binding}" Text="{Binding Name}" Style="{StaticResource CustomTextLargeStyle}" />
+                                            <StackPanel local:ListAnimation.AnimationLevel="1" Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Dosage}" Style="{StaticResource CustomTextAccentStyle}" />
+                                                <TextBlock Margin="0,0,0,0" Text="{Binding DosageType}" Style="{StaticResource CustomTextAccentStyle}" />
+                                                <TextBlock Margin="24,0,0,0" Text="{Binding Time}" Style="{StaticResource CustomTextSmallStyle}" />
+                                                <TextBlock Margin="12,0,0,0" Text="{Binding TimeType}" Style="{StaticResource CustomTextSmallStyle}" />
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </toolkit:MultiselectList.ItemTemplate>
+                        </toolkit:MultiselectList>
+
+                    </Grid>
+
+                </controls:PivotItem>
+            </controls:Pivot>
+        </Grid>
+    </Grid>
+
+</Pages:PreviousEntryObjectPageBase>

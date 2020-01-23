@@ -1,0 +1,60 @@
+﻿<Windows:BaseWindow x:Class="BodyArchitect.Client.UI.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen"
+        Title="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_Title}" Height="300" Width="500" 
+                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+            xmlns:Windows="clr-namespace:BodyArchitect.Client.UI.Windows"
+                    xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator">
+    <Grid Margin="{StaticResource MarginLargeLeftTopRightBottom}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Fill="Black"/>
+        <Image VerticalAlignment="Top" Width="160" Stretch="Uniform"  Source="/BodyArchitect.Client.Resources;component/Images/BodyArchitect.jpg" />
+        
+        <!--<Button Style="{StaticResource CancelButton}" Name="btnCancel"/>-->
+        <GroupBox Grid.Column="1" Margin="{StaticResource MarginLargeLeft}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="{StaticResource MarginLargeLeftRight}" VerticalAlignment="Center" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_UserName}" Style="{StaticResource titleLabel}" Grid.ColumnSpan="3" Target="txtUserName" Grid.Column="0" Grid.Row="0" />
+                <TextBox Margin="{StaticResource MarginLargeLeftRight}" VerticalAlignment="Center" Name="txtUserName"  Style="{StaticResource singleLineTextBox}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1"/>
+
+                <Label Margin="{StaticResource MarginLargeLeftRight}" VerticalAlignment="Center" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_Password}" Grid.ColumnSpan="3" Style="{StaticResource titleLabel}" Target="txtPassword" Grid.Column="0" Grid.Row="2" />
+                <PasswordBox  Margin="{StaticResource MarginLargeLeftRight}" VerticalAlignment="Center" Name="txtPassword" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"/>
+
+                <CheckBox Margin="{StaticResource MarginLargeLeft}" VerticalAlignment="Center" Grid.Row="4"  Grid.Column="0" Name="chkAutologin" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_AutoLogin}"/>
+                <StackPanel Orientation="Horizontal" Margin="{StaticResource MarginLargeRight}" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Right">
+                    <Viewbox Width="20" Height="20" Margin="15,15,15,15" VerticalAlignment="Center" >
+                        <controls:ProgressIndicator   IsIndeterminate="true"  x:Name="progressIndicator"    HorizontalAlignment="Center"   VerticalAlignment="Center"/>
+                    </Viewbox>
+                    <Button Name="btnLogin"  Height="30" VerticalAlignment="Center"  Width="100"  IsDefault="true" Click="btnLogin_Click" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_Login}"  />
+                </StackPanel>
+
+
+                <StackPanel Margin="{StaticResource MarginLargeRightBottom}" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                    <Button Name="btnRegister" Margin="{StaticResource MarginLargeTop}" Click="btnRegister_Click"  Style="{StaticResource LinkButon}" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_Register}" />
+                    <Button Name="btnForgotPassword" Margin="{StaticResource MarginLargeTop}" Click="btnForgotPassword_Click" Style="{StaticResource LinkButon}" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_ForgotPassword}" />
+                    <Button Name="btnForceUpdate" Margin="{StaticResource MarginLargeTop}" Visibility="Collapsed" Click="btnForceUpdate_Click" Style="{StaticResource LinkButon}" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:LoginWindow_ForceUpdate}" />
+                </StackPanel>
+
+            </Grid>
+        </GroupBox>
+        
+    </Grid>
+
+</Windows:BaseWindow>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.Instructor" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.Instructor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ScheduleEntryState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Planned" />
+      <xs:enumeration value="Done" />
+      <xs:enumeration value="Cancelled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ScheduleEntryState" nillable="true" type="tns:ScheduleEntryState" />
+  <xs:simpleType name="SaveScheduleEntryRangeCopyMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OnlyScheduleEntries" />
+      <xs:enumeration value="All" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SaveScheduleEntryRangeCopyMode" nillable="true" type="tns:SaveScheduleEntryRangeCopyMode" />
+  <xs:simpleType name="CustomerVirtualCriteria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="VirtualOnly" />
+      <xs:enumeration value="StandardOnly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CustomerVirtualCriteria" nillable="true" type="tns:CustomerVirtualCriteria" />
+  <xs:simpleType name="ReservationsOperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Make" />
+      <xs:enumeration value="MakeGroup" />
+      <xs:enumeration value="Undo" />
+      <xs:enumeration value="Presnet" />
+      <xs:enumeration value="Absent" />
+      <xs:enumeration value="StatusDone" />
+      <xs:enumeration value="StatusCancelled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReservationsOperationType" nillable="true" type="tns:ReservationsOperationType" />
+  <xs:simpleType name="CustomerGroupRestrictedType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Partially" />
+      <xs:enumeration value="Full" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CustomerGroupRestrictedType" nillable="true" type="tns:CustomerGroupRestrictedType" />
+  <xs:simpleType name="CustomerGroupMembersCriteria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="WithMembersOnly" />
+      <xs:enumeration value="WithoutMembersOnly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CustomerGroupMembersCriteria" nillable="true" type="tns:CustomerGroupMembersCriteria" />
+  <xs:simpleType name="PaymentCriteria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Any" />
+      <xs:enumeration value="WithPayment" />
+      <xs:enumeration value="WithoutPayment" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PaymentCriteria" nillable="true" type="tns:PaymentCriteria" />
+  <xs:simpleType name="ProductsSortOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ByName" />
+      <xs:enumeration value="ByPaid" />
+      <xs:enumeration value="ByDate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProductsSortOrder" nillable="true" type="tns:ProductsSortOrder" />
+</xs:schema>

@@ -1,0 +1,123 @@
+﻿<Animations:AnimatedBasePage xmlns:my1="clr-namespace:BodyArchitect.WP7.UserControls"  xmlns:my="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"  
+    x:Class="BodyArchitect.WP7.ExerciseViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+                        xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+                        FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar   ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+        </shell:ApplicationBar>
+    </Custom:PhoneApplicationPage.ApplicationBar>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+            <my:ProgressStatus  Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <controls:Pivot Name="pivot" Foreground="{StaticResource CustomForegroundBrush}" Grid.Row="1" Title="{Binding Exercise.Name}" SelectionChanged="pivot_SelectionChanged">
+                <controls:PivotItem Header="{Binding Path=Localizedresources.ExerciseViewPage_HeaderInfo,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer  Margin="12,36,12,0">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" FontSize="{StaticResource CustomFontSizeLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Text="{Binding Exercise.Shortcut}" />
+                            </StackPanel>
+
+                            <my1:AnimatedRatingControl Margin="12,24,12,12"  HorizontalAlignment="Left" IsEnabled="False" Rating="{Binding Rating}"/>
+
+
+                            <Grid  Margin="0,24,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="{Binding Path=Localizedresources.ExerciseViewPage_ForceLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                                    <TextBlock Text="{Binding ExerciseForceType}" Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="{Binding Path=Localizedresources.ExerciseViewPage_MechanicLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                                    <TextBlock Text="{Binding MechanicsType}" Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                </StackPanel>
+
+                            </Grid>
+
+                            <Grid  Margin="0,24,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="{Binding Path=Localizedresources.ExerciseViewPage_DifficultLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                                    <TextBlock Text="{Binding Difficult}" Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="{Binding Path=Localizedresources.ExerciseViewPage_ExerciseTypeLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                                    <TextBlock Text="{Binding ExerciseType}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                                </StackPanel>
+
+                            </Grid>
+
+                            <HyperlinkButton Margin="0,24,0,0" Visibility="{Binding ShowGoToWeb}" Style="{StaticResource HyperlinkButtonStyle}" Tag="{Binding Exercise.Url}"  FontSize="{StaticResource CustomFontSizeLarge}" VerticalAlignment="Bottom" x:Name="lnkUrl" HorizontalAlignment="Left"  Click="HyperlinkButton_Click" >
+                                <StackPanel>
+                                    <TextBlock Margin="0"  Text="{Binding Path=Localizedresources.ExerciseViewPage_GoToWeb,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                    <TextBlock Margin="0" Text="{Binding Exercise.Url}" Style="{StaticResource CustomTextAccentStyle}"/>
+                                </StackPanel>
+                            </HyperlinkButton>
+
+                            <TextBlock Margin="12,24,0,0" Visibility="{Binding DescriptionVisibility}" Text="{Binding Path=Localizedresources.ExerciseViewPage_DescriptionLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" />
+                            <TextBlock Margin="12,12,0,56" Visibility="{Binding DescriptionVisibility}" Text="{Binding Exercise.Description}" TextWrapping="Wrap" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+                <controls:PivotItem Header="{Binding Path=Localizedresources.WorkoutPlanViewPage_VotesHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <my1:VotesControl CommentsLoaded="votesControl_CommentsLoaded" x:Name="votesControl" />
+                    </ScrollViewer>
+
+                </controls:PivotItem>
+            </controls:Pivot>
+
+        </Grid>
+    </Grid>
+</Animations:AnimatedBasePage>

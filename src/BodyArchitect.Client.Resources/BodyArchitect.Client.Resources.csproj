@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06E5FC11-6938-4226-9567-ACD5B75619EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Client.Resources</RootNamespace>
+    <AssemblyName>BodyArchitect.Client.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30816.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.Resources.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.Resources.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BodyArchitect.Client.Resources.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client.Resources.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Localization\TestDomainModelStrings.Designer.cs">
+      <DependentUpon>TestDomainModelStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Localization\TestGUI.Designer.cs">
+      <DependentUpon>TestGUI.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Localization\TestGUI.pl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestGUI.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Localization\TestSuperTips.Designer.cs">
+      <DependentUpon>TestSuperTips.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LoginImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\TestGUI.pl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestGUI.pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\TestDomainModelStrings.pl.resx" />
+    <EmbeddedResource Include="Localization\TestDomainModelStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestDomainModelStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\TestGUI.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestGUI.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Strings.pl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\TestSuperTips.pl.resx" />
+    <EmbeddedResource Include="Localization\TestSuperTips.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestSuperTips.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddUserImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ok.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ForgotPasswordImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PluginError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LoginUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddTrainingDay.png" />
+    <Resource Include="Images\DeleteTrainingDay.png" />
+    <Resource Include="Images\OpenTrainingDay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Refresh32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Measurements.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Invitations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SendMessage.png" />
+    <Resource Include="Images\EditProfile.png" />
+    <Resource Include="Images\AcceptInvitation.png" />
+    <Resource Include="Images\SendInvitation.png" />
+    <Resource Include="Images\RejectInvitation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DefaultProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\blueBrownStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\blueBrownStart32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\blueGoldStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\blueGoldStar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\blueSilverStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\blueSilverStar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\greenBrownStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\greenBrownStar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\greenGoldStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\greenGoldStar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\greenSilverStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\greenSilverStar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\redBrownStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\redBrownStar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\redGoldStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\redGoldStart32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\redSilverStar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stars\redSilverStar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-black32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-blue32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-green32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-grey32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-red32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkoutPlansAwards\bullet-yellow32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeletedProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Invitation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PriorityHigh.png" />
+    <Resource Include="Images\PriorityLow.png" />
+    <Resource Include="Images\PriorityNormal.png" />
+    <Resource Include="Images\PrioritySystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeleteMessage32.png" />
+    <Resource Include="Images\SendMessage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeleteProfile32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Calendar32.png" />
+    <Resource Include="Images\LastLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SortOrder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NextTrainingDay.png" />
+    <Resource Include="Images\PrevTrainingDay.png" />
+    <Resource Include="Images\Module.png" />
+    <Resource Include="Images\Rename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MoreButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatusPrivate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LogClear.png" />
+    <Resource Include="Images\LogSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LogStandard.png" />
+    <Resource Include="Images\LogError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reservation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HasError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Print.png" />
+    <Resource Include="Images\PrintPreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddToFavorites32.png" />
+    <Resource Include="Images\Favorites.png" />
+    <Resource Include="Images\RemoveFromFavorites32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Global.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GlobalDefaultProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BAColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\People.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SearchOnline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Publish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Today.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\First.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cut.png" />
+    <Resource Include="Images\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FilterAllEntries.png" />
+    <Resource Include="Images\FilterOnlyDone.png" />
+    <Resource Include="Images\FilterOnlyFuture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\Bold_16x16.png" />
+    <Resource Include="Images\HtmlEditor\Copy_16x16.png" />
+    <Resource Include="Images\HtmlEditor\Cut_16x16.png" />
+    <Resource Include="Images\HtmlEditor\Italic_16x16.png" />
+    <Resource Include="Images\HtmlEditor\Paste_16x16.png" />
+    <Resource Include="Images\HtmlEditor\Paste_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\subscript.png" />
+    <Resource Include="Images\HtmlEditor\superscript.png" />
+    <Resource Include="Images\HtmlEditor\underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\fontcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\Color_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\FontBackgroundColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\JustifyCenter.png" />
+    <Resource Include="Images\HtmlEditor\erase.png" />
+    <Resource Include="Images\HtmlEditor\JustifyLeft.png" />
+    <Resource Include="Images\HtmlEditor\outdent.png" />
+    <Resource Include="Images\HtmlEditor\JustifyRight.png" />
+    <Resource Include="Images\HtmlEditor\JustifyStretch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\indent.png" />
+    <Resource Include="Images\HtmlEditor\listbullets.png" />
+    <Resource Include="Images\HtmlEditor\listnumbered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\redo.png" />
+    <Resource Include="Images\HtmlEditor\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\hyperlink.png" />
+    <Resource Include="Images\HtmlEditor\image.png" />
+    <Resource Include="Images\HtmlEditor\Table_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AvalonDock\DockAnchorableBottom.png" />
+    <Resource Include="Images\AvalonDock\DockAnchorableLeft.png" />
+    <Resource Include="Images\AvalonDock\DockAnchorableRight.png" />
+    <Resource Include="Images\AvalonDock\DockAnchorableTop.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentAsAnchorableBottom.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentAsAnchorableLeft.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentAsAnchorableRight.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentAsAnchorableTop.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentBottom.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentInside.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentLeft.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentRight.png" />
+    <Resource Include="Images\AvalonDock\DockDocumentTop.png" />
+    <Resource Include="Images\AvalonDock\DockPaneEmpty.png" />
+    <Resource Include="Images\AvalonDock\DockPaneLargeEmpty.png" />
+    <Resource Include="Images\AvalonDock\HTabGroup.png" />
+    <Resource Include="Images\AvalonDock\Locked.png" />
+    <Resource Include="Images\AvalonDock\PinAutoHide.png" />
+    <Resource Include="Images\AvalonDock\PinAutoHide_Dark.png" />
+    <Resource Include="Images\AvalonDock\PinClose.png" />
+    <Resource Include="Images\AvalonDock\PinClose_Dark.png" />
+    <Resource Include="Images\AvalonDock\PinDocMenu.png" />
+    <Resource Include="Images\AvalonDock\PinMaximize.png" />
+    <Resource Include="Images\AvalonDock\PinMaximize_Dark.png" />
+    <Resource Include="Images\AvalonDock\PinMenu.png" />
+    <Resource Include="Images\AvalonDock\PinMenu_Dark.png" />
+    <Resource Include="Images\AvalonDock\PinRestore.png" />
+    <Resource Include="Images\AvalonDock\PinRestore_Dark.png" />
+    <Resource Include="Images\AvalonDock\VTabGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HtmlEditor\ZoomIn.png" />
+    <Resource Include="Images\HtmlEditor\ZoomOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Comment16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Preview16.png" />
+    <Resource Include="Images\Preview32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddToFavorites16.png" />
+    <Resource Include="Images\RemoveFromFavorites16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Favorites16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reports16.png" />
+    <Resource Include="Images\Reports32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Calendar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatusPublic16.png" />
+    <Resource Include="Images\StatusPublic32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MyTrainings16.png" />
+    <Resource Include="Images\MyTrainings32.png" />
+    <Resource Include="Images\Refresh16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SortAsc16.png" />
+    <Resource Include="Images\SortDesc16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add16.png" />
+    <Resource Include="Images\Add32.png" />
+    <Resource Include="Images\Delete16.png" />
+    <Resource Include="Images\Delete32.png" />
+    <Resource Include="Images\Edit16.png" />
+    <Resource Include="Images\Edit32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Back16.png" />
+    <Resource Include="Images\Back32.png" />
+    <Resource Include="Images\Forward16.png" />
+    <Resource Include="Images\Forward32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Clone16.png" />
+    <Resource Include="Images\Clone32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StopMyTraining16.png" />
+    <Resource Include="Images\StopMyTraining32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CancelButton.gif" />
+    <Resource Include="Images\OkButton.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Filter16.png" />
+    <Resource Include="Images\Filter32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Down16.png" />
+    <Resource Include="Images\Down32.png" />
+    <Resource Include="Images\Up16.png" />
+    <Resource Include="Images\Up32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ReminderCalendar16.png" />
+    <Resource Include="Images\ReminderCalendar32.png" />
+    <Resource Include="Images\ReminderScheduleEntries32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Trash16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reminder16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reminder32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Comments32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buy16.png" />
+    <Resource Include="Images\Buy32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bullet16.png" />
+    <Resource Include="Images\Bullet32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AccountType16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SerialKey16.png" />
+    <Resource Include="Images\SerialKey32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Help16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MyGyms16.png" />
+    <Resource Include="Images\MyGyms32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\IsDefault16.png" />
+    <Resource Include="Images\IsSystem16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Options16.png" />
+    <Resource Include="Images\Options32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\OptionsChanged16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GenerateReport24.png" />
+    <Resource Include="Images\GenerateReport32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cancel16.png" />
+    <Resource Include="Images\Cancel32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ZoomReset16.png" />
+    <Resource Include="Images\ZoomReset32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Save16.png" />
+    <Resource Include="Images\Save32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SelectReports32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ReportTypes\Chart_Bar.png" />
+    <Resource Include="Images\ReportTypes\Chart_Bar_3D_Ascending.png" />
+    <Resource Include="Images\ReportTypes\Chart_Bar_Document.png" />
+    <Resource Include="Images\ReportTypes\Chart_Bar_Files_Wide.png" />
+    <Resource Include="Images\ReportTypes\Chart_Graph.png" />
+    <Resource Include="Images\ReportTypes\Chart_Pie.png" />
+    <Resource Include="Images\ReportTypes\Chart_Vertical_Bar_Poll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HelpLicence16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FlagPoland32.png" />
+    <Resource Include="Images\FlagUsa32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Records16.png" />
+    <Resource Include="Images\Records32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Featured16.png" />
+    <Resource Include="Images\Featured32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BodyArchitect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\galaxy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Rss16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Translate128.png" />
+    <Resource Include="Images\Translate16.png" />
+    <Resource Include="Images\Translate32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Question16.png" />
+    <Resource Include="Images\ShowColumns16.png" />
+    <Resource Include="Images\ShowColumns32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Facebook128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WilksCalc32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Comments16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Details16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Progress16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Panels16.png" />
+    <Resource Include="Images\Panels32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Mood_Bad32.png" />
+    <Resource Include="Images\Mood_Good32.png" />
+    <Resource Include="Images\Mood_Normal32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

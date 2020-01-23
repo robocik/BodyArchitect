@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AE5D539-1251-4458-9B54-B201AAC29570}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.UnitTests.V2</RootNamespace>
+    <AssemblyName>BodyArchitect.UnitTests.V2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/FM.UnitTests/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>53ea6c08</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FM.UnitTests.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\FM.UnitTests.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.UnitTests.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FM.UnitTests.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BodyArchitect.Client.Common.Fakes">
+      <HintPath>FakesAssemblies\BodyArchitect.Client.Common.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="BodyArchitect.Service.V2.Fakes">
+      <HintPath>FakesAssemblies\BodyArchitect.Service.V2.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.3.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetZip.1.9.3\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.3\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.98.1\lib\net40\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountTypeFeatures\TestAdministratorAccount.cs" />
+    <Compile Include="AccountTypeFeatures\TestFreeAccount.cs" />
+    <Compile Include="AccountTypeFeatures\TestInstructorAccount.cs" />
+    <Compile Include="AccountTypeFeatures\TestPremiumAccount.cs" />
+    <Compile Include="BAPointsTests\TestAmazonHandler.cs" />
+    <Compile Include="BAPointsTests\TestPaymentsManager.cs" />
+    <Compile Include="BAPointsTests\TestPayPalHandler.cs" />
+    <Compile Include="BAPointsTests\TestPrzelewy24Handler.cs" />
+    <Compile Include="BAPointsTests\TestTransferujHandler.cs" />
+    <Compile Include="MockTimerService.cs" />
+    <Compile Include="NHibernateTestFixtureBase.cs" />
+    <Compile Include="Performance\TestsGPSSerialization.cs" />
+    <Compile Include="Performance\TestZipCompressionAndGPSTrackerHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\TestReport_ExerciseRecords.cs" />
+    <Compile Include="Reports\TestReport_ExerciseWeight.cs" />
+    <Compile Include="Reports\TestReport_MeasurementsTime.cs" />
+    <Compile Include="Reports\TestReport_WeightRepetitions.cs" />
+    <Compile Include="SQLiteInMemoryTestingConnectionProvider.cs" />
+    <Compile Include="OldTests\StrengthTraining\TestSplitPlanChecker.cs" />
+    <Compile Include="OldTests\TestErrorHandler.cs" />
+    <Compile Include="OldTests\TestSampleData.cs" />
+    <Compile Include="OldTests\TestLoginManager.cs" />
+    <Compile Include="OldTests\TestModel.cs" />
+    <Compile Include="OldTests\TestModelHelper.cs" />
+    <Compile Include="OldTests\TestTrainingBuilder.cs" />
+    <Compile Include="OldTests\TestTrainingDay.cs" />
+    <Compile Include="OldTests\TestTrainingPlan.cs" />
+    <Compile Include="OldTests\UnitTestHelper.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic1.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic2.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic3.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic4.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic5.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic6.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic7.cs" />
+    <Compile Include="SupplementsCycles\TestService_Anabolic8.cs" />
+    <Compile Include="SupplementsCycles\TestService_BCAA1.cs" />
+    <Compile Include="SupplementsCycles\TestService_BCAA2.cs" />
+    <Compile Include="SupplementsCycles\TestService_CreatineCycle_2DT.cs" />
+    <Compile Include="SupplementsCycles\TestService_CycleDefinitionWithMeasurements.cs" />
+    <Compile Include="SupplementsCycles\TestService_StormShockTherapyCycle.cs" />
+    <Compile Include="SupplementsCycles\TestService_StormShockTherapyCycle_WithIncreasingDosageEveryWeek.cs" />
+    <Compile Include="SupplementsCycles\TestService_StormShockTherapyCycle_WithIncreasingDosageEveryWeek_1.cs" />
+    <Compile Include="SupplementsCycles\TestSupplementsCycleRepetiter.cs" />
+    <Compile Include="TestBodyArchitectService_V2.cs" />
+    <Compile Include="TestCloneCleaner.cs" />
+    <Compile Include="TestGpsHelper.cs" />
+    <Compile Include="TestInstructorHelper.cs" />
+    <Compile Include="TestReminderBuilder.cs" />
+    <Compile Include="TestSecurityManager.cs" />
+    <Compile Include="TestSerieValidator.cs" />
+    <Compile Include="TestServiceBase.cs" />
+    <Compile Include="TestService_Championships.cs" />
+    <Compile Include="TestService_CheckProfileNameAvailability.cs" />
+    <Compile Include="TestService_ExerciseOperation.cs" />
+    <Compile Include="TestService_GetChampionships.cs" />
+    <Compile Include="TestService_GetFeaturedData.cs" />
+    <Compile Include="TestService_GetMessages.cs" />
+    <Compile Include="TestService_GetMyPlaces.cs" />
+    <Compile Include="TestService_GetMyTrainingEntries.cs" />
+    <Compile Include="TestService_A6WTraining.cs" />
+    <Compile Include="TestService_AccountOperation.cs" />
+    <Compile Include="TestService_Activities.cs" />
+    <Compile Include="TestService_AutomaticMeasurementsUpdate.cs" />
+    <Compile Include="TestService_BlogCommentOperation.cs" />
+    <Compile Include="TestService_CreateProfile.cs" />
+    <Compile Include="TestService_CustomerGroups.cs" />
+    <Compile Include="TestService_DeleteCustomer.cs" />
+    <Compile Include="TestService_GetCustomerGroups.cs" />
+    <Compile Include="TestService_GetCustomers.cs" />
+    <Compile Include="TestService_GPSTracker.cs" />
+    <Compile Include="TestService_ProfileOperation.cs" />
+    <Compile Include="TestService_DeleteTrainingDay.cs" />
+    <Compile Include="TestService_DeleteWorkoutPlan.cs" />
+    <Compile Include="TestService_ExerciseMapper.cs" />
+    <Compile Include="TestService_FavoriteUsers.cs" />
+    <Compile Include="TestService_FriendsOperations.cs" />
+    <Compile Include="TestService_GetBlogComments.cs" />
+    <Compile Include="TestService_GetComments.cs" />
+    <Compile Include="TestService_GetExercises.cs" />
+    <Compile Include="TestService_GetMyTrainings.cs" />
+    <Compile Include="TestService_GetProducts.cs" />
+    <Compile Include="TestService_GetProfileInformation.cs" />
+    <Compile Include="TestService_GetReminders.cs" />
+    <Compile Include="TestService_GetScheduleEntries.cs" />
+    <Compile Include="TestService_GetSupplements.cs" />
+    <Compile Include="TestService_GetSupplementsCycleDefinitions.cs" />
+    <Compile Include="TestService_GetTrainingDays.cs" />
+    <Compile Include="TestService_GetUsers.cs" />
+    <Compile Include="TestService_GetWorkoutPlans.cs" />
+    <Compile Include="TestService_ImportLicence.cs" />
+    <Compile Include="TestService_Login.cs" />
+    <Compile Include="TestService_MessageOperation.cs" />
+    <Compile Include="TestService_MyTrainingLogic.cs" />
+    <Compile Include="TestService_PaymentBasket.cs" />
+    <Compile Include="TestService_ReminderOperation.cs" />
+    <Compile Include="TestService_RemindersEvalutation.cs" />
+    <Compile Include="TestService_ReservationsOperation.cs" />
+    <Compile Include="TestService_SaveCustomer.cs" />
+    <Compile Include="TestService_SaveDeleteExercise.cs" />
+    <Compile Include="TestService_SaveDeleteMyPlace.cs" />
+    <Compile Include="TestService_SaveScheduleEntry.cs" />
+    <Compile Include="TestService_SaveSupplementsCycleDefinition.cs" />
+    <Compile Include="TestService_SaveTrainingDay.cs" />
+    <Compile Include="TestService_SaveWorkoutPlan.cs" />
+    <Compile Include="TestService_SendMessage.cs" />
+    <Compile Include="TestService_SupplementsCycle.cs" />
+    <Compile Include="TestService_SupplementsCycleDefinitionOperation.cs" />
+    <Compile Include="TestService_UpdateProfile.cs" />
+    <Compile Include="TestService_UserFavorites.cs" />
+    <Compile Include="TestService_Voting.cs" />
+    <Compile Include="TestService_WorkoutPlanOperation.cs" />
+    <Compile Include="TestService_WorkoutPlanFavoritesOperation.cs" />
+    <Compile Include="TestService_SaveReminders.cs" />
+    <Compile Include="TestWcfServiceBase.cs" />
+    <Compile Include="TestWilksFormula.cs" />
+    <Compile Include="TestWorkoutPlanOperationHelper.cs" />
+    <Compile Include="TestXmlSerializationSupplementsCycleDefinitionFormatter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BAPointsTests\BAPoints.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="sqlite3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Fakes Include="Fakes\BodyArchitect.Service.V2.fakes" />
+    <Fakes Include="Fakes\BodyArchitect.Client.Common.fakes" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Client.Common\BodyArchitect.Client.Common.csproj">
+      <Project>{FB6880D6-08E2-4FB1-B308-8E0AD62B6BE2}</Project>
+      <Name>BodyArchitect.Client.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Module.GPSTracker\BodyArchitect.Client.Module.GPSTracker.csproj">
+      <Project>{F362CA38-729B-42E7-A0DF-3A89F33EB29E}</Project>
+      <Name>BodyArchitect.Client.Module.GPSTracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Module.Instructor\BodyArchitect.Client.Module.Instructor.csproj">
+      <Project>{ABAA332D-F12A-42F5-B889-11995EC79F67}</Project>
+      <Name>BodyArchitect.Client.Module.Instructor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Module.StrengthTraining\BodyArchitect.Client.Module.StrengthTraining.csproj">
+      <Project>{E4814A24-197F-461A-8230-191D832C4140}</Project>
+      <Name>BodyArchitect.Client.Module.StrengthTraining</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.DataAccess.NHibernate\BodyArchitect.DataAccess.NHibernate.csproj">
+      <Project>{B9F150D5-EF9F-412E-B7D0-4A23373907D2}</Project>
+      <Name>BodyArchitect.DataAccess.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Model\BodyArchitect.Model.csproj">
+      <Project>{DC90B51D-4A42-4C72-B2FA-30A565EB72C1}</Project>
+      <Name>BodyArchitect.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.V2.Model\BodyArchitect.Service.V2.Model.csproj">
+      <Project>{DCFCC632-2849-421F-BF34-054B8DF0F6E9}</Project>
+      <Name>BodyArchitect.Service.V2.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.V2\BodyArchitect.Service.V2.csproj">
+      <Project>{2FD9DBF1-B96B-41E8-A637-FC3FEBD707F3}</Project>
+      <Name>BodyArchitect.Service.V2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Settings\BodyArchitect.Settings.csproj">
+      <Project>{769DFF6C-B952-40C4-B087-5C004E06D89C}</Project>
+      <Name>BodyArchitect.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.Instructor.Controls.usrActivityDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:UI="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI" 
+             xmlns:Converters="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+   
+    <UserControl.Resources>
+        <Converters:TimeSpanConverter x:Key="timeSpanConv"/>
+        <Converters:ColorsConverter x:Key="colorConv" />
+        <Converters:NegationConverter x:Key="notConv" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label  Target="txtName" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrActivityDetails_Content_Name}" />
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeft}" Name="txtName" Text="{Binding Name,NotifyOnValidationError=True,Mode=TwoWay}" MaxLength="100" Grid.Column="1"/>
+
+        <Label  Target="cpColor" Grid.Row="1" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrActivityDetails_Content_Color}"/>
+        <xctk:ColorPicker Margin="{StaticResource MarginMediumLeftTop}" DisplayColorAndName="false" Name="cpColor" SelectedColor="{Binding Color,NotifyOnValidationError=True,Mode=TwoWay,Converter={StaticResource colorConv}}" Grid.Row="1" Grid.Column="1" IsEnabled="{Binding ReadOnly,ElementName=Me,Converter={StaticResource notConv}}" />
+
+        <Label  Target="txtDuration" Grid.Row="2" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrActivityDetails_Content_Duration}"/>
+        <UI:TimeSpanUpDown Margin="{StaticResource MarginMediumLeftTop}" Value="{Binding Duration,NotifyOnValidationError=True,Mode=TwoWay,Converter={StaticResource timeSpanConv}}" Name="txtDuration" Grid.Row="2" Grid.Column="1" IsEnabled="{Binding ReadOnly,ElementName=Me,Converter={StaticResource notConv}}" />
+
+        <Label  Target="txtMaxPersons" Grid.Row="3" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrActivityDetails_Content_MaxPersons}"/>
+        <xctk:IntegerUpDown Margin="{StaticResource MarginMediumLeftTop}" Value="{Binding MaxPersons,NotifyOnValidationError=True,Mode=TwoWay}" Name="txtMaxPersons" Grid.Row="3" Grid.Column="1" IsEnabled="{Binding ReadOnly,ElementName=Me,Converter={StaticResource notConv}}" />
+
+        <Label  Target="txtPrice" Grid.Row="4" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrActivityDetails_Content_Price}"/>
+        <xctk:CalculatorUpDown Margin="{StaticResource MarginMediumLeftTop}" Value="{Binding Price,NotifyOnValidationError=True,Mode=TwoWay}" Name="txtPrice" Grid.Row="4" Grid.Column="1" IsEnabled="{Binding ReadOnly,ElementName=Me,Converter={StaticResource notConv}}" />
+    </Grid>
+</UserControl>

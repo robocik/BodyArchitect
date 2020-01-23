@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lokad.Stack</name>
+    </assembly>
+    <members>
+        <member name="T:GlobalAssemblyInfo">
+            <summary>
+             Assembly information class that is shared between all projects
+            </summary>
+        </member>
+        <member name="T:Lokad.ExtendISupportSyntaxForLogging">
+            <summary>
+            Extends logging syntax
+            </summary>
+        </member>
+        <member name="M:Lokad.ExtendISupportSyntaxForLogging.LogToStack(Lokad.ISupportSyntaxForLogging)">
+            <summary>
+            Registers the log provider from the current log4net stack <see cref="M:Lokad.Logging.LoggingStack.GetLogProvider"/>.
+            See <see cref="T:Lokad.Logging.LoggingStack"/> for options on configuring Apache log4net options.
+            </summary>
+            <param name="module">The module to extend.</param>
+        </member>
+        <member name="T:Lokad.Logging.ListeningLogOptions">
+            <summary>
+            Log options
+            </summary>
+        </member>
+        <member name="P:Lokad.Logging.ListeningLogOptions.Pattern">
+            <summary>
+            Gets or sets the conversion pattern.
+            </summary>
+            <value>The conversion pattern.</value>
+            <seealso cref="F:log4net.Layout.PatternLayout.DefaultConversionPattern"/>
+            <seealso cref="F:log4net.Layout.PatternLayout.DetailConversionPattern"/>
+        </member>
+        <member name="P:Lokad.Logging.ListeningLogOptions.ImmediateFlush">
+            <summary>
+            Gets or sets a value indicating whether to auto flush the log.
+            </summary>
+            <value><c>true</c> if auto flush; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Lokad.Logging.LoggingModule">
+            <summary>
+            Autofac extension module that provides integration with the log4net
+            </summary>
+        </member>
+        <member name="M:Lokad.Logging.LoggingModule.Configure(Autofac.Core.IComponentRegistry)">
+            <summary>
+            <see cref="M:Autofac.Core.IModule.Configure(Autofac.Core.IComponentRegistry)"/>
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="P:Lokad.Logging.LoggingModule.UseConfig">
+            <summary>
+            Informs the module to use the config file
+            </summary>
+        </member>
+        <member name="P:Lokad.Logging.LoggingModule.FileName">
+            <summary>
+            Informs the module to use the provided file
+            </summary>
+        </member>
+        <member name="T:Lokad.Logging.LoggingMode">
+            <summary>
+            Defines log modes for the <see cref="T:Lokad.Logging.LoggingModule"/>
+            </summary>
+        </member>
+        <member name="F:Lokad.Logging.LoggingMode.Console">
+            <summary>
+            Initializes logging system to write to the console.
+            </summary>
+        </member>
+        <member name="F:Lokad.Logging.LoggingMode.Config">
+            <summary>
+            All logging is configured via lognet config
+            </summary>
+        </member>
+        <member name="F:Lokad.Logging.LoggingMode.File">
+            <summary>
+            Logging is configured from file
+            </summary>
+        </member>
+        <member name="T:Lokad.Logging.LogOptions">
+            <summary>
+            Log options
+            </summary>
+        </member>
+        <member name="P:Lokad.Logging.LogOptions.Pattern">
+            <summary>
+            Gets or sets the conversion pattern.
+            </summary>
+            <value>The conversion pattern.</value>
+            <seealso cref="F:log4net.Layout.PatternLayout.DefaultConversionPattern"/>
+            <seealso cref="F:log4net.Layout.PatternLayout.DetailConversionPattern"/>
+        </member>
+        <member name="T:Lokad.Logging.LogProviderWrapper">
+            <summary>
+            Uses <see cref="N:log4net"/> as the logging backend
+            </summary>
+        </member>
+        <member name="F:Lokad.Logging.LogProviderWrapper.Instance">
+            <summary>
+            Singleton instance of the <see cref="T:Lokad.INamedProvider`1"/> for <see cref="T:Lokad.ILog"/>
+            </summary>
+        </member>
+        <member name="M:Lokad.Logging.LogProviderWrapper.Get(System.String)">
+            <summary>
+            Creates new named log
+            </summary>
+            <param name="key">Name of the log to use</param>
+            <returns></returns>
+        </member>
+        <member name="T:Lokad.Logging.LogSyntax">
+            <summary>
+            Syntax for configuring logging within the logging stack
+            </summary>
+        </member>
+        <member name="M:Lokad.Logging.LogSyntax.Filter(Lokad.LogLevel,Lokad.LogLevel)">
+            <summary>
+            Appends inclusive filter to the log
+            </summary>
+            <param name="minRange">The min range.</param>
+            <param name="maxRange">The max range.</param>
+            <returns>same syntax</returns>
+        </member>
+        <member name="T:Lokad.Logging.LogWrapper">
+            <summary>
+            Wrapper around <see cref="T:log4net.ILog"/>
+            </summary>
+        </member>
+        <member name="T:Lokad.Logging.LoggingStack">
+            <summary>
+             This class provides hookup routines to the logging library
+            </summary>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseConsoleLog(System.Action{Lokad.Logging.LogOptions})">
+            <summary>
+            Configures the logging system to write to console
+            </summary>
+            <param name="configure">The configuration option.</param>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseTraceLog(System.Action{Lokad.Logging.ListeningLogOptions})">
+            <summary>
+            Configures the logging system to write to trace
+            </summary>
+            <param name="configure">The configuration option.</param>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseDebugLog(System.Action{Lokad.Logging.ListeningLogOptions})">
+            <summary>
+            Configures the logging system to write to the debug listeners
+            </summary>
+            <param name="configure">The configuration option.</param>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseTraceLog">
+            <summary>
+            Configures the logging system to write to console
+            </summary>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseDebugLog">
+            <summary>
+            Configures the logging system to write to console
+            </summary>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseConsoleLog">
+            <summary>
+            Configures the logging system to write to console
+            </summary>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseColoredConsoleLog(System.Action{Lokad.Logging.LogOptions})">
+            <summary>
+            Configures the logging system to write to console with colors
+            </summary>
+            <param name="configure">The configuration options.</param>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseColoredConsoleLog">
+            <summary>
+            Configures the logging system to write to console with colors
+            </summary>
+            <returns>log syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseConfig">
+            <summary>
+            Logging system is configured from App.config
+            </summary>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.Reset">
+            <summary>
+            Resets logging configuration to the default state.
+            </summary>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.ConfigureFromFile(System.String)">
+            <summary>
+            File is used to configure the logging system
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseEventLog(System.String,System.String)">
+            <summary> Defines logging to Windows Event Log and returns syntax
+            to tweak the settings </summary>
+            <param name="logName">Name of the event log.</param>
+            <param name="applicationName">Name of the application.</param>
+            <returns>configuration syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseDailyLog(System.String)">
+            <summary>
+            Defines logging to rolling text logs with one log per day
+            </summary>
+            <param name="path">The path.</param>
+            <returns>configuration syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.UseRollingLog(System.String,System.Int64,System.Int32)">
+            <summary>
+            Defines logging to rolling text logs with <paramref name="maxSize"/> 
+            and <paramref name="numberOfBackups"/> to keep.
+            </summary>
+            <param name="path">The path to store logs in.</param>
+            <param name="maxSize">Max size of the log.</param>
+            <param name="numberOfBackups">The number of backups.</param>
+            <returns>configuration syntax</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.GetLogProvider">
+            <summary>
+            Get log provider
+            </summary>
+            <returns>provider instance</returns>
+        </member>
+        <member name="M:Lokad.Logging.LoggingStack.GetLog">
+            <summary>
+            Gets the log with the "Default" name.
+            </summary>
+            <returns>new log instance</returns>
+        </member>
+    </members>
+</doc>

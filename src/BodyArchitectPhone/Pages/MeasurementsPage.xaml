@@ -1,0 +1,65 @@
+﻿<Pages:EntryObjectPageBase xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls"  
+    x:Class="BodyArchitect.WP7.Pages.MeasurementsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" xmlns:Pages="clr-namespace:BodyArchitect.WP7.Pages" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:conv="clr-namespace:BodyArchitect.WP7" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <conv:ReportStatusToBoolConverter x:Key="reportStatusConverter" />
+            <conv:EntryStatusToBoolConverter x:Key="entryStatusConv" />            
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+    
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" Title="{Binding Path=Localizedresources.MeasurementsPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                <controls:PivotItem Header="{Binding Path=Localizedresources.MeasurementsPage_HeaderMeasurements,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <my:HeaderControl x:Name="header" Grid.Row="0" Text="{Binding TrainingDate}" />
+                        <ScrollViewer  Grid.Row="1">
+                            <my:MeasurementsControl x:Name="sizeCtrl" />
+                        </ScrollViewer>
+                    </Grid>
+                </controls:PivotItem>
+                <controls:PivotItem Header="{Binding Path=Localizedresources.MeasurementsPage_HeaderInfo,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel>
+
+                            <my:HeaderControl Text="{Binding Path=Localizedresources.MeasurementsPage_SmallHeaderTime,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+                            <my:MeasurementsTimeControl  x:Name="timeCtrl" IsHitTestVisible="{Binding EditMode}" DataContext="{Binding Entry.Wymiary}"  Margin="0,12,0,24"/>
+
+                            <my:HeaderControl Text="{Binding Path=Localizedresources.MeasurementsPage_SmallHeaderInfo,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+                            <toolkit:ToggleSwitch Foreground="{StaticResource CustomForegroundBrush}" Margin="0,24,0,0" IsEnabled="{Binding EditMode}" Content="{Binding Path=Localizedresources.EntryStatusPlanned,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Unchecked="tsEntryStatus_Checked" Checked="tsEntryStatus_Checked" Header="{Binding Path=Localizedresources.StrengthWorkoutPage_EntryStatusHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Entry.Status,Mode=TwoWay,Converter={StaticResource entryStatusConv}}"  Name="tsEntryStatus" />
+                                                       
+                            <toolkit:ToggleSwitch Foreground="{StaticResource CustomForegroundBrush}" IsEnabled="{Binding EditMode}" Content="{Binding Path=Localizedresources.HideInReports,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Unchecked="tsShowInReports_Checked" Checked="tsShowInReports_Checked" Header="{Binding Path=Localizedresources.StrengthWorkoutPage_ShowInReportsHeader,Mode=OneTime, Source={StaticResource LocalizedStrings}}" IsChecked="{Binding Entry.ReportStatus,Mode=TwoWay,Converter={StaticResource reportStatusConverter}}" Name="tsShowInReports" />
+
+
+                            <TextBlock Margin="12,-12,0,0" Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Path=Localizedresources.MeasurementsPage_CommentLabel,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:PhoneTextBox IsEnabled="{Binding EditMode}"  Hint="{Binding Path=Localizedresources.CommentWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Text="{Binding Entry.Comment,Mode=TwoWay}" AcceptsReturn="True" Height="160" TextWrapping="Wrap" />
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+            </controls:Pivot>
+
+        </Grid>
+    </Grid>
+</Pages:EntryObjectPageBase>

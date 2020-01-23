@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A6WCalendarDayContentName" xml:space="preserve">
+    <value>A6W</value>
+  </data>
+  <data name="A6W_CommentTXT" xml:space="preserve">
+    <value>Dodatkowe informacje na temat aktualnej sesji treningowej.</value>
+  </data>
+  <data name="A6W_CompletedRB" xml:space="preserve">
+    <value>Zaznacz, jeśli wykonałeś wszystkie przewidziane w planie na ten dzień serie i powtórzenia.</value>
+  </data>
+  <data name="A6W_LV" xml:space="preserve">
+    <value>Każda pozycja na tej liście reprezentuje jeden dzień w planie treningowym aerobicznej szóstki Weidera. Dodatkowo wyświetlana jest liczba serii i powtórzeń przypisana do danego dnia. Jeśli pozycja ma ikonkę, to oznacza, że ten dzień został zrobiony (zakończony).</value>
+  </data>
+  <data name="A6W_PartialCompletedRB" xml:space="preserve">
+    <value>Zaznacz, jeśli nie wykonałeś wszystkich przewidzianych w planie na teń dzień serii lub powtórzeń. Możesz dodatkowo wprowadzić poniżej ile powtórzeń udało Ci się wykonać.</value>
+  </data>
+  <data name="A6W_PartialCompleteSet" xml:space="preserve">
+    <value>Jeśli wykonałeś mniej powtórzeń niż było wymagane, to możesz zapisać jak wiele powtórzeń udało Ci się wykonać.</value>
+  </data>
+  <data name="CalendarDayText" xml:space="preserve">
+    <value>Dzień {0}</value>
+  </data>
+  <data name="EntryTypeName" xml:space="preserve">
+    <value>A6W</value>
+  </data>
+  <data name="ErrorA6WTrainingAlreadyStarted" xml:space="preserve">
+    <value>Inny trening A6W jest aktualnie rozpocząty. Musisz najpierw go zakończyć.</value>
+  </data>
+  <data name="ErrorSetTooManyRepetitions" xml:space="preserve">
+    <value>Wprowadziłeś za dużo powtórzeń dla serii {0}. Aby zaliczyć dzień {1} potrzebujesz wykonać {2} powtórzeń.</value>
+  </data>
+  <data name="ErrorTrainingIntegrity" xml:space="preserve">
+    <value>Nie można wykonać tej operacji, ponieważ mogłoby to naruszyć integralność treningu.</value>
+  </data>
+  <data name="TrainingCompletedText" xml:space="preserve">
+    <value>Trening A6W został właśnie zakończony pomyślnie. Gratulacje!</value>
+  </data>
+  <data name="A6WModule_CreateRibbonGroup_Header" xml:space="preserve">
+    <value>A6W</value>
+  </data>
+  <data name="A6WModule_CreateRibbonGroup_Label" xml:space="preserve">
+    <value>Rozpocznij A6W</value>
+  </data>
+  <data name="A6WModule_ShareToSocial_Finished_Description" xml:space="preserve">
+    <value>&lt;br/&gt;&lt;b&gt;Dzień {0} ukończony&lt;/b&gt;&lt;br/&gt;Data: {1}&lt;br/&gt;&lt;br/&gt;Cały trening A6W został ukończony. Gratulacje!.</value>
+  </data>
+  <data name="A6WModule_ShareToSocial_Name" xml:space="preserve">
+    <value>Nowy wpis: Aerobiczna "6" Weidera</value>
+  </data>
+  <data name="A6WModule_ShareToSocial_NotFinished_Description" xml:space="preserve">
+    <value>&lt;br/&gt;&lt;big&gt;&lt;b&gt;Dzień {0} ukończony&lt;/b&gt;&lt;/big&gt;&lt;br/&gt;Data: {1}&lt;br/&gt;&lt;br/&gt;Pozostało jeszcze {2} dni do zakończenia treningu..</value>
+  </data>
+  <data name="usrA6WPartialCompleted_Reps1Label" xml:space="preserve">
+    <value>Powtórzenia dla serii _1:</value>
+  </data>
+  <data name="usrA6WPartialCompleted_Reps2Label" xml:space="preserve">
+    <value>Powtórzenia dla serii _2:</value>
+  </data>
+  <data name="usrA6WPartialCompleted_Reps3Label" xml:space="preserve">
+    <value>Powtórzenia dla serii _3:</value>
+  </data>
+  <data name="EntryTypeShortDescription" xml:space="preserve">
+    <value>Ciężki i zarazem skuteczny trening na mięśnie brzucha.</value>
+  </data>
+  <data name="usrA6W_Content_Completed" xml:space="preserve">
+    <value>Ukończony</value>
+  </data>
+  <data name="usrA6W_Content_PartialCompleted" xml:space="preserve">
+    <value>Częściowo ukończony</value>
+  </data>
+  <data name="usrA6W_Header_Comment" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="usrA6W_Header_Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="usrA6W_Header_Sets" xml:space="preserve">
+    <value>Serie</value>
+  </data>
+  <data name="usrA6W_Header_Repetitions" xml:space="preserve">
+    <value>Powtórzenia</value>
+  </data>
+  <data name="usrA6W_Header_Weeks" xml:space="preserve">
+    <value>Dzień</value>
+  </data>
+  <data name="A6WModule_ShareToSocial_Caption" xml:space="preserve">
+    <value>BodyArchitect - workout log and social application created for professional bodybuilders.</value>
+  </data>
+  <data name="ExceptionCannotStartA6WTraining" xml:space="preserve">
+    <value>Nie udało się rozpocząć treningu A6W</value>
+  </data>
+  <data name="StartA6WCycleWindow_Content_Preview" xml:space="preserve">
+    <value>Podgląd</value>
+  </data>
+  <data name="StartA6WCycleWindow_Content_StartDate" xml:space="preserve">
+    <value>Data rozpoczęcia:</value>
+  </data>
+  <data name="StartA6WCycleWindow_Header_Parameters" xml:space="preserve">
+    <value>Parametry</value>
+  </data>
+  <data name="StartA6WCycleWindow_Text_ClickPreviewButton" xml:space="preserve">
+    <value>Kliknij przycisk Podgląd, aby zobaczyć symulację treningu A6W. Żadne zmiany nie zostaną wprowadzone do Twojego dziennika.</value>
+  </data>
+  <data name="StartA6WCycleWindow_Watermark_EnterNameOfTraining" xml:space="preserve">
+    <value>Wprowadź nazwę tego treningu</value>
+  </data>
+  <data name="StartA6WCycleWindow_OKButton_Start" xml:space="preserve">
+    <value>Rozpocznij</value>
+  </data>
+  <data name="StartA6WViewModel_Name_A6WTraining" xml:space="preserve">
+    <value>Trening A6W</value>
+  </data>
+  <data name="StartA6WCycleWindow_Header_Preview" xml:space="preserve">
+    <value>Podgląd</value>
+  </data>
+  <data name="ErrorA6WDayResultMissing" xml:space="preserve">
+    <value>Określ, czy ten dzień został wykonany (Całkowicie lub Częściowo)</value>
+  </data>
+  <data name="StartA6WCycleWindow_Title" xml:space="preserve">
+    <value>Rozpocznij nowy trening</value>
+  </data>
+  <data name="usrA6WProgress_Completed" xml:space="preserve">
+    <value>Ukończony</value>
+  </data>
+  <data name="usrA6WProgress_NotCompleted" xml:space="preserve">
+    <value>Pozostało</value>
+  </data>
+  <data name="usrA6WProgress_ReportTitle" xml:space="preserve">
+    <value>Trening A6W</value>
+  </data>
+</root>

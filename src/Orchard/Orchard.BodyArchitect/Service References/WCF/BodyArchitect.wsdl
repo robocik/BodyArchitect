@@ -1,0 +1,1513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://MYBASERVICE.TK/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://MYBASERVICE.TK/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://MYBASERVICE.TK/Imports">
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd0" namespace="http://MYBASERVICE.TK/" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd2" namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd5" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.Exceptions" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.TrainingPlans" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.Instructor" />
+      <xsd:import schemaLocation="http://test.bodyarchitectonline.com/V2/BodyArchitect.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model.Reports" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBodyArchitectAccessService_ProfileOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProfileOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ProfileOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProfileOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ProfileOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q1:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ProfileOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q2:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ProfileOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q3:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_AccountOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_AccountOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_AccountOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q4:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_AccountOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q5:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UserFavoritesOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserFavoritesOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UserFavoritesOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserFavoritesOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UserFavoritesOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q6:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UserFavoritesOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q7:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UserFavoritesOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q8:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_TrainingDayCommentOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrainingDayCommentOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_TrainingDayCommentOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrainingDayCommentOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_TrainingDayCommentOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q9:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_TrainingDayCommentOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q10:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_TrainingDayCommentOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q11:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDayComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDayComments" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDayComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDayCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDayComments_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q12:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDayComments_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q13:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDayComments_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q14:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MessageOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:MessageOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MessageOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MessageOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MessageOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q15:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MessageOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q16:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MessageOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q17:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SendMessage_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q18:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SendMessage_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q19:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SendMessage_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q20:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProfileInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileInformation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProfileInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProfileInformation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q21:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProfileInformation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q22:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProfileInformation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q23:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_InviteFriendOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InviteFriendOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_InviteFriendOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InviteFriendOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_InviteFriendOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q24:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_InviteFriendOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q25:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_InviteFriendOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q26:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Login_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q27:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Login_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q28:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Login_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q29:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Logout_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q30:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Logout_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q31:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Logout_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q32:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CreateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProfile" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CreateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CreateProfile_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q33:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CreateProfile_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q34:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CreateProfile_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q35:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UpdateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfile" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UpdateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UpdateProfile_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q36:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UpdateProfile_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q37:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UpdateProfile_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q38:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteTrainingDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTrainingDay" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteTrainingDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTrainingDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteTrainingDay_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q39:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteTrainingDay_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q40:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteTrainingDay_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q41:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="PictureDTO">
+    <wsdl:part name="parameters" element="tns:PictureDTO" />
+  </wsdl:message>
+  <wsdl:message name="PictureDTO_Headers">
+    <wsdl:part name="Hash" element="tns:Hash" />
+    <wsdl:part name="PictureId" element="tns:PictureId" />
+    <wsdl:part name="SessionId" element="tns:SessionId" />
+  </wsdl:message>
+  <wsdl:message name="PictureInfoDTO">
+    <wsdl:part name="parameters" element="tns:PictureInfoDTO" />
+  </wsdl:message>
+  <wsdl:message name="PictureInfoDTO_Headers">
+    <wsdl:part name="Hash" element="tns:Hash" />
+    <wsdl:part name="PictureId" element="tns:PictureId" />
+    <wsdl:part name="SessionId" element="tns:SessionId" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UploadImage_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q42:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UploadImage_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q43:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_UploadImage_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q44:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CheckProfileNameAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckProfileNameAvailability" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CheckProfileNameAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckProfileNameAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CheckProfileNameAvailability_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q45:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CheckProfileNameAvailability_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q46:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_CheckProfileNameAvailability_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q47:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveTrainingDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTrainingDay" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveTrainingDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTrainingDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveTrainingDay_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q48:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveTrainingDay_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q49:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveTrainingDay_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q50:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDays" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDays_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q51:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDays_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q52:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDays_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q53:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDay" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDay_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q54:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDay_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q55:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetTrainingDay_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q56:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetImage_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q57:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetImage_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q58:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetImage_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q59:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetExercises_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExercises" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetExercises_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExercisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetExercises_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q60:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetExercises_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q61:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetExercises_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q62:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSuplements_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuplements" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSuplements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuplementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSuplements_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q63:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSuplements_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q64:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSuplements_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q65:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveExercise_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExercise" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveExercise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExerciseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveExercise_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q66:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveExercise_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q67:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveExercise_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q68:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSuplement_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSuplement" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSuplement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSuplementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSuplement_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q69:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSuplement_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q70:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSuplement_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q71:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetWorkoutPlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkoutPlans" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetWorkoutPlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkoutPlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetWorkoutPlans_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q72:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetWorkoutPlans_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q73:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetWorkoutPlans_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q74:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveWorkoutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWorkoutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveWorkoutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWorkoutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveWorkoutPlan_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q75:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveWorkoutPlan_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q76:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveWorkoutPlan_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q77:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComments" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetComments_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q78:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetComments_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q79:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetComments_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q80:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WorkoutPlanOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:WorkoutPlanOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WorkoutPlanOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WorkoutPlanOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WorkoutPlanOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q81:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WorkoutPlanOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q82:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WorkoutPlanOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q83:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetUsers_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q84:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetUsers_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q85:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetUsers_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q86:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:WP7Register" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WP7RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7Unregister_InputMessage">
+    <wsdl:part name="parameters" element="tns:WP7Unregister" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7Unregister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WP7UnregisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7ClearCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:WP7ClearCounter" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7ClearCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WP7ClearCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7TrialStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:WP7TrialStatus" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_WP7TrialStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WP7TrialStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetActivities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivities" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetActivities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetActivities_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q87:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetActivities_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q88:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetActivities_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q89:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActivity" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteActivity_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q90:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteActivity_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q91:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteActivity_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q92:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveActivity" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveActivity_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q93:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveActivity_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q94:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveActivity_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q95="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q95:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetScheduleEntries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleEntries" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetScheduleEntries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleEntriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetScheduleEntries_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q96:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetScheduleEntries_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q97="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q97:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetScheduleEntries_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q98:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveScheduleEntriesRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScheduleEntriesRange" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveScheduleEntriesRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScheduleEntriesRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveScheduleEntriesRange_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q99:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveScheduleEntriesRange_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q100:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveScheduleEntriesRange_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q101="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q101:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomer_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q102:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomer_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q103="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q103:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomer_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q104="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q104:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomer_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q105="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q105:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomer_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q106="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q106:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomer_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q107="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q107:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomers_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q108="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q108:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomers_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q109="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q109:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomers_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q110="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q110:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReservationsOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReservationsOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReservationsOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReservationsOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReservationsOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q111="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q111:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReservationsOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q112="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q112:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReservationsOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q113="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q113:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_PaymentBasketOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:PaymentBasketOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_PaymentBasketOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PaymentBasketOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_PaymentBasketOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q114="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q114:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_PaymentBasketOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q115="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q115:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_PaymentBasketOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q116="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q116:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetPaymentBaskets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentBaskets" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetPaymentBaskets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentBasketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetPaymentBaskets_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q117="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q117:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetPaymentBaskets_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q118="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q118:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetPaymentBaskets_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q119="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q119:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomerGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomerGroup" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomerGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomerGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomerGroup_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q120="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q120:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomerGroup_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q121="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q121:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveCustomerGroup_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q122="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q122:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomerGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerGroups" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomerGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomerGroups_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q123="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q123:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomerGroups_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q124="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q124:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetCustomerGroups_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q125="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q125:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomerGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerGroup" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomerGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomerGroup_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q126="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q126:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomerGroup_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q127="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q127:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_DeleteCustomerGroup_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q128="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q128:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProducts_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q129="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q129:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProducts_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q130="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q130:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetProducts_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q131="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q131:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveReminder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReminder" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveReminder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReminderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveReminder_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q132="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q132:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveReminder_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q133="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q133:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveReminder_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q134="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q134:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetReminders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReminders" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetReminders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRemindersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetReminders_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q135="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q135:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetReminders_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q136="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q136:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetReminders_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q137="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q137:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReminderOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReminderOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReminderOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReminderOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReminderOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q138="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q138:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReminderOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q139="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q139:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReminderOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q140="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q140:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSupplementsCycleDefinitions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplementsCycleDefinitions" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSupplementsCycleDefinitions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplementsCycleDefinitionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSupplementsCycleDefinitions_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q141="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q141:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSupplementsCycleDefinitions_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q142="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q142:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetSupplementsCycleDefinitions_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q143="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q143:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSupplementsCycleDefinition_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupplementsCycleDefinition" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSupplementsCycleDefinition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupplementsCycleDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSupplementsCycleDefinition_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q144="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q144:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSupplementsCycleDefinition_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q145="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q145:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveSupplementsCycleDefinition_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q146="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q146:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SupplementsCycleDefinitionOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SupplementsCycleDefinitionOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q147="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q147:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q148="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q148:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q149="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q149:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Vote_InputMessage">
+    <wsdl:part name="parameters" element="tns:Vote" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Vote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Vote_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q150="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q150:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Vote_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q151="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q151:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_Vote_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q152="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q152:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyTrainingOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:MyTrainingOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyTrainingOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MyTrainingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyTrainingOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q153="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q153:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyTrainingOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q154="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q154:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyTrainingOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q155="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q155:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyTrainings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyTrainings" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyTrainings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyTrainingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyTrainings_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q156="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q156:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyTrainings_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q157="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q157:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyTrainings_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q158="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q158:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ExerciseOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExerciseOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ExerciseOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExerciseOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ExerciseOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q159="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q159:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ExerciseOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q160="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q160:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ExerciseOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q161="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q161:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportExerciseWeight" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportExerciseWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseWeight_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q162="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q162:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseWeight_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q163="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q163:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseWeight_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q164="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q164:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportWeightRepetitions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportWeightRepetitions" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportWeightRepetitions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportWeightRepetitionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportWeightRepetitions_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q165="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q165:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportWeightRepetitions_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q166="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q166:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportWeightRepetitions_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q167="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q167:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportMeasurementsTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportMeasurementsTime" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportMeasurementsTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportMeasurementsTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportMeasurementsTime_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q168="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q168:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportMeasurementsTime_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q169="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q169:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportMeasurementsTime_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q170="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q170:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessages" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMessages_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q171="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q171:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMessages_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q172="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q172:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMessages_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q173="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q173:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ImportLicence_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportLicence" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ImportLicence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportLicenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ImportLicence_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q174="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q174:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ImportLicence_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q175="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q175:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ImportLicence_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q176="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q176:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveMyPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMyPlace" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveMyPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMyPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveMyPlace_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q177="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q177:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveMyPlace_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q178="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q178:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveMyPlace_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q179="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q179:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyPlaceOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:MyPlaceOperation" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyPlaceOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MyPlaceOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyPlaceOperation_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q180="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q180:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyPlaceOperation_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q181="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q181:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_MyPlaceOperation_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q182="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q182:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyPlaces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyPlaces" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyPlaces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyPlacesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyPlaces_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q183="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q183:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyPlaces_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q184="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q184:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetMyPlaces_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q185="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q185:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportExerciseRecords" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportExerciseRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseRecords_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q186="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q186:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseRecords_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q187="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q187:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_ReportExerciseRecords_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q188="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q188:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetFeaturedData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeaturedData" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetFeaturedData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeaturedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetFeaturedData_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q189="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q189:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetFeaturedData_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q190="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q190:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetFeaturedData_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q191="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q191:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetChampionships_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionships" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetChampionships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChampionshipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetChampionships_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q192="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q192:BAServiceException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetChampionships_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q193="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q193:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_GetChampionships_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q194="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q194:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveChampionship_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChampionship" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveChampionship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChampionshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveChampionship_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q195="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q195:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveChampionship_BAAuthenticationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q196="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q196:BAAuthenticationException" />
+  </wsdl:message>
+  <wsdl:message name="IBodyArchitectAccessService_SaveChampionship_BAServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q197="http://MYBASERVICE.TK/IBodyArchitectAccessService/" name="detail" element="q197:BAServiceException" />
+  </wsdl:message>
+  <wsdl:portType name="IBodyArchitectAccessService">
+    <wsdl:operation name="ProfileOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ProfileOperation" message="tns:IBodyArchitectAccessService_ProfileOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ProfileOperationResponse" message="tns:IBodyArchitectAccessService_ProfileOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ProfileOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ProfileOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ProfileOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ProfileOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ProfileOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ProfileOperation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/AccountOperation" message="tns:IBodyArchitectAccessService_AccountOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/AccountOperationResponse" message="tns:IBodyArchitectAccessService_AccountOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/AccountOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_AccountOperation_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/AccountOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_AccountOperation_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserFavoritesOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UserFavoritesOperation" message="tns:IBodyArchitectAccessService_UserFavoritesOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UserFavoritesOperationResponse" message="tns:IBodyArchitectAccessService_UserFavoritesOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UserFavoritesOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_UserFavoritesOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UserFavoritesOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_UserFavoritesOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UserFavoritesOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_UserFavoritesOperation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrainingDayCommentOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/TrainingDayCommentOperation" message="tns:IBodyArchitectAccessService_TrainingDayCommentOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/TrainingDayCommentOperationResponse" message="tns:IBodyArchitectAccessService_TrainingDayCommentOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/TrainingDayCommentOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_TrainingDayCommentOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/TrainingDayCommentOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_TrainingDayCommentOperation_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/TrainingDayCommentOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_TrainingDayCommentOperation_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDayComments">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayComments" message="tns:IBodyArchitectAccessService_GetTrainingDayComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayCommentsResponse" message="tns:IBodyArchitectAccessService_GetTrainingDayComments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayCommentsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetTrainingDayComments_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayCommentsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetTrainingDayComments_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayCommentsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetTrainingDayComments_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MessageOperation" message="tns:IBodyArchitectAccessService_MessageOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MessageOperationResponse" message="tns:IBodyArchitectAccessService_MessageOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MessageOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_MessageOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MessageOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_MessageOperation_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MessageOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_MessageOperation_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SendMessage" message="tns:IBodyArchitectAccessService_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SendMessageResponse" message="tns:IBodyArchitectAccessService_SendMessage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SendMessageBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SendMessage_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SendMessageValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SendMessage_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SendMessageBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SendMessage_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileInformation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProfileInformation" message="tns:IBodyArchitectAccessService_GetProfileInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProfileInformationResponse" message="tns:IBodyArchitectAccessService_GetProfileInformation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProfileInformationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetProfileInformation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProfileInformationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetProfileInformation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProfileInformationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetProfileInformation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InviteFriendOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/InviteFriendOperation" message="tns:IBodyArchitectAccessService_InviteFriendOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/InviteFriendOperationResponse" message="tns:IBodyArchitectAccessService_InviteFriendOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/InviteFriendOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_InviteFriendOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/InviteFriendOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_InviteFriendOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/InviteFriendOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_InviteFriendOperation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/Login" message="tns:IBodyArchitectAccessService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LoginResponse" message="tns:IBodyArchitectAccessService_Login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LoginBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_Login_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LoginValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_Login_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LoginBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_Login_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/Logout" message="tns:IBodyArchitectAccessService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LogoutResponse" message="tns:IBodyArchitectAccessService_Logout_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LogoutValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_Logout_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LogoutBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_Logout_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/LogoutBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_Logout_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CreateProfile" message="tns:IBodyArchitectAccessService_CreateProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CreateProfileResponse" message="tns:IBodyArchitectAccessService_CreateProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CreateProfileValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_CreateProfile_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CreateProfileBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_CreateProfile_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CreateProfileBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_CreateProfile_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UpdateProfile" message="tns:IBodyArchitectAccessService_UpdateProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UpdateProfileResponse" message="tns:IBodyArchitectAccessService_UpdateProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UpdateProfileBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_UpdateProfile_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UpdateProfileBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_UpdateProfile_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UpdateProfileValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_UpdateProfile_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTrainingDay">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteTrainingDay" message="tns:IBodyArchitectAccessService_DeleteTrainingDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteTrainingDayResponse" message="tns:IBodyArchitectAccessService_DeleteTrainingDay_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteTrainingDayBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_DeleteTrainingDay_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteTrainingDayBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_DeleteTrainingDay_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteTrainingDayValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_DeleteTrainingDay_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UploadImage" name="PictureDTO" message="tns:PictureDTO" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UploadImageResponse" name="PictureInfoDTO" message="tns:PictureInfoDTO" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UploadImageValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_UploadImage_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UploadImageBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_UploadImage_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/UploadImageBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_UploadImage_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckProfileNameAvailability">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CheckProfileNameAvailability" message="tns:IBodyArchitectAccessService_CheckProfileNameAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CheckProfileNameAvailabilityResponse" message="tns:IBodyArchitectAccessService_CheckProfileNameAvailability_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CheckProfileNameAvailabilityValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_CheckProfileNameAvailability_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CheckProfileNameAvailabilityBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_CheckProfileNameAvailability_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/CheckProfileNameAvailabilityBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_CheckProfileNameAvailability_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrainingDay">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveTrainingDay" message="tns:IBodyArchitectAccessService_SaveTrainingDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveTrainingDayResponse" message="tns:IBodyArchitectAccessService_SaveTrainingDay_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveTrainingDayBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveTrainingDay_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveTrainingDayValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveTrainingDay_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveTrainingDayBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveTrainingDay_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDays">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDays" message="tns:IBodyArchitectAccessService_GetTrainingDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDaysResponse" message="tns:IBodyArchitectAccessService_GetTrainingDays_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDaysBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetTrainingDays_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDaysBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetTrainingDays_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDaysValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetTrainingDays_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDay">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDay" message="tns:IBodyArchitectAccessService_GetTrainingDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayResponse" message="tns:IBodyArchitectAccessService_GetTrainingDay_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetTrainingDay_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetTrainingDay_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetTrainingDay_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetImage" name="PictureInfoDTO" message="tns:PictureInfoDTO" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetImageResponse" name="PictureDTO" message="tns:PictureDTO" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetImageBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetImage_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetImageBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetImage_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetImageValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetImage_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExercises">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetExercises" message="tns:IBodyArchitectAccessService_GetExercises_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetExercisesResponse" message="tns:IBodyArchitectAccessService_GetExercises_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetExercisesValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetExercises_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetExercisesBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetExercises_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetExercisesBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetExercises_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuplements">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSuplements" message="tns:IBodyArchitectAccessService_GetSuplements_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSuplementsResponse" message="tns:IBodyArchitectAccessService_GetSuplements_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSuplementsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetSuplements_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSuplementsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetSuplements_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSuplementsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetSuplements_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveExercise">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveExercise" message="tns:IBodyArchitectAccessService_SaveExercise_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveExerciseResponse" message="tns:IBodyArchitectAccessService_SaveExercise_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveExerciseValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveExercise_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveExerciseBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveExercise_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveExerciseBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveExercise_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSuplement">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSuplement" message="tns:IBodyArchitectAccessService_SaveSuplement_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSuplementResponse" message="tns:IBodyArchitectAccessService_SaveSuplement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSuplementValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveSuplement_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSuplementBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveSuplement_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSuplementBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveSuplement_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkoutPlans">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetWorkoutPlans" message="tns:IBodyArchitectAccessService_GetWorkoutPlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetWorkoutPlansResponse" message="tns:IBodyArchitectAccessService_GetWorkoutPlans_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetWorkoutPlansValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetWorkoutPlans_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetWorkoutPlansBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetWorkoutPlans_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetWorkoutPlansBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetWorkoutPlans_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkoutPlan">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveWorkoutPlan" message="tns:IBodyArchitectAccessService_SaveWorkoutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveWorkoutPlanResponse" message="tns:IBodyArchitectAccessService_SaveWorkoutPlan_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveWorkoutPlanBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveWorkoutPlan_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveWorkoutPlanValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveWorkoutPlan_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveWorkoutPlanBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveWorkoutPlan_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetComments" message="tns:IBodyArchitectAccessService_GetComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCommentsResponse" message="tns:IBodyArchitectAccessService_GetComments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCommentsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetComments_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCommentsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetComments_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCommentsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetComments_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WorkoutPlanOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WorkoutPlanOperation" message="tns:IBodyArchitectAccessService_WorkoutPlanOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WorkoutPlanOperationResponse" message="tns:IBodyArchitectAccessService_WorkoutPlanOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WorkoutPlanOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_WorkoutPlanOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WorkoutPlanOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_WorkoutPlanOperation_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WorkoutPlanOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_WorkoutPlanOperation_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetUsers" message="tns:IBodyArchitectAccessService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetUsersResponse" message="tns:IBodyArchitectAccessService_GetUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetUsersBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetUsers_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetUsersValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetUsers_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetUsersBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetUsers_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WP7Register">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7Register" message="tns:IBodyArchitectAccessService_WP7Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7RegisterResponse" message="tns:IBodyArchitectAccessService_WP7Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WP7Unregister">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7Unregister" message="tns:IBodyArchitectAccessService_WP7Unregister_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7UnregisterResponse" message="tns:IBodyArchitectAccessService_WP7Unregister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WP7ClearCounter">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7ClearCounter" message="tns:IBodyArchitectAccessService_WP7ClearCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7ClearCounterResponse" message="tns:IBodyArchitectAccessService_WP7ClearCounter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WP7TrialStatus">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7TrialStatus" message="tns:IBodyArchitectAccessService_WP7TrialStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7TrialStatusResponse" message="tns:IBodyArchitectAccessService_WP7TrialStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetActivities" message="tns:IBodyArchitectAccessService_GetActivities_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetActivitiesResponse" message="tns:IBodyArchitectAccessService_GetActivities_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetActivitiesBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetActivities_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetActivitiesValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetActivities_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetActivitiesBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetActivities_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivity">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteActivity" message="tns:IBodyArchitectAccessService_DeleteActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteActivityResponse" message="tns:IBodyArchitectAccessService_DeleteActivity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteActivityBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_DeleteActivity_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteActivityValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_DeleteActivity_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteActivityBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_DeleteActivity_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveActivity">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveActivity" message="tns:IBodyArchitectAccessService_SaveActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveActivityResponse" message="tns:IBodyArchitectAccessService_SaveActivity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveActivityValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveActivity_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveActivityBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveActivity_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveActivityBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveActivity_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleEntries">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetScheduleEntries" message="tns:IBodyArchitectAccessService_GetScheduleEntries_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetScheduleEntriesResponse" message="tns:IBodyArchitectAccessService_GetScheduleEntries_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetScheduleEntriesBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetScheduleEntries_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetScheduleEntriesBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetScheduleEntries_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetScheduleEntriesValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetScheduleEntries_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveScheduleEntriesRange">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveScheduleEntriesRange" message="tns:IBodyArchitectAccessService_SaveScheduleEntriesRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveScheduleEntriesRangeResponse" message="tns:IBodyArchitectAccessService_SaveScheduleEntriesRange_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveScheduleEntriesRangeValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveScheduleEntriesRange_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveScheduleEntriesRangeBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveScheduleEntriesRange_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveScheduleEntriesRangeBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveScheduleEntriesRange_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomer" message="tns:IBodyArchitectAccessService_SaveCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerResponse" message="tns:IBodyArchitectAccessService_SaveCustomer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveCustomer_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveCustomer_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveCustomer_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomer" message="tns:IBodyArchitectAccessService_DeleteCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerResponse" message="tns:IBodyArchitectAccessService_DeleteCustomer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_DeleteCustomer_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_DeleteCustomer_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_DeleteCustomer_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomers" message="tns:IBodyArchitectAccessService_GetCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomersResponse" message="tns:IBodyArchitectAccessService_GetCustomers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomersBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetCustomers_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomersBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetCustomers_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomersValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetCustomers_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReservationsOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReservationsOperation" message="tns:IBodyArchitectAccessService_ReservationsOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReservationsOperationResponse" message="tns:IBodyArchitectAccessService_ReservationsOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReservationsOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ReservationsOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReservationsOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ReservationsOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReservationsOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ReservationsOperation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentBasketOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/PaymentBasketOperation" message="tns:IBodyArchitectAccessService_PaymentBasketOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/PaymentBasketOperationResponse" message="tns:IBodyArchitectAccessService_PaymentBasketOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/PaymentBasketOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_PaymentBasketOperation_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/PaymentBasketOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_PaymentBasketOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/PaymentBasketOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_PaymentBasketOperation_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBaskets">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetPaymentBaskets" message="tns:IBodyArchitectAccessService_GetPaymentBaskets_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetPaymentBasketsResponse" message="tns:IBodyArchitectAccessService_GetPaymentBaskets_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetPaymentBasketsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetPaymentBaskets_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetPaymentBasketsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetPaymentBaskets_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetPaymentBasketsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetPaymentBaskets_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerGroup">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerGroup" message="tns:IBodyArchitectAccessService_SaveCustomerGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerGroupResponse" message="tns:IBodyArchitectAccessService_SaveCustomerGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerGroupBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveCustomerGroup_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerGroupBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveCustomerGroup_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerGroupValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveCustomerGroup_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerGroups">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomerGroups" message="tns:IBodyArchitectAccessService_GetCustomerGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomerGroupsResponse" message="tns:IBodyArchitectAccessService_GetCustomerGroups_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomerGroupsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetCustomerGroups_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomerGroupsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetCustomerGroups_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomerGroupsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetCustomerGroups_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerGroup">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerGroup" message="tns:IBodyArchitectAccessService_DeleteCustomerGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerGroupResponse" message="tns:IBodyArchitectAccessService_DeleteCustomerGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerGroupValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_DeleteCustomerGroup_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerGroupBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_DeleteCustomerGroup_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerGroupBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_DeleteCustomerGroup_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProducts" message="tns:IBodyArchitectAccessService_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProductsResponse" message="tns:IBodyArchitectAccessService_GetProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProductsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetProducts_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProductsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetProducts_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProductsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetProducts_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveReminder">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveReminder" message="tns:IBodyArchitectAccessService_SaveReminder_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveReminderResponse" message="tns:IBodyArchitectAccessService_SaveReminder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveReminderBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveReminder_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveReminderValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveReminder_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveReminderBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveReminder_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReminders">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetReminders" message="tns:IBodyArchitectAccessService_GetReminders_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetRemindersResponse" message="tns:IBodyArchitectAccessService_GetReminders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetRemindersBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetReminders_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetRemindersValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetReminders_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetRemindersBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetReminders_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReminderOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReminderOperation" message="tns:IBodyArchitectAccessService_ReminderOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReminderOperationResponse" message="tns:IBodyArchitectAccessService_ReminderOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReminderOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ReminderOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReminderOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ReminderOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReminderOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ReminderOperation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplementsCycleDefinitions">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSupplementsCycleDefinitions" message="tns:IBodyArchitectAccessService_GetSupplementsCycleDefinitions_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSupplementsCycleDefinitionsResponse" message="tns:IBodyArchitectAccessService_GetSupplementsCycleDefinitions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSupplementsCycleDefinitionsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetSupplementsCycleDefinitions_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSupplementsCycleDefinitionsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetSupplementsCycleDefinitions_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSupplementsCycleDefinitionsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetSupplementsCycleDefinitions_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupplementsCycleDefinition">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSupplementsCycleDefinition" message="tns:IBodyArchitectAccessService_SaveSupplementsCycleDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSupplementsCycleDefinitionResponse" message="tns:IBodyArchitectAccessService_SaveSupplementsCycleDefinition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSupplementsCycleDefinitionBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveSupplementsCycleDefinition_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSupplementsCycleDefinitionBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveSupplementsCycleDefinition_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSupplementsCycleDefinitionValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveSupplementsCycleDefinition_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplementsCycleDefinitionOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SupplementsCycleDefinitionOperation" message="tns:IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SupplementsCycleDefinitionOperationResponse" message="tns:IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SupplementsCycleDefinitionOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SupplementsCycleDefinitionOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SupplementsCycleDefinitionOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SupplementsCycleDefinitionOperation_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Vote">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/Vote" message="tns:IBodyArchitectAccessService_Vote_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/VoteResponse" message="tns:IBodyArchitectAccessService_Vote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/VoteBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_Vote_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/VoteBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_Vote_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/VoteValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_Vote_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyTrainingOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyTrainingOperation" message="tns:IBodyArchitectAccessService_MyTrainingOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyTrainingOperationResponse" message="tns:IBodyArchitectAccessService_MyTrainingOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyTrainingOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_MyTrainingOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyTrainingOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_MyTrainingOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyTrainingOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_MyTrainingOperation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyTrainings">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyTrainings" message="tns:IBodyArchitectAccessService_GetMyTrainings_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyTrainingsResponse" message="tns:IBodyArchitectAccessService_GetMyTrainings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyTrainingsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetMyTrainings_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyTrainingsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetMyTrainings_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyTrainingsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetMyTrainings_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExerciseOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ExerciseOperation" message="tns:IBodyArchitectAccessService_ExerciseOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ExerciseOperationResponse" message="tns:IBodyArchitectAccessService_ExerciseOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ExerciseOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ExerciseOperation_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ExerciseOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ExerciseOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ExerciseOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ExerciseOperation_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportExerciseWeight">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseWeight" message="tns:IBodyArchitectAccessService_ReportExerciseWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseWeightResponse" message="tns:IBodyArchitectAccessService_ReportExerciseWeight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseWeightValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ReportExerciseWeight_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseWeightBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ReportExerciseWeight_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseWeightBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ReportExerciseWeight_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportWeightRepetitions">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportWeightRepetitions" message="tns:IBodyArchitectAccessService_ReportWeightRepetitions_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportWeightRepetitionsResponse" message="tns:IBodyArchitectAccessService_ReportWeightRepetitions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportWeightRepetitionsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ReportWeightRepetitions_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportWeightRepetitionsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ReportWeightRepetitions_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportWeightRepetitionsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ReportWeightRepetitions_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportMeasurementsTime">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportMeasurementsTime" message="tns:IBodyArchitectAccessService_ReportMeasurementsTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportMeasurementsTimeResponse" message="tns:IBodyArchitectAccessService_ReportMeasurementsTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportMeasurementsTimeBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ReportMeasurementsTime_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportMeasurementsTimeValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ReportMeasurementsTime_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportMeasurementsTimeBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ReportMeasurementsTime_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMessages" message="tns:IBodyArchitectAccessService_GetMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMessagesResponse" message="tns:IBodyArchitectAccessService_GetMessages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMessagesBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetMessages_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMessagesBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetMessages_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMessagesValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetMessages_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportLicence">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ImportLicence" message="tns:IBodyArchitectAccessService_ImportLicence_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ImportLicenceResponse" message="tns:IBodyArchitectAccessService_ImportLicence_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ImportLicenceBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ImportLicence_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ImportLicenceBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ImportLicence_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ImportLicenceValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ImportLicence_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyPlace">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveMyPlace" message="tns:IBodyArchitectAccessService_SaveMyPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveMyPlaceResponse" message="tns:IBodyArchitectAccessService_SaveMyPlace_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveMyPlaceBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveMyPlace_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveMyPlaceValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveMyPlace_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveMyPlaceBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveMyPlace_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyPlaceOperation">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyPlaceOperation" message="tns:IBodyArchitectAccessService_MyPlaceOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyPlaceOperationResponse" message="tns:IBodyArchitectAccessService_MyPlaceOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyPlaceOperationBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_MyPlaceOperation_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyPlaceOperationBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_MyPlaceOperation_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyPlaceOperationValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_MyPlaceOperation_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyPlaces">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyPlaces" message="tns:IBodyArchitectAccessService_GetMyPlaces_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyPlacesResponse" message="tns:IBodyArchitectAccessService_GetMyPlaces_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyPlacesBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetMyPlaces_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyPlacesBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetMyPlaces_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyPlacesValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetMyPlaces_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportExerciseRecords">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseRecords" message="tns:IBodyArchitectAccessService_ReportExerciseRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseRecordsResponse" message="tns:IBodyArchitectAccessService_ReportExerciseRecords_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseRecordsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_ReportExerciseRecords_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseRecordsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_ReportExerciseRecords_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseRecordsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_ReportExerciseRecords_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeaturedData">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetFeaturedData" message="tns:IBodyArchitectAccessService_GetFeaturedData_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetFeaturedDataResponse" message="tns:IBodyArchitectAccessService_GetFeaturedData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetFeaturedDataValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetFeaturedData_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetFeaturedDataBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetFeaturedData_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetFeaturedDataBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetFeaturedData_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionships">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetChampionships" message="tns:IBodyArchitectAccessService_GetChampionships_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetChampionshipsResponse" message="tns:IBodyArchitectAccessService_GetChampionships_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetChampionshipsBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_GetChampionships_BAServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetChampionshipsValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_GetChampionships_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetChampionshipsBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_GetChampionships_BAAuthenticationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChampionship">
+      <wsdl:input wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveChampionship" message="tns:IBodyArchitectAccessService_SaveChampionship_InputMessage" />
+      <wsdl:output wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveChampionshipResponse" message="tns:IBodyArchitectAccessService_SaveChampionship_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveChampionshipValidationFaultFault" name="ValidationFaultFault" message="tns:IBodyArchitectAccessService_SaveChampionship_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveChampionshipBAAuthenticationExceptionFault" name="BAAuthenticationExceptionFault" message="tns:IBodyArchitectAccessService_SaveChampionship_BAAuthenticationExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveChampionshipBAServiceExceptionFault" name="BAServiceExceptionFault" message="tns:IBodyArchitectAccessService_SaveChampionship_BAServiceExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

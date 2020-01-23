@@ -1,0 +1,30 @@
+﻿<UserControls:DragSourceUserControl x:Class="BodyArchitect.Client.Module.Instructor.Controls.MyPlacesListSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ComponentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+                                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                       xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI"
+                       mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Themes/MyStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <CollectionViewSource Source="{Binding MyPlaces}" x:Key="myPlacesView">
+                <CollectionViewSource.SortDescriptions>
+                    <ComponentModel:SortDescription PropertyName="Name" Direction="Ascending" />
+                </CollectionViewSource.SortDescriptions>
+            </CollectionViewSource>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <GroupBox Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:MyPlacesListSelector_Header_MyPlaces}">
+        <ListBox Name="lsItems" ItemsSource="{Binding Source={StaticResource myPlacesView}}"
+              ItemTemplate="{StaticResource MyPlaceComboBoxItem}" ItemContainerStyle="{StaticResource StretchedListBoxItemStyle}"  SelectedItem="{Binding SelectedItem,Mode=TwoWay}"  >
+        </ListBox>
+    </GroupBox>
+</UserControls:DragSourceUserControl>

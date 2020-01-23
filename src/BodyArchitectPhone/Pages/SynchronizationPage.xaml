@@ -1,0 +1,129 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.SynchronizationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:WP7="clr-namespace:BodyArchitect.WP7" xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls" xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480">
+
+    <Custom:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <WP7:MergeStateToBrushConverter x:Key="mergeStateConverter" />
+            <WP7:MergeActionToIntConverter x:Key="mergeActionConverter" />
+        </ResourceDictionary>
+    </Custom:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock Style="{StaticResource CustomTextNormalStyle}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                </TextBlock>
+                <ProgressBar  Maximum="{Binding Maximum}" Minimum="0" Value="{Binding CurrentItemIndex}" Visibility="{Binding ProgressVisibility}" />
+                <TextBlock x:Name="PageTitle" Text="{Binding Path=Localizedresources.SynchronizationPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource CustomTextTitle1Style}"/>
+            </StackPanel>
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Name="lblNoEntries" Margin="12,24,0,12" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Path=Localizedresources.SynchronizationPage_NoEntries,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Visibility="Collapsed" Style="{StaticResource CustomTextLargeStyle}" />
+
+                <ListBox Name="lstItems" Grid.Row="1" ItemsSource="{Binding Items}">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Rectangle   HorizontalAlignment="Left" Grid.RowSpan="2" Grid.Column="0" Fill="{Binding State,Converter={StaticResource mergeStateConverter}}"  Width="5" />
+
+                                <StackPanel Grid.Column="1" Visibility="Collapsed">
+                                    <TextBlock Margin="12,0,12,0"  Style="{StaticResource CustomTextExtraLargeStyle}" FontSize="{StaticResource CustomFontSizeExtraExtraLarge}" Text="{Binding Index}" />
+                                    <CheckBox Margin="0" ></CheckBox>
+                                </StackPanel>
+
+
+
+                                <StackPanel Margin="32,0,0,0" Grid.Column="2">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Margin="0,12,0,12" Grid.Column="0" FontSize="{StaticResource CustomFontSizeMediumLarge}"  Text="{Binding Date}" Style="{StaticResource CustomTextNormalStyle}" FontWeight="Bold"  />
+                                        <TextBlock HorizontalAlignment="Right" Margin="0,12,0,12" Grid.Column="1" FontSize="{StaticResource CustomFontSizeMediumLarge}"  Text="{Binding Status}" Style="{StaticResource CustomTextNormalStyle}" FontWeight="Bold"  />
+                                    </Grid>
+
+                                    <ItemsControl Visibility="{Binding IsTrainingDay}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" ItemsSource="{Binding Images}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Image  Margin="6,0,6,0" Source="{Binding}"  Width="84" Height="84" Stretch="UniformToFill"/>
+                                                    
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+
+                                    <TextBlock Grid.Column="1" Grid.Row="1" Visibility="{Binding IsGpsCoordinates}" Text="{Binding Path=Localizedresources.SynchronizationPage_GpsCoordinates,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+                                    <!--<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+                                        <Image Margin="6,0,6,0" Source="/Images/strengthTrainingTile.jpg" Visibility="{Binding StrengthVisiblitity}" Width="84" Height="84" Stretch="UniformToFill"/>
+                                        <Image Margin="6,0,6,0" Source="/Images/sizesTile.jpg" Width="84" Visibility="{Binding SizesVisiblitity}" Height="84" Stretch="UniformToFill"/>
+                                        <Image Margin="6,0,6,0" Source="/Images/suppleTile.jpg" Width="84" Visibility="{Binding SuppleVisiblitity}" Height="84" Stretch="UniformToFill"/>
+                                        <Image Margin="6,6,6,0" Source="/Images/blogTile.jpg" Width="84" Visibility="{Binding BlogVisiblitity}" Height="84" Stretch="UniformToFill"/>
+                                        <Image Margin="6,6,6,0" Source="/Images/gpsTile.jpg" Width="84" Visibility="{Binding GpsTrackerVisiblitity}" Height="84" Stretch="UniformToFill"/>
+                                        <TextBlock Text="gps coordinates" Visibility="{Binding GpsCoordinatesVisiblitity}"/>
+                                    </StackPanel>-->
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <Controls:FixedListPicker Name="lpMergeBehavior" Margin="12,0,12,12" Grid.Row="2"   SelectedIndex="{Binding Action,Mode=TwoWay,Converter={StaticResource mergeActionConverter}}" >
+                    <toolkit:ListPicker.Items>
+                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SynchronizationPage_SkipWhenConflict,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SynchronizationPage_UseServerVersion,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                        <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SynchronizationPage_UseLocalVersion,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                    </toolkit:ListPicker.Items>
+                </Controls:FixedListPicker>
+                <Button Name="btnSync" Grid.Row="3" Content="{Binding Path=Localizedresources.SynchronizationPage_SynchronizeButton,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="btnSynchronize_Click" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Animations:AnimatedBasePage>

@@ -1,0 +1,2 @@
+﻿1. Klasa GPSCoordinatesOperationResult ma wlasnosc GpsTrackerEntry i ona przy generowaniu powoduje problemy. Tymczasowo zamienic typ z GpsTrackerEntryDTO na np WeatherDTO (i zmienic pozostały kod tak zeby sie kompilowało).
+Następnie wygenerować proxy i w wygenerowanej klasie GPSCoordinatesOperationResult zamienic ręcznie WeatherDTO na GpsTrackerEntryDTO

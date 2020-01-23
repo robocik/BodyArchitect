@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="usrProfileEdit1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="usrProfileEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, -1</value>
+  </data>
+  <data name="usrProfileEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 288</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="usrProfileEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;usrProfileEdit1.Name" xml:space="preserve">
+    <value>usrProfileEdit1</value>
+  </data>
+  <data name="&gt;&gt;usrProfileEdit1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.UserControls.usrProfileEdit, BodyArchitect.Controls, Version=4.0.0.8, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrProfileEdit1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;usrProfileEdit1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="usrProgressIndicatorButtons1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="usrProgressIndicatorButtons1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 303</value>
+  </data>
+  <data name="usrProgressIndicatorButtons1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 23</value>
+  </data>
+  <data name="usrProgressIndicatorButtons1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;usrProgressIndicatorButtons1.Name" xml:space="preserve">
+    <value>usrProgressIndicatorButtons1</value>
+  </data>
+  <data name="&gt;&gt;usrProgressIndicatorButtons1.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.ProgressIndicator.usrProgressIndicatorButtons, BodyArchitect.Controls, Version=4.0.0.8, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+  <data name="&gt;&gt;usrProgressIndicatorButtons1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;usrProgressIndicatorButtons1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnDeleteProfile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnDeleteProfile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        8j+gaPyFfES7/gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnDeleteProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 288</value>
+  </data>
+  <data name="btnDeleteProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 44</value>
+  </data>
+  <data name="toolTipTitleItem1.Text" xml:space="preserve">
+    <value>Delete profile</value>
+  </data>
+  <data name="toolTipItem1.Text" xml:space="preserve">
+    <value>Clicking on this button will delete your profile along with &lt;b&gt;all&lt;/b&gt; data (calendar entries, private plans and exercises ,...). &lt;b&gt;After this operation, it will not be possible to use or recover this profile data.&lt;/b&gt;</value>
+  </data>
+  <data name="btnDeleteProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteProfile.Name" xml:space="preserve">
+    <value>btnDeleteProfile</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteProfile.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteProfile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteProfile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>437, 338</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Profile editor</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ProfileEditWindow</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>BodyArchitect.Controls.Forms.BaseWindow, BodyArchitect.Controls, Version=4.0.0.8, Culture=neutral, PublicKeyToken=28369f29b0498892</value>
+  </data>
+</root>

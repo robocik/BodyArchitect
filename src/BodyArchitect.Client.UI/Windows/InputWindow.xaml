@@ -1,0 +1,22 @@
+﻿<Window x:Class="BodyArchitect.Client.UI.Windows.InputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" ResizeMode="CanResizeWithGrip" 
+        Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen"  Loaded="Window_Loaded_1"
+        Title="{lex:LocText  BodyArchitect.Client.Resources:Strings:InputWindow_Title}" Height="200" Width="300">
+    <Grid Margin="{StaticResource MarginMediumLeftTopRightBottom}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Target="txtValue" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:InputWindow_Label}" />
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumTop}" Grid.Row="1" Name="txtValue" />
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="2" Orientation="Horizontal" Margin="{StaticResource MarginXLargeTop}" HorizontalAlignment="Right">
+            <Button Name="btnOK" Style="{StaticResource OkButton}" Click="btnOK_Click" />
+
+            <Button Margin="{StaticResource MarginMediumLeft}" Style="{StaticResource CancelButton}" Name="btnCancel"  />
+        </StackPanel>
+    </Grid>
+</Window>

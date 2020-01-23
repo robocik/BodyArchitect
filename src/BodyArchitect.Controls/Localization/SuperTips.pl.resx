@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddTrainingDay_DateTE" xml:space="preserve">
+    <value>Data wpisu. Jeśli wpis zawiera dane odnośnie treningu, to wtedy jest to data jego odbycia.</value>
+  </data>
+  <data name="ButtonApply" xml:space="preserve">
+    <value>Zapisuje wprowadzone zmiany bez zamykania bieżącego okna.</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Anuluje wprowadzone zmiany i zamyka okno.</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Usuwa bieżący wpis.</value>
+  </data>
+  <data name="ButtonOK" xml:space="preserve">
+    <value>Zapisuje wprowadzone zmiany i zamyka okno.</value>
+  </data>
+  <data name="CreateProfile_Autologin_CHK" xml:space="preserve">
+    <value>Zaznaczenie spowoduje, że przy następnym uruchomieniu aplikacji,tworzony profil zostanie automatycznie zalogowany.</value>
+  </data>
+  <data name="CreateProfile_NameTE" xml:space="preserve">
+    <value>Nazwa profilu będzie wymagana podczas logowania do programu. Musi być unikatowa.</value>
+  </data>
+  <data name="CreateProfile_PasswordTE" xml:space="preserve">
+    <value>Hasło służy do ograniczenia dostępu do profilu. Jednak nie jest ono wymagane. Gdy jedynym profilem w aplikacji jest profil bez hasła, to podczas uruchomienia aplikacji zosatnie on automatycznie użyty (bez potrzeby logowania)</value>
+  </data>
+  <data name="Login_AutologinCHK" xml:space="preserve">
+    <value>Zaznaczenie spowoduje, że przy następnym uruchomieniu programu, automatycznie zostaniemy zalogowani na podany profil.</value>
+  </data>
+  <data name="Login_NameTE" xml:space="preserve">
+    <value>Nazwa istniejącego profilu w bazie.</value>
+  </data>
+  <data name="Login_PasswordTE" xml:space="preserve">
+    <value>Hasło przypisane do profilu</value>
+  </data>
+  <data name="ProfileEdit_BirthdayTE" xml:space="preserve">
+    <value>Data urodzenia. Może pozostać pusta.</value>
+  </data>
+  <data name="ProfileEdit_NameTE" xml:space="preserve">
+    <value>Nazwa edytowanego profilu. Musi być unikatowa.</value>
+  </data>
+  <data name="WymiaryEditor_Klatka" xml:space="preserve">
+    <value>Obwód klatki piersiowej, np 110,5. Wartość 0 oznacza, że obwód nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_LeftBiceps" xml:space="preserve">
+    <value>Obwód lewego bicepsa, np. 37,5. Wartość 0 oznacza, że obwód bicepsa nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_NaCzczo" xml:space="preserve">
+    <value>Zaznaczenie oznacza, że pomair obwodów i wagi był wykonany naczczo.</value>
+  </data>
+  <data name="WymiaryEditor_Pas" xml:space="preserve">
+    <value>Obwód pasa, np: 77,3. Wartość 0 oznacza, że nie obówd pasa nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_RightBiceps" xml:space="preserve">
+    <value>Obwód prawego bicepsa, np. 37,5. Wartość 0 oznacza, że obwód bicepsa nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_Time" xml:space="preserve">
+    <value>Godzina wykonania pomiaru, np: 7:25. Wartość 0:00 oznacza, że godzina nie została wpisana.</value>
+  </data>
+  <data name="WymiaryEditor_Weight" xml:space="preserve">
+    <value>Waga w kilogramach, np: 81,3. Wartość 0 oznacza, że waga nie została wpisana.</value>
+  </data>
+  <data name="BMI_BMI" xml:space="preserve">
+    <value>Twój wskaźnik BMI:
+
+&lt; 16,0 – wygłodzenie
+16,0–17,0 – wychudzenie (spowodowane często przez ciężką chorobę lub anoreksję)
+17–18,5 – niedowagę
+18,5–25,0 – wartość prawidłową
+25,0–30,0 – nadwagę
+30,0–35,0 – I stopień otyłości
+35,0–40,0 – II stopień otyłości
+≥ 40,0 – III stopień otyłości (otyłość skrajna)</value>
+  </data>
+  <data name="BMI_Calculate" xml:space="preserve">
+    <value>Kliknij, aby obliczyć swoje BMI. Pamietaj, że najpierw musisz podać wzrost i wagę.</value>
+  </data>
+  <data name="BMI_Close" xml:space="preserve">
+    <value>Zamyka okno.</value>
+  </data>
+  <data name="BMI_Height" xml:space="preserve">
+    <value>Podaj swój wzrost w cm</value>
+  </data>
+  <data name="BMI_Weight" xml:space="preserve">
+    <value>Podaj swoją wagę w kg</value>
+  </data>
+  <data name="OptionCalendarIcons" xml:space="preserve">
+    <value>Tutaj możesz dostosować każdy moduł w programie BodyArchitect:
+&lt;b&gt;Ikona&lt;/b&gt; - jeśli zaznaczone to wpis w kalendarzu zwiazany z danym modułem będzie widoczny jako ikona.
+&lt;b&gt;Domyślny&lt;/b&gt; - jeśli zaznaczone to przy tworzeniu nowego wpisu w kalendarzu automatycznie zostanie dodany wpis zwiazany z danym modułem.</value>
+  </data>
+  <data name="OptionCalendarShowMissingPlugins" xml:space="preserve">
+    <value>Zaznaczenie spowoduje, że wpisy w widoku kalendarza należące do brakującego pluginu będą zaznaczone specjalną ikoną. Jeśli nie zaznaczymy tej opcji, te wpisy będą pominięte.</value>
+  </data>
+  <data name="OptionCalendarTabPage" xml:space="preserve">
+    <value>Wyświetla opcje związane z widokiem kalendarza</value>
+  </data>
+  <data name="OptionCalendarTextFrom" xml:space="preserve">
+    <value>Określa, z którego pluginu będzie wyświetlane info w widoku kalendarza</value>
+  </data>
+  <data name="ProfileEdit_GenderCMB" xml:space="preserve">
+    <value>Umożliwia określnie płci. Informacja ta jest potrzebna między innymi do pewnych kalkulatorów (np. BMI)</value>
+  </data>
+  <data name="WymiaryEditor_Height" xml:space="preserve">
+    <value>Wzrost w centymetrach, np. 188. Wartość 0 oznacza, że wzrost nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_LeftForearm" xml:space="preserve">
+    <value>Obwód lewego przedramienia, np 28,1. Wartość 0 oznacza, że obwód przedramienia nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_LeftLeg" xml:space="preserve">
+    <value>Obwód lewego uda, np 50,1. Wartość 0 oznacza, że obwód uda nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_RightForearm" xml:space="preserve">
+    <value>Obwód prawego przedramienia, np 28,1. Wartość 0 oznacza, że obwód przedramienia nie został wpisany.</value>
+  </data>
+  <data name="WymiaryEditor_RightLeg" xml:space="preserve">
+    <value>Obwód prawego uda, np 50,1. Wartość 0 oznacza, że obwód uda nie został wpisany.</value>
+  </data>
+  <data name="OptionReportingAllowZoom" xml:space="preserve">
+    <value>Jeśli ta opcja jest zaznaczona, to możesz powiększać raporty w celu dokładniejszego przeanalizowania wyników.</value>
+  </data>
+  <data name="OptionReportingShowValues" xml:space="preserve">
+    <value>Jeśli ta opcja jest zaznaczona, to na wykresie raportu zobaczysz wartości liczbowe. W przeciwnym razie raport będzie tylko wyświetlał linie.</value>
+  </data>
+  <data name="OptionReportingTemplates" xml:space="preserve">
+    <value>Lista wszystkich szablonów (tematów) dla widoku raportu.</value>
+  </data>
+  <data name="usrReportStatus_ReportStatusCmb" xml:space="preserve">
+    <value>Określa, czy bieżacy wpis będzie wyświetlany w raportach.</value>
+  </data>
+  <data name="usrReportingEntryStatus_ReportStatusCmb" xml:space="preserve">
+    <value>Określa, jakie wpisy będą użyte do wygenerowania raportu. Wybierz
+-&lt;b&gt;Tylko wpisy przeznaczone do raportowania&lt;/b&gt; aby wygenerować raport tylko z wpisami ze statusem &lt;b&gt;Pokazuj ten wpis w raportach&lt;/b&gt;
+-&lt;b&gt;Wszystkie wpisy&lt;/b&gt; aby wygenerować raport wykorzystując wszystkie wpisy (również te ze statusem &lt;b&gt;Nie pokazuj tego wpisu w raportach&lt;/b&gt;)</value>
+  </data>
+  <data name="usrDateRange_DateFrom" xml:space="preserve">
+    <value>Tutaj możesz zawęzić wyniki raportu. Wszystkie wpisy starsze niż data w tym polu będa pominięte.</value>
+  </data>
+  <data name="usrDateRange_DateTo" xml:space="preserve">
+    <value>Tutaj możesz zawęzić wyniki raportu. Wszystkie wpisy nowsze od daty w tym polu będa pominięte.</value>
+  </data>
+  <data name="usrMyTrainingStatus_Abort" xml:space="preserve">
+    <value>Kliknij ten przycisk aby przerwać aktualny cykl treningowy. Pamiętaj, że nie będziesz mógł wznowić go ponownie.</value>
+  </data>
+  <data name="usrMyTrainingStatus_EndDate" xml:space="preserve">
+    <value>Data zakończenia cyklu treningowego.</value>
+  </data>
+  <data name="usrMyTrainingStatus_StartDate" xml:space="preserve">
+    <value>Data rozpoczęcia cyklu treningowego.</value>
+  </data>
+  <data name="DefaultDataImporter_ImportBTN" xml:space="preserve">
+    <value>Rozpoczyna importowanie standardowych danych do profilu. Aby wybrać dane do importu, zaznacz jedną lub wiecej pozycji w liście.</value>
+  </data>
+  <data name="DefaultDataImporter_ModulesListView" xml:space="preserve">
+    <value>Lista wszystkich dostępnych danych, które mogą być zaimportowane do Twojej bazy. Aby to zrobić, musisz zaznaczyć odpowednią pozycję w tej liście i kliknąć przycisk Import...</value>
+  </data>
+</root>

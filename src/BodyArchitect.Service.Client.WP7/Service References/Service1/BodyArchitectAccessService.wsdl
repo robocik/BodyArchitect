@@ -1,0 +1,2573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://MYBASERVICE.TK/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BodyArchitectAccessService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IBodyArchitectAccessService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://MYBASERVICE.TK/" location="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IBodyArchitectAccessService" type="i0:IBodyArchitectAccessService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IBodyArchitectAccessService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GPSCoordinatesOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GPSCoordinatesOperation" style="document" />
+      <wsdl:input name="GPSOperationParam">
+        <soap:header message="i0:GPSOperationParam_Headers" part="Params" use="literal" />
+        <soap:header message="i0:GPSOperationParam_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GPSCoordinatesOperationResult">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ProfileOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ProfileOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AccountOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/AccountOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UserFavoritesOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/UserFavoritesOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TrainingDayCommentOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/TrainingDayCommentOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDayComments">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MessageOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/MessageOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileInformation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProfileInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InviteFriendOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/InviteFriendOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/CreateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/UpdateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTrainingDay">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteTrainingDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/UploadImage" style="document" />
+      <wsdl:input name="PictureDTO">
+        <soap:header message="i0:PictureDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PictureInfoDTO">
+        <soap:header message="i0:PictureInfoDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckProfileNameAvailability">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/CheckProfileNameAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrainingDay">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveTrainingDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDays">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDay">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetImage" style="document" />
+      <wsdl:input name="PictureInfoDTO">
+        <soap:header message="i0:PictureInfoDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PictureDTO">
+        <soap:header message="i0:PictureDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExercises">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetExercises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuplements">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSuplements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExercise">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveExercise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSuplement">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSuplement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkoutPlans">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetWorkoutPlans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkoutPlan">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveWorkoutPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WorkoutPlanOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WorkoutPlanOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WP7Register">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WP7Unregister">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7Unregister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WP7ClearCounter">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7ClearCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WP7TrialStatus">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7TrialStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetActivities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivity">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveActivity">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleEntries">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetScheduleEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveScheduleEntriesRange">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveScheduleEntriesRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReservationsOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReservationsOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentBasketOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/PaymentBasketOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBaskets">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetPaymentBaskets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerGroup">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerGroups">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomerGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerGroup">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveReminder">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveReminder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReminders">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetReminders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReminderOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReminderOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplementsCycleDefinitions">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSupplementsCycleDefinitions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupplementsCycleDefinition">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSupplementsCycleDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SupplementsCycleDefinitionOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SupplementsCycleDefinitionOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Vote">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/Vote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MyTrainingOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyTrainingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyTrainings">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyTrainings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExerciseOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ExerciseOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportExerciseWeight">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportWeightRepetitions">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportWeightRepetitions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportMeasurementsTime">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportMeasurementsTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ImportLicence">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ImportLicence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyPlace">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveMyPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MyPlaceOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyPlaceOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyPlaces">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyPlaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportExerciseRecords">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeaturedData">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetFeaturedData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionships">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetChampionships" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChampionship">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveChampionship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGPSCoordinates">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetGPSCoordinates" style="document" />
+      <wsdl:input name="GetGPSCoordinatesParam">
+        <soap:header message="i0:GetGPSCoordinatesParam_Headers" part="GPSTrackerEntryId" use="literal" />
+        <soap:header message="i0:GetGPSCoordinatesParam_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GPSCoordinatesDTO">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IBodyArchitectAccessService1" type="i0:IBodyArchitectAccessService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GPSCoordinatesOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GPSCoordinatesOperation" style="document" />
+      <wsdl:input name="GPSOperationParam">
+        <soap:header message="i0:GPSOperationParam_Headers" part="Params" use="literal" />
+        <soap:header message="i0:GPSOperationParam_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GPSCoordinatesOperationResult">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ProfileOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ProfileOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AccountOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/AccountOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UserFavoritesOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/UserFavoritesOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TrainingDayCommentOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/TrainingDayCommentOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDayComments">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDayComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MessageOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/MessageOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileInformation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProfileInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InviteFriendOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/InviteFriendOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/CreateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/UpdateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTrainingDay">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteTrainingDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/UploadImage" style="document" />
+      <wsdl:input name="PictureDTO">
+        <soap:header message="i0:PictureDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PictureInfoDTO">
+        <soap:header message="i0:PictureInfoDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckProfileNameAvailability">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/CheckProfileNameAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrainingDay">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveTrainingDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDays">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDay">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetTrainingDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetImage" style="document" />
+      <wsdl:input name="PictureInfoDTO">
+        <soap:header message="i0:PictureInfoDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureInfoDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PictureDTO">
+        <soap:header message="i0:PictureDTO_Headers" part="Hash" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="PictureId" use="literal" />
+        <soap:header message="i0:PictureDTO_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExercises">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetExercises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuplements">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSuplements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExercise">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveExercise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSuplement">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSuplement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkoutPlans">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetWorkoutPlans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkoutPlan">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveWorkoutPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WorkoutPlanOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WorkoutPlanOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WP7Register">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WP7Unregister">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7Unregister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WP7ClearCounter">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7ClearCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WP7TrialStatus">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/WP7TrialStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetActivities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivity">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveActivity">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleEntries">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetScheduleEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveScheduleEntriesRange">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveScheduleEntriesRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReservationsOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReservationsOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentBasketOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/PaymentBasketOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentBaskets">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetPaymentBaskets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomerGroup">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveCustomerGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerGroups">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetCustomerGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerGroup">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/DeleteCustomerGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveReminder">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveReminder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReminders">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetReminders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReminderOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReminderOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplementsCycleDefinitions">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetSupplementsCycleDefinitions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupplementsCycleDefinition">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveSupplementsCycleDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SupplementsCycleDefinitionOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SupplementsCycleDefinitionOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Vote">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/Vote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MyTrainingOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyTrainingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyTrainings">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyTrainings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExerciseOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ExerciseOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportExerciseWeight">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportWeightRepetitions">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportWeightRepetitions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportMeasurementsTime">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportMeasurementsTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ImportLicence">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ImportLicence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyPlace">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveMyPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MyPlaceOperation">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/MyPlaceOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyPlaces">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetMyPlaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReportExerciseRecords">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/ReportExerciseRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeaturedData">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetFeaturedData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetChampionships">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetChampionships" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChampionship">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/SaveChampionship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGPSCoordinates">
+      <soap:operation soapAction="http://MYBASERVICE.TK/IBodyArchitectAccessService/GetGPSCoordinates" style="document" />
+      <wsdl:input name="GetGPSCoordinatesParam">
+        <soap:header message="i0:GetGPSCoordinatesParam_Headers" part="GPSTrackerEntryId" use="literal" />
+        <soap:header message="i0:GetGPSCoordinatesParam_Headers" part="SessionId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GPSCoordinatesDTO">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BAAuthenticationExceptionFault">
+        <soap:fault use="literal" name="BAAuthenticationExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BAServiceExceptionFault">
+        <soap:fault use="literal" name="BAServiceExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BodyArchitectAccessService">
+    <wsdl:port name="BasicHttpBinding_IBodyArchitectAccessService" binding="tns:BasicHttpBinding_IBodyArchitectAccessService">
+      <soap:address location="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IBodyArchitectAccessService1" binding="tns:BasicHttpBinding_IBodyArchitectAccessService1">
+      <soap:address location="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc/WP7" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

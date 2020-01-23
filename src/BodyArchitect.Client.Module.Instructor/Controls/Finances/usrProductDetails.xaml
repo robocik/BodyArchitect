@@ -1,0 +1,51 @@
+﻿<Controls:usrBaseControl xmlns:my="clr-namespace:BodyArchitect.Client.Module.Instructor.Controls.Finances"  x:Class="BodyArchitect.Client.Module.Instructor.Controls.Finances.usrProductDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Converters="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI"
+                         xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                         xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+                         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" Name="Me"      d:DesignHeight="300" d:DesignWidth="300" >
+    <UserControl.Resources>
+        <Converters:NullToVisibilityConverter x:Key="nullVisibConv"/>
+        <Converters:NegateNullToVisibilityConverter x:Key="notNullVisibConv" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+    <!--TODO:Completed-->
+
+        <GroupBox Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrProductDetails_Header_Information}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label  Target="txtName" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrProductDetails_Content_Name}"/>
+                <xctk:WatermarkTextBox Name="txtName" Margin="{StaticResource MarginMediumTopBottom}" MaxLength="100" Text="{Binding Product.Name,Mode=TwoWay}" Grid.Column="1" IsReadOnly="{Binding ReadOnly,ElementName=Me}"/>
+
+                <Label Target="txtPrice" Grid.Row="1" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrProductDetails_Content_Price}"/>
+                <xctk:CalculatorUpDown Margin="{StaticResource MarginMediumBottom}" Value="{Binding Product.Price,Mode=TwoWay}" Name="txtPrice" Grid.Row="1" Grid.Column="1" IsReadOnly="{Binding ReadOnly,ElementName=Me}" />
+
+                <Label Target="dpDate" Grid.Row="2" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrProductDetails_Content_Date}"/>
+                <xctk:DateTimePicker Margin="{StaticResource MarginMediumBottom}" Value="{Binding Product.DateTime,Mode=TwoWay}" Name="dpDate" Grid.Row="2" Grid.Column="1" IsReadOnly="{Binding ReadOnly,ElementName=Me}" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Name="grPayment" Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrProductDetails_Header_Payment}"  Grid.Row="1" Visibility="{Binding Product,ElementName=Me,TargetNullValue=Collapsed,Converter={StaticResource nullVisibConv}}">
+            <Grid>
+                <TextBlock Text="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrProductDetails_Text_None}" Style="{StaticResource titleTextBlock}" Visibility="{Binding Payment,Converter={StaticResource notNullVisibConv}}"/>
+                <my:usrPaymentDetails Payment="{Binding Payment,Mode=TwoWay}" Visibility="{Binding Payment,Converter={StaticResource nullVisibConv}}"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Controls:usrBaseControl>

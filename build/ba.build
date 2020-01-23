@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<project default="create_releases">
+
+  <property name="basedir" value="C:\sources\BA" />
+  <property name="active.configuration" value="release" />
+  <property name="project.file" value="${basedir}\BA40\BodyInstructor\BodyInstructor.csproj" />
+  <property name="client.app.dir" value="${basedir}\BA40\BodyInstructor\bin\x86\${active.configuration}\" />
+  <property name="config.file" value="${basedir}\BA40\BodyInstructor\app.config" />
+  <property name="releases.dir" value="${basedir}\build\output\Release\" />
+  <property name="clickonce.publish.dir" value="${basedir}\build\output\Publish\" />
+  <property name="clickonce.installUrl" value="${basedir}\build\output\Publish\" />
+  <property name="clickonce.updateUrl" value="http://update.bodyarchitectonline.com/" />
+  <property name="clickonceDir" value="${basedir}\build\output\" />
+  <property name="version" value="6.0.0.3" />
+<property name ="temp" value=""/>
+
+  <target name="create_releases">
+    <call target="set_prod_properties" />
+    <call target="build" />
+	<call target="clickOnce_ApplicationManifest" />
+	<call target="clickOnce_sign" />
+	<call target="create_local_setup" />
+	
+  </target>
+
+  <target name="create_local_setup">
+	<mkdir dir="${clickonceDir}LocalSetup" />
+	
+	
+	<copy todir="${clickonceDir}LocalSetup">
+		<fileset basedir="${clickonce.publish.dir}">
+			<include name="**" />
+		</fileset>
+	</copy>
+	
+	<copy file="${basedir}\build\LocalSetup\Setup.exe" tofile="${clickonceDir}LocalSetup\Setup.exe"/>
+	
+	<zip zipfile="${clickonceDir}BodyArchitect.zip">
+		<fileset basedir="${clickonceDir}LocalSetup" >
+			<include name="**" />
+		</fileset>
+    	</zip>
+		<delete dir="${clickonceDir}LocalSetup" failonerror="false" />
+  </target>
+
+  <target name="set_prod_properties">
+    <property name="current.release.dir" value="${releases.dir}" />
+	<property name="isSingleInstance" value="true" />
+
+  </target>
+  
+  <target name="clickonce">
+  <delete dir="${clickonce.publish.dir}" failonerror="false" />
+  <mkdir dir="${clickonce.publish.dir}" />
+  <mkdir dir="${clickonce.publish.dir}BodyArchitect_${version}" />
+  
+  <copy todir="${clickonce.publish.dir}BodyArchitect_${version}">
+    <fileset basedir="${releases.dir}">
+        <include name="**" />
+		<exclude name="*.pdb" />
+		<exclude name="*.xml" />
+		<exclude name="*.application" />
+    </fileset>
+	</copy>  
+
+	<!-- Application Manifest -->
+	<exec program="mage" commandline="-New Application -t ${clickonce.publish.dir}BodyArchitect_${version}\BodyArchitect.exe.manifest -fd ${clickonce.publish.dir}BodyArchitect_${version} -p x86 -Name BodyArchitect -Version ${version}" />
+	<!-- Deployment Manifest -->
+	-<exec program="mage" commandline='-New Deployment -t ${clickonce.publish.dir}BodyArchitect.application -p x86  -pu ${clickonce.installUrl}BodyArchitect.application -Name BodyArchitect -i true -appm ${clickonce.publish.dir}BodyArchitect_${version}\BodyArchitect.exe.manifest -Version ${version}' />
+	<!--
+	
+	<xmlpoke
+      file="${clickonce.publish.dir}BodyArchitect.application"
+      xpath="/assembly/deployment[@key = 'mapFileExtensions']/@value"
+      value="true" >
+	  
+	  <namespaces>
+        <namespace prefix="asmv1" uri="urn:schemas-microsoft-com:asm.v1" />
+    </namespaces>
+	
+	  </xmlpoke>
+	  
+	  -->
+	  <!-- For each file in the directory -->  
+	  <foreach item="File" in="${clickonce.publish.dir}BodyArchitect_${version}" property="fileName">  
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.manifest'}">  
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.application'}">  
+			<move file="${fileName}" tofile="${path::combine(fileName, fileName + '.deploy')}" />   
+		</if>
+		</if>
+	  </foreach>  
+	  <foreach item="Folder" in="${clickonce.publish.dir}BodyArchitect_${version}" property="foldername">  
+	  <foreach item="File" in="${foldername}" property="fileName">  
+		<move file="${fileName}" tofile="${path::combine(fileName, fileName + '.deploy')}" />   
+	  </foreach>
+	  </foreach>
+  	
+  </target>
+  
+  
+  <target name="clickOnce_ApplicationManifest">
+  
+  <!--<delete file="&quot;${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}\BodyArchitect.exe.manifest&quot;" failonerror="false" />-->
+  
+   <foreach item="File" in="${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}" property="fileName">  
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.manifest'}">  
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.application'}">  
+			<move file="${fileName}" tofile="${path::combine(path::get-directory-name(fileName), path::get-file-name-without-extension(fileName))}" /> 
+		</if>
+		</if>
+	  </foreach>  
+	  <foreach item="Folder" in="${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}" property="foldername">  
+	  <foreach item="File" in="${foldername}" property="fileName">  
+		<move file="${fileName}" tofile="${path::combine(path::get-directory-name(fileName),  path::get-file-name-without-extension(fileName))}" />   
+	  </foreach>
+	  </foreach>
+	  
+<exec program="mage" commandline="-New Application -ToFile &quot;${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}\BodyArchitect.exe.manifest&quot; -Name BodyArchitect -Version ${version} -FromDirectory &quot;${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}&quot; -CertFile ..\Cert\BodyArchitect1.pfx -Password X|nq$13P*_BA  -p x86 -IconFile MainIcon.ico"  />
+
+	 
+	<foreach item="File" in="${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}" property="fileName">  
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.manifest'}">  
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.application'}">  
+			<move file="${fileName}" tofile="${path::combine(fileName, fileName + '.deploy')}" />   
+		</if>
+		</if>
+	  </foreach>  
+	  <foreach item="Folder" in="${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}" property="foldername">  
+	  <foreach item="File" in="${foldername}" property="fileName">  
+		<move file="${fileName}" tofile="${path::combine(fileName, fileName + '.deploy')}" />   
+	  </foreach>
+	  </foreach>
+	  
+	 	 
+  </target>
+  
+  <target name="clickOnce_sign">-->
+  
+   <exec program="mage" commandline="-Update &quot;${clickonce.publish.dir}BodyArchitect.application &quot; -appmanifest &quot;${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}\BodyArchitect.exe.manifest&quot;" />
+		<exec program="mage" commandline="-Sign &quot; ${clickonce.publish.dir}BodyArchitect.application &quot; -CertFile ..\Cert\BodyArchitect1.pfx -Password X|nq$13P*_BA " />
+
+  </target>
+
+  <target name="build" depends="nant_contrib">
+	<delete dir="${clickonceDir}" failonerror="false" />
+	<!--<xmlpoke
+      file="${config.file}"
+      xpath="/configuration/appSettings/add[@key = 'IsSingleInstance']/@value"
+      value="${isSingleInstance}" />-->
+
+	  
+	  <!--<msbuild project="${project.file}">
+      <arg value="/t:Clean;publish" />
+    
+    <arg value="/property:PublishUrl=${clickonce.publish.dir}" />
+    <arg value="/Property:PublishDir=${clickonce.publish.dir}" />
+	<arg value="/Property:Configuration=Release" />
+	<arg value="/Property:ApplicationVersion=${version}" />
+	<arg value="/Property:UpdateRequired=true" />
+	<arg value="/Property:Platform=x86" />
+	<arg value="/Property:MinimumRequiredVersion=${version}" />
+	<arg value="/Property:ProcessorArchitecture=x86" />
+    </msbuild>-->
+	
+	<property name="MSBuildPath" value="C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe"/>    
+		<exec program="${MSBuildPath}">
+			<arg line='"${project.file}"' />				
+			<arg value="/t:Clean;publish" />
+			<arg value="/Property:Configuration=Release" />
+			<arg value="/Property:OutputPath=${releases.dir}\bin" />		 	
+			
+			<arg value="/property:PublishUrl=${clickonce.publish.dir}" />
+			<arg value="/Property:PublishDir=${clickonce.publish.dir}" />
+			<arg value="/Property:Configuration=Release" />
+			<arg value="/Property:ApplicationVersion=${version}" />
+			<arg value="/Property:UpdateRequired=true" />
+			<arg value="/Property:Platform=x86" />
+			<arg value="/Property:MinimumRequiredVersion=${version}" />
+			<arg value="/Property:ProcessorArchitecture=x86" />
+		</exec>	
+	
+	<!--<call target="localize" />-->
+	
+	<!--<foreach item="File" in="${client.app.dir}\pl" property="fileName">  
+
+		<property name="temp" value="${path::get-file-name(fileName)}" />
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.manifest'}">  
+		<if test="${string::to-lower(path::get-extension(fileName)) != '.application'}">  
+			<copy file="${fileName}" tofile="${clickonce.publish.dir}Application Files\BodyArchitect_${string::replace(version, '.', '_')}\pl\${temp}.deploy" /> 
+		</if>
+		</if>
+
+	  </foreach>  -->
+
+  </target>
+
+
+  <target name="localize">
+	<exec program="C:\Program Files (x86)\Sisulizer 2010\SlMake.exe" commandline="create localization.slp"/>
+  </target>
+
+
+  
+  <target name="nant_contrib" description="Load extra tasks">
+    <loadtasks assembly="C:\nant\contrib\bin\NAnt.Contrib.Tasks.dll" />
+  </target>
+
+</project>

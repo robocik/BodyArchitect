@@ -1,0 +1,130 @@
+﻿<my:usrBaseControl xmlns:my="clr-namespace:BodyArchitect.Client.UI.Controls"  x:Class="BodyArchitect.Client.UI.UserControls.usrTrainingDay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                   xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <!--TODO: Completed -->
+    <my:usrBaseControl.Resources>
+        <BooleanToVisibilityConverter  x:Key="boolVisibConv"/>
+        <DataTemplate x:Key="ClosableTabItemTemplate">
+            
+            <DockPanel Width="120">
+                <Button Tag="{Binding}" Style="{StaticResource CloseableTabItemButtonStyle}" Visibility="{Binding CloseButtonVisible,Converter={StaticResource boolVisibConv}}"
+    DockPanel.Dock="Right" Width="16"  Height="16" Click="btnDeleteEntry_Click" Panel.ZIndex="11111">
+                    <Path  Stretch="Fill" StrokeThickness="0.5" Stroke="#FF333333" Fill="#FF969696" Data="F1 M 2.28484e-007,1.33331L 1.33333,0L 4.00001,2.66669L 6.66667,6.10352e-005L 8,1.33331L 5.33334,4L 8,6.66669L 6.66667,8L 4,5.33331L 1.33333,8L 1.086e-007,6.66669L 2.66667,4L 2.28484e-007,1.33331 Z " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Button>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Image Name="imgFromReservation" ToolTip="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_ToolTip_ConnectedToReservation}" Source="/BodyArchitect.Client.Resources;component/Images/Reservation.png" Width="16" Height="16"/>
+                    <ContentPresenter Content="{Binding Header}" Grid.Column="1"  VerticalAlignment="Center"  />
+                </Grid>               
+            </DockPanel>
+
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding IsFromReservation}"  Value="false">
+                    <Setter Property="Visibility" TargetName="imgFromReservation" Value="Collapsed"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </my:usrBaseControl.Resources>
+    <Grid>
+        <Grid.Resources>
+
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <ToolBar x:Name="tbToolBar" Background="{x:Null}">
+
+            <Label Name="lblDate" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_Content_Date}" />
+            <TextBox Name="txtDate" Width="100" IsReadOnly="true" />
+            <xctk:DropDownButton  Name="tbAddEntry" >
+                <xctk:DropDownButton.Content>
+                    <Image Source="/BodyArchitect.Client.Resources;component/Images/Module.png" Width="16" Height="16"/>
+                </xctk:DropDownButton.Content>
+
+                <xctk:DropDownButton.DropDownContent>
+                    <StackPanel Name="tsAddMenu" MenuItem.Click="tsAddMenu_Click">
+                    </StackPanel>
+                </xctk:DropDownButton.DropDownContent>
+            </xctk:DropDownButton>
+
+            <Separator Name="toolStripSeparator1" />
+            <Button ToolTip="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_ToolTip_Rename}" Name="tsRename" Click="tsRename_Click">
+                <Image Source="/BodyArchitect.Client.Resources;component/Images/Rename.png"/>
+            </Button>
+            <Button ToolTip="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_ToolTip_Delete}" Click="tsbDeleteTrainingDay_Click" Name="tsbDeleteTrainingDay">
+                <Image Source="/BodyArchitect.Client.Resources;component/Images/DeleteTrainingDay.png"/>
+            </Button>
+            <Separator Name="toolStripSeparator2" />
+            <Button Name="tsbPrevious" Click="tsbPrevious_Click" ToolTip="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_ToolTip_PreviousEntry}">
+                <Image Source="/BodyArchitect.Client.Resources;component/Images/PrevTrainingDay.png"/>
+            </Button>
+            <Button Name="tsbNext" Click="tsbNext_Click" ToolTip="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_ToolTip_NextEntry}">
+                <Image Source="/BodyArchitect.Client.Resources;component/Images/NextTrainingDay.png"/>  
+            </Button>
+
+
+
+            <xctk:SplitButton  Name="tsbFilter" Click="tbsFilterAll_Click" >
+                <xctk:DropDownButton.Content>
+                    <Image Source="/BodyArchitect.Client.Resources;component/Images/Reservation.png" Width="16" Height="16"/>
+                </xctk:DropDownButton.Content>
+
+                <xctk:SplitButton.DropDownContent>
+                    <StackPanel >
+                        <MenuItem Name="tsbFilterAll"  Click="tbsFilterAll_Click" IsCheckable="True">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="20" Height="20" Source="/BodyArchitect.Client.Resources;component/Images/Reservation.png" />
+                                    <ContentPresenter Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_Content_All_Filter}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Name="tsbFilterOnlyReservation" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_Header_OnlyReservation}" IsCheckable="True" Click="tsbFilterOnlyReservations_Click" />
+                        <MenuItem Name="tsbFilterOnlyNotReservation" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_Header_OnlyNotReservation}" IsCheckable="True" Click="tsbFilterOnlyNotReservations_Click" />
+                    </StackPanel>
+                </xctk:SplitButton.DropDownContent>
+            </xctk:SplitButton>
+
+            <xctk:SplitButton  Name="tsbShare" Click="tbsShareToFacebook_Click" >
+                <xctk:DropDownButton.Content>
+                    <Image Source="/BodyArchitect.Client.Resources;component/Images/Facebook.png" Width="16" Height="16"/>
+                </xctk:DropDownButton.Content>
+
+                <xctk:SplitButton.DropDownContent>
+                    <StackPanel >
+                        <MenuItem Name="tsbShareToFacebook"  Click="tbsShareToFacebook_Click" >
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="20" Height="20" Source="/BodyArchitect.Client.Resources;component/Images/Facebook.png" />
+                                    <ContentPresenter Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrTrainingDay_Content_All_ShareToFacebook}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                        </MenuItem>
+                    </StackPanel>
+                </xctk:SplitButton.DropDownContent>
+            </xctk:SplitButton>
+        </ToolBar>
+
+        <TabControl IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource ClosableTabItemTemplate}"  Grid.Row="1" Name="xtraTabControl1" Margin="4">
+            <TabControl.ItemContainerStyle>
+                <!--<Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">-->
+                <Style TargetType="TabItem" >
+                    <Setter Property="Header" Value="{Binding }"/>
+                    <Setter Property="Content" Value="{Binding Content}"/>
+                </Style>
+            </TabControl.ItemContainerStyle>
+        </TabControl>
+    </Grid>
+</my:usrBaseControl>

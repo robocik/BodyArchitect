@@ -1,0 +1,51 @@
+﻿<UserControls:WorkoutCommentsPagerList x:Class="BodyArchitect.Client.UI.UserControls.usrWorkoutCommentsList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                          xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls"
+                                       xmlns:Common="clr-namespace:BodyArchitect.Client.Common;assembly=BodyArchitect.Client.Common"
+                                       xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls"
+                                       xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator"
+                                       mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="300"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="{DynamicResource LightBrush}">
+            <TextBlock Name="lblEmptyListMessage" Style="{StaticResource emptyListTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrWorkoutCommentsList_Text_SelectItemFirst}"/>
+
+            <Grid Name="tableLayoutPanel1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <UserControls:WorkoutPlanCommentListControl x:Name="workoutPlanCommentListControl1" />
+                <Grid Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Text="{Binding SearchStatus}" Style="{StaticResource normalTextBlock}"/>
+                    <Viewbox VerticalAlignment="Center" Width="16" Height="16" Grid.Column="1" Margin="15,0,15,0"  >
+                        <controls:ProgressIndicator  x:Name="progressIndicator1" IsIndeterminate="true"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Viewbox>
+                    <Button Click="btnGetMore_Click" Margin="{StaticResource MarginSmallLeftTopRightBottom}" Height="25" Width="80" IsEnabled="{Binding MoreResultsEnabled}" Style="{StaticResource ImageButton}" Controls:ImageButtonExt.Image="/BodyArchitect.Client.Resources;component/Images/MoreButton.png"  Grid.Column="2" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:MoreButton}" />
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Common:HideableRowGridSplitter
+            Name="rowSplitter"
+            Grid.Row="1"/>
+            
+        <UserControls:usrRating x:Name="usrRating1" Grid.Row="2" />
+    </Grid>
+</UserControls:WorkoutCommentsPagerList>

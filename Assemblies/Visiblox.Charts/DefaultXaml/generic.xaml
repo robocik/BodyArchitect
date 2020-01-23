@@ -1,0 +1,2173 @@
+<!--Copyright Scott Logic Ltd 2012-->
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:primitives="clr-namespace:Visiblox.Charts.Primitives;assembly=Visiblox.Charts" xmlns:charts="clr-namespace:Visiblox.Charts;assembly=Visiblox.Charts" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<system:String x:Key="PaletteColorRed">#FFCF3B37</system:String>
+	<system:String x:Key="PaletteColorBlack">#FF0C0F0F</system:String>
+	<system:String x:Key="PaletteColorGreen">#FF60B167</system:String>
+	<system:String x:Key="PaletteColorBlue">#FF436AA9</system:String>
+	<system:String x:Key="PaletteColorOrange">#FFDA843F</system:String>
+	<system:String x:Key="PaletteColorPurple">#FF6C4A98</system:String>
+	<system:String x:Key="PaletteColorMaroon">#FF902F2D</system:String>
+	<system:String x:Key="PaletteColorYellow">#FFF1E046</system:String>
+	<Color x:Key="PaletteColorRedColor">#FFCF3B37</Color>
+	<Color x:Key="PaletteColorBlackColor">#FF0C0F0F</Color>
+	<Color x:Key="PaletteColorGreenColor">#FF60B167</Color>
+	<Color x:Key="PaletteColorBlueColor">#FF436AA9</Color>
+	<Color x:Key="PaletteColorOrangeColor">#FFDA843F</Color>
+	<Color x:Key="PaletteColorPurpleColor">#FF6C4A98</Color>
+	<Color x:Key="PaletteColorMaroonColor">#FF902F2D</Color>
+	<Color x:Key="PaletteColorYellowColor">#FFF1E046</Color>
+	<SolidColorBrush x:Key="PaletteColorRedBrush" Color="{StaticResource PaletteColorRedColor}" />
+	<SolidColorBrush x:Key="PaletteColorBlackBrush" Color="{StaticResource PaletteColorBlackColor}" />
+	<SolidColorBrush x:Key="PaletteColorGreenBrush" Color="{StaticResource PaletteColorGreenColor}" />
+	<SolidColorBrush x:Key="PaletteColorBlueBrush" Color="{StaticResource PaletteColorBlueColor}" />
+	<SolidColorBrush x:Key="PaletteColorOrangeBrush" Color="{StaticResource PaletteColorOrangeColor}" />
+	<SolidColorBrush x:Key="PaletteColorPurpleBrush" Color="{StaticResource PaletteColorPurpleColor}" />
+	<SolidColorBrush x:Key="PaletteColorMaroonBrush" Color="{StaticResource PaletteColorMaroonColor}" />
+	<SolidColorBrush x:Key="PaletteColorYellowBrush" Color="{StaticResource PaletteColorYellowColor}" />
+	<SolidColorBrush x:Key="DefaultNonPaletteColor" Color="{StaticResource PaletteColorRedColor}" />
+	<SolidColorBrush x:Key="DefaultTransparentColor" Color="Transparent" />
+	<system:Double x:Key="DefaultLineStrokeThickness">1</system:Double>
+	<system:Double x:Key="DefaultSelectedLineStrokeThickness">2</system:Double>
+	<system:Double x:Key="DefaultHighlightedLineStrokeThickness">3</system:Double>
+	<system:Double x:Key="DefaultPointSize">5</system:Double>
+	<system:Double x:Key="DefaultRadialPointSize">10</system:Double>
+	<system:Double x:Key="DefaultPieExplode">0</system:Double>
+	<system:Double x:Key="DefaultHighlightedPieExplode">0</system:Double>
+	<system:Double x:Key="DefaultSelectedPieExplode">0.15</system:Double>
+	<system:Double x:Key="DefaultBarOrColumnThickness">1</system:Double>
+	<system:Double x:Key="DefaultTrackballPointWidth">4</system:Double>
+	<system:Double x:Key="DefaultTrackballPointHeight">4</system:Double>
+	<TranslateTransform x:Key="DefaultTrackballPointRenderTransform" X="-2" Y="-2" />
+	<primitives:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+	<primitives:IdentityValueConverter x:Key="IdentityValueConverter" />
+	<primitives:DataPointYValuesConverter x:Key="DataPointYValuesConverter" />
+	<primitives:UIPointConverter x:Key="UIPointConverter" />
+	<primitives:BoolToSignConverter x:Key="BoolToSignConverter" />
+	<primitives:AlignmentConverter x:Key="AlignmentConverter" />
+	<!-- default data label styles-->
+	<Style x:Key="DefaultDataLabelBorderStyle" TargetType="Border">
+		<Setter Property="BorderBrush" Value="Black" />
+		<Setter Property="BorderThickness" Value="1" />
+		<Setter Property="Margin" Value="0" />
+		<Setter Property="Padding" Value="2" />
+		<Setter Property="HorizontalAlignment" Value="Center" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="Opacity" Value="0.6" />
+		<Setter Property="Background" Value="White" />
+		<Setter Property="CornerRadius" Value="2" />
+	</Style>
+	<Style x:Key="DefaultDataLabelTextStyle" TargetType="TextBlock">
+		<Setter Property="Foreground" Value="Black" />
+		<Setter Property="Opacity" Value="1.0" />
+		<Setter Property="TextAlignment" Value="Left" />
+		<Setter Property="HorizontalAlignment" Value="Left" />
+		<Setter Property="VerticalAlignment" Value="Top" />
+	</Style>
+	<Style x:Key="DefaultDataLabelStyle" TargetType="charts:DataLabel">
+		<Setter Property="BorderStyle" Value="{StaticResource DefaultDataLabelBorderStyle}" />
+		<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+	</Style>
+	<!-- Default Axis styles -->
+	<Style x:Key="DefaultTitleStyle" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="10" />
+		<Setter Property="TextAlignment" Value="Center" />
+	</Style>
+	<Style x:Key="DefaultGridlineStyle" TargetType="Line">
+		<Setter Property="Stroke" Value="#FFDEDEDE" />
+		<Setter Property="StrokeThickness" Value="1" />
+	</Style>
+	<Style x:Key="DefaultGridStripeStyle" TargetType="Path">
+		<Setter Property="Opacity" Value="0.15" />
+		<Setter Property="Fill" Value="LightSeaGreen" />
+	</Style>
+	<Style x:Key="DefaultMajorTickStyle" TargetType="Line">
+		<Setter Property="Stroke" Value="Black" />
+		<Setter Property="StrokeThickness" Value="1" />
+	</Style>
+	<Style x:Key="DefaultMinorTickStyle" TargetType="Line">
+		<Setter Property="Stroke" Value="Black" />
+		<Setter Property="StrokeThickness" Value="1" />
+	</Style>
+	<Style x:Key="DefaultLabelStyle" TargetType="charts:AxisLabel">
+		<Setter Property="TextStyle">
+			<Setter.Value>
+				<Style TargetType="TextBlock">
+					<Setter Property="TextWrapping" Value="Wrap" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="DefaultDateTimeLabelStyle" TargetType="charts:AxisLabel">
+		<Setter Property="TextStyle">
+			<Setter.Value>
+				<Style TargetType="TextBlock">
+					<Setter Property="Margin" Value="3,0,0,0" />
+					<Setter Property="TextAlignment" Value="Center" />
+					<Setter Property="VerticalAlignment" Value="Top" />
+					<Setter Property="TextWrapping" Value="Wrap" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="DefaultAxisLineStyle" TargetType="Line">
+		<Setter Property="Stroke" Value="DarkGray" />
+		<Setter Property="StrokeThickness" Value="1" />
+	</Style>
+	<!-- Radial Charts-->
+	<Style x:Key="DefaultRadialAxisTitleStyle" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="FontWeight" Value="Bold" />
+	</Style>
+	<Style x:Key="DefaultRadialMajorGridlineStyle" TargetType="Path">
+		<Setter Property="Stroke" Value="LightGray" />
+		<Setter Property="StrokeThickness" Value="1" />
+	</Style>
+	<Style x:Key="DefaultRadialMinorGridlineStyle" TargetType="Path">
+		<Setter Property="Stroke" Value="LightGray" />
+		<Setter Property="StrokeThickness" Value="1" />
+	</Style>
+	<Style x:Key="DefaultRadialLabelLineStyleLineStyle" TargetType="Path">
+		<Setter Property="Stroke" Value="Gray" />
+		<Setter Property="StrokeThickness" Value="1" />
+		<Setter Property="StrokeDashArray" Value="5,5" />
+	</Style>
+	<!-- Styles below here to be pulled in by both version-specific and common -->
+	<Style TargetType="charts:ChartSeriesCommonBase" x:Key="ChartSeriesBaseStyle">
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="VerticalAlignment" Value="Stretch" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:ChartSeriesCommonBase">
+					<primitives:ZoomCanvas x:Name="LayoutRoot" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Trackball">
+					<primitives:ZoomCanvas x:Name="LayoutRoot">
+						<Ellipse Style="{TemplateBinding TrackballStyle}" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}}" />
+					</primitives:ZoomCanvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballStyle">
+			<Setter.Value>
+				<Style TargetType="Ellipse">
+					<Setter Property="Fill" Value="Black" />
+					<Setter Property="Width" Value="{StaticResource DefaultTrackballPointWidth}" />
+					<Setter Property="Height" Value="{StaticResource DefaultTrackballPointHeight}" />
+					<Setter Property="RenderTransform" Value="{StaticResource DefaultTrackballPointRenderTransform}" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ToolTipTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" Background="White" Padding="3,1">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding X, Converter={StaticResource IdentityValueConverter}}" />
+							<TextBlock Text=", " />
+							<TextBlock DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Y, Converter={StaticResource IdentityValueConverter}}" />
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:ChartSeriesCommonBase" BasedOn="{StaticResource ChartSeriesBaseStyle}" />
+	<Style TargetType="charts:LineSeries" BasedOn="{StaticResource ChartSeriesBaseStyle}" x:Key="LineSeriesStyle">
+		<Setter Property="PointFill" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="PointStroke" Value="{StaticResource DefaultTransparentColor}" />
+		<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+		<Setter Property="PointSize" Value="{StaticResource DefaultPointSize}" />
+		<Setter Property="LineStroke" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="LineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+		<Setter Property="AreaFill" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="LabelStyle" Value="{StaticResource DefaultDataLabelStyle}" />
+		<Setter Property="LegendItemTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:LegendItem">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+						<Canvas Width="10" Height="10" Margin="0 0 9 0" Opacity="{Binding Opacity}">
+							<Path Data="M 0,5 L 10,5 L 10,10 L 0,10" Fill="{Binding AreaFill}" Style="{Binding Path=AreaStyle}" Visibility="{Binding Path=ShowArea, Converter={StaticResource BoolToVisibilityConverter}}" />
+							<Path Data="M 0,5 L 10,5" Stroke="{Binding LineStroke}" Style="{Binding Path=LineStyle}" Visibility="{Binding Path=ShowLine, Converter={StaticResource BoolToVisibilityConverter}}" />
+							<Ellipse Width="4" Height="4" Fill="{Binding PointFill}" Style="{Binding Path=PointStyle}" Visibility="{Binding Path=ShowPoints, Converter={StaticResource BoolToVisibilityConverter}}">
+								<Ellipse.RenderTransform>
+									<TranslateTransform X="3" Y="3" />
+								</Ellipse.RenderTransform>
+							</Ellipse>
+						</Canvas>
+						<TextBlock Text="{Binding Path=DataSeries.Title}" />
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:BandSeries" x:Key="BandSeriesStyle" BasedOn="{StaticResource ChartSeriesBaseStyle}">
+		<Setter Property="UpperLineStroke" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="LowerLineStroke" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+		<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+		<Setter Property="AreaStyle">
+			<Setter.Value>
+				<Style TargetType="FrameworkElement">
+					<Setter Property="Opacity" Value="0.7" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="InvertedAreaStyle">
+			<Setter.Value>
+				<Style TargetType="FrameworkElement">
+					<Setter Property="Opacity" Value="0.7" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LegendItemTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:LegendItem">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+						<Canvas Width="10" Height="10" Margin="0 0 9 0" Opacity="{Binding Opacity}">
+							<Path Data="M 0,0 L 10,10" Stroke="{Binding UpperLineStroke}" Style="{Binding Path=UpperLineStyle}" Visibility="{Binding Path=ShowLines, Converter={StaticResource BoolToVisibilityConverter}}" />
+							<Path Data="M 0,0 L 5,5 L 0,10" Opacity="{Binding Path=AreaFill.Opacity}" Fill="{Binding AreaFill}" Style="{Binding Path=AreaStyle}" Visibility="{Binding Path=ShowArea, Converter={StaticResource BoolToVisibilityConverter}}" />
+							<Path Data="M 10,0 L 5,5 L 10,10" Opacity="{Binding Path=AreaFill.Opacity}" Fill="{Binding InvertedAreaFill}" Style="{Binding Path=InvertedAreaStyle}" Visibility="{Binding Path=ShowArea, Converter={StaticResource BoolToVisibilityConverter}}" />
+							<Path Data="M 0,10 L 10,0" Stroke="{Binding LowerLineStroke}" Style="{Binding Path=LowerLineStyle}" Visibility="{Binding Path=ShowLines, Converter={StaticResource BoolToVisibilityConverter}}" />
+						</Canvas>
+						<TextBlock Text="{Binding Path=DataSeries.Title}" />
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Trackball">
+					<primitives:ZoomCanvas x:Name="LayoutRoot">
+						<Ellipse Style="{TemplateBinding TrackballStyle}" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}, ConverterParameter=Upper}" />
+						<Ellipse Style="{TemplateBinding TrackballStyle}" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}, ConverterParameter=Lower}" />
+					</primitives:ZoomCanvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballStyle">
+			<Setter.Value>
+				<Style TargetType="Ellipse">
+					<Setter Property="Fill" Value="Black" />
+					<Setter Property="Width" Value="{StaticResource DefaultTrackballPointWidth}" />
+					<Setter Property="Height" Value="{StaticResource DefaultTrackballPointHeight}" />
+					<Setter Property="RenderTransform" Value="{StaticResource DefaultTrackballPointRenderTransform}" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:ErrorBarSeries" x:Key="ErrorBarSeriesStyle" BasedOn="{StaticResource ChartSeriesBaseStyle}">
+		<Setter Property="LineStroke" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="LineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+		<Setter Property="LineStyle">
+			<Setter.Value>
+				<Style TargetType="Path">
+					<Setter Property="StrokeLineJoin" Value="Bevel" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="SelectedStyle">
+			<Setter.Value>
+				<Style TargetType="charts:ErrorBarSeries">
+					<Setter Property="LineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+					<Setter Property="LineStyle">
+						<Setter.Value>
+							<Style TargetType="Path">
+								<Setter Property="StrokeLineJoin" Value="Miter" />
+								<Setter Property="StrokeMiterLimit" Value="1" />
+							</Style>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LegendItemTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:LegendItem">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+						<Canvas Width="10" Height="10" Margin="0 0 9 0" Opacity="{Binding Opacity}">
+							<Path Data="M 0,5 L 10,5" Stroke="{Binding LineStroke}" Style="{Binding Path=LineStyle}" />
+						</Canvas>
+						<TextBlock Text="{Binding Path=DataSeries.Title}" />
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ToolTipTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" Background="White" Padding="3,1">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<TextBlock Grid.Row="0" Text="X:" />
+							<TextBlock Grid.Row="0" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding X, Converter={StaticResource IdentityValueConverter}}" />
+							<TextBlock Grid.Row="1" Text="Minimum:" />
+							<TextBlock Grid.Row="1" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Converter={StaticResource DataPointYValuesConverter}, ConverterParameter=Minimum}" />
+							<TextBlock Grid.Row="2" Text="Maximum:" />
+							<TextBlock Grid.Row="2" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Converter={StaticResource DataPointYValuesConverter}, ConverterParameter=Maximum}" />
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Trackball">
+					<primitives:ZoomCanvas x:Name="LayoutRoot">
+						<Polygon Style="{TemplateBinding TrackballStyle}" Points="0,0 5,5 10,0 0,0" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}, ConverterParameter=Maximum}">
+							<Polygon.RenderTransform>
+								<TransformGroup>
+									<TranslateTransform X="-5" Y="-8" />
+									<ScaleTransform>
+										<ScaleTransform.ScaleY>
+											<Binding Path="Series.YAxis.ReverseAxis" RelativeSource="{RelativeSource TemplatedParent}" Converter="{StaticResource BoolToSignConverter}" ConverterParameter="1" />
+										</ScaleTransform.ScaleY>
+									</ScaleTransform>
+								</TransformGroup>
+							</Polygon.RenderTransform>
+						</Polygon>
+						<Polygon Style="{TemplateBinding TrackballStyle}" Points="0,5 5,0 10,5 0,5" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}, ConverterParameter=Minimum}">
+							<Polygon.RenderTransform>
+								<TransformGroup>
+									<TranslateTransform X="-5" Y="3" />
+									<ScaleTransform>
+										<ScaleTransform.ScaleY>
+											<Binding Path="Series.YAxis.ReverseAxis" RelativeSource="{RelativeSource TemplatedParent}" Converter="{StaticResource BoolToSignConverter}" ConverterParameter="1" />
+										</ScaleTransform.ScaleY>
+									</ScaleTransform>
+								</TransformGroup>
+							</Polygon.RenderTransform>
+						</Polygon>
+					</primitives:ZoomCanvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballStyle">
+			<Setter.Value>
+				<Style TargetType="Polygon">
+					<Setter Property="Fill" Value="Black" />
+					<Setter Property="Stroke" Value="LightGray" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:BoxPlotSeries" x:Key="BoxPlotSeriesBaseStyle" BasedOn="{StaticResource ChartSeriesBaseStyle}">
+		<Setter Property="PointFill" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="PointStroke" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+		<Setter Property="SelectedStyle">
+			<Setter.Value>
+				<Style TargetType="charts:BoxPlotSeries">
+					<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+					<Setter Property="PointStyle">
+						<Setter.Value>
+							<Style TargetType="Path">
+								<Setter Property="StrokeLineJoin" Value="Miter" />
+								<Setter Property="StrokeMiterLimit" Value="1" />
+							</Style>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LegendItemTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:LegendItem">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+						<Canvas Width="10" Height="10" Margin="0 0 9 0" Opacity="{Binding Opacity}">
+							<Path Data="M 0,5 L 10,5" Fill="{Binding PointFill}" Stroke="{Binding PointStroke}" Style="{Binding Path=PointStyle}" />
+						</Canvas>
+						<TextBlock Text="{Binding Path=DataSeries.Title}" />
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ToolTipTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" Background="White" Padding="3,1">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+								<RowDefinition />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<TextBlock Grid.Row="0" Text="X:" />
+							<TextBlock Grid.Row="0" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding X, Converter={StaticResource IdentityValueConverter}}" />
+							<TextBlock Grid.Row="1" Text="Minimum:" />
+							<TextBlock Grid.Row="1" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Converter={StaticResource DataPointYValuesConverter}, ConverterParameter=Minimum}" />
+							<TextBlock Grid.Row="2" Text="Lower Quartile:" />
+							<TextBlock Grid.Row="2" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Converter={StaticResource DataPointYValuesConverter}, ConverterParameter=LowerQuartile}" />
+							<TextBlock Grid.Row="3" Text="Median:" />
+							<TextBlock Grid.Row="3" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Converter={StaticResource DataPointYValuesConverter}, ConverterParameter=Median}" />
+							<TextBlock Grid.Row="4" Text="Upper Quartile:" />
+							<TextBlock Grid.Row="4" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Converter={StaticResource DataPointYValuesConverter}, ConverterParameter=UpperQuartile}" />
+							<TextBlock Grid.Row="5" Text="Maximum:" />
+							<TextBlock Grid.Row="5" Grid.Column="1" DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Converter={StaticResource DataPointYValuesConverter}, ConverterParameter=Maximum}" />
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Trackball">
+					<primitives:ZoomCanvas x:Name="LayoutRoot">
+						<Polygon Style="{TemplateBinding TrackballStyle}" Points="0,0 5,5 10,0 0,0" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}, ConverterParameter=Maximum}">
+							<Polygon.RenderTransform>
+								<TransformGroup>
+									<TranslateTransform X="-5" Y="-8" />
+									<ScaleTransform>
+										<ScaleTransform.ScaleY>
+											<Binding Path="Series.YAxis.ReverseAxis" RelativeSource="{RelativeSource TemplatedParent}" Converter="{StaticResource BoolToSignConverter}" ConverterParameter="1" />
+										</ScaleTransform.ScaleY>
+									</ScaleTransform>
+								</TransformGroup>
+							</Polygon.RenderTransform>
+						</Polygon>
+						<Polygon Style="{TemplateBinding TrackballStyle}" Points="0,5 5,0 10,5 0,5" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}, ConverterParameter=Minimum}">
+							<Polygon.RenderTransform>
+								<TransformGroup>
+									<TranslateTransform X="-5" Y="3" />
+									<ScaleTransform>
+										<ScaleTransform.ScaleY>
+											<Binding Path="Series.YAxis.ReverseAxis" RelativeSource="{RelativeSource TemplatedParent}" Converter="{StaticResource BoolToSignConverter}" ConverterParameter="1" />
+										</ScaleTransform.ScaleY>
+									</ScaleTransform>
+								</TransformGroup>
+							</Polygon.RenderTransform>
+						</Polygon>
+					</primitives:ZoomCanvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballStyle">
+			<Setter.Value>
+				<Style TargetType="Polygon">
+					<Setter Property="Fill" Value="Black" />
+					<Setter Property="Stroke" Value="LightGray" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<ControlTemplate x:Key="PieChartTemplate" TargetType="charts:PieChart">
+		<Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}" Opacity="{TemplateBinding Opacity}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<TextBlock x:Name="TitleArea" Text="{TemplateBinding Title}" Style="{TemplateBinding TitleStyle}" />
+			<primitives:LegendLayoutContainer Grid.Row="1" LegendPosition="{Binding Path=LegendPosition, RelativeSource={RelativeSource TemplatedParent}}">
+				<primitives:LegendLayoutContainer.ChartContent>
+					<Grid Name="PlotArea" primitives:Clip.ToBounds="True" Style="{TemplateBinding PlotAreaStyle}">
+						<Border Name="PlotAreaBorder" Style="{TemplateBinding PlotAreaBorderStyle}" Canvas.ZIndex="120" />
+						<Grid Name="SeriesContainer" />
+						<Grid Name="GridlinesContainer" Canvas.ZIndex="-100" />
+						<Canvas Name="BehaviourContainer" />
+					</Grid>
+				</primitives:LegendLayoutContainer.ChartContent>
+				<primitives:LegendLayoutContainer.LegendContent>
+					<charts:Legend x:Name="Legend" Title="{TemplateBinding LegendTitle}" Style="{TemplateBinding LegendStyle}" Template="{TemplateBinding LegendTemplate}" Visibility="{TemplateBinding LegendVisibility}" Ordering="{TemplateBinding LegendOrdering}" />
+				</primitives:LegendLayoutContainer.LegendContent>
+			</primitives:LegendLayoutContainer>
+		</Grid>
+	</ControlTemplate>
+	<Style TargetType="charts:Chart" x:Key="DefaultChartStyleBase">
+		<Setter Property="TitleStyle">
+			<Setter.Value>
+				<Style TargetType="TextBlock">
+					<Setter Property="HorizontalAlignment" Value="Center" />
+					<Setter Property="FontSize" Value="14" />
+					<Setter Property="Margin" Value="5 5 15 5" />
+					<Setter Property="FontWeight" Value="Bold" />
+					<Setter Property="Visibility" Value="Collapsed" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="FontSize" Value="10" />
+		<Setter Property="LegendStyle">
+			<Setter.Value>
+				<Style TargetType="charts:Legend">
+					<Setter Property="VerticalAlignment" Value="Top" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LegendTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Legend">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+						<ScrollViewer VerticalScrollBarVisibility="Auto" Background="{TemplateBinding Background}" BorderThickness="0" Padding="10">
+							<StackPanel Orientation="Vertical">
+								<TextBlock Text="{TemplateBinding Title}" Style="{TemplateBinding TitleStyle}" Name="LegendTitle" />
+								<StackPanel Orientation="Vertical" x:Name="LegendPanel" />
+							</StackPanel>
+						</ScrollViewer>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="PlotAreaStyle">
+			<Setter.Value>
+				<Style TargetType="Grid">
+					<Setter Property="Background" Value="{StaticResource DefaultTransparentColor}" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="PlotAreaBorderStyle">
+			<Setter.Value>
+				<Style TargetType="Border">
+					<Setter Property="BorderBrush" Value="DarkGray" />
+					<Setter Property="BorderThickness" Value="1" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Background" Value="Transparent" />
+		<!--<Setter.Value>
+                <charts:SimplePalette />
+            </Setter.Value>
+        </Setter>-->
+	</Style>
+	<Style TargetType="charts:PieChart" x:Key="DefaultPieChartStyleBase">
+		<Setter Property="TitleStyle">
+			<Setter.Value>
+				<Style TargetType="TextBlock">
+					<Setter Property="HorizontalAlignment" Value="Center" />
+					<Setter Property="FontSize" Value="14" />
+					<Setter Property="Margin" Value="5 5 15 5" />
+					<Setter Property="FontWeight" Value="Bold" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LegendStyle">
+			<Setter.Value>
+				<Style TargetType="charts:Legend">
+					<Setter Property="VerticalAlignment" Value="Top" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LegendTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Legend">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+						<ScrollViewer VerticalScrollBarVisibility="Auto" Background="{TemplateBinding Background}" BorderThickness="0" Padding="10">
+							<StackPanel Orientation="Vertical">
+								<TextBlock Text="{TemplateBinding Title}" Style="{TemplateBinding TitleStyle}" Name="LegendTitle" />
+								<StackPanel Orientation="Vertical" x:Name="LegendPanel" />
+							</StackPanel>
+						</ScrollViewer>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="PlotAreaStyle">
+			<Setter.Value>
+				<Style TargetType="Grid">
+					<Setter Property="Background" Value="{StaticResource DefaultTransparentColor}" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="PlotAreaBorderStyle">
+			<Setter.Value>
+				<Style TargetType="Border">
+					<Setter Property="BorderBrush" Value="DarkGray" />
+					<Setter Property="BorderThickness" Value="0" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ToolTipTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" Background="White" Padding="3,1">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding X, Converter={StaticResource IdentityValueConverter}}" />
+							<TextBlock Text=", " />
+							<TextBlock DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Y, Converter={StaticResource IdentityValueConverter}}" />
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<charts:StyleCollection x:Key="DefaultPieChartStyleTemplates">
+		<Style TargetType="charts:PiePiece">
+			<Setter Property="Fill" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="Opacity" Value="0.9" />
+			<Setter Property="Stroke" Value="Black" />
+			<Setter Property="StrokeThickness" Value="1" />
+			<Setter Property="ExplodePercent" Value="{StaticResource DefaultPieExplode}" />
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:PiePiece">
+						<Setter Property="Fill" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+						<Setter Property="Opacity" Value="1" />
+						<Setter Property="StrokeThickness" Value="2" />
+						<Setter Property="ExplodePercent" Value="{StaticResource DefaultSelectedPieExplode}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:PiePiece">
+						<Setter Property="StrokeThickness" Value="2" />
+						<Setter Property="ExplodePercent" Value="{StaticResource DefaultHighlightedPieExplode}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</charts:StyleCollection>
+	<Style TargetType="charts:AdditionalLabel">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:AdditionalLabel">
+					<Grid x:Name="LayoutRoot" Width="{TemplateBinding CalculatedWidth}" Height="{TemplateBinding CalculatedHeight}">
+						<Border Style="{TemplateBinding BorderStyle}" Padding="{TemplateBinding BorderPadding}" x:Name="TextBorder" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+							<TextBlock x:Name="TextLabel" TextAlignment="{Binding RelativeSource={RelativeSource TemplatedParent},Path=HorizontalAlignment,Converter={StaticResource AlignmentConverter}}" Text="{TemplateBinding ActualText}" Style="{TemplateBinding TextStyle}" />
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="BorderStyle">
+			<Setter.Value>
+				<Style TargetType="Border">
+					<Setter Property="BorderThickness" Value="1" />
+					<Setter Property="BorderBrush" Value="Gray" />
+					<Setter Property="IsHitTestVisible" Value="False" />
+					<Setter Property="Background" Value="White" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<charts:StyleCollection x:Key="DefaultStyleTemplates">
+		<!-- Free series-->
+		<Style TargetType="charts:LineSeries">
+			<Setter Property="PointFill" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="PointStrokeThickness" Value="1" />
+			<Setter Property="PointSize" Value="7" />
+			<Setter Property="PointStroke" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="LineStroke" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="AreaFill" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="LineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="AreaStyle">
+				<Setter.Value>
+					<Style TargetType="FrameworkElement">
+						<Setter Property="Opacity" Value="0.7" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="LabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:LineSeries">
+						<Setter Property="LineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="PointStrokeThickness" Value="2" />
+						<Setter Property="PointSize" Value="9" />
+						<Setter Property="AreaStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Opacity" Value="0.9" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="BorderThickness" Value="2" />
+												<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:LineSeries">
+						<Setter Property="LineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="BorderThickness" Value="3" />
+												<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:ColumnSeries">
+			<Setter Property="PointFill" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="LabelMaxWidth" Value="Infinity" />
+			<Setter Property="LabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:ColumnSeries">
+						<Setter Property="PointFill" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+						<Setter Property="PointStroke" Value="Gray" />
+						<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="PointStyle">
+							<Setter.Value>
+								<Style TargetType="Path">
+									<Setter Property="Opacity" Value="0.8" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="BorderThickness" Value="2" />
+												<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:ColumnSeries">
+						<Setter Property="PointStroke" Value="{StaticResource DefaultNonPaletteColor}" charts:SimplePalette.ReplaceBrush="True" />
+						<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="BorderThickness" Value="3" />
+												<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:BarSeries">
+			<Setter Property="PointFill" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="LabelMaxWidth" Value="Infinity" />
+			<Setter Property="LabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BarSeries">
+						<Setter Property="PointStroke" Value="Gray" />
+						<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="PointStyle">
+							<Setter.Value>
+								<Style TargetType="Path">
+									<Setter Property="Opacity" Value="0.8" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="BorderThickness" Value="2" />
+												<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BarSeries">
+						<Setter Property="PointStroke" Value="{StaticResource DefaultNonPaletteColor}" charts:SimplePalette.ReplaceBrush="True" />
+						<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="BorderThickness" Value="3" />
+												<Setter Property="Background" charts:SimplePalette.ReplaceBrush="False" Value="White" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:BandSeries">
+			<Setter Property="UpperLineStroke" Value="{StaticResource PaletteColorGreenBrush}" />
+			<Setter Property="LowerLineStroke" Value="{StaticResource PaletteColorRedBrush}" />
+			<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="AreaFill" Value="{StaticResource PaletteColorGreenBrush}" />
+			<Setter Property="InvertedAreaFill" Value="{StaticResource PaletteColorRedBrush}" />
+			<Setter Property="LowerLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorRedBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="UpperLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorGreenBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorRedBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorGreenBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorGreenColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorRedColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorRedBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorGreenBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:BandSeries">
+			<Setter Property="UpperLineStroke" Value="{StaticResource PaletteColorBlackBrush}" />
+			<Setter Property="LowerLineStroke" Value="{StaticResource PaletteColorBlueBrush}" />
+			<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="AreaFill" Value="{StaticResource PaletteColorBlackBrush}" />
+			<Setter Property="InvertedAreaFill" Value="{StaticResource PaletteColorBlueBrush}" />
+			<Setter Property="LowerLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorBlueBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="UpperLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorBlackBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorBlueBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorBlackBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorBlackColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorBlueColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorBlueBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorBlackBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:BandSeries">
+			<Setter Property="UpperLineStroke" Value="{StaticResource PaletteColorOrangeBrush}" />
+			<Setter Property="LowerLineStroke" Value="{StaticResource PaletteColorPurpleBrush}" />
+			<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="AreaFill" Value="{StaticResource PaletteColorOrangeBrush}" />
+			<Setter Property="InvertedAreaFill" Value="{StaticResource PaletteColorPurpleBrush}" />
+			<Setter Property="LowerLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorPurpleBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="UpperLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorOrangeBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorPurpleBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorOrangeBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorOrangeColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorPurpleColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorPurpleBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorOrangeBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:BandSeries">
+			<Setter Property="UpperLineStroke" Value="{StaticResource PaletteColorYellowBrush}" />
+			<Setter Property="LowerLineStroke" Value="{StaticResource PaletteColorMaroonBrush}" />
+			<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="AreaFill" Value="{StaticResource PaletteColorYellowBrush}" />
+			<Setter Property="InvertedAreaFill" Value="{StaticResource PaletteColorMaroonBrush}" />
+			<Setter Property="LowerLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorMaroonBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="UpperLabelStyle">
+				<Setter.Value>
+					<Style TargetType="charts:DataLabel">
+						<Setter Property="BorderStyle">
+							<Setter.Value>
+								<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+									<Setter Property="Background" Value="{StaticResource PaletteColorYellowBrush}" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="TextStyle" Value="{StaticResource DefaultDataLabelTextStyle}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorMaroonBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorYellowBrush}" />
+												<Setter Property="BorderThickness" Value="2" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BandSeries">
+						<Setter Property="UpperLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorYellowColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLineStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="{StaticResource PaletteColorMaroonColor}" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="LowerLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorMaroonBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter Property="UpperLabelStyle">
+							<Setter.Value>
+								<Style TargetType="charts:DataLabel">
+									<Setter Property="BorderStyle">
+										<Setter.Value>
+											<Style TargetType="Border" BasedOn="{StaticResource DefaultDataLabelBorderStyle}">
+												<Setter Property="Background" Value="{StaticResource PaletteColorYellowBrush}" />
+												<Setter Property="BorderThickness" Value="3" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="TextStyle">
+										<Setter.Value>
+											<Style TargetType="TextBlock" BasedOn="{StaticResource DefaultDataLabelTextStyle}">
+												<Setter Property="FontWeight" Value="Bold" />
+											</Style>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:ErrorBarSeries">
+			<Setter Property="LineStroke" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="LineStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:ErrorBarSeries">
+						<Setter Property="LineStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:ErrorBarSeries">
+						<Setter Property="LineStyle">
+							<Setter.Value>
+								<Style TargetType="Path">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+									<Setter Property="StrokeLineJoin" Value="Bevel" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style TargetType="charts:BoxPlotSeries">
+			<Setter Property="PointFill" Value="{StaticResource DefaultTransparentColor}" />
+			<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultLineStrokeThickness}" />
+			<Setter Property="PointStroke" charts:SimplePalette.ReplaceBrush="True" Value="{StaticResource DefaultNonPaletteColor}" />
+			<Setter Property="SelectedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BoxPlotSeries">
+						<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultSelectedLineStrokeThickness}" />
+					</Style>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="HighlightedStyle">
+				<Setter.Value>
+					<Style TargetType="charts:BoxPlotSeries">
+						<Setter Property="PointStyle">
+							<Setter.Value>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Effect">
+										<Setter.Value>
+											<DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="0" />
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</charts:StyleCollection>
+	<Style TargetType="charts:Chart" x:Key="DefaultChartStyle" BasedOn="{StaticResource DefaultChartStyleBase}">
+		<Setter Property="Palette">
+			<Setter.Value>
+				<charts:SimplePalette StyleTemplates="{StaticResource DefaultStyleTemplates}" Colors="#FFCF3B37,#FF0C0F0F,#FF60B167,#FF436AA9,#FFDA843F,#FF6C4A98,#FF902F2D,#FFF1E046" />
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:PieChart" x:Key="DefaultPieChartStyle" BasedOn="{StaticResource DefaultPieChartStyleBase}">
+		<Setter Property="Palette">
+			<Setter.Value>
+				<charts:SimplePalette StyleTemplates="{StaticResource DefaultPieChartStyleTemplates}" Colors="#FFCF3B37,#FF0C0F0F,#FF60B167,#FF436AA9,#FFDA843F,#FF6C4A98,#FF902F2D,#FFF1E046" />
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<ControlTemplate x:Key="ChartTemplate" TargetType="charts:Chart">
+		<Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}" Opacity="{TemplateBinding Opacity}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<TextBlock x:Name="TitleArea" Text="{TemplateBinding Title}" Grid.Row="0" Grid.Column="0" Style="{TemplateBinding TitleStyle}" />
+			<primitives:LegendLayoutContainer Grid.Row="1" LegendPosition="{Binding Path=LegendPosition, RelativeSource={RelativeSource TemplatedParent}}">
+				<primitives:LegendLayoutContainer.XAxisPrimaryContainer>
+					<Grid x:Name="XAxisPrimaryContainer" />
+				</primitives:LegendLayoutContainer.XAxisPrimaryContainer>
+				<primitives:LegendLayoutContainer.YAxisPrimaryContainer>
+					<Grid x:Name="YAxisPrimaryContainer" />
+				</primitives:LegendLayoutContainer.YAxisPrimaryContainer>
+				<primitives:LegendLayoutContainer.XAxisSecondaryContainer>
+					<Grid x:Name="XAxisSecondaryContainer" />
+				</primitives:LegendLayoutContainer.XAxisSecondaryContainer>
+				<primitives:LegendLayoutContainer.YAxisSecondaryContainer>
+					<Grid x:Name="YAxisSecondaryContainer" />
+				</primitives:LegendLayoutContainer.YAxisSecondaryContainer>
+				<primitives:LegendLayoutContainer.ChartContent>
+					<Grid Name="PlotArea" primitives:Clip.ToBounds="True" Style="{TemplateBinding PlotAreaStyle}">
+						<Border Name="PlotAreaBorder" Style="{TemplateBinding PlotAreaBorderStyle}" Canvas.ZIndex="120" />
+						<Grid Name="SeriesContainer" />
+						<Grid Name="GridlinesContainer" Canvas.ZIndex="-100" />
+						<Canvas Name="BehaviourContainer" />
+					</Grid>
+				</primitives:LegendLayoutContainer.ChartContent>
+				<primitives:LegendLayoutContainer.LegendContent>
+					<charts:Legend x:Name="Legend" Title="{TemplateBinding LegendTitle}" Style="{TemplateBinding LegendStyle}" Template="{TemplateBinding LegendTemplate}" Visibility="{TemplateBinding LegendVisibility}" Ordering="{TemplateBinding LegendOrdering}" IsHitTestVisible="False" />
+				</primitives:LegendLayoutContainer.LegendContent>
+			</primitives:LegendLayoutContainer>
+		</Grid>
+	</ControlTemplate>
+	<Style TargetType="charts:BandSeries" BasedOn="{StaticResource BandSeriesStyle}" />
+	<Style TargetType="charts:Theme">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Theme">
+					<Grid>
+						<ContentPresenter />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:Chart" BasedOn="{StaticResource DefaultChartStyle}">
+		<Setter Property="Template" Value="{StaticResource ChartTemplate}" />
+	</Style>
+	<!-- Palette for PieChart -->
+	<Style TargetType="charts:PieChart" BasedOn="{StaticResource DefaultPieChartStyle}">
+		<Setter Property="Template" Value="{StaticResource PieChartTemplate}" />
+	</Style>
+	<ControlTemplate x:Key="PiePieceTemplate" TargetType="charts:PiePiece">
+		<Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}" Opacity="{TemplateBinding Opacity}">
+			<Grid.RowDefinitions>
+				<!-- Label -->
+				<RowDefinition Height="Auto" />
+				<!-- Path -->
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid x:Name="LabelContainer" Grid.Row="0">
+				<TextBlock x:Name="LabelText" />
+			</Grid>
+			<Path x:Name="PiePiecePath" Grid.Row="1" Fill="{TemplateBinding Fill}" Stroke="{TemplateBinding Stroke}" StrokeThickness="{TemplateBinding StrokeThickness}" />
+			<Path x:Name="BevelPath" Grid.Row="1" />
+		</Grid>
+	</ControlTemplate>
+	<Style TargetType="charts:PiePiece">
+		<Setter Property="Template" Value="{StaticResource PiePieceTemplate}" />
+		<Setter Property="LegendItemTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:LegendItem">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+						<Canvas Width="10" Height="10" Margin="0 0 9 0" Opacity="{Binding Opacity}">
+							<Path Data="M 0,0 L 10,0 L 5,10 L 0,0" Stroke="{Binding Stroke}" Fill="{Binding Fill}" />
+						</Canvas>
+						<TextBlock Text="{Binding Path=DataPoint.X}" />
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:NumericAxisBase">
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="VerticalAlignment" Value="Stretch" />
+		<Setter Property="TitleStyle" Value="{StaticResource DefaultTitleStyle}" />
+		<Setter Property="MajorGridlineStyle" Value="{StaticResource DefaultGridlineStyle}" />
+		<Setter Property="MinorGridlineStyle" Value="{StaticResource DefaultGridlineStyle}" />
+		<Setter Property="GridStripeStyle" Value="{StaticResource DefaultGridStripeStyle}" />
+		<Setter Property="MajorTickStyle" Value="{StaticResource DefaultMajorTickStyle}" />
+		<Setter Property="MinorTickStyle" Value="{StaticResource DefaultMinorTickStyle}" />
+		<Setter Property="LabelStyle" Value="{StaticResource DefaultLabelStyle}" />
+		<Setter Property="AxisLineStyle" Value="{StaticResource DefaultAxisLineStyle}" />
+		<Setter Property="Background" Value="Transparent" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:NumericAxisBase">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+						<Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}">
+							<!-- the grid rows / columns are created in response to the Orientation property value-->
+							<Grid x:Name="LabelsContainer" />
+							<primitives:TransposePanel x:Name="AxisLabelContainer">
+								<TextBlock x:Name="AxisLabel" Text="{TemplateBinding Title}" Style="{TemplateBinding TitleStyle}" />
+							</primitives:TransposePanel>
+							<Line x:Name="AxisLine" Style="{TemplateBinding AxisLineStyle}" Stretch="Fill" />
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:CategoryAxis">
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="VerticalAlignment" Value="Stretch" />
+		<Setter Property="TitleStyle" Value="{StaticResource DefaultTitleStyle}" />
+		<Setter Property="MajorGridlineStyle" Value="{StaticResource DefaultGridlineStyle}" />
+		<Setter Property="MinorGridlineStyle" Value="{StaticResource DefaultGridlineStyle}" />
+		<Setter Property="GridStripeStyle" Value="{StaticResource DefaultGridStripeStyle}" />
+		<Setter Property="MajorTickStyle" Value="{StaticResource DefaultMajorTickStyle}" />
+		<Setter Property="MinorTickStyle" Value="{StaticResource DefaultMinorTickStyle}" />
+		<Setter Property="LabelStyle" Value="{StaticResource DefaultLabelStyle}" />
+		<Setter Property="AxisLineStyle" Value="{StaticResource DefaultAxisLineStyle}" />
+		<Setter Property="Background" Value="Transparent" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:CategoryAxis">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+						<Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}">
+							<!-- the grid rows / columns are created in response to the Orientation property value-->
+							<Grid x:Name="LabelsContainer" />
+							<primitives:TransposePanel x:Name="AxisLabelContainer">
+								<TextBlock x:Name="AxisLabel" Text="{TemplateBinding Title}" Style="{TemplateBinding TitleStyle}" />
+							</primitives:TransposePanel>
+							<Line x:Name="AxisLine" Style="{TemplateBinding AxisLineStyle}" Stretch="Fill" />
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:LineSeries" BasedOn="{StaticResource LineSeriesStyle}" />
+	<Style TargetType="charts:BoxPlotSeries" BasedOn="{StaticResource BoxPlotSeriesBaseStyle}" />
+	<Style TargetType="charts:ErrorBarSeries" BasedOn="{StaticResource ErrorBarSeriesStyle}" />
+	<Style TargetType="charts:DateTimeAxis">
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="VerticalAlignment" Value="Stretch" />
+		<Setter Property="TitleStyle" Value="{StaticResource DefaultTitleStyle}" />
+		<Setter Property="MajorGridlineStyle" Value="{StaticResource DefaultGridlineStyle}" />
+		<Setter Property="MinorGridlineStyle" Value="{StaticResource DefaultGridlineStyle}" />
+		<Setter Property="GridStripeStyle" Value="{StaticResource DefaultGridStripeStyle}" />
+		<Setter Property="MajorTickStyle" Value="{StaticResource DefaultMajorTickStyle}" />
+		<Setter Property="MinorTickStyle" Value="{StaticResource DefaultMinorTickStyle}" />
+		<Setter Property="LabelStyle" Value="{StaticResource DefaultDateTimeLabelStyle}" />
+		<Setter Property="AxisLineStyle" Value="{StaticResource DefaultAxisLineStyle}" />
+		<Setter Property="Background" Value="Transparent" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:DateTimeAxis">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+						<Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}">
+							<!-- the grid rows / columns are created in response to the Orientation property value-->
+							<Grid x:Name="LabelsContainer" />
+							<primitives:TransposePanel x:Name="AxisLabelContainer">
+								<TextBlock x:Name="AxisLabel" Text="{TemplateBinding Title}" Style="{TemplateBinding TitleStyle}" />
+							</primitives:TransposePanel>
+							<Line x:Name="AxisLine" Style="{TemplateBinding AxisLineStyle}" Stretch="Fill" />
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="BarOrColumnSeriesBaseStyle" TargetType="charts:BarOrColumnSeriesBase" BasedOn="{StaticResource ChartSeriesBaseStyle}">
+		<Setter Property="PointFill" Value="{StaticResource DefaultNonPaletteColor}" />
+		<Setter Property="PointStrokeThickness" Value="{StaticResource DefaultBarOrColumnThickness}" />
+		<Setter Property="LabelStyle" Value="{StaticResource DefaultDataLabelStyle}" />
+		<Setter Property="LegendItemTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:LegendItem">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+						<Canvas Width="10" Height="10" Margin="0 0 9 0" VerticalAlignment="Center" Opacity="{Binding Opacity}">
+							<Path Data="M 0,0 L 10,0 L 10,10 L 0,10 Z" Fill="{Binding PointFill}" Stroke="{Binding PointStroke}" Style="{Binding Path=PointStyle}" />
+						</Canvas>
+						<TextBlock Text="{Binding Path=DataSeries.Title}" />
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ToolTipTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" Background="White" Padding="3,1">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding X, Converter={StaticResource IdentityValueConverter}}" />
+							<TextBlock Text=", " />
+							<TextBlock DataContext="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" Text="{Binding Y, Converter={StaticResource IdentityValueConverter}}" />
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="TrackballStyle">
+			<Setter.Value>
+				<Style TargetType="Polygon">
+					<Setter Property="Fill" Value="Black" />
+					<Setter Property="Stroke" Value="LightGray" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:ColumnSeries" BasedOn="{StaticResource BarOrColumnSeriesBaseStyle}">
+		<Setter Property="TrackballTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Trackball">
+					<primitives:ZoomCanvas x:Name="LayoutRoot">
+						<Polygon Style="{TemplateBinding TrackballStyle}" Points="0,0 5,5 10,0 0,0" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}}">
+							<Polygon.RenderTransform>
+								<TranslateTransform X="-5" Y="-8" />
+							</Polygon.RenderTransform>
+						</Polygon>
+					</primitives:ZoomCanvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:BarSeries" BasedOn="{StaticResource BarOrColumnSeriesBaseStyle}">
+		<Setter Property="TrackballTemplate">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Trackball">
+					<primitives:ZoomCanvas x:Name="LayoutRoot">
+						<Polygon Style="{TemplateBinding TrackballStyle}" Points="0,5 5,0 5,10 0,5" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}}">
+							<Polygon.RenderTransform>
+								<TranslateTransform X="3" Y="-5" />
+							</Polygon.RenderTransform>
+						</Polygon>
+					</primitives:ZoomCanvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:Crosshair">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Crosshair">
+					<Canvas Name="CrossHair">
+						<Line Stroke="{TemplateBinding Foreground}" X1="{TemplateBinding X}" X2="{TemplateBinding X}" Y1="0" Y2="5000" />
+						<Line Stroke="{TemplateBinding Foreground}" Y1="{TemplateBinding Y}" Y2="{TemplateBinding Y}" X1="0" X2="5000" />
+						<Grid x:Name="CrosshairLabelGrid" Canvas.Top="{TemplateBinding Y}" Canvas.Left="{TemplateBinding X}" Margin="5,-35,0,0" Height="30" Background="#80FFFFFF">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition />
+								<RowDefinition />
+							</Grid.RowDefinitions>
+							<TextBlock Text="X: " />
+							<TextBlock Text="{TemplateBinding FormattedXValue}" Grid.Column="1" />
+							<TextBlock Text="Y: " Grid.Row="1" />
+							<TextBlock Text="{TemplateBinding FormattedYValue}" Grid.Column="1" Grid.Row="1" />
+						</Grid>
+					</Canvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:ZoomRectangle">
+		<Setter Property="Foreground" Value="DarkBlue" />
+		<Setter Property="Background" Value="LightBlue" />
+		<Setter Property="NotZoomableForeground" Value="Black" />
+		<Setter Property="NotZoomableBackground" Value="Red" />
+		<Setter Property="Opacity" Value="0.5" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:ZoomRectangle">
+					<Border x:Name="Border" BorderThickness="1" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:RulerRectangle">
+		<Setter Property="BorderStyle">
+			<Setter.Value>
+				<Style TargetType="Border">
+					<Setter Property="Background" Value="#446de884" />
+					<Setter Property="BorderBrush" Value="#ff6de884" />
+					<Setter Property="BorderThickness" Value="2" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LabelBorderStyle">
+			<Setter.Value>
+				<Style TargetType="Border">
+					<Setter Property="Background" Value="White" />
+					<Setter Property="BorderThickness" Value="1" />
+					<Setter Property="BorderBrush" Value="Black" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="RangeLabelStyle">
+			<Setter.Value>
+				<Style TargetType="TextBlock">
+					<Setter Property="Padding" Value="4" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="SizeLabelStyle">
+			<Setter.Value>
+				<Style TargetType="TextBlock">
+					<Setter Property="Padding" Value="10" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="LineStyle">
+			<Setter.Value>
+				<Style TargetType="Line">
+					<Setter Property="StrokeThickness" Value="2" />
+					<Setter Property="Stroke" Value="#323232" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:RulerRectangle">
+					<!-- This is the drawn rectangle and the height/width lines-->
+					<Border x:Name="LayoutRoot" Style="{TemplateBinding BorderStyle}" Canvas.ZIndex="1">
+						<Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="auto" Height="auto">
+							<Canvas Name="RangeLabels" Canvas.ZIndex="4">
+								<!-- These are the labels that are placed programmatically-->
+								<Border x:Name="TopHolder" Style="{TemplateBinding LabelBorderStyle}" Visibility="Collapsed">
+									<TextBlock x:Name="TopText" Style="{TemplateBinding RangeLabelStyle}" />
+								</Border>
+								<Border x:Name="BottomHolder" Style="{TemplateBinding LabelBorderStyle}" Visibility="Collapsed">
+									<TextBlock x:Name="BottomText" Style="{TemplateBinding RangeLabelStyle}" />
+								</Border>
+								<Border x:Name="LeftHolder" Style="{TemplateBinding LabelBorderStyle}" Visibility="Collapsed">
+									<TextBlock x:Name="LeftText" Style="{TemplateBinding RangeLabelStyle}" />
+								</Border>
+								<Border x:Name="RightHolder" Style="{TemplateBinding LabelBorderStyle}" Visibility="Collapsed">
+									<TextBlock x:Name="RightText" Style="{TemplateBinding RangeLabelStyle}" />
+								</Border>
+							</Canvas>
+							<!--panels to detect dragging-->
+							<Grid Background="Transparent">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="10" />
+									<ColumnDefinition Width="*" />
+									<ColumnDefinition Width="10" />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="10" />
+									<RowDefinition Height="*" />
+									<RowDefinition Height="10" />
+								</Grid.RowDefinitions>
+								<Canvas Name="LeftDragHandle" Grid.Row="1" VerticalAlignment="Stretch" Margin="-5 0 0 0" Width="10" Background="Transparent" Cursor="SizeWE" />
+								<Canvas Name="TopDragHandle" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0 -5 0 0" Height="10" Background="Transparent" Cursor="SizeNS" />
+								<Canvas Name="RightDragHandle" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" Margin="0 0 -5 0" Width="10" Background="Transparent" Cursor="SizeWE" />
+								<Canvas Name="BottomDragHandle" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" Margin="0 0 0 -5" Height="10" Background="Transparent" Cursor="SizeNS" />
+							</Grid>
+							<Canvas primitives:Clip.ToBounds="True" x:Name="LineCanvas" Margin="0">
+								<Line x:Name="WidthLine" Style="{TemplateBinding LineStyle}" />
+								<Line x:Name="HeightLine" Style="{TemplateBinding LineStyle}" />
+								<Border x:Name="WidthHolder" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.ZIndex="2">
+									<TextBlock x:Name="WidthText" Style="{TemplateBinding SizeLabelStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+								</Border>
+								<Border x:Name="HeightHolder" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.ZIndex="2">
+									<Border.RenderTransform>
+										<RotateTransform Angle="270" />
+									</Border.RenderTransform>
+									<TextBlock x:Name="HeightText" Style="{TemplateBinding SizeLabelStyle}" />
+								</Border>
+							</Canvas>
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:Trackball">
+		<Setter Property="TrackballStyle">
+			<Setter.Value>
+				<Style TargetType="Ellipse">
+					<Setter Property="Fill" Value="Black" />
+					<Setter Property="Width" Value="{StaticResource DefaultTrackballPointWidth}" />
+					<Setter Property="Height" Value="{StaticResource DefaultTrackballPointHeight}" />
+					<Setter Property="RenderTransform" Value="{StaticResource DefaultTrackballPointRenderTransform}" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Trackball">
+					<primitives:ZoomCanvas x:Name="LayoutRoot">
+						<Ellipse Style="{TemplateBinding TrackballStyle}" primitives:ZoomCanvas.ElementPosition="{Binding Path=RenderPoint, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource UIPointConverter}}" />
+					</primitives:ZoomCanvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="primitives:LegendLayoutContainer">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="primitives:LegendLayoutContainer">
+					<Grid Name="LayoutRoot">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition Width="Auto" />
+							<!-- axis -->
+							<ColumnDefinition Width="Auto" />
+							<!-- chart -->
+							<ColumnDefinition />
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition Width="Auto" />
+							<!-- axis -->
+							<ColumnDefinition Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+							<!-- axis -->
+							<RowDefinition Height="Auto" />
+							<!-- chart -->
+							<RowDefinition />
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+							<!-- axis -->
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<ContentPresenter Content="{TemplateBinding ChartContent}" Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Grid.ColumnSpan="3" />
+						<ContentPresenter Content="{TemplateBinding XAxisSecondaryContainer}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" />
+						<ContentPresenter Content="{TemplateBinding XAxisPrimaryContainer}" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" />
+						<ContentPresenter Content="{TemplateBinding YAxisSecondaryContainer}" Grid.Row="2" Grid.RowSpan="3" Grid.Column="5" />
+						<ContentPresenter Content="{TemplateBinding YAxisPrimaryContainer}" Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" />
+						<Grid x:Name="LegendOutsideTopContainer" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" />
+						<Grid x:Name="LegendOutsideBottomContainer" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="7" />
+						<Grid x:Name="LegendOutsideLeftContainer" Grid.Row="0" Grid.Column="0" Grid.RowSpan="7" />
+						<Grid x:Name="LegendOutsideRightContainer" Grid.Row="0" Grid.Column="6" Grid.RowSpan="7">
+							<ContentPresenter Content="{TemplateBinding LegendContent}" x:Name="LegendContentPresenter" />
+						</Grid>
+						<Grid x:Name="LegendInsideTopContainer" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" />
+						<Grid x:Name="LegendInsideBottomContainer" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" />
+						<Grid x:Name="LegendInsideLeftContainer" Grid.Row="2" Grid.Column="2" Grid.RowSpan="3" />
+						<Grid x:Name="LegendInsideRightContainer" Grid.Row="2" Grid.Column="4" Grid.RowSpan="3" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:Legend">
+		<Setter Property="TitleStyle">
+			<Setter.Value>
+				<Style TargetType="TextBlock">
+					<Setter Property="HorizontalAlignment" Value="Center" />
+					<Setter Property="FontSize" Value="12" />
+					<Setter Property="FontWeight" Value="Bold" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Margin" Value="10" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:Legend">
+					<StackPanel>
+						<ScrollViewer Style="{StaticResource ScrollViewerStyle}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" VerticalScrollBarVisibility="Auto" Background="{TemplateBinding Background}" Padding="10">
+							<StackPanel Orientation="Vertical">
+								<TextBlock Text="{TemplateBinding Title}" Style="{TemplateBinding TitleStyle}" Name="LegendTitle" />
+								<StackPanel Orientation="Vertical" x:Name="LegendPanel" />
+							</StackPanel>
+						</ScrollViewer>
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="BorderThickness" Value="1" />
+		<Setter Property="BorderBrush" Value="LightGray" />
+		<Setter Property="Background" Value="Transparent" />
+	</Style>
+	<Style TargetType="charts:LegendItem">
+		<Setter Property="Background" Value="Transparent" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<!-- the default legend item template. A series may specify a different template
+                in order to render the legend item in a different fashion -->
+				<ControlTemplate TargetType="charts:LegendItem">
+					<Grid HorizontalAlignment="Stretch" Margin="3" Background="{TemplateBinding Background}">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Rectangle Width="10" Height="10" />
+						<TextBlock Text="{Binding Path=DataSeries.Title}" Grid.Column="1" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="primitives:ZoomCanvas">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="primitives:ZoomCanvas">
+					<Canvas Name="LayoutRoot" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:AxisLabel" x:Key="AxisLabelBaseStyle">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:AxisLabel">
+					<Grid x:Name="LayoutRoot" Width="{TemplateBinding CalculatedWidth}" Height="{TemplateBinding CalculatedHeight}">
+						<Border x:Name="TextBorder" Padding="{TemplateBinding BorderPadding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" Style="{TemplateBinding BorderStyle}">
+							<TextBlock x:Name="TextLabel" TextAlignment="{Binding RelativeSource={RelativeSource TemplatedParent},Path=HorizontalAlignment,Converter={StaticResource AlignmentConverter}}" Text="{TemplateBinding ActualText}" Style="{TemplateBinding TextStyle}" />
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:AxisLabel" BasedOn="{StaticResource AxisLabelBaseStyle}" />
+	<!-- ChartMultipleSeriesBase needs a reference to Palette -->
+	<Style TargetType="charts:ChartMultipleSeriesBase" x:Key="ChartMultipleSeriesBaseStyle" BasedOn="{StaticResource ChartSeriesBaseStyle}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="charts:ChartMultipleSeriesBase">
+					<Grid>
+						<primitives:ZoomCanvas x:Name="LayoutRoot" />
+						<Grid x:Name="SeriesContainer" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="charts:ChartMultipleSeriesBase" BasedOn="{StaticResource ChartMultipleSeriesBaseStyle}" />
+	<Style TargetType="charts:StackedColumnSeries" BasedOn="{StaticResource ChartMultipleSeriesBaseStyle}" />
+	<Style TargetType="charts:StackedBarSeries" BasedOn="{StaticResource ChartMultipleSeriesBaseStyle}" />
+	<Style TargetType="charts:StackedLineSeries" BasedOn="{StaticResource ChartMultipleSeriesBaseStyle}" />
+</ResourceDictionary>

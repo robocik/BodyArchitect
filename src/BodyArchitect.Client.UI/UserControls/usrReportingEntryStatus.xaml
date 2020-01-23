@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="BodyArchitect.Client.UI.UserControls.usrReportingEntryStatus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <GroupBox Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrReportingEntryStatus_Header}">
+        <ComboBox Margin="{StaticResource MarginMediumTopBottom}"  Name="cmbEntryReportStatus" ToolTip="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrReportingEntryStatus_ReportStatusCmb}"/>
+    </GroupBox>
+</UserControl>

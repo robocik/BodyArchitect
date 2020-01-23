@@ -1,0 +1,120 @@
+﻿<Window x:Class="BodyArchitect.SplashScreen.SplashWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI" Title="SplashWindow1" Height="256" Width="469" WindowStyle="None" Background="Transparent" ResizeMode="NoResize"  ShowInTaskbar="False" AllowsTransparency="true">
+    <Window.Resources>
+        <SolidColorBrush x:Key="foreground" Color="White"/>
+        <SolidColorBrush x:Key="background" Color="White"/>
+        <LinearGradientBrush
+    x:Key="HeaderBackgroundOpacityMask"
+    StartPoint="0,0"
+    EndPoint="1,0">
+            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+            <GradientStop Color="#FFFFFFFF" Offset="0.75"/>
+            <GradientStop Color="#00FFFFFF" Offset="0.3"/>
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush
+    x:Key="HeaderBackgroundOpacityMask1"
+    StartPoint="0,0"
+    EndPoint="1,0">
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#00FFFFFF" Offset="0.7"/>
+            <GradientStop Color="#00FFFFFF" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush
+    x:Key="LightOpacityMask"
+    StartPoint="0,0"
+    EndPoint="1,0">
+            <GradientStop Color="#60FFFFFF" Offset="0"/>
+            <GradientStop Color="#60FFFFFF" Offset="0.35"/>
+            <GradientStop Color="#00FFFFFF" Offset="0.7"/>
+            <GradientStop Color="#00FFFFFF" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush
+    x:Key="LightOpacityMask1"
+    StartPoint="0,0"
+    EndPoint="1,0">
+            <GradientStop Color="#60FFFFFF" Offset="1"/>
+            <GradientStop Color="#60FFFFFF" Offset="0.75"/>
+            <GradientStop Color="#00FFFFFF" Offset="0.3"/>
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+        </LinearGradientBrush>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:1" FillBehavior="HoldEnd" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+
+    </Window.Triggers>
+    <Border BorderBrush="Black"            
+            BorderThickness="0,0,2,2"
+            CornerRadius="10"
+            Background="{StaticResource background}">
+
+        <Border CornerRadius="10"  >
+            <Border.Background>
+                <ImageBrush Opacity=".7" ImageSource="/BodyArchitect;component/SplashScreen/Splash1.jpg" />
+            </Border.Background>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Fill="Black"
+        OpacityMask="{StaticResource HeaderBackgroundOpacityMask}" Height="143" Margin="0,189,0,0" Grid.ColumnSpan="2" Width="469" />
+
+                <Rectangle Fill="Black"
+        OpacityMask="{StaticResource HeaderBackgroundOpacityMask1}" Height="40" VerticalAlignment="Top" Margin="0,30,0,0" Grid.ColumnSpan="2" Width="469" />
+
+                <Rectangle Fill="Black" HorizontalAlignment="Left"
+        OpacityMask="{StaticResource LightOpacityMask}" Height="20" VerticalAlignment="Top" Margin="0,82,0,0" Grid.ColumnSpan="2" Width="200" />
+
+                <Rectangle Fill="Black"
+        OpacityMask="{StaticResource LightOpacityMask1}" Height="20" Margin="0,88,0,0" Grid.ColumnSpan="2" Width="469" />
+                
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition  Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock FontSize="26" Foreground="White" HorizontalAlignment="Left" Margin="0,30,30,0">
+                    <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+                    </TextBlock>
+
+                    <Border Margin="0,20,0,28" Background="Transparent" Opacity="1" Grid.Row="1" Grid.RowSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock Foreground="{StaticResource foreground}" Name="txtVersion" FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="0"  />
+
+                            <TextBlock VerticalAlignment="Bottom" Margin="0,0,0,-18"  Foreground="{StaticResource foreground}" Name="StatusLabel" FontSize="16" HorizontalAlignment="Right" Grid.Row="1" Text="" />
+                        </Grid>
+                    </Border>
+
+
+                    <Controls:CompanyAnimationControl x:Name="companyBox" Margin="0,-350,0,0" Grid.Row="4"  HorizontalAlignment="Right"/>
+
+                </Grid>
+
+
+            </Grid>
+            
+        </Border>
+    </Border>
+</Window>

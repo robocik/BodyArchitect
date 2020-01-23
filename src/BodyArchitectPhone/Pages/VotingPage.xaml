@@ -1,0 +1,51 @@
+﻿<my:BodyArchitectPage xmlns:my1="clr-namespace:BodyArchitect.WP7.UserControls"  
+    x:Class="BodyArchitect.WP7.Pages.VotingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" xmlns:Controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480">
+
+    <Custom:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar  ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+        </shell:ApplicationBar>
+    </Custom:PhoneApplicationPage.ApplicationBar>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <my:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="1" Margin="12,17,0,28">
+                <TextBlock Text="{Binding Name}" Style="{StaticResource CustomTextNormalStyle}"/>
+                <TextBlock Text="{Binding Path=Localizedresources.VotingPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource CustomTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
+                <StackPanel>
+                    <TextBlock Foreground="{StaticResource CustomSubtleBrush}" Text="{Binding Path=Localizedresources.VotingPage_YourRating,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" />
+
+                    <my1:AnimatedRatingControl Margin="12,0,0,0" Rating="{Binding Rating,Mode=TwoWay}"/>
+
+                    <TextBlock Foreground="{StaticResource CustomSubtleBrush}" Margin="12,24,0,0" Text="{Binding Path=Localizedresources.VotingPage_Comment,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Style="{StaticResource CustomTextLargeStyle}" />
+                    <Controls:PhoneTextBox InputScope="Chat" x:Name="txtComment"  Hint="{Binding Path=Localizedresources.CommentWatermark,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Text="{Binding Comment,Mode=TwoWay}" AcceptsReturn="True" Height="160" TextWrapping="Wrap" />
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</my:BodyArchitectPage>

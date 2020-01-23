@@ -1,0 +1,66 @@
+﻿<animations:AnimatedBasePage
+    x:Class="BodyArchitect.WP7.Pages.MapPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"
+    xmlns:animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait" mc:Ignorable="d" >
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" Title="{Binding Path=Localizedresources.MapPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                <controls:PivotItem Header="{Binding Path=Localizedresources.MapPage_Header_Map,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <maps:Map Name="mapBing" CredentialsProvider="Am1RzcH_u_nz9YulwlHsPSK_TPdppUNgSIHoBs5Cn-nRn8mZ1gn4Bz7jB5dqWP21"/>
+                </controls:PivotItem>
+                <controls:PivotItem Header="{Binding Path=Localizedresources.MapPage_Header_Laps,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ListBox Name="lstLaps">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListBox.ItemTemplate>
+
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock VerticalAlignment="Top" Style="{StaticResource CustomTextExtraLargeStyle}" FontSize="{StaticResource CustomFontSizeExtraExtraLarge}" Grid.Column="0" Text="{Binding Nr}" Foreground="{StaticResource CustomSubtleBrush}"/>
+                                    
+                                    <StackPanel Grid.Column="1" >
+
+
+                                        <StackPanel Margin="12,0,0,0" Orientation="Horizontal">
+                                            <TextBlock Style="{StaticResource CustomTextAccentStyle}" Text="{Binding DisplayLapTime}" FontSize="{StaticResource CustomFontSizeLarge}"/>
+                                            <TextBlock Style="{StaticResource CustomTextNormalStyle}" Text="{Binding DisplayTotalTime}" FontSize="{StaticResource CustomFontSizeLarge}"/>
+                                        </StackPanel>
+                                        <StackPanel animations:ListAnimation.AnimationLevel="1" Orientation="Horizontal">
+                                            <TextBlock Margin="-3,0,0,0"  FontSize="{StaticResource CustomFontSizeLarge}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding DistanceType,Source={StaticResource UI}}" Foreground="{StaticResource CustomSubtleBrush}"/>
+
+                                            <Image Source="/Images/Records32.png" Visibility="{Binding BestLap,Converter={StaticResource boolToVisibilityConverter}}" Grid.Column="0" Width="32" Height="32" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </controls:PivotItem>
+            </controls:Pivot>
+        </Grid>
+    </Grid>
+
+</animations:AnimatedBasePage>

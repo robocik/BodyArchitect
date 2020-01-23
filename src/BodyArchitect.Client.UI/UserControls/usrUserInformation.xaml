@@ -1,0 +1,40 @@
+﻿<Controls:usrBaseControl xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls"  x:Class="BodyArchitect.Client.UI.UserControls.usrUserInformation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                         xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls" mc:Ignorable="d" 
+                         xmlns:Controls1="clr-namespace:System.Windows.Controls" xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary" d:DesignHeight="300" d:DesignWidth="300"
+                         my:UserControlRibbon.RibbonTab="{DynamicResource Tab}"
+            my:UserControlRibbon.RibbonTabDataContext="{Binding}">
+    <Controls:usrBaseControl.Resources>
+        <BooleanToVisibilityConverter x:Key="boolVisibConv" />
+
+        <r:RibbonTab x:Key="Tab"  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Header_User}" ContextualTabGroupHeader="{lex:LocText  BodyArchitect.Client.Resources:Strings:Ribbon_Context_Header}" Visibility="{Binding ShowUserTab,Converter={StaticResource boolVisibConv}}" >
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Header_Operations}" >
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Calendar32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Calendar16.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_Calendar}" Click="btnOpenWorkoutsLog_Click" Visibility="{Binding ShowCalendar,Converter={StaticResource boolVisibConv}}"  />
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/Reports32.png" SmallImageSource="/BodyArchitect.Client.Resources;component/Images/Reports16.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_Reports}" Click="btnReports_Click" Visibility="{Binding ShowReports,Converter={StaticResource boolVisibConv}}" />
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/EditProfile.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_Edit}" Click="btnEditProfile_Click" Visibility="{Binding ShowEditProfile,Converter={StaticResource boolVisibConv}}" />
+                
+            </r:RibbonGroup>
+
+            <r:RibbonGroup Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Header_Social}" Visibility="{Binding ShowSocialGroup,Converter={StaticResource boolVisibConv}}"  >
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/AcceptInvitation.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_Accept}" Click="btnAcceptFriend_Click"  Visibility="{Binding ShowAccept,Converter={StaticResource boolVisibConv}}"/>
+                <r:RibbonButton LargeImageSource="/BodyArchitect.Client.Resources;component/Images/RejectInvitation.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_Reject}" Click="btnRejectFriendship_Click"  Visibility="{Binding ShowReject,Converter={StaticResource boolVisibConv}}"/>
+                <r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/SendInvitation.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_Invite}" Click="btnInviteAFriend_Click"  Visibility="{Binding ShowInvite,Converter={StaticResource boolVisibConv}}"/>
+                <r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/SendMessage.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_SendMessage}" Click="btnSendMessage_Click"  Visibility="{Binding ShowSendMessage,Converter={StaticResource boolVisibConv}}" />
+                <r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/AddToFavorites16.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_AddToFavorites}" Click="btnAddToFavorites_Click"  Visibility="{Binding ShowAddToFavorites,Converter={StaticResource boolVisibConv}}" />
+                <r:RibbonButton SmallImageSource="/BodyArchitect.Client.Resources;component/Images/RemoveFromFavorites16.png" Label="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInformation_Label_RemoveFromFavorites}" Click="btnRemoveFromFavorites_Click" Visibility="{Binding ShowRemoveFromFavorites,Converter={StaticResource boolVisibConv}}" />
+            </r:RibbonGroup>
+        </r:RibbonTab>
+        
+        <Style x:Key="accordionHeaderText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Foreground" Value="{StaticResource HeaderForegroundBrush}" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Controls:usrBaseControl.Resources>
+    <Controls1:Accordion x:Name="accordionCtrl" BorderThickness="0" AccordionButtonStyle="{StaticResource baAccordionButton}" SelectionChanged="naviBar1_ActiveBandChanged" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch">
+    </Controls1:Accordion>
+</Controls:usrBaseControl>

@@ -1,0 +1,113 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.TrainingPlanEntryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480">
+
+    <Grid Name="LayoutRoot" Background="{StaticResource CustomBackgroundBrush}">
+        <controls:Pivot Name="pivot" Foreground="{StaticResource CustomForegroundBrush}" Background="{StaticResource CustomBackgroundImageBrush}" >
+            <controls:Pivot.Title>
+                <TextBlock x:Name="lblTitle" TextWrapping="Wrap" Foreground="{StaticResource CustomForegroundBrush}"  Style="{StaticResource CustomTextTitle2Style}" />
+            </controls:Pivot.Title>
+            <!--Pivot item one-->
+            <controls:PivotItem Header="{Binding Path=Localizedresources.TrainingPlanEntryPage_HeaderSets,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Margin="12,24,0,12" Visibility="{Binding NoSetsVisibility}" Grid.Row="0" Text="{Binding Path=Localizedresources.TrainingPlanEntryPage_NoSets,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="lblNoSets" Style="{StaticResource CustomTextLargeStyle}" />
+
+                    <ListBox ItemsSource="{Binding Sets}" Name="lstSets" Grid.Row="1" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+
+
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+
+                                <Grid Tag="{Binding}" Margin="{StaticResource CustomVerticalMargin}" HorizontalAlignment="Stretch">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <TextBlock Grid.Column="0" Style="{StaticResource CustomTextExtraLargeStyle}" FontSize="{StaticResource CustomFontSizeExtraExtraLarge}" Foreground="{StaticResource CustomSubtleBrush}" Text="{Binding SetIndex}" />
+                                    <Grid Margin="24,0,0,0" Grid.Column="1" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions >
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackPanel Grid.Column="0"  Orientation="Vertical">
+                                                <TextBlock Style="{StaticResource CustomTextSmallStyle}" FontFamily="{StaticResource CustomFontFamilySemiBold}" VerticalAlignment="Bottom" Text="{Binding Path=Localizedresources.TrainingPlanEntryPage_Reps,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                                <TextBlock Style="{StaticResource CustomTextExtraLargeStyle}" FontFamily="{StaticResource CustomFontFamilySemiBold}" Text="{Binding Repetitions}" />
+                                            </StackPanel>
+
+                                            <Grid Grid.Column="1" HorizontalAlignment="Stretch">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Grid.Row="0" Style="{StaticResource CustomTextAccentStyle}" Text="{Binding RepetitionsType}" />
+                                                <TextBlock Grid.Row="1" HorizontalAlignment="Right" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding DropSet}" />
+                                            </Grid>
+                                            <Grid Grid.Column="2" HorizontalAlignment="Stretch">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Grid.Row="0" Style="{StaticResource CustomTextAccentStyle}" Text="super slow"  Visibility="{Binding IsSuperSlow,Converter={StaticResource boolToVisibilityConverter}}"/>
+                                                <TextBlock Grid.Row="1" HorizontalAlignment="Right" Style="{StaticResource CustomTextNormalStyle}" Text="rest pause"  Visibility="{Binding IsRestPause,Converter={StaticResource boolToVisibilityConverter}}"/>
+                                            </Grid>
+                                        </Grid>
+
+                                        <TextBlock TextWrapping="Wrap" Grid.Row="1" Text="{Binding Comment}"  Style="{StaticResource CustomTextSmallStyle}"/>
+
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+
+            </controls:PivotItem>
+            <controls:PivotItem Header="{Binding Path=Localizedresources.TrainingPlanEntryPage_HeaderInfo,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" Text="{Binding Path=Localizedresources.TrainingPlanEntryPage_RestTime,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                        <TextBlock Style="{StaticResource CustomTextLargeStyle}" Text="{Binding RestTime}"/>
+                        <TextBlock Foreground="{StaticResource CustomSubtleBrush}" Style="{StaticResource CustomTextLargeStyle}" Text="s"/>
+                    </StackPanel>
+                    <TextBlock  TextWrapping="Wrap" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Comment}" />
+                </StackPanel>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+    
+
+
+</Animations:AnimatedBasePage>

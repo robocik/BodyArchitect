@@ -1,0 +1,168 @@
+﻿<Controls:BodyArchitectPage x:Class="BodyArchitect.WP7.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+                            xmlns:my="clr-namespace:BodyArchitect.WP7.UserControls"
+                            xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"
+                            xmlns:sys="clr-namespace:System;assembly=mscorlib" SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0"  Name="progressBar" Visibility="Collapsed"/>
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" Title="{Binding Path=Localizedresources.SettingsPage_Title,Mode=OneTime, Source={StaticResource LocalizedStrings}}" >
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.SettingsPage_HeaderGeneral,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <my:HeaderControl Grid.Row="0" Text="{Binding Path=Localizedresources.SettingsPage_HeaderService,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+                            <Controls:FixedListPicker Margin="12,24,12,12" Name="lpExercisesLanguage" Header="{Binding Path=Localizedresources.SettingsPage_ContentLanguage,Mode=OneTime, Source={StaticResource LocalizedStrings}}" SelectionChanged="lpExercisesLanguage_Changed">
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_DefaultLanguage,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_EnglishLanguage,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Tag="en-US" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_PolishLanguage,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Tag="pl-PL" />
+                                </toolkit:ListPicker.Items>
+                            </Controls:FixedListPicker>
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,0" Text="{Binding Path=Localizedresources.SettingsPage_ContentLanguage_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+
+                            <Controls:FixedListPicker Margin="12,24,12,12"  Header="{Binding Path=Localizedresources.SettingsPage_RetrieveMonthsNumber,Mode=OneTime, Source={StaticResource LocalizedStrings}}" ExpansionMode="ExpansionAllowed"  Name="lpNumberOfMonthToRetrieve"  SelectionChanged="lpNumberOfMonthToRetrieve_Changed">
+                                    <sys:Int32>1</sys:Int32>
+                                    <sys:Int32>2</sys:Int32>
+                                    <sys:Int32>3</sys:Int32>
+                                    <sys:Int32>4</sys:Int32>
+                                    <sys:Int32>5</sys:Int32>
+                                    <sys:Int32>6</sys:Int32>
+                                    <toolkit:ListPicker.FullModeItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" Margin="16 21 0 20">
+                                                <TextBlock Text="{Binding}"
+                                       Margin="0 0 0 0"
+                                       FontSize="43" 
+                                       FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </toolkit:ListPicker.FullModeItemTemplate>
+                            </Controls:FixedListPicker>
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,32,0" Text="{Binding Path=Localizedresources.SettingsPage_RetrieveMonthsNumber_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+
+
+                            <my:HeaderControl Margin="0,32,0,0" Grid.Row="0" Text="{Binding Path=Localizedresources.SettingsPage_HeaderStrengthTraining,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+
+                            <Controls:FixedListPicker Margin="12,24,12,12" Name="lpExerciseSort" Header="{Binding Path=Localizedresources.SettingsPage_SortExercisesBy,Mode=OneTime, Source={StaticResource LocalizedStrings}}" SelectionChanged="lpExerciseSort_Changed">
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_SortExercisesBy_Name,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_SortExercisesBy_Shortcut,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                </toolkit:ListPicker.Items>
+                            </Controls:FixedListPicker>
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,42" Text="{Binding Path=Localizedresources.SettingsPage_SortExercisesBy_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+
+                            <Controls:FixedListPicker Margin="12,0,12,12" Name="lpCopyStrengthEntryMode" Header="{Binding Path=Localizedresources.SettingsPage_CopySetsModeTitle,Mode=OneTime, Source={StaticResource LocalizedStrings}}" SelectionChanged="lpCopyStrengthEntryMode_Changed">
+                                <toolkit:ListPicker.Items>
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_CopySetsMode_AllData,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_CopySetsMode_WithoutSetsData,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                    <toolkit:ListPickerItem Content="{Binding Path=Localizedresources.SettingsPage_CopySetsMode_OnlyExercises,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                </toolkit:ListPicker.Items>
+                            </Controls:FixedListPicker>
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,0" Text="{Binding Path=Localizedresources.SettingsPage_CopySetsMode_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                            <toolkit:ToggleSwitch Checked="tsCopyValues_Checked" Margin="0,32,0,0" Unchecked="tsCopyValues_Checked" Header="{Binding Path=Localizedresources.SettingsPage_CopyValuesForSet,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsCopyValues" />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,-18,0,0" Text="{Binding Path=Localizedresources.SettingsPage_CopyValuesForSet_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+
+                            <toolkit:ToggleSwitch Checked="tsTreatSuperSetsAsOne_Checked" Margin="0,32,0,0" Unchecked="tsTreatSuperSetsAsOne_Checked" Header="{Binding Path=Localizedresources.SettingsPage_TreatSuperSetsAsOne,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsTreatSuperSetsAsOne" />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,-18,0,0" Text="{Binding Path=Localizedresources.SettingsPage_TreatSuperSetsAsOne_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                            <toolkit:ToggleSwitch Checked="tsStartTimer_Checked" Margin="0,32,0,0" Unchecked="tsStartTimer_Checked" Header="{Binding Path=Localizedresources.SettingsPage_StartTimer,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsStartTimer" />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,-18,0,0" Text="{Binding Path=Localizedresources.SettingsPage_StartTimer_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                            <my:HeaderControl Margin="0,32,0,0" Text="{Binding Path=Localizedresources.SettingsPage_CardioTracker,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <toolkit:ToggleSwitch Checked="tsLocationServices_Checked" Margin="0,32,0,0" Unchecked="tsLocationServices_Checked" Header="{Binding Path=Localizedresources.SettingsPage_LocationService,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsLocationServices" />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,-18,0,0" Text="{Binding Path=Localizedresources.SettingsPage_LocationService_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                            <toolkit:ToggleSwitch Margin="0,32,0,0" Checked="tsRunUnderLockScreen_Checked" Unchecked="tsRunUnderLockScreen_Checked" Header="{Binding Path=Localizedresources.SettingsPage_RunUnderLockScreen,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsRunUnderLockScreen" />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,-18,0,0" Text="{Binding Path=Localizedresources.SettingsPage_RunUnderLockScreen_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                            <toolkit:ToggleSwitch Margin="0,32,0,0" Checked="tsAutoPause_Checked" Unchecked="tsAutoPause_Checked" Header="{Binding Path=Localizedresources.SettingsPage_AutoPause,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsAutoPause" />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,-18,0,0" Text="{Binding Path=Localizedresources.SettingsPage_AutoPause_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.SettingsPage_HeaderFeatures,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <my:HeaderControl Grid.Row="0" Text="{Binding Path=Localizedresources.SettingsPage_SmallHeaderPushNotifications,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <toolkit:ToggleSwitch Grid.Row="1" Checked="tsPushNotifications_Checked" Unchecked="tsPushNotifications_Checked"  Header="{Binding Path=Localizedresources.SettingsPage_ShowUnreadMessages,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsPushNotifications" />
+
+                            <TextBlock Grid.Row="2" TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,42" Text="{Binding Path=Localizedresources.SettingsPage_ShowUnreadMessages_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                            <my:HeaderControl Grid.Row="3" Text="{Binding Path=Localizedresources.SettingsPage_SmallHeaderHelpUs,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <toolkit:ToggleSwitch Grid.Row="4" Checked="tsSendUsageInfo_Checked" Unchecked="tsSendUsageInfo_Checked" Header="{Binding Path=Localizedresources.SettingsPage_SendUsageInformation,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsSendUsageInfo" />
+                            <TextBlock Grid.Row="5"  TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,24" Text="{Binding Path=Localizedresources.SettingsPage_SendUsageInformation_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+
+                            <toolkit:ToggleSwitch Grid.Row="6" Checked="tsSendUsageInfo_Checked" Unchecked="tsSendUsageInfo_Checked"  Header="{Binding Path=Localizedresources.SettingsPage_SendCrashInformation,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="tsSendCrashData" />
+                            <TextBlock Grid.Row="7"  TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,12,36" Text="{Binding Path=Localizedresources.SettingsPage_SendCrashInformation_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                        </Grid>
+                    </ScrollViewer>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.SettingsPage_HeaderMisc,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <my:HeaderControl Text="{Binding Path=Localizedresources.SettingsPage_SmallHeaderGUI,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+                            <toolkit:ToggleSwitch Name="tsShowSystemTray" Checked="tsShowSystemTray_Checked" Unchecked="tsShowSystemTray_Checked"  Header="{Binding Path=Localizedresources.SettingsPage_ShowSystemTray,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,24,0" Text="{Binding Path=Localizedresources.SettingsPage_ShowSystemTray_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                                                                                  
+                            
+                            <my:HeaderControl Margin="0,24,0,0" Text="{Binding Path=Localizedresources.SettingsPage_SmallHeaderCache,Mode=OneTime, Source={StaticResource LocalizedStrings}}"/>
+
+                            <!--<toolkit:ListPicker Margin="12,24,12,12" Name="lpRefreshFrequencyDay" Header="{Binding Path=Localizedresources.SettingsPage_AutomaticCacheRefresh,Mode=OneTime, Source={StaticResource LocalizedStrings}}" SelectionChanged="lpRefreshFrequencyDay_Changed">
+                                <toolkit:ListPicker.FullModeItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Margin="16 21 0 20">
+                                            <TextBlock Text="{Binding Text}"
+                                       Margin="0 0 0 0"
+                                       FontSize="43" 
+                                       FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </toolkit:ListPicker.FullModeItemTemplate>
+                                    
+                            </toolkit:ListPicker>
+
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,0,0" Text="{Binding Path=Localizedresources.SettingsPage_AutomaticCacheRefresh_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />-->
+
+                            <Button  Margin="0,24,0,0"  Content="{Binding Path=Localizedresources.SettingsPage_RemoveCache,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="btnRemovePictureCache_Click" />
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextSmallStyle}" Margin="12,0,24,0" Text="{Binding Path=Localizedresources.SettingsPage_RemovePictureCache_Description,Mode=OneTime, Source={StaticResource LocalizedStrings}}" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+            </controls:Pivot>
+        </Grid>
+    </Grid>
+</Controls:BodyArchitectPage>

@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABAA332D-F12A-42F5-B889-11995EC79F67}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BodyArchitect.Client.Module.Instructor</RootNamespace>
+    <AssemblyName>BodyArchitect.Client.Module.Instructor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BodyArchitect.Client._.Module.Instructor.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BodyArchitect.Client._.Module.Instructor.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'client_debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\client_debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.3.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.3\lib\net40-client\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RibbonControlsLibrary, Version=4.0.0.11019, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFLocalizeExtension, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WpfLocalizeExtension.2.2.1\lib\net35\WPFLocalizeExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.1.6.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XAMLMarkupExtensions.1.1.6.3\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChampionshipHtmlExporter.cs" />
+    <Compile Include="ChampionshipsReposidory.cs" />
+    <Compile Include="Controls\ActivitiesFilteredComboBox.cs" />
+    <Compile Include="Controls\ActivitiesListSelector.xaml.cs">
+      <DependentUpon>ActivitiesListSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActivitiesView.xaml.cs">
+      <DependentUpon>ActivitiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChampionshipCategoryEditor.xaml.cs">
+      <DependentUpon>ChampionshipCategoryEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChampionshipDataGrid.cs" />
+    <Compile Include="Controls\ChampionshipsView.xaml.cs">
+      <DependentUpon>ChampionshipsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChampionshipView.xaml.cs">
+      <DependentUpon>ChampionshipView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customers\CustomerGroupsFilteredComboBox.cs" />
+    <Compile Include="Controls\Finances\ProductsView.xaml.cs">
+      <DependentUpon>ProductsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Finances\usrProductsList.xaml.cs">
+      <DependentUpon>usrProductsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Finances\usrPaymentDetails.xaml.cs">
+      <DependentUpon>usrPaymentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Finances\usrProductDetails.xaml.cs">
+      <DependentUpon>usrProductDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Groups\CustomerGroupsListSelector.xaml.cs">
+      <DependentUpon>CustomerGroupsListSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Groups\CustomerGroupsView.xaml.cs">
+      <DependentUpon>CustomerGroupsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customers\CustomersFilteredComboBox.cs" />
+    <Compile Include="Controls\Customers\CustomersView.xaml.cs">
+      <DependentUpon>CustomersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Groups\usrGroupMembersListBox.xaml.cs">
+      <DependentUpon>usrGroupMembersListBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MyPlacesListSelector.xaml.cs">
+      <DependentUpon>MyPlacesListSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrChampionshipScheduleEntryEditor.xaml.cs">
+      <DependentUpon>usrChampionshipScheduleEntryEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrChampionshipTeamsPane.xaml.cs">
+      <DependentUpon>usrChampionshipTeamsPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\CustomerGroupRestrictedTypeToString.cs" />
+    <Compile Include="Converters\ReminderRepetitionsToIntConverter.cs" />
+    <Compile Include="Reminders\Controls\ReminderItemViewModel.cs" />
+    <Compile Include="Reminders\Controls\RemindersView.xaml.cs">
+      <DependentUpon>RemindersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reminders\Controls\usrUserReminders.xaml.cs">
+      <DependentUpon>usrUserReminders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reminders\Controls\usrReminderDetails.xaml.cs">
+      <DependentUpon>usrReminderDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SaveScheduleEntriesWindow.xaml.cs">
+      <DependentUpon>SaveScheduleEntriesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScheduleEntriesCalendar.cs" />
+    <Compile Include="Controls\ScheduleEntriesView.xaml.cs">
+      <DependentUpon>ScheduleEntriesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrActivityDetails.xaml.cs">
+      <DependentUpon>usrActivityDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customers\usrCustomerDetails.xaml.cs">
+      <DependentUpon>usrCustomerDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Groups\usrCustomerGroupDetails.xaml.cs">
+      <DependentUpon>usrCustomerGroupDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Groups\usrCustomerGroupMembersEditor.xaml.cs">
+      <DependentUpon>usrCustomerGroupMembersEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customers\usrCustomerInfo.xaml.cs">
+      <DependentUpon>usrCustomerInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customers\usrCustomersList.xaml.cs">
+      <DependentUpon>usrCustomersList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customers\usrCustomersListBox.xaml.cs">
+      <DependentUpon>usrCustomersListBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrScheduleEntryDetails.xaml.cs">
+      <DependentUpon>usrScheduleEntryDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\CustomerToDefaultImageConverter.cs" />
+    <Compile Include="Converters\CustomerToPictureConverter.cs" />
+    <Compile Include="CustomerGroupsReposidory.cs" />
+    <Compile Include="InstructorEntryObjectBuilder.cs" />
+    <Compile Include="InstructorHelper.cs" />
+    <Compile Include="InstructorModule.cs" />
+    <Compile Include="InstructorStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InstructorStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivitiesReposidory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reminders\Controls\usrUserRemindersViewModel.cs" />
+    <Compile Include="Reminders\NotificationsReposidory.cs" />
+    <Compile Include="Reminders\ReminderBuilder.cs" />
+    <Compile Include="Reminders\ReminderJob.cs" />
+    <Compile Include="Reminders\ReminderOperationServiceCommand.cs" />
+    <Compile Include="Converters\ReminderToIconConverter.cs" />
+    <Compile Include="ViewModel\ActivitiesViewModel.cs" />
+    <Compile Include="ViewModel\ChampionshipCategoryViewModel.cs" />
+    <Compile Include="ViewModel\ChampionshipEntryViewModel.cs" />
+    <Compile Include="ViewModel\ChampionshipResultItemViewModel.cs" />
+    <Compile Include="ViewModel\ChampionshipViewModel.cs" />
+    <Compile Include="ViewModel\CustomerGroupDetailsViewModel.cs" />
+    <Compile Include="ViewModel\CustomerGroupsViewModel.cs" />
+    <Compile Include="ViewModel\CustomersViewModel.cs" />
+    <Compile Include="Reminders\Controls\RemindersViewModel.cs" />
+    <Compile Include="ViewModel\ScheduleEntriesDesignViewModel.cs" />
+    <Compile Include="ViewModel\ScheduleEntryReservationViewModel.cs" />
+    <Compile Include="ViewModel\ScheduleEntryViewModel.cs" />
+    <Compile Include="ViewModel\usrCustomerInfoViewModel.cs" />
+    <EmbeddedResource Include="InstructorStrings.pl.resx" />
+    <EmbeddedResource Include="InstructorStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InstructorStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BodyArchitect.Client.Common\BodyArchitect.Client.Common.csproj">
+      <Project>{FB6880D6-08E2-4FB1-B308-8E0AD62B6BE2}</Project>
+      <Name>BodyArchitect.Client.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Module.StrengthTraining\BodyArchitect.Client.Module.StrengthTraining.csproj">
+      <Project>{E4814A24-197F-461A-8230-191D832C4140}</Project>
+      <Name>BodyArchitect.Client.Module.StrengthTraining</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Module.Suplements\BodyArchitect.Client.Module.Suplements.csproj">
+      <Project>{2137E4BB-8353-4F94-A449-22AC99731AD8}</Project>
+      <Name>BodyArchitect.Client.Module.Suplements</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.Resources\BodyArchitect.Client.Resources.csproj">
+      <Project>{06E5FC11-6938-4226-9567-ACD5B75619EE}</Project>
+      <Name>BodyArchitect.Client.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.UI\BodyArchitect.Client.UI.csproj">
+      <Project>{88EEC43D-7F8E-46DA-8734-94664C03E246}</Project>
+      <Name>BodyArchitect.Client.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Client.WCF\BodyArchitect.Client.WCF.csproj">
+      <Project>{E0C4293B-9D71-4415-8062-4C35ADD13640}</Project>
+      <Name>BodyArchitect.Client.WCF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Logger\BodyArchitect.Logger.csproj">
+      <Project>{FBCBF2F7-38CE-42AC-84BA-8DEC2ED8FF24}</Project>
+      <Name>BodyArchitect.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Portable\BodyArchitect.Portable.csproj">
+      <Project>{b0defc8a-b85b-4d7e-aaed-985fef7733a3}</Project>
+      <Name>BodyArchitect.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Service.V2.Model\BodyArchitect.Service.V2.Model.csproj">
+      <Project>{DCFCC632-2849-421F-BF34-054B8DF0F6E9}</Project>
+      <Name>BodyArchitect.Service.V2.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BodyArchitect.Shared\BodyArchitect.Shared.csproj">
+      <Project>{2C7EDADC-5D8F-4424-A71F-2B8C3DC53DFF}</Project>
+      <Name>BodyArchitect.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\AvalonDock\AvalonDock\AvalonDock.csproj">
+      <Project>{DB81988F-E0F2-45A0-A1FD-8C37F3D35244}</Project>
+      <Name>AvalonDock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\DsxGridCtrl\DsxGridCtrl.csproj">
+      <Project>{32C07B1C-0A43-4AC9-BB5D-06F20042D5EE}</Project>
+      <Name>DsxGridCtrl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScheduleEntries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ActivitiesListSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ActivitiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ChampionshipCategoryEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ChampionshipsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ChampionshipView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Finances\ProductsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Finances\usrProductsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Finances\usrPaymentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Finances\usrProductDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Groups\CustomerGroupsListSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Groups\CustomerGroupsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Customers\CustomersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Groups\usrGroupMembersListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MyPlacesListSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrChampionshipScheduleEntryEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrChampionshipTeamsPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reminders\Controls\RemindersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reminders\Controls\usrUserReminders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reminders\Controls\usrReminderDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SaveScheduleEntriesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ScheduleEntriesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrActivityDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Customers\usrCustomerDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Groups\usrCustomerGroupDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Groups\usrCustomerGroupMembersEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Customers\usrCustomerInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Customers\usrCustomersList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Customers\usrCustomersListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\usrScheduleEntryDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScheduleEntriesSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CustomerGroup32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CustomerConnect.png" />
+    <Resource Include="Images\CustomerDisconnect.png" />
+    <Resource Include="Images\CustomerInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Paid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Customer32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScheduleEntryNextDay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CustomerVirtual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScheduleEntryCancelled.png" />
+    <Resource Include="Images\ScheduleEntryDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Present.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Finance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Activity16.png" />
+    <Resource Include="Images\Activity32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BodyInstructor16.png" />
+    <Resource Include="Images\BodyInstructor32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Customer16.png" />
+    <Resource Include="Images\CustomerGroup16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ChangeColors16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScheduleEntriesEditor16.png" />
+    <Resource Include="Images\ScheduleEntriesEditor32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\VirtualCustomer16.png" />
+    <Resource Include="Images\VirtualCustomer32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ReservationAdd32.png" />
+    <Resource Include="Images\ReservationCancel32.png" />
+    <Resource Include="Images\ReservationGroup48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Championship16.png" />
+    <Resource Include="Images\Championship32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\More16.png" />
+    <Resource Include="Images\More32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

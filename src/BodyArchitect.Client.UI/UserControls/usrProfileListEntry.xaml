@@ -1,0 +1,25 @@
+﻿<my:usrBaseControl x:Class="BodyArchitect.Client.UI.UserControls.usrProfileListEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:my="clr-namespace:BodyArchitect.Client.UI.Controls" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+        <StackPanel Orientation="Horizontal" >
+        <my:CachedImage x:Name="profileImage"/>
+        <StackPanel Margin="{StaticResource MarginLargeLeft}">
+            <Button Name="btnShowProfile" FontSize="16"  Click="lblUserName_Click" Style="{StaticResource LinkButon}"  />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Style="{StaticResource normalTextBlock}"  Name="lblGender" Text="(Gender)" />
+                <TextBlock Margin="{StaticResource MarginLargeLeft}" Style="{StaticResource normalTextBlock}" Name="lblCountry" Text="(Country)" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                
+                <TextBlock Style="{StaticResource normalTextBlock}" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrProfileListEntry_Text_CreationDate}" />
+                <TextBlock Margin="{StaticResource MarginSmallLeft}"  Style="{StaticResource normalTextBlock}" Name="lblCreatedDateValue" Text="(Creation date)" />
+                
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</my:usrBaseControl>

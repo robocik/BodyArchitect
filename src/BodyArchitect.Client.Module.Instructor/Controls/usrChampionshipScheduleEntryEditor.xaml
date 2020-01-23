@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="BodyArchitect.Client.Module.Instructor.Controls.usrChampionshipScheduleEntryEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI"
+             xmlns:Behaviors="clr-namespace:BodyArchitect.Client.UI.Controls.WatermarkExtension;assembly=BodyArchitect.Client.UI" xmlns:MyPlace="clr-namespace:BodyArchitect.Client.UI.Views.MyPlace;assembly=BodyArchitect.Client.UI" xmlns:Converters1="clr-namespace:BodyArchitect.Client.UI.Converters;assembly=BodyArchitect.Client.UI" xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Name="Me">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/BodyArchitect.Client.UI;component/Themes/MyStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Target="txtName" Grid.Row="0" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrChampionshipScheduleEntryEditor_Label_Name}"/>
+        <xctk:WatermarkTextBox Margin="{StaticResource MarginMediumLeftTop}" Text="{Binding Name,Mode=TwoWay}" Name="txtName" Grid.Row="0" Grid.Column="1"  />
+
+        <Label Target="cmbMyPlaces" Grid.Row="1" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrChampionshipScheduleEntryEditor_Label_MyPlace}" />
+        <MyPlace:MyPlacesFilteredComboBox Margin="{StaticResource MarginMediumLeftTop}" x:Name="cmbMyPlaces" SelectedValue="{Binding MyPlaceId,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                           Grid.Column="1" Grid.Row="1" Behaviors:WatermarkComboBoxBehavior.EnableWatermark="true"
+                                  Behaviors:WatermarkComboBoxBehavior.Label="(Default)" AllowNull="true" SelectedValuePath="GlobalId" ItemContainerStyle="{StaticResource StretchedComboBoxItemStyle}" ItemTemplate="{StaticResource MyPlaceComboBoxItem}"
+                                  Behaviors:WatermarkComboBoxBehavior.LabelStyle="{StaticResource watermarkLabelStyle}" TextSearch.TextPath="Name"/>
+
+        <Label Target="txtTeamCount" Grid.Row="2" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrChampionshipScheduleEntryEditor_Label_TeamCount}"/>
+        <xctk:IntegerUpDown Margin="{StaticResource MarginMediumLeftTop}" Value="{Binding TeamCount,Mode=TwoWay}" Name="txtTeamCount" Grid.Row="2" Grid.Column="1"  />
+
+        <Label Target="txtPrice" Grid.Row="3" Content="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrChampionshipScheduleEntryEditor_Content_Price}"/>
+        <xctk:CalculatorUpDown Margin="{StaticResource MarginMediumLeftTop}" Value="{Binding Price,Mode=TwoWay}" FormatString="F2" Name="txtPrice" Grid.Row="3" Grid.Column="1"  />
+
+        <GroupBox Grid.Row="4" Grid.ColumnSpan="2" Margin="{StaticResource MarginMediumTop}" Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrScheduleEntryDetails_Header_Remind}">
+            <UserControls:usrRemindMe Entry="{Binding Path=.}"/>
+        </GroupBox>
+
+        <GroupBox Grid.Row="5" Grid.ColumnSpan="2" Margin="{StaticResource MarginMediumTop}" Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:usrChampionshipScheduleEntryEditor_Header_Categories}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <ListBox ItemContainerStyle="{StaticResource StretchedListBoxItemStyle}" Name="lstCategories" ItemsSource="{Binding WinCategories,ElementName=Me}" SelectionChanged="LstCategories_OnSelectionChanged">
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Age}" FontWeight="Bold" />
+                                    <TextBlock Margin="{StaticResource MarginMediumLeft}" FontWeight="Bold" Text="{Binding AgeStrict}" />
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Gender}" />
+                                    <TextBlock Margin="{StaticResource MarginMediumLeft}" Text="{Binding Type}" />
+
+                                    <TextBlock Margin="{StaticResource MarginMediumLeft}" Text="{Binding Official}" />
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                
+                <StackPanel Grid.Column="1">
+                    <Button  Click="btnAddCategory_Click" >
+                        <Image Source="/BodyArchitect.Client.Resources;component/Images/Add16.png" Width="16" Height="16"/>
+                    </Button>
+                            
+                    <Button Name="btnDeleteCategory" Click="btnDeleteCategory_Click" >
+                        <Image Source="/BodyArchitect.Client.Resources;component/Images/Delete16.png" Width="16" Height="16"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            
+        </GroupBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,2 @@
+In order to use Visiblox Charts for WP7, you'll need to reference both Visiblox.Charts.dll 
+and - unless you have the Silverlight Toolkit for Windows Phone 7 installed - the Microsoft.Phone.Controls.Toolkit.dll.

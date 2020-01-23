@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.WorkoutPlanViewControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             xmlns:Custom="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+             xmlns:WP7="clr-namespace:BodyArchitect.WP7" 
+             xmlns:Controls1="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+             mc:Ignorable="d"
+             Foreground="{StaticResource CustomForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <UserControl.Resources>
+        <WP7:GroupToBrushValueConverter x:Key="groupBrush"/>
+        <WP7:TrainingPlanSuperSetToBrushConverter x:Key="superSetConverter" />
+    </UserControl.Resources>
+    
+    <Grid  >
+
+        <toolkit:LongListSelector GroupViewOpened="LongList_GroupViewOpened" Name="LongList" Background="Transparent"  >
+            <toolkit:LongListSelector.GroupItemTemplate>
+                <DataTemplate>
+                    <Border HorizontalAlignment="Stretch" Background="{Binding Converter={StaticResource groupBrush}}"  Margin="6" IsHitTestVisible="{Binding HasItems}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="{Binding Key}"  HorizontalAlignment="Stretch"
+                                           Foreground="{StaticResource CustomForegroundBrush}" 
+                                           Style="{StaticResource CustomTextExtraLargeStyle}"
+                                           VerticalAlignment="Bottom"/>
+
+                            <Controls1:RoundButton BorderBrush="{StaticResource CustomForegroundBrush}" Foreground="{StaticResource CustomForegroundBrush}" Tag="{Binding}" Grid.Column="1" Background="Transparent" Click="btnUseInToday_Click"  VerticalAlignment="Center" ImageSource="/Icons/appbar.add.rest.png"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </toolkit:LongListSelector.GroupItemTemplate>
+
+            <toolkit:LongListSelector.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Border Background="{StaticResource CustomAccentBrush}"   HorizontalAlignment="Stretch">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="{Binding Key}"  HorizontalAlignment="Stretch"
+                                           Foreground="{StaticResource CustomForegroundBrush}" 
+                                           Style="{StaticResource CustomTextExtraLargeStyle}"
+                                           VerticalAlignment="Bottom"/>
+
+                            <Controls1:RoundButton BorderBrush="{StaticResource CustomForegroundBrush}"  Foreground="{StaticResource CustomForegroundBrush}" Tag="{Binding}" Grid.Column="1" Background="Transparent" Click="btnUseInToday_Click"  VerticalAlignment="Center" ImageSource="/Icons/appbar.add.rest.png"/>
+                        </Grid>
+                        
+                    </Border>
+                </DataTemplate>
+            </toolkit:LongListSelector.GroupHeaderTemplate>
+
+            <toolkit:LongListSelector.ItemTemplate>
+                <DataTemplate>
+
+                    <HyperlinkButton Tag="{Binding}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Margin="{StaticResource CustomTouchTargetOverhang}" Click="ShowSet_Click">
+                        <HyperlinkButton.Template>
+                            <ControlTemplate TargetType="HyperlinkButton">
+                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                            </ControlTemplate>
+                        </HyperlinkButton.Template>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock VerticalAlignment="Top" Style="{StaticResource CustomTextExtraLargeStyle}" Foreground="{Binding Entry,Converter={StaticResource superSetConverter}}" FontSize="{StaticResource CustomFontSizeExtraExtraLarge}" Grid.Column="0" Text="{Binding Position}" />
+                            <StackPanel Grid.Column="1" >
+
+                                <TextBlock Text="{Binding DisplayExercise}" Style="{StaticResource CustomTextLargeStyle}" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style="{StaticResource CustomTextAccentStyle}" Tag="{Binding}" Text="{Binding ExerciseType}" />
+
+                                    <TextBlock Style="{StaticResource CustomTextSmallStyle}"  Text="{Binding SetsInfo}" />
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+
+                    </HyperlinkButton>
+                </DataTemplate>
+            </toolkit:LongListSelector.ItemTemplate>
+
+        </toolkit:LongListSelector>
+        <!--</StackPanel>-->
+    </Grid>
+</UserControl>

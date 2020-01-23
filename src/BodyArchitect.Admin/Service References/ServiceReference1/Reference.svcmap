@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ec04d82-d8dd-4908-aa32-9de492e08245" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BodyArchitectAdmin/AdminService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminService.xsd" MetadataType="Schema" ID="faf00c91-4adb-44d7-9f91-a0e883d34feb" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AdminService1.xsd" MetadataType="Schema" ID="5b951d55-1517-4548-b554-f8b745b797b7" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AdminService2.xsd" MetadataType="Schema" ID="09565e57-d1ff-4398-9755-5dfd19eb6189" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdminService3.xsd" MetadataType="Schema" ID="7eec2896-8b06-4e85-a8d1-6d0f86a03b74" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AdminService4.xsd" MetadataType="Schema" ID="96171adf-9e7a-4383-b914-f3cf4298f196" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AdminService.wsdl" MetadataType="Wsdl" ID="202b975b-241a-4d22-9b5c-91773fc43da2" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?wsdl" />
+    <MetadataFile FileName="AdminService.disco" MetadataType="Disco" ID="258d4885-bed9-439d-92c0-92276defc426" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?disco" />
+    <MetadataFile FileName="AdminService5.xsd" MetadataType="Schema" ID="7d7b0c98-e4e9-427b-875c-deae2d0e90dc" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AdminService1.wsdl" MetadataType="Wsdl" ID="749341ec-527a-4422-9e10-03ced94f4e90" SourceId="1" SourceUrl="http://localhost/BodyArchitectAdmin/AdminService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

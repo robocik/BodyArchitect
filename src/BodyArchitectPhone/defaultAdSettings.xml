@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CultureDescriptors>
+
+		<AdCultureDescriptor CultureName="default">
+      <Probabilities Probability="80" AdType="PubCenter" AppID="cbc76f37-3b0f-4b25-8c53-9d671fa101f6" SecondaryID="136715" />
+      <Probabilities Probability="20" AdType="AdDuplex" AppID="45859 "  />
+      <Probabilities AdType="DefaultHouseAd" AppID="http://adrotator.apphb.com/SampleRemoteHouseAd.xaml"/>
+    </AdCultureDescriptor>
+	</CultureDescriptors>
+</AdSettings>

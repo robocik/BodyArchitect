@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://MYBASERVICE.TK/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" />
+  <xs:import schemaLocation="http://localhost/BodyArchitectWebSite/V2/BodyArchitect.svc?xsd=xsd3" namespace="http://MYBASERVICE.TK/IBodyArchitectAccessService/" />
+  <xs:element name="GetGPSCoordinatesParam">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GPSTrackerEntryId" type="ser:guid" />
+  <xs:element name="SessionId" type="ser:guid" />
+  <xs:element name="GPSCoordinatesDTO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="Stream" type="q1:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GPSOperationParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/Message" name="CoordinatesStream" type="q2:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" name="Params" nillable="true" type="q3:GPSOperationData" />
+  <xs:element name="GPSCoordinatesOperationResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GPSTrackerEntry" nillable="true" type="q4:WeatherDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProfileOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q5:Token" />
+        <xs:element xmlns:q6="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q6:ProfileOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProfileOperationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userNameOrEmail" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" minOccurs="0" name="operationType" type="q7:AccountOperationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountOperationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserFavoritesOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q8:Token" />
+        <xs:element xmlns:q9="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="userDto" nillable="true" type="q9:UserDTO" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.V2.Model" minOccurs="0" name="operation" type="q10:FavoriteOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserFavoritesOperationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrainingDayCommentOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q11:Token" />
+        <xs:element xmlns:q12="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="arg" nillable="true" type="q12:TrainingDayCommentOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrainingDayCommentOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="TrainingDayCommentOperationResult" nillable="true" type="q13:TrainingDayCommentDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingDayComments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q14:Token" />
+        <xs:element xmlns:q15="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="day" nillable="true" type="q15:TrainingDayInfoDTO" />
+        <xs:element xmlns:q16="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="info" nillable="true" type="q16:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingDayCommentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetTrainingDayCommentsResult" nillable="true" type="q17:PagedResultOfTrainingDayCommentDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MessageOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q18:Token" />
+        <xs:element xmlns:q19="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="arg" nillable="true" type="q19:MessageOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MessageOperationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q20:Token" />
+        <xs:element xmlns:q21="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="message" nillable="true" type="q21:MessageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q22:Token" />
+        <xs:element xmlns:q23="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="criteria" nillable="true" type="q23:GetProfileInformationCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetProfileInformationResult" nillable="true" type="q24:ProfileInformationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InviteFriendOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q25:Token" />
+        <xs:element xmlns:q26="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="data" nillable="true" type="q26:InviteFriendOperationData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InviteFriendOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="InviteFriendOperationResult" nillable="true" type="q27:FriendInvitationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="clientInfo" nillable="true" type="q28:ClientInformation" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="LoginResult" nillable="true" type="q29:SessionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q30:Token" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="clientInfo" nillable="true" type="q31:ClientInformation" />
+        <xs:element xmlns:q32="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="newProfile" nillable="true" type="q32:ProfileDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="CreateProfileResult" nillable="true" type="q33:SessionData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q34:Token" />
+        <xs:element xmlns:q35="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="data" nillable="true" type="q35:ProfileUpdateData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="UpdateProfileResult" nillable="true" type="q36:ProfileDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTrainingDay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q37:Token" />
+        <xs:element xmlns:q38="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="dayDto" nillable="true" type="q38:DeleteTrainingDayParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTrainingDayResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PictureDTO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.microsoft.com/Message" name="ImageStream" type="q39:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hash" nillable="true" type="xs:string" />
+  <xs:element name="PictureId" type="ser:guid" />
+  <xs:element name="PictureInfoDTO">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckProfileNameAvailability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckProfileNameAvailabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckProfileNameAvailabilityResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTrainingDay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q40:Token" />
+        <xs:element xmlns:q41="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="day" nillable="true" type="q41:TrainingDayDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTrainingDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveTrainingDayResult" nillable="true" type="q42:SaveTrainingDayResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingDays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q43:Token" />
+        <xs:element xmlns:q44="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="searchCriteria" nillable="true" type="q44:WorkoutDaysSearchCriteria" />
+        <xs:element xmlns:q45="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q45:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingDaysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetTrainingDaysResult" nillable="true" type="q46:PagedResultOfTrainingDayDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingDay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q47:Token" />
+        <xs:element xmlns:q48="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="operationParams" nillable="true" type="q48:WorkoutDayGetOperation" />
+        <xs:element xmlns:q49="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q49:RetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetTrainingDayResult" nillable="true" type="q50:TrainingDayDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExercises">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q51:Token" />
+        <xs:element xmlns:q52="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="searchCriteria" nillable="true" type="q52:ExerciseSearchCriteria" />
+        <xs:element xmlns:q53="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q53:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExercisesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetExercisesResult" nillable="true" type="q54:PagedResultOfExerciseDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuplements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q55:Token" />
+        <xs:element xmlns:q56="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q56:GetSupplementsParam" />
+        <xs:element xmlns:q57="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q57:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuplementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetSuplementsResult" nillable="true" type="q58:PagedResultOfSuplementDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveExercise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q59:Token" />
+        <xs:element xmlns:q60="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="exercise" nillable="true" type="q60:ExerciseDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveExerciseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveExerciseResult" nillable="true" type="q61:ExerciseDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSuplement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q62:Token" />
+        <xs:element xmlns:q63="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="suplement" nillable="true" type="q63:SuplementDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSuplementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveSuplementResult" nillable="true" type="q64:SuplementDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkoutPlans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q65:Token" />
+        <xs:element xmlns:q66="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="searchCriteria" nillable="true" type="q66:WorkoutPlanSearchCriteria" />
+        <xs:element xmlns:q67="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pagerInfo" nillable="true" type="q67:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkoutPlansResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetWorkoutPlansResult" nillable="true" type="q68:PagedResultOfTrainingPlan5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveWorkoutPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q69:Token" />
+        <xs:element xmlns:q70="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="dto" nillable="true" type="q70:TrainingPlan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveWorkoutPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveWorkoutPlanResult" nillable="true" type="q71:TrainingPlan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetComments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q72:Token" />
+        <xs:element minOccurs="0" name="globalId" type="ser:guid" />
+        <xs:element xmlns:q73="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q73:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetCommentsResult" nillable="true" type="q74:PagedResultOfCommentEntryDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkoutPlanOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q75:Token" />
+        <xs:element xmlns:q76="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q76:WorkoutPlanOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkoutPlanOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="WorkoutPlanOperationResult" nillable="true" type="q77:TrainingPlan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q78:Token" />
+        <xs:element xmlns:q79="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="searchCriteria" nillable="true" type="q79:UserSearchCriteria" />
+        <xs:element xmlns:q80="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pagerInfo" nillable="true" type="q80:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetUsersResult" nillable="true" type="q81:PagedResultOfUserSearchDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7Register">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deviceid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="profileId" type="ser:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7RegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WP7RegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7Unregister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deviceid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7UnregisterResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7ClearCounter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deviceid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7ClearCounterResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7TrialStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deviceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WP7TrialStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="WP7TrialStatusResult" nillable="true" type="q82:TrialStatusInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q83:Token" />
+        <xs:element xmlns:q84="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q84:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetActivitiesResult" nillable="true" type="q85:PagedResultOfActivityDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q86:Token" />
+        <xs:element xmlns:q87="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="activity" nillable="true" type="q87:ActivityDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActivityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q88:Token" />
+        <xs:element xmlns:q89="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="activity" nillable="true" type="q89:ActivityDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveActivityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveActivityResult" nillable="true" type="q90:ActivityDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleEntries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q91:Token" />
+        <xs:element xmlns:q92="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="getScheduleEntriesParam" nillable="true" type="q92:GetScheduleEntriesParam" />
+        <xs:element xmlns:q93="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q93:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleEntriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetScheduleEntriesResult" nillable="true" type="q94:PagedResultOfScheduleEntryBaseDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScheduleEntriesRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q95:Token" />
+        <xs:element xmlns:q96="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="saveScheduleEntryRangeParam" nillable="true" type="q96:SaveScheduleEntryRangeParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScheduleEntriesRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveScheduleEntriesRangeResult" nillable="true" type="q97:ArrayOfScheduleEntryBaseDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q98:Token" />
+        <xs:element xmlns:q99="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="customerDto" nillable="true" type="q99:CustomerDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveCustomerResult" nillable="true" type="q100:CustomerDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q101:Token" />
+        <xs:element xmlns:q102="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="customerDto" nillable="true" type="q102:CustomerDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCustomerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q103:Token" />
+        <xs:element xmlns:q104="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="customerSearchCriteria" nillable="true" type="q104:CustomerSearchCriteria" />
+        <xs:element xmlns:q105="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q105:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetCustomersResult" nillable="true" type="q106:PagedResultOfCustomerDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReservationsOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q107:Token" />
+        <xs:element xmlns:q108="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q108:ReservationsOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReservationsOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="ReservationsOperationResult" nillable="true" type="q109:ReservationOperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentBasketOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q110:Token" />
+        <xs:element xmlns:q111="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="koszyk" nillable="true" type="q111:PaymentBasketDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentBasketOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="PaymentBasketOperationResult" nillable="true" type="q112:PaymentBasketDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentBaskets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q113:Token" />
+        <xs:element xmlns:q114="http://MYBASERVICE.TK/" minOccurs="0" name="getPaymentBasketParam" nillable="true" type="q114:GetPaymentBasketParam" />
+        <xs:element xmlns:q115="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q115:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetPaymentBasketParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q116="http://MYBASERVICE.TK/" name="GetPaymentBasketParam" nillable="true" type="q116:GetPaymentBasketParam" />
+  <xs:element name="GetPaymentBasketsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetPaymentBasketsResult" nillable="true" type="q117:PagedResultOfPaymentBasketDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCustomerGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q118:Token" />
+        <xs:element xmlns:q119="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="customerGroup" nillable="true" type="q119:CustomerGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCustomerGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveCustomerGroupResult" nillable="true" type="q120:CustomerGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q121:Token" />
+        <xs:element xmlns:q122="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="criteria" nillable="true" type="q122:CustomerGroupSearchCriteria" />
+        <xs:element xmlns:q123="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pageInfo" nillable="true" type="q123:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetCustomerGroupsResult" nillable="true" type="q124:PagedResultOfCustomerGroupDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCustomerGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q125:Token" />
+        <xs:element xmlns:q126="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="group" nillable="true" type="q126:CustomerGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCustomerGroupResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q127:Token" />
+        <xs:element xmlns:q128="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="getProductsParam" nillable="true" type="q128:GetProductsParam" />
+        <xs:element xmlns:q129="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q129:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetProductsResult" nillable="true" type="q130:PagedResultOfProductInfoDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReminder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q131:Token" />
+        <xs:element xmlns:q132="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="reminder" nillable="true" type="q132:ReminderItemDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReminderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveReminderResult" nillable="true" type="q133:ReminderItemDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReminders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q134:Token" />
+        <xs:element xmlns:q135="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="remindersParam" nillable="true" type="q135:GetRemindersParam" />
+        <xs:element xmlns:q136="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pageInfo" nillable="true" type="q136:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRemindersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetRemindersResult" nillable="true" type="q137:PagedResultOfReminderItemDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReminderOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q138:Token" />
+        <xs:element xmlns:q139="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="remindersParam" nillable="true" type="q139:ReminderOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReminderOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="ReminderOperationResult" nillable="true" type="q140:ReminderItemDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupplementsCycleDefinitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q141:Token" />
+        <xs:element xmlns:q142="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q142:GetSupplementsCycleDefinitionsParam" />
+        <xs:element xmlns:q143="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pageInfo" nillable="true" type="q143:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupplementsCycleDefinitionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetSupplementsCycleDefinitionsResult" nillable="true" type="q144:PagedResultOfSupplementCycleDefinitionDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSupplementsCycleDefinition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q145:Token" />
+        <xs:element xmlns:q146="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="definition" nillable="true" type="q146:SupplementCycleDefinitionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSupplementsCycleDefinitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveSupplementsCycleDefinitionResult" nillable="true" type="q147:SupplementCycleDefinitionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupplementsCycleDefinitionOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q148:Token" />
+        <xs:element xmlns:q149="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q149:SupplementsCycleDefinitionOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupplementsCycleDefinitionOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SupplementsCycleDefinitionOperationResult" nillable="true" type="q150:SupplementCycleDefinitionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Vote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q151:Token" />
+        <xs:element xmlns:q152="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q152:VoteParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="VoteResult" nillable="true" type="q153:VoteResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyTrainingOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q154:Token" />
+        <xs:element xmlns:q155="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q155:MyTrainingOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyTrainingOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="MyTrainingOperationResult" nillable="true" type="q156:MyTrainingDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyTrainings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q157:Token" />
+        <xs:element xmlns:q158="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q158:GetMyTrainingsParam" />
+        <xs:element xmlns:q159="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pageInfo" nillable="true" type="q159:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyTrainingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetMyTrainingsResult" nillable="true" type="q160:PagedResultOfMyTrainingDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExerciseOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q161:Token" />
+        <xs:element xmlns:q162="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q162:ExerciseOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExerciseOperationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportExerciseWeight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q163:Token" />
+        <xs:element xmlns:q164="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q164:ReportExerciseWeightParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportExerciseWeightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="ReportExerciseWeightResult" nillable="true" type="q165:ArrayOfWeightExerciseReportResultItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportWeightRepetitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q166:Token" />
+        <xs:element xmlns:q167="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q167:ReportWeightRepetitionsParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportWeightRepetitionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="ReportWeightRepetitionsResult" nillable="true" type="q168:ArrayOfWeightReperitionReportResultItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportMeasurementsTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q169:Token" />
+        <xs:element xmlns:q170="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q170:ReportMeasurementsTimeParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportMeasurementsTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="ReportMeasurementsTimeResult" nillable="true" type="q171:ArrayOfMeasurementsTimeReportResultItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q172:Token" />
+        <xs:element xmlns:q173="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q173:GetMessagesCriteria" />
+        <xs:element xmlns:q174="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pageInfo" nillable="true" type="q174:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetMessagesResult" nillable="true" type="q175:PagedResultOfMessageDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportLicence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q176:Token" />
+        <xs:element minOccurs="0" name="licenceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportLicenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMyPlace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q177:Token" />
+        <xs:element xmlns:q178="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="myPlace" nillable="true" type="q178:MyPlaceDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMyPlaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveMyPlaceResult" nillable="true" type="q179:MyPlaceDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyPlaceOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q180:Token" />
+        <xs:element xmlns:q181="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q181:MyPlaceOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyPlaceOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="MyPlaceOperationResult" nillable="true" type="q182:MyPlaceDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyPlaces">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q183:Token" />
+        <xs:element xmlns:q184="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q184:MyPlaceSearchCriteria" />
+        <xs:element xmlns:q185="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pageInfo" nillable="true" type="q185:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyPlacesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetMyPlacesResult" nillable="true" type="q186:PagedResultOfMyPlaceDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportExerciseRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q187:Token" />
+        <xs:element xmlns:q188="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q188:ExerciseRecordsParams" />
+        <xs:element xmlns:q189="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="pageInfo" nillable="true" type="q189:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportExerciseRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q190="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="ReportExerciseRecordsResult" nillable="true" type="q190:PagedResultOfExerciseRecordsReportResultItem5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeaturedData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q191:Token" />
+        <xs:element xmlns:q192="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="param" nillable="true" type="q192:GetFeaturedDataParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeaturedDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q193="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetFeaturedDataResult" nillable="true" type="q193:FeaturedData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChampionships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q194="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q194:Token" />
+        <xs:element xmlns:q195="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="criteria" nillable="true" type="q195:GetChampionshipsCriteria" />
+        <xs:element xmlns:q196="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="retrievingInfo" nillable="true" type="q196:PartialRetrievingInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChampionshipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q197="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="GetChampionshipsResult" nillable="true" type="q197:PagedResultOfChampionshipDTO5oAtqRlh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChampionship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q198="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="token" nillable="true" type="q198:Token" />
+        <xs:element xmlns:q199="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="championship" nillable="true" type="q199:ChampionshipDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChampionshipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q200="http://MYBASERVICE.TK/IBodyArchitectAccessService/" minOccurs="0" name="SaveChampionshipResult" nillable="true" type="q200:SaveChampionshipResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

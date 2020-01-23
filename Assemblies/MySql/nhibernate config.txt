@@ -1,0 +1,23 @@
+<connectionStrings>
+    <add name="db" connectionString="Server=mysql.webio.pl; Database=2629_BodyArchitect; User id=2629_BA;password=X|nq$13P*_BA" />
+  </connectionStrings>
+  <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+    <session-factory>
+      <property name="proxyfactory.factory_class">
+        NHibernate.ByteCode.Castle.ProxyFactoryFactory,
+        NHibernate.ByteCode.Castle
+      </property>
+      <property name="dialect">
+        BodyArchitect.DataAccess.NHibernate.FixedMySql5Dialect, BodyArchitect.DataAccess.NHibernate
+      </property>
+      <property name="connection.driver_class">
+        NHibernate.Driver.MySqlDataDriver
+      </property>
+      <property name="connection.connection_string_name">
+        db
+      </property>
+      <property name="adonet.batch_size">
+        100
+      </property>
+    </session-factory>
+  </hibernate-configuration>

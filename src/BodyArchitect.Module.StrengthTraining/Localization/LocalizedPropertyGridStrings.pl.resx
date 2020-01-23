@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Exercise_Name_Empty" xml:space="preserve">
+    <value>Nazwa ćwiczenia nie może być pusta.</value>
+  </data>
+  <data name="Exercise_Name_Length" xml:space="preserve">
+    <value>Nazwa ćwiczenia jest za długa.</value>
+  </data>
+  <data name="Exercise_Shortcut_Empty" xml:space="preserve">
+    <value>Musisz podać unikatowy skrót dla ćwiczenia.</value>
+  </data>
+  <data name="Exercise_Shortcut_Unique" xml:space="preserve">
+    <value>Skrót ćwiczenia musi być unikatowy.</value>
+  </data>
+  <data name="Exercise_Url_Length" xml:space="preserve">
+    <value>Adres Url jest za długi.</value>
+  </data>
+  <data name="PrintOptions" xml:space="preserve">
+    <value>Opcje drukowania</value>
+  </data>
+  <data name="Split_IsolationExerciseBeforeCompoud" xml:space="preserve">
+    <value>Ćwiczenie izolowane jest przed ćwiczeniem wielostawowym. W treningu typu split zwykle ćwiczenia wielostawowe wykonuje się jako pierwsze (na daną partię mięśniową) a potem izolowane.</value>
+  </data>
+  <data name="TrainingPlanDayEntry_Object" xml:space="preserve">
+    <value>Wpis w dniu treningowym</value>
+  </data>
+  <data name="TrainingPlanDay_Name_Empty" xml:space="preserve">
+    <value>Dzień treningowy musi mieć nazwę.</value>
+  </data>
+  <data name="TrainingPlanDay_Name_Length" xml:space="preserve">
+    <value>Nazwa dnia treningowego jest za długa.</value>
+  </data>
+  <data name="TrainingPlanDay_Object" xml:space="preserve">
+    <value>Dzień treningowy</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintBackground.Description" xml:space="preserve">
+    <value>Jeśli ta opcja jest ustawiona to wydrukowane zostaną wzsystkie tła w tabelkach.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintBackground.DisplayName" xml:space="preserve">
+    <value>Drukuj tło</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintDays.Description" xml:space="preserve">
+    <value>Umożliwia wybranie dni, które mają być wydrukowane.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintDays.DisplayName" xml:space="preserve">
+    <value>Dni do wydrukowania</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintDescription.Description" xml:space="preserve">
+    <value>Jeśli ta opcja jest ustawiona to wydrukowany zostanie opis treningu.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintDescription.DisplayName" xml:space="preserve">
+    <value>Drukuj opis</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintEntriesComment.Description" xml:space="preserve">
+    <value>Zaznacz tą opcję, aby wydrukować komentarze do wpisów (ćwiczeń).</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintEntriesComment.DisplayName" xml:space="preserve">
+    <value>Drukuj komentarze ćwiczeń.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintExerciseShortcut.Description" xml:space="preserve">
+    <value>Jeśli ta opcja jest ustawiona to wydrukowane zostaną dodatkowo skróty wszystkich ćwiczeń w planie treningowym.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintExerciseShortcut.DisplayName" xml:space="preserve">
+    <value>Drukuj skroty ćwiczeń</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintExerciseType.Description" xml:space="preserve">
+    <value>Jeśli ta opcja jest ustawiona to wydrukowane zostaną mięśnie dla każdego ćwiczenia.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintExerciseType.DisplayName" xml:space="preserve">
+    <value>Drukuj mięśnie</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintHeaders.Description" xml:space="preserve">
+    <value>Jeśli ta opcja jest ustawiona to wydrukowane zostaną nagłówki każdej sekcji.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintHeaders.DisplayName" xml:space="preserve">
+    <value>Drukuj nagłówki</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintInfo.Description" xml:space="preserve">
+    <value>Jeśli ta opcja jest ustawiona to zostanie wydrukowana sekcja z informacjami o treningu.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintInfo.DisplayName" xml:space="preserve">
+    <value>Drukuj informacje</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintLegend.Description" xml:space="preserve">
+    <value>Zaznacz tą opcje aby wydrukować legendę do planu (opis wszystkich oznaczeń)</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintLegend.DisplayName" xml:space="preserve">
+    <value>Drukuj legendę</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintRequiredSetsOnly.Description" xml:space="preserve">
+    <value>To ustawienie jest związane z Liczbą serii. Jeśli ta opcja jest zaznaczona to wydrukowane zostaną tylko wymagane serie dla danego planu treningowego. Jeśli natomiast odznaczysz tą opcje to wydrukowana zostanie liczba serii okreslona w ustwieniu Liczba serii.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintRequiredSetsOnly.DisplayName" xml:space="preserve">
+    <value>Drukuj tylko wymagane serie</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintSetsComment.Description" xml:space="preserve">
+    <value>Zaznacz tą opcje aby wydrukować komentarze serii (jeśli są)</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintSetsComment.DisplayName" xml:space="preserve">
+    <value>Drukuj komentarze serii</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintSetsPlaceholders.Description" xml:space="preserve">
+    <value>Ta opcja jest użyteczna, jeśli drukujesz plan treningowy, żeby wziąść go na siłownię. Jeśli ta opcja jest ustawiona to w planie treningowym przy każdej serii będzie miejsce do wpisania ilości powtórzeń i ciężaru, z jakim dana seria została wykonana.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.PrintSetsPlaceholders.DisplayName" xml:space="preserve">
+    <value>Drukuj miejsce w seriach</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.SetsNumberToPrint.Description" xml:space="preserve">
+    <value>To ustawienie jest powiązane z Drukuj tylko wymagane serie. Określa ile serii zosatnie wydrukowanych w planie (nie mniej jednak niż wymagana ilość serii w ćwiczeniu).</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.SetsNumberToPrint.DisplayName" xml:space="preserve">
+    <value>Liczba serii</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.UseAlternateRows.Description" xml:space="preserve">
+    <value>Jeśli ta opcja jest ustawiona to co drugi wiersz w szczegółach planu będzie miał inny kolor tła. Dzieki temu plan jest bardziej czytelny.</value>
+  </data>
+  <data name="TrainingPlanHtmlExporter.UseAlternateRows.DisplayName" xml:space="preserve">
+    <value>Wyróżnij wiersze ćwiczeń.</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_MuscleFailure" xml:space="preserve">
+    <value>MF</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Normalna" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_PrawieMax" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Rozgrzewkowa" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="TrainingPlanSerie_Object" xml:space="preserve">
+    <value>Seria</value>
+  </data>
+  <data name="TrainingPlan_Author_Empty" xml:space="preserve">
+    <value>Plan treningowy musi miec autora.</value>
+  </data>
+  <data name="TrainingPlan_Author_Length" xml:space="preserve">
+    <value>Nazwa autora planu jest za długa.</value>
+  </data>
+  <data name="TrainingPlan_DaysName_Unique" xml:space="preserve">
+    <value>Niektóre dni treningowe mają takie same nazwy. Wszystkie nazwy dni treningowych muszą być unikatowe.</value>
+  </data>
+  <data name="TrainingPlan_DropSetInNotOnlyLastSet" xml:space="preserve">
+    <value>Drop set jest zwykle wykonywany podczas ostatniej serii w danym ćwiczeniu.</value>
+  </data>
+  <data name="TrainingPlan_EmptyDay" xml:space="preserve">
+    <value>Powinieneś dodać wpisy do dnia treningowego.</value>
+  </data>
+  <data name="TrainingPlan_ExerciseDoesntExist" xml:space="preserve">
+    <value>Ćwiczenie nie zostało ustawione lub zostało usunięte. Musisz wybrać nowe.</value>
+  </data>
+  <data name="TrainingPlan_Object" xml:space="preserve">
+    <value>Plan treningowy</value>
+  </data>
+</root>

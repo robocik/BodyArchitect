@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mnuOpenTrainingDay.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mnuOpenTrainingDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="mnuOpenTrainingDay.Text" xml:space="preserve">
+    <value>&amp;Nowy...</value>
+  </data>
+  <data name="mnuDeleteDay.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="mnuDeleteDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="mnuDeleteDay.Text" xml:space="preserve">
+    <value>&amp;Usuń...</value>
+  </data>
+  <data name="mnuEditCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAhxJREFUOE+dkl9I
+        U2EYxt/Z1jkFkTZQ0q4lzXaTFnNNRjqXlhciOMIzprPBIOgmulAhbXUCSxIlpT9UizChPxSo1WxjaDrD
+        Iy3/1EWQdJF3ihdFBBFP37s5QWmVfvDefN/ze877vuehc/520CZPnH0RDGMzJsz09T8BVR6vvjryenxD
+        Jgy/fBUBs9x89gmlITSpxf7LhOHRsQkww2xy+nzFfVLTpv5uwnD0jQbWCjB//epMbo/vY+zd7B87YXjq
+        7TRYI0BTqr0XerynFmdm368xYTg2PQd+E2Dhv36a2es7jZm5D2iqc+BuuQzuiu8EaE4JC6EiKsgAV4ty
+        FAvqHuChGc9r0hBwJO5XNMoaI4bDjUYhPgQMlGP+LOGGQ0LQtRU/72QD4RpguAoYrAAeWTBeL7FRwiQO
+        e3YBjy2IegmBY4R5P2HCR2g7LKOvgrB4gfCpmQRE6CklfL9nwpiLcL1UmNwskyPoP4BoA/GMtovFEr5e
+        ItyuJDhzDaorz6Bes0tYaCO0HExohqoJPwIFOF9EEe4A6M1AyMlfkLHcnomeI4T9Rp0qxFlc7jy9esWq
+        w1Ir4YGd8Kx2B35170RrkTDssknaFzEzetOB7gyxLMI+Y1oSTu4qq26vQfWXbMO3zt1x3eczhE4LcaDI
+        1FEihe7b9XhapYM1Z8t6eNXEmatXu+zbcatMxmWrxFFeDRTH0rZS3Haqw29JXTzKvwE2RicLoghzbAAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="mnuEditCut.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="mnuEditCut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+X</value>
+  </data>
+  <data name="mnuEditCut.Text" xml:space="preserve">
+    <value>&amp;Wytnij</value>
+  </data>
+  <data name="mnuEditCopy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCgAA
+        CwoBv0NmUwAAAV9JREFUOE+Nks9LAkEYhic7Sf0hHSqELtV/06FDQYWEvyqJhVYhykAJO3hYk/SgHuvY
+        zaQSpDostIfKqFTawpWlS/W2s7Qy6ow48LDD98HLy7MzEj3MgDBnfMxNjLZJXC4XSSf359W7apnd993l
+        uAK9ZXaRKZzi++cX9Dsx6ZkFQEQQKZbC/XOzi6PjIt70to2SP6MNR4UB4d0kHus6pvx5BLNl+36QyoHO
+        HawAtzAgKMdRa3x28fDSROVWRem6itBOjDYQB6xv76HxYWA6UOjgOymDymVJKAXIibQ9s7zMOY3I6kYE
+        75ZEFt0wMaxcsuST0DK/4AkVOwRylxhWLln0hq02/WdYuWRhJYhevFsR8ORqtTpuVA3npSss+yVbLn1Y
+        Mzx4cqnoUPYC2tMr1jaj9vsQvjCeXFY03dM/IQzgyaWipWLFlk73AwNEch3d/3txA57c3tnABiK57JwG
+        /AEtBqVkDLhsDwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="mnuEditCopy.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="mnuEditCopy.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="mnuEditCopy.Text" xml:space="preserve">
+    <value>&amp;Kopiuj</value>
+  </data>
+  <data name="mnuEditPaste.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCgAA
+        CwoBv0NmUwAAAhFJREFUOE+Fk11Ik2EUx09X3XcRrIYXNTJFYhlFNujDPhgjyKIuxHlRNKiVmJS5wsWb
+        WMt2YV+bg8o+hgTpoC/tC2aGimgiRCEa4dBpbuoyx5srqn/vecix7d3ogR/Pef/nPP/3f3MWAaDUYzTt
+        diva0X96w4u2Z1bV0ILABqls274D8nxMwLUym5VuTvy8sYScbjPJV82E6n2LsbHAgI+DQ3DdvCPgmjX/
+        o0vgGZ7lNxxAGFwrJrndswtfP9Th5LEihKam0fNuIAnWDplN6PBVodtbjNvW5THlvVYYOPYTQl1mjL/e
+        ijeNBuzckgvdquwk8jcUwFJ+BpLTjQvX78Hh8kKjzbIIA2kPYfRJTpyh5mz4XSvw3JUPa6WEV/63gs6e
+        PgRDM/C2tOLX7z/iXp2n30xVRkLAp1Ex1qrHxSseDAcCGB4Lx/Hc9+HLTFRwt7kNVF5IGHm4RMXo01yc
+        c3rwKRhOov7WA9gvN8QhiyGzwVnHDXyemIbU0ge9zSfqwZFxdPe/h7+rF9bT50Gl6zMbVNbUIzAZyQj3
+        6cAawsRjjYrQSz0q7HUIhmfjCTgFw4lY5z7tzSG5ybYUPzrzkvjZW4jjtlpMRuYywn0qWklOk47mjTpC
+        IiWbluHIKQmROTltAta5v7ASWqVYq7AukcMnquVv0e9yVI4hHZYKu3qREpfmYJkN/0O1iYkGqYnSff8F
+        9zpsGeaay/oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="mnuEditPaste.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="mnuEditPaste.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+V</value>
+  </data>
+  <data name="mnuEditPaste.Text" xml:space="preserve">
+    <value>Wkl&amp;ej</value>
+  </data>
+  <data name="cmnCalendarMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 120</value>
+  </data>
+</root>

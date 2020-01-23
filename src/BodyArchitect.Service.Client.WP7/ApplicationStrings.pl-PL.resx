@@ -1,0 +1,2582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateTimeExtension_AgoPostfix" xml:space="preserve">
+    <value> temu</value>
+  </data>
+  <data name="DateTimeExtension_FromNowSuffix" xml:space="preserve">
+    <value> od teraz</value>
+  </data>
+  <data name="DateTimeExtension_LessThanMinute" xml:space="preserve">
+    <value>Mniej niż minuta</value>
+  </data>
+  <data name="DateTimeExtension_OneDay" xml:space="preserve">
+    <value>Dzień</value>
+  </data>
+  <data name="DateTimeExtension_OneHour" xml:space="preserve">
+    <value>Jakąś godzinkę</value>
+  </data>
+  <data name="DateTimeExtension_OneMinute" xml:space="preserve">
+    <value>Około minutę</value>
+  </data>
+  <data name="DateTimeExtension_OneMonth" xml:space="preserve">
+    <value>Około miesiąc</value>
+  </data>
+  <data name="DateTimeExtension_OneMonthAgo" xml:space="preserve">
+    <value>Około miesiąc temu</value>
+  </data>
+  <data name="DateTimeExtension_OneYear" xml:space="preserve">
+    <value>Jakiś roczek</value>
+  </data>
+  <data name="DateTimeExtension_OneYearAgo" xml:space="preserve">
+    <value>Jakiś roczek temu</value>
+  </data>
+  <data name="DateTimeExtension_Today" xml:space="preserve">
+    <value>Dzisiaj</value>
+  </data>
+  <data name="DateTimeExtension_XDays" xml:space="preserve">
+    <value>{0} dni</value>
+  </data>
+  <data name="DateTimeExtension_XDaysAgo" xml:space="preserve">
+    <value>{0} dni temu</value>
+  </data>
+  <data name="DateTimeExtension_XHours" xml:space="preserve">
+    <value>Około {0} godz.</value>
+  </data>
+  <data name="DateTimeExtension_XMinutes" xml:space="preserve">
+    <value>{0} min.</value>
+  </data>
+  <data name="DateTimeExtension_XMonths" xml:space="preserve">
+    <value>{0} mies.</value>
+  </data>
+  <data name="DateTimeExtension_XMonthsAgo" xml:space="preserve">
+    <value>{0} mies. temu</value>
+  </data>
+  <data name="DateTimeExtension_XYears" xml:space="preserve">
+    <value>{0} lat</value>
+  </data>
+  <data name="DateTimeExtension_XYearsAgo" xml:space="preserve">
+    <value>{0} lat temu</value>
+  </data>
+  <data name="DateTimeExtension_Yesterday" xml:space="preserve">
+    <value>Wczoraj</value>
+  </data>
+  <data name="HideInReports" xml:space="preserve">
+    <value>ukryj</value>
+  </data>
+  <data name="ShowInReports" xml:space="preserve">
+    <value>pokaż</value>
+  </data>
+  <data name="StrengthTrainingItemViewModel_SetsCount" xml:space="preserve">
+    <value>Serie: {0} </value>
+  </data>
+  <data name="SetViewModel_SetIndexTitle" xml:space="preserve">
+    <value>Seria {0}</value>
+  </data>
+  <data name="ProfileViewModel_DisplayCountry_SelectCountry" xml:space="preserve">
+    <value>(Wybierz kraj)</value>
+  </data>
+  <data name="MyProfileViewModel_MessagesLinkText" xml:space="preserve">
+    <value>Masz {0} wiadomości.</value>
+  </data>
+  <data name="MyProfileViewModel_InvitationsLinkText" xml:space="preserve">
+    <value>Masz {0} zaproszeń.</value>
+  </data>
+  <data name="BlogViewModel_LoadComments_Empty" xml:space="preserve">
+    <value>nikt jeszcze nie miał odwagi napisać co o tym myśli</value>
+  </data>
+  <data name="BlogViewModel_LoadComments_Loading" xml:space="preserve">
+    <value>wczytywanko...</value>
+  </data>
+  <data name="BlogViewModel_LoadComments_ErrorMsg" xml:space="preserve">
+    <value>Coś nie bangla, dlatego komentarze nie zostały pobrane. Spróbuj ponownie.</value>
+  </data>
+  <data name="MyProfileControl_CantRetrieveProfileInfo_ErrMsg" xml:space="preserve">
+    <value>Nie udało się pobrać informacji o profilu.</value>
+  </data>
+  <data name="MeasurementsTimeControl_MeasurementsTime" xml:space="preserve">
+    <value>czas pomiaru</value>
+  </data>
+  <data name="MeasurementsTimeControl_Now" xml:space="preserve">
+    <value>teraz</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>anuluj</value>
+  </data>
+  <data name="Cm" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="ErrCantRetrieveProfileInfo" xml:space="preserve">
+    <value>Nie udało się pobrać informacji o profilu.</value>
+  </data>
+  <data name="ErrUserOrPasswordNotValid" xml:space="preserve">
+    <value>Użytkownik lub hasło są nieprawidłowe.</value>
+  </data>
+  <data name="Kg" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Login_CreateAccount" xml:space="preserve">
+    <value>Stwórz darmowe konto...</value>
+  </data>
+  <data name="Login_Password" xml:space="preserve">
+    <value>hasło</value>
+  </data>
+  <data name="Login_SignIn" xml:space="preserve">
+    <value>zaloguj się</value>
+  </data>
+  <data name="Login_UserName" xml:space="preserve">
+    <value>nazwa użytkownika</value>
+  </data>
+  <data name="MeasurementsControl_Abs" xml:space="preserve">
+    <value>brzuch</value>
+  </data>
+  <data name="MeasurementsControl_Chest" xml:space="preserve">
+    <value>klatka</value>
+  </data>
+  <data name="MeasurementsControl_Height" xml:space="preserve">
+    <value>wzrost</value>
+  </data>
+  <data name="MeasurementsControl_LeftBiceps" xml:space="preserve">
+    <value>lewy biceps</value>
+  </data>
+  <data name="MeasurementsControl_LeftForearm" xml:space="preserve">
+    <value>lewe przedramię</value>
+  </data>
+  <data name="MeasurementsControl_LeftLeg" xml:space="preserve">
+    <value>lewe udo</value>
+  </data>
+  <data name="MeasurementsControl_RightBiceps" xml:space="preserve">
+    <value>prawy biceps</value>
+  </data>
+  <data name="MeasurementsControl_RightForearm" xml:space="preserve">
+    <value>prawe przedramię</value>
+  </data>
+  <data name="MeasurementsControl_RightLeg" xml:space="preserve">
+    <value>prawe udo</value>
+  </data>
+  <data name="MeasurementsControl_Weight" xml:space="preserve">
+    <value>waga</value>
+  </data>
+  <data name="EntryObjectPageBase_BackKeyQuestion" xml:space="preserve">
+    <value>Teraz pozor mistrzu. Wpis został zmodyfikowany. Jeśli wyjdziesz, Twoje zmiany nie zostaną zapisane i może być Ci potem smutno. Czy na pewno chcesz zamknąć ten wpis?</value>
+  </data>
+  <data name="WorkoutPlanViewModel_LoadError" xml:space="preserve">
+    <value>Nie udało się pobrać szczegółów planu treningowego. Spróbuj ponownie.</value>
+  </data>
+  <data name="TrainingPlanSetViewModel_DropSet" xml:space="preserve">
+    <value>{0} dropset</value>
+  </data>
+  <data name="TrainingPlanEntryViewModel_Comment_Empty" xml:space="preserve">
+    <value>Brak dodatkowych informacji</value>
+  </data>
+  <data name="CommentWatermark" xml:space="preserve">
+    <value>napisz, co ci chodzi po głowie</value>
+  </data>
+  <data name="MenuDelete" xml:space="preserve">
+    <value>usuń</value>
+  </data>
+  <data name="MenuRemoveSuperSet" xml:space="preserve">
+    <value>usuń superserię</value>
+  </data>
+  <data name="StrengthWorkoutPage_Comment" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="StrengthWorkoutPage_EndTime" xml:space="preserve">
+    <value>koniec</value>
+  </data>
+  <data name="StrengthWorkoutPage_ExercisesHeader" xml:space="preserve">
+    <value>ćwiczenia</value>
+  </data>
+  <data name="StrengthWorkoutPage_InfoBlock" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="StrengthWorkoutPage_InfoHeader" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="StrengthWorkoutPage_Intensity" xml:space="preserve">
+    <value>intensywność</value>
+  </data>
+  <data name="StrengthWorkoutPage_Intensity_High" xml:space="preserve">
+    <value>wysoka</value>
+  </data>
+  <data name="StrengthWorkoutPage_Intensity_Low" xml:space="preserve">
+    <value>niska</value>
+  </data>
+  <data name="StrengthWorkoutPage_Intensity_Medium" xml:space="preserve">
+    <value>średnia</value>
+  </data>
+  <data name="StrengthWorkoutPage_Intensity_NotSet" xml:space="preserve">
+    <value>nie ustawiona</value>
+  </data>
+  <data name="StrengthWorkoutPage_NowTime" xml:space="preserve">
+    <value>teraz</value>
+  </data>
+  <data name="StrengthWorkoutPage_ShowInReportsHeader" xml:space="preserve">
+    <value>pokazuj w raportach</value>
+  </data>
+  <data name="StrengthWorkoutPage_StartTime" xml:space="preserve">
+    <value>start</value>
+  </data>
+  <data name="StrengthWorkoutPage_Title" xml:space="preserve">
+    <value>TRENING SIŁOWY</value>
+  </data>
+  <data name="StrengthWorkoutPage_TrainingTimeBlock" xml:space="preserve">
+    <value>czas treningu</value>
+  </data>
+  <data name="WorkoutPlans_FavoritesHeader" xml:space="preserve">
+    <value>ulubione</value>
+  </data>
+  <data name="WorkoutPlans_MyHeader" xml:space="preserve">
+    <value>moje</value>
+  </data>
+  <data name="WorkoutPlans_Title" xml:space="preserve">
+    <value>PLANY TRENINGOWE</value>
+  </data>
+  <data name="WorkoutPlanViewPage_Author" xml:space="preserve">
+    <value>autor</value>
+  </data>
+  <data name="WorkoutPlanViewPage_CreatedDate" xml:space="preserve">
+    <value>data utworzenia</value>
+  </data>
+  <data name="WorkoutPlanViewPage_DescriptionHeader" xml:space="preserve">
+    <value>opis</value>
+  </data>
+  <data name="WorkoutPlanViewPage_Difficult" xml:space="preserve">
+    <value>stopień trudności</value>
+  </data>
+  <data name="WorkoutPlanViewPage_InfoHeader" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="WorkoutPlanViewPage_PlanHeader" xml:space="preserve">
+    <value>plan</value>
+  </data>
+  <data name="WorkoutPlanViewPage_PublishedDate" xml:space="preserve">
+    <value>data publikacji</value>
+  </data>
+  <data name="WorkoutPlanViewPage_Purpose" xml:space="preserve">
+    <value>cel</value>
+  </data>
+  <data name="WorkoutPlanViewPage_Title" xml:space="preserve">
+    <value>PLAN TRENINGOWY</value>
+  </data>
+  <data name="WorkoutPlanViewPage_Type" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="StrengthWorkoutPage_RemoveEntry" xml:space="preserve">
+    <value>Czy chcesz usunąć trening siłowy?</value>
+  </data>
+  <data name="InvitationItemViewModel_YouAreInvitedByUser_Msg" xml:space="preserve">
+    <value>Ten paker twierdzi, że Ciebie zna. Ma rację?</value>
+  </data>
+  <data name="InvitationItemViewModel_YouInvitedThisUser_Msg" xml:space="preserve">
+    <value>Szukając kolegów, znalazłeś tego pakera. Teraz czekasz na jego akceptację.</value>
+  </data>
+  <data name="InvitationItemViewModel_NoMessage" xml:space="preserve">
+    <value>Nikt nie napisał do Ciebie mistrzu</value>
+  </data>
+  <data name="UserViewModel_ErrRetrieveProfileDetails" xml:space="preserve">
+    <value>Houston, mamy problem z pobraniem danych o profilu.</value>
+  </data>
+  <data name="UserViewModel_ErrRemoveUserFromFavorites" xml:space="preserve">
+    <value>Nie udało się usunąć użytkownika z ulubionych. Spróbuj ponownie.</value>
+  </data>
+  <data name="UserViewModel_ErrOperation" xml:space="preserve">
+    <value>Nie udało się wykonać bieżącej operacji. Spróbuj ponownie.</value>
+  </data>
+  <data name="SetViewModel_CardioSessionIndexTitle" xml:space="preserve">
+    <value>Sesja {0}</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Difficult" xml:space="preserve">
+    <value>stopień trudności</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Difficult_Advanced" xml:space="preserve">
+    <value>zaawansowany</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Difficult_Any" xml:space="preserve">
+    <value>wszystkie</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Difficult_Beginner" xml:space="preserve">
+    <value>początkujący</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Difficult_NotSet" xml:space="preserve">
+    <value>nie ustawiony</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Difficult_Pro" xml:space="preserve">
+    <value>profesjonalny kulturysta</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_OrderBy" xml:space="preserve">
+    <value>posortuj po</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Order_Newest" xml:space="preserve">
+    <value>najnowsze</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Order_TopRated" xml:space="preserve">
+    <value>najwyżej oceniane</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose" xml:space="preserve">
+    <value>cel planu</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose_All" xml:space="preserve">
+    <value>wszystkie</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose_FatLost" xml:space="preserve">
+    <value>redukcja tłuszczu</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose_MuscleDefinition" xml:space="preserve">
+    <value>definicja mięśni</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose_MuscleMass" xml:space="preserve">
+    <value>masa</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose_NotSet" xml:space="preserve">
+    <value>nie ustawiony</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose_Other" xml:space="preserve">
+    <value>inne</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Purpose_Strength" xml:space="preserve">
+    <value>siła</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_ABW" xml:space="preserve">
+    <value>ABW</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_ACT" xml:space="preserve">
+    <value>ACT</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_AllTypes" xml:space="preserve">
+    <value>wszystkie</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_FBW" xml:space="preserve">
+    <value>FBW</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_HIT" xml:space="preserve">
+    <value>HIT</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_HST" xml:space="preserve">
+    <value>HST</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_Other" xml:space="preserve">
+    <value>Inne</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_PushPull" xml:space="preserve">
+    <value>PushPull</value>
+  </data>
+  <data name="WorkoutPlansFilterControl_Type_Split" xml:space="preserve">
+    <value>Split</value>
+  </data>
+  <data name="MessageViewModel_ErrDeleteMessage" xml:space="preserve">
+    <value>Nie udało się usunąć tej wiadomości.</value>
+  </data>
+  <data name="TrainingDaySelectorControl_Blog" xml:space="preserve">
+    <value>blog</value>
+  </data>
+  <data name="TrainingDaySelectorControl_Measurements" xml:space="preserve">
+    <value>wymiary</value>
+  </data>
+  <data name="TrainingDaySelectorControl_StrengthTraining" xml:space="preserve">
+    <value>siłka</value>
+  </data>
+  <data name="TrainingDaySelectorControl_Supplements" xml:space="preserve">
+    <value>odżyweczki</value>
+  </data>
+  <data name="CalendarControl_Day" xml:space="preserve">
+    <value>Dzień {0}</value>
+  </data>
+  <data name="Login_ProgressAuthentication" xml:space="preserve">
+    <value>Logowanko...</value>
+  </data>
+  <data name="Login_ProgressRetrieveProfile" xml:space="preserve">
+    <value>Pobieranie danych o profilu...</value>
+  </data>
+  <data name="TrainingDaySelectorControl_ProgressRetrieveEntries" xml:space="preserve">
+    <value>Pobieranie wpisów...</value>
+  </data>
+  <data name="UserViewModel_About_Empty" xml:space="preserve">
+    <value>Ten paker nie napisał jeszcze nic o sobie.</value>
+  </data>
+  <data name="MeasurementsControl_Empty" xml:space="preserve">
+    <value>Ten paker nie podał jeszcze swoich wymiarów.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>ładowanko...</value>
+  </data>
+  <data name="DropSetInfo" xml:space="preserve">
+    <value>{0} drop set</value>
+  </data>
+  <data name="UserViewModel_LastEntryLink" xml:space="preserve">
+    <value>ostatni wpis {0}</value>
+  </data>
+  <data name="UserViewModel_LastEntryLink_Empty" xml:space="preserve">
+    <value>kalendarz jest pusty</value>
+  </data>
+  <data name="AppBarButton_Add" xml:space="preserve">
+    <value>dodaj</value>
+  </data>
+  <data name="AppBarButton_Next" xml:space="preserve">
+    <value>następny</value>
+  </data>
+  <data name="AppBarButton_Previous" xml:space="preserve">
+    <value>poprzedni</value>
+  </data>
+  <data name="AppBarButton_Save" xml:space="preserve">
+    <value>zapisz</value>
+  </data>
+  <data name="AppBarMenu_Delete" xml:space="preserve">
+    <value>usuń</value>
+  </data>
+  <data name="TrainingPlanEntryPage_HeaderInfo" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="TrainingPlanEntryPage_HeaderSets" xml:space="preserve">
+    <value>serie</value>
+  </data>
+  <data name="WorkoutPlans_Filter" xml:space="preserve">
+    <value>filtr</value>
+  </data>
+  <data name="UsersFilterControl_Gender" xml:space="preserve">
+    <value>płeć</value>
+  </data>
+  <data name="UsersFilterControl_Gender_Any" xml:space="preserve">
+    <value>każda</value>
+  </data>
+  <data name="UsersFilterControl_Gender_Female" xml:space="preserve">
+    <value>kobieta</value>
+  </data>
+  <data name="UsersFilterControl_Gender_Male" xml:space="preserve">
+    <value>mężczyzna</value>
+  </data>
+  <data name="UsersFilterControl_OrderBy" xml:space="preserve">
+    <value>posortuj</value>
+  </data>
+  <data name="UsersFilterControl_OrderBy_ByLoginDate" xml:space="preserve">
+    <value>po dacie logowania</value>
+  </data>
+  <data name="UsersFilterControl_OrderBy_ByName" xml:space="preserve">
+    <value>po nazwie</value>
+  </data>
+  <data name="UsersFilterControl_OrderBy_ByTrainingDaysCount" xml:space="preserve">
+    <value>po ilości wpisów</value>
+  </data>
+  <data name="MessageViewModel_ErrorTopicEmpty" xml:space="preserve">
+    <value>Temat nie może być pusty.</value>
+  </data>
+  <data name="MessageViewModel_ErrorSendMessage" xml:space="preserve">
+    <value>Houston, mamy problem z wysłaniem tej wiadomości.</value>
+  </data>
+  <data name="ErrDuringLogin" xml:space="preserve">
+    <value>Nie udało się zalogować do aplikacji. Spróbuj ponownie.</value>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>zaloguj</value>
+  </data>
+  <data name="ErrCannotAddPlanToFavorites" xml:space="preserve">
+    <value>Nie udało się dodać planu do ulubionych. Spróbuj ponownie.</value>
+  </data>
+  <data name="ErrCannotRemovePlanFromFavorites" xml:space="preserve">
+    <value>Nie udało się usunąć planu z listy ulubionych. Spróbuj ponownie.</value>
+  </data>
+  <data name="ErrCannotRetrievePlans" xml:space="preserve">
+    <value>Coś nie bangla przez co lista planów treningowych nie została pobrana. Spróbuj ponownie.</value>
+  </data>
+  <data name="MoreButton" xml:space="preserve">
+    <value>więcej</value>
+  </data>
+  <data name="NewButton" xml:space="preserve">
+    <value>nowy</value>
+  </data>
+  <data name="TipsPage_Loading" xml:space="preserve">
+    <value>Ładowanko...</value>
+  </data>
+  <data name="TipsPage_ProgressRetrieveTips" xml:space="preserve">
+    <value>Pobieranie porad...</value>
+  </data>
+  <data name="TipsPage_Title" xml:space="preserve">
+    <value>PORADY</value>
+  </data>
+  <data name="TrainingPlanEntryPage_Reps" xml:space="preserve">
+    <value>powtórzenia</value>
+  </data>
+  <data name="TrainingPlanEntryPage_RestTime" xml:space="preserve">
+    <value>przerwa:</value>
+  </data>
+  <data name="WorkoutPlans_NoFavoritePlans" xml:space="preserve">
+    <value>Nie masz jeszcze żadnych ulubionych planów.</value>
+  </data>
+  <data name="WorkoutPlans_NoPlansMessage" xml:space="preserve">
+    <value>Nie znaleziono planów spełniających kryteria wyszukiwania.</value>
+  </data>
+  <data name="WorkoutPlans_NoUserPlans" xml:space="preserve">
+    <value>Nie stworzyłeś jeszcze żadnego planu. Możesz to zrobić za pomocą BodyArchitect na PC.</value>
+  </data>
+  <data name="WorkoutPlans_ProgressRetrievingPlans" xml:space="preserve">
+    <value>Pobieranko planów...</value>
+  </data>
+  <data name="ErrCannotRetrieveTips" xml:space="preserve">
+    <value>Coś nie bangla dlatego porady nie zostały pobrane. Spróbuj później.</value>
+  </data>
+  <data name="SupplementItemPage_Dosage" xml:space="preserve">
+    <value>dawka</value>
+  </data>
+  <data name="SupplementItemPage_Time" xml:space="preserve">
+    <value>czas</value>
+  </data>
+  <data name="SupplementsPage_Comments" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="SupplementsPage_NoSupplements" xml:space="preserve">
+    <value>Nie ma jeszcze żadnych suplementów</value>
+  </data>
+  <data name="SupplementsPage_ProgressRetrieveSupplements" xml:space="preserve">
+    <value>Pobieranie suplementów...</value>
+  </data>
+  <data name="SupplementsPage_SuppleHeader" xml:space="preserve">
+    <value>odżyweczki</value>
+  </data>
+  <data name="SupplementsPage_Title" xml:space="preserve">
+    <value>SUPLEMENTY</value>
+  </data>
+  <data name="SupplementsPage_QRemoveSupplement" xml:space="preserve">
+    <value>Czy chcesz usunąć wpis suplementy?</value>
+  </data>
+  <data name="AppBarButton_Delete" xml:space="preserve">
+    <value>usuń</value>
+  </data>
+  <data name="AppBarButton_Refresh" xml:space="preserve">
+    <value>odśwież</value>
+  </data>
+  <data name="AppBarButton_Settings" xml:space="preserve">
+    <value>ustawienia</value>
+  </data>
+  <data name="AppBarMenu_Comment" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="AppBarMenu_Join" xml:space="preserve">
+    <value>połącz</value>
+  </data>
+  <data name="SettingsPage_ContentLanguage" xml:space="preserve">
+    <value>język treści</value>
+  </data>
+  <data name="SettingsPage_CopyValuesForSet" xml:space="preserve">
+    <value>kopiuj wartości dla nowej serii</value>
+  </data>
+  <data name="SettingsPage_EnglishLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SettingsPage_PolishLanguage" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="SettingsPage_RemoveCache" xml:space="preserve">
+    <value>Wyczyść cache</value>
+  </data>
+  <data name="SettingsPage_RetrieveMonthsNumber" xml:space="preserve">
+    <value>pobierz miesiące</value>
+  </data>
+  <data name="SettingsPage_SortExercisesBy" xml:space="preserve">
+    <value>posortuj ćwiczenia po</value>
+  </data>
+  <data name="SettingsPage_SortExercisesBy_Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="SettingsPage_SortExercisesBy_Shortcut" xml:space="preserve">
+    <value>Skrót</value>
+  </data>
+  <data name="SettingsPage_Title" xml:space="preserve">
+    <value>USTAWIENIA</value>
+  </data>
+  <data name="StrengthWorkoutItemPage_NoSets" xml:space="preserve">
+    <value>Jeszcze nie ma serii</value>
+  </data>
+  <data name="StrengthWorkoutPage_NoExercises" xml:space="preserve">
+    <value>Nie ma jeszcze żadnych ćwiczeń w tej sesji</value>
+  </data>
+  <data name="StrengthWorkoutPage_ProgressRetrieveExercises" xml:space="preserve">
+    <value>Pobieranie ćwiczeń...</value>
+  </data>
+  <data name="SupplementChooserPage_SupplementsTitle" xml:space="preserve">
+    <value>suplementy</value>
+  </data>
+  <data name="SupplementItemPage_Comments" xml:space="preserve">
+    <value>komentarze</value>
+  </data>
+  <data name="SupplementItemPage_DosageGrams" xml:space="preserve">
+    <value>gramy</value>
+  </data>
+  <data name="SupplementItemPage_DosageServings" xml:space="preserve">
+    <value>porcje</value>
+  </data>
+  <data name="SupplementItemPage_DosageTablets" xml:space="preserve">
+    <value>tabletki</value>
+  </data>
+  <data name="SupplementItemPage_DosageUnits" xml:space="preserve">
+    <value>jednostki</value>
+  </data>
+  <data name="SendMessagePage_Content" xml:space="preserve">
+    <value>treść</value>
+  </data>
+  <data name="SendMessagePage_Priority" xml:space="preserve">
+    <value>priorytet</value>
+  </data>
+  <data name="SendMessagePage_Priority_High" xml:space="preserve">
+    <value>Wysoki</value>
+  </data>
+  <data name="SendMessagePage_Priority_Low" xml:space="preserve">
+    <value>Niski</value>
+  </data>
+  <data name="SendMessagePage_Priority_Normal" xml:space="preserve">
+    <value>Normalny</value>
+  </data>
+  <data name="SendMessagePage_ProgressSending" xml:space="preserve">
+    <value>Wysyłanko...</value>
+  </data>
+  <data name="SendMessagePage_Topic" xml:space="preserve">
+    <value>temat</value>
+  </data>
+  <data name="ProfilePage_About" xml:space="preserve">
+    <value>o sobie</value>
+  </data>
+  <data name="ProfilePage_AboutWatermark" xml:space="preserve">
+    <value>napisz coś interesującego o sobie</value>
+  </data>
+  <data name="ProfilePage_AutomaticUpdate" xml:space="preserve">
+    <value>automatycznie aktualizuj z kalendarza</value>
+  </data>
+  <data name="ProfilePage_AutomaticUpdateDescription" xml:space="preserve">
+    <value>Gdy automatyczna aktualizacja jest włączona, nie będziesz mógł tutaj zmieniać wymiarów. W tym trybie wymiary wprowadzasz do kalendarza.</value>
+  </data>
+  <data name="ProfilePage_AutomaticUpdateHeader" xml:space="preserve">
+    <value>automatyczna aktualizacja</value>
+  </data>
+  <data name="ProfilePage_Birthday" xml:space="preserve">
+    <value>data urodzenia</value>
+  </data>
+  <data name="ProfilePage_CalendarEntries" xml:space="preserve">
+    <value>wpisy z kalendarza</value>
+  </data>
+  <data name="ProfilePage_Country" xml:space="preserve">
+    <value>kraj</value>
+  </data>
+  <data name="ProfilePage_DateOfBorn" xml:space="preserve">
+    <value>data urodzenia</value>
+  </data>
+  <data name="ProfilePage_Gender" xml:space="preserve">
+    <value>płeć</value>
+  </data>
+  <data name="ProfilePage_InfoHeader" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="ProfilePage_ListOfFriends" xml:space="preserve">
+    <value>lista znajomych</value>
+  </data>
+  <data name="ProfilePage_MeasurementsHeader" xml:space="preserve">
+    <value>wymiary</value>
+  </data>
+  <data name="ProfilePage_MeasurementsSmallHeader" xml:space="preserve">
+    <value>wymiary</value>
+  </data>
+  <data name="ProfilePage_NotificationsHeader" xml:space="preserve">
+    <value>powiadomienia</value>
+  </data>
+  <data name="ProfilePage_PrivacyHeader" xml:space="preserve">
+    <value>prywatność</value>
+  </data>
+  <data name="ProfilePage_Privacy_FriendsOnly" xml:space="preserve">
+    <value>tylko znajomi</value>
+  </data>
+  <data name="ProfilePage_Privacy_Private" xml:space="preserve">
+    <value>prywatne</value>
+  </data>
+  <data name="ProfilePage_Privacy_Public" xml:space="preserve">
+    <value>publiczne</value>
+  </data>
+  <data name="ProfilePage_ProgressSave" xml:space="preserve">
+    <value>Zapisywanko...</value>
+  </data>
+  <data name="ProfilePage_SettingsHeader" xml:space="preserve">
+    <value>ustawienia</value>
+  </data>
+  <data name="ProfilePage_TimeHeader" xml:space="preserve">
+    <value>czas</value>
+  </data>
+  <data name="ErrUploadPhoto" xml:space="preserve">
+    <value>Nie udało się wysłać zdjęcia. Spróbuj ponownie.</value>
+  </data>
+  <data name="ProfilePage_ProgressUploadPhoto" xml:space="preserve">
+    <value>Wysyłanie fotki...</value>
+  </data>
+  <data name="ErrSaveProfile" xml:space="preserve">
+    <value>Nie udało się zaktualizować profilu. Spróbuj ponownie.</value>
+  </data>
+  <data name="ProfilePage_Measurements" xml:space="preserve">
+    <value>wymiary</value>
+  </data>
+  <data name="AppBarButton_Send" xml:space="preserve">
+    <value>wyślij</value>
+  </data>
+  <data name="AppBarButton_AddToFavorites" xml:space="preserve">
+    <value>ulubione</value>
+  </data>
+  <data name="Votes_ProgressRetrieveComments" xml:space="preserve">
+    <value>Pobieranko komentarzy...</value>
+  </data>
+  <data name="AppBarButton_More" xml:space="preserve">
+    <value>więcej</value>
+  </data>
+  <data name="AppBarButton_RateIt" xml:space="preserve">
+    <value>oceń</value>
+  </data>
+  <data name="WorkoutPlanViewPage_VotesHeader" xml:space="preserve">
+    <value>oceny</value>
+  </data>
+  <data name="ErrNoNetwork" xml:space="preserve">
+    <value>Wyłączyli Internet. Poczekaj aż włączą.</value>
+  </data>
+  <data name="VotesControl_NoRatings" xml:space="preserve">
+    <value>Nikt jeszcze nie dał oceny.</value>
+  </data>
+  <data name="VotingPage_Comment" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="VotingPage_Title" xml:space="preserve">
+    <value>oceń!</value>
+  </data>
+  <data name="VotingPage_YourRating" xml:space="preserve">
+    <value>Twoja ocena</value>
+  </data>
+  <data name="VotesControl_ErrRetrieveRatings" xml:space="preserve">
+    <value>Nie udało się pobrać ocen. Spróbuj ponownie.</value>
+  </data>
+  <data name="VotingPage_ProgressSending" xml:space="preserve">
+    <value>Wysyłanko...</value>
+  </data>
+  <data name="VotingPage_ErrSendRating" xml:space="preserve">
+    <value>Podczas oceniania wystąpił błąd. Spróuj ponownie.</value>
+  </data>
+  <data name="ProfileInfoPage_AddToFavorites" xml:space="preserve">
+    <value>dodaj do ulubionych</value>
+  </data>
+  <data name="ProfileInfoPage_Awards" xml:space="preserve">
+    <value>osiągnięcia</value>
+  </data>
+  <data name="ProfileInfoPage_CannotViewMeasurements" xml:space="preserve">
+    <value>Nie masz dostępu do wymiarów tego pakera.</value>
+  </data>
+  <data name="ProfileInfoPage_Country" xml:space="preserve">
+    <value>kraj</value>
+  </data>
+  <data name="ProfileInfoPage_CreatedDate" xml:space="preserve">
+    <value>konto utworzone</value>
+  </data>
+  <data name="ProfileInfoPage_Gender" xml:space="preserve">
+    <value>płeć</value>
+  </data>
+  <data name="ProfileInfoPage_HeaderAbout" xml:space="preserve">
+    <value>o sobie</value>
+  </data>
+  <data name="ProfileInfoPage_HeaderInfo" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="ProfileInfoPage_HeaderMeasurements" xml:space="preserve">
+    <value>wymiary</value>
+  </data>
+  <data name="ProfileInfoPage_ProposeFriendship" xml:space="preserve">
+    <value>zaproś do znajomych</value>
+  </data>
+  <data name="ProfileInfoPage_RejectFriendship" xml:space="preserve">
+    <value>usuń z listy znajomych</value>
+  </data>
+  <data name="ProfileInfoPage_RemoveFromFavorites" xml:space="preserve">
+    <value>usuń z listy ulubionych</value>
+  </data>
+  <data name="ProfileInfoPage_SendMessage" xml:space="preserve">
+    <value>wyślij wiadomość</value>
+  </data>
+  <data name="ProfileInfoPage_ShowCalendar" xml:space="preserve">
+    <value>pokaż kalendarz</value>
+  </data>
+  <data name="ProfileInfoPage_QRejectFriendship" xml:space="preserve">
+    <value>Kończymy znajomość z {0}?</value>
+  </data>
+  <data name="ProfileInfoPage_ProgressSend" xml:space="preserve">
+    <value>Wysyłanko...</value>
+  </data>
+  <data name="ProfileInfoPage_QRemoveFromFavorites" xml:space="preserve">
+    <value>Czy chcesz usunąć {0} z listy ulubionych?</value>
+  </data>
+  <data name="ProfileInfoPage_ProgressRetrieveProfileDetails" xml:space="preserve">
+    <value>Pobieranie danych o profilu...</value>
+  </data>
+  <data name="ProfileInfoPage_QAddToFavorites" xml:space="preserve">
+    <value>Czy chcesz dodać {0} do listy ulubionych?</value>
+  </data>
+  <data name="ProfileInfoPage_QInviteFriendship" xml:space="preserve">
+    <value>Czy chcesz zaprosić {0} do znajomych?</value>
+  </data>
+  <data name="SettingsPage_ErrPushNotifications" xml:space="preserve">
+    <value>Nie udało się włączyć/wyłączyć push notification</value>
+  </data>
+  <data name="SettingsPage_HeaderFeatures" xml:space="preserve">
+    <value>funkcje</value>
+  </data>
+  <data name="SettingsPage_HeaderGeneral" xml:space="preserve">
+    <value>ogólne</value>
+  </data>
+  <data name="SettingsPage_SendCrashInformation" xml:space="preserve">
+    <value>wyślij info o błędach</value>
+  </data>
+  <data name="SettingsPage_SendCrashInformation_Description" xml:space="preserve">
+    <value>Naszym celem jest dostarczenie Tobie aplikacji bez błędów. Niestety nie wiemy, czy program pracuje dobrze na wszystkich telefonach. Dlatego prosimy Cię, abyś włączył tą opcję, dzięki czemu każdy błąd w programie zostanie wysłany do nas. Żadne prywatne dane nie będą wysyłane.</value>
+  </data>
+  <data name="SettingsPage_SendUsageInformation" xml:space="preserve">
+    <value>wyślij info o korzystaniu z programu</value>
+  </data>
+  <data name="SettingsPage_SendUsageInformation_Description" xml:space="preserve">
+    <value>Pomóż nam udoskonalić aplikację przez wysyłanie anonimowych danych o tym, z jakich funkcji najczęściej korzystasz. Żadne prywatne dane nie będą wysyłane.</value>
+  </data>
+  <data name="SettingsPage_ShowUnreadMessages" xml:space="preserve">
+    <value>pokaż nieprzeczytane wiadomości</value>
+  </data>
+  <data name="SettingsPage_ShowUnreadMessages_Description" xml:space="preserve">
+    <value>Gdy umieścisz aplikację na główym ekranie w postaci kafelki, będziesz otrzymywał informacje o każdej nowej wiadomości, którą otrzymałem w BodyArchitect.</value>
+  </data>
+  <data name="SettingsPage_SmallHeaderHelpUs" xml:space="preserve">
+    <value>pomóż nam</value>
+  </data>
+  <data name="SettingsPage_SmallHeaderPushNotifications" xml:space="preserve">
+    <value>push notifications</value>
+  </data>
+  <data name="SupplementChooserViewModel_ErrRetrieveSupplements" xml:space="preserve">
+    <value>Nie udało się pobrać listy suplementów. Spróbuj później.</value>
+  </data>
+  <data name="ExerciseTypeViewModel_ErrRetrieveExercises" xml:space="preserve">
+    <value>Nie udało się pobrać listy ćwiczeń.</value>
+  </data>
+  <data name="WorkoutPlanViewModel_Description_Empty" xml:space="preserve">
+    <value>Ten plan nie ma opisu</value>
+  </data>
+  <data name="SettingsPage_ContentLanguage_Description" xml:space="preserve">
+    <value>Umośliwia zmianę języka programu. Domyślny język pochodzi z ustawień systemowych.</value>
+  </data>
+  <data name="SettingsPage_CopyValuesForSet_Description" xml:space="preserve">
+    <value>Włącz tą opcję, jeśli chcesz, aby ilość powtórzeń i ciężar były kopiowane przy dodawaniu nowej serii.</value>
+  </data>
+  <data name="SettingsPage_RetrieveMonthsNumber_Description" xml:space="preserve">
+    <value>Ilość miesięcy, które będą pobrane jednocześnie z serwera przy ściąganiu danych z kalendarza.</value>
+  </data>
+  <data name="SettingsPage_SortExercisesBy_Description" xml:space="preserve">
+    <value>Określa, czy nazwa ćwiczenia czy skrót będą wyświetlane w treningu siłowym oraz w planach treningowych.</value>
+  </data>
+  <data name="AppBarButton_Search" xml:space="preserve">
+    <value>szukaj</value>
+  </data>
+  <data name="PeoplePage_HeaderAll" xml:space="preserve">
+    <value>wszyscy</value>
+  </data>
+  <data name="PeoplePage_HeaderFavorites" xml:space="preserve">
+    <value>ulubione</value>
+  </data>
+  <data name="PeoplePage_HeaderFriends" xml:space="preserve">
+    <value>znajomi</value>
+  </data>
+  <data name="PeoplePage_NoFavoritesMsg" xml:space="preserve">
+    <value>Twoja lista ulubionych jest pusta. Możesz zapełnić ją korzystając z zakładki wszyscy</value>
+  </data>
+  <data name="PeoplePage_NoFriendsMsg" xml:space="preserve">
+    <value>Twoja lista znajomych jest pusta. Możesz zapełnić ją korzystając z zakładki wszyscy</value>
+  </data>
+  <data name="PeoplePage_Title" xml:space="preserve">
+    <value>LUDZIE</value>
+  </data>
+  <data name="PeoplePage_ProgressRetrieveUsers" xml:space="preserve">
+    <value>Pobieranie użytkowników...</value>
+  </data>
+  <data name="PeoplePage_ErrRetrieveUsers" xml:space="preserve">
+    <value>Wystąpił błąd w trakcie tej operacji. Spróbuj ponownie.</value>
+  </data>
+  <data name="MessageViewPage_ContentcLabel" xml:space="preserve">
+    <value>treść</value>
+  </data>
+  <data name="MessageViewPage_TopicLabel" xml:space="preserve">
+    <value>temat</value>
+  </data>
+  <data name="NewSetPage_Comment" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="NewSetPage_DropSetLabel" xml:space="preserve">
+    <value>drop set</value>
+  </data>
+  <data name="NewSetPage_DropSet_1DropSet" xml:space="preserve">
+    <value>1 dropset</value>
+  </data>
+  <data name="NewSetPage_DropSet_2DropSet" xml:space="preserve">
+    <value>2 dropset</value>
+  </data>
+  <data name="NewSetPage_DropSet_3DropSet" xml:space="preserve">
+    <value>3 dropset</value>
+  </data>
+  <data name="NewSetPage_DropSet_4DropSet" xml:space="preserve">
+    <value>4 dropset</value>
+  </data>
+  <data name="NewSetPage_DropSet_NoDropSet" xml:space="preserve">
+    <value>Bez dropsetu</value>
+  </data>
+  <data name="NewSetPage_HeaderDetails" xml:space="preserve">
+    <value>szczegóły</value>
+  </data>
+  <data name="NewSetPage_HeaderSetInfo" xml:space="preserve">
+    <value>info o serii</value>
+  </data>
+  <data name="NewSetPage_RepsLabel" xml:space="preserve">
+    <value>powtórzenia</value>
+  </data>
+  <data name="NewSetPage_SetTypeLabel" xml:space="preserve">
+    <value>typ serii</value>
+  </data>
+  <data name="AppBarButton_Reply" xml:space="preserve">
+    <value>odpisz</value>
+  </data>
+  <data name="MessageViewPage_ReplyTopicTemplate" xml:space="preserve">
+    <value>RE: {0}</value>
+  </data>
+  <data name="MeasurementsPage_CommentLabel" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="MeasurementsPage_HeaderInfo" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="MeasurementsPage_HeaderMeasurements" xml:space="preserve">
+    <value>wymiary</value>
+  </data>
+  <data name="MeasurementsPage_SmallHeaderInfo" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="MeasurementsPage_SmallHeaderTime" xml:space="preserve">
+    <value>czas</value>
+  </data>
+  <data name="MeasurementsPage_Title" xml:space="preserve">
+    <value>WYMIARY</value>
+  </data>
+  <data name="MessagesPage_HeaderInvitations" xml:space="preserve">
+    <value>zaproszenia</value>
+  </data>
+  <data name="MessagesPage_HeaderMessages" xml:space="preserve">
+    <value>wiadomości</value>
+  </data>
+  <data name="MessagesPage_NoInvitations" xml:space="preserve">
+    <value>Nie masz aktualnie żadnych zaproszeń</value>
+  </data>
+  <data name="MessagesPage_NoMessages" xml:space="preserve">
+    <value>Nie masz aktualnie żadnych wiadomości</value>
+  </data>
+  <data name="ProgressDeleting" xml:space="preserve">
+    <value>Usuwanko...</value>
+  </data>
+  <data name="MeasurementsPage_QRemoveMeasurements" xml:space="preserve">
+    <value>Czy na pewno chcesz usunać wymiary?</value>
+  </data>
+  <data name="MainPage_AboutLink" xml:space="preserve">
+    <value>O NAS</value>
+  </data>
+  <data name="MainPage_CalendarLink" xml:space="preserve">
+    <value>kalendarz</value>
+  </data>
+  <data name="MainPage_HeaderMenu" xml:space="preserve">
+    <value>menu</value>
+  </data>
+  <data name="MainPage_HeaderMyProfile" xml:space="preserve">
+    <value>mój profil</value>
+  </data>
+  <data name="MainPage_HeaderToday" xml:space="preserve">
+    <value>dzisiaj</value>
+  </data>
+  <data name="MainPage_LogoutLink" xml:space="preserve">
+    <value>wyloguj</value>
+  </data>
+  <data name="MainPage_PeopleLink" xml:space="preserve">
+    <value>PAKERZY</value>
+  </data>
+  <data name="MainPage_TipsLink" xml:space="preserve">
+    <value>PORADY</value>
+  </data>
+  <data name="MainPage_WorkoutPlanLink" xml:space="preserve">
+    <value>PLANY</value>
+  </data>
+  <data name="InvitationViewPage_MessageLabel" xml:space="preserve">
+    <value>wiadomość</value>
+  </data>
+  <data name="AppBarButton_Accept" xml:space="preserve">
+    <value>jest git</value>
+  </data>
+  <data name="AppBarButton_Reject" xml:space="preserve">
+    <value>olej</value>
+  </data>
+  <data name="InvitationViewPage_QAcceptInvitation" xml:space="preserve">
+    <value>Chcesz żeby ten paker był Twoim znajomym?</value>
+  </data>
+  <data name="InvitationViewPage_QRejectInvitation" xml:space="preserve">
+    <value>Wyrzucamy misia z listy znajomych?</value>
+  </data>
+  <data name="InvitationViewPage_ErrInvitationOperation" xml:space="preserve">
+    <value>Coś się popsuło i nie można wykonać tej operacji.</value>
+  </data>
+  <data name="ExerciseTypePage_Title" xml:space="preserve">
+    <value>ćwiczenia</value>
+  </data>
+  <data name="ExerciseViewPage_DescriptionLabel" xml:space="preserve">
+    <value>opis</value>
+  </data>
+  <data name="ExerciseViewPage_DifficultLabel" xml:space="preserve">
+    <value>stopień trudności</value>
+  </data>
+  <data name="ExerciseViewPage_ExerciseTypeLabel" xml:space="preserve">
+    <value>rodzaj ćwiczenia</value>
+  </data>
+  <data name="ExerciseViewPage_ForceLabel" xml:space="preserve">
+    <value>typ siły</value>
+  </data>
+  <data name="ExerciseViewPage_HeaderInfo" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="ExerciseViewPage_MechanicLabel" xml:space="preserve">
+    <value>mechanika</value>
+  </data>
+  <data name="EntryObjectPageBase_ProgressUpdating" xml:space="preserve">
+    <value>Aktualizacja...</value>
+  </data>
+  <data name="EntryObjectPageBase_QRetrieveNextMonth" xml:space="preserve">
+    <value>W wybranym przedziale czasowym nie ma więcej wpisów. Czy chcesz, aby program pobrał z serwera następny miesiąc?</value>
+  </data>
+  <data name="CreateProfilePage_BirthdayLabel" xml:space="preserve">
+    <value>data urodzenia</value>
+  </data>
+  <data name="CreateProfilePage_ConfirmPasswordLabel" xml:space="preserve">
+    <value>potwierdź</value>
+  </data>
+  <data name="CreateProfilePage_CountryLabel" xml:space="preserve">
+    <value>kraj</value>
+  </data>
+  <data name="CreateProfilePage_CreateButton" xml:space="preserve">
+    <value>utwórz konto</value>
+  </data>
+  <data name="CreateProfilePage_EmailLabel" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="CreateProfilePage_HeaderPassword" xml:space="preserve">
+    <value>hasło</value>
+  </data>
+  <data name="CreateProfilePage_HeaderProfileInfo" xml:space="preserve">
+    <value>konto</value>
+  </data>
+  <data name="CreateProfilePage_PasswordLabel" xml:space="preserve">
+    <value>hasło</value>
+  </data>
+  <data name="CreateProfilePage_UsernameLabel" xml:space="preserve">
+    <value>nazwa użytkownika</value>
+  </data>
+  <data name="CreateProfilePage_WelcomeToLabel" xml:space="preserve">
+    <value>Witaj pakerze w programie</value>
+  </data>
+  <data name="CreateProfilePage_ErrWrongPasswords" xml:space="preserve">
+    <value>Hasła są różne.</value>
+  </data>
+  <data name="CreateProfilePage_ProgressCreateAccount" xml:space="preserve">
+    <value>Tworzenie konta...</value>
+  </data>
+  <data name="CreateProfilePage_ErrCreateAccount" xml:space="preserve">
+    <value>Houston - mamy problem z utworzeniem konta. Spróbuj ponownie.</value>
+  </data>
+  <data name="CreateProfilePage_ErrRetrieveProfile" xml:space="preserve">
+    <value>Houston - mamy problem z pobraniem danych o profilu.</value>
+  </data>
+  <data name="CreateProfilePage_ProgressRetrieveProfile" xml:space="preserve">
+    <value>Pobieranie danych o profilu...</value>
+  </data>
+  <data name="CardioStrengthTrainingItemPage_NoCardioSessions" xml:space="preserve">
+    <value>Narazie nie masz jeszcze żadnej sesji cardio.</value>
+  </data>
+  <data name="CommentPage_Title" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="CountrySelectorPage_Title" xml:space="preserve">
+    <value>kraje</value>
+  </data>
+  <data name="SettingsPage_HeaderService" xml:space="preserve">
+    <value>usługa</value>
+  </data>
+  <data name="SettingsPage_HeaderStrengthTraining" xml:space="preserve">
+    <value>trening siłowy</value>
+  </data>
+  <data name="BlogPage_HeaderComments" xml:space="preserve">
+    <value>komentarze</value>
+  </data>
+  <data name="BlogPage_ReadOnly_Description" xml:space="preserve">
+    <value>Ten program umożliwia przeglądanie wpisów na blogu. Aby edytować, skorzystaj z bezpłatnej aplikacji na PC.</value>
+  </data>
+  <data name="BlogPage_Title" xml:space="preserve">
+    <value>BLOG</value>
+  </data>
+  <data name="CalendarPage_Title" xml:space="preserve">
+    <value>KALENDARZ</value>
+  </data>
+  <data name="CardioSetPage_CommentLabel" xml:space="preserve">
+    <value>komentarz</value>
+  </data>
+  <data name="CardioSetPage_HeaderDetails" xml:space="preserve">
+    <value>szczegóły</value>
+  </data>
+  <data name="CardioSetPage_HeaderTime" xml:space="preserve">
+    <value>czas</value>
+  </data>
+  <data name="CardioSetPage_StartButton" xml:space="preserve">
+    <value>start</value>
+  </data>
+  <data name="CardioSetPage_StartButton_Description" xml:space="preserve">
+    <value>Naciśnij przycisk start i zacznij biec. Aplikacja zacznie mierzyć czas. Gdy już będziesz miał dość, po prostu kliknij przycisk stop, a całkowity czas zostanie zapisany. Dodatkowo możesz ustawić czas ręcznie.</value>
+  </data>
+  <data name="CardioSetPage_Title" xml:space="preserve">
+    <value>Sesja cardio</value>
+  </data>
+  <data name="AppBarButton_NewComment" xml:space="preserve">
+    <value>dodaj</value>
+  </data>
+  <data name="BlogPage_QRemoveBlog" xml:space="preserve">
+    <value>Czy chcesz usunąć bieżącego bloga?</value>
+  </data>
+  <data name="BlogPage_ProgressRetrieveComments" xml:space="preserve">
+    <value>Pobieranie komentarzy...</value>
+  </data>
+  <data name="BlogPage_ProgressSavingComment" xml:space="preserve">
+    <value>Zachowanie dla potomnych...</value>
+  </data>
+  <data name="BlogPage_ErrSavingComment" xml:space="preserve">
+    <value>Coś nie bangla, dlatego Twój komentarz nie został zapisany. Spróbuj ponownie.</value>
+  </data>
+  <data name="AboutPage_CreatedBy" xml:space="preserve">
+    <value>stworzony przez</value>
+  </data>
+  <data name="AboutPage_RateReviewLink" xml:space="preserve">
+    <value>Oceń program</value>
+  </data>
+  <data name="AboutPage_Version" xml:space="preserve">
+    <value>WERSJA: {0}</value>
+  </data>
+  <data name="ObjectsReposidory_ErrRetrieveWorkoutPlans" xml:space="preserve">
+    <value>Coś nie zabanglało podczas pobierania planów treningowych. Spróbuj ponownie.</value>
+  </data>
+  <data name="ApplicationState_ErrRetrieveTrainingDays" xml:space="preserve">
+    <value>Coś nie bangla, dlatego Twoje wpisy z kalendarza nie zostały pobrane. Spróbuj ponownie.</value>
+  </data>
+  <data name="FeatureConfirmationControl_Bye" xml:space="preserve">
+    <value>Dzięki!</value>
+  </data>
+  <data name="FeatureConfirmationControl_EnablePushNotifications" xml:space="preserve">
+    <value>Włącz push notification (Live Tile)</value>
+  </data>
+  <data name="FeatureConfirmationControl_IntroMessage" xml:space="preserve">
+    <value>Określ, jakie funkcje chciałbyś włączyć. Pamiętaj, że w każdym momencie możesz zmienić je w Ustawieniach programu.</value>
+  </data>
+  <data name="FeatureConfirmationControl_PrivacyInfo" xml:space="preserve">
+    <value>Żadne prywatne informacje nie będą wysyłane podczas przesyłania danych o błędach lub sposobie korzystania z program. Zachęcam Cię do włączenia wszystkich opcji. Dzięki temu pomagasz nam ulepszyć ten program.</value>
+  </data>
+  <data name="FeatureConfirmationControl_SendCrashData" xml:space="preserve">
+    <value>Pokaż jak korzystasz z programu</value>
+  </data>
+  <data name="FeatureConfirmationControl_SendUsageData" xml:space="preserve">
+    <value>Wysyłaj dane o błędach</value>
+  </data>
+  <data name="AboutPage_EMailUsLink" xml:space="preserve">
+    <value>Napisz do nas</value>
+  </data>
+  <data name="TrainingPlanEntryPage_NoSets" xml:space="preserve">
+    <value>Dla tego ćwiczenia nie ma zdefiniowanych serii</value>
+  </data>
+  <data name="ErrOldData" xml:space="preserve">
+    <value>Bieżący wpis został zmieniony na serwerze. Musisz odświeżyć dane i spróbować ponownie.</value>
+  </data>
+  <data name="ErrOfflineMode" xml:space="preserve">
+    <value>Ta operacja jest niedostępna w trybie Offline.</value>
+  </data>
+  <data name="OfflineModeFeatureNotAvailable" xml:space="preserve">
+    <value>Ta funkcja nie jest dostępna w trybie Offline.</value>
+  </data>
+  <data name="OfflineModeFeatureNotRetrieved" xml:space="preserve">
+    <value>W trybie Offline aplikacja nie pobiera żadnych danych z serwera. Następnym razem wejdź tutaj w trybie Online, żeby program pobrał potrzebne dane. Wtedy ta funkcja będzie dostępna również w trybie Offline.</value>
+  </data>
+  <data name="MyProfileControl_GoOnline" xml:space="preserve">
+    <value>tryb online</value>
+  </data>
+  <data name="MyProfileControl_GoOffline" xml:space="preserve">
+    <value>go offline</value>
+  </data>
+  <data name="SynchronizationPage_NoEntries" xml:space="preserve">
+    <value>Brak wpisów do synchronizacji</value>
+  </data>
+  <data name="SynchronizationPage_SkipWhenConflict" xml:space="preserve">
+    <value>Pomiń, gdy jest konflikt</value>
+  </data>
+  <data name="SynchronizationPage_StopButton" xml:space="preserve">
+    <value>Zatrzymaj</value>
+  </data>
+  <data name="SynchronizationPage_SynchronizeButton" xml:space="preserve">
+    <value>Synchronizuj</value>
+  </data>
+  <data name="SynchronizationPage_Title" xml:space="preserve">
+    <value>synchronizuj</value>
+  </data>
+  <data name="SynchronizationPage_UseLocalVersion" xml:space="preserve">
+    <value>Użyj wpisu z telefonu</value>
+  </data>
+  <data name="SynchronizationPage_UseServerVersion" xml:space="preserve">
+    <value>Użyj wpisu z serwera</value>
+  </data>
+  <data name="SynchronizationPage_QOnBackWhenSyncing" xml:space="preserve">
+    <value>Synchronizacja danych jest uruchomiona. Czy chcesz ją zatrzymać?</value>
+  </data>
+  <data name="EntryObjectPageBase_ErrDuringRefresh" xml:space="preserve">
+    <value>Nie udało się odświeżyć bieżącego wpisu.</value>
+  </data>
+  <data name="EntryObjectPageBase_QResfreshMerge" xml:space="preserve">
+    <value>Na serwerze pojawiła się inna wersja wpisu, dlatego program scali obie wersje. Czy chcesz, aby w sytuacjach konfliktowych użyć wersji z serwera?</value>
+  </data>
+  <data name="EntryObjectPageBase_ProgressRefresh" xml:space="preserve">
+    <value>Odświeżanko...</value>
+  </data>
+  <data name="EntryObjectPageBase_SavedLocallyOnly" xml:space="preserve">
+    <value>Zapisano tylko lokalnie. Wymagana będzie synchronizacja.</value>
+  </data>
+  <data name="MyProfileViewModel_NumberOfEntriesToSync" xml:space="preserve">
+    <value>Do synchronizacji: {0}</value>
+  </data>
+  <data name="TrainingDaySelectorControl_QCrashSaverRestoreEntry" xml:space="preserve">
+    <value>Ostatnio w aplikacji wystąpił błąd podczas edycji wpisu. Czy chcesz przywrócić ten wpis?</value>
+  </data>
+  <data name="EntryObjectPageBase_ErrOfflineRetrieveEntries" xml:space="preserve">
+    <value>W trybie Offline nie możesz pobierać żadnych danych.</value>
+  </data>
+  <data name="Login_ErrGoOffline_MustLoginFirst" xml:space="preserve">
+    <value>Musisz przynajmniej raz zalogować się, aby skorzystać z trybu Offline.</value>
+  </data>
+  <data name="Login_ErrGoOfflineMode" xml:space="preserve">
+    <value>Mały problemik z trybem Offline. Zaloguj się I wyczyść cache w Ustawieniach program.</value>
+  </data>
+  <data name="ErrCannotModifyEntriesOfAnotherUser" xml:space="preserve">
+    <value>Nie możesz mistrzu edytować wpisów należących do innego pakera.</value>
+  </data>
+  <data name="StrengthWorkoutPage_ErrCannotViewDeletedExercise" xml:space="preserve">
+    <value>Nie możesz oglądać usuniętych ćwiczeń lub prywatnych innego pakera</value>
+  </data>
+  <data name="ExerciseDTO_DeletedExerciseName" xml:space="preserve">
+    <value>Usunięte ćwiczenie.</value>
+  </data>
+  <data name="SynchronizationPage_ErrSynchronizeInOffline" xml:space="preserve">
+    <value>Nie można synchronizować danych w trybie Offline. Zaloguj się i spróbuj ponownie.</value>
+  </data>
+  <data name="EntryObjectPageBase_QCopyToTodayOverwrite" xml:space="preserve">
+    <value>Dzisiaj dodałeś już ten wpis. Dodać następny?</value>
+  </data>
+  <data name="EntryObjectPageBase_CopyEntryToTodayCompleted" xml:space="preserve">
+    <value>Wpis został skopiowany. Możesz teraz zapisać go do bazy.</value>
+  </data>
+  <data name="AppBarMenu_CopyToToday" xml:space="preserve">
+    <value>kopiuj do dzisiaj</value>
+  </data>
+  <data name="UserStatistics_A6WEntriesCount" xml:space="preserve">
+    <value>Wpisy A6W:</value>
+  </data>
+  <data name="UserStatistics_A6WFullCyclesCount" xml:space="preserve">
+    <value>Zakończone cykle A6W:</value>
+  </data>
+  <data name="UserStatistics_BlogCommentsCountText" xml:space="preserve">
+    <value>Ilość udzielonych komentarzy:</value>
+  </data>
+  <data name="UserStatistics_BlogEntriesCount" xml:space="preserve">
+    <value>Wpisy bloga:</value>
+  </data>
+  <data name="UserStatistics_FollowersCountText" xml:space="preserve">
+    <value>Liczba osób śledzących:</value>
+  </data>
+  <data name="UserStatistics_FriendsCountText" xml:space="preserve">
+    <value>Liczba znajomych:</value>
+  </data>
+  <data name="UserStatistics_LastEntryDateText" xml:space="preserve">
+    <value>Ostatni wpis:</value>
+  </data>
+  <data name="UserStatistics_LastEntryDateToolTip" xml:space="preserve">
+    <value>Data ostatniego wpisu:</value>
+  </data>
+  <data name="UserStatistics_LastLogin" xml:space="preserve">
+    <value>Ostatnie logowanie:</value>
+  </data>
+  <data name="UserStatistics_MyBlogCommentsCount" xml:space="preserve">
+    <value>Liczba komentarzy w blogach tego pakera:</value>
+  </data>
+  <data name="UserStatistics_NextAvailableStatus_ToolTip" xml:space="preserve">
+    <value>Następny poziom {0} wymaga {1} pozycji.</value>
+  </data>
+  <data name="UserStatistics_NoStatus_Description_ToolTip" xml:space="preserve">
+    <value>Brak statusu w tej kategorii. Aby zdobyć status {0}, musisz mieć {1} pozycji.</value>
+  </data>
+  <data name="UserStatistics_SizeEntriesCount" xml:space="preserve">
+    <value>Liczba wykonanych pomiarów:</value>
+  </data>
+  <data name="UserStatistics_StarToolTip" xml:space="preserve">
+    <value>{0} medal w kategorii {1}.</value>
+  </data>
+  <data name="UserStatistics_Status_Description_ToolTip" xml:space="preserve">
+    <value>{0}: Bieżący status zdobyty po uzyskaniu {1} elementów w tej kategorii. {2}</value>
+  </data>
+  <data name="UserStatistics_StrengthTrainingEntriesCount" xml:space="preserve">
+    <value>Liczba wpisów treningu siłowego:</value>
+  </data>
+  <data name="UserStatistics_SupplementsEntriesCount" xml:space="preserve">
+    <value>Liczba wpisów Suplementy:</value>
+  </data>
+  <data name="UserStatistics_TrainingDaysCountText" xml:space="preserve">
+    <value>Wpisy w kalendarzu:</value>
+  </data>
+  <data name="UserStatistics_VotesCountText" xml:space="preserve">
+    <value>Liczba wystawionych ocen:</value>
+  </data>
+  <data name="UserStatistics_WorkoutPlansText" xml:space="preserve">
+    <value>Ilość planów treningowych:</value>
+  </data>
+  <data name="WorkoutPlanViewControl_btnUseInToday_QUsePlanInCalendar" xml:space="preserve">
+    <value>Czy chcesz wstawić wybrany dzień z planu do swojego kalendarza do sekcji "dzisiaj"?</value>
+  </data>
+  <data name="WorkoutPlanViewControl_ErrMustAddPlanToFavorites" xml:space="preserve">
+    <value>Aby wstawić plan do kalendarza, musisz go wpierw dodać do listy ulubionych.</value>
+  </data>
+  <data name="SettingsPage_CopySetsModeTitle" xml:space="preserve">
+    <value>kopiuj serie do nowego wpisu</value>
+  </data>
+  <data name="SettingsPage_CopySetsMode_AllData" xml:space="preserve">
+    <value>Wszystkie dane</value>
+  </data>
+  <data name="SettingsPage_CopySetsMode_Description" xml:space="preserve">
+    <value>Określa jak wpisy treningu siłowego będą kopiowane oraz w jaki sposób plany treningowe będą wstawiane do kalendarza.</value>
+  </data>
+  <data name="SettingsPage_CopySetsMode_OnlyExercises" xml:space="preserve">
+    <value>Kopiuj ćwiczenia bez serii</value>
+  </data>
+  <data name="SettingsPage_CopySetsMode_WithoutSetsData" xml:space="preserve">
+    <value>Bez ilości powtórzeń i ciężaru w seriach</value>
+  </data>
+  <data name="Login_ProgressOfflineModeStart" xml:space="preserve">
+    <value>Odpalamy tryb Offline...</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh" xml:space="preserve">
+    <value>automatyczne odświeżanie danych</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_Description" xml:space="preserve">
+    <value>Tutaj możesz określić, jak często aplikacja będzie pobierała ćwiczenia, suplementy oraz plany treningowe. Pamiętaj, że zawsze możesz odświeżyć dane ręcznie.</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_Every1Month" xml:space="preserve">
+    <value>Raz w miesiącu</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_Every1Week" xml:space="preserve">
+    <value>Raz w tygodniu</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_Every2Weeks" xml:space="preserve">
+    <value>Raz na 2 tygodnie</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_Every3Days" xml:space="preserve">
+    <value>Raz na 3 dni</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_EveryDay" xml:space="preserve">
+    <value>Raz dziennie</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_EveryLogin" xml:space="preserve">
+    <value>Przy każdym logowaniu</value>
+  </data>
+  <data name="SettingsPage_AutomaticCacheRefresh_Never" xml:space="preserve">
+    <value>Nigdy</value>
+  </data>
+  <data name="SettingsPage_HeaderMisc" xml:space="preserve">
+    <value>inne</value>
+  </data>
+  <data name="SettingsPage_RemovePictureCache_Description" xml:space="preserve">
+    <value>Usuwa wszystkie zdjęcia, porady, ćwiczenia, suplemeny, plany treningowe oraz wpisy z kalendarza z pamięci podręcznej. Po tej operacji aplikacja pobierze na nowo wszystkie dane z serwera.</value>
+  </data>
+  <data name="SettingsPage_SmallHeaderCache" xml:space="preserve">
+    <value>pamięć podręczna</value>
+  </data>
+  <data name="CreateProfilePage_ErrSelectCountry" xml:space="preserve">
+    <value>Musisz wybrać kraj, z którego pochodzisz.</value>
+  </data>
+  <data name="Login_OfflineMode" xml:space="preserve">
+    <value>tryb offline</value>
+  </data>
+  <data name="ProfilePage_ErrDifferentPassword" xml:space="preserve">
+    <value>Hasła są różne</value>
+  </data>
+  <data name="ProfilePage_HeaderPasswordChange" xml:space="preserve">
+    <value>zmień hasło</value>
+  </data>
+  <data name="ForgotPasswordControl_PasswordHasBeenSent" xml:space="preserve">
+    <value>Nowe hasło zostało wysłane. Sprawdź pocztę.</value>
+  </data>
+  <data name="ForgotPasswordControl_Description" xml:space="preserve">
+    <value>Podaj swojego użytkownika lub adres email I naciśnij przycisk Ok. Nowe hasło zostanie wysłane emailem.</value>
+  </data>
+  <data name="ForgotPasswordControl_Title" xml:space="preserve">
+    <value>PRZYWRACANIE HASŁA</value>
+  </data>
+  <data name="ExerciseViewPage_GoToWeb" xml:space="preserve">
+    <value>przejdź do strony</value>
+  </data>
+  <data name="StatisticsPage_Title" xml:space="preserve">
+    <value>statystyki</value>
+  </data>
+  <data name="Login_ForgotPassword" xml:space="preserve">
+    <value>zapomniałem hasła</value>
+  </data>
+  <data name="MainPage_OfflineStatus" xml:space="preserve">
+    <value>offline</value>
+  </data>
+  <data name="ProfileInfoPage_ShowStatistics" xml:space="preserve">
+    <value>pokaż statystyki</value>
+  </data>
+  <data name="SynchronizationPage_QQuitQuestionWhenSyncing" xml:space="preserve">
+    <value>Synchronizacja danych jest uruchomiona. Czy chcesz ją zatrzymać?</value>
+  </data>
+  <data name="CreateProfilePage_TermsOfServiceLink" xml:space="preserve">
+    <value>Regulamin...</value>
+  </data>
+  <data name="CreateProfilePage_PrivacyPolicyLink" xml:space="preserve">
+    <value>Polityka Prywatności</value>
+  </data>
+  <data name="CreateProfilePage_AcceptLicenceDescription" xml:space="preserve">
+    <value>Klikając przycisk Utwórz konto, akceptujesz Regulamin oraz Politykę Prywatności</value>
+  </data>
+  <data name="MainPage_RateMeLink" xml:space="preserve">
+    <value>OCEŃ MNIE!</value>
+  </data>
+  <data name="SizesChangeToStringConverter_ProOnly" xml:space="preserve">
+    <value>(Wersja Pro)</value>
+  </data>
+  <data name="MenuUseIt" xml:space="preserve">
+    <value>skopiuj</value>
+  </data>
+  <data name="StrengthWorkoutPage_PreviewHeader" xml:space="preserve">
+    <value>podgląd</value>
+  </data>
+  <data name="StrengthWorkoutPage_NoMoreTrainingsLoaded" xml:space="preserve">
+    <value>Nie ma już więcej pobranych wpisów w kalendarzu</value>
+  </data>
+  <data name="MainPage_MoreLink" xml:space="preserve">
+    <value>WIĘCEJ</value>
+  </data>
+  <data name="MoreFeaturePage_Description" xml:space="preserve">
+    <value>Zachęcamy gorąco do ściągnięcia programu &lt;b&gt;Body&lt;/b&gt;&lt;i&gt;Architect&lt;/i&gt; dla PC. Aplikacja jest bezpłatna i posiada dodatkowe funkcje, m.in.:
+&lt;b&gt;Dodawanie nowych ćwiczeń&lt;/b&gt;
+&lt;b&gt;Tworzenie planów treningowych&lt;/b&gt;
+&lt;b&gt;Generowanie raportów&lt;/b&gt;
+&lt;b&gt;Aerobiczne "6" Weidera&lt;/b&gt;
+&lt;b&gt;Rozpiski suplementów&lt;/b&gt;
+&lt;b&gt;Więcej narzędzi dla instruktorów&lt;/b&gt;
+
+Zainteresowany? Odwiedź naszą stronę:
+</value>
+  </data>
+  <data name="SettingsPage_LengthType" xml:space="preserve">
+    <value>długość</value>
+  </data>
+  <data name="SettingsPage_LengthType_Cm" xml:space="preserve">
+    <value>Cm</value>
+  </data>
+  <data name="SettingsPage_LengthType_Inch" xml:space="preserve">
+    <value>Cale</value>
+  </data>
+  <data name="SettingsPage_SmallHeaderMeasurements" xml:space="preserve">
+    <value>wymiary</value>
+  </data>
+  <data name="SettingsPage_WeightType" xml:space="preserve">
+    <value>waga</value>
+  </data>
+  <data name="SettingsPage_WeightType_Kg" xml:space="preserve">
+    <value>Kg</value>
+  </data>
+  <data name="SettingsPage_WeightType_Pound" xml:space="preserve">
+    <value>Funty</value>
+  </data>
+  <data name="Inch" xml:space="preserve">
+    <value>cale</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>lbs</value>
+  </data>
+  <data name="CardioSetPage_StopButton" xml:space="preserve">
+    <value>stop</value>
+  </data>
+  <data name="WorkoutPlans_SearchHeader" xml:space="preserve">
+    <value>szukaj</value>
+  </data>
+  <data name="SupplementsPage_InfoHeader" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="ErrUnhandledErrorOccured" xml:space="preserve">
+    <value>Wystąpił błąd podczas tej operacji.</value>
+  </data>
+  <data name="HubTile_BlogComments_Message" xml:space="preserve">
+    <value>Komentarze: {0}</value>
+  </data>
+  <data name="HubTile_BlogLastComment_Message" xml:space="preserve">
+    <value>Ostatni:</value>
+  </data>
+  <data name="SettingsPage_ShowSystemTray" xml:space="preserve">
+    <value>pokazuj pasek systemowy</value>
+  </data>
+  <data name="SettingsPage_ShowSystemTray_Description" xml:space="preserve">
+    <value>Pokazanie paska spowoduje wyświetlenie na większości stron w programie zegara oraz stopnia naładowania baterii.</value>
+  </data>
+  <data name="SettingsPage_SmallHeaderGUI" xml:space="preserve">
+    <value>wygląd</value>
+  </data>
+  <data name="BlogPage_NewCommentWatermark" xml:space="preserve">
+    <value>napisz komentarz</value>
+  </data>
+  <data name="SettingsPage_DefaultLanguage" xml:space="preserve">
+    <value>Domyślny</value>
+  </data>
+  <data name="SettingsPage_MsgRestartToApplySettings" xml:space="preserve">
+    <value>Aby nowy język był widoczny należy zresetować aplikację.</value>
+  </data>
+  <data name="TrainingDayEntrySelectorPage_HeadeEntries" xml:space="preserve">
+    <value>wpisy</value>
+  </data>
+  <data name="MessageNewRecords" xml:space="preserve">
+    <value>Pobiłeś nowe rekordy!</value>
+  </data>
+  <data name="MessageOfflineModeDescription" xml:space="preserve">
+    <value>Program działa teraz w trybie Offline. Oznacza to, że nie udało się połączyć z serwerem. Ten tryb ma wiele ograniczeń, jednak nadal możesz dodawać wpisy do swojego kalendarza. Będą one zapisane w pamięci telefonu. W przypadku ponownego połączenia z serwerem, należy dokonać synchronizacji.</value>
+  </data>
+  <data name="StrengthTrainingItemOptionsPage_Equipment_Description" xml:space="preserve">
+    <value>Określa sposób wykonania ćwiczenia. W przypadku, gdy ćwiczenie wykonujesz w standardowy sposób to ustaw domyślnie. Każda inna opcja przeznaczona jest tylko w wyjątkowych sytuacjach. Tylko ćwiczenia z domyślnym przyrządem są uwzględniane w rekordach.</value>
+  </data>
+  <data name="StrengthTrainingItemOptionsPage_Equipment_Label" xml:space="preserve">
+    <value>przyrząd</value>
+  </data>
+  <data name="StrengthTrainingItemOptionsPage_Title" xml:space="preserve">
+    <value>więcej</value>
+  </data>
+  <data name="StrengthTrainingOptionsPage_MyPlaces_Description" xml:space="preserve">
+    <value>Moje miejsca dają możliwość określenie, na której siłowni odbył się trening. Dzięki temu można np wygenerować wykres uwzględniający treningi tylko z konkretnego miejsca.</value>
+  </data>
+  <data name="StrengthTrainingOptionsPage_MyPlaces_Label" xml:space="preserve">
+    <value>moje miejsca</value>
+  </data>
+  <data name="ProfilePage_Notification_EMail" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="ProfilePage_Notification_FavoriteCalendarChanged" xml:space="preserve">
+    <value>gdy osoba, którą śledzisz, dodała wpis do kalendarza</value>
+  </data>
+  <data name="ProfilePage_Notification_FriendCalendarChanged" xml:space="preserve">
+    <value>kiedy Twój znajomy dodał wpis do kalendarza</value>
+  </data>
+  <data name="ProfilePage_Notification_Message" xml:space="preserve">
+    <value>wiadomość</value>
+  </data>
+  <data name="ProfilePage_Notification_Social" xml:space="preserve">
+    <value>poinformuj o wszystkich wydarzeniach społecznościowych</value>
+  </data>
+  <data name="ProfilePage_Notification_SomeoneCommentYourItem" xml:space="preserve">
+    <value>gdy ktoś dodał komentarz do Twojego dnia</value>
+  </data>
+  <data name="ProfilePage_Notification_VotedYourItem" xml:space="preserve">
+    <value>gdy ktoś ocenił Twój plan, ćwiczenie lub rozpiskę suplementów</value>
+  </data>
+  <data name="StrengthTraining_MsgIncorrectSetsValidation" xml:space="preserve">
+    <value>Program wykrył, że niektóre serię mają prawdopodobnie błędne dane. Wybierz OK, aby zapisać trening lub Anuluj, aby wrócić do edycji i poprawić błędy.
+
+Nieprawidłowe serie:</value>
+  </data>
+  <data name="ProfilePage_AllowComments" xml:space="preserve">
+    <value>komentarze</value>
+  </data>
+  <data name="ProfilePage_AllowComments_Description" xml:space="preserve">
+    <value>Zaznacz, jeśli chcesz aby inni użytkownicy mogli komentować Twoje wpisy w kalendarzu. Jest to domyślne ustawienie dla nowych wpisów. W kalendarzu możesz włączyć możliwość komentowania dla każdego dnia z osobna.</value>
+  </data>
+  <data name="ProfilePage_MiscHeader" xml:space="preserve">
+    <value>inne</value>
+  </data>
+  <data name="UserStatistics_SupplementsDefinitionsCount" xml:space="preserve">
+    <value>Rozpiski suplementów:</value>
+  </data>
+  <data name="BlogViewModel_CommentsDisabled" xml:space="preserve">
+    <value>Możliwość komentowania została wyłączona dla tego dnia</value>
+  </data>
+  <data name="ErrCommentsAreDisabled" xml:space="preserve">
+    <value>Możliwość komentowania została wyłączona dla tego dnia</value>
+  </data>
+  <data name="AccountTypePage_BuyMore_Link" xml:space="preserve">
+    <value>zakup punkty...</value>
+  </data>
+  <data name="AccountTypePage_Header_MyAccount" xml:space="preserve">
+    <value>moje konto</value>
+  </data>
+  <data name="AccountTypePage_MyPoints" xml:space="preserve">
+    <value>moje punkty</value>
+  </data>
+  <data name="AccountTypePage_MyPoints_Description" xml:space="preserve">
+    <value>Korzystanie z wyższych kont wymaga odpowiedniej ilości punktów. W opisie każdego typu konta masz informację, ile punktów będzie Cie kosztować każdy dzień korzystania z niego.</value>
+  </data>
+  <data name="SupplementItemPage_Name" xml:space="preserve">
+    <value>nazwa</value>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>zamknij</value>
+  </data>
+  <data name="UpgradeAccountControl_ChangeButton" xml:space="preserve">
+    <value>zmień...</value>
+  </data>
+  <data name="UpgradeAccountControl_InstructorAccountMessage" xml:space="preserve">
+    <value>Ta funkcja jest dostępna tylko w koncie &lt;b&gt;Instruktor&lt;/b&gt;. Kliknij na link poniżej, aby zobaczyć jakie jeszcze możliwości otrzymasz po zmianie konta.</value>
+  </data>
+  <data name="UpgradeAccountControl_PremiumAccountMessage" xml:space="preserve">
+    <value>Ta funkcja jest dostępna tylko w koncie &lt;b&gt;Premium&lt;/b&gt; lub &lt;b&gt;Instruktor&lt;/b&gt;. Kliknij na link poniżej, aby zobaczyć jakie jeszcze możliwości otrzymasz po zmianie konta.</value>
+  </data>
+  <data name="UpgradeAccountControl_ShowInstructorInfo" xml:space="preserve">
+    <value>Pokaż konto Instruktor</value>
+  </data>
+  <data name="UpgradeAccountControl_ShowPremiumInfo" xml:space="preserve">
+    <value>Pokaż konto Premium</value>
+  </data>
+  <data name="AccountTypePage_BasicAccount_Description" xml:space="preserve">
+    <value>Całkowicie bezpłatne konto, które daje Ci dostęp do większości funkcji w programie. Nie potrzeba nic wiecej, aby zacząć prowadzić profesjonalny i bardzo pomocny dziennik treningowy. Dołącz do grona najlepszych pakerów na świecie!</value>
+  </data>
+  <data name="AccountTypePage_Button_More" xml:space="preserve">
+    <value>więcej...</value>
+  </data>
+  <data name="AccountTypePage_ChangingAccountType" xml:space="preserve">
+    <value>Zmieniam typ konta...</value>
+  </data>
+  <data name="AccountTypePage_ErrCannotChangeAccountType" xml:space="preserve">
+    <value>Nie udało się zmienić typu konta</value>
+  </data>
+  <data name="AccountTypePage_ErrNotEnoughPoints" xml:space="preserve">
+    <value>Nie masz wystarczającej ilości punktów, aby zmienić typ konta. Rozważ zakup pakietu punktów i spróbuj zmienić typ konta ponownie.</value>
+  </data>
+  <data name="AccountTypePage_Header_ChangeAccount" xml:space="preserve">
+    <value>zmień</value>
+  </data>
+  <data name="AccountTypePage_InstructorAccount_Description" xml:space="preserve">
+    <value>Jeśli jestes instruktorem fitness i prowadzisz zajęcia lub treningi indywidualne, to konto Instruktor jest stworzone specjalnie dla Ciebie. Stwórz swoją bazę klientów oraz plan zajęć, a następnie prowadź dziennik treningowy dla każdego klienta osobno. Teraz w każdej chwili będziesz miał dostęp do wszystkich treningów swoich klientów, a dzięki wykresom będziesz mógł śledzić postępy swoich podopiecznych.</value>
+  </data>
+  <data name="AccountTypePage_PointsPerDay" xml:space="preserve">
+    <value>pkt na dzień</value>
+  </data>
+  <data name="AccountTypePage_PremiumAccount_Description" xml:space="preserve">
+    <value>Jeszcze Ci mało pakerze? Doceniłeś wagę dokładnego dziennika treningowego w modelowaniu swojej sylwetki i szukasz jeszcze skuteczniejszych narzędzi, które pomogą Ci doprowadzić swoje ciało do perfekcji? Konto Premium daje Ci dostęp do wszystkich funkcjonalności programu (oprócz narzędzi zaprojektowanych specjalnie dla instruktorów). Znajdziesz tutaj wiele dodatkowych funkcji a także mnówsto mniejszych usprawnień, które sprawią, że praca z programem będzie jeszcze przyjemniejsza, a treningi zdecydowanie skuteczniejsze.</value>
+  </data>
+  <data name="AccountTypePage_QChangeAccountToHigher" xml:space="preserve">
+    <value>Czy na pewno chcesz zmienic typ konta?</value>
+  </data>
+  <data name="AccountTypePage_QChangeAccountToLower" xml:space="preserve">
+    <value>Zmieniając typ konta na niższy, musimy zabrać Ci następującą ilość punktów: {0}. Czy na pewno chcesz kontynuować?</value>
+  </data>
+  <data name="EntryStatusDone" xml:space="preserve">
+    <value>wykonane</value>
+  </data>
+  <data name="EntryStatusPlanned" xml:space="preserve">
+    <value>zaplanowane</value>
+  </data>
+  <data name="StrengthWorkoutPage_EntryStatusHeader" xml:space="preserve">
+    <value>status</value>
+  </data>
+  <data name="MainPage_InstructorLink" xml:space="preserve">
+    <value>BODYINSTRUCTOR</value>
+  </data>
+  <data name="BodyInstructorPage_Header_Customers" xml:space="preserve">
+    <value>klienci</value>
+  </data>
+  <data name="BodyInstructorPage_Header_More" xml:space="preserve">
+    <value>więcej</value>
+  </data>
+  <data name="BodyInstructorPage_NoCustomersMsg" xml:space="preserve">
+    <value>Nie masz żadnych klientów. Skorzystaj z aplikacji na PC, aby dodać paru.</value>
+  </data>
+  <data name="BodyInstructorPage_MoreMsg" xml:space="preserve">
+    <value>Aby móc dodać nowe zajęcia, grupy użytkowników lub stworzyć harmonogram zajęć, skorzystaj z wersji na PC.</value>
+  </data>
+  <data name="BodyInstructorPage_RetrievingCustomers" xml:space="preserve">
+    <value>Pobieranie listy klientów...</value>
+  </data>
+  <data name="CustomerInfoPage_Birthday" xml:space="preserve">
+    <value>data urodzenia</value>
+  </data>
+  <data name="CustomerInfoPage_CreatedDate" xml:space="preserve">
+    <value>data utworzenia</value>
+  </data>
+  <data name="CustomerInfoPage_EMail" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="CustomerInfoPage_Header_Info" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="CustomerInfoPage_MsgNoMeasurements" xml:space="preserve">
+    <value>Klient nie ma dodanych wymiarów.</value>
+  </data>
+  <data name="CustomerInfoPage_Phone" xml:space="preserve">
+    <value>telefon</value>
+  </data>
+  <data name="CustomerInfoPage_VirtualCustomer" xml:space="preserve">
+    <value>wirtualny</value>
+  </data>
+  <data name="CalendarPage_EntriesNotRetrieved" xml:space="preserve">
+    <value>Wpisy dla tego miesiąca nie zostały jeszcze pobrane</value>
+  </data>
+  <data name="MainPage_MyAccount" xml:space="preserve">
+    <value>moje konto</value>
+  </data>
+  <data name="TrainingDaySelectorControl_NeedsSync" xml:space="preserve">
+    <value>Wymagana synchronizacja</value>
+  </data>
+  <data name="ErrLicence" xml:space="preserve">
+    <value>Ta opcja nie jest dostępna dla Twojego konta.</value>
+  </data>
+  <data name="AccountType_Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="AccountType_Instructor" xml:space="preserve">
+    <value>Instruktor</value>
+  </data>
+  <data name="AccountType_PremiumUser" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="AccountType_User" xml:space="preserve">
+    <value>Podstawowe</value>
+  </data>
+  <data name="AchievementRank_Rank2" xml:space="preserve">
+    <value>Początkujący</value>
+  </data>
+  <data name="AchievementRank_Rank3" xml:space="preserve">
+    <value>Rezydent</value>
+  </data>
+  <data name="AchievementRank_Rank4" xml:space="preserve">
+    <value>Maniak</value>
+  </data>
+  <data name="AchievementRank_Rank5" xml:space="preserve">
+    <value>Ekspert</value>
+  </data>
+  <data name="AchievementRank_Rank6" xml:space="preserve">
+    <value>Weteran</value>
+  </data>
+  <data name="AchievementStar_Bronze" xml:space="preserve">
+    <value>Brązowy</value>
+  </data>
+  <data name="AchievementStar_Gold" xml:space="preserve">
+    <value>Złoty</value>
+  </data>
+  <data name="AchievementStar_None" xml:space="preserve">
+    <value>Brak</value>
+  </data>
+  <data name="AchievementStar_Silver" xml:space="preserve">
+    <value>Srebrny</value>
+  </data>
+  <data name="DosageType_Grams" xml:space="preserve">
+    <value>gramy</value>
+  </data>
+  <data name="DosageType_Servings" xml:space="preserve">
+    <value>porcje</value>
+  </data>
+  <data name="DosageType_Tablets" xml:space="preserve">
+    <value>tabletki</value>
+  </data>
+  <data name="DosageType_Units" xml:space="preserve">
+    <value>jednostki</value>
+  </data>
+  <data name="ExerciseDifficult_Four" xml:space="preserve">
+    <value>Cztery</value>
+  </data>
+  <data name="ExerciseDifficult_NotSet" xml:space="preserve">
+    <value>(Nie ustawiono)</value>
+  </data>
+  <data name="ExerciseDifficult_One" xml:space="preserve">
+    <value>Jeden</value>
+  </data>
+  <data name="ExerciseDifficult_Three" xml:space="preserve">
+    <value>Trzy</value>
+  </data>
+  <data name="ExerciseDifficult_Two" xml:space="preserve">
+    <value>Dwa</value>
+  </data>
+  <data name="ExerciseDoneWay_Barbell" xml:space="preserve">
+    <value>sztanga</value>
+  </data>
+  <data name="ExerciseDoneWay_Cable" xml:space="preserve">
+    <value>wyciąg</value>
+  </data>
+  <data name="ExerciseDoneWay_Default" xml:space="preserve">
+    <value>domyślny</value>
+  </data>
+  <data name="ExerciseDoneWay_Dumbbell" xml:space="preserve">
+    <value>hantle</value>
+  </data>
+  <data name="ExerciseDoneWay_Machine" xml:space="preserve">
+    <value>maszyna</value>
+  </data>
+  <data name="ExerciseForceType_NotSet" xml:space="preserve">
+    <value>(Nie ustawiono)</value>
+  </data>
+  <data name="ExerciseForceType_Pull" xml:space="preserve">
+    <value>Ciągnięcie</value>
+  </data>
+  <data name="ExerciseForceType_Push" xml:space="preserve">
+    <value>Pchanie</value>
+  </data>
+  <data name="ExerciseForceType_Static" xml:space="preserve">
+    <value>Statyczna</value>
+  </data>
+  <data name="ExerciseType_Barki" xml:space="preserve">
+    <value>Barki</value>
+  </data>
+  <data name="ExerciseType_Biceps" xml:space="preserve">
+    <value>Biceps</value>
+  </data>
+  <data name="ExerciseType_Brzuch" xml:space="preserve">
+    <value>Brzuch</value>
+  </data>
+  <data name="ExerciseType_Cardio" xml:space="preserve">
+    <value>Cardio</value>
+  </data>
+  <data name="ExerciseType_Czworoboczny" xml:space="preserve">
+    <value>Czworoboczny</value>
+  </data>
+  <data name="ExerciseType_Klatka" xml:space="preserve">
+    <value>Klatka</value>
+  </data>
+  <data name="ExerciseType_Lydki" xml:space="preserve">
+    <value>Łydki</value>
+  </data>
+  <data name="ExerciseType_Nogi" xml:space="preserve">
+    <value>Nogi</value>
+  </data>
+  <data name="ExerciseType_NotSet" xml:space="preserve">
+    <value>(Usunięte)</value>
+  </data>
+  <data name="ExerciseType_Plecy" xml:space="preserve">
+    <value>Plecy</value>
+  </data>
+  <data name="ExerciseType_Przedramie" xml:space="preserve">
+    <value>Przedramię</value>
+  </data>
+  <data name="ExerciseType_Triceps" xml:space="preserve">
+    <value>Triceps</value>
+  </data>
+  <data name="Gender_Female" xml:space="preserve">
+    <value>kobieta</value>
+  </data>
+  <data name="Gender_Male" xml:space="preserve">
+    <value>mężczyzna</value>
+  </data>
+  <data name="Gender_NotSet" xml:space="preserve">
+    <value>(nie ustawiono)</value>
+  </data>
+  <data name="MechanicsType_Compound" xml:space="preserve">
+    <value>Wielostawowe</value>
+  </data>
+  <data name="MechanicsType_Isolation" xml:space="preserve">
+    <value>Izolowane</value>
+  </data>
+  <data name="MechanicsType_NotSet" xml:space="preserve">
+    <value>(Nie ustawiono)</value>
+  </data>
+  <data name="SetType_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="SetType_MuscleFailure" xml:space="preserve">
+    <value>upadek mięśniowy</value>
+  </data>
+  <data name="SetType_Normalna" xml:space="preserve">
+    <value>Normalna</value>
+  </data>
+  <data name="SetType_PrawieMax" xml:space="preserve">
+    <value>prawie max</value>
+  </data>
+  <data name="SetType_Rozgrzewkowa" xml:space="preserve">
+    <value>rozgrzewkowa</value>
+  </data>
+  <data name="TimeType_AfterWorkout" xml:space="preserve">
+    <value>po treningu</value>
+  </data>
+  <data name="TimeType_BeforeSleep" xml:space="preserve">
+    <value>przed snem</value>
+  </data>
+  <data name="TimeType_BeforeWorkout" xml:space="preserve">
+    <value>przed treningiem</value>
+  </data>
+  <data name="TimeType_NotSet" xml:space="preserve">
+    <value>(nie ustawiono)</value>
+  </data>
+  <data name="TimeType_OnEmptyStomach" xml:space="preserve">
+    <value>na czczo</value>
+  </data>
+  <data name="TrainingPlanDifficult_Advanced" xml:space="preserve">
+    <value>Zaawansowany</value>
+  </data>
+  <data name="TrainingPlanDifficult_Beginner" xml:space="preserve">
+    <value>Początkujący</value>
+  </data>
+  <data name="TrainingPlanDifficult_NotSet" xml:space="preserve">
+    <value>(Nie ustawiono)</value>
+  </data>
+  <data name="TrainingPlanDifficult_Professional" xml:space="preserve">
+    <value>Zawodowy kulturysta</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Max" xml:space="preserve">
+    <value>max</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_MuscleFailure" xml:space="preserve">
+    <value>upadek mięśniowy</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Normalna" xml:space="preserve">
+    <value>normalna</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_PrawieMax" xml:space="preserve">
+    <value>prawie max</value>
+  </data>
+  <data name="TrainingPlanSerieRepetitions_Rozgrzewkowa" xml:space="preserve">
+    <value>rozgrzewka</value>
+  </data>
+  <data name="WorkoutPlanPurpose_Definition" xml:space="preserve">
+    <value>Definicja</value>
+  </data>
+  <data name="WorkoutPlanPurpose_FatLost" xml:space="preserve">
+    <value>Redukcja tłuszczu</value>
+  </data>
+  <data name="WorkoutPlanPurpose_Mass" xml:space="preserve">
+    <value>Masa</value>
+  </data>
+  <data name="WorkoutPlanPurpose_NotSet" xml:space="preserve">
+    <value>(Nie ustawiono)</value>
+  </data>
+  <data name="WorkoutPlanPurpose_Strength" xml:space="preserve">
+    <value>Siła</value>
+  </data>
+  <data name="MainPage_FeaturedLink" xml:space="preserve">
+    <value>POLECANE</value>
+  </data>
+  <data name="Feature_Basic_A6WInCalendar" xml:space="preserve">
+    <value>Pełne wsparcie dla Aerobicznej "6" Weidera</value>
+  </data>
+  <data name="Feature_Basic_A6WInCalendar_Description" xml:space="preserve">
+    <value>Bardzo wymagający trening na mięśnie brzucha. Niewielu daje radę go ukończyć, ale kogo to obchodzi? Zeby mieć kratę na brzuchu to trzeba swoje wycierpieć. Nie ma lipy! BodyArchitect pomoże ukończyć trening, ale go za Ciebie nie zrobi. Dołącz do elitarnego grona osób, które dały radę!</value>
+  </data>
+  <data name="Feature_Basic_AccessToOtherUsersCalendar" xml:space="preserve">
+    <value>Dostęp do dzienników innych użytkowników programu</value>
+  </data>
+  <data name="Feature_Basic_AccessToOtherUsersCalendar_Description" xml:space="preserve">
+    <value>Chciałeś zawsze dowiedzieć się jak wygląda trening innych pakerów? Myślisz, że mógłbyś się czegoś jeszcze nauczyć od innych? Jeśli odpowiedź brzmi "Tak", to dzięki BodyArchitect będziesz mógł śledzić publiczne dzienniki innych użytkowników oraz komentować je.</value>
+  </data>
+  <data name="Feature_Basic_BlogInCalendar" xml:space="preserve">
+    <value>Prowadzenie bloga</value>
+  </data>
+  <data name="Feature_Basic_BlogInCalendar_Description" xml:space="preserve">
+    <value>Podziel się z innymi użytkownikami swoimi przemyśleniami na temat każdego treningu. Wyjaśnij młodym adeptom siłowni, w jaki sposób prawidłowo ćwiczyć. BodyArchitect daje Ci możliwość prowadzenia bloga nawet codziennie.</value>
+  </data>
+  <data name="Feature_Basic_ExercisesDatabase" xml:space="preserve">
+    <value>Baza ponad 200 opisanych ćwiczeń</value>
+  </data>
+  <data name="Feature_Basic_ExercisesDatabase_Description" xml:space="preserve">
+    <value>Ogromna baza ćwiczeń, która zawiera praktycznie wszystkie najważniejsze ćwiczenia, wraz z opisem. Jest to kompletne rozwiązanie dla początkującego pakera. Szukasz czegoś więcej? Rozważ konto Premium lub Instruktor, które umożliwia tworzenie własnych ćwiczeń oraz modyfikację istniejących za pomocą tzw. Przyrządów.</value>
+  </data>
+  <data name="Feature_Basic_ExercisesRecords" xml:space="preserve">
+    <value>Rejestrowanie rekordów dla każdego ćwiczenia</value>
+  </data>
+  <data name="Feature_Basic_ExercisesRecords_Description" xml:space="preserve">
+    <value>BodyArchitect automatycznie rejestruje Twoje osobiste rekordy dla każdego ćwiczenia. Jedyny warunek to taki, żeby wpisywane serie były dokładne (czyli trzeba podać ilość powtórzeń i ciężar oraz nie może to być seria do upadku mięśniowego). Po osiągnięciu 30 wpisów treningu siłowego, Twoje rekordy stają się publiczne. Będziesz mógł wtedy dowiedzieć się, jak plasujesz się względem innych.</value>
+  </data>
+  <data name="Feature_Basic_MeasurementsInCalendar" xml:space="preserve">
+    <value>Wsparcie dla wymiarów</value>
+  </data>
+  <data name="Feature_Basic_MeasurementsInCalendar_Description" xml:space="preserve">
+    <value>Jak ocenić, czy nasz trening jest dobry i daje rezultaty? Jednym z najlepszych sposobów jest mierzenie swojego ciała (np. pomiar bicepsa, obwodu klatki itp). Prowadząc regularne pomiary i notując je w dzienniku (np. co miesiąc) będziesz mógł ocenić, skuteczność treningu. Pamiętaj - liczby nie kłamią!</value>
+  </data>
+  <data name="Feature_Premium_Reports" xml:space="preserve">
+    <value>Generowanie raportów z dziennika</value>
+  </data>
+  <data name="Feature_Premium_Reports_Description" xml:space="preserve">
+    <value>BodyArchitect posiada możliwość tworzenia wykresów i raportów z Twojego dziennika. Analizując poszczególne wpisy z kalendarza może być ciężko ustalić, czy robisz postępy. Generując wykres z całego roku od razu zobaczysz, czy linia "idzie" w górę czy dół. I wszystko stanie się jasne.</value>
+  </data>
+  <data name="Feature_Basic_SearchUsers" xml:space="preserve">
+    <value>Zaawansowane wyszukiwanie innych pakerów</value>
+  </data>
+  <data name="Feature_Basic_SearchUsers_Description" xml:space="preserve">
+    <value>Na całym świecie są miliony ludzi podobnych do Ciebie, dla których siłownia jest czymś więcej niż zabijaczem czasu. To jest pasja, która wciąga bez reszty. Poznaj innych pakerów, nawiąż znajomości i dziel się doświadczeniem.</value>
+  </data>
+  <data name="Feature_Basic_SupplementsCycleDefinitions" xml:space="preserve">
+    <value>Podstawowy dostęp do rozpisek suplementów</value>
+  </data>
+  <data name="Feature_Basic_SupplementsCycleDefinitions_Description" xml:space="preserve">
+    <value>Kupiłeś odżywki, ale nie wiesz jak je brać? A może chciałbyś poznać sposoby innych pakerów na łączenie suplementów, żeby uzyskać jeszcze lepsze efekty? BodyArchitect daje Ci dostęp do stale rozbudowywanej bazy rozpisek suplementów. Chcesz stworzyć własną rozpiskę - bez konta Premium lub Instruktor sie nie obejdzie;)</value>
+  </data>
+  <data name="Feature_Basic_SupplementsInCalendar" xml:space="preserve">
+    <value>Wparcie dla suplementów</value>
+  </data>
+  <data name="Feature_Basic_SupplementsInCalendar_Description" xml:space="preserve">
+    <value>Suplementy są nieodłącznym elementem wielu kulturystów. Notowanie odżywek w dzienniku daje możliwość oceny, które produkty mają pozytywne efekty dla naszego treningu. BodyArchitect pozwala na notowanie wszystkich istotnych danych, jak np. dawek oraz czasu spożywania.</value>
+  </data>
+  <data name="Feature_Basic_UnlimitedEntriesInCalendar" xml:space="preserve">
+    <value>Nieograniczona liczba wpisów w dzienniku treningowym</value>
+  </data>
+  <data name="Feature_Basic_UnlimitedEntriesInCalendar_Description" xml:space="preserve">
+    <value>Twój dziennik pomieści wszystkie wpisy. Serio! Możesz wykonywać pomiary, ćwiczyć lub pisać  bloga codziennine. Twoje notatki mogą być bardzo szczegółowe. Prowadz swój dziennik tak, żeby czerpać  z niego maksymalne korzyści.</value>
+  </data>
+  <data name="Feature_Basic_WorkoutPlansDatabase" xml:space="preserve">
+    <value>Stale rozwijana baza planów treningowych</value>
+  </data>
+  <data name="Feature_Basic_WorkoutPlansDatabase_Description" xml:space="preserve">
+    <value>Plany treningowe to jest to, co każdy bardziej zaawansowany kulturysta powinien znać i korzystać. Teraz masz dostęp do ogromnej bazy planów treningowych tworzonych przez innych użytkowników programu. Chcesz stworzyć własny plan i udostępnić go innym? Takie cuda tylko w koncie Premium lub Instruktor.</value>
+  </data>
+  <data name="Feature_Instructor_CalendarForCustomers" xml:space="preserve">
+    <value>Możliwość prowadzenia dziennika dla każdego klienta</value>
+  </data>
+  <data name="Feature_Instructor_CalendarForCustomers_Description" xml:space="preserve">
+    <value>Dla każdego klienta (standardowego jak i wirtualnego) możesz prowadzić dziennik treningowy, a także generować raporty. Dzięki temu, w każdej chwili masz dostęp do wszystkich potrzebnych danych. Jest to idealne rozwiązanie m.in. dla osób prowadzących treningi personalne.</value>
+  </data>
+  <data name="Feature_Instructor_Customers" xml:space="preserve">
+    <value>Baza klientów z najważniejszymi danymi</value>
+  </data>
+  <data name="Feature_Instructor_Customers_Description" xml:space="preserve">
+    <value>Możesz stworzyć dowolną liczbę klientów standardowych jak i wirtualnych. Czym jest wirtualny klient? Reprezentuje on grupę osób, np kobieta, student, policjant itp. Dodatkowo aplikacja pozwala grupować klientów, dzięki czemu łatwiej nimi zarządzać.</value>
+  </data>
+  <data name="Feature_Instructor_ScheduleEntries" xml:space="preserve">
+    <value>Tworzenie planu zajęć</value>
+  </data>
+  <data name="Feature_Instructor_ScheduleEntries_Description" xml:space="preserve">
+    <value>Prowadzisz wiele zajęć w tygodniu? Rezerwacje klientów zapisujesz w notesie? Czas to zmienić. BodyArchitect pozwala stworzyć plan zajęć łącznie z rezerwacjami klientów, śledzić ich obecność, a także płatności</value>
+  </data>
+  <data name="Feature_Premium_AddEntriesInFuture" xml:space="preserve">
+    <value>Dodawanie wpisów w przyszłości</value>
+  </data>
+  <data name="Feature_Premium_AddEntriesInFuture_Description" xml:space="preserve">
+    <value>Posiadając konto Podstawowe mogłeś dodawać wpisy do dziennika w przeszłości i do dnia dzisiejszego. Jeśli potrzebujesz dodawać wpisy w przyszłości (np. zaplanowane treningi), to konto Premium daje Ci taką możliwość.</value>
+  </data>
+  <data name="Feature_Premium_CreatingExercises" xml:space="preserve">
+    <value>Tworzenie dowolnej liczby ćwiczeń</value>
+  </data>
+  <data name="Feature_Premium_CreatingExercises_Description" xml:space="preserve">
+    <value>Konto Podstawowe daje dostęp do ogromnej bazy ćwiczeń. Jednak wiemy doskonale, że po osiągnięciu pewnego poziomu zaawansowania, będziesz włączał do swojego treningu ćwiczenia, których nie znajdziesz w naszej bazie. Dlatego konto Premium pozwala na tworzenie dowolnej liczby ćwiczeń.</value>
+  </data>
+  <data name="Feature_Premium_CreatingSupplementsDefinitions" xml:space="preserve">
+    <value>Tworzenie rozpisek suplementów</value>
+  </data>
+  <data name="Feature_Premium_CreatingSupplementsDefinitions_Description" xml:space="preserve">
+    <value>Dzięki tej opcji, będziesz mógł stworzyć własną rozpiskę suplementów i korzystać z niej w swoim kalendarzu oraz udostępnić innym użytkownikom.</value>
+  </data>
+  <data name="Feature_Premium_CreatingWorkoutPlans" xml:space="preserve">
+    <value>Tworzenie planów treningowych</value>
+  </data>
+  <data name="Feature_Premium_CreatingWorkoutPlans_Description" xml:space="preserve">
+    <value>Będziesz mógł tworzyć własne plany treningowe oraz udostępniać je innym pakerom. Dodatkowo konto Premium umożliwia dodawanie planów innych użytkowników do listy ulubionych.</value>
+  </data>
+  <data name="Feature_Premium_Equipments" xml:space="preserve">
+    <value>Obsługa Przyrządów</value>
+  </data>
+  <data name="Feature_Premium_Equipments_Description" xml:space="preserve">
+    <value>Idziesz na siłownię i w planie masz wykonanie ćwiczenia Wyciskanie sztangi w leżeniu. Ławeczka jest zajęta, a Ty decydujesz sie wykonać to ćwiczenie na maszynie, na której wyciskasz większy ciężar. I teraz, jakbyś wstawił do dziennika ćwiczenie wyciskanie sztangi ale zrobił je na maszynie z innym ciężarem, to raporty byłyby błędne. Konto Premium umożliwa określenie przyrządu, na którym było wykonane ćwiczenie, dzięki czemu w raportach możesz wyświetlić tylko te treningi, które wykonałeś w "standardowy" sposób.</value>
+  </data>
+  <data name="Feature_Premium_MoreFeatures" xml:space="preserve">
+    <value>I wiele innych drobnych usprawnień</value>
+  </data>
+  <data name="Feature_Premium_MoreFeatures_Description" xml:space="preserve">
+    <value>Zaktualizuj swoje konto i sprawdź, ile usprawnień czeka na Ciebie.</value>
+  </data>
+  <data name="Feature_Premium_MyPlaces" xml:space="preserve">
+    <value>Obsługa Moich Miejsc</value>
+  </data>
+  <data name="Feature_Premium_MyPlaces_Description" xml:space="preserve">
+    <value>Konto Premium umożliwia w treningu siłowym określenie siłowni (miejsca), gdzie wykonałeś trening. Często jest tak, że na różnych siłowniach ten sam ciężar na maszynach "waży inaczej", przez co nasze statystyki i raporty byłyby mało użyteczne. Dzięki Moim miejscom będziesz mógł wygenerowac raport dla treningów tylko z jeden siłowni.</value>
+  </data>
+  <data name="Feature_Premium_Printing" xml:space="preserve">
+    <value>Drukowanie planów i rozpisek</value>
+  </data>
+  <data name="Feature_Premium_Printing_Description" xml:space="preserve">
+    <value>Możesz wydrukować każdy plan lub rozpiskę suplementów i zabrać np. na siłownię.</value>
+  </data>
+  <data name="Feature_Premium_PrivateCalendar" xml:space="preserve">
+    <value>Kalendarz i wymiary mogą być prywatne</value>
+  </data>
+  <data name="Feature_Premium_PrivateCalendar_Description" xml:space="preserve">
+    <value>Ćwiczysz dla siebie i nie chcesz żeby ktokolwiek miał wgląd w Twoje prywatne zapiski? Konto Premium umożliwia ograniczenie dostępu do Twojego dziennika. Możesz go udostępnić tylko znajomym lub zrobić całkowicie prywatnym. Ty decydujesz.</value>
+  </data>
+  <data name="Feature_Premium_Reminders" xml:space="preserve">
+    <value>Przypomnienia</value>
+  </data>
+  <data name="Feature_Premium_Reminders_Description" xml:space="preserve">
+    <value>Jeśli zdarza Ci się zapominać o treningu, zażyciu odżywki lub urodzinach kolegi, pozwól aby BodyArchitect pamiętał o tych wszystkich sytuacjach i przypominał Ci o nich w najbardziej dla Ciebie odpowiednim czasie.</value>
+  </data>
+  <data name="Feature_Premium_SupportsMyTrainingsForSupplements" xml:space="preserve">
+    <value>Wsparcie dla cykli suplementów</value>
+  </data>
+  <data name="Feature_Premium_SupportsMyTrainingsForSupplements_Description" xml:space="preserve">
+    <value>BodyArchitect posiada unikatową funkcję prowadzenia cykli suplementów. Polega ona na tym, że wybierasz rozpiskę suplementów, którą chciałbyś użyć do swojego następnego cyklu. Określasz, kiedy ten cykl chcesz rozpocząć a program wstawi na każdy dzień odpowiedni wpis w kalendarzu, łącznie z dawkowaniem i porą spożywania suplementów. Dodatkowo, program może wyświetlać przypomnienie w dniu, w którym musisz wziąść następną dawkę.</value>
+  </data>
+  <data name="ErrOldApplicationVersion" xml:space="preserve">
+    <value>Używasz starej wersji programu. Aby móc korzystac z BodyArchitect musisz zaktualizować program.</value>
+  </data>
+  <data name="FeaturedPage_ErrCannotRetrieveFeaturedItems" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd.</value>
+  </data>
+  <data name="FeaturedPage_ErrCannotRetrieveTrainingDay" xml:space="preserve">
+    <value>Nie udało się pobrać wpisu</value>
+  </data>
+  <data name="FeaturedPage_Header_LatestBlogs" xml:space="preserve">
+    <value>ostatnie blogi</value>
+  </data>
+  <data name="FeaturedPage_Header_LatestTrainings" xml:space="preserve">
+    <value>ostatnie treningi</value>
+  </data>
+  <data name="FeaturedPage_Header_Records" xml:space="preserve">
+    <value>rekordy</value>
+  </data>
+  <data name="FeaturedPage_InfoPrivateCalendar" xml:space="preserve">
+    <value>Użytkownik nie udostępnił kalendarza</value>
+  </data>
+  <data name="FeaturedPage_RetrievingFeaturedItems" xml:space="preserve">
+    <value>Pobieranie pozycji...</value>
+  </data>
+  <data name="FeaturedPage_RetrievingTrainingDay" xml:space="preserve">
+    <value>Pobieranie wpisu...</value>
+  </data>
+  <data name="MainPage_Status" xml:space="preserve">
+    <value>mój status</value>
+  </data>
+  <data name="ChangeStatusControl_ErrChangeStatus" xml:space="preserve">
+    <value>Nie udało się zmienić statusu</value>
+  </data>
+  <data name="ChangeStatusControl_Status" xml:space="preserve">
+    <value>status</value>
+  </data>
+  <data name="Feature_Premium_CopyAllExercisesToNewTraining" xml:space="preserve">
+    <value>Kopiuj wszystkie ćwiczenia do nowego treningu</value>
+  </data>
+  <data name="Feature_Instructor_InstructorPart" xml:space="preserve">
+    <value>BodyArchitect dla instruktorów</value>
+  </data>
+  <data name="ErrCannotRetrieveMyPlaces" xml:space="preserve">
+    <value>Nie udało się pobrać Moich miejsc</value>
+  </data>
+  <data name="MsgRetrievingMyPlaces" xml:space="preserve">
+    <value>Pobieranie moich miejsc...</value>
+  </data>
+  <data name="SetViewModel_RestTime" xml:space="preserve">
+    <value>przerwa {0}</value>
+  </data>
+  <data name="AppBarButton_Select" xml:space="preserve">
+    <value>wybierz</value>
+  </data>
+  <data name="Feature_Premium_StrengthTrainingTimer" xml:space="preserve">
+    <value>Rejestrowanie przerw między seriami (stoper)</value>
+  </data>
+  <data name="Feature_Premium_StrengthTrainingTimer_Description" xml:space="preserve">
+    <value>Jeśli jesteś jednym z tych nawiedzonych pakerów, którzy muszą znać czas trwania przerw między seriami, to wiedz, że mając konto Premium możesz podczas wpisywania sesji skorzystać ze stopera. Po prostu włącz go przed zrobieniem serii i wyłącz zaraz po jej wykonaniu. Nic prostrzego, a Twój dziennik będzie jeszcze bardziej wartościowy.</value>
+  </data>
+  <data name="NewSetPage_StartButton_Description" xml:space="preserve">
+    <value>Kliknij przycisk start przed rozpoczęciem bieżącej serii. Po jej zakończeniu zatrzymaj stoper. Robiąc tak przed każdą serią, będziesz miał dostęp do takich informacji jak: przerwy między seriami oraz czas trwania każdej serii.</value>
+  </data>
+  <data name="NewSetPage_Timer" xml:space="preserve">
+    <value>stoper</value>
+  </data>
+  <data name="SettingsPage_TreatSuperSetsAsOne" xml:space="preserve">
+    <value>traktuj superserie jako jedność</value>
+  </data>
+  <data name="SettingsPage_TreatSuperSetsAsOne_Description" xml:space="preserve">
+    <value>Jeśli zaznaczysz, to gdy zdefiniujesz superserię (w treningu siłowym) to dodając nową serję do jednego z ćwiczeń połączonych to automatycznie zostaną dodane serie do pozostałych ćwiczeń w grupie. To samo tyczy się usuwania serii, a także stopera (zmierzony czas będzie przypisany do wszystkich serii w grupie)</value>
+  </data>
+  <data name="AppBarButton_StopTimer" xml:space="preserve">
+    <value>stoper: stop</value>
+  </data>
+  <data name="AppBarButton_StartTimer" xml:space="preserve">
+    <value>stoper: start</value>
+  </data>
+  <data name="SetType_Long_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="SetType_Long_MuscleFailure" xml:space="preserve">
+    <value>UM</value>
+  </data>
+  <data name="SetType_Long_PrawieMax" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="SetType_Long_Rozgrzewkowa" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="UpdateInfoControl_WhatsNew" xml:space="preserve">
+    <value>Co nowego?</value>
+  </data>
+  <data name="SynchronizationItemViewModel_Error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="SynchronizationItemViewModel_Processing" xml:space="preserve">
+    <value>W trakcie...</value>
+  </data>
+  <data name="Feature_Instructor_Championships" xml:space="preserve">
+    <value>Zawody trójboju siłowego</value>
+  </data>
+  <data name="Feature_Instructor_Championships_Description" xml:space="preserve">
+    <value>Ten moduł pozwala na rejestrowanie wyników wszystkich zawodników podczas zawodów trójboju siłowego oraz wyciskania sztangi leżąc. Teraz możesz bez problemu zorganizować takie zawody w swojej siłowni/szkole. Dodaj wszystkich zawodników do BodyArchitecta, zanotuj wyniki poszczególnych bojów a program obliczy wszystkie niezbędne dane (punkty wilksa, kategorie wagowe itp) i wyświetli rezultat końcowy w postaci miejsc zajętych przez poszczególnych zawodników.</value>
+  </data>
+  <data name="MeasurementsPage_ShowProgress" xml:space="preserve">
+    <value>wyświetl postępy</value>
+  </data>
+  <data name="MeasurementsReportPage_ErrGeneratingReport" xml:space="preserve">
+    <value>Nie udało się wygenerować raportu. Proszę spróbować później.</value>
+  </data>
+  <data name="MeasurementsReportPage_MsgGeneratingReport" xml:space="preserve">
+    <value>Generowanie raportu...</value>
+  </data>
+  <data name="MeasurementsReportPage_Report_Name" xml:space="preserve">
+    <value>zmiany w wymiarach</value>
+  </data>
+  <data name="MeasurementsReportPage_XAxis_Title" xml:space="preserve">
+    <value>czas</value>
+  </data>
+  <data name="MeasurementsReportPage_YAxis_Title" xml:space="preserve">
+    <value>rozmiar</value>
+  </data>
+  <data name="MeasurementsReportPage_LegendTitle" xml:space="preserve">
+    <value>legenda</value>
+  </data>
+  <data name="ExercisesWeightReportPage_ReportName" xml:space="preserve">
+    <value>max ciężar dla ćwiczenia</value>
+  </data>
+  <data name="ExercisesWeightReportPage_XAxis_Title" xml:space="preserve">
+    <value>czas</value>
+  </data>
+  <data name="ExercisesWeightReportPage_YAxis_Title" xml:space="preserve">
+    <value>ciężar</value>
+  </data>
+  <data name="StrengthWorkoutPage_QShowProgressForModifiedEntry" xml:space="preserve">
+    <value>Bieżący wpis został zmodyfikowany. Musisz zapisać zmiany, aby były uwzględnione w raporcie. Czy chcesz wyświetlić raport bez zapisywania zmian?</value>
+  </data>
+  <data name="MeasurementsReportPage_MsgEmptyReport" xml:space="preserve">
+    <value>Nie masz wystarczającej ilości wpisów do wygenerowania wykresu. Prowadź swój dziennik regularnie, a w koncu coś wygenerujemy.</value>
+  </data>
+  <data name="SettingsPage_StartTimer" xml:space="preserve">
+    <value>uruchom stoper automatycznie</value>
+  </data>
+  <data name="SettingsPage_StartTimer_Description" xml:space="preserve">
+    <value>Zaznacz, jeśli chcesz aby stoper był uruchamiany automatycznie gdy dodajesz nowy trening siłowy. Dostępne tylko dla konta Premium</value>
+  </data>
+  <data name="MainPage_TutorialLink" xml:space="preserve">
+    <value>POMOC</value>
+  </data>
+  <data name="MoreFeaturePage_Tutorial" xml:space="preserve">
+    <value>Nie wiesz jak korzystać z programu?</value>
+  </data>
+  <data name="AppBarButton_Copy" xml:space="preserve">
+    <value>kopiuj</value>
+  </data>
+  <data name="AppBarButton_StartReorder" xml:space="preserve">
+    <value>przenieś</value>
+  </data>
+  <data name="AppBarButton_StopReorder" xml:space="preserve">
+    <value>zakończ przenoszenie</value>
+  </data>
+  <data name="NewSetPage_RestPause" xml:space="preserve">
+    <value>rest pause</value>
+  </data>
+  <data name="SetViewModel_RestPauseTime" xml:space="preserve">
+    <value>rest pause {0}</value>
+  </data>
+  <data name="Feature_Premium_AdvancedStrengthTraining" xml:space="preserve">
+    <value>Zaawansowane opcje w treningu siłowym</value>
+  </data>
+  <data name="Feature_Premium_AdvancedStrengthTraining_Description" xml:space="preserve">
+    <value>Konto Premium dostarcza dodatkowych opcji w treningu siłowym, np. oznaczanie serii jako rest pause oraz super slow.</value>
+  </data>
+  <data name="NewSetPage_SuperSlow" xml:space="preserve">
+    <value>super slow</value>
+  </data>
+  <data name="UpdateInfoControl_VersionChangesVideo_Link" xml:space="preserve">
+    <value>Zobacz zmiany online</value>
+  </data>
+  <data name="CardioSetPage_Calories" xml:space="preserve">
+    <value>spalone</value>
+  </data>
+  <data name="CardioSetPage_Distance" xml:space="preserve">
+    <value>dystans</value>
+  </data>
+  <data name="GPSTrackerPage_AppMenu_ShowMap" xml:space="preserve">
+    <value>pokaż mapę</value>
+  </data>
+  <data name="GPSTrackerPage_AvgPace" xml:space="preserve">
+    <value>średnie tempo</value>
+  </data>
+  <data name="GPSTrackerPage_AvgSpeed" xml:space="preserve">
+    <value>średnia prędkość</value>
+  </data>
+  <data name="GPSTrackerPage_Calories" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="GPSTrackerPage_Distance" xml:space="preserve">
+    <value>dystans</value>
+  </data>
+  <data name="GPSTrackerPage_Duration" xml:space="preserve">
+    <value>czas trwania</value>
+  </data>
+  <data name="GPSTrackerPage_ErrUploadGpsCoordinates" xml:space="preserve">
+    <value>Nie udało się wysłać danych z gps</value>
+  </data>
+  <data name="GPSTrackerPage_ExerciesWatermark" xml:space="preserve">
+    <value>(wybierz aktywność)</value>
+  </data>
+  <data name="GPSTrackerPage_Header_Details" xml:space="preserve">
+    <value>szczegóły</value>
+  </data>
+  <data name="GPSTrackerPage_Header_Info" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="GPSTrackerPage_Header_Summary" xml:space="preserve">
+    <value>trening</value>
+  </data>
+  <data name="GPSTrackerPage_Header_Workout" xml:space="preserve">
+    <value>trening</value>
+  </data>
+  <data name="GPSTrackerPage_InfoLocationServiceDisabled" xml:space="preserve">
+    <value>Usługa lokalizacyjna jest wyłączona dlatego BodyArchitect nie będzie rejestrował Twojego położenia ani obliczał dystansu. Możesz zmienić to w opcjach.</value>
+  </data>
+  <data name="GPSTrackerPage_MaxAltitude" xml:space="preserve">
+    <value>wysokość maks.</value>
+  </data>
+  <data name="GPSTrackerPage_MaxSpeed" xml:space="preserve">
+    <value>prędkość maks.</value>
+  </data>
+  <data name="GPSTrackerPage_MinAltitude" xml:space="preserve">
+    <value>wysokość min.</value>
+  </data>
+  <data name="GPSTrackerPage_QRemoveEntry" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć bieżący wpis?</value>
+  </data>
+  <data name="GPSTrackerPage_ShortDuration" xml:space="preserve">
+    <value>czas</value>
+  </data>
+  <data name="GPSTrackerPage_Speed" xml:space="preserve">
+    <value>prędkość</value>
+  </data>
+  <data name="GPSTrackerPage_Title" xml:space="preserve">
+    <value>cardio tracker</value>
+  </data>
+  <data name="GPSTrackerPage_Weather" xml:space="preserve">
+    <value>pogoda</value>
+  </data>
+  <data name="MapPage_DownloadingGpsCoordinates" xml:space="preserve">
+    <value>Pobieranie danych gps...</value>
+  </data>
+  <data name="MapPage_ErrDownloadingGpsCoordinates" xml:space="preserve">
+    <value>Nie udało się pobrać danych gps</value>
+  </data>
+  <data name="MapPage_Header_Laps" xml:space="preserve">
+    <value>okrążenia</value>
+  </data>
+  <data name="MapPage_Header_Map" xml:space="preserve">
+    <value>mapa</value>
+  </data>
+  <data name="MapPage_Title" xml:space="preserve">
+    <value>cardio tracker</value>
+  </data>
+  <data name="MoodControl_Header_Mood" xml:space="preserve">
+    <value>samopoczucie</value>
+  </data>
+  <data name="Mood_Bad" xml:space="preserve">
+    <value>złe</value>
+  </data>
+  <data name="Mood_Good" xml:space="preserve">
+    <value>super</value>
+  </data>
+  <data name="Mood_Normal" xml:space="preserve">
+    <value>dobre</value>
+  </data>
+  <data name="SettingsPage_CardioTracker" xml:space="preserve">
+    <value>cardio tracker</value>
+  </data>
+  <data name="SettingsPage_LocationService" xml:space="preserve">
+    <value>usługa lokalizacji</value>
+  </data>
+  <data name="SettingsPage_LocationService_Description" xml:space="preserve">
+    <value>Umożliwa rejestrowanie Twojego położenia oraz obliczanie dystansu podczas treningu. Wysoce zalecane.</value>
+  </data>
+  <data name="SettingsPage_RunUnderLockScreen" xml:space="preserve">
+    <value>działaj po zablokowaniu ekranu</value>
+  </data>
+  <data name="SettingsPage_RunUnderLockScreen_Description" xml:space="preserve">
+    <value>Umożliwa rejestrowanie Twojego położenia oraz obliczanie dystansu po zablokowaniu ekranu. Wysoce zalecane.</value>
+  </data>
+  <data name="SpeedType_KmPerHour" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="SpeedType_MilesPerHour" xml:space="preserve">
+    <value>mph</value>
+  </data>
+  <data name="TrainingDaySelectorControl_GPSTracker" xml:space="preserve">
+    <value>cardio tracker</value>
+  </data>
+  <data name="GPSTrackerPage_InfoGpsNotReady" xml:space="preserve">
+    <value>Usługa lokalizacyjna wciąż stara się określić Twoją pozycję. Jeśli rozpoczniesz teraz, część treningu może zostać niezarejestrowana. Czy chcesz kontynuować?</value>
+  </data>
+  <data name="TrainingDaySelectorControl_ErrSecondaryLiveTileExists" xml:space="preserve">
+    <value>Wybrany wpis jest już na ekranie startowym</value>
+  </data>
+  <data name="TrainingDaySelectorControl_Menu_AddNew" xml:space="preserve">
+    <value>dodaj nowy</value>
+  </data>
+  <data name="TrainingDaySelectorControl_Menu_PinToStart" xml:space="preserve">
+    <value>przypnij do startu</value>
+  </data>
+  <data name="GPSTrackerPage_EntryWithoutGPSData" xml:space="preserve">
+    <value>Ten wpis nie ma zapisanych danych GPS, potrzebnych do szczegółowej analizy. Dane GPS zapisywane są na koncie Premium lub Instruktor.</value>
+  </data>
+  <data name="SettingsPage_AutoPause" xml:space="preserve">
+    <value>pauza automatyczna</value>
+  </data>
+  <data name="SettingsPage_AutoPause_Description" xml:space="preserve">
+    <value>Jeśli włączona, BodyArchitect wykryje kiedy stoisz w miejscu i da pauzę. Gdy znowu zaczniesz się ruszać, trening zostanie wznowiony.</value>
+  </data>
+  <data name="CreateProfilePage_InfoUsernameAvailable" xml:space="preserve">
+    <value>Nazwa użytkownika jest dostępna</value>
+  </data>
+  <data name="CreateProfilePage_InfoUsernameNotAvailable" xml:space="preserve">
+    <value>Nazwa użytkownika jest niedostępna</value>
+  </data>
+  <data name="ErrUsernameOrEmailNotUnique" xml:space="preserve">
+    <value>Nazwa użytkownika lub email już istnieje.</value>
+  </data>
+  <data name="UpdateInfoControl_PromotionDescription" xml:space="preserve">
+    <value>Dobre wieści dla wszystkich użytkowników. Zdecydowaliśmy się mocno obniżyć ceny za punkty, aby każdy z Was miał dostęp do wszystkich funkcji w programie. Teraz 360 punktów (1 rok korzystania z konta Premium) dostaniesz za jedyne 65zł.</value>
+  </data>
+  <data name="UpdateInfoControl_PromotionDescription2" xml:space="preserve">
+    <value>Dodatkowo 1 dzien konta Instruktor kosztuje teraz nie 3 a jedyne 2 punkty!</value>
+  </data>
+  <data name="UpdateInfoControl_PromotionTitle" xml:space="preserve">
+    <value>Wielka promocja. Tniemy ceny pakerze!</value>
+  </data>
+  <data name="Feature_Premium_NoAds" xml:space="preserve">
+    <value>Brak reklam</value>
+  </data>
+  <data name="Feature_Premium_NoAds_Description" xml:space="preserve">
+    <value>BodyArchitect bez reklam jest w stanie wyświetlić więcej istotnych informacji na ekranie telefonu</value>
+  </data>
+  <data name="SynchronizationPage_GpsCoordinates" xml:space="preserve">
+    <value>punkty gps</value>
+  </data>
+</root>

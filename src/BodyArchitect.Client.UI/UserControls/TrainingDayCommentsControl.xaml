@@ -1,0 +1,52 @@
+﻿<Controls:usrBaseControl x:Class="BodyArchitect.Client.UI.UserControls.TrainingDayCommentsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls"
+             xmlns:ProgressIndicator="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator"
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ExGridSplitter"
+             xmlns:my="clr-namespace:BodyArchitect.Client.UI.UserControls" xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+    <Grid  Background="{DynamicResource LightBrush}" >
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <TextBlock  Grid.RowSpan="2" Grid.Column="2" Visibility="{Binding IsCommentsAvailable,Converter={StaticResource negBoolVisibConv}}" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                           Style="{StaticResource emptyListTextBlock}" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:TrainingDayWindow_CommenstNotAvailable}" />
+            <Grid Visibility="{Binding IsCommentsAvailable,Converter={StaticResource boolVisibConv}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="4"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <my:BlogCommentsList x:Name="blogCommentsList1"/>
+
+                <controls:GridExpander  x:Name="rowSplitter" IsChanging="rowSplitter_IsChanging"   Grid.Row="1" Style="{StaticResource RowExpander}" />
+
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <xctk:WatermarkTextBox Style="{StaticResource contentTextBox}"  Name="txtComment" TextChanged="txtComment_TextChanged"/>
+
+                    <Viewbox Visibility="{Binding IsRunning,ElementName=progressIndicator,Converter={StaticResource boolVisibConv}}" Width="25" Height="25" Margin="{StaticResource MarginMediumLeftTopRightBottom}"  Grid.Row="1" HorizontalAlignment="Left">
+                        <ProgressIndicator:ProgressIndicator   IsIndeterminate="true"  x:Name="progressIndicator"    HorizontalAlignment="Center"   VerticalAlignment="Center"/>
+                    </Viewbox>
+                    <Button Margin="{StaticResource MarginMediumLeftTopRightBottom}" Style="{StaticResource ImageButton}" Controls:ImageButtonExt.Image="pack://application:,,,/BodyArchitect.Client.Resources;component/Images/Comments.png"  Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:TrainingDayWindow_Send_Button}" Name="btnSend" IsEnabled="false" Grid.Row="1" Height="25" Width="100" HorizontalAlignment="Right" Click="btnSend_Click"/>
+                </Grid>
+            </Grid>
+
+        </Grid>
+        <GroupBox Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:TrainingDayWindow_Header_AllowComments}" Grid.Row="1" Name="grAllowComments">
+            <ComboBox  Name="cmbAllowComments" SelectionChanged="cmbAllowComments_SelectionChanged">
+                <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:TrainingDayWindow_AllowComments}" />
+                <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:TrainingDayWindow_DisableComments}" />
+            </ComboBox>
+        </GroupBox>
+    </Grid>
+</Controls:usrBaseControl>

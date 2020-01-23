@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tslSerieCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="tslSerieCount.Text" xml:space="preserve">
+    <value>Ilość serii:</value>
+  </data>
+  <data name="tslExerciseDisplayProperty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 22</value>
+  </data>
+  <data name="tslExerciseDisplayProperty.Text" xml:space="preserve">
+    <value>Ćwiczenie:</value>
+  </data>
+  <data name="tbShowPlan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANoSURBVDhPXdPdT1NJGAbwmo17a7LxDzBebXQv7PoJSnAj
+        xgsvFL9YW+vRaBTYoELY7CaGqKSoaIG6qGExgFJUxIqoizV8GEq1QAu00EK/4JSelra0QFtoS3tOD4+H
+        stbESZ5kbuY38868w+P9P06/oHYQcof6RpcPfym8KHjrRm6bCyI5FSSa7c5TcoeOkFODRAvVSbykmolX
+        Uwcv/Du49ut6nqiZLJD0+PD9CMdZ+BYZWPwxGNwxqO0RPNPO4FSjbU70nBSlAEGTVVyr9ifXU4EEPEEW
+        /hCL+QiLUIzFEs2CTqzyS8wyeqxhCGVGXwq411b7empIiLlRAdyDv2N64ARc6mNwqg5xEcDlc8MVXBWu
+        PJ5CnAFufbAjCaDl+A9d3fnWRbIYUWc5ImQZwpYbCBn+hrf3MCxjbTDP0LD5EmA5oLBuFErLPI7W6KeT
+        gEeXuYHsy0jEPNUImwlEp6RYGC/BjOoIRoZboKFoDHHRT9NglwFBlRbZ9zWh7Grtfh6Mm36c6c8Qhyx/
+        IOZ5iAXdAYQnyuFQ7MKQRgblJJ3Mp8k4+h0MGO4IOff7caxC/dPq7n17dno/p/ljbimWnBVYGD2DsEkM
+        sn03RpRl0CvvQN9diuGPVdCYHMmLPFqhRNbtznVJwNubrgmaLyFgyMWc7gIWLWIOuI2QrgTeLu4yFUdg
+        qtuIgR4ZtGQIkXgCB0rfMDxgTRJwK3cUjyn21jY8KcLsmAST7RkI6ksw21cA6m0WdP8V4pPBBhVXhtHD
+        gJqLYN/VVlfq+VYmmUXyn0/cVIChFzDZyoe7IxumF+kYUD3n6o+jx0ZDNUGD9LMYmpjF3j9bNCkgs+jp
+        +t2Xml5KWsdg7z4DZ/s+aN/kQzHiR7c1hl6S6z4HjUEXjVmuqTqGKaRfbnyXAnbm1eeknXsUvSaVQPds
+        D+41NCD/kQnnHpoh+mccJ6uMyKk0IK+OwoiTRmOnGbsu1tengG3na8rLmvoQD5gRC1hSXyHBvfdKy4aW
+        uESXcbPVBZuXxoPXw9h+vuZuCthKVOcWSD9A1jGOd2o7VEYPDPZ5UL4IAmEGUe4PrDSP3c/AHWBwvU6J
+        X09XX/4GnJSs3yKQircIKmV8ofQ9lwG+sML6i1Dq33z8Dp129gF+y6vFoWIZiNJX4AukFr6octtX4Av+
+        xbegmOmJHwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbShowPlan.ToolTipText" xml:space="preserve">
+    <value>Pokazuje, które serie należą do planu treningowego. Ta opcja jest dostępna tylko wtedy, gdy bieżący wpis połączony jest z planem treningowym.</value>
+  </data>
+  <data name="tbMoveUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE6SURBVDhPY2CgJSg+nHoy70DqEbLsKDySdrHjVN3/1hPV
+        /9O3x5wn2pD6K6FsRYfSbrefqvm//Nq8/0uvzPlfe6D4f9zq4Juhq0LZCBpUeDB5d976pO/Nxyr/L74y
+        6//CyzP+tx2u/e+/xP978BzPHQQNgClI3RL9f/6laf/nXJjyP3VN7P/AWR4WRGsGKYxfG/Z/1vnJ/2ec
+        m/A/YJbHf5I0gxRHLgv4P/VM3//Jp7v/e01yIt2A4Hle/yee6vrfd7L9v3OXDekG+Ex1/d9zvPV/57Gm
+        /7ZNZqQb4NZr/7/9aOP/1sN1/82qDEk3wL7V8n/Todr/DQer/hsUaZNugGWt8f+6A5X/a/aX/dfOViPd
+        AONS3f9Ve0v+V+wt+q+WqkS6Abp5Gv81M1X/q6Yo/ldKkCPdAGITDgCqAJclI3+GzgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="tbMoveUp.ToolTipText" xml:space="preserve">
+    <value>Przesuwa zaznaczone ćwiczenia jeden poziom do góry</value>
+  </data>
+  <data name="tbMoveDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE3SURBVDhPY2CgFSg5nvG/+Fj6/4JDqf9z9yX9J9meoqNp
+        /1ffWPR/5fUF/zN2xJJuQP6B5P/Lr837v/TKnP/JmyJJNyBrd/z/xVdm/V94ecb/2FXBpBuQuiX6//xL
+        0/7PuTDlf/giP9INiF8b9n/W+cn/Z5yb8D9glgfpBkQuC/g/9Uzf/8mnu/97TXIi3YDgeV7/J57q+t93
+        sv2/c5cN6Qb4THX933O89X/nsab/tk1mpBngMc3FInSW3//2o43/Ww/X/TerMiTeAM+JTjtce/S/56xN
+        /d90qPZ/w8Gq/wGTvP/r5Kp/V09X3k0wRYbWa7HZNVncDJ8Z+L/uQOX/mv1l/7173f6rpcnf1grVYiNo
+        AEyBUanued9+j/9ePa7/VVKVLhKtEVmhZqbKEeUUuZNkaSZWEwDXq5RP/36YzAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbMoveDown.ToolTipText" xml:space="preserve">
+    <value>Przesuwa zaznaczone ćwiczenia jeden poziom w dół</value>
+  </data>
+  <data name="tbDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVDhPrZPrS1NxGMf9W2YRLJCgfFGEUJG0i85d2lzb
+        PMmpg5sZizDNsTNMM6hhzEUvwlm6rpoNYpoZRKYmmKOLQ6WzYmo7tVFrurNryrc5yEtNX0QPfF8+n+/v
+        932eJy/vf9dsTU2+32Awf6QoxkcQ0Q8ZzRA6ZorUmCcrVPlb+s1XV8sZg4H9bm9Fcvg5UpMTSL0eAefu
+        xpyRwrsKOevRSuQ5ISvNvqoqbrG3G8u+GaQHHyHttCHtuIKfD9qxNDaIoMmIUamYG1cXb4TM6vU8H0UF
+        ovecWGa8SN+4hIjNgoXWBiSvWZBqo5G0nkOy/z7mT5MYkx8ODMsO8VZf4tfr6VCTGUteT9YxYacRvlyL
+        ePOpDYqeJ5F03cZbSRFeKoroVcCnTGAx1x2kexyIWOvwjVDk1GIdCa61EUFLPV5I9zGrAC9JxlNPXUjb
+        LYhcNGKzCqpLEDZUYMFxHQPF/Pg6ABFP9HQi2WJE/ELVloAQpcVC+x+AaaKcCVsbkbDRiJ7VYcUppzQS
+        RJpMmDPVYlBYsO4LhIpmlCLEe7oQOaFEmJL9BWDLxWCPyRBz3sRI2R4MCPlrIb6vlPHe6OSB+epKxB52
+        ZgMMacuyEFZdClaZaVaWgevqwNRxBfoE/IBbtH1tjCtheNRi+ahUwPlPahG724kfLTSCpAZfdGqEm83g
+        bnVgWidFr5DH9Ql25N7GscyGvTp6kJ2Q7cfXhlqE265m9bn+DIZKduOxcCe7afPvkYyoDuQPSfaan0kL
+        GbewMOoW7oq6SwuYJyK+uf/Itq2P6V8u+xdk/dKJrDXR0gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbDelete.ToolTipText" xml:space="preserve">
+    <value>Usuwa zaznaczone ćwiczenia</value>
+  </data>
+  <data name="tbAddSuperSet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAmBJREFUOE+lk91P
+        0nEUxrnqyqumaa7WWrXKlVoqKeqGQ0oEfOEdDTXI6H0rXGakswScUgRmJApIWII2RiYBOWfWHIWSrHLL
+        mlulf4Q3uqcfOFMu3Kguzt15Pud7nvN8SQBI/1N/JRbay/wcS+m2zQPjBgiesHMrzYxltpH+LQZw7lUV
+        1uvsSxGkbgFqn/MCEieHKhnm6cXPKub5NhbqBkVQ+hWQO2tB6ywIr0NIEfG7pTG8XXqNyUU/Jn75YJox
+        4Kq7HhddZ2AIdsAU1uNRSIeuGS0eBNtR0y8EpSV7KgIh1XvEmCTEbxZ9hNiL8Z8ejP0YxUC4F2JLBYwf
+        deieuQf9dAfuf9CgM9AGcS8XOTczglGA7IUQdS4+JEMc1Dr4UI0r4f7qgGfBBYmZD8XIZVRbuSjSUFBt
+        4UNkqkR2Y/qnPytsNkRgZSVwTAy1clSBke/DuONtAk2Tv0JV5zEjfeTrmatZN9IXtrwCYVZCRW+JmqWj
+        wfHFBuecHYW3yCt5DcejgMzzaatHpAdjAaeHuBA9LQevnwluXykuuWTRp7d5b2NwzgaVrxlcbRky5Gmo
+        0vEg6ORgn2DPxgrCgbIYh7XvVWj0XANPx4b9sxnWcA8sRPXNGtETeghjyIDyu0zsYu5cM5FIVozD7VOt
+        uDAsQ0ETGdIeCbQTaphmu/E41EVcQ4+uaR2YLSVIOblj7YxEssAwFKFYWwjCLOS35uCE8lggqyGdelR2
+        SH+4Zv/8AdFeUK6QITfLwGw+hRR60kaQ4v1Iu9mpuamM5OVkelJslOMFRPqSixP9idTt//aZthr0G00Q
+        nn6SdQcrAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tbAddSuperSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="tbAddSuperSet.Text" xml:space="preserve">
+    <value>&amp;Połącz ćwiczenia</value>
+  </data>
+  <data name="tbAddSuperSet.ToolTipText" xml:space="preserve">
+    <value>Łączy dwa lub wiecej ćwiczeń w super serię/serię łączoną</value>
+  </data>
+  <data name="tbRemoveSuperSet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAmJJREFUOE+lk+tP
+        ElAYxtnY/DP45NZWGmriqDA1SKQIb3hJGqkJ4YDkJuAVZpDKRVE0yDS8kFeKLC+jFeUFK2K6yGbrf/C7
+        bm5PyOaFgq3Wh7Odnfe8v/c8z55DAED4nxXTrAgITbJVgSER8PZMianSXRhTPwYo1oV2U0iP7mA7xG+r
+        bb9DeNMldvWSFIqFehQNFRzXCcoNETHS7DKFdHj+043ZnTEYAk0QLFQN176sIPI9XCJvqtilWpLgyZYd
+        js1eiOfuosCWO8wwZxMJ8nVhS8NKXbg3ZMTcj3HM7IxCv6JGjbcizJ/jaqsmi1vKx2+G5a9EcG7aMBiy
+        osErAt1EC+caL2qjEiTvakgK/z1M77gw+X0E1S/KI8ex5nKc+Rj4YoEt2A123zXkGKmkwztRQL2PT7r/
+        pg7u7WGMbz8Gf7YMt54VJR1BOI78JLadAdvnLlg+GcG05OGyjnICEC7ySOLFaox9c+Lp10dQL0tRNsq2
+        HgFYfVetgik+zB8N6Ap0gP4wG1nN6SeA2vlK4h1P2a5l4wGGtvojOnsg8daBPcjwsfryfLVuHjrXdegM
+        6CGfFyOrKW03ozGVeCzhcBNxmlsxwdnXLsvQHzRFtbb4VNAuyaJTDWttqJnggaJN289QpXKPXhcTpNKR
+        68mFTqbrxgD9QPlaiu6NjuhksUcAamvGAUVLdqUrU5JPGxw3xsyeHFqpgw3jWjs6VlvBMtORqSHT4iU0
+        4T+4YqDu6T40odWvwQX1+b1E8U4IuNSeibb3GjT7G0GWn/sjF3E9OD0l4jQiToMsO4sUyZl/B/ztF/8F
+        x4+bxwmPneQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbRemoveSuperSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="tbRemoveSuperSet.Text" xml:space="preserve">
+    <value>&amp;Rozłącz ćwiczenia</value>
+  </data>
+  <data name="tbRemoveSuperSet.ToolTipText" xml:space="preserve">
+    <value>Powoduje, że zaznaczone ćwiczenia nie są już częścią super serii.</value>
+  </data>
+  <data name="tbSupersets.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGbSURBVDhPldHdK0NhHAfwXcl/4UYMWwiRsCYUahSrUyNt
+        2XGBzWFsM2dHszF5G63My8a0yKS4wKT2jo0yNCR/gb9Arr6cCzeKs/NcPs/v9/m9PALBH4eKq+OaUG/y
+        r/d/74ci6pT9hsZ0wgTyXPGQMcKk5VmakPJ1JjmB/Zdt7D17wETH0HNIvMn98ixOaDCsCgwElB/WKyN2
+        n9zwpTcwERwGcdD2Qey2X3ACPwHkiQI76XV4H13o8ncg48SfQNURga3HVbjvnSB8bfyBbn8nNlNOrKUc
+        0B6TkK01Ury6YKu67hxYSFhhCZnQsiKNNS5KMkc6PK1w3s7DGBzCUnIGpnMderwE6qYqUW0u5x5J5mqC
+        48YOzYka2gAJJmyALW6GJUqjwlDCDTQv12Pu2oamWSmU2wroTylMho1gIkaUjoi4gYa5WtgvLTCcUaih
+        K1GmE76XacWfxVQhRINCbkBiq4I1xrZsQoW+GBImJ5vXL7CLmoyOw/w9e8lwEXfF3zq7KDqkx3hwFKKB
+        fP4AuyixtgCF/XkQ9uX+C3wB1QvWGdaiSmsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbSupersets.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbSupersets.Text" xml:space="preserve">
+    <value>Allow manage supersets</value>
+  </data>
+  <data name="tbSupersets.ToolTipText" xml:space="preserve">
+    <value>Umożliwa zarządzanie superseriami/seriami łączonymi</value>
+  </data>
+</root>

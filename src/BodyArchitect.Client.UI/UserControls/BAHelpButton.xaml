@@ -1,0 +1,79 @@
+﻿<Controls:usrBaseControl x:Class="BodyArchitect.Client.UI.UserControls.BAHelpButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                         xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls" mc:Ignorable="d"  x:Name="Me"    d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="HelpButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="Chrome" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <Image Source="pack://application:,,,/BodyArchitect.Client.Resources;component/Images/Help16.png"
+							HorizontalAlignment="Center" Name="imgImage"  Margin="3,0,0,0"   Height="16"  Width="16" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                                <Setter Property="Opacity" TargetName="Chrome" Value="0.5"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsLicenceGood}" Value="false">
+                                <Setter TargetName="imgImage" Property="Source" Value="pack://application:,,,/BodyArchitect.Client.Resources;component/Images/HelpLicence16.png" />
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Button Focusable="false" Name="btnHelp" Style="{StaticResource HelpButton}" Click="btnHelp_Click"/>
+        <Popup Width="{Binding ToolTipWidth,ElementName=Me}" PopupAnimation="Fade" Name="helpPopup" StaysOpen="false"  AllowsTransparency="True" PlacementTarget="{Binding ElementName=btnHelp}">
+            <Grid Margin="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Path Data="m 0,0 l 0,16 l 16,0 l -16,-16" Fill="{StaticResource ToolTipBackgroundBrush}"
+                        Margin="10,0,0,0" HorizontalAlignment="Left"/>
+
+                <Border BorderThickness="0" Grid.Row="1" Background="{StaticResource ToolTipBackgroundBrush}" SnapsToDevicePixels="True" CornerRadius="4,4,4,4" Margin="0 0 4 4">
+                    <Border.Effect>
+                        <DropShadowEffect  Opacity="0.75" ShadowDepth="3"/>
+                    </Border.Effect>
+
+                    <Grid Margin="6">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="pack://application:,,,/BodyArchitect.Client.Resources;component/Images/Help16.png"
+							HorizontalAlignment="Center"  Margin="3,0,12,0"   Height="16"  Width="16" />
+                        <TextBlock  Grid.Column="1" Foreground="{StaticResource HeaderForegroundBrush}" FontWeight="Bold" Text="{Binding Header,ElementName=Me}" />
+
+                        <TextBlock Foreground="{StaticResource TextBrush}" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,6,0,0"  TextWrapping="Wrap" Text="{Binding Description,ElementName=Me}" />
+                    </Grid>
+                    
+                </Border>
+            </Grid>
+            
+                    
+            
+        </Popup>
+    </Grid>
+</Controls:usrBaseControl>

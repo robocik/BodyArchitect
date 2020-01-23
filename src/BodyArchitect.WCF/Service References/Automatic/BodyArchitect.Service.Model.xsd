@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BodyArchitect.Service.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfWorkoutPlanPurpose">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkoutPlanPurpose" type="tns:WorkoutPlanPurpose" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkoutPlanPurpose" nillable="true" type="tns:ArrayOfWorkoutPlanPurpose" />
+  <xs:simpleType name="WorkoutPlanPurpose">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Strength" />
+      <xs:enumeration value="Mass" />
+      <xs:enumeration value="FatLost" />
+      <xs:enumeration value="Definition" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkoutPlanPurpose" nillable="true" type="tns:WorkoutPlanPurpose" />
+  <xs:complexType name="ArrayOfWorkoutPlanSearchCriteriaGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkoutPlanSearchCriteriaGroup" type="tns:WorkoutPlanSearchCriteriaGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkoutPlanSearchCriteriaGroup" nillable="true" type="tns:ArrayOfWorkoutPlanSearchCriteriaGroup" />
+  <xs:simpleType name="WorkoutPlanSearchCriteriaGroup">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mine" />
+      <xs:enumeration value="Favorites" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkoutPlanSearchCriteriaGroup" nillable="true" type="tns:WorkoutPlanSearchCriteriaGroup" />
+  <xs:simpleType name="WorkoutPlanSearchOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Newest" />
+      <xs:enumeration value="HighestRating" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkoutPlanSearchOrder" nillable="true" type="tns:WorkoutPlanSearchOrder" />
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender" />
+  <xs:complexType name="PictureInfoDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_Hash_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PictureId_x003E_k__BackingField" type="ser:guid" />
+      <xs:element name="_x003C_SessionId_x003E_k__BackingField" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PictureInfoDTO" nillable="true" type="tns:PictureInfoDTO" />
+  <xs:simpleType name="Privacy">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Private" />
+      <xs:enumeration value="FriendsOnly" />
+      <xs:enumeration value="Public" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Privacy" nillable="true" type="tns:Privacy" />
+  <xs:simpleType name="PublishStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Private" />
+      <xs:enumeration value="Published" />
+      <xs:enumeration value="PendingPublish" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PublishStatus" nillable="true" type="tns:PublishStatus" />
+  <xs:simpleType name="ExerciseDifficult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="One" />
+      <xs:enumeration value="Two" />
+      <xs:enumeration value="Three" />
+      <xs:enumeration value="Four" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExerciseDifficult" nillable="true" type="tns:ExerciseDifficult" />
+  <xs:simpleType name="ExerciseForceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Push" />
+      <xs:enumeration value="Pull" />
+      <xs:enumeration value="Static" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExerciseForceType" nillable="true" type="tns:ExerciseForceType" />
+  <xs:simpleType name="ExerciseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Biceps" />
+      <xs:enumeration value="Klatka" />
+      <xs:enumeration value="Plecy" />
+      <xs:enumeration value="Triceps" />
+      <xs:enumeration value="Barki" />
+      <xs:enumeration value="Nogi" />
+      <xs:enumeration value="Lydki" />
+      <xs:enumeration value="Przedramie" />
+      <xs:enumeration value="Brzuch" />
+      <xs:enumeration value="Czworoboczny" />
+      <xs:enumeration value="Cardio" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExerciseType" nillable="true" type="tns:ExerciseType" />
+  <xs:simpleType name="MechanicsType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Compound" />
+      <xs:enumeration value="Isolation" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MechanicsType" nillable="true" type="tns:MechanicsType" />
+  <xs:simpleType name="FavoriteOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Add" />
+      <xs:enumeration value="Remove" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FavoriteOperation" nillable="true" type="tns:FavoriteOperation" />
+  <xs:simpleType name="PrivacyCriteria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="Accessible" />
+      <xs:enumeration value="NotAccessible" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PrivacyCriteria" nillable="true" type="tns:PrivacyCriteria" />
+  <xs:complexType name="ArrayOfGender">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Gender" type="tns:Gender" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGender" nillable="true" type="tns:ArrayOfGender" />
+  <xs:simpleType name="PictureCriteria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="OnlyWithPicture" />
+      <xs:enumeration value="OnlyWithoutPicture" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PictureCriteria" nillable="true" type="tns:PictureCriteria" />
+  <xs:simpleType name="UsersSortOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ByName" />
+      <xs:enumeration value="ByTrainingDaysCount" />
+      <xs:enumeration value="ByFollowersCount" />
+      <xs:enumeration value="ByFriendsCount" />
+      <xs:enumeration value="ByBlogCommentsCount" />
+      <xs:enumeration value="ByVotingCount" />
+      <xs:enumeration value="ByLastEntryDate" />
+      <xs:enumeration value="ByLastLoginDate" />
+      <xs:enumeration value="ByWorkoutPlansCount" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UsersSortOrder" nillable="true" type="tns:UsersSortOrder" />
+  <xs:complexType name="ArrayOfUserSearchGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserSearchGroup" type="tns:UserSearchGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserSearchGroup" nillable="true" type="tns:ArrayOfUserSearchGroup" />
+  <xs:simpleType name="UserSearchGroup">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Friends" />
+      <xs:enumeration value="Favorites" />
+      <xs:enumeration value="Others" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserSearchGroup" nillable="true" type="tns:UserSearchGroup" />
+  <xs:simpleType name="UserWorkoutPlanCriteria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="OnlyWithWorkoutPlans" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserWorkoutPlanCriteria" nillable="true" type="tns:UserWorkoutPlanCriteria" />
+  <xs:simpleType name="TrainingEnd">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotEnded" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="Break" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TrainingEnd" nillable="true" type="tns:TrainingEnd" />
+  <xs:simpleType name="ReportStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ShowInReport" />
+      <xs:enumeration value="SkipInReport" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReportStatus" nillable="true" type="tns:ReportStatus" />
+  <xs:simpleType name="DosageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Grams" />
+      <xs:enumeration value="Tablets" />
+      <xs:enumeration value="Units" />
+      <xs:enumeration value="Servings" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DosageType" nillable="true" type="tns:DosageType" />
+  <xs:simpleType name="DropSetType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="IDropSet" />
+      <xs:enumeration value="IIDropSet" />
+      <xs:enumeration value="IIIDropSet" />
+      <xs:enumeration value="IVDropSet" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DropSetType" nillable="true" type="tns:DropSetType" />
+  <xs:simpleType name="SetType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normalna" />
+      <xs:enumeration value="Max" />
+      <xs:enumeration value="MuscleFailure" />
+      <xs:enumeration value="Rozgrzewkowa" />
+      <xs:enumeration value="PrawieMax" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SetType" nillable="true" type="tns:SetType" />
+  <xs:simpleType name="Intensity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="Medium" />
+      <xs:enumeration value="Hight" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Intensity" nillable="true" type="tns:Intensity" />
+  <xs:simpleType name="AccountOperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RestorePassword" />
+      <xs:enumeration value="SendActivationEmail" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccountOperationType" nillable="true" type="tns:AccountOperationType" />
+  <xs:simpleType name="MapperEntryOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OnlyReMap" />
+      <xs:enumeration value="ReMapAndDeleteExercise" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MapperEntryOperation" nillable="true" type="tns:MapperEntryOperation" />
+  <xs:simpleType name="ContentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Text" />
+      <xs:enumeration value="Html" />
+      <xs:enumeration value="Rtf" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContentType" nillable="true" type="tns:ContentType" />
+  <xs:simpleType name="BlogCommentOperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Add" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BlogCommentOperationType" nillable="true" type="tns:BlogCommentOperationType" />
+  <xs:simpleType name="MessageOperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Delete" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageOperationType" nillable="true" type="tns:MessageOperationType" />
+  <xs:simpleType name="MessageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="InvitationAccepted" />
+      <xs:enumeration value="InvitationRejected" />
+      <xs:enumeration value="FriendshipRejected" />
+      <xs:enumeration value="FriendProfileDeleted" />
+      <xs:enumeration value="ProfileCreated" />
+      <xs:enumeration value="TrainingDayAdded" />
+      <xs:enumeration value="BlogCommentAdded" />
+      <xs:enumeration value="WorkoutPlanVoted" />
+      <xs:enumeration value="ExerciseVoted" />
+      <xs:enumeration value="FavoriteProfileDeleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageType" nillable="true" type="tns:MessageType" />
+  <xs:simpleType name="MessagePriority">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="High" />
+      <xs:enumeration value="System" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessagePriority" nillable="true" type="tns:MessagePriority" />
+  <xs:simpleType name="InvitationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invite" />
+      <xs:enumeration value="Accept" />
+      <xs:enumeration value="RejectInvitation" />
+      <xs:enumeration value="RejectFriendship" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InvitationType" nillable="true" type="tns:InvitationType" />
+  <xs:simpleType name="InviteFriendOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invite" />
+      <xs:enumeration value="Accept" />
+      <xs:enumeration value="Reject" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InviteFriendOperation" nillable="true" type="tns:InviteFriendOperation" />
+  <xs:simpleType name="PlatformType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Windows" />
+      <xs:enumeration value="MacOS" />
+      <xs:enumeration value="Android" />
+      <xs:enumeration value="iPhone" />
+      <xs:enumeration value="WindowsMobile" />
+      <xs:enumeration value="WindowsPhone" />
+      <xs:enumeration value="Linux" />
+      <xs:enumeration value="Web" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PlatformType" nillable="true" type="tns:PlatformType" />
+  <xs:simpleType name="GetOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Current" />
+      <xs:enumeration value="First" />
+      <xs:enumeration value="Previous" />
+      <xs:enumeration value="Next" />
+      <xs:enumeration value="Last" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetOperation" nillable="true" type="tns:GetOperation" />
+  <xs:complexType name="ArrayOfExerciseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExerciseType" type="tns:ExerciseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExerciseType" nillable="true" type="tns:ArrayOfExerciseType" />
+  <xs:complexType name="ArrayOfExerciseSearchCriteriaGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExerciseSearchCriteriaGroup" type="tns:ExerciseSearchCriteriaGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExerciseSearchCriteriaGroup" nillable="true" type="tns:ArrayOfExerciseSearchCriteriaGroup" />
+  <xs:simpleType name="ExerciseSearchCriteriaGroup">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mine" />
+      <xs:enumeration value="PendingPublish" />
+      <xs:enumeration value="Global" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExerciseSearchCriteriaGroup" nillable="true" type="tns:ExerciseSearchCriteriaGroup" />
+</xs:schema>

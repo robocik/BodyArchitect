@@ -1,0 +1,128 @@
+﻿<Windows:BaseWindow xmlns:my1="clr-namespace:BodyArchitect.Client.Module.Suplements.Controls" 
+                    x:Class="BodyArchitect.Client.Module.Suplements.Controls.StartSupplementsCycleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+            xmlns:Windows="clr-namespace:BodyArchitect.Client.UI.Windows;assembly=BodyArchitect.Client.UI"
+                    xmlns:my="clr-namespace:BodyArchitect.Client.UI.Controls;assembly=BodyArchitect.Client.UI"
+                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
+                    xmlns:controls="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator;assembly=BodyArchitect.Client.UI" 
+                    xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI" xmlns:Behaviors="clr-namespace:BodyArchitect.Client.UI.Controls.WatermarkExtension;assembly=BodyArchitect.Client.UI" xmlns:Suplements="clr-namespace:BodyArchitect.Client.Module.Suplements" Style="{StaticResource baWindow}" WindowStartupLocation="CenterScreen"
+                    
+                    Title="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:StartSupplementsCycleWindow_Title}" Height="600" Width="600">
+
+    <Grid>
+        <Grid.Resources>
+            <Suplements:SupplementsDefinitionsToStatusIconConverter x:Key="statusConv"/>
+            <Suplements:WorkoutPlanPurposeToLocalizedStringConverter x:Key="purposeConv" />
+            <Suplements:TrainingPlanDifficultToLocalizedStringConverter x:Key="difficultConv" />
+            
+            <DataTemplate x:Key="SupplementsDefinitionsComboBoxItem">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Background="Transparent" FontSize="14" Text="{Binding Name}" Grid.ColumnSpan="3" />
+                    <Image   Width="16" Height="16" Grid.Row="1" Margin="3,0" Source="{Binding Converter={StaticResource statusConv}}" />
+                    <TextBlock Margin="{StaticResource MarginMediumLeft}" Background="Transparent" Text="{Binding Purpose,Converter={StaticResource purposeConv}}" Grid.Column="1" Grid.Row="1" />
+
+                    <TextBlock Margin="{StaticResource MarginMediumLeft}" Background="Transparent" Text="{Binding Difficult,Converter={StaticResource difficultConv}}" Grid.Column="2" Grid.Row="1" />
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TabControl>
+            <TabItem Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Header_Parameters}">
+                <Grid Margin="{StaticResource MarginMediumLeftTopRight}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="{Binding CycleDefinition.Name}" TextTrimming="CharacterEllipsis" Visibility="{Binding AllowChangePlan,Converter={StaticResource negBoolVisibConv}}" FontSize="16" Foreground="Black" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+                    <my1:SupplementsDefinitionsFilteredComboBox Grid.ColumnSpan="3" Visibility="{Binding AllowChangePlan,Converter={StaticResource boolVisibConv}}"  SelectedItem="{Binding CycleDefinition,Mode=TwoWay}" Behaviors:WatermarkComboBoxBehavior.EnableWatermark="true"
+                                  Behaviors:WatermarkComboBoxBehavior.Label="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:StartSupplementsCycleWindow_Watermark_ChooseSupplementDefinitions}"
+                                  Behaviors:WatermarkComboBoxBehavior.LabelStyle="{StaticResource watermarkLabelStyle}" TextSearch.TextPath="Name" ItemTemplate="{StaticResource SupplementsDefinitionsComboBoxItem}" ItemContainerStyle="{StaticResource StretchedComboBoxItemStyle}" />
+                    
+                    <Label  Grid.Row="1" Target="lstTrainingDays"  Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Content_SelectDays}" Grid.ColumnSpan="2" />
+                    <ItemsControl Margin="{StaticResource MarginLargeLeft}" Grid.Row="2" Name="lstTrainingDays" Grid.ColumnSpan="2" ItemsSource="{Binding DaysOfWeek}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="{StaticResource MarginSmallTop}">
+                                    <Label Content="{Binding Text}" Width="100" />
+                                    <ComboBox SelectedIndex="{Binding IntValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                                        <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:StartSupplementsCycleWindow_TrainingType_None}"/>
+                                        <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:StartSupplementsCycleWindow_TrainingType_Strength}"/>
+                                        <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:StartSupplementsCycleWindow_TrainingType_Cardio}"/>
+                                        <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:StartSupplementsCycleWindow_TrainingType_StrengthAndCardio}"/>
+                                    </ComboBox>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Content_Weight}" Target="txtWeight" Grid.Row="3"/>
+                    <xctk:DoubleUpDown Margin="{StaticResource MarginMediumLeftTop}" Name="txtWeight" Grid.Row="3" Grid.Column="1"  Value="{Binding Weight,Mode=TwoWay}"/>
+                    <TextBlock VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Grid.Row="3" Grid.Column="2" Text="{Binding WeightUnit}" />
+
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Label_StartDate}" Grid.Row="4" Target="dpStartDate"/>
+                    <DatePicker Name="dpStartDate" Margin="{StaticResource MarginMediumLeftTop}" Grid.Row="4" Grid.Column="1"  SelectedDate="{Binding StartDate,Mode=TwoWay}"/>
+
+                    <Label Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Label_TotalWeeks}" Grid.Row="5" Target="txtTotalWeeks"/>
+                    <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1">
+                        <xctk:IntegerUpDown Width="100" Name="txtTotalWeeks" Margin="{StaticResource MarginMediumLeftTop}" IsReadOnly="{Binding CanBeLonger}"  Value="{Binding TotalWeeks,Mode=TwoWay}"/>
+                        <TextBlock VerticalAlignment="Center" Margin="{StaticResource MarginSmallLeft}" Text="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Label_WeeksPostFix}" />
+                    </StackPanel>
+                    
+                    <UserControls:usrRemindMe Entry="{Binding }" Margin="{StaticResource MarginMediumLeftTop}" Grid.Row="6" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Header_Preview}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="{StaticResource MarginMediumLeftTopRightBottom}" HorizontalAlignment="Center">
+                        <Viewbox Width="20" Height="20"   >
+                            <controls:ProgressIndicator   IsIndeterminate="true"  x:Name="previewProgressIndicator"    HorizontalAlignment="Center"   VerticalAlignment="Center"/>
+                        </Viewbox>
+                        <Button Name="btnPreview" Width="100" Height="25" Margin="{StaticResource MarginLargeLeftTopRightBottom}" Style="{StaticResource ImageButton}" Content="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Content_Preview}" my:ImageButtonExt.Image="pack://application:,,,/BodyArchitect.Client.Resources;component/Images/Preview16.png"  Click="btnTrainingPreview_Click" />
+                    </StackPanel>
+
+
+                    <TextBlock Margin="{StaticResource MarginMediumLeftTopRightBottom}" Name="lblPreviewMessage" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource emptyListTextBlock}" Text="{lex:LocText  BodyArchitect.Client.Module.Suplements:SuplementsEntryStrings:SuplementsEntryStrings_Text_ClickPreview}"/>
+
+                    <my1:usrSupplementsCyclePreview Visibility="Collapsed" Margin="{StaticResource MarginLargeTop}" x:Name="myTrainingPreview"  Grid.Row="1" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <my:usrProgressIndicatorButtons  Margin="{StaticResource MarginMediumRight}" Name="usrProgressIndicatorButtons1" VerticalAlignment="Bottom"  HorizontalAlignment="Right" Grid.Row="1"
+             OkClick="usrProgressIndicatorButtons_OkClick"  AllowCancel="false">
+        </my:usrProgressIndicatorButtons>
+    </Grid>
+
+</Windows:BaseWindow>

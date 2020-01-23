@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.VotesControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls"
+             xmlns:lazy="clr-namespace:WP7Contrib.View.Controls;assembly=WP7Contrib.View.Controls" mc:Ignorable="d"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="lblNoRatings" Grid.Row="0" Text="{Binding Path=Localizedresources.VotesControl_NoRatings,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Visibility="Collapsed"  Style="{StaticResource CustomTextLargeStyle}" />
+
+        <lazy:LazyListBox  Grid.Row="1" ItemsSource="{Binding Comments}" >
+            <lazy:LazyListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </lazy:LazyListBox.ItemContainerStyle>
+            <lazy:LazyListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="{StaticResource CustomTouchTargetOverhang}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/Images/defaultProfile.png" Width="100" Height="100"/>
+                        
+                        <StackPanel Grid.Column="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Style="{StaticResource CustomTextAccentStyle}" Text="{Binding UserName}" />
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Right" FontFamily="{StaticResource CustomFontFamilySemiBold}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding RatingText,Mode=OneTime}" />
+                            </Grid>
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Comment,Mode=OneTime}" />
+
+
+                            <TextBlock  Style="{StaticResource CustomTextSmallStyle}" Text="{Binding DateTime,Mode=OneTime}" />
+
+
+
+                        </StackPanel>
+                    </Grid>
+                    
+                </DataTemplate>
+            </lazy:LazyListBox.ItemTemplate>
+
+            <lazy:LazyListBox.LoadedItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="{StaticResource CustomTouchTargetOverhang}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Controls:CachedImageCtrl VerticalAlignment="Top" Name="profileImage" Picture="{Binding Picture}"  Width="100" Height="100"/>
+
+                        <StackPanel Grid.Column="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Style="{StaticResource CustomTextAccentStyle}" Text="{Binding UserName}" />
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Right" FontFamily="{StaticResource CustomFontFamilySemiBold}" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding RatingText,Mode=OneTime}" />
+                            </Grid>
+                            <TextBlock TextWrapping="Wrap" Style="{StaticResource CustomTextNormalStyle}" Text="{Binding Comment,Mode=OneTime}" />
+
+
+                            <TextBlock  Style="{StaticResource CustomTextSmallStyle}" Text="{Binding DateTime,Mode=OneTime}" />
+
+
+
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </lazy:LazyListBox.LoadedItemTemplate>
+        </lazy:LazyListBox>
+    </Grid>
+</UserControl>

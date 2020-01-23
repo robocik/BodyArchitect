@@ -1,0 +1,117 @@
+﻿<my:usrBaseControl xmlns:my2="clr-namespace:BodyArchitect.Client.UI.Controls.ProgressIndicator"  xmlns:my1="clr-namespace:BodyArchitect.Client.UI.UserControls"  xmlns:my="clr-namespace:BodyArchitect.Client.UI.Controls"  x:Class="BodyArchitect.Client.UI.UserControls.usrUserInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+                   xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <my:MinSizeScrollViewer MinContentHeight="350"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid>
+            <Grid Name="mainGrid" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Name="rowAbout" Height="*"/>
+                    <RowDefinition  />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <my1:usrProfileListEntry Margin="{StaticResource MarginLargeLeftTopRightBottom}" x:Name="profileListEntry" AllowRedirectToDetails="false" />
+                <xctk:WatermarkTextBox LostFocus="txtProfileStatus_LostFocus" Margin="{StaticResource MarginLargeLeftRight}" Grid.Row="1"  Watermark="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Watermark_ProfileStatus}" Name="txtProfileStatus" />
+                <TextBlock Grid.Row="1" Foreground="{StaticResource TextBrush}" Name="lblProfileStatus"  Margin="12,0,12,6" Style="{StaticResource profileStatusTextBlock}"  />
+
+                <GroupBox Margin="{StaticResource MarginLargeLeftTopRightBottom}" Grid.Row="2" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Header_About}" Name="grAbout" >
+                    <ScrollViewer Name="Scroller" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <Grid Name="Grid">
+                            <TextBlock TextWrapping="Wrap" 
+                               Foreground="{StaticResource TextBrush}" Name="txtAbout"   Style="{StaticResource profileStatusTextBlock}" />
+                        </Grid>
+                    </ScrollViewer>
+                </GroupBox>
+
+                <Grid Name="grid1" Grid.Row="3" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <GroupBox Name="grStatistics"  Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Header_Statistics}" Margin="{StaticResource MarginLargeLeftTopRightBottom}">
+                        <ItemsControl  Name="lvStatistics" Style="{StaticResource wrapPanelItemsControl}">
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="16" Height="16" Source="{Binding Image,Converter={StaticResource nullImageConv}}" ToolTip="{Binding ToolTip}"/>
+                                        <TextBlock Style="{StaticResource normalTextBlock}"  Text="{Binding Text}" ToolTip="{Binding ToolTip}"/>
+                                    </StackPanel>
+
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </GroupBox>
+
+                    <GroupBox Name="grAccountType" Grid.RowSpan="2" Margin="{StaticResource MarginLargeLeftTopRightBottom}" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Header_Account}" Grid.Column="1">
+                        <Grid Margin="6">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Button HorizontalAlignment="Center" FontWeight="Bold" FontSize="24"  Name="btnAccountType"  Click="btnChangeAccountType_Click" Style="{StaticResource LinkButon}"  />
+
+                            <StackPanel Margin="{StaticResource MarginLargeTop}" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" >
+                                <TextBlock HorizontalAlignment="Center" Margin="12,24,12,0"  Name="tbPoints" FontWeight="Bold" Text="40" FontSize="36" Grid.Row="1" Grid.Column="0"/>
+                                <TextBlock HorizontalAlignment="Center"  Style="{StaticResource infoLabel}"  Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo__Label_Points}" Grid.Row="2"/>
+                                <!--ImageButton style doesn't work here-->
+                                <Button HorizontalAlignment="Center" HorizontalContentAlignment="Stretch"  Margin="0,6,0,0"  Width="85" Height="25" Click="btnBuy_Click">
+                                    <Button.Content>
+                                        <Grid>
+                                            <Image Source="pack://application:,,,/BodyArchitect.Client.Resources;component/Images/Buy16.png"
+							HorizontalAlignment="Left"  Margin="8,0,0,0"  Height="16"  Width="16" />
+                                            <TextBlock  Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Button_Buy}"  HorizontalAlignment="Center" />
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Margin="{StaticResource MarginLargeLeftTopRightBottom}" Grid.RowSpan="2" Name="grAwards" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Header_Achievements}" Grid.Column="2">
+                        <ItemsControl Name="lstAwards"  >
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Margin="{StaticResource MarginSmallTop}" VerticalAlignment="Top" Source="{Binding Image,Converter={StaticResource nullImageConv}}" ToolTip="{Binding ToolTip}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </GroupBox>
+
+                    <GroupBox Margin="{StaticResource MarginLargeLeftTopRightBottom}" Grid.Row="1" Header="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Header_Status}" Name="grInfo">
+                        <StackPanel>
+                            <Button Margin="12,6,12,6"  FontSize="{StaticResource MediumFontSize}"  Name="btnInvitationsCountStatus"  Click="btnInvitationsCountStatus_Click" Style="{StaticResource LinkButon}"  />
+                            <Button Margin="12,6,12,6"  FontSize="{StaticResource MediumFontSize}" Name="btnMessagesCountStatus"  Click="btnMessagesCountStatus_Click" Style="{StaticResource LinkButon}"  />
+
+                            <TextBlock Margin="12,6,12,6"  Style="{StaticResource infoLabel}" Name="lblNoStatus" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Text_NoImportantInfo}"/>
+                            <TextBlock Margin="12,6,12,6"  Style="{StaticResource infoLabel}" Name="lblProfileNotActivated" Text="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrUserInfo_Text_ActivateProfile}" />
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+
+
+
+                <TextBlock Grid.Row="4" Style="{StaticResource infoLabel}" Name="lblLastLoggedTime" Text="(login date)"/>
+            </Grid>
+            <my2:ProgressIndicator x:Name="progressIndicator"/>
+
+        </Grid>
+    </my:MinSizeScrollViewer>
+    
+    
+</my:usrBaseControl>

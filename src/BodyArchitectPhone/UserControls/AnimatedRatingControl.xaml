@@ -1,0 +1,331 @@
+﻿<UserControl x:Class="BodyArchitect.WP7.UserControls.AnimatedRatingControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:my="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" mc:Ignorable="d"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <my:Rating ValueChanged="Value_Changed"  x:Name="ratingCtrl" Height="40" ItemCount="0">
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Style="{StaticResource RatingItemLeftStyle}" >
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="left1"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        
+                        <Storyboard BeginTime="00:00:0.6">
+
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="left1">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Margin="0" Style="{StaticResource RatingItemRightStyle}">
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="right1" Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.6">
+                               <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="right1">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Style="{StaticResource RatingItemLeftStyle}" >
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="left2"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.1">
+
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="left2">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Margin="0" Style="{StaticResource RatingItemRightStyle}">
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="right2"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.1">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="right2">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Style="{StaticResource RatingItemLeftStyle}" >
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="left3"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.3">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="left3">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Margin="0" Style="{StaticResource RatingItemRightStyle}">
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="right3"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.3">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="right3">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+
+
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Style="{StaticResource RatingItemLeftStyle}" >
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="left4"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.5">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="left4">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Margin="0" Style="{StaticResource RatingItemRightStyle}">
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="right4"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.5">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="right4">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+
+
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Style="{StaticResource RatingItemLeftStyle}" >
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="left5"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.2">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="left5">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Margin="0" Style="{StaticResource RatingItemRightStyle}">
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="right5"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.2">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="right5">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+
+
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Style="{StaticResource RatingItemLeftStyle}" >
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="left6"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.4">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="left6">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+        <my:RatingItem Foreground="{StaticResource CustomAccentBrush}" Margin="0" Style="{StaticResource RatingItemRightStyle}">
+            <my:RatingItem.RenderTransform>
+                <TranslateTransform x:Name="right6"
+                                  Y="-300"/>
+            </my:RatingItem.RenderTransform>
+            <my:RatingItem.Triggers>
+                <EventTrigger >
+                    <BeginStoryboard>
+                        <Storyboard BeginTime="00:00:0.4">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Y" Storyboard.TargetName="right6">
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="-300"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-200"/>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <BounceEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </my:RatingItem.Triggers>
+        </my:RatingItem>
+    </my:Rating>
+</UserControl>

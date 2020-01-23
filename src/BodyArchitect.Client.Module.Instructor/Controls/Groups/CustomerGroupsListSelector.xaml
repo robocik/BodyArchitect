@@ -1,0 +1,18 @@
+﻿<UserControls:DragSourceUserControl x:Class="BodyArchitect.Client.Module.Instructor.Controls.Groups.CustomerGroupsListSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                                    xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:UserControls="clr-namespace:BodyArchitect.Client.UI.UserControls;assembly=BodyArchitect.Client.UI" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <GroupBox Header="{lex:LocText  BodyArchitect.Client.Module.Instructor:InstructorStrings:CustomerGroupsListSelector_Header_Groups}">
+        <ListBox ItemsSource="{Binding CustomerGroups}" ItemTemplate="{StaticResource GroupsComboBoxItem}"   Name="lsItems"   >
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+    </GroupBox>
+</UserControls:DragSourceUserControl>

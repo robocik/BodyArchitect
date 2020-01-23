@@ -1,0 +1,103 @@
+﻿<Controls:usrBaseControl x:Class="BodyArchitect.Client.UI.UserControls.usrCreateProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Model="clr-namespace:BodyArchitect.Service.V2.Model;assembly=BodyArchitect.Service.V2.Model"
+                xmlns:Controls="clr-namespace:BodyArchitect.Client.UI.Controls" 
+                         xmlns:WPF="clr-namespace:BodyArchitect.Client.UI.Controls.ErrorProvider" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <WPF:ErrorProvider x:Name="epError"   >
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_UserNameLabel}" Target="txtUserName" />
+            <Grid Margin="12,6,6,0" Grid.Row="0" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto"/>
+
+                </Grid.ColumnDefinitions>
+
+                <TextBox  Name="txtUserName" Text="{Binding Profile.UserName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" TextChanged="txtUserName_TextChanged" />
+                <Image Name="imgOK" Visibility="Collapsed" VerticalAlignment="Top" Grid.Column="1" Stretch="Uniform" Source="/BodyArchitect.Client.Resources;component/Images/Ok.gif" />
+                <Image Name="imgCancel" Visibility="Collapsed" VerticalAlignment="Top" Grid.Column="2" Stretch="Uniform" Source="/BodyArchitect.Client.Resources;component/Images/Cancel16.png" />
+            </Grid>
+
+
+            <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_DateOfBirthLabel}" Target="dpBirthday" />
+            <DatePicker Margin="12,6,6,0" Grid.Row="1" Grid.Column="1" Name="dpBirthday" SelectedDate="{Binding Profile.Birthday,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" SelectedDateChanged="dpBirthday_SelectedDateChanged" />
+
+            <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_EmailLabel}" Target="txtEmail" />
+            <TextBox Margin="12,6,6,0" Grid.Row="2" Grid.Column="1" Text="{Binding Profile.Email,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  Name="txtEmail" TextChanged="txtEmail_EditValueChanged" />
+
+            <Label VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_CountryLabel}" Target="cmbCountry" />
+            <ComboBox Margin="12,6,6,0" ItemsSource="{x:Static Model:Country.Countries}" SelectedValue="{Binding Profile.CountryId,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  SelectedValuePath="GeoId" Grid.Row="3" Grid.Column="1" Name="cmbCountry">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="{Binding EnglishName}" />
+                            <TextBlock Grid.Column="2" Text="{Binding NativeName,StringFormat=({0})}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <Label VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_GenderLabel}"  />
+            <StackPanel Margin="12,6,6,0" Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+                <RadioButton Name="rbMale" Margin="{StaticResource MarginLargeRight}" GroupName="gender" IsChecked="{Binding IsMale,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Checked="txtEmail_EditValueChanged" Unchecked="txtEmail_EditValueChanged" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_GenderMale}"/>
+                <RadioButton Name="rbFemale" GroupName="gender" IsChecked="{Binding IsFemale,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Checked="txtEmail_EditValueChanged" Unchecked="txtEmail_EditValueChanged" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_GenderFemale}"/>
+            </StackPanel>
+
+            <Label VerticalAlignment="Center" Grid.Row="5"  Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_Password1Label}" Target="txtPassword" />
+            <PasswordBox Margin="12,6,6,0" Grid.Row="5"  Grid.Column="1" Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" />
+
+            <Label VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_Password2Label}" Target="txtVerifyPassword" />
+            <PasswordBox Margin="12,6,6,0" Grid.Row="6" Grid.Column="1" Name="txtVerifyPassword" PasswordChanged="txtPassword_PasswordChanged" />
+
+            <Label Margin="0,6,0,0" VerticalAlignment="Center" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:CreateProfileWindow_Label_Units}" Grid.Row="7"/>
+
+            <Grid Margin="12,6,6,0"  Grid.Row="7" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label VerticalAlignment="Center" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrMiscOptions_Content_Weight}" Target="cmbWeightType" />
+                <ComboBox VerticalAlignment="Center" Margin="{StaticResource MarginMediumLeft}" Name="cmbWeightType" Grid.Column="1">
+                    <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrMiscOptions_Content_Kg}" />
+                    <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrMiscOptions_Content_Pounds}" />
+                </ComboBox>
+
+                <Label Margin="{StaticResource MarginLargeLeft}" VerticalAlignment="Center" Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrMiscOptions_Content_Length}" Target="cmbLengthType" Grid.Column="2"/>
+                <ComboBox VerticalAlignment="Center" Margin="{StaticResource MarginMediumLeft}" Name="cmbLengthType" Grid.Column="3" >
+                    <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrMiscOptions_Content_Cm}" />
+                    <ComboBoxItem Content="{lex:LocText  BodyArchitect.Client.Resources:Strings:usrMiscOptions_Content_Inchs}" />
+                </ComboBox>
+            </Grid>
+        </Grid>
+    </WPF:ErrorProvider>
+</Controls:usrBaseControl>

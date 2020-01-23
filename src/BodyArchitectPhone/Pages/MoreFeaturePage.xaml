@@ -1,0 +1,33 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.MoreFeaturePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="false">
+
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <TextBlock Grid.Row="0" Margin="12,17,0,28" Style="{StaticResource CustomTextNormalStyle}" Foreground="{StaticResource CustomForegroundBrush}">
+                <Run FontWeight="Bold">Body</Run><Run FontWeight="Thin" FontStyle="Italic">Architect</Run>
+            </TextBlock>
+
+            <StackPanel Grid.Row="1" Margin="12,0,12,0">
+                <TextBlock FontSize="{StaticResource CustomFontSizeMediumLarge}"  Style="{StaticResource CustomTextNormalStyle}" Name="lblDescription" Foreground="{StaticResource CustomForegroundBrush}"/>
+
+                <HyperlinkButton  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}"    Content="http://bodyarchitectonline.com" Click="GoToWebSite_Click" />
+
+                <HyperlinkButton Margin="0,24,0,0"  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}"    Content="{Binding Path=Localizedresources.MoreFeaturePage_Tutorial,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Click="GoToTutorialSite_Click" />
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Animations:AnimatedBasePage>

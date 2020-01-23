@@ -1,0 +1,78 @@
+﻿table
+{
+    font-size: 12px;
+    
+}
+
+
+h1
+{
+font-size: medium;
+    font-weight: bold;
+}
+
+td.legend
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.commentColumn
+{
+    width:150px;
+}
+
+table.exercises
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color:Gray;
+}
+
+td.dayHeader
+{
+    font-style: italic;
+    text-align: left;
+    background-color: #CBCBB1;
+}
+
+td.exercises
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+}
+tr.exercises
+{
+     background-color:Transparent;
+}
+
+tr.exercisesAlt
+{
+    background-color: #D2D2D2;
+}
+
+th.label
+{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+table.main
+{
+    border-style: solid;
+    border-color: inherit;
+    border-width: 0px;
+}
+
+table.group
+{
+    padding: 0px;
+    margin: 0px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 100%;
+}

@@ -1,0 +1,141 @@
+﻿<Animations:AnimatedBasePage 
+    x:Class="BodyArchitect.WP7.Pages.BodyInstructorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Animations="clr-namespace:BodyArchitect.WP7.Controls.Animations;assembly=BodyArchitect.WP7.Controls" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Controls="clr-namespace:BodyArchitect.WP7.Controls;assembly=BodyArchitect.WP7.Controls" 
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" 
+    xmlns:Converters="clr-namespace:BodyArchitect.WP7.Controls.Converters;assembly=BodyArchitect.WP7.Controls" xmlns:Controls1="clr-namespace:WP7Contrib.View.Controls;assembly=WP7Contrib.View.Controls" 
+    FontFamily="{StaticResource CustomFontFamilyNormal}"
+    FontSize="{StaticResource CustomFontSizeNormal}"
+    Foreground="{StaticResource CustomForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480" toolkit:TiltEffect.IsTiltEnabled="true">
+
+    <phone:PhoneApplicationPage.Resources>
+        <ResourceDictionary>
+            <Converters:NegateBoolToVisibilityConverter x:Key="negateVisibilityConv" />
+            <Converters:BoolToVisibilityConverter x:Key="visibilityConv" />
+
+            <Style x:Key="PeopleList"  TargetType="Controls1:LazyListBox">
+                <Setter Property="Animations:ListAnimation.IsPivotAnimated" Value="True" />
+                <Setter Property="ItemContainerStyle">
+                    <Setter.Value>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid Margin="{StaticResource CustomTouchTargetOverhang}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="/Images/defaultProfile.png" Width="100" Height="100"/>
+
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock   Style="{StaticResource CustomTextLargeStyle}" Text="{Binding Customer.FullName}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                    <StackPanel Margin="12,24,0,0" Grid.Row="1" Orientation="Horizontal" >
+                                        <Image Margin="0" Source="/Images/VirtualCustomer32.png" Width="32" Height="32" Visibility="{Binding Customer.IsVirtual,Converter={StaticResource visibilityConv }}"/>                                       
+
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="LoadedItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid Margin="{StaticResource CustomTouchTargetOverhang}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Controls:CachedImageCtrl Name="profileImage" Picture="{Binding Picture}"  Width="100" Height="100"/>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock VerticalAlignment="Top"  Style="{StaticResource CustomTextLargeStyle}" Text="{Binding Customer.FullName}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                                    <StackPanel Margin="12,24,0,0" Grid.Row="1" Orientation="Horizontal" >
+                                        <Image Margin="0" Source="/Images/VirtualCustomer32.png" Width="32" Height="32" Visibility="{Binding Customer.IsVirtual,Converter={StaticResource visibilityConv }}"/>
+
+                                    </StackPanel>
+                                </Grid>
+
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="false"  ForegroundColor="{StaticResource CustomApplicationBarForegroundColor}" BackgroundColor="{StaticResource CustomApplicationBarBackgroundColor}">
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid Background="{StaticResource CustomBackgroundBrush}">
+        <Grid x:Name="LayoutRoot" Background="{StaticResource CustomBackgroundImageBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Controls:ProgressStatus Grid.Row="0" Name="progressBar" Visibility="Collapsed"/>
+            <!--TitlePanel contains the name of the application and page title-->
+
+
+            <controls:Pivot Grid.Row="1" Foreground="{StaticResource CustomForegroundBrush}" Name="pivot" Title="BODYINSTRUCTOR" SelectionChanged="pivot_SelectionChanged">
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.BodyInstructorPage_Header_Customers,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock TextWrapping="Wrap" Grid.Row="0" Text="{Binding Path=Localizedresources.BodyInstructorPage_NoCustomersMsg,Mode=OneTime, Source={StaticResource LocalizedStrings}}" Name="lblNoCustomers" Visibility="{Binding HasCustomers,Converter={StaticResource negateVisibilityConv}}" Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+
+                        <Controls1:LazyListBox SelectionChanged="lstCustomers_SelectionChanged" Style="{StaticResource PeopleList}"  Name="lstCustomers" Grid.Row="1" ItemsSource="{Binding Customers}">
+
+                        </Controls1:LazyListBox>
+                    </Grid>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="{Binding Path=Localizedresources.BodyInstructorPage_Header_More,Mode=OneTime, Source={StaticResource LocalizedStrings}}">
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Localizedresources.BodyInstructorPage_MoreMsg,Mode=OneTime, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource CustomTextLargeStyle}" Foreground="{StaticResource CustomForegroundBrush}"/>
+                        <HyperlinkButton  FontSize="{StaticResource CustomFontSizeMediumLarge}" Foreground="{StaticResource CustomAccentFullBrush}" Style="{StaticResource HyperlinkButtonStyle}" Content="http://bodyarchitectonline.com" Click="GoToWebSite_Click" />
+                    </StackPanel>
+                    
+
+                </controls:PivotItem>
+            </controls:Pivot>
+
+        </Grid>
+    </Grid>
+</Animations:AnimatedBasePage>
